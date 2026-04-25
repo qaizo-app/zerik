@@ -1,0 +1,154 @@
+{
+  "id": "first_principles",
+  "category": "mental_models",
+  "release_number": 2,
+  "release_date": "2026-04-20",
+  "tags": ["reasoning", "innovation", "aristotle", "musk"],
+  "difficulty": 3,
+  "reading_time_sec": 200,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/first_principles.svg",
+
+  "i18n": {
+
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №2" } },
+
+        { "type": "hook", "props": {
+            "text": "Стартап делает приложение «как Uber, но для X». Через год — закрылся. Другой стартап спрашивает: «А что вообще нужно человеку, который ищет X?» — и делает что-то совсем другое. Через год — растёт…"
+        } },
+
+        { "type": "title", "props": { "text": "Первые {{accent:принципы}}" } },
+
+        { "type": "subtitle", "props": { "text": "First Principles · Aristotle · IV в. до н.э." } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/first_principles.svg",
+            "alt": "Сложная конструкция справа разбирается на простые элементы слева"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Аристотель сформулировал это так: {{em:первое начало — это то, что не выводится из ничего другого}}. Большинство наших решений работает наоборот: мы строим выводы по аналогии. «Все делают так — значит, и мы будем». «Так принято». «У нас всегда так было».",
+              "Аналогии экономят время. Но они работают только пока мир не меняется. Когда мир меняется — а он меняется всегда — аналогии уводят в тупик. Потому что вы копируете решения, которые подходили под старый контекст, а не под новый.",
+              "Илон Маск использовал это, чтобы построить SpaceX. На вопрос «Почему ракеты такие дорогие?» он не принял ответ {{em:«потому что они всегда были такие»}}. Он спросил: {{em:«Из чего сделана ракета? Сколько стоит сырьё?»}} Оказалось, материалов на 2% от цены готовой ракеты. Остальные 98% — наследие индустрии."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Принцип",
+            "text": "Не строй на чужих выводах. Спустись до того, что ты знаешь точно. И собирай решение оттуда — заново."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Проверь себя",
+            "question": "Ваша команда тратит на еженедельный отчёт 4 часа. Что делать?",
+            "setup": "Отчёт делается «потому что всегда так делалось».",
+            "options": [
+              { "id": "optimize", "text": "Оптимизировать формат — сократить с 4 часов до 1",                  "is_wiser": false },
+              { "id": "rethink",  "text": "Спросить: кому, зачем и какое решение принимается из этого отчёта", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "оптимизируют",
+              "explanation": "Оптимизация делает плохой процесс быстрее. Первые принципы — спрашивают, нужен ли процесс вообще. Часто оказывается, что отчёт никто не читает, или решений из него уже год не принимают, или нужны два графика, а не пять страниц. Тогда «4 часа → 0 минут» вместо «4 часа → 1 час».",
+              "wisdom": "Питер Друкер: {{em:«Нет ничего бесполезнее, чем эффективно делать то, что делать не следовало вообще»}}.",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "trap", "props": {
+            "label": "Ловушка",
+            "text": "Первые принципы — дорогие. На простые решения тратить эту глубину расточительно. Используй когда {{em:цена ошибки высокая}} или когда {{em:старые правила перестали давать результат}}."
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В работе",      "example": "«Так у нас принято писать ТЗ» — а нужно ли это ТЗ вообще, и кому?" },
+              { "label": "В деньгах",     "example": "«Все откладывают 10% на пенсию» — а сколько именно вам нужно к моменту, когда захочется не работать?" },
+              { "label": "В отношениях", "example": "«Так положено праздновать день рождения» — а как его лучше провести именно для тебя и партнёра?" }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одну задачу, которую делаете «потому что так принято». Ответьте на три вопроса: чего я хочу на самом деле? что у меня уже есть? какой минимум нужен, чтобы получить желаемое?"
+        } }
+      ]
+    },
+
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №2" } },
+
+        { "type": "hook", "props": {
+            "text": "A startup builds «Uber, but for X». A year later — dead. Another startup asks: «What does someone looking for X actually need?» — and builds something very different. A year later — growing…"
+        } },
+
+        { "type": "title", "props": { "text": "First {{accent:Principles}}" } },
+
+        { "type": "subtitle", "props": { "text": "First Principles · Aristotle · 4th c. BC" } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/first_principles.svg",
+            "alt": "A complex assembly on the right deconstructs into simple atoms on the left"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Aristotle put it this way: {{em:a first principle is something that cannot be deduced from anything else}}. Most of our decisions work the opposite way — by analogy. «Everyone does this — so we should». «It's how it's done». «We've always done it this way».",
+              "Analogies save time. But they only work while the world stays still. When the world changes — and it always does — analogies become a dead end. You're copying solutions that fit a context that no longer exists.",
+              "Elon Musk used this to build SpaceX. He didn't accept «rockets are expensive» as a final answer. He asked: {{em:«What is a rocket made of? What does the raw material cost?»}} It turned out materials were 2% of the price. The other 98% was inherited from how the industry had always done things."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Principle",
+            "text": "Don't build on someone else's conclusions. Descend to what you know for certain. Then assemble the answer from there — fresh."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Test yourself",
+            "question": "Your team spends 4 hours every week on a status report. What do you do?",
+            "setup": "The report is made «because it's always been made».",
+            "options": [
+              { "id": "optimize", "text": "Optimize the format — cut it from 4 hours to 1",                "is_wiser": false },
+              { "id": "rethink",  "text": "Ask: who reads it, why, and what decision comes from it",        "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "optimize",
+              "explanation": "Optimization makes a bad process faster. First principles asks if the process is needed at all. Often nobody reads the report, no decisions have come from it in a year, or what's actually needed is two charts, not five pages. Then it goes from «4 hours → 0 minutes» instead of «4 hours → 1 hour».",
+              "wisdom": "Peter Drucker: {{em:«There is nothing so useless as doing efficiently that which should not be done at all»}}.",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "trap", "props": {
+            "label": "The trap",
+            "text": "First-principles thinking is expensive. Spending it on small decisions is wasteful. Use it when {{em:the cost of being wrong is high}} or when {{em:the old rules have stopped delivering}}."
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              { "label": "At work",          "example": "«This is how we write spec docs» — but is the spec needed at all, and for whom?" },
+              { "label": "With money",       "example": "«Everyone saves 10% for retirement» — but how much will *you* actually need when you want to stop working?" },
+              { "label": "In relationships", "example": "«This is how birthdays are celebrated» — but what's the best way to spend it for you and your partner specifically?" }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Action for today",
+            "text": "Pick one task you do «because that's how it's done». Answer three questions: what do I actually want? what do I already have? what's the minimum to get the result?"
+        } }
+      ]
+    }
+  },
+
+  "levels": [{ "level": 1, "doc_ref": "models/first_principles" }]
+}

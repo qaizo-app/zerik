@@ -1,0 +1,158 @@
+{
+  "id": "trolley_problem",
+  "category": "thought_experiments",
+  "release_number": 4,
+  "release_date": "2026-04-22",
+  "tags": ["ethics", "utilitarianism", "moral_machine"],
+  "difficulty": 3,
+  "reading_time_sec": 220,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/trolley.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №1" } },
+        { "type": "hook", "props": { "text": "Беспилотный автомобиль не может затормозить. Слева — пешеход на тротуаре. Прямо — пятеро на переходе. У кого-то — программиста — была одна минута, чтобы это запрограммировать…" } },
+        { "type": "title", "props": { "text": "Дилемма {{accent:вагонетки}}" } },
+        { "type": "subtitle", "props": { "text": "The Trolley Problem · P. Foot · 1967" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/trolley.svg", "alt": "Развилка путей — на одном пять фигур, на другом одна, между ними рычаг" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Филиппа Фут придумала это в 1967-м, споря с собратьями по этике. Сюжет простой: вагонетка несётся по рельсам. Впереди — пятеро рабочих, которые её не видят. У вас есть рычаг, переключающий стрелку на боковую ветку, где стоит один человек. Тяните рычаг — спасаете пятерых, убиваете одного. Не тянете — погибают пятеро.",
+            "Логика {{em:арифметики}} проста: пять больше одного. Логика {{em:совести}} — другая: одно дело позволить событию случиться, другое — самому стать причиной смерти. Те же пять и один, но «толкнуть человека с моста под вагонетку» большинство отказываются делать — хотя математика та же.",
+            "MIT в 2014-м запустил Moral Machine — глобальный опрос на эту тему. 40 миллионов ответов из 233 стран. Самое большое исследование морали в истории."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Между «позволить случиться» и «сделать самому» — пропасть, которую арифметика не видит. Наша мораль не сводится к одной формуле."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Вагонетка едет на пятерых. Потянуть рычаг — она свернёт и убьёт одного. Что делать?",
+          "setup": "У вас 5 секунд.",
+          "options": [
+            { "id": "pull",   "text": "Потянуть рычаг — спасти пятерых",          "is_wiser": false },
+            { "id": "noPull", "text": "Не вмешиваться — не быть причиной смерти", "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "По данным MIT Moral Machine",
+            "big_stat_text": "потянули рычаг",
+            "explanation": "В классической версии большинство выбирает потянуть. Но если задача меняется на «толкнуть человека с моста под вагонетку» — большинство отказывается. Математика та же, мораль — нет.",
+            "wisdom": "Здесь нет «правильного» ответа. Эксперимент существует не чтобы его решить, а чтобы показать пропасть между арифметикой и совестью.",
+            "hardcoded_stats": {
+              "total_votes": 40000000,
+              "options": {
+                "pull":   { "count": 32400000 },
+                "noPull": { "count":  7600000 }
+              },
+              "source": "MIT Moral Machine, 2014-2018",
+              "year": "2018"
+            }
+          }
+        } },
+        { "type": "historical_data", "props": {
+          "label": "Что выбирают другие",
+          "source": "MIT Moral Machine · 40 млн ответов из 233 стран",
+          "sample_size": 40000000,
+          "year": "2018",
+          "breakdown": [
+            { "label": "Потянуть рычаг (5 спасены, 1 погиб)", "percentage": 81, "is_majority": true },
+            { "label": "Не вмешиваться (5 погибли)",          "percentage": 19, "is_majority": false }
+          ],
+          "regional_split": [
+            { "region": "Западные страны (США, Европа)",   "percentage": 86 },
+            { "region": "Восточные страны (Япония, Китай)", "percentage": 65 },
+            { "region": "Латинская Америка",               "percentage": 79 }
+          ]
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это всплывает в реальной жизни",
+          "items": [
+            { "label": "Беспилотные авто", "example": "Кого защищает алгоритм при неизбежной аварии — пассажира или пешехода? Это решение принимает программист за миллионы людей." },
+            { "label": "Медицина",         "example": "Один донорский орган и пять пациентов. Кому отдать?" },
+            { "label": "Военные решения","example": "Атаковать цель, зная о случайных жертвах, или не атаковать, зная о последствиях бездействия." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Подумайте об одном своём правиле: «Я никогда бы не сделал X». Найдите ситуацию, в которой X спасло бы пятерых. Изменилось ли правило?"
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №1" } },
+        { "type": "hook", "props": { "text": "A self-driving car can't brake in time. Left — a pedestrian on the sidewalk. Ahead — five people in the crosswalk. Somewhere, a programmer had one minute to write the rule…" } },
+        { "type": "title", "props": { "text": "The {{accent:Trolley}} Problem" } },
+        { "type": "subtitle", "props": { "text": "The Trolley Problem · P. Foot · 1967" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/trolley.svg", "alt": "Forking tracks — five figures on one, one on the other, a lever between" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Philippa Foot proposed this in 1967, arguing with fellow ethicists. The story is simple: a trolley races down the tracks. Five workers ahead, oblivious. You have a lever to divert it onto a side track, where one person stands. Pull — five live, one dies. Don't pull — five die.",
+            "The {{em:arithmetic}} is obvious: five outnumbers one. The {{em:conscience}} sees something else — letting it happen and causing it yourself aren't the same act. Same five vs. one, but «push a man off a bridge to stop the trolley» — most refuse, even though the math is identical.",
+            "In 2014 MIT launched Moral Machine — a global survey of these dilemmas. 40 million responses from 233 countries. The largest study of moral intuitions in history."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "Between «letting it happen» and «doing it yourself» lies a gap arithmetic can't see. Our morality doesn't reduce to a single formula."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "The trolley is heading toward five. Pulling the lever diverts it and kills one. Do you pull?",
+          "setup": "You have 5 seconds.",
+          "options": [
+            { "id": "pull",   "text": "Pull the lever — save the five",                "is_wiser": false },
+            { "id": "noPull", "text": "Don't intervene — don't cause the death yourself", "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Based on MIT Moral Machine data",
+            "big_stat_text": "pulled the lever",
+            "explanation": "In the classic version most people pull. Change it to «push a man off a bridge to stop the trolley» and most refuse. Identical math, different morality.",
+            "wisdom": "There's no «right» answer. The experiment exists not to be solved, but to expose the gap between arithmetic and conscience.",
+            "hardcoded_stats": {
+              "total_votes": 40000000,
+              "options": {
+                "pull":   { "count": 32400000 },
+                "noPull": { "count":  7600000 }
+              },
+              "source": "MIT Moral Machine, 2014-2018",
+              "year": "2018"
+            }
+          }
+        } },
+        { "type": "historical_data", "props": {
+          "label": "What others choose",
+          "source": "MIT Moral Machine · 40M responses, 233 countries",
+          "sample_size": 40000000,
+          "year": "2018",
+          "breakdown": [
+            { "label": "Pull the lever (5 saved, 1 dies)", "percentage": 81, "is_majority": true },
+            { "label": "Don't intervene (5 die)",          "percentage": 19, "is_majority": false }
+          ],
+          "regional_split": [
+            { "region": "Western (US, Europe)",  "percentage": 86 },
+            { "region": "Eastern (Japan, China)", "percentage": 65 },
+            { "region": "Latin America",          "percentage": 79 }
+          ]
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this surfaces in real life",
+          "items": [
+            { "label": "Self-driving cars", "example": "Who does the algorithm protect in an unavoidable crash — passenger or pedestrian? A programmer decides for millions." },
+            { "label": "Medicine",          "example": "One donor organ, five patients. Who gets it?" },
+            { "label": "Military decisions","example": "Strike a target knowing of collateral damage, or don't, knowing the cost of inaction." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Think of one of your rules: «I would never do X». Find a situation where X would save five lives. Did the rule shift?"
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/trolley_problem" }]
+}

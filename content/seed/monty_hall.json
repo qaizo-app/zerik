@@ -1,0 +1,98 @@
+{
+  "id": "monty_hall",
+  "category": "paradoxes",
+  "release_number": 5,
+  "release_date": "2026-04-23",
+  "tags": ["probability", "intuition", "vos_savant"],
+  "difficulty": 3,
+  "reading_time_sec": 200,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/monty_hall.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №1" } },
+        { "type": "hook", "props": { "text": "В 1990 году Мэрилин вос Савант ответила на вопрос про телешоу. Через неделю редакция получила 10 000 писем. Тысячу из них написали обладатели степени PhD по математике. Все писали одно: «Вы ошибаетесь». Они ошибались…" } },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Монти Холла}}" } },
+        { "type": "subtitle", "props": { "text": "The Monty Hall Problem · M. vos Savant · 1990" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/monty_hall.svg", "alt": "Три двери, за одной — машина, за двумя — козы; ведущий открывает одну с козой" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "На американском шоу {{em:«Let's Make a Deal»}} играет один и тот же сценарий. Три двери. За одной — машина, за двумя — козы. Вы выбираете дверь, скажем, №1. Ведущий — Монти Холл, который знает, где машина, — открывает дверь №3 и показывает козу. Спрашивает: хотите остаться с дверью №1 или сменить на №2?",
+              "Интуиция кричит: {{em:«Какая разница, две двери, шанс 50/50»}}. Интуиция ошибается. Сменить дверь — почти в два раза выгоднее.",
+              "Когда вы выбирали дверь №1, шанс угадать был 1/3. Шанс что машина за одной из двух других — 2/3. Этот «два из трёх» {{em:не исчезает}} когда Монти открывает козу. Он просто концентрируется на оставшейся двери — №2."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Парадокс",
+          "question": "Три двери. За одной машина, за двумя — козы. Вы выбрали №1. Ведущий открыл №3, там коза. Стоит ли менять выбор на №2?",
+          "hint": "Подумайте: сколько шансов было что машина за дверью №1, когда вы её выбирали? И что случилось с «остальными» 2/3?",
+          "user_prompt": "Думаю — открыть разгадку",
+          "reveal_text": "Да, стоит сменить. Шанс выиграть при смене — 2/3, при сохранении выбора — 1/3. Доказательство простое: вы изначально угадывали с шансом 1/3. Значит, в 2/3 случаев машина за одной из двух других дверей. Монти знает где машина и всегда открывает козу — поэтому когда машина была не у вас (2/3 случаев), он {{em:показывает}} вам где машина: оставшаяся закрытая дверь. Сменить — выиграть в 2/3 случаев. Не сменить — выиграть в 1/3.",
+          "formula": "P(выиграть | менять) = 2/3 ≈ 67%\nP(выиграть | оставить) = 1/3 ≈ 33%",
+          "intuition_trap": "Интуиция считает «осталось 2 двери = 50/50». Но двери {{em:не равноценны}}: одна была выбрана случайно (1/3), вторая выжила фильтр Монти (2/3)."
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Парадокс работает только если ведущий {{em:знает}} где машина и {{em:всегда}} открывает дверь с козой. Если он открывает случайную дверь и просто повезло что коза — вероятности возвращаются к 50/50."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это всплывает в жизни",
+          "items": [
+            { "label": "В медицинских тестах", "example": "Положительный результат теста с точностью 99% при редкой болезни не значит «вы больны на 99%». Базовая вероятность меняет всё." },
+            { "label": "В переговорах",       "example": "Когда вторая сторона убирает вариант со стола, оставшийся не равноценен изначальному выбору — он содержит информацию о том что убрали." },
+            { "label": "В инвестициях",       "example": "«Я выбрал эту акцию случайно, а потом узнал плохие новости о другой» — это не делает первую безопаснее." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Возьмите три двери (или три карты). Сыграйте 20 раз с другом — он Монти, вы выбираете. Считайте: сколько раз сменили и выиграли, сколько оставили и выиграли. Цифры дадут больше уверенности, чем доказательство."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №1" } },
+        { "type": "hook", "props": { "text": "In 1990 Marilyn vos Savant answered a question about a game show. Within a week the magazine received 10,000 letters. A thousand were from PhD mathematicians. All said the same thing: «You're wrong». They were wrong…" } },
+        { "type": "title", "props": { "text": "The {{accent:Monty Hall}} Problem" } },
+        { "type": "subtitle", "props": { "text": "The Monty Hall Problem · M. vos Savant · 1990" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/monty_hall.svg", "alt": "Three doors — a car behind one, goats behind two; the host reveals a goat" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "On the American show {{em:«Let's Make a Deal»}} the same scene played out again and again. Three doors. A car behind one, goats behind the others. You pick a door, say №1. The host — Monty Hall, who knows where the car is — opens door №3 and shows you a goat. Then asks: stick with №1, or switch to №2?",
+            "Intuition shouts: {{em:«Two doors left, it's 50/50»}}. Intuition is wrong. Switching nearly doubles your odds.",
+            "When you chose door №1, your chance of being right was 1/3. The chance the car was behind one of the other two was 2/3. That 2/3 {{em:doesn't disappear}} when Monty reveals a goat. It just concentrates on the one remaining door — №2."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Paradox",
+          "question": "Three doors. A car behind one, goats behind two. You picked №1. The host opened №3 — a goat. Should you switch to №2?",
+          "hint": "Think: what was the chance the car was behind №1 when you first picked? Where did the «remaining» 2/3 go?",
+          "user_prompt": "Show me the answer",
+          "reveal_text": "Yes — switch. Win probability with switching is 2/3, with staying it's 1/3. The proof is simple: your first guess was right 1/3 of the time. So 2/3 of the time the car was behind one of the other doors. Monty knows where the car is and always opens a goat — so in those 2/3 cases he {{em:shows you}} where the car is: the remaining closed door. Switch and you win 2/3 of the time. Stay and you win 1/3.",
+          "formula": "P(win | switch) = 2/3 ≈ 67%\nP(win | stay) = 1/3 ≈ 33%",
+          "intuition_trap": "Intuition counts «two doors = 50/50». But the doors are {{em:not equivalent}}: one was picked at random (1/3), the other survived Monty's filter (2/3)."
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "The paradox only holds if the host {{em:knows}} where the car is and {{em:always}} opens a goat. If he opens a random door and happens to reveal a goat — the odds return to 50/50."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this shows up in life",
+          "items": [
+            { "label": "In medical tests", "example": "A 99%-accurate test for a rare disease doesn't mean «you're 99% sick». Base rates change everything." },
+            { "label": "In negotiation",   "example": "When the other side removes an option, the remaining one isn't equivalent to the original — it carries information about what was filtered out." },
+            { "label": "In investing",     "example": "«I picked this stock randomly, then heard bad news about another» doesn't make the first one safer." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Take three doors (or three cards). Play 20 rounds with a friend — they're Monty, you pick. Count: how many switches won, how many stays won. The numbers will convince you faster than the proof."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/monty_hall" }]
+}

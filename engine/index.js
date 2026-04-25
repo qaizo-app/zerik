@@ -5,12 +5,14 @@ export { usePalette } from './theme/usePalette';
 export { tokens } from './theme/tokens';
 
 export { registerBlock, registerEngineBlocks, getBlockComponent, listRegisteredBlocks } from './blocks/registry';
+export { registerIllustration, getIllustration, refToSlug } from './blocks/illustrations/registry';
 export { default as BlockRenderer } from './blocks/BlockRenderer';
 export { default as InlineText }    from './blocks/utils/InlineText';
 export { parseInline, fillDynamic } from './blocks/utils/inlineMarkers';
 
 export { default as CardScreen }       from './screens/CardScreen';
 export { default as CardStackScreen }  from './screens/CardStackScreen';
+export { default as CardBottomBar }    from './components/CardBottomBar';
 export { default as LibraryScreen }    from './screens/LibraryScreen';
 export { default as HistoryScreen }    from './screens/HistoryScreen';
 export { default as AuthScreen }       from './screens/AuthScreen';

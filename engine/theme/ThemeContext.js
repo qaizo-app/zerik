@@ -1,9 +1,11 @@
 // ThemeContext — управляет двумя осями:
-// 1) категория текущей карточки → акцентная палитра
-// 2) бренд приложения → имена/логотипы (через brand.config.js)
+// 1) категория (глобальная — для NavigationContainer и cross-card UI)
+// 2) бренд приложения
 //
-// Палитры приходят как prop categoryPalettes от приложения. Это позволяет
-// одному и тому же движку обслуживать разные продукты линейки без правки кода.
+// Внутри карточки используется CardThemeScope — nested Provider, который
+// форсит палитру на card.category. Это критично для swipe-навигации:
+// в момент перехода на экране одновременно две карточки, у каждой должна
+// быть СВОЯ палитра, а не одна общая.
 
 import { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import tokens from './tokens';
@@ -16,6 +18,8 @@ const ThemeContext = createContext({
   brand:      null,
   palettes:   {}
 });
+
+export default ThemeContext;
 
 export function ThemeProvider({ categoryPalettes, brand, defaultCategory, children }) {
   const initial = defaultCategory || brand?.primaryCategory || 'mental_models';
@@ -41,4 +45,21 @@ export function ThemeProvider({ categoryPalettes, brand, defaultCategory, childr
 
 export function useTheme() {
   return useContext(ThemeContext);
+}
+
+// CardThemeScope — оборачивает контент карточки и форсит палитру на её категорию.
+// Используется внутри CardScreen чтобы у каждой карточки в swipe-стеке была своя
+// независимая палитра.
+
+export function CardThemeScope({ category, children }) {
+  const parent = useContext(ThemeContext);
+  const palette = (category && parent.palettes[category]) || parent.palette;
+
+  const value = useMemo(() => ({
+    ...parent,
+    palette,
+    category: category || parent.category
+  }), [parent, palette, category]);
+
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }

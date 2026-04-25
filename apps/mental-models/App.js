@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 
 import {
   ThemeProvider,
@@ -22,12 +22,16 @@ import { brand } from './config/brand.config';
 import { push }  from './config/push.config';
 import { studioApps } from './config/studioLineup.config';
 import { onboardingSlides } from './src/onboardingSlides';
+import { registerAppIllustrations } from './illustrations';
+import { registerAppBlocks } from './blocks';
 import {
   contentService, votingService, progressService,
   authService, paywallService
 } from './src/services';
 
 registerEngineBlocks();
+registerAppBlocks();
+registerAppIllustrations();
 
 const ONBOARDING_KEY = 'mm:onboarding_done';
 const AUTH_SKIPPED_KEY = 'mm:auth_skipped';
@@ -104,8 +108,10 @@ export default function App() {
         <ThemeProvider categoryPalettes={categoryPalettes} brand={brand}>
           <StatusBar style="light" />
           <NavigationContainer theme={{
+            ...DarkTheme,
             dark: true,
             colors: {
+              ...DarkTheme.colors,
               background: '#0E1014',
               card: '#0E1014',
               border: '#0E1014',
@@ -194,15 +200,39 @@ export default function App() {
 
 function TodayTabScreen() {
   const [cards, setCards] = useState(null);
+  const [savedIds, setSavedIds] = useState([]);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       const list = await contentService.getCardChain({ limit: 20 });
-      if (!cancelled) setCards(list);
+      const ids  = await progressService.getSavedIds();
+      if (!cancelled) {
+        setCards(list);
+        setSavedIds(ids);
+      }
     })();
     return () => { cancelled = true; };
   }, []);
+
+  async function handleSave(card) {
+    const next = await progressService.toggleSaved(card.id);
+    setSavedIds(next?.saved_card_ids || []);
+  }
+
+  async function handleShare(card) {
+    try {
+      const Sharing = await import('expo-sharing');
+      const available = await Sharing.isAvailableAsync();
+      if (!available) return;
+      const localeContent = card.i18n?.ru || card.i18n?.en || {};
+      const titleBlock = (localeContent.blocks || []).find(b => b.type === 'title');
+      const title = titleBlock?.props?.text?.replace(/\{\{accent:([^}]+)\}\}/g, '$1') || card.id;
+      // Простой share — текстом. Image-share добавим через react-native-view-shot позже.
+      const url = `https://zerik.app/cards/${card.id}`;
+      await Sharing.shareAsync(url, { dialogTitle: title }).catch(() => {});
+    } catch (e) {}
+  }
 
   if (!cards) return <View style={{ flex: 1, backgroundColor: '#0E1014' }} />;
 
@@ -210,6 +240,9 @@ function TodayTabScreen() {
     <CardStackScreen
       cards={cards}
       locale="ru"
+      savedIds={savedIds}
+      onSavePress={handleSave}
+      onSharePress={handleShare}
       onCardOpened={(id) => {
         progressService.recordCardOpened(id).catch(() => {});
       }}

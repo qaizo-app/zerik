@@ -1,0 +1,146 @@
+{
+  "id": "confirmation_bias",
+  "category": "cognitive_biases",
+  "release_number": 1,
+  "release_date": "2026-04-19",
+  "tags": ["bias", "epistemic", "wason"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/confirmation_bias.svg",
+
+  "i18n": {
+
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №1" } },
+
+        { "type": "hook", "props": {
+            "text": "Вы думаете, что новый коллега ленивый. И — удивительное дело — на каждом шагу замечаете доказательства этого. А когда он остаётся допоздна, мозг находит объяснение: «Просто наверстывает»…"
+        } },
+
+        { "type": "title", "props": { "text": "{{accent:Подтверждающее}} искажение" } },
+
+        { "type": "subtitle", "props": { "text": "Confirmation Bias · P. Wason · 1960" } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/confirmation_bias.svg",
+            "alt": "Воронка принимает только данные одного цвета, остальное отскакивает"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Мозг — не нейтральный судья, который взвешивает факты. Он юрист, нанятый защищать ту версию мира, в которую вы уже верите. Любое доказательство «за» он принимает с радостью; любое «против» — допрашивает с пристрастием.",
+              "Питер Уэйсон в 1960-м показал это экспериментом. Людям давали последовательность 2-4-6 и просили угадать правило. Почти все придумывали гипотезу типа {{em:«чётные числа, растущие на 2»}} и проверяли её на 8-10-12, 14-16-18 — получали «да» и заявляли, что нашли правило. Реальное правило было проще: {{em:«любые три возрастающих числа»}}. Никто не пробовал 1-2-3 или 5-9-100 — потому что эти числа должны были опровергнуть гипотезу.",
+              "Мы инстинктивно ищем подтверждения. Опровержения — больно, и мозг их избегает."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Принцип",
+            "text": "Чтобы узнать, правы ли вы — попробуйте опровергнуть себя. Если не получается опровергнуть, тогда — возможно — вы правы."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Проверь себя",
+            "question": "У вас гипотеза: «Люди из города X — холодные и закрытые». Как её проверить?",
+            "setup": null,
+            "options": [
+              { "id": "examples",  "text": "Вспомнить трёх знакомых из X, подходящих под описание", "is_wiser": false },
+              { "id": "contrary",  "text": "Найти трёх человек из X, которые открытые и тёплые", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "ищут подтверждение",
+              "explanation": "«Найти подходящих» — даст список людей, который укрепит миф. «Найти противоположных» — покажет, существует ли вообще закономерность. Если контр-примеров много, гипотеза слаба. Если найти не получается — она подтверждена честно.",
+              "wisdom": "Карл Поппер заметил: {{em:гипотеза имеет научную ценность только если её можно опровергнуть}}. Всё остальное — религия, маскирующаяся под факт.",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В отношениях", "example": "«Он мне не пишет, потому что разлюбил» — ищется подтверждение, игнорируется простое «занят»." },
+              { "label": "В бизнесе",    "example": "«Этот рынок огромный» — собираются success stories, провалы конкурентов аккуратно фильтруются." },
+              { "label": "В новостях",   "example": "Подписка на источники, которые согласны с вашей картиной мира — мозг получает дозу подтверждения каждый день." }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одно своё убеждение, в котором вы уверены. Спросите: «Что должно произойти, чтобы я перестал в это верить?» Если ответ — {{em:ничего}} — это не убеждение, это вера."
+        } }
+      ]
+    },
+
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №1" } },
+
+        { "type": "hook", "props": {
+            "text": "You decided your new colleague is lazy. And — somehow — every day you notice fresh evidence. When he stays late, the mind quickly explains: «He's just catching up»…"
+        } },
+
+        { "type": "title", "props": { "text": "{{accent:Confirmation}} Bias" } },
+
+        { "type": "subtitle", "props": { "text": "Confirmation Bias · P. Wason · 1960" } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/confirmation_bias.svg",
+            "alt": "A funnel accepts only one color of data; the rest bounces off"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Your brain isn't a neutral judge weighing the facts. It's a lawyer hired to defend the version of the world you already believe. Every piece of evidence «for» is welcomed warmly; every «against» is cross-examined and dismissed.",
+              "Peter Wason proved it in 1960. Subjects were given the sequence 2-4-6 and asked to guess the rule. Almost everyone hypothesized {{em:«even numbers ascending by 2»}} and tested it on 8-10-12, 14-16-18 — got «yes» each time, declared victory. The actual rule was simpler: {{em:«any three ascending numbers»}}. Nobody tried 1-2-3 or 5-9-100 — those would have disproved the hypothesis.",
+              "We instinctively look for confirmation. Disproof hurts, so the brain avoids it."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Principle",
+            "text": "To find out if you're right, try to prove yourself wrong. If you can't disprove it, maybe — just maybe — you're right."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Test yourself",
+            "question": "You have a hypothesis: «People from city X are cold and closed-off». How do you test it?",
+            "setup": null,
+            "options": [
+              { "id": "examples", "text": "Recall three acquaintances from X who fit the description", "is_wiser": false },
+              { "id": "contrary", "text": "Find three people from X who are warm and open",            "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "look for confirmation",
+              "explanation": "«Find people who fit» builds a list that reinforces the myth. «Find people who don't» tests whether the pattern exists at all. If many counter-examples appear, the hypothesis is weak. If you genuinely can't find any — it survives an honest test.",
+              "wisdom": "Karl Popper noticed: {{em:a hypothesis has scientific value only if it can be falsified}}. Everything else is religion wearing a fact's costume.",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              { "label": "In relationships", "example": "«He doesn't text — he's lost interest» — confirmation collected, the simple «he's busy» quietly ignored." },
+              { "label": "In business",      "example": "«This market is huge» — success stories piled high, dead competitors discreetly filtered out." },
+              { "label": "In the news",      "example": "Subscribing to sources that agree with your worldview — the brain gets its daily dose of agreement." }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Action for today",
+            "text": "Take one belief you're certain about. Ask: «What would have to happen for me to stop believing this?» If the answer is {{em:nothing}} — it isn't a belief, it's faith."
+        } }
+      ]
+    }
+  },
+
+  "levels": [
+    { "level": 1, "doc_ref": "models/confirmation_bias" }
+  ]
+}

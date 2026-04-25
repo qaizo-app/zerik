@@ -1,21 +1,39 @@
-// Иллюстрация. Для MVP — placeholder rectangle с категорийной grain-текстурой.
-// SVG-рендер из bundle://... или gs://... — следующий шаг (react-native-svg).
+// Иллюстрация. Резолвит slug из ref через illustration registry.
+// Если иллюстрация не зарегистрирована — показывает компактный placeholder.
+// Реальные SVG живут в apps/<name>/illustrations/ и регистрируются на старте приложения.
 
 import { View, Text } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
+import { getIllustration, refToSlug } from './illustrations/registry';
 
-export default function IllustrationBlock({ ref: _ref, alt }) {
+export default function IllustrationBlock({ ref: refStr, alt }) {
   const { palette, tokens } = useTheme();
+  const slug = refToSlug(refStr);
+  const Component = slug ? getIllustration(slug) : null;
+
+  if (Component) {
+    return (
+      <View style={{
+        marginVertical: 20,
+        marginHorizontal: 24,
+        height: 180,
+        borderRadius: tokens.radius.tight,
+        overflow: 'hidden'
+      }}>
+        <Component palette={palette} width="100%" height={180} />
+      </View>
+    );
+  }
+
   return (
     <View style={{
       marginVertical: 20,
       marginHorizontal: 24,
-      height: 180,
+      height: 120,
       borderRadius: tokens.radius.tight,
       backgroundColor: palette.bg_elev,
       alignItems: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden'
+      justifyContent: 'center'
     }}>
       <Text style={{
         fontFamily: tokens.fonts.mono,
@@ -24,7 +42,7 @@ export default function IllustrationBlock({ ref: _ref, alt }) {
         color: palette.text_mute,
         textTransform: 'uppercase'
       }}>
-        Illustration · placeholder
+        Illustration · {slug || 'placeholder'}
       </Text>
       {alt ? (
         <Text style={{

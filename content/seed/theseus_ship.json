@@ -1,0 +1,136 @@
+{
+  "id": "theseus_ship",
+  "category": "thought_experiments",
+  "release_number": 11,
+  "release_date": "2026-04-29",
+  "tags": ["identity", "metaphysics", "plutarch"],
+  "difficulty": 3,
+  "reading_time_sec": 195,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/theseus.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №2" } },
+        { "type": "hook", "props": { "text": "Корабль Тесея стоял в гавани столетие. Каждый раз когда доска гнила — её заменяли. К концу — ни одной оригинальной. Жители Афин спорили: это всё ещё тот же корабль или уже другой?" } },
+        { "type": "title", "props": { "text": "Корабль {{accent:Тесея}}" } },
+        { "type": "subtitle", "props": { "text": "Ship of Theseus · Plutarch · I в. н.э." } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/theseus.svg", "alt": "Старый корабль постепенно превращается в новый — доска за доской" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Парадокс Плутарха звучит просто: если у корабля заменили все доски — это тот же корабль или новый? Усложнение Гоббса ещё интереснее: представьте, что снятые старые доски кто-то собирает в копию. Какой из двух кораблей — настоящий?",
+            "Вопрос не про корабли. Это вопрос про идентичность вообще. {{em:Каждый атом вашего тела заменился за последние 7-10 лет}}. Вы — тот же человек, что десять лет назад? А клетки мозга меняются медленнее, но и они обновляются. Что делает вас вами — материя или паттерн, в котором она собрана?",
+            "Современная генетика дала эту дилемму в новом виде: пересадка органа, генетическая модификация, протезы. Где граница между «чинить тебя» и «заменить тебя»?"
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Идентичность — не материя, а отношения и непрерывность. Корабль остаётся собой, пока есть связь между «вчерашним собой» и «сегодняшним»."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Корабль Тесея весь сменил доски. Параллельно из старых досок собрали копию. Какой настоящий?",
+          "setup": null,
+          "options": [
+            { "id": "renewed", "text": "Тот, который стоял в порту всё время — даже с новыми досками", "is_wiser": false },
+            { "id": "original","text": "Тот, что собран из оригинальных досок", "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Опросы философских студентов (Гарвард, MIT)",
+            "big_stat_text": "выбирают «непрерывный»",
+            "explanation": "Большинство склоняется к «корабль с непрерывной историей». Это работает с организмами: вы — это вы, потому что есть непрерывная цепочка состояний, а не потому что атомы сохранились. Но в музее корабль из оригинальных досок ценнее — это другой критерий идентичности (материальный).",
+            "wisdom": "Деннет и другие современные философы говорят: {{em:идентичность — не объективное свойство объекта, а решение наблюдателя}}. Разные критерии — разные ответы.",
+            "hardcoded_stats": {
+              "total_votes": 12500,
+              "options": {
+                "renewed":  { "count": 8125 },
+                "original": { "count": 4375 }
+              },
+              "source": "Harvard/MIT philosophy surveys",
+              "year": "2019"
+            }
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Парадокс не имеет «правильного» ответа — он показывает что наше понятие «тот же» не одно, а несколько. {{em:Тот же по материалу}}, {{em:тот же по форме}}, {{em:тот же по непрерывности}} — три разных «тот же». Спор бесполезен, пока не уточнено какое имеется в виду."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это встречается в жизни",
+          "items": [
+            { "label": "В семейном бизнесе","example": "Компания, которую основал дед, перешла к внуку, сменила всех сотрудников и продукт. Это «та же компания» или новая?" },
+            { "label": "В отношениях",     "example": "Через 20 лет вы оба изменились. Это «тот же брак» или нечто другое?" },
+            { "label": "В нации",          "example": "Современная Греция и Древняя Эллада — одна страна или разные? Зависит от выбранного критерия." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Подумайте о себе десятилетней давности. Что у вас общего с тем человеком? Что изменилось радикально? Это всё ещё «вы» — и почему?"
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №2" } },
+        { "type": "hook", "props": { "text": "The Ship of Theseus sat in the Athenian harbor for a century. Whenever a plank rotted, it was replaced. By the end — not one original plank remained. Citizens argued: is it still the same ship, or another one?" } },
+        { "type": "title", "props": { "text": "The Ship of {{accent:Theseus}}" } },
+        { "type": "subtitle", "props": { "text": "Ship of Theseus · Plutarch · 1st century AD" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/theseus.svg", "alt": "An old ship gradually turning into a new one — plank by plank" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Plutarch's paradox sounds simple: if every plank of a ship is replaced, is it still the same ship? Hobbes added a twist: imagine someone collects the old planks and rebuilds a copy. Which is the real ship?",
+            "The question isn't about ships. It's about identity itself. {{em:Every atom in your body has been replaced over the last 7-10 years}}. Are you the same person you were ten years ago? Brain cells turn over slower, but they turn over too. What makes you you — matter, or the pattern it's arranged in?",
+            "Modern genetics revives this puzzle in new forms: organ transplants, genetic edits, prosthetics. Where's the line between «repairing you» and «replacing you»?"
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "Identity isn't matter — it's continuity and pattern. The ship stays itself while there's an unbroken chain between «yesterday» and «today»."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "The Ship of Theseus had all planks replaced. Meanwhile, the old planks were rebuilt into a duplicate. Which is the real one?",
+          "setup": null,
+          "options": [
+            { "id": "renewed",  "text": "The one in the port the whole time — even with new planks", "is_wiser": false },
+            { "id": "original", "text": "The one rebuilt from the original planks",                   "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Surveys at Harvard/MIT philosophy programs",
+            "big_stat_text": "pick «continuous»",
+            "explanation": "Most lean toward «the ship with continuous history». That matches how we think about organisms: you are you because of an unbroken chain of states, not because your atoms persisted. But in a museum, the rebuilt original is more valuable — that's a different identity criterion (material).",
+            "wisdom": "Dennett and other modern philosophers argue: {{em:identity isn't a property of the object, it's a decision of the observer}}. Different criteria, different answers.",
+            "hardcoded_stats": {
+              "total_votes": 12500,
+              "options": {
+                "renewed":  { "count": 8125 },
+                "original": { "count": 4375 }
+              },
+              "source": "Harvard/MIT philosophy surveys",
+              "year": "2019"
+            }
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "The paradox has no «right» answer — it shows that «the same» isn't one concept, it's several. {{em:Same matter}}, {{em:same form}}, {{em:same continuity}} — three different «same»s. Arguments stay sterile until you specify which one you mean."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this surfaces in life",
+          "items": [
+            { "label": "In family businesses", "example": "The company grandfather founded passed to grandson, with new employees and a different product. «Same company» or new one?" },
+            { "label": "In relationships",     "example": "After 20 years you've both changed. Is this «the same marriage» or something else?" },
+            { "label": "In nations",           "example": "Modern Greece and Ancient Hellas — one country or two? Depends on which criterion you pick." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Think about yourself ten years ago. What do you share with that person? What changed radically? Is that still «you» — and why?"
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/theseus_ship" }]
+}

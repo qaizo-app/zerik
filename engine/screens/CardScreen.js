@@ -1,20 +1,30 @@
 // Один экран карточки. Свайп-навигация (горизонтально между карточками,
-// вертикально между уровнями глубины) — следующий шаг через CardStackScreen.
-// Этот экран — для тестирования рендера одной карточки.
+// вертикально между уровнями глубины) — через CardStackScreen.
+//
+// Каждая карточка обёрнута в CardThemeScope чтобы её палитра не зависела от
+// глобального ThemeContext.category — это критично для плавного перехода
+// палитры при свайпе между карточками разных категорий.
 
-import { useEffect } from 'react';
+import { CardThemeScope, useTheme } from '../theme/ThemeContext';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTheme } from '../theme/ThemeContext';
 import BlockRenderer from '../blocks/BlockRenderer';
+import CardBottomBar from '../components/CardBottomBar';
 
-export default function CardScreen({ card, locale = 'ru', dynamic }) {
-  const { palette, tokens, setCategory } = useTheme();
+export default function CardScreen({ card, locale = 'ru', dynamic, isSaved, onSave, onShare }) {
+  return (
+    <CardThemeScope category={card?.category}>
+      <CardScreenInner
+        card={card} locale={locale} dynamic={dynamic}
+        isSaved={isSaved} onSave={onSave} onShare={onShare}
+      />
+    </CardThemeScope>
+  );
+}
+
+function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare }) {
+  const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
-
-  useEffect(() => {
-    if (card?.category) setCategory(card.category);
-  }, [card?.category, setCategory]);
 
   if (!card) {
     return (
@@ -71,6 +81,14 @@ export default function CardScreen({ card, locale = 'ru', dynamic }) {
       </View>
 
       <BlockRenderer blocks={blocks} card={card} locale={locale} dynamic={dynamic} />
+
+      <CardBottomBar
+        card={card}
+        isSaved={isSaved}
+        onSavePress={onSave}
+        onSharePress={onShare}
+        showSwipeUpHint={Array.isArray(card.levels) && card.levels.length > 1}
+      />
     </ScrollView>
   );
 }
@@ -80,8 +98,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 20,
-    paddingBottom: 14,
+    paddingTop: 10,
+    paddingBottom: 10,
     borderBottomWidth: 1
   }
 });

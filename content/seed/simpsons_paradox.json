@@ -1,0 +1,98 @@
+{
+  "id": "simpsons_paradox",
+  "category": "paradoxes",
+  "release_number": 12,
+  "release_date": "2026-04-30",
+  "tags": ["statistics", "berkeley", "simpson"],
+  "difficulty": 3,
+  "reading_time_sec": 200,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/simpson.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №2" } },
+        { "type": "hook", "props": { "text": "В 1973 году Беркли подали в суд за дискриминацию. Цифры были железные: 44% мужчин-абитуриентов поступили, женщин — только 35%. Когда статистики разобрали данные по факультетам — оказалось, что женщин принимают чаще, чем мужчин. На каждом отдельном факультете…" } },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Симпсона}}" } },
+        { "type": "subtitle", "props": { "text": "Simpson's Paradox · E. Simpson · 1951" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/simpson.svg", "alt": "Линия тренда вниз на общих данных, но вверх внутри каждой группы" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Эдвард Симпсон описал это в 1951-м, и с тех пор парадокс находится во всех областях — от медицины до спорта. Тренд, который виден в общих данных, может полностью {{em:развернуться}}, когда данные разделить по группам.",
+            "Случай Беркли стал классикой. На общем уровне женщины принимались хуже мужчин. Но это не дискриминация — это {{em:структура заявок}}. Мужчины массово подавали на факультеты с высоким приёмом (инженерия, физика). Женщины подавали на факультеты с жёстким отбором (медицина, гуманитарные). На каждом факультете женщин принимали даже чуть чаще.",
+            "Парадокс показывает: средние числа — обманчивы. Если есть скрытая переменная, разделяющая группы (тут — выбор факультета), общая статистика может говорить ровно обратное правде."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Парадокс",
+          "question": "Препарат A показал лучший результат чем препарат B на 1000 пациентах. Но когда разделили по полу — у мужчин лучше B, у женщин тоже лучше B. Возможно ли это?",
+          "hint": "Подумайте о пропорциях. Сколько мужчин и сколько женщин получили каждый препарат?",
+          "user_prompt": "Думаю — открыть разгадку",
+          "reveal_text": "Да, возможно — если состав групп разный. Например: A дали 100 мужчин (из них вылечились 80) и 400 женщин (вылечились 200). B дали 400 мужчин (вылечились 350) и 100 женщин (вылечились 60). Считаем: A в среднем 56% (280/500), B в среднем 82% (410/500). Но! У мужчин: A — 80%, B — 87.5%. У женщин: A — 50%, B — 60%. На уровне групп B всегда лучше. На общем уровне — A. Это и есть Симпсон.",
+          "formula": "A: (80 + 200) / 500 = 56%\nB: (350 + 60) / 500 = 82%\nНо: мужчины: 80% < 87.5% (B лучше)\n     женщины: 50% < 60% (B лучше)",
+          "intuition_trap": "Интуиция складывает проценты как обычные числа, не учитывая пропорции групп. Но {{em:средневзвешенное}} — не среднее арифметическое."
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Симпсон не значит «всегда смотри на группы». Иногда правильнее общая статистика — особенно когда деление на группы случайное. Парадокс — не закон, а предупреждение: {{em:проверь обе версии}}."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это всплывает",
+          "items": [
+            { "label": "В медицине",   "example": "Препарат «лучший» на больших данных — но хуже в каждой возрастной группе. Это не парадокс — это игнор возраста." },
+            { "label": "В A/B-тестах", "example": "Вариант B обогнал A в среднем — но проиграл в каждом сегменте пользователей. Усреднение скрывает рассказ." },
+            { "label": "В новостях",   "example": "«Зарплаты женщин X% от мужчин» — может скрывать факт что женщины чаще выбирают другие профессии." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Возьмите одну статистику, на которую вы недавно опирались. Спросите: «Какие группы тут смешались?» Может оказаться что разделив их, картина меняется."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №2" } },
+        { "type": "hook", "props": { "text": "In 1973 Berkeley was sued for gender discrimination. The numbers were stark: 44% of male applicants admitted, only 35% of women. When statisticians broke the data down by department — women were actually admitted at higher rates. In every single department…" } },
+        { "type": "title", "props": { "text": "{{accent:Simpson's}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Simpson's Paradox · E. Simpson · 1951" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/simpson.svg", "alt": "A trend line slopes down on aggregate data but slopes up within each group" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Edward Simpson described it in 1951, and the paradox has since shown up everywhere — medicine, sports, hiring. A trend visible in aggregate data can completely {{em:reverse}} when the data is split by group.",
+            "The Berkeley case is the classic. On aggregate, women had a lower admission rate. But it wasn't discrimination — it was {{em:application patterns}}. Men applied in droves to departments with high admit rates (engineering, physics). Women applied to selective programs (medicine, humanities). Within every department, women were admitted slightly more often.",
+            "The lesson: aggregate numbers can lie. If there's a hidden variable splitting your groups, the headline number can say the opposite of the truth."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Paradox",
+          "question": "Drug A outperformed drug B across 1000 patients. But split by sex — B beat A in men, and B beat A in women. Possible?",
+          "hint": "Think about proportions. How many men vs. women got each drug?",
+          "user_prompt": "Show me the answer",
+          "reveal_text": "Yes — if the group sizes differ. Example: A is given to 100 men (80 cured) and 400 women (200 cured). B to 400 men (350 cured) and 100 women (60 cured). Aggregates: A wins at 56% (280/500), B at 82% (410/500). But! Men: A 80% < B 87.5%. Women: A 50% < B 60%. B wins inside every group. A wins on aggregate. That's Simpson.",
+          "formula": "A: (80 + 200) / 500 = 56%\nB: (350 + 60) / 500 = 82%\nBut: men:   80% < 87.5% (B wins)\n     women: 50% < 60% (B wins)",
+          "intuition_trap": "Intuition adds percentages like raw numbers, ignoring group sizes. But {{em:weighted averages}} aren't arithmetic averages."
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "Simpson doesn't mean «always look at groups». Sometimes the aggregate is right — especially when the grouping is random. The paradox isn't a rule, it's a warning: {{em:check both views}}."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this surfaces",
+          "items": [
+            { "label": "In medicine",  "example": "A drug is «better» on aggregate but worse in every age bracket. Not a paradox — it's ignoring age." },
+            { "label": "In A/B tests", "example": "Variant B beat A on average but lost in every user segment. The mean hides the story." },
+            { "label": "In news",      "example": "«Women earn X% of what men earn» can hide the fact that women more often choose different professions." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Take one statistic you've been relying on lately. Ask: «What groups got mixed together here?» Splitting them may reverse the conclusion."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/simpsons_paradox" }]
+}

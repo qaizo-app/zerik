@@ -1,0 +1,112 @@
+{
+  "id": "anchoring",
+  "category": "cognitive_biases",
+  "release_number": 9,
+  "release_date": "2026-04-27",
+  "tags": ["negotiation", "kahneman", "tversky"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/anchoring.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №3" } },
+        { "type": "hook", "props": { "text": "Канеман с Тверски крутили колесо рулетки на глазах у студентов — оно останавливалось на 65 (заранее настроено). Потом спрашивали: «Какой процент стран в ООН — африканские?» Средний ответ — 45%. С другой группой колесо останавливалось на 10 — средний ответ 25%…" } },
+        { "type": "title", "props": { "text": "Эффект {{accent:якорения}}" } },
+        { "type": "subtitle", "props": { "text": "Anchoring · D. Kahneman & A. Tversky · 1974" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/anchoring.svg", "alt": "Цифра 65 как тяжёлый якорь тянет шкалу ответа выше; цифра 10 — ниже" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Канеман и Тверски в 1974-м показали странную вещь: первое число, которое мозг видит в задаче, влияет на ответ — даже если число явно случайное. Колесо рулетки никак не связано с ООН, и студенты это знали. Тем не менее, при «якоре» 65 они отвечали 45, при якоре 10 — отвечали 25.",
+            "Мозг работает так: первое число становится {{em:точкой отсчёта}}. От неё мы корректируем — но недокорректируем. Поэтому продавец называет цену 100 000, чтобы покупатель торговался от 100 000, а не от своего внутреннего ощущения «справедливой» цены.",
+            "Эффект работает на всех — на профессорах права, опытных переговорщиках, врачах. Понимание не отменяет его; знание уменьшает но не убирает."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Первое число запоминается мозгом как «нормальное». Все следующие воспринимаются относительно него. Кто называет цифру первым — задаёт игру."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Вы покупаете квартиру. Продавец говорит цену 800 000. На сколько торговаться?",
+          "setup": "Предположим, вы знаете рыночную цену района — около 650 000.",
+          "options": [
+            { "id": "from_seller", "text": "На 5-10% меньше — это «реалистично»", "is_wiser": false },
+            { "id": "from_market", "text": "Назвать свою цену первой — 600 000 — и торговаться от неё", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "торгуются от продавца",
+            "explanation": "Если торгуешься от 800К — финальная цена будет 720-760К. Если назвать 600К первым — продавец психологически переключается в новую систему отсчёта, и финал чаще 650-680К. Тот же товар, разница в 60-100К.",
+            "wisdom": "Профессиональные переговорщики называют это «{{em:первое предложение задаёт пол ZOPA}}» — Zone Of Possible Agreement. Кто первый — у того контроль.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где вы встретите это сегодня",
+          "items": [
+            { "label": "В магазине",     "example": "«Скидка 50%! Было 5000, стало 2500». Якорь — 5000. Без него цена 2500 не выглядит хорошей." },
+            { "label": "В переговорах","example": "Тот кто называет зарплату первым — определяет диапазон. Стандартный совет «дайте им назвать первыми» — спорный, часто лучше якорь поставить самому." },
+            { "label": "В оценках",    "example": "«Сколько займёт проект?» — если коллега сначала бросает «месяц-два», вы думаете в этих рамках, даже если реально нужно полгода." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Заметьте сегодня одну ситуацию, где кто-то назвал число первым (цену, срок, оценку). Перед тем как ответить, спросите себя: «Какое число я бы назвал, если бы услышал задачу впервые, без этого якоря?»"
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №3" } },
+        { "type": "hook", "props": { "text": "Kahneman and Tversky spun a roulette wheel in front of students — it stopped at 65 (rigged). Then asked: «What percentage of UN countries are African?» Average answer: 45%. Other group, wheel stops at 10 — average answer 25%…" } },
+        { "type": "title", "props": { "text": "The {{accent:Anchoring}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Anchoring · D. Kahneman & A. Tversky · 1974" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/anchoring.svg", "alt": "The number 65 as a heavy anchor pulls the answer scale up; the number 10 pulls it down" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Kahneman and Tversky showed something strange in 1974: the first number your brain sees in a problem skews your answer — even when that number is obviously random. A roulette wheel has nothing to do with the UN, and the students knew it. With anchor 65, they answered 45. With anchor 10, they answered 25.",
+            "Your brain does this: the first number becomes the {{em:reference point}}. You adjust from there — but never enough. That's why a seller names $100K so the buyer haggles from $100K, not from their own sense of fair price.",
+            "It works on everyone — law professors, professional negotiators, doctors. Understanding doesn't disable it; awareness reduces but never removes the effect."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "The first number gets registered as «normal». Everything after is felt relative to it. Whoever names the first number sets the game."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "You're buying a house. The seller says $800K. How do you negotiate?",
+          "setup": "Assume you know the market is around $650K.",
+          "options": [
+            { "id": "from_seller", "text": "Counter 5-10% lower — that's «realistic»", "is_wiser": false },
+            { "id": "from_market", "text": "Open with your own number — $600K — negotiate from there", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "negotiate from seller's anchor",
+            "explanation": "Negotiating from $800K typically lands at $720-760K. Opening with $600K psychologically resets the seller's frame — final price often $650-680K. Same property, $60-100K difference.",
+            "wisdom": "Pros call this «{{em:the first offer sets the floor of the ZOPA}}» — Zone Of Possible Agreement. Whoever goes first holds the steering wheel.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where you'll meet it today",
+          "items": [
+            { "label": "In stores",       "example": "«50% off! Was $5000, now $2500». The anchor is $5000. Without it, $2500 doesn't feel like a deal." },
+            { "label": "In negotiation", "example": "Whoever names the salary first defines the range. The classic «let them go first» is debatable — often anchoring yourself works better." },
+            { "label": "In estimates",   "example": "«How long will this take?» — if a colleague throws out «month or two», you think in that range even if it really needs six months." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Notice today one situation where someone named a number first (price, deadline, estimate). Before responding, ask yourself: «What number would I have named if I were hearing this for the first time, with no anchor?»"
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/anchoring" }]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "dunning_kruger",
+  "category": "cognitive_biases",
+  "release_number": 8,
+  "release_date": "2026-04-26",
+  "tags": ["self_assessment", "metacognition", "cornell"],
+  "difficulty": 2,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/dunning_kruger.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №2" } },
+        { "type": "hook", "props": { "text": "На вечеринке кто-то с уверенностью эксперта рассуждает о квантовой физике. Через десять минут становится ясно: он прочитал одну статью. Странно — настоящий физик в той же комнате говорит куда осторожнее…" } },
+        { "type": "title", "props": { "text": "Эффект {{accent:Даннинга—Крюгера}}" } },
+        { "type": "subtitle", "props": { "text": "Dunning-Kruger Effect · D. Dunning & J. Kruger · 1999" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/dunning_kruger.svg", "alt": "График: вершина уверенности новичка слева, провал отчаяния посередине, плато компетентности справа" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "В 1999 году двое психологов из Корнелла — Даннинг и Крюгер — обнаружили закономерность, которую теперь видно везде. Чтобы оценить, насколько хорошо ты что-то делаешь, нужно знать предмет хотя бы на среднем уровне. {{em:Тот, кто не знает предмета, не знает и того, что он его не знает}}.",
+            "Поэтому новички уверены в себе сильнее экспертов. У эксперта десять причин засомневаться — он видит сложность. У новичка одна простая модель — она работает в трёх случаях из десяти, но в этих трёх он король.",
+            "Эффект работает в обе стороны. Эксперт часто {{em:недооценивает}} себя — потому что окружён другими экспертами и видит свои пробелы. Новичок, посмотрев на экспертов, может сделать ошибочный вывод: «значит, я тоже могу»."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Чем меньше ты знаешь — тем увереннее звучишь. Чем больше — тем больше сомнений. Уверенность не доказательство компетентности; чаще наоборот."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Вы наняли двух кандидатов в команду. Один говорит «я смогу всё». Второй: «я уверен в этих трёх задачах, в остальных нужно время». Кого считать опытнее?",
+          "setup": null,
+          "options": [
+            { "id": "confident", "text": "Первого — он излучает уверенность", "is_wiser": false },
+            { "id": "specific",  "text": "Второго — он специфичен и осторожен", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "выбирают конкретность",
+            "explanation": "Уверенность без специфичности — флаг новичка. Специфичность с границами («в этом — да, в этом — пока нет») — флаг человека, который реально работал и понимает где предел его опыта.",
+            "wisdom": "Бертран Рассел: {{em:«Вся беда в том, что в наше время глупые самоуверенны, а умные полны сомнений»}}.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где вы встретите это сегодня",
+          "items": [
+            { "label": "В команде",   "example": "Самый громкий голос на митинге часто наименее компетентный. Тихие — те кто видит сложность." },
+            { "label": "В социсетях", "example": "Уверенные посты «как должны делать всё» собирают лайки. Эксперты пишут «зависит от...» — и проигрывают в виральности." },
+            { "label": "В себе",     "example": "В новой области первая неделя — пик уверенности. Через месяц ты понимаешь, что ничего не понимаешь. Это нормально — это шаг вперёд." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Возьмите тему, в которой вы себя считаете неплохо разбирающимся. Найдите эксперта в ней (книга, лекция, профильный канал). Послушайте 10 минут. Что нового? Если «всё знал» — вы в начале графика, не на плато."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №2" } },
+        { "type": "hook", "props": { "text": "At a dinner party someone holds forth on quantum physics with the confidence of an expert. Ten minutes in it's clear: he read one article. Strangely, the actual physicist in the room speaks far more carefully…" } },
+        { "type": "title", "props": { "text": "The {{accent:Dunning-Kruger}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Dunning-Kruger Effect · D. Dunning & J. Kruger · 1999" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/dunning_kruger.svg", "alt": "A graph — the novice's confidence peak on the left, the valley of despair in the middle, the plateau of competence on the right" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "In 1999, two Cornell psychologists — Dunning and Kruger — found a pattern now visible everywhere. To know how good you are at something, you need to know the field at least moderately well. {{em:Someone who doesn't know the field doesn't know that they don't know it}}.",
+            "So beginners feel more confident than experts. Experts have ten reasons to hesitate — they see the complexity. Beginners have one simple model — it works in three cases out of ten, and in those three they feel invincible.",
+            "It cuts both ways. Experts often {{em:underestimate}} themselves — surrounded by other experts, they see only their gaps. Beginners, looking at experts, draw a wrong conclusion: «if they can, so can I»."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "The less you know, the more confident you sound. The more you know, the more you hedge. Confidence isn't proof of competence; often the reverse."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "Two candidates in an interview. One says «I can do anything». The other: «I'm confident on these three tasks, the rest needs time». Who's more experienced?",
+          "setup": null,
+          "options": [
+            { "id": "confident", "text": "The first — he radiates confidence", "is_wiser": false },
+            { "id": "specific",  "text": "The second — he's specific and cautious", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "choose specificity",
+            "explanation": "Confidence without specificity flags the novice. Specificity with boundaries («yes here, not yet there») flags someone who's actually done the work and knows where their experience ends.",
+            "wisdom": "Bertrand Russell: {{em:«The trouble with the world is that the stupid are cocksure and the intelligent full of doubt»}}.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where you'll meet it today",
+          "items": [
+            { "label": "In your team",     "example": "The loudest voice in the meeting is often the least informed. The quiet ones see the complexity." },
+            { "label": "On social media", "example": "Confident takes («here's how it really works») collect likes. Experts write «it depends on...» — and lose the virality contest." },
+            { "label": "In yourself",     "example": "In a new field, week one is peak confidence. After a month, you realize how little you know. That's not regression — it's progress." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Pick a topic you consider yourself reasonably competent in. Find an actual expert (book, lecture, niche channel). Listen for 10 minutes. What's new? If «I knew all that» — you're at the start of the curve, not on the plateau."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/dunning_kruger" }]
+}

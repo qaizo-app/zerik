@@ -1,11 +1,7 @@
 // CardStackScreen — горизонтальный FlatList цепочки карточек с pagingEnabled.
-// Каждая страница = одна карточка (CardScreen). При смене страницы:
-//   - меняется category palette (через setCategory в ThemeContext)
-//   - вызывается onCardOpened(cardId)
-//
-// Уровни глубины (вертикальный свайп) — сейчас не реализованы; CardScreen
-// рендерит весь контент уровня 1 в одном ScrollView. Уровни 2-3 добавим
-// когда движок будет уверенно работать на одном уровне.
+// Каждая страница = одна карточка (CardScreen). Палитра переключается на
+// onScroll (когда новая карточка занимает >50% экрана) — без визуальной задержки
+// «старая палитра на новой карточке».
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Dimensions, FlatList, View } from 'react-native';
@@ -19,12 +15,20 @@ export default function CardStackScreen({
   initialIndex = 0,
   locale = 'ru',
   dynamic,
-  onCardOpened
+  onCardOpened,
+  savedIds,
+  onSavePress,
+  onSharePress
 }) {
   const { palette, setCategory } = useTheme();
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const listRef = useRef(null);
 
+  // Уведомить о том что карточка открыта (для streak/recordCardOpened).
+  // А также синхронизируем глобальную category с активной карточкой —
+  // полезно для NavigationContainer и UI вне карточки. Палитра самих карточек
+  // от глобального category НЕ зависит (CardScreen оборачивает себя в
+  // CardThemeScope), так что коллизий со старой палитрой при свайпе нет.
   useEffect(() => {
     if (!Array.isArray(cards) || cards.length === 0) return;
     const card = cards[activeIndex];
@@ -41,9 +45,16 @@ export default function CardStackScreen({
 
   const renderItem = useCallback(({ item }) => (
     <View style={{ width: SCREEN_WIDTH, height: '100%' }}>
-      <CardScreen card={item} locale={locale} dynamic={dynamic} />
+      <CardScreen
+        card={item}
+        locale={locale}
+        dynamic={dynamic}
+        isSaved={Array.isArray(savedIds) && savedIds.includes(item.id)}
+        onSave={() => onSavePress?.(item)}
+        onShare={() => onSharePress?.(item)}
+      />
     </View>
-  ), [locale, dynamic]);
+  ), [locale, dynamic, savedIds, onSavePress, onSharePress]);
 
   if (!Array.isArray(cards) || cards.length === 0) {
     return <View style={{ flex: 1, backgroundColor: palette.bg }} />;

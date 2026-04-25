@@ -46,7 +46,8 @@ extendStrings({
     // common
     save: 'Сохранить', saved: 'Сохранено', share: 'Поделиться',
     settings: 'Настройки', back: 'Назад', cancel: 'Отмена',
-    today: 'Сегодня', library: 'Библиотека', history: 'История', profile: 'Профиль',
+    today: 'Сегодня', library: 'Сохранённое', history: 'История', profile: 'Профиль',
+    tab_today: 'Сегодня', tab_library: 'Сохр.', tab_history: 'История', tab_settings: 'Настр.',
     // streak
     streak_at_risk: 'Стрик в опасности',
     streak_today_done: 'Сегодня уже отмечено',
@@ -86,6 +87,7 @@ extendStrings({
     save: 'Save', saved: 'Saved', share: 'Share',
     settings: 'Settings', back: 'Back', cancel: 'Cancel',
     today: 'Today', library: 'Library', history: 'History', profile: 'Profile',
+    tab_today: 'Today', tab_library: 'Library', tab_history: 'History', tab_settings: 'Settings',
     streak_at_risk: 'Streak at risk',
     streak_today_done: 'Already done today',
     streak_count: '{{count}} d.',

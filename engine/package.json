@@ -3,14 +3,5 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
-  "description": "Zerik Engine — block-based renderer, theming, services for daily editorial card apps. Used by all studio apps except Qaizo.",
-  "peerDependencies": {
-    "react":        ">=18",
-    "react-native": ">=0.74",
-    "react-native-safe-area-context": "*",
-    "react-native-gesture-handler":   "*",
-    "react-native-reanimated":        "*",
-    "react-native-svg":               "*",
-    "@react-native-async-storage/async-storage": "*"
-  }
+  "description": "Zerik Engine — block-based renderer, theming, services for daily editorial card apps. Used by all studio apps except Qaizo. Internal workspace package — peer deps satisfied by host app (apps/<name>)."
 }
