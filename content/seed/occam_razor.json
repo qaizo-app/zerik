@@ -1,0 +1,168 @@
+{
+  "id": "occam_razor",
+  "category": "mental_models",
+  "release_number": 48,
+  "release_date": "2026-05-16",
+  "tags": ["epistemology", "diagnosis", "ockham"],
+  "difficulty": 2,
+  "reading_time_sec": 200,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/occam_razor.svg",
+
+  "i18n": {
+
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": {
+            "text": "Ментальная модель · №7"
+        } },
+
+        { "type": "hook", "props": {
+            "text": "Пациент приходит с температурой, кашлем и усталостью. Молодой врач думает: «Может, редкий аутоиммунный синдром?» Опытный врач говорит: «Грипп»…"
+        } },
+
+        { "type": "title", "props": {
+            "text": "Бритва {{accent:Оккама}}"
+        } },
+
+        { "type": "subtitle", "props": {
+            "text": "W. of Ockham · XIV век"
+        } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/occam_razor.svg",
+            "alt": "Слева — клубок запутанных линий и точек, посередине вертикальная бирюзовая бритва, справа — простой круг"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В XIV веке монах Уильям Оккам сформулировал принцип, который переживёт каждого из нас: {{em:«Не следует множить сущности без необходимости»}}.",
+              "Между двумя объяснениями, которые одинаково хорошо описывают ситуацию, выбирай то, что проще. Не потому что оно красивее, а потому что оно {{em:чаще оказывается верным}}.",
+              "Если коллега не ответил на сообщение — скорее всего, он занят, а не составляет против тебя заговор. Если машина не заводится — скорее всего, сел аккумулятор, а не сломался стартер, топливный насос и ЭБУ одновременно."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Принцип",
+            "text": "Самое простое объяснение обычно и есть верное. Сложные версии требуют, чтобы совпало всё — а это редко бывает."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Проверь себя · Детектив",
+            "question": "Вечер. Компьютер тормозит, Wi-Fi пропадает, холодильник издаёт странные звуки.",
+            "setup": "Всё началось одновременно, пятнадцать минут назад. Что ты подумаешь первым?",
+            "options": [
+              { "id": "complex", "text": "Три устройства сломались одновременно", "is_wiser": false },
+              { "id": "simple",  "text": "В районе скачет напряжение в сети",      "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "угадали",
+              "explanation": "Три отдельные поломки в одну минуту — это совпадение трёх независимых событий. Вероятность — произведение трёх малых чисел, то есть почти ноль. Скачки напряжения — одна причина, объясняющая всё сразу.",
+              "wisdom": "Врачи учат это правило как {{em:«если слышишь стук копыт — думай о лошади, а не о зебре»}}. Хорошие диагносты проверяют простое раньше редкого.",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "trap", "props": {
+            "label": "Ловушка",
+            "text": "Бритва Оккама — не закон, а подсказка. Иногда верно именно сложное объяснение. Правило работает {{em:как первая гипотеза}}, а не как окончательный вердикт."
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В отношениях", "example": "«Она не написала — значит, разлюбила» vs «Она не написала — значит, занята»." },
+              { "label": "В новостях",   "example": "«Скрытый заговор элит» vs «Обычная некомпетентность, как всегда»." },
+              { "label": "На работе",    "example": "«Проект провалился из-за саботажа» vs «Проект провалился из-за плохого планирования»." }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните одну обиду, которую держите. Перепишите объяснение: самое простое, а не самое драматичное. Что меняется?"
+        } }
+      ]
+    },
+
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": {
+            "text": "Mental Model · №7"
+        } },
+
+        { "type": "hook", "props": {
+            "text": "A patient walks in with fever, cough and fatigue. The young doctor thinks: «A rare autoimmune syndrome?» The senior doctor says: «The flu»…"
+        } },
+
+        { "type": "title", "props": {
+            "text": "{{accent:Occam's}} Razor"
+        } },
+
+        { "type": "subtitle", "props": {
+            "text": "W. of Ockham · 14th century"
+        } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/occam_razor.svg",
+            "alt": "Tangled lines and dots on the left, a vertical teal razor in the middle, a clean circle on the right"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In the 14th century, the friar William of Ockham wrote down a principle that will outlive all of us: {{em:«Entities must not be multiplied beyond necessity»}}.",
+              "Between two explanations that fit equally well — pick the simpler one. Not because it's more elegant, but because it {{em:turns out to be true more often}}.",
+              "If a coworker hasn't replied — they're probably busy, not plotting against you. If the car won't start — the battery is probably dead, not the starter, fuel pump and ECU all at once."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Principle",
+            "text": "The simplest explanation is usually the right one. Complex versions need everything to line up — and that rarely happens."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Test yourself · Detective",
+            "question": "It's evening. Your computer lags, Wi-Fi keeps dropping, the fridge makes a strange noise.",
+            "setup": "Everything started at the same time, fifteen minutes ago. What's your first thought?",
+            "options": [
+              { "id": "complex", "text": "Three devices broke simultaneously", "is_wiser": false },
+              { "id": "simple",  "text": "Voltage is spiking in the neighborhood", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "got it right",
+              "explanation": "Three separate breakdowns in one minute would be three independent rare events at once. The probability is a product of three small numbers — close to zero. Voltage spikes are a single cause explaining everything at once.",
+              "wisdom": "Doctors teach this as {{em:«when you hear hoofbeats, think horses, not zebras»}}. Good diagnosticians check the common before the rare.",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "trap", "props": {
+            "label": "The trap",
+            "text": "Occam's Razor isn't a law — it's a hint. Sometimes the complex explanation is the right one. The rule works {{em:as a first hypothesis}}, not as a final verdict."
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              { "label": "In relationships", "example": "«She didn't text — she's lost interest» vs «She didn't text — she's busy»." },
+              { "label": "In the news",      "example": "«A hidden conspiracy of elites» vs «Plain old incompetence, as always»." },
+              { "label": "At work",          "example": "«The project failed because of sabotage» vs «The project failed because of poor planning»." }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Action for today",
+            "text": "Pick one grudge you've been carrying. Rewrite the explanation: the simplest version, not the most dramatic one. What changes?"
+        } }
+      ]
+    }
+  },
+
+  "levels": [
+    { "level": 1, "doc_ref": "models/occam_razor" }
+  ]
+}

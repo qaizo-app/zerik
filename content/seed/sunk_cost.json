@@ -1,0 +1,158 @@
+{
+  "id": "sunk_cost",
+  "category": "cognitive_biases",
+  "release_number": 47,
+  "release_date": "2026-05-15",
+  "tags": ["decision_making", "loss_aversion", "kahneman"],
+  "difficulty": 2,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/sunk_cost.svg",
+
+  "i18n": {
+
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": {
+            "text": "Когнитивное искажение · №3"
+        } },
+
+        { "type": "hook", "props": {
+            "text": "Вы купили билет на концерт за 800 шекелей. Наступает вечер. Льёт дождь, вы устали, идти не хочется…"
+        } },
+
+        { "type": "title", "props": {
+            "text": "Эффект {{accent:невозвратных}} затрат"
+        } },
+
+        { "type": "subtitle", "props": {
+            "text": "Sunk Cost Fallacy · D. Kahneman · 1979"
+        } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/sunk_cost.svg",
+            "alt": "Рука бросает золотые монеты в чёрную пустоту, рядом ещё монеты ждут броска"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Разум тихо шепчет: «Я заплатил, значит, нужно пойти. Иначе деньги пропадут». Это и есть ловушка. Деньги уже пропали — в тот момент, когда вы купили билет. Они не вернутся, останетесь вы дома или нет.",
+              "Единственный реальный вопрос сегодняшнего вечера: {{em:учитывая дождь, усталость и всё остальное — это лучший способ провести следующие три часа}}?",
+              "Но мозг не любит терять. И поэтому тащит прошлое в сегодняшнее решение, как якорь, который должен давно лежать на дне."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Принцип",
+            "text": "То, что уже потрачено — не расход. Это данность. Решение всегда о будущем, а не о прошлом."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Проверь себя",
+            "question": "Вы 3 года учитесь на профессию, которая вам разонравилась. Осталось 2 года. Что делаете?",
+            "setup": null,
+            "options": [
+              { "id": "stay",   "text": "Доучиваюсь — жалко потраченного времени", "is_wiser": false },
+              { "id": "switch", "text": "Меняю направление, пока не поздно",       "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "застряли",
+              "explanation": "3 года уже не вернуть — ни в одном из вариантов. Но в «доучиться» вы добавляете ещё 2 года в профессию, которая вам не нравится. Итого: 5 потерянных лет вместо 3.",
+              "wisdom": "Генералы, покеристы и хорошие инвесторы тренируются задавать один вопрос: {{em:Если бы я начинал с нуля прямо сейчас — выбрал бы я этот путь?}}",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В отношениях", "example": "«Мы вместе семь лет, как я могу уйти сейчас?»" },
+              { "label": "В бизнесе",    "example": "«Мы уже вложили 200К, закрывать поздно, надо доделать»." },
+              { "label": "В быту",       "example": "«Досмотрю этот сериал до конца, хоть он и скучный — начал же»." }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одно своё решение, которое держит вас только потому, что «столько уже вложено». Задайте вопрос из эксперимента."
+        } }
+      ]
+    },
+
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": {
+            "text": "Cognitive Bias · №3"
+        } },
+
+        { "type": "hook", "props": {
+            "text": "You bought a $200 concert ticket weeks ago. Tonight it's pouring rain, you're exhausted, and the couch looks unreasonably perfect…"
+        } },
+
+        { "type": "title", "props": {
+            "text": "The {{accent:Sunk Cost}} Fallacy"
+        } },
+
+        { "type": "subtitle", "props": {
+            "text": "Sunk Cost Fallacy · D. Kahneman · 1979"
+        } },
+
+        { "type": "illustration", "props": {
+            "ref": "bundle://illustrations/sunk_cost.svg",
+            "alt": "A hand drops gold coins into a black void while more coins wait their turn"
+        } },
+
+        { "type": "body_paragraphs", "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Your mind whispers: «I paid, so I have to go. Otherwise the money is wasted». That's the trap. The money is already gone — it left your wallet the moment you bought the ticket. It does not come back whether you go or stay.",
+              "The only real question for tonight is: {{em:given the rain, the fatigue, and everything else — is this the best way to spend the next three hours}}?",
+              "But the brain hates losing. So it drags the past into today's decision, like an anchor that should have been cut loose long ago."
+            ]
+        } },
+
+        { "type": "principle", "props": {
+            "label": "Principle",
+            "text": "What's already spent isn't a cost. It's a fact. Every real decision is about the future, never the past."
+        } },
+
+        { "type": "scenario", "props": {
+            "tag": "Test yourself",
+            "question": "You've spent 3 years studying a profession you no longer want. 2 years left. What do you do?",
+            "setup": null,
+            "options": [
+              { "id": "stay",   "text": "Finish — too much time invested already", "is_wiser": false },
+              { "id": "switch", "text": "Change direction before it's too late",   "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "stayed stuck",
+              "explanation": "3 years are gone either way. But «finishing» adds 2 more years to a career you don't want. Total: 5 wasted years instead of 3.",
+              "wisdom": "Generals, poker players and great investors all train one question: {{em:If I were starting from zero right now — would I pick this path?}}",
+              "hardcoded_stats": null
+            }
+        } },
+
+        { "type": "domains", "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              { "label": "In relationships", "example": "«We've been together seven years — how could I leave now?»" },
+              { "label": "In business",      "example": "«We already burned $200K — it's too late to kill the project»." },
+              { "label": "In daily life",    "example": "«I'll finish this boring show — I already started it»." }
+            ]
+        } },
+
+        { "type": "action_today", "props": {
+            "label": "Action for today",
+            "text": "Find one decision in your life that holds you only because «too much is already invested». Ask the question from the experiment."
+        } }
+      ]
+    }
+  },
+
+  "levels": [
+    { "level": 1, "doc_ref": "models/sunk_cost" }
+  ]
+}

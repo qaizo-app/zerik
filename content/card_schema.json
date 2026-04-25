@@ -1,0 +1,413 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://zerik.app/schemas/card.json",
+  "title": "Zerik Engine Card",
+  "description": "Универсальная схема карточки для движка Zerik. Карточка = метаданные + i18n блоки + уровни глубины. Block-based renderer.",
+  "type": "object",
+  "required": ["id", "category", "release_number", "release_date", "i18n"],
+  "additionalProperties": false,
+  "properties": {
+    "id":             { "type": "string", "pattern": "^[a-z0-9_]+$", "description": "snake_case уникальный идентификатор карточки" },
+    "category":       { "type": "string", "description": "Ключ категорийной палитры (cognitive_biases, mental_models, paradoxes, experiments, ...)" },
+    "release_number": { "type": "integer", "minimum": 1 },
+    "release_date":   { "type": "string", "format": "date" },
+    "tags":           { "type": "array", "items": { "type": "string" } },
+    "difficulty":     { "type": "integer", "minimum": 1, "maximum": 5 },
+    "reading_time_sec": { "type": "integer", "minimum": 30 },
+    "theme_override": {
+      "description": "Переопределить акцент (если карточка нестандартная). null — использовать палитру категории.",
+      "anyOf": [
+        { "type": "null" },
+        { "type": "object", "properties": { "accent": { "type": "string" }, "accent_dim": { "type": "string" } } }
+      ]
+    },
+    "illustration_ref": { "type": "string", "description": "Путь к SVG (bundle://... или gs://...)" },
+
+    "i18n": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-z]{2}$": { "$ref": "#/definitions/locale_content" }
+      }
+    },
+
+    "levels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["level", "doc_ref"],
+        "properties": {
+          "level":   { "type": "integer", "minimum": 1, "maximum": 5 },
+          "doc_ref": { "type": "string", "description": "Путь к карточке-расширению того же id" }
+        }
+      }
+    }
+  },
+
+  "definitions": {
+
+    "locale_content": {
+      "type": "object",
+      "required": ["blocks"],
+      "additionalProperties": false,
+      "properties": {
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/block" }
+        }
+      }
+    },
+
+    "block": {
+      "type": "object",
+      "required": ["type", "props"],
+      "properties": {
+        "type":  { "type": "string" },
+        "props": { "type": "object" }
+      },
+      "oneOf": [
+        { "$ref": "#/definitions/category_label_block" },
+        { "$ref": "#/definitions/hook_block" },
+        { "$ref": "#/definitions/title_block" },
+        { "$ref": "#/definitions/subtitle_block" },
+        { "$ref": "#/definitions/illustration_block" },
+        { "$ref": "#/definitions/body_paragraphs_block" },
+        { "$ref": "#/definitions/principle_block" },
+        { "$ref": "#/definitions/scenario_block" },
+        { "$ref": "#/definitions/trap_block" },
+        { "$ref": "#/definitions/domains_block" },
+        { "$ref": "#/definitions/action_today_block" },
+        { "$ref": "#/definitions/modern_critique_block" },
+        { "$ref": "#/definitions/riddle_reveal_block" },
+        { "$ref": "#/definitions/fallacy_example_block" },
+        { "$ref": "#/definitions/book_quote_block" },
+        { "$ref": "#/definitions/historical_data_block" }
+      ]
+    },
+
+    "category_label_block": {
+      "properties": {
+        "type":  { "const": "category_label" },
+        "props": {
+          "type": "object",
+          "required": ["text"],
+          "properties": { "text": { "type": "string" } }
+        }
+      }
+    },
+
+    "hook_block": {
+      "properties": {
+        "type":  { "const": "hook" },
+        "props": {
+          "type": "object",
+          "required": ["text"],
+          "properties": { "text": { "type": "string", "minLength": 20 } }
+        }
+      }
+    },
+
+    "title_block": {
+      "properties": {
+        "type":  { "const": "title" },
+        "props": {
+          "type": "object",
+          "required": ["text"],
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Inline-маркер {{accent:слово}} обозначает акцентное (italic + accent color) выделение."
+            }
+          }
+        }
+      }
+    },
+
+    "subtitle_block": {
+      "properties": {
+        "type":  { "const": "subtitle" },
+        "props": {
+          "type": "object",
+          "required": ["text"],
+          "properties": { "text": { "type": "string", "description": "Например: 'Sunk Cost Fallacy · D. Kahneman · 1979'" } }
+        }
+      }
+    },
+
+    "illustration_block": {
+      "properties": {
+        "type":  { "const": "illustration" },
+        "props": {
+          "type": "object",
+          "required": ["ref"],
+          "properties": {
+            "ref":  { "type": "string", "description": "bundle://illustrations/<id>.svg or gs://..." },
+            "alt":  { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "body_paragraphs_block": {
+      "properties": {
+        "type":  { "const": "body_paragraphs" },
+        "props": {
+          "type": "object",
+          "required": ["paragraphs"],
+          "properties": {
+            "paragraphs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+            "drop_cap":   { "type": "boolean", "default": true }
+          }
+        }
+      }
+    },
+
+    "principle_block": {
+      "properties": {
+        "type":  { "const": "principle" },
+        "props": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+            "label": { "type": "string", "description": "Например: 'Принцип'" },
+            "text":  { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "scenario_block": {
+      "properties": {
+        "type":  { "const": "scenario" },
+        "props": {
+          "type": "object",
+          "required": ["tag", "question", "options", "reveal"],
+          "properties": {
+            "tag":      { "type": "string", "description": "Например: 'Проверь себя'" },
+            "question": { "type": "string" },
+            "setup":    { "type": ["string", "null"], "description": "Опциональный сетап-абзац перед вариантами" },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 4,
+              "items": {
+                "type": "object",
+                "required": ["id", "text"],
+                "properties": {
+                  "id":       { "type": "string" },
+                  "text":     { "type": "string" },
+                  "is_wiser": { "type": "boolean", "default": false }
+                }
+              }
+            },
+            "reveal": {
+              "type": "object",
+              "required": ["explanation"],
+              "properties": {
+                "source_note":   { "type": "string", "description": "Например: 'По данным {{votes_count}} ответов' или 'MIT, 2014'" },
+                "big_stat_text": { "type": "string", "description": "Подпись для big-stat (например 'застряли' / 'угадали')" },
+                "explanation":   { "type": "string" },
+                "wisdom":        { "type": "string", "description": "Опциональная цитата/мудрость в конце reveal" },
+                "hardcoded_stats": {
+                  "description": "Для академических моделей — захардкоженная статистика без записи в Firestore",
+                  "anyOf": [
+                    { "type": "null" },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "total_votes": { "type": "integer" },
+                        "options":     { "type": "object", "additionalProperties": { "type": "object", "properties": { "count": { "type": "integer" } } } }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "trap_block": {
+      "properties": {
+        "type":  { "const": "trap" },
+        "props": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+            "label": { "type": "string", "description": "Например: 'Ловушка'" },
+            "text":  { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "domains_block": {
+      "properties": {
+        "type":  { "const": "domains" },
+        "props": {
+          "type": "object",
+          "required": ["heading", "items"],
+          "properties": {
+            "heading": { "type": "string", "description": "Например: 'Где вы встретите это сегодня'" },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "required": ["label", "example"],
+                "properties": {
+                  "label":   { "type": "string", "description": "Например: 'В отношениях'" },
+                  "example": { "type": "string", "description": "Конкретный пример-цитата" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "action_today_block": {
+      "properties": {
+        "type":  { "const": "action_today" },
+        "props": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+            "label": { "type": "string", "description": "Например: 'Действие на сегодня'" },
+            "text":  { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "modern_critique_block": {
+      "description": "Используется в Psychology Experiments. Современная ревизия классического исследования (зефирный тест 2018, кризис воспроизводимости социальной психологии).",
+      "properties": {
+        "type":  { "const": "modern_critique" },
+        "props": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+            "label":   { "type": "string", "description": "Например: 'Современная критика' / 'Что говорит наука сегодня'" },
+            "text":    { "type": "string" },
+            "year":    { "type": "string", "description": "Например: '2018' — год повторного исследования" },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["title"],
+                "properties": {
+                  "title":   { "type": "string" },
+                  "authors": { "type": "string" },
+                  "year":    { "type": "string" },
+                  "doi":     { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "riddle_reveal_block": {
+      "description": "Используется в Paradoxes. Пользователь видит вопрос → тапает 'у меня есть ответ' → открывается reveal с разгадкой. Без вариантов голосования (в отличие от scenario_block).",
+      "properties": {
+        "type":  { "const": "riddle_reveal" },
+        "props": {
+          "type": "object",
+          "required": ["question", "reveal_text"],
+          "properties": {
+            "tag":            { "type": "string", "description": "Например: 'Парадокс' / 'Загадка'" },
+            "question":       { "type": "string" },
+            "hint":           { "type": "string", "description": "Опциональная подсказка перед reveal" },
+            "user_prompt":    { "type": "string", "description": "Текст кнопки. Например: 'Думаю — открыть разгадку'" },
+            "reveal_text":    { "type": "string" },
+            "formula":        { "type": "string", "description": "Опциональная формула/диаграмма (LaTeX или ASCII). Например для Bayes/Birthday paradox" },
+            "intuition_trap": { "type": "string", "description": "Почему интуиция обманывает — отдельный пункт reveal" }
+          }
+        }
+      }
+    },
+
+    "fallacy_example_block": {
+      "description": "Используется в Rhetorical Fallacies. Гипотетический политически-нейтральный пример с предупреждением. НЕ упоминать конкретные партии/личности.",
+      "properties": {
+        "type":  { "const": "fallacy_example" },
+        "props": {
+          "type": "object",
+          "required": ["setup", "example_quote", "recognition_signal"],
+          "properties": {
+            "label":              { "type": "string", "description": "Например: 'Как это звучит'" },
+            "setup":              { "type": "string", "description": "'Если кто-то скажет...' или 'Представьте спор о...'" },
+            "example_quote":      { "type": "string", "description": "Гипотетическая фраза-пример. Без имён реальных людей и партий" },
+            "recognition_signal": { "type": "string", "description": "Триггер-фраза, по которой узнаём приём. Например: 'Если в споре звучит \"все так делают\" — это bandwagon'" },
+            "nuance_warning":     { "type": "string", "description": "Опц. — где приём может быть невинным или допустимым" }
+          }
+        }
+      }
+    },
+
+    "book_quote_block": {
+      "description": "Используется в Book Idea Daily. Одна цитата + источник + применение в жизни.",
+      "properties": {
+        "type":  { "const": "book_quote" },
+        "props": {
+          "type": "object",
+          "required": ["quote", "book_title", "author"],
+          "properties": {
+            "quote":       { "type": "string" },
+            "book_title":  { "type": "string" },
+            "author":      { "type": "string" },
+            "year":        { "type": "string" },
+            "chapter":     { "type": "string", "description": "Опц. — глава/раздел" },
+            "application": { "type": "string", "description": "Как применить к сегодняшнему дню" }
+          }
+        }
+      }
+    },
+
+    "historical_data_block": {
+      "description": "Используется в Thought Experiments / Psych Experiments. Готовая академическая статистика без cold start. Отображает breakdown ответов с указанием источника.",
+      "properties": {
+        "type":  { "const": "historical_data" },
+        "props": {
+          "type": "object",
+          "required": ["source", "sample_size", "breakdown"],
+          "properties": {
+            "label":       { "type": "string", "description": "Например: 'Что выбирают другие' / 'Глобальная статистика'" },
+            "source":      { "type": "string", "description": "Например: 'MIT Moral Machine, 40M ответов из 233 стран'" },
+            "sample_size": { "type": "integer" },
+            "year":        { "type": "string" },
+            "breakdown": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "object",
+                "required": ["label", "percentage"],
+                "properties": {
+                  "label":      { "type": "string" },
+                  "percentage": { "type": "number", "minimum": 0, "maximum": 100 },
+                  "is_majority":{ "type": "boolean" }
+                }
+              }
+            },
+            "regional_split": {
+              "description": "Опц. — разбивка по регионам/культурам (для cross-cultural исследований типа Ultimatum Game)",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "region":     { "type": "string" },
+                  "percentage": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

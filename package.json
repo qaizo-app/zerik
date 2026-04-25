@@ -1,0 +1,22 @@
+{
+  "name": "zerik-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Zerik Studio monorepo. Engine + apps (Mental Models is the first product). Qaizo lives separately.",
+  "workspaces": [
+    "engine",
+    "apps/*"
+  ],
+  "scripts": {
+    "validate":            "node scripts/validate-card.js",
+    "validate:seed":       "node scripts/validate-card.js content/seed",
+    "fonts:download":      "node scripts/download-fonts.js",
+    "syntax:check":        "node scripts/syntax-check.js",
+    "mental-models":       "npm --workspace mental-models start",
+    "mental-models:android":"npm --workspace mental-models run android",
+    "mental-models:ios":   "npm --workspace mental-models run ios"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}

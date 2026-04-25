@@ -1,0 +1,95 @@
+{
+  "$schema": "https://design-tokens.org/schema/v1",
+  "_meta": {
+    "version": "0.1",
+    "extracted_from": ["mockups/mental_model_card-1.html", "mockups/mental_model_occam-1.html"],
+    "notes": "Базовые токены движка. Категорийные палитры в category_palettes.json. Шрифты — Google Fonts: Prata (serif headings), Spectral (serif body), JetBrains Mono (mono labels)."
+  },
+
+  "fonts": {
+    "serif_display": { "family": "Prata", "fallback": "Georgia, serif", "weight": 400 },
+    "serif_body":    { "family": "Spectral", "fallback": "Georgia, serif", "weights": [300, 400, 500, 600], "italic": true },
+    "mono":          { "family": "JetBrains Mono", "fallback": "monospace", "weights": [400, 500, 700] }
+  },
+
+  "fontSizes": {
+    "title":         38,
+    "principle":     19,
+    "scenario_q":    21,
+    "scenario_q_alt": 20,
+    "stat_big":      32,
+    "drop_cap":      52,
+    "body":          16.5,
+    "body_small":    15.5,
+    "domain_title":  16,
+    "domain_text":   14.5,
+    "hook":          15,
+    "subtitle":      11,
+    "label":         10,
+    "topbar":        10.5,
+    "tag":           9,
+    "category_label":10,
+    "level_label":   9.5
+  },
+
+  "lineHeight": {
+    "tight":    1.05,
+    "snug":     1.3,
+    "normal":   1.55,
+    "body":     1.65,
+    "principle":1.4
+  },
+
+  "letterSpacing": {
+    "title":      "-0.01em",
+    "label":      "0.25em",
+    "category":   "0.22em",
+    "shows_up_h": "0.28em",
+    "subtitle":   "0.15em",
+    "topbar":     "0.12em",
+    "level":      "0.2em"
+  },
+
+  "spacing": {
+    "0":  0,
+    "1":  4,
+    "2":  8,
+    "3":  10,
+    "4":  14,
+    "5":  16,
+    "6":  18,
+    "7":  20,
+    "8":  22,
+    "9":  24,
+    "10": 26,
+    "12": 28,
+    "14": 30,
+    "16": 32,
+    "18": 36
+  },
+
+  "radius": {
+    "tight":   2,
+    "default": 4,
+    "pill":    999
+  },
+
+  "border": {
+    "thin": 1,
+    "thick": 2
+  },
+
+  "screen": {
+    "max_width": 440,
+    "card_padding_h": 24,
+    "card_padding_h_text": 28,
+    "bottom_nav_height": 90,
+    "safe_top": 20
+  },
+
+  "animation": {
+    "fade_in_ms": 500,
+    "bob_ms": 2000,
+    "bg_blur_px": 16
+  }
+}
