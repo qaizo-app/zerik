@@ -11,6 +11,7 @@
     "validate": "node scripts/validate-card.js",
     "validate:seed": "node scripts/validate-card.js content/seed",
     "audit:content": "node scripts/audit-content.js",
+    "cards:stats": "node scripts/cards-stats.js",
     "fonts:download": "node scripts/download-fonts.js",
     "syntax:check": "node scripts/syntax-check.js",
     "seed:upload": "node scripts/upload-seed.js",
