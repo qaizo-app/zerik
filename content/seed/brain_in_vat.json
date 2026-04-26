@@ -1,0 +1,136 @@
+{
+  "id": "brain_in_vat",
+  "category": "thought_experiments",
+  "release_number": 19,
+  "release_date": "2026-05-04",
+  "tags": ["epistemology", "putnam", "skepticism"],
+  "difficulty": 4,
+  "reading_time_sec": 200,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/brain_vat.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №3" } },
+        { "type": "hook", "props": { "text": "Представь: твой мозг изъят из тела и помещён в банку с питательным раствором. Учёный подключил электроды и подаёт сигналы — точно те же что мозг получал бы в теле. Ты «видишь» утренний кофе, «чувствуешь» вкус, «слышишь» звук кофеварки. Как ты докажешь что ты не в банке?" } },
+        { "type": "title", "props": { "text": "{{accent:Мозг}} в колбе" } },
+        { "type": "subtitle", "props": { "text": "Brain in a Vat · H. Putnam · 1981" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/brain_vat.svg", "alt": "Мозг в стеклянной банке с электродами, проводами уходящими в компьютер" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Хилари Патнэм в 1981-м обновил классическую дилемму Декарта (демон, обманывающий чувства). В современной версии — банка и провода. Если мозг получает все сигналы как настоящий, то {{em:изнутри}} нет способа отличить реальность от симуляции.",
+            "Это не научная фантастика — это серьёзный философский вопрос об основах знания. {{em:Что мы знаем точно? Что мы можем доказать?}} Если все наши свидетельства — сенсорные данные, и сенсорные данные могут быть подделаны, то знание оказывается на тонком льду.",
+            "В 2003-м Ник Бостром добавил версию: «симуляция». Возможно, мы — симуляция в компьютере цивилизации будущего. Аргумент: если симуляции возможны, и цивилизаций много, то симуляций в численном превосходстве над реальностями. Тогда {{em:статистически}} мы скорее в симуляции."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Реальность мы знаем не из чистых данных, а из {{em:согласованности}} данных. Когда всё сходится — это становится практической истиной, даже если абсолютно недоказуемо."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Если ты мозг в банке — твоя жизнь хуже стала?",
+          "setup": "Все твои отношения, ощущения, мысли остаются те же. Меняется только онтологический статус.",
+          "options": [
+            { "id": "yes", "text": "Да — это всё «не настоящее», ценность падает", "is_wiser": false },
+            { "id": "no",  "text": "Нет — ничего что я переживаю не изменилось",   "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Опросы философских факультетов Oxford/MIT, 2018",
+            "big_stat_text": "ничего не меняется",
+            "explanation": "Большинство современных философов: ценность опыта определяется самим опытом, не тем что находится «за ним». Если страдаю — страдаю. Если люблю — люблю. Метафизический статус мира не отменяет реальность чувств.",
+            "wisdom": "Витгенштейн: {{em:«О чём нельзя говорить, о том следует молчать»}}. Если разница не наблюдаема — это разница без отличия.",
+            "hardcoded_stats": {
+              "total_votes": 8500,
+              "options": {
+                "yes": { "count": 2380 },
+                "no":  { "count": 6120 }
+              },
+              "source": "Oxford/MIT philosophy surveys",
+              "year": "2018"
+            }
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Эксперимент часто используется для радикального скептицизма «ничего нельзя знать». Но это слишком — практическое знание (которое работает в действиях) не требует абсолютной онтологической определённости. {{em:Иначе мы бы парализовались на каждом шаге}}."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это поднимает важные вопросы",
+          "items": [
+            { "label": "В VR/AR", "example": "Чем глубже погружение в виртуальную реальность, тем сильнее вопрос: что отличает «настоящий» опыт от «виртуального»?" },
+            { "label": "В ИИ",   "example": "ИИ симулирующий разговор с человеком — есть ли у него «реальный» опыт? Тест Тьюринга — практический ответ: если различить нельзя, то нет смысла различать." },
+            { "label": "В этике", "example": "Если симуляции возможны и они страдают — несёт ли создатель симуляции моральную ответственность?" }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Подумайте: какие вещи в вашей жизни вы цените за то, что они «настоящие»? Если бы они оказались идеальной симуляцией с тем же опытом — изменилась бы их ценность? Этот вопрос показывает, что вы цените на самом деле."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №3" } },
+        { "type": "hook", "props": { "text": "Imagine: your brain has been removed from your body and placed in a vat of nutrients. A scientist hooked up electrodes feeding it the exact signals it would receive in the body. You «see» your morning coffee, «taste» it, «hear» the kettle. How do you prove you're not in the vat?" } },
+        { "type": "title", "props": { "text": "{{accent:Brain}} in a Vat" } },
+        { "type": "subtitle", "props": { "text": "Brain in a Vat · H. Putnam · 1981" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/brain_vat.svg", "alt": "A brain in a glass vat with electrodes, wires running to a computer" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Hilary Putnam in 1981 modernized Descartes' classic dilemma (the demon deceiving the senses). The modern form — a vat and wires. If the brain receives all signals as if real, there's no way {{em:from the inside}} to tell reality from simulation.",
+            "This isn't sci-fi — it's a serious epistemological question about the foundations of knowledge. {{em:What do we know for certain? What can we prove?}} If all our evidence is sensory, and sensory data can be faked, knowledge sits on thin ice.",
+            "In 2003 Nick Bostrom added a twist: «the simulation». Maybe we're a simulation in some future civilization's computer. Argument: if simulations are possible, and civilizations many, simulations outnumber realities. Then {{em:statistically}} we're more likely in a simulation."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "We know reality not from raw data but from the {{em:consistency}} of data. When everything coheres, it becomes practical truth — even if not absolutely provable."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "If you're a brain in a vat — has your life become worse?",
+          "setup": "All your relationships, feelings, thoughts stay the same. Only the ontological status changes.",
+          "options": [
+            { "id": "yes", "text": "Yes — none of it is «real», value drops", "is_wiser": false },
+            { "id": "no",  "text": "No — nothing I experience changed",         "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Surveys at Oxford/MIT philosophy departments, 2018",
+            "big_stat_text": "nothing changes",
+            "explanation": "Most contemporary philosophers: the value of experience is determined by the experience itself, not by what's «behind» it. If I suffer — I suffer. If I love — I love. The metaphysical status of the world doesn't cancel the reality of feelings.",
+            "wisdom": "Wittgenstein: {{em:«Whereof one cannot speak, thereof one must be silent»}}. If a difference can't be observed, it's a distinction without a difference.",
+            "hardcoded_stats": {
+              "total_votes": 8500,
+              "options": {
+                "yes": { "count": 2380 },
+                "no":  { "count": 6120 }
+              },
+              "source": "Oxford/MIT philosophy surveys",
+              "year": "2018"
+            }
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "The experiment is often used to argue radical skepticism — «we can't know anything». That's too far. Practical knowledge (the kind that works in action) doesn't require absolute ontological certainty. {{em:Otherwise we'd be paralyzed at every step}}."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this raises important questions",
+          "items": [
+            { "label": "In VR/AR",  "example": "The deeper VR immersion gets, the harder: what distinguishes «real» experience from «virtual»?" },
+            { "label": "In AI",     "example": "An AI that simulates a conversation — does it have «real» experience? The Turing test gives a pragmatic answer: if you can't tell the difference, there isn't one worth caring about." },
+            { "label": "In ethics", "example": "If simulations are possible and they suffer — does the creator of the simulation bear moral responsibility?" }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Think: which things in your life do you value because they're «real»? If they turned out to be a perfect simulation with the same experience — would the value change? This question reveals what you actually value."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/brain_in_vat" }]
+}

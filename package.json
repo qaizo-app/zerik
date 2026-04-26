@@ -12,6 +12,7 @@
     "validate:seed":       "node scripts/validate-card.js content/seed",
     "fonts:download":      "node scripts/download-fonts.js",
     "syntax:check":        "node scripts/syntax-check.js",
+    "seed:upload":         "node scripts/upload-seed.js",
     "mental-models":       "npm --workspace mental-models start",
     "mental-models:android":"npm --workspace mental-models run android",
     "mental-models:ios":   "npm --workspace mental-models run ios"

@@ -115,9 +115,18 @@ export default function SettingsScreen({
           title: pushDefaults.defaults?.[lang]?.daily_title || '',
           body:  pushDefaults.defaults?.[lang]?.daily_body  || ''
         });
+        // Streak alert вечером — отдельный канал.
+        const streakBody = (pushDefaults.defaults?.[lang]?.streak_body || '').replace('{{streak}}', '0');
+        await pushService.scheduleStreakAlert({
+          hour:   pushDefaults.streakAlertHour ?? 20,
+          minute: pushDefaults.streakAlertMinute ?? 0,
+          title:  pushDefaults.defaults?.[lang]?.streak_title || '',
+          body:   streakBody
+        });
       }
     } else {
       await pushService.cancelDailyReminder();
+      await pushService.cancelStreakAlert();
     }
   }
 

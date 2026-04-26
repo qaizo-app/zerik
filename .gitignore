@@ -18,6 +18,8 @@ google-services.json
 GoogleService-Info.plist
 .env
 .env.local
+serviceAccount.json
+**/serviceAccount*.json
 ios/Pods/
 android/build/
 android/app/build/

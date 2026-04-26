@@ -12,3 +12,4 @@ export { PaywallService }   from './paywallService';
 export { default as consentService }   from './consentService';
 export { default as analyticsEvents }  from './analyticsEvents';
 export { default as pushService }      from './pushService';
+export { default as shareService }     from './shareService';

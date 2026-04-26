@@ -1,0 +1,112 @@
+{
+  "id": "survivorship_bias",
+  "category": "cognitive_biases",
+  "release_number": 13,
+  "release_date": "2026-04-26",
+  "tags": ["statistics", "wald", "ww2"],
+  "difficulty": 2,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/survivorship.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №4" } },
+        { "type": "hook", "props": { "text": "В 1943-м американские инженеры смотрели на вернувшиеся с войны бомбардировщики. Большинство пробоин — на крыльях и хвосте. «Усиливаем эти места», — сказали они. Эйб Уолд, статистик, сказал: «Нет. Усиливать надо места без пробоин — там моторы и кабина пилота…»" } },
+        { "type": "title", "props": { "text": "Ошибка {{accent:выживших}}" } },
+        { "type": "subtitle", "props": { "text": "Survivorship Bias · A. Wald · 1943" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/survivorship.svg", "alt": "Самолёт с дырками на крыльях; силуэт упавшего самолёта с дырой в моторе" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Уолд понял простое: исследовали только вернувшиеся самолёты. {{em:Те что не вернулись — не учитывались}}. Если самолёт получил пулю в крыло — он смог долететь и попасть в выборку. Если в мотор — упал и в выборку не попал. Дыры на вернувшихся показывают не уязвимость, а наоборот: эти места выдерживают.",
+            "Та же логика во всём. «Бросившие университет миллиардеры» — Цукерберг, Гейтс, Джобс. Реальная статистика: миллионы бросили и ничего не достигли — но они не пишут книги «как я бросил универ». Мы видим только выживших.",
+            "Книги «привычки богатых», истории успеха стартапов, советы «как я похудел» — все жертвы survivorship bias. Чтобы получить честную картину, нужны данные ещё и про тех, кто {{em:следовал тем же советам и провалился}}."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Если изучаешь только успешных — ты изучаешь не успех, а условие попасть в выборку. Без данных о провалах вывод необоснован."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "На стартап-конференции спикеры рассказывают «как мы выросли». Что важнее всего из услышанного?",
+          "setup": null,
+          "options": [
+            { "id": "tactics", "text": "Их тактики — повторим у себя",                              "is_wiser": false },
+            { "id": "missing", "text": "Кого тут нет — тех, кто делал то же и провалился",         "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "слушают победителей",
+            "explanation": "Тактики выживших не доказывают что они работают — может быть тактика провалилась 95 раз и сработала 5. Без знаменателя — это не статистика. Спрашивайте не «что сработало?», а «сколько похожих не сработало?».",
+            "wisdom": "Нассим Талеб называет это «{{em:silent evidence}}» — данные погибших не доходят до нас, и мы делаем вывод по неполной картине.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где вы встретите это сегодня",
+          "items": [
+            { "label": "В стартапах",   "example": "«AirBnB начинали с тимы из 3 человек на воде» — но 1000 других тим из 3 на воде закрылись и не пишут блогов." },
+            { "label": "В инвестициях","example": "«Я держу 10 лет, всё растёт» — выжившие фонды попали в индекс, банкротом — нет. Реальная доходность ниже." },
+            { "label": "В саморазвитии","example": "«Я бросил работу и стал свободным» — а тысячи бросили и вернулись на ту же работу через год. Их не показывают." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Возьмите один совет, основанный на success story. Спросите: «Сколько людей делали то же самое и провалилось?» Если знаменатель не известен — совет не подкреплён."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №4" } },
+        { "type": "hook", "props": { "text": "In 1943 American engineers looked at bombers returning from war. Most bullet holes were in the wings and tail. «Reinforce those areas», they said. Abraham Wald, the statistician, said: «No. Reinforce the places with no holes — that's where the engines and cockpit are…»" } },
+        { "type": "title", "props": { "text": "{{accent:Survivorship}} Bias" } },
+        { "type": "subtitle", "props": { "text": "Survivorship Bias · A. Wald · 1943" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/survivorship.svg", "alt": "A plane with bullet holes on its wings; a fallen plane silhouette with a hole in the engine" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Wald saw it instantly: they were studying only the bombers that came back. {{em:The ones that didn't return weren't counted}}. A plane shot in the wing made it home and into the sample. A plane shot in the engine fell and never appeared. The holes on survivors don't show vulnerability — they show what's survivable.",
+            "Same logic everywhere. «Billionaire dropouts» — Zuckerberg, Gates, Jobs. The actual statistic: millions dropped out and got nowhere — they don't write «how I dropped out» books. We only see survivors.",
+            "Books on «habits of the rich», startup success stories, «how I lost weight» advice — all victims of survivorship bias. To get an honest picture you need data on people who {{em:followed the same advice and failed}}."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "If you study only winners, you're studying not success but the condition for entering the sample. Without failure data, the conclusion is unsupported."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "At a startup conference speakers describe «how we scaled». What's the most important thing to take away?",
+          "setup": null,
+          "options": [
+            { "id": "tactics", "text": "Their tactics — we'll copy them",                            "is_wiser": false },
+            { "id": "missing", "text": "Who isn't here — those who tried the same and failed",       "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "listen to winners",
+            "explanation": "Survivor tactics don't prove the tactic worked — maybe it failed 95 times and worked 5. Without a denominator it's not statistics. Ask «how many similar attempts didn't work», not just «what worked».",
+            "wisdom": "Nassim Taleb calls this «{{em:silent evidence}}» — the data of the dead never reaches us, so we conclude from a half-picture.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where you'll meet it today",
+          "items": [
+            { "label": "In startups",      "example": "«AirBnB started with 3 people sleeping on air mattresses» — but 1000 other 3-person teams sleeping on air mattresses closed quietly and don't write blog posts." },
+            { "label": "In investing",     "example": "«I held for 10 years, everything grew» — surviving funds stayed in the index, the bankrupt ones got delisted. Real returns are lower than the index suggests." },
+            { "label": "In self-help",     "example": "«I quit my job and felt free» — thousands quit and came back to the same job a year later. They don't show up on stage." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Take one piece of advice from a success story. Ask: «How many people tried the same and failed?» If the denominator is unknown — the advice isn't supported."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/survivorship_bias" }]
+}

@@ -163,6 +163,7 @@
   },
 
   "levels": [
-    { "level": 1, "doc_ref": "models/occam_razor" }
+    { "level": 1, "doc_ref": "models/occam_razor" },
+    { "level": 2, "doc_ref": "models/occam_razor_deep" }
   ]
 }

@@ -153,6 +153,7 @@
   },
 
   "levels": [
-    { "level": 1, "doc_ref": "models/sunk_cost" }
+    { "level": 1, "doc_ref": "models/sunk_cost" },
+    { "level": 2, "doc_ref": "models/sunk_cost_deep" }
   ]
 }

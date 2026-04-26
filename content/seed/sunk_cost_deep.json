@@ -1,0 +1,80 @@
+{
+  "id": "sunk_cost_deep",
+  "category": "cognitive_biases",
+  "release_number": 6,
+  "release_date": "2026-04-24",
+  "tags": ["decision_making", "kahneman", "deep_dive"],
+  "difficulty": 4,
+  "reading_time_sec": 240,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/sunk_cost.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Глубже · Sunk Cost · Уровень 2" } },
+        { "type": "hook", "props": { "text": "Свайп вверх привёл вас сюда. Дальше — не пересказ, а биохимия и нейронные пути. Почему мозг физически отказывается отпускать вложенное?" } },
+        { "type": "title", "props": { "text": "Откуда эта {{accent:ловушка}} в мозге" } },
+        { "type": "subtitle", "props": { "text": "Нейробиология loss aversion · Tversky & Kahneman, 1992" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "В 1992-м Канеман и Тверски математически измерили: {{em:потеря в среднем ощущается в 2-2.5 раза болезненнее, чем эквивалентный выигрыш приятен}}. Это коэффициент loss aversion — λ ≈ 2.25.",
+            "Эффект невозвратных затрат — частный случай этой асимметрии. Бросить уже вложенное = признать потерю. Доделать = не признавать. Мозг выбирает «не признавать», даже если за это придётся заплатить ещё больше.",
+            "Нейровизуализация даёт картинку поведения: при мысли о потере активируется та же область миндалевидного тела, что и при физической угрозе. Это не метафора — это {{em:физическая боль ожидания потери}}, и мозг её избегает любой ценой."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Глубина",
+          "text": "Sunk cost — не «слабость воли». Это математическое свойство нейронов: потеря весит вдвое больше выигрыша. Понимание этого делает признание потери легче."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Как это работает в реальной жизни",
+          "items": [
+            { "label": "Стартапы",       "example": "Фаундеры доводят бизнес до банкротства, а не закрывают на 70%-вероятности фейла. Закрытие = признать потерю; продолжение = ещё чуть-чуть и выйдем." },
+            { "label": "Войны",          "example": "Государства не выходят из войн с потерями, чтобы «не зря погибли наши». Каждое лишнее тело — новая sunk cost, оправдывающая следующее." },
+            { "label": "Долгие проекты", "example": "Рабочие группы 80% дороже исходной оценки уже не закрываются — потому что боль признания подавляет логику стоимости." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Упражнение глубины",
+          "text": "Вспомните последний раз когда вы сказали «жалко бросать, столько вложил». Признайте боль признания напрямую. Назовите её. Часто этого достаточно — миндалевидное тело успокаивается, и логика возвращается."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Deeper · Sunk Cost · Level 2" } },
+        { "type": "hook", "props": { "text": "The swipe up brought you here. What follows isn't a retelling — it's biochemistry and neural pathways. Why does the brain physically refuse to let go of what's invested?" } },
+        { "type": "title", "props": { "text": "Where the {{accent:trap}} lives in the brain" } },
+        { "type": "subtitle", "props": { "text": "Neuroscience of loss aversion · Tversky & Kahneman, 1992" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "In 1992 Kahneman and Tversky put a number on it: {{em:a loss feels about 2 to 2.5 times more painful than an equivalent gain feels good}}. The loss aversion coefficient — λ ≈ 2.25.",
+            "Sunk cost is a special case of this asymmetry. Walking away from an investment = admitting a loss. Doubling down = not admitting one. The brain chooses «not admit», even when continuing costs more.",
+            "Brain imaging shows the rest: thinking about a loss activates the same amygdala region as physical threat. This isn't a metaphor — it's {{em:literal pain of anticipated loss}}, and the brain avoids it at almost any cost."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Depth",
+          "text": "Sunk cost isn't «weak willpower». It's a math fact about neurons — loss weighs roughly double a gain. Knowing this makes accepting the loss easier."
+        } },
+        { "type": "domains", "props": {
+          "heading": "How this plays out in real life",
+          "items": [
+            { "label": "Startups",       "example": "Founders ride a company into the ground rather than shut down at 70%-fail probability. Closing = admit loss; continuing = «just one more pivot»." },
+            { "label": "Wars",           "example": "Countries don't exit losing wars to honor the dead. Each new casualty becomes the sunk cost justifying the next." },
+            { "label": "Long projects",  "example": "Teams 80% over original budget rarely get killed — admission pain overrides cost logic." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Depth exercise",
+          "text": "Remember the last time you said «I can't quit, I've put so much in». Name the pain of admission directly. Often that's enough — the amygdala calms, the logic returns."
+        } }
+      ]
+    }
+  },
+  "levels": [
+    { "level": 2, "doc_ref": "models/sunk_cost_deep" }
+  ]
+}

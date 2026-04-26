@@ -1,0 +1,98 @@
+{
+  "id": "birthday_paradox",
+  "category": "paradoxes",
+  "release_number": 18,
+  "release_date": "2026-05-03",
+  "tags": ["probability", "combinatorics", "intuition"],
+  "difficulty": 3,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/birthday.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №3" } },
+        { "type": "hook", "props": { "text": "Сколько людей нужно собрать в комнате, чтобы вероятность совпадения дней рождения у двух из них была больше 50%? Большинство угадывает 100, 150, 200. Правильный ответ — 23…" } },
+        { "type": "title", "props": { "text": "Парадокс {{accent:дня рождения}}" } },
+        { "type": "subtitle", "props": { "text": "Birthday Paradox · R. von Mises · 1939" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/birthday.svg", "alt": "Календарь, 23 точки, многие пары соединены линиями — показывая что пар много" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Интуиция считает «у меня 23 шанса совпасть с кем-то — это 23 из 365, около 6%». Интуиция считает не то.",
+            "Правильный счёт: совпасть могут любые две из 23 человек. Пар: 23×22/2 = 253. Каждая пара имеет шанс совпадения 1/365. Грубо: 253 × 1/365 ≈ 70%. Точная формула даёт 50.7%.",
+            "Это работает потому что вероятность {{em:любого}} совпадения растёт быстрее чем число людей. Не «я с кем-то», а «хоть кто-то с хоть кем-то». 23 человека — 253 пары."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Парадокс",
+          "question": "Сколько людей в комнате чтобы вероятность совпадения дней рождения была >99%?",
+          "hint": "Подумай о парах — сколько их в группе из N человек.",
+          "user_prompt": "Думаю — открыть разгадку",
+          "reveal_text": "57 человек. При 23 — 50%. При 41 — 90%. При 57 — 99%. При 70 — 99.9%. Чтобы достичь 100% (математически) нужно 366 человек (365 разных дней + 1).",
+          "formula": "P(нет совпадения) = 365! / ((365-N)! × 365^N)\nN=23 → P(совпадение) ≈ 50.7%\nN=41 → ≈ 90%\nN=57 → ≈ 99%",
+          "intuition_trap": "Интуиция считает «я vs остальные» (23 шанса). Но правильно — {{em:все пары между всеми}} (253 пары при 23 человеках)."
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Парадокс работает только если рождения распределены равномерно. В реальности есть пики (сентябрь, январь) и провалы — это {{em:увеличивает}} вероятность совпадения, не уменьшает. 23 — даже завышенная оценка."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это встречается",
+          "items": [
+            { "label": "В криптографии",   "example": "Атака «дня рождения» на хэш-функции. Если хэш 64-bit, нужно 2^32 попыток (4 млрд) для коллизии — это пары растут квадратично." },
+            { "label": "В A/B-тестах",     "example": "Запустил 100 тестов — найдёшь «значимое улучшение» по чистой случайности. Это p-hacking через парадокс." },
+            { "label": "В соцсетях",      "example": "В группе из 23 знакомых хотя бы двое имеют общий день рождения. Не «магия», просто комбинаторика." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "В групповом чате или классе из 25-30 человек спросите дни рождения. С вероятностью 70% найдёте совпадение. Покажите формулу — мало кто верит без расчёта."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №3" } },
+        { "type": "hook", "props": { "text": "How many people in a room until two share a birthday with probability over 50%? Most guesses: 100, 150, 200. The right answer is 23…" } },
+        { "type": "title", "props": { "text": "The {{accent:Birthday}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Birthday Paradox · R. von Mises · 1939" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/birthday.svg", "alt": "A calendar, 23 dots, many pairs connected — showing how many pairs exist" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Intuition counts: «23 chances to match someone — 23 out of 365, about 6%». Intuition is counting the wrong thing.",
+            "The right count: any two of the 23 people can match. Pairs: 23×22/2 = 253. Each pair has a 1/365 chance. Rough: 253 × 1/365 ≈ 70%. The exact formula gives 50.7%.",
+            "It works because probability of {{em:any}} match grows faster than the number of people. Not «me with someone», but «anyone with anyone». 23 people = 253 pairs."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Paradox",
+          "question": "How many people in a room for probability of shared birthday > 99%?",
+          "hint": "Think about pairs — how many in a group of N people.",
+          "user_prompt": "Show me the answer",
+          "reveal_text": "57 people. At 23 — 50%. At 41 — 90%. At 57 — 99%. At 70 — 99.9%. To reach 100% mathematically you need 366 (365 distinct days + 1).",
+          "formula": "P(no match) = 365! / ((365-N)! × 365^N)\nN=23 → P(match) ≈ 50.7%\nN=41 → ≈ 90%\nN=57 → ≈ 99%",
+          "intuition_trap": "Intuition counts «me vs others» (23 chances). The right count is {{em:all pairs among all}} (253 pairs in 23 people)."
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "The paradox holds only if birthdays are evenly distributed. In reality there are spikes (September, January) and dips — which {{em:increase}} match probability, not decrease. 23 is even an overestimate."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this surfaces",
+          "items": [
+            { "label": "In cryptography",  "example": "«Birthday attack» on hash functions. A 64-bit hash needs 2^32 attempts (4 billion) for a collision — pairs grow quadratically." },
+            { "label": "In A/B tests",     "example": "Run 100 tests, you'll find a «significant improvement» purely by chance. That's p-hacking via the paradox." },
+            { "label": "In social groups","example": "In a group of 23 acquaintances, at least two share a birthday. Not magic — combinatorics." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "In a chat or class of 25-30 people, ask for birthdays. 70% chance you'll find a match. Show the formula — few people believe it without the math."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/birthday_paradox" }]
+}

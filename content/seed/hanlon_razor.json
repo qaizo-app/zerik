@@ -1,0 +1,120 @@
+{
+  "id": "hanlon_razor",
+  "category": "mental_models",
+  "release_number": 16,
+  "release_date": "2026-05-01",
+  "tags": ["judgment", "hanlon", "heuristic"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/hanlon.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №5" } },
+        { "type": "hook", "props": { "text": "Друг не пришёл на твой день рождения. Не позвонил, не предупредил. Голова рисует: он не уважает тебя, он специально, ты для него ничего не значишь. Через день оказывается: он перепутал дату на неделю…" } },
+        { "type": "title", "props": { "text": "Бритва {{accent:Хэнлона}}" } },
+        { "type": "subtitle", "props": { "text": "Hanlon's Razor · R. J. Hanlon · 1980" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/hanlon.svg", "alt": "Две стрелки от одного события: одна сложная (заговор), вторая простая (ошибка)" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Роберт Хэнлон сформулировал в 1980-м: {{em:«Никогда не приписывай злому умыслу то, что объясняется глупостью»}}. Точнее — обычной невнимательностью, забывчивостью, стрессом, плохим планированием.",
+            "Это специальный случай бритвы Оккама — для социальных ситуаций. Вариант «он сделал это специально, чтобы навредить мне» требует чтобы человек подумал о тебе, оценил последствия, спланировал. Вариант «он не подумал/забыл/был занят» требует... ничего.",
+            "Простая ошибка происходит на порядки чаще злого умысла. Поэтому если ты ищешь объяснение действиям другого — начинай с глупости, а не со зла. В 90% случаев попадёшь."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Не приписывай умыслу то, что лучше объясняется невнимательностью. Не потому что люди добрые — а потому что они в основном заняты собой, а не тобой."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Коллега в email-цепочке не упомянул вашу работу. Что подумаете?",
+          "setup": null,
+          "options": [
+            { "id": "intent", "text": "Хочет присвоить заслугу — нужно что-то делать",        "is_wiser": false },
+            { "id": "miss",   "text": "Скорее всего просто забыл — спрошу аккуратно",          "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "видят умысел",
+            "explanation": "Спросить вежливо — выясняешь правду без конфликта. В 90% — он действительно забыл. В 10% — правда хотел присвоить, но и тут вежливый вопрос ставит его в неловкое положение и блокирует поведение. В обоих сценариях вопрос лучше чем подозрение.",
+            "wisdom": "Та же мысль у Гёте: {{em:«Не объясняй злом то, что довольно объясняется глупостью»}}. Но он не упомянул что и у себя стоит проверять — мы тоже часто забываем, а потом обижаемся когда нас винят.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Бритва Хэнлона работает {{em:на ранних стадиях}} — когда мало данных. Если человек систематически делает то же самое — это уже паттерн, и тогда возможен умысел. Не используй бритву чтобы оправдывать токсичное поведение."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где вы встретите это сегодня",
+          "items": [
+            { "label": "На работе",     "example": "Письмо на которое не ответили = занят, а не игнорирует. Сообщение с резким тоном = плохо спал, а не злой." },
+            { "label": "В соцсетях",   "example": "«Они меня заблокировали из ненависти» — обычно случайный анфолловинг или техническая ошибка. Драма в тебе, не в них." },
+            { "label": "В сервисе",    "example": "Заказ перепутан — оператор устал, а не «специально не дал то что я хотел»." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Вспомните одну ситуацию, в которой вас «обидели». Перепишите объяснение через бритву Хэнлона — глупость вместо умысла. Что меняется в чувствах?"
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №5" } },
+        { "type": "hook", "props": { "text": "A friend skipped your birthday. No call, no heads-up. Your head paints it: he doesn't respect me, he did it on purpose, I mean nothing to him. A day later it turns out — he had the wrong date by a week…" } },
+        { "type": "title", "props": { "text": "{{accent:Hanlon's}} Razor" } },
+        { "type": "subtitle", "props": { "text": "Hanlon's Razor · R. J. Hanlon · 1980" } },
+        { "type": "illustration", "props": { "ref": "bundle://illustrations/hanlon.svg", "alt": "Two arrows from a single event: one complex (conspiracy), one simple (mistake)" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Robert Hanlon put it in 1980: {{em:«Never attribute to malice that which is adequately explained by stupidity»}}. Or more precisely — ordinary inattention, forgetfulness, stress, bad planning.",
+            "It's a special case of Occam's Razor — for social situations. «He did it on purpose to hurt me» requires him to think about you, assess consequences, plan. «He wasn't paying attention / forgot / was busy» requires... nothing.",
+            "Plain mistakes happen orders of magnitude more often than malice. So when looking for an explanation of someone else's behavior — start with stupidity, not malice. You'll be right 90% of the time."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "Don't attribute to intent what's better explained by inattention. Not because people are kind — because they're mostly thinking about themselves, not you."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "A colleague's email thread didn't credit your work. What do you assume?",
+          "setup": null,
+          "options": [
+            { "id": "intent", "text": "Wants to take credit — need to act",                  "is_wiser": false },
+            { "id": "miss",   "text": "Probably just forgot — I'll ask gently",              "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "see intent",
+            "explanation": "A polite ask gets you the truth without a fight. 90% — he really forgot. 10% — he meant it, but the polite ask still puts him on the spot and blocks the move. Either way, asking beats suspecting.",
+            "wisdom": "Goethe said it before: {{em:«Misunderstandings and lethargy perhaps produce more wrong in the world than deceit and malice do»}}. He didn't mention applying the same to yourself — you forget too, and resent being blamed.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "Hanlon's Razor works {{em:at the early stage}} — when data is thin. If someone systematically does the same thing — it's now a pattern, and intent becomes plausible. Don't use the razor to excuse toxic behavior."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where you'll meet it today",
+          "items": [
+            { "label": "At work",        "example": "Unreplied email = busy, not ignoring. Curt message = bad sleep, not anger." },
+            { "label": "On social media","example": "«They blocked me out of hate» — usually an accidental unfollow or a UI glitch. The drama is in you, not them." },
+            { "label": "In services",    "example": "Wrong order — the operator was tired, not «deliberately didn't give me what I wanted»." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Recall one situation where you felt «wronged». Rewrite the explanation through Hanlon's Razor — stupidity instead of malice. What changes in how you feel?"
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/hanlon_razor" }]
+}

@@ -24,6 +24,7 @@ import { studioApps } from './config/studioLineup.config';
 import { onboardingSlides } from './src/onboardingSlides';
 import { registerAppIllustrations } from './illustrations';
 import { registerAppBlocks } from './blocks';
+import { resolveLevels } from './src/seed';
 import {
   contentService, votingService, progressService,
   authService, paywallService
@@ -221,17 +222,15 @@ function TodayTabScreen() {
   }
 
   async function handleShare(card) {
-    try {
-      const Sharing = await import('expo-sharing');
-      const available = await Sharing.isAvailableAsync();
-      if (!available) return;
-      const localeContent = card.i18n?.ru || card.i18n?.en || {};
-      const titleBlock = (localeContent.blocks || []).find(b => b.type === 'title');
-      const title = titleBlock?.props?.text?.replace(/\{\{accent:([^}]+)\}\}/g, '$1') || card.id;
-      // Простой share — текстом. Image-share добавим через react-native-view-shot позже.
-      const url = `https://zerik.app/cards/${card.id}`;
-      await Sharing.shareAsync(url, { dialogTitle: title }).catch(() => {});
-    } catch (e) {}
+    const { shareService } = await import('@engine');
+    // viewRef можно прокинуть через CardStackScreen.onActiveCardCaptureRefChange
+    // когда подключим image-capture (рефакторинг CardScreen в forwardRef).
+    // Сейчас shareService падает на URL fallback автоматически.
+    await shareService.shareCard(null, {
+      card,
+      locale: 'ru',
+      fallbackUrl: `https://zerik.app/cards/${card.id}`
+    }).catch(() => {});
   }
 
   if (!cards) return <View style={{ flex: 1, backgroundColor: '#0E1014' }} />;
@@ -243,6 +242,7 @@ function TodayTabScreen() {
       savedIds={savedIds}
       onSavePress={handleSave}
       onSharePress={handleShare}
+      resolveLevels={resolveLevels}
       onCardOpened={(id) => {
         progressService.recordCardOpened(id).catch(() => {});
       }}

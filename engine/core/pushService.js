@@ -13,6 +13,7 @@ import consentService from './consentService';
 import { getItem, setItem } from './storage';
 
 const DAILY_REMINDER_KEY = 'zerik:push:daily_reminder_id';
+const STREAK_ALERT_KEY   = 'zerik:push:streak_alert_id';
 const PREF_KEY = 'zerik:push:prefs';
 
 let _messaging = null;
@@ -109,10 +110,53 @@ export const pushService = {
     }
   },
 
+  // ─── streak alert ──────────────────────────────────────────────────────
+  // Один раз в день, вечером, если стрик в опасности (карточка сегодня
+  // не открыта). Вызывать из progressService после record/check streak.
+
+  async scheduleStreakAlert({ hour = 20, minute = 0, title, body, streak } = {}) {
+    if (!consentService.getReminderConsent()) return null;
+
+    // Отменяем старый перед записью нового, чтобы не плодить дубликаты.
+    const oldId = await getItem(STREAK_ALERT_KEY, null);
+    if (oldId) {
+      try { await Notifications.cancelScheduledNotificationAsync(oldId); } catch (e) {}
+    }
+
+    try {
+      const id = await Notifications.scheduleNotificationAsync({
+        content: {
+          title: title || 'Streak at risk',
+          body:  body  || (streak ? `${streak}-day streak. One card to keep it.` : 'One card today.'),
+          data:  { type: 'streak_alert', streak: streak || 0 }
+        },
+        trigger: {
+          type: 'daily',
+          hour, minute,
+          channelId: 'streak'
+        }
+      });
+      await setItem(STREAK_ALERT_KEY, id);
+      return id;
+    } catch (e) {
+      if (__DEV__) console.warn('[pushService.scheduleStreakAlert]', e?.message);
+      return null;
+    }
+  },
+
+  async cancelStreakAlert() {
+    const id = await getItem(STREAK_ALERT_KEY, null);
+    if (id) {
+      try { await Notifications.cancelScheduledNotificationAsync(id); } catch (e) {}
+      await setItem(STREAK_ALERT_KEY, null);
+    }
+  },
+
   async cancelAll() {
     try {
       await Notifications.cancelAllScheduledNotificationsAsync();
       await setItem(DAILY_REMINDER_KEY, null);
+      await setItem(STREAK_ALERT_KEY, null);
     } catch (e) {}
   },
 
