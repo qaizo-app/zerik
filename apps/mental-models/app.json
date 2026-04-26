@@ -48,7 +48,8 @@
             "useFrameworks": "static"
           }
         }
-      ]
+      ],
+      "@react-native-firebase/app-check"
     ],
     "extra": {
       "appSlug": "mental-models",

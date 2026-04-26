@@ -27,7 +27,7 @@ export { default as AppNavigator, RootStackNavigator } from './navigation/AppNav
 export {
   hasFirebase, getFirestore, getAuth, tryFirestore, tryAuth, storage,
   ContentService, VotingService, ProgressService, AuthService, PaywallService,
-  consentService, analyticsEvents, pushService, shareService
+  consentService, analyticsEvents, pushService, shareService, appCheckService
 } from './core';
 
 // i18n

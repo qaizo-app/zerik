@@ -15,7 +15,7 @@ import {
   PaywallScreen, OnboardingScreen, SettingsScreen,
   AppNavigator, RootStackNavigator,
   setLanguage,
-  consentService, pushService
+  consentService, pushService, appCheckService
 } from '@engine';
 
 import { categoryPalettes } from './config/theme.config';
@@ -72,6 +72,7 @@ export default function App() {
   useEffect(() => {
     (async () => {
       setLanguage(detectLanguage());
+      appCheckService.activate().catch(() => {});
 
       const onboarded = await AsyncStorage.getItem(ONBOARDING_KEY);
       const skipped   = await AsyncStorage.getItem(AUTH_SKIPPED_KEY);
