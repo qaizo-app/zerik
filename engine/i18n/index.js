@@ -53,6 +53,7 @@ extendStrings({
     language_name: 'Русский',
     onboarding_next: 'Дальше →',
     onboarding_start: 'Старт →',
+    coming_soon_badge: 'Скоро',
     // streak
     streak_at_risk: 'Стрик в опасности',
     streak_today_done: 'Сегодня уже отмечено',
@@ -110,6 +111,7 @@ extendStrings({
     language_name: 'English',
     onboarding_next: 'Next →',
     onboarding_start: 'Start →',
+    coming_soon_badge: 'Coming soon',
     streak_at_risk: 'Streak at risk',
     streak_today_done: 'Already done today',
     streak_count: '{{count}} d.',

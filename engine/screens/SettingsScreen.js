@@ -49,22 +49,28 @@ function StudioAppCard({ app, locale }) {
   const url = app.store_url || (app.store_id_android
     ? `https://play.google.com/store/apps/details?id=${app.store_id_android}`
     : '');
+  const tappable = !!url && !app.coming_soon;
+  const badge = app.coming_soon ? t('coming_soon_badge')
+              : app.is_flagship ? 'Flagship'
+              : 'App';
 
   return (
     <Pressable
-      onPress={() => url && Linking.openURL(url)}
+      onPress={tappable ? (() => Linking.openURL(url)) : null}
       style={{
         marginHorizontal: 24, marginVertical: 8,
         padding: 18, borderRadius: tokens.radius.tight,
         borderLeftWidth: 3, borderLeftColor: palette.accent,
-        backgroundColor: palette.bg_card
+        backgroundColor: palette.bg_card,
+        opacity: tappable ? 1 : 0.7
       }}
     >
       <Text style={{
         fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 2,
-        color: palette.accent, textTransform: 'uppercase', marginBottom: 6
+        color: app.coming_soon ? palette.text_mute : palette.accent,
+        textTransform: 'uppercase', marginBottom: 6
       }}>
-        {app.is_flagship ? 'Flagship' : 'App'}
+        {badge}
       </Text>
       <Text style={{
         fontFamily: tokens.fonts.serif_display, fontSize: 18,
