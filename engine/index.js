@@ -14,6 +14,7 @@ export { default as CardScreen }       from './screens/CardScreen';
 export { default as CardStackScreen }  from './screens/CardStackScreen';
 export { default as CardLevelStack }   from './screens/CardLevelStack';
 export { default as CardBottomBar }    from './components/CardBottomBar';
+export { default as ErrorBoundary }     from './components/ErrorBoundary';
 export { default as LibraryScreen }    from './screens/LibraryScreen';
 export { default as HistoryScreen }    from './screens/HistoryScreen';
 export { default as AuthScreen }       from './screens/AuthScreen';

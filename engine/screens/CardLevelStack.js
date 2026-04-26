@@ -9,6 +9,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Dimensions, FlatList, View } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 import CardScreen from './CardScreen';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
@@ -33,14 +34,16 @@ export default function CardLevelStack({
 
   const renderItem = useCallback(({ item }) => (
     <View style={{ width, height: stackHeight }}>
-      <CardScreen
-        card={item.card}
-        locale={locale}
-        dynamic={dynamic}
-        isSaved={isSaved}
-        onSave={onSave}
-        onShare={onShare}
-      />
+      <ErrorBoundary>
+        <CardScreen
+          card={item.card}
+          locale={locale}
+          dynamic={dynamic}
+          isSaved={isSaved}
+          onSave={onSave}
+          onShare={onShare}
+        />
+      </ErrorBoundary>
     </View>
   ), [width, stackHeight, locale, dynamic, isSaved, onSave, onShare]);
 
@@ -54,14 +57,16 @@ export default function CardLevelStack({
   if (levels.length === 1) {
     return (
       <View style={{ width, height: '100%' }}>
-        <CardScreen
-          card={levels[0].card}
-          locale={locale}
-          dynamic={dynamic}
-          isSaved={isSaved}
-          onSave={onSave}
-          onShare={onShare}
-        />
+        <ErrorBoundary>
+          <CardScreen
+            card={levels[0].card}
+            locale={locale}
+            dynamic={dynamic}
+            isSaved={isSaved}
+            onSave={onSave}
+            onShare={onShare}
+          />
+        </ErrorBoundary>
       </View>
     );
   }

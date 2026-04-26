@@ -4,6 +4,7 @@
 
 import { View } from 'react-native';
 import { getBlockComponent } from './registry';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export default function BlockRenderer({ blocks, card, locale, dynamic }) {
   if (!Array.isArray(blocks)) return null;
@@ -17,13 +18,14 @@ export default function BlockRenderer({ blocks, card, locale, dynamic }) {
           return null;
         }
         return (
-          <Component
-            key={`${block.type}-${i}`}
-            {...block.props}
-            card={card}
-            locale={locale}
-            dynamic={dynamic}
-          />
+          <ErrorBoundary key={`${block.type}-${i}`} fallback={null}>
+            <Component
+              {...block.props}
+              card={card}
+              locale={locale}
+              dynamic={dynamic}
+            />
+          </ErrorBoundary>
         );
       })}
     </View>
