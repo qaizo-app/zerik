@@ -32,12 +32,16 @@ export function registerAppIllustrations() {
 
   registerIllustration('hindsight',              ConfirmationBias);
   registerIllustration('loss_aversion',          SunkCost);
+  registerIllustration('survivorship',           ConfirmationBias);
   registerIllustration('survivorship_bias',      ConfirmationBias);
   registerIllustration('availability_heuristic', Anchoring);
   registerIllustration('recency_bias',           Anchoring);
+  registerIllustration('hanlon',                 OccamRazor);
   registerIllustration('hanlon_razor',           OccamRazor);
   registerIllustration('second_order',           FirstPrinciples);
+  registerIllustration('birthday',               MontyHall);
   registerIllustration('birthday_paradox',       MontyHall);
+  registerIllustration('brain_vat',              Trolley);
   registerIllustration('brain_in_vat',           Trolley);
   registerIllustration('goodharts_law',          Pareto);
   registerIllustration('schelling_point',        FirstPrinciples);
