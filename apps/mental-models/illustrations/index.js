@@ -30,26 +30,28 @@ export function registerAppIllustrations() {
   registerIllustration('theseus',           Theseus);
   registerIllustration('simpson',           Simpson);
 
-  registerIllustration('hindsight',              ConfirmationBias);
-  registerIllustration('loss_aversion',          SunkCost);
-  registerIllustration('survivorship',           ConfirmationBias);
-  registerIllustration('survivorship_bias',      ConfirmationBias);
-  registerIllustration('availability_heuristic', Anchoring);
+  // Aliases: каждая карточка без собственной SVG получает SVG близкой темы.
+  // Стараемся не давать одну и ту же SVG соседним карточкам в линейке.
+  registerIllustration('hindsight',              DunningKruger);
+  registerIllustration('survivorship',           Simpson);
+  registerIllustration('survivorship_bias',      Simpson);
+  registerIllustration('availability_heuristic', Pareto);
   registerIllustration('recency_bias',           Anchoring);
+  registerIllustration('loss_aversion',          SunkCost);
   registerIllustration('hanlon',                 OccamRazor);
   registerIllustration('hanlon_razor',           OccamRazor);
-  registerIllustration('second_order',           FirstPrinciples);
-  registerIllustration('birthday',               MontyHall);
-  registerIllustration('birthday_paradox',       MontyHall);
-  registerIllustration('brain_vat',              Trolley);
-  registerIllustration('brain_in_vat',           Trolley);
-  registerIllustration('goodharts_law',          Pareto);
-  registerIllustration('schelling_point',        FirstPrinciples);
-  registerIllustration('pyrrhonism',             FirstPrinciples);
-  registerIllustration('dunbar_number',          Pareto);
-  registerIllustration('zenos_paradox',          MontyHall);
-  registerIllustration('platos_cave',            Trolley);
+  registerIllustration('second_order',           Pareto);
+  registerIllustration('schelling_point',        Theseus);
+  registerIllustration('pyrrhonism',             ConfirmationBias);
+  registerIllustration('goodharts_law',          Anchoring);
+  registerIllustration('dunbar_number',          Simpson);
+  registerIllustration('birthday',               DunningKruger);
+  registerIllustration('birthday_paradox',       DunningKruger);
+  registerIllustration('zenos_paradox',          Theseus);
+  registerIllustration('banach_tarski',          Inversion);
+  registerIllustration('brain_vat',              Inversion);
+  registerIllustration('brain_in_vat',           Inversion);
+  registerIllustration('platos_cave',            ConfirmationBias);
   registerIllustration('veil_of_ignorance',      Trolley);
-  registerIllustration('banach_tarski',          MontyHall);
-  registerIllustration('placeholder',            ConfirmationBias);
+  registerIllustration('placeholder',            FirstPrinciples);
 }
