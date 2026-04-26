@@ -14,7 +14,8 @@ import {
   CardStackScreen, LibraryScreen, HistoryScreen, AuthScreen,
   PaywallScreen, OnboardingScreen, SettingsScreen,
   AppNavigator, RootStackNavigator,
-  setLanguage
+  setLanguage,
+  consentService, pushService
 } from '@engine';
 
 import { categoryPalettes } from './config/theme.config';
@@ -127,7 +128,21 @@ export default function App() {
                 Onboarding: ({ navigation }) => (
                   <OnboardingScreen
                     slides={onboardingSlides[detectLanguage()] || onboardingSlides.en}
-                    onConsentReminders={() => {}}
+                    onConsentReminders={async (granted) => {
+                      await consentService.setReminderConsent(!!granted);
+                      if (!granted) return;
+                      const ok = await pushService.requestPermission();
+                      if (!ok) return;
+                      await pushService.setupAndroidChannel();
+                      const lang = detectLanguage();
+                      const texts = push.defaults?.[lang] || push.defaults?.en || {};
+                      await pushService.scheduleDailyReminder({
+                        hour: push.defaultDailyHour ?? 9,
+                        minute: push.defaultDailyMinute ?? 0,
+                        title: texts.daily_title,
+                        body:  texts.daily_body
+                      });
+                    }}
                     onDone={async () => {
                       await AsyncStorage.setItem(ONBOARDING_KEY, 'true');
                       navigation.replace('Main');
