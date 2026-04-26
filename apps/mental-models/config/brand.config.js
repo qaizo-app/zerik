@@ -17,5 +17,12 @@ export const brand = {
     }
   },
   primaryCategory: 'mental_models',
-  bundleId: 'com.zerikstudio.mentalmodels'
+  bundleId: 'com.zerikstudio.mentalmodels',
+  legal: {
+    // Заполнить перед public-релизом (GitHub Pages / Notion / standalone сайт).
+    // null прячет ссылки из SettingsScreen.
+    privacyUrl: null,
+    termsUrl:   null,
+    supportEmail: null
+  }
 };

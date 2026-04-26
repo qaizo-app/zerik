@@ -84,6 +84,12 @@ extendStrings({
     consent_analytics: 'Аналитика',
     consent_crash_reports: 'Отчёты о сбоях',
     language: 'Язык',
+    // about
+    about: 'О приложении',
+    privacy_policy: 'Политика конфиденциальности',
+    terms_of_service: 'Условия использования',
+    support: 'Поддержка',
+    version: 'Версия',
     // errors
     network_error: 'Нет соединения',
     try_again: 'Попробовать снова'
@@ -122,6 +128,11 @@ extendStrings({
     consent_analytics: 'Analytics',
     consent_crash_reports: 'Crash reports',
     language: 'Language',
+    about: 'About',
+    privacy_policy: 'Privacy policy',
+    terms_of_service: 'Terms of service',
+    support: 'Support',
+    version: 'Version',
     network_error: 'No connection',
     try_again: 'Try again'
   }

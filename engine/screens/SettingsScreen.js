@@ -85,7 +85,8 @@ export default function SettingsScreen({
   onSignIn,
   onSignOut,
   onOpenPaywall,
-  hasSubscription
+  hasSubscription,
+  appVersion = ''
 }) {
   const { palette, tokens, brand } = useTheme();
   const insets = useSafeAreaInsets();
@@ -180,12 +181,24 @@ export default function SettingsScreen({
         </>
       ) : null}
 
+      <SectionHeader>{t('about')}</SectionHeader>
+      {brand?.legal?.privacyUrl ? (
+        <Row label={t('privacy_policy')} onPress={() => Linking.openURL(brand.legal.privacyUrl)} />
+      ) : null}
+      {brand?.legal?.termsUrl ? (
+        <Row label={t('terms_of_service')} onPress={() => Linking.openURL(brand.legal.termsUrl)} />
+      ) : null}
+      {brand?.legal?.supportEmail ? (
+        <Row label={t('support')} value={brand.legal.supportEmail} onPress={() => Linking.openURL(`mailto:${brand.legal.supportEmail}`)} />
+      ) : null}
+      <Row label={t('version')} value={appVersion} />
+
       <Text style={{
-        marginTop: 32, paddingHorizontal: 24,
+        marginTop: 24, paddingHorizontal: 24, paddingBottom: 16,
         fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 1.4,
-        color: palette.text_mute, textTransform: 'uppercase'
+        color: palette.text_mute, textTransform: 'uppercase', textAlign: 'center'
       }}>
-        {brand?.app?.name || 'Mental Models'} · v0.1.0
+        {brand?.app?.name || 'Mental Models'}
       </Text>
     </ScrollView>
   );

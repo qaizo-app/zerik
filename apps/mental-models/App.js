@@ -20,6 +20,7 @@ import {
 
 import { categoryPalettes } from './config/theme.config';
 import { brand } from './config/brand.config';
+import appJson from './app.json';
 import { push }  from './config/push.config';
 import { studioApps } from './config/studioLineup.config';
 import { onboardingSlides } from './src/onboardingSlides';
@@ -198,6 +199,7 @@ export default function App() {
                           pushDefaults={push}
                           user={user}
                           hasSubscription={hasSubscription}
+                          appVersion={appJson.expo.version}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
                           onOpenPaywall={() => navigation.getParent()?.navigate('Paywall')}
