@@ -10,7 +10,9 @@
       "resizeMode": "cover",
       "backgroundColor": "#0E1014"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "_ios_disabled_until_apple_developer": {
       "bundleIdentifier": "com.zerik.mentalmodels",
       "supportsTablet": false
@@ -46,7 +48,17 @@
       ]
     ],
     "extra": {
-      "appSlug": "mental-models"
+      "appSlug": "mental-models",
+      "eas": {
+        "projectId": "fef49184-7cf2-45f8-a6d1-5ff878c08d3d"
+      }
+    },
+    "owner": "qaizo",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fef49184-7cf2-45f8-a6d1-5ff878c08d3d"
     }
   }
 }
