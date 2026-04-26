@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "116778984611",
+    "project_id": "mental-models-mvp",
+    "storage_bucket": "mental-models-mvp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116778984611:android:84b315a8046fe05240cb16",
+        "android_client_info": {
+          "package_name": "com.zerik.mentalmodels"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHl7Bh0roCys_pi7dllc56BZCs-EfNnZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
