@@ -2,108 +2,86 @@
 
 Monorepo студии. Универсальный движок для линейки приложений жанра «ежедневная редакторская карточка» + первое приложение **Mental Models**.
 
-> **Важно про имена.** `Zerik` — рабочее имя студии и движка, может измениться. `Mental Models` — рабочее имя первого приложения, тоже изменится перед релизом. См. [docs/studio_name_prompt.md](docs/studio_name_prompt.md).
+> **Имена рабочие, не финальные.** `Zerik` — рабочее имя студии и движка. `Mental Models` — рабочее имя первого приложения. Финальные имена — перед релизом в стор. См. [docs/studio_name_prompt.md](docs/studio_name_prompt.md).
+
+`Qaizo` — отдельный финансовый продукт студии вне этого монорепо (см. `C:\Users\bestc_000\Desktop\Qaizo`).
 
 ## Структура
 
 ```
 Zerik/
-├── docs/                       Архитектура, brief, roadmap линейки
+├── docs/                       Архитектура, brief, roadmap линейки, ASO copy
 ├── mockups/                    Pixel-perfect HTML-макеты карточки
 ├── content/
 │   ├── card_schema.json        JSON Schema валидации
 │   ├── master_prompt.md        Мастер-промпт для AI-генерации карточек
-│   └── seed/                   Примеры карточек (Sunk Cost, Occam Razor)
+│   └── seed/                   29 карточек + 2 deep уровня
 ├── design/
 │   ├── design_tokens.json      Типографика, spacing, shared
-│   └── category_palettes.json  7 палитр под линейку
-├── engine/                     @zerik/engine — движок
-│   ├── theme/                  ThemeContext, tokens, usePalette
-│   ├── blocks/                 Block registry + 11 базовых блоков
-│   ├── screens/                CardScreen, etc.
-│   ├── core/                   (TODO) auth/content/voting/progress/paywall/push
+│   └── category_palettes.json  7 категорийных палитр
+├── engine/                     @engine/* — движок
+│   ├── theme/                  ThemeContext + per-card hue shift
+│   ├── blocks/                 16 типов блоков (11 engine + 5 product-specific)
+│   ├── screens/                CardScreen, CardStackScreen, CardLevelStack, etc.
+│   ├── components/             CardBottomBar, etc.
+│   ├── core/                   12 сервисов (content/voting/progress/auth/paywall/push/...)
+│   ├── i18n/                   Локализация
 │   └── index.js                Public surface
 ├── apps/
-│   └── mental-models/          Первое приложение на движке
-│       ├── App.js              Точка входа
-│       ├── config/             brand + theme + content + paywall + push
-│       ├── src/seed.js         Локальный seed на время разработки
-│       └── assets/fonts/       Prata, Spectral, JetBrains Mono
-└── scripts/
-    ├── validate-card.js        Валидация карточек по schema
-    ├── download-fonts.js       Скачивание шрифтов с Google Fonts
-    └── syntax-check.js         Быстрая проверка JS на parse-errors
-```
-
-`Qaizo` — отдельный продукт студии вне этого монорепо (см. `C:\Users\bestc_000\Desktop\Qaizo`).
-
-## Первый запуск (Mental Models)
-
-```bash
-# Из корня Zerik/
-npm install                                # ставит ajv для валидации, ставит workspace-link для @zerik/engine
-
-cd apps/mental-models
-npm install                                # ставит зависимости приложения (Expo SDK 54, RN 0.81)
-
-cd ../..
-npm run fonts:download                     # скачивает Prata, Spectral, JetBrains Mono в assets/fonts/
-
-cd apps/mental-models
-npx expo start                             # запускает Metro bundler
-# Сканируй QR-код через Expo Go на телефоне (Android/iOS)
-```
-
-В первом запуске движок отрендерит **Sunk Cost** (категория `cognitive_biases` — warm amber). Чтобы переключиться на Occam Razor (категория `mental_models` — cool teal), отредактируй `apps/mental-models/App.js`:
-
-```js
-<CardScreen card={seedCards[1]} locale="ru" />
+│   └── mental-models/          Первое приложение (Expo SDK 54, RN 0.81)
+│       ├── App.js
+│       ├── config/             brand + theme + push + paywall + studio lineup
+│       ├── src/seed.js         Bundled seed (используется как fallback)
+│       ├── illustrations/      12 SVG + 22 алиаса (покрывает все 29 карточек)
+│       ├── blocks/             5 продуктовых блоков
+│       ├── google-services.json   Android Firebase config (публичный)
+│       └── assets/             Шрифты, иконки, splash, feature graphic
+├── scripts/                    Валидация, аудит, деплой, генерация ассетов
+├── firestore.rules             Production Firestore Rules
+├── firebase.json               Firebase CLI config
+└── serviceAccount.json         Firebase Admin (gitignored)
 ```
 
 ## Скрипты
 
 | Команда | Что делает |
 |---|---|
-| `npm run validate:seed` | Валидирует все JSON в `content/seed/` против `card_schema.json` + 6 семантических проверок |
-| `npm run fonts:download` | Скачивает шрифты с Google Fonts |
-| `npm run syntax:check` | Парсит все .js в `engine/` и `apps/` через @babel/parser |
-| `npm run mental-models` | Запускает Expo dev server для Mental Models |
+| `npm run validate:seed`   | Валидирует все JSON в `content/seed/` против `card_schema.json` |
+| `npm run audit:content`   | Проверяет illustration ref'ы, категории, локали, release_date sanity |
+| `npm run syntax:check`    | Парсит JS engine + apps через @babel/parser |
+| `npm run seed:upload`     | Заливает `content/seed/*.json` в Firestore коллекцию `models` |
+| `npm run rules:deploy`    | Деплоит `firestore.rules` через Admin SDK |
+| `npm run icons:generate`  | Перегенерирует PNG-иконки из `apps/mental-models/assets/icon.svg` |
+| `npm run fonts:download`  | Скачивает Prata, Spectral, JetBrains Mono с Google Fonts |
+| `npm run mental-models`   | `expo start` |
 
 ## Архитектура
 
-См. [`docs/ENGINE_DESIGN.md`](docs/ENGINE_DESIGN.md) — полная спецификация движка. Ключевые принципы:
+См. [`docs/ENGINE_DESIGN.md`](docs/ENGINE_DESIGN.md). Ключевые принципы:
 
-- **Block-based renderer.** Карточка = JSON-массив блоков. 11 базовых блоков в движке, 5 продуктовых блоков (modern_critique, riddle_reveal, fallacy_example, book_quote, historical_data) регистрируются приложениями.
-- **Категорийный акцент.** `ThemeContext` меняет палитру при смене карточки. 7 палитр под линейку.
-- **Inline-маркеры.** `{{accent:слово}}` `{{em:слово}}` `{{votes_count}}` `{{user_name}}` парсятся через `engine/blocks/utils/inlineMarkers.js`.
-- **Pluggable content.** Источник карточек подменяется через `ContentService` (TODO) — Firestore в проде, локальный seed в дев.
-- **Гибрид Firestore + AsyncStorage.** Гость = local. Login = Firestore. Паттерн Qaizo.
+- **Block-based renderer.** Карточка = JSON-массив блоков. 16 типов блоков (11 engine + 5 product-specific: modern_critique, riddle_reveal, fallacy_example, book_quote, historical_data).
+- **Категорийный акцент + per-card hue shift.** `ThemeContext` меняет палитру при смене карточки; `CardThemeScope` сдвигает HUE ±30° по hash(card.id) — карточки одной категории отличаются по оттенку.
+- **Inline-маркеры.** `{{accent:слово}}` / `{{em:слово}}` / `{{votes_count}}` / `{{user_name}}` парсятся через `engine/blocks/utils/inlineMarkers.js`.
+- **Pluggable content.** `ContentService` берёт из Firestore (если доступен) или из bundled seed. Без auth — guest mode (AsyncStorage).
+- **Vertical swipe для уровней.** `CardLevelStack` через `resolveLevels(card)` → level 1 (root) + опц. level 2 (deep).
+- **Block-level illustrations с категорийным fallback.** Алиасы в `apps/<app>/illustrations/index.js` покрывают все ref'ы из seeds.
+- **App Check ready.** `appCheckService.activate()` на старте — debug provider в dev, Play Integrity в production.
 
-## Линейка
+## Линейка студии
 
 Mental Models — первый из ~7 продуктов на этом движке. См. [`docs/studio_lineup_roadmap.md`](docs/studio_lineup_roadmap.md).
 
-## Что готово сегодня
+## Mental Models — текущее состояние
 
-- [x] Архитектура движка (`docs/ENGINE_DESIGN.md` v0.2)
-- [x] Card Schema + 16 типов блоков (11 engine + 5 product-specific)
-- [x] Master Prompt для AI-генерации карточек
-- [x] Дизайн-токены + 7 категорийных палитр
-- [x] 2 seed-карточки RU/EN, обе валидируются
-- [x] `engine/theme` + `engine/blocks` + `engine/screens/CardScreen`
-- [x] 11 базовых блоков в JSX (RN-совместимые)
-- [x] `apps/mental-models` Expo-проект с babel/metro алиасами
+- 29 карточек + 2 deep уровня в Firestore (project `mental-models-mvp`, location `europe-west1`)
+- Production Firestore Rules задеплоены (public read для `models`, admin-only write)
+- App Check код активируется на старте (UI-настройка в Firebase Console — перед public-релизом)
+- 5 PNG-ассетов для Play Store сгенерированы из `assets/icon.svg`
+- Onboarding push consent → реальный OS prompt + scheduleDailyReminder
+- Dev APK через EAS, Google Sign-In OAuth client настроен
 
-## Что в следующем подходе
+См. [`docs/DEV_BUILD.md`](docs/DEV_BUILD.md) для шагов rebuild + install + run.
 
-- [ ] `engine/core/contentService.js` (Firestore + offline-кэш)
-- [ ] `engine/core/votingService.js` (distributed counters + hardcoded_stats)
-- [ ] `engine/core/progressService.js` (streak, saved, history)
-- [ ] `engine/core/authService.js` (порт из Qaizo)
-- [ ] `engine/core/pushService.js`
-- [ ] `engine/core/paywallService.js` (RevenueCat)
-- [ ] `CardStackScreen` — горизонтальный FlatList цепочки + вертикальный для уровней
-- [ ] LibraryScreen, HistoryScreen, AuthScreen, PaywallScreen, OnboardingScreen, SettingsScreen
-- [ ] SVG-рендер иллюстраций через react-native-svg (вместо placeholder)
-- [ ] Drop-cap layout (HTML float-left → RN-эквивалент)
-- [ ] i18n инфраструктура движка
+## Apple/iOS
+
+Отложен до Apple Developer Program ($99/год). iOS-секция в `app.json` под ключом `_ios_disabled_until_apple_developer` (Expo её игнорирует).
