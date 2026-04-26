@@ -149,7 +149,7 @@ export default function SettingsScreen({
 
       <SectionHeader>{t('profile')}</SectionHeader>
       <Row
-        label={user?.email || user?.displayName || (t('language') === 'Язык' ? 'Гость' : 'Guest')}
+        label={user?.email || user?.displayName || t('guest')}
         right={user
           ? <Pressable onPress={onSignOut}><Text style={{ fontFamily: tokens.fonts.mono, fontSize: 11, color: palette.accent, letterSpacing: 1.4 }}>{t('sign_out').toUpperCase()}</Text></Pressable>
           : <Pressable onPress={onSignIn}><Text style={{ fontFamily: tokens.fonts.mono, fontSize: 11, color: palette.accent, letterSpacing: 1.4 }}>{t('sign_in').toUpperCase()}</Text></Pressable>
@@ -162,7 +162,7 @@ export default function SettingsScreen({
       ) : null}
 
       <SectionHeader>{t('language')}</SectionHeader>
-      <Row label={t('language')} value={lang === 'ru' ? 'Русский' : 'English'} onPress={flipLang} />
+      <Row label={t('language')} value={t('language_name')} onPress={flipLang} />
 
       <SectionHeader>{t('notifications')}</SectionHeader>
       <Row label={t('daily_reminder')} right={<Switch value={remindersOk} onValueChange={toggleReminders} />} />

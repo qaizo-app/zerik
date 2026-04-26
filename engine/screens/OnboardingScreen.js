@@ -88,7 +88,7 @@ export default function OnboardingScreen({ slides, onDone, onConsentReminders })
           <Text style={{
             fontFamily: tokens.fonts.mono_medium, fontSize: 11, letterSpacing: 2,
             color: palette.ink_on_accent, textTransform: 'uppercase'
-          }}>{isLast ? 'Start →' : 'Next →'}</Text>
+          }}>{isLast ? t('onboarding_start') : t('onboarding_next')}</Text>
         </Pressable>
       </View>
     </View>

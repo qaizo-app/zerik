@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Platform, Pressable, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeContext';
-import { t } from '../i18n';
+import { t, getLanguage } from '../i18n';
 
 export default function AuthScreen({
   authService,
@@ -77,7 +77,7 @@ export default function AuthScreen({
         color: palette.text_dim,
         marginBottom: 32
       }}>
-        {brand?.app?.tagline?.[t('language') === 'Язык' ? 'ru' : 'en'] || ''}
+        {brand?.app?.tagline?.[getLanguage()] || brand?.app?.tagline?.en || ''}
       </Text>
 
       <TextInput

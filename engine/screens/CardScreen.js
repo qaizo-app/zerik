@@ -10,6 +10,7 @@ import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import BlockRenderer from '../blocks/BlockRenderer';
 import CardBottomBar from '../components/CardBottomBar';
+import { t } from '../i18n';
 
 export default function CardScreen({ card, locale = 'ru', dynamic, isSaved, onSave, onShare }) {
   return (
@@ -58,7 +59,7 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare }) {
           color: palette.accent,
           textTransform: 'uppercase'
         }}>
-          {(locale === 'ru' ? 'Выпуск ' : 'Issue ') + String(card.release_number).padStart(3, '0')}
+          {t('issue_label') + ' ' + String(card.release_number).padStart(3, '0')}
         </Text>
         <Text style={{
           fontFamily: tokens.fonts.mono,
