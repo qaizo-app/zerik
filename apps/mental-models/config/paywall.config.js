@@ -5,8 +5,10 @@
 // Подменим заглушки на настоящие после создания products в RC.
 
 export const paywall = {
-  iosApiKey:     'TODO_REVENUECAT_IOS_KEY',
-  androidApiKey: 'TODO_REVENUECAT_ANDROID_KEY',
+  // Пока RC не настроен — null. paywallService увидит null и не вызовет configure.
+  // После создания products в RC заменить на полученные ключи (они публичные, ок коммитить).
+  iosApiKey:     null,
+  androidApiKey: null,
   entitlementId: 'pro',
   offeringId:    'default',
   products: {

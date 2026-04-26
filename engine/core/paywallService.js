@@ -38,8 +38,9 @@ export class PaywallService {
     }
 
     const apiKey = Platform.OS === 'ios' ? this.iosApiKey : this.androidApiKey;
-    if (!apiKey) {
-      if (__DEV__) console.warn('[PaywallService.configure] missing API key for', Platform.OS);
+    if (!apiKey || typeof apiKey !== 'string' || apiKey.startsWith('TODO_') || apiKey.length < 10) {
+      // Молча skip — paywall в demo-режиме пока RC не настроен. Без warn в dev,
+      // чтобы не плодить yellow box / RedBox каждый запуск.
       return false;
     }
 
