@@ -7,6 +7,7 @@ import { View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
+import * as Updates from 'expo-updates';
 
 import {
   ThemeProvider,
@@ -67,6 +68,20 @@ export default function App() {
       'JetBrainsMono-Medium':  require('./assets/fonts/JetBrainsMono-Medium.ttf'),
       'JetBrainsMono-Bold':    require('./assets/fonts/JetBrainsMono-Bold.ttf'),
     }).then(() => setFontsReady(true)).catch(() => setFontsReady(true));
+  }, []);
+
+  // OTA update check — только в production-сборках, dev-client подключается к Metro.
+  useEffect(() => {
+    if (typeof __DEV__ !== 'undefined' && __DEV__) return;
+    (async () => {
+      try {
+        const upd = await Updates.checkForUpdateAsync();
+        if (upd.isAvailable) {
+          await Updates.fetchUpdateAsync();
+          await Updates.reloadAsync();
+        }
+      } catch (e) {}
+    })();
   }, []);
 
   // Initial state
