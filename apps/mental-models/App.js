@@ -215,6 +215,10 @@ export default function App() {
                           user={user}
                           hasSubscription={hasSubscription}
                           appVersion={appJson.expo.version}
+                          updateInfo={{
+                            channel:  Updates.channel || null,
+                            updateId: Updates.updateId || null
+                          }}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
                           onOpenPaywall={() => navigation.getParent()?.navigate('Paywall')}

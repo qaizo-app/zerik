@@ -90,6 +90,8 @@ extendStrings({
     terms_of_service: 'Условия использования',
     support: 'Поддержка',
     version: 'Версия',
+    update_channel: 'Канал обновлений',
+    update_id: 'ID обновления',
     // errors
     network_error: 'Нет соединения',
     try_again: 'Попробовать снова'
@@ -133,6 +135,8 @@ extendStrings({
     terms_of_service: 'Terms of service',
     support: 'Support',
     version: 'Version',
+    update_channel: 'Update channel',
+    update_id: 'Update ID',
     network_error: 'No connection',
     try_again: 'Try again'
   }

@@ -86,7 +86,8 @@ export default function SettingsScreen({
   onSignOut,
   onOpenPaywall,
   hasSubscription,
-  appVersion = ''
+  appVersion = '',
+  updateInfo = null
 }) {
   const { palette, tokens, brand } = useTheme();
   const insets = useSafeAreaInsets();
@@ -192,6 +193,12 @@ export default function SettingsScreen({
         <Row label={t('support')} value={brand.legal.supportEmail} onPress={() => Linking.openURL(`mailto:${brand.legal.supportEmail}`)} />
       ) : null}
       <Row label={t('version')} value={appVersion} />
+      {updateInfo?.channel ? (
+        <Row label={t('update_channel')} value={updateInfo.channel} />
+      ) : null}
+      {updateInfo?.updateId ? (
+        <Row label={t('update_id')} value={String(updateInfo.updateId).slice(0, 8) + '…'} />
+      ) : null}
 
       <Text style={{
         marginTop: 24, paddingHorizontal: 24, paddingBottom: 16,
