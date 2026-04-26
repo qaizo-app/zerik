@@ -74,6 +74,28 @@ export const pushService = {
     }
   },
 
+  // ─── local: instant test ────────────────────────────────────────────────
+
+  async fireTestNotification({ title, body } = {}) {
+    try {
+      const ok = await this.requestPermission();
+      if (!ok) return false;
+      await this.setupAndroidChannel();
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: title || 'Test',
+          body:  body  || 'It works.',
+          data:  { kind: 'test' }
+        },
+        trigger: { seconds: 3, channelId: 'daily-card' }
+      });
+      return true;
+    } catch (e) {
+      if (__DEV__) console.warn('[pushService.fireTestNotification]', e?.message);
+      return false;
+    }
+  },
+
   // ─── local: daily reminder ──────────────────────────────────────────────
 
   async scheduleDailyReminder({ hour, minute, title, body }) {
