@@ -14,11 +14,13 @@
     "syntax:check": "node scripts/syntax-check.js",
     "seed:upload": "node scripts/upload-seed.js",
     "rules:deploy": "node scripts/deploy-firestore-rules.js",
+    "icons:generate": "node scripts/generate-icons.js",
     "mental-models": "npm --workspace mental-models start",
     "mental-models:android": "npm --workspace mental-models run android",
     "mental-models:ios": "npm --workspace mental-models run ios"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "ajv": "^8.17.1"
   },
   "dependencies": {

@@ -6,7 +6,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "scheme": "mentalmodels",
+    "icon": "./assets/icon.png",
     "splash": {
+      "image": "./assets/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#0E1014"
     },
@@ -21,6 +23,7 @@
       "package": "com.zerik.mentalmodels",
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0E1014"
       },
       "permissions": [
