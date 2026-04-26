@@ -1,16 +1,19 @@
-// ShareService — экспорт карточки в PNG и системное share. Используется
-// react-native-view-shot для capture любого View по ref.
+// ShareService — экспорт карточки как PNG и системное share.
 //
-// Captured screen рендерится на основе CardScreen в "share-mode" (без bottom-bar
-// и tab navigation, с маленьким footer-логотипом приложения для соцсетей).
+// Стратегия:
+//   1. Если передан viewRef → captureRef (точный capture View)
+//   2. Иначе → captureScreen (весь viewport, проще, не требует forwardRef chain)
+//   3. Если react-native-view-shot не установлен → URL fallback
 //
-// Если react-native-view-shot не установлен (Expo Go) — fallback на text-share.
+// captureScreen захватывает и tab bar внизу — известный trade-off. Для чистого
+// share-preview без UI-хрома понадобится отдельный экран (backlog).
 
-import * as FileSystem from 'expo-file-system';
-
-let _captureRef = null;
+let _captureRef    = null;
+let _captureScreen = null;
 try {
-  _captureRef = require('react-native-view-shot').captureRef;
+  const ViewShot = require('react-native-view-shot');
+  _captureRef    = ViewShot.captureRef;
+  _captureScreen = ViewShot.captureScreen;
 } catch (e) {}
 
 let _Sharing = null;
@@ -21,7 +24,7 @@ try {
 export const shareService = {
 
   isImageCaptureAvailable() {
-    return !!_captureRef;
+    return !!(_captureRef || _captureScreen);
   },
 
   async isSharingAvailable() {
@@ -30,28 +33,38 @@ export const shareService = {
   },
 
   /**
-   * @param {React.RefObject} viewRef ref на View, который нужно захватить
-   * @param {object} options { format?: 'png' | 'jpg', quality?: number }
-   * @returns {Promise<string>} URI к PNG файлу
+   * Capture View по ref. Возвращает URI к временному PNG файлу.
    */
   async captureView(viewRef, options = {}) {
     if (!_captureRef) throw new Error('react-native-view-shot not available');
-    const uri = await _captureRef(viewRef, {
+    return await _captureRef(viewRef, {
       format: options.format || 'png',
       quality: options.quality != null ? options.quality : 1,
       result: 'tmpfile'
     });
-    return uri;
   },
 
   /**
-   * Share картинки (если view-shot доступен) или текста (fallback).
+   * Capture весь экран (viewport). Не требует ref.
+   */
+  async captureScreen(options = {}) {
+    if (!_captureScreen) throw new Error('react-native-view-shot not available');
+    return await _captureScreen({
+      format: options.format || 'png',
+      quality: options.quality != null ? options.quality : 1,
+      result: 'tmpfile'
+    });
+  },
+
+  /**
+   * Share карточки как картинки. Если viewRef передан — capture его, иначе
+   * capture весь экран. Fallback — URL share с заголовком карточки.
    */
   async shareCard(viewRef, { card, locale = 'ru', fallbackUrl } = {}) {
     const haveSharing = await this.isSharingAvailable();
     if (!haveSharing) return { success: false, error: 'sharing_unavailable' };
 
-    // Image path: capture + share file
+    // Image path 1: capture by ref
     if (_captureRef && viewRef?.current) {
       try {
         const uri = await this.captureView(viewRef, { format: 'png', quality: 1 });
@@ -60,10 +73,24 @@ export const shareService = {
           mimeType: 'image/png',
           UTI: 'public.png'
         });
-        return { success: true, mode: 'image', uri };
+        return { success: true, mode: 'image_ref', uri };
       } catch (e) {
         if (__DEV__) console.warn('[shareService.captureView] failed:', e?.message);
-        // fall through to text share
+      }
+    }
+
+    // Image path 2: capture full screen
+    if (_captureScreen) {
+      try {
+        const uri = await this.captureScreen({ format: 'png', quality: 1 });
+        await _Sharing.shareAsync(uri, {
+          dialogTitle: cardTitle(card, locale),
+          mimeType: 'image/png',
+          UTI: 'public.png'
+        });
+        return { success: true, mode: 'image_screen', uri };
+      } catch (e) {
+        if (__DEV__) console.warn('[shareService.captureScreen] failed:', e?.message);
       }
     }
 

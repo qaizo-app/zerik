@@ -1,0 +1,118 @@
+{
+  "id": "pyrrhonism",
+  "category": "mental_models",
+  "release_number": 30,
+  "release_date": "2026-05-11",
+  "tags": ["philosophy", "skepticism", "ancient_greece"],
+  "difficulty": 4,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №9" } },
+        { "type": "hook", "props": { "text": "Пиррон, греческий философ, путешествовал с Александром Македонским в Индию. Видел йогов в спокойствии, не задетых ничем. Вернулся домой и решил: попробую то же. Но не через медитацию — через {{em:сомнение во всём}}…" } },
+        { "type": "title", "props": { "text": "{{accent:Пирронизм}}" } },
+        { "type": "subtitle", "props": { "text": "Pyrrhonism · Pyrrho of Elis · ~300 г. до н.э." } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Пиррон сформулировал необычный путь к спокойствию: для каждого утверждения существует равно сильное противоположное. {{em:Поэтому ничего нельзя утверждать с уверенностью}}. Когда понимаешь это, перестаёшь страдать от мнений — своих и чужих.",
+            "Это не «ничего не знать». Это «знать что не знаешь окончательно». Жить можно: пьёшь воду когда хочешь пить, ешь когда голоден. Но не строишь идентичность на убеждениях которые могут оказаться неверными.",
+            "Парадоксально, это даёт {{em:атараксию}} — состояние невозмутимости. Ты больше не привязан к «правильному мнению». Освобождение от необходимости быть правым освобождает от страха быть неправым."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Глубокая уверенность во всём — источник большинства страданий. Признание что «не знаю окончательно» — освобождает от необходимости защищать неправоту."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Друг утверждает что-то категорически, ты не согласен. Что делаешь?",
+          "setup": null,
+          "options": [
+            { "id": "argue",   "text": "Спорю — у меня тоже есть аргументы",                  "is_wiser": false },
+            { "id": "epoche",  "text": "Эпохе — воздерживаюсь от суждения, спрашиваю «почему»", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "вступают в спор",
+            "explanation": "Пирронизм рекомендует epoche — приостановку суждения. Не «согласие», а «не отвергаю и не подтверждаю». Это превращает спор в исследование. Часто оба собеседника видят что обе стороны имеют точку — и это освобождает от драмы.",
+            "wisdom": "Сократ: {{em:«Я знаю что я ничего не знаю»}}. Это пирронизм в одном предложении.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Пирронизм — не нигилизм и не паралич. Ты всё равно действуешь. Просто действия не основаны на «я уверен», а на {{em:«в этой ситуации это работает»}}. Когда работа меняется — меняешь подход без драмы."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это помогает",
+          "items": [
+            { "label": "В споре",     "example": "«Может ты прав. Я подумаю». Это не слабость — это сила, недоступная тому кто должен победить." },
+            { "label": "В стрессе",   "example": "Большая часть стресса — от уверенности что что-то «должно быть» определённым образом. Эпохе снимает это." },
+            { "label": "В обучении","example": "Лучшие ученики — те кто реально не знает. Уверенность блокирует обучение, сомнение — открывает его." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Возьмите одно своё сильное мнение. Сформулируйте противоположное мнение так, чтобы оно прозвучало убедительно. Если не получается — вы недостаточно поняли тему."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №9" } },
+        { "type": "hook", "props": { "text": "Pyrrho, a Greek philosopher, travelled with Alexander the Great to India. He watched yogis sit unmoved by anything. He came home and tried the same — not through meditation, but through {{em:doubting everything}}…" } },
+        { "type": "title", "props": { "text": "{{accent:Pyrrhonism}}" } },
+        { "type": "subtitle", "props": { "text": "Pyrrhonism · Pyrrho of Elis · ~300 BC" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Pyrrho proposed an unusual path to calm: for every claim, an equally strong opposite exists. {{em:So nothing can be asserted with certainty}}. Once you grasp that, you stop suffering from opinions — your own and others'.",
+            "This isn't «know nothing». It's «know you don't know finally». You still live: drink water when thirsty, eat when hungry. But you don't build identity on beliefs that might turn out wrong.",
+            "Paradoxically, this delivers {{em:ataraxia}} — equanimity. You're no longer bound to «being right». Freedom from needing to be right frees you from the fear of being wrong."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "Deep certainty about everything is the source of most suffering. Admitting «I don't know finally» frees you from defending what's wrong."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "A friend states something categorically; you disagree. What do you do?",
+          "setup": null,
+          "options": [
+            { "id": "argue",  "text": "Argue — I have arguments too",                          "is_wiser": false },
+            { "id": "epoche", "text": "Epoché — suspend judgment, ask «why»",                  "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "argue",
+            "explanation": "Pyrrhonism recommends epoché — suspension of judgment. Not «agree», not «reject». This turns argument into inquiry. Often both speakers see that both sides have a point — and that ends the drama.",
+            "wisdom": "Socrates: {{em:«I know that I know nothing»}}. Pyrrhonism in one sentence.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "Pyrrhonism isn't nihilism or paralysis. You still act. Actions just aren't based on «I'm sure» — they're based on {{em:«this works in this situation»}}. When the situation changes, the approach changes — without drama."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where it helps",
+          "items": [
+            { "label": "In arguments", "example": "«Maybe you're right. I'll think about it». Not weakness — strength unavailable to anyone who has to win." },
+            { "label": "In stress",    "example": "Most stress comes from certainty that something «should be» a certain way. Epoché removes it." },
+            { "label": "In learning",  "example": "The best students are those who genuinely don't know. Certainty blocks learning; doubt opens it." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Take one of your strong opinions. Articulate the opposite opinion so it sounds convincing. If you can't — you don't understand the topic well enough."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/pyrrhonism" }]
+}

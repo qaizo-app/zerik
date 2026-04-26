@@ -1,0 +1,96 @@
+{
+  "id": "zenos_paradox",
+  "category": "paradoxes",
+  "release_number": 26,
+  "release_date": "2026-05-07",
+  "tags": ["motion", "infinity", "ancient_greece"],
+  "difficulty": 3,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №4" } },
+        { "type": "hook", "props": { "text": "Ахилл — самый быстрый бегун в Греции. Черепаха — самое медленное животное. Зенон даёт черепахе фору в 100 метров. И утверждает: Ахилл черепаху никогда не догонит. Логика выглядит безупречной…" } },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Зенона}}" } },
+        { "type": "subtitle", "props": { "text": "Achilles & Tortoise · Zeno of Elea · V в. до н.э." } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Аргумент Зенона: пока Ахилл пробежит 100 метров (форы), черепаха пройдёт 10. Пока Ахилл пробежит эти 10 — черепаха пройдёт 1. И так далее. {{em:Бесконечность шагов — значит догнать невозможно}}.",
+            "Парадокс мучил математиков 2000 лет. Пока в XVII веке не открыли {{em:сходящиеся ряды}}: 100 + 10 + 1 + 0.1 + ... = 111.111... Бесконечная сумма даёт конечное число. Время на бесконечное количество шагов — конечно.",
+            "Парадокс не был «решён» — Зенон был прав в логике. Просто наша интуиция не справляется с тем что бесконечное количество вещей может уместиться в конечный объём. Это правда о математике и физике."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Парадокс",
+          "question": "Если Ахилл бежит 10 м/с, черепаха 1 м/с, фора 100 м — за какое время Ахилл её догонит?",
+          "hint": "Используй формулу разности скоростей. Или сходящийся ряд из парадокса Зенона.",
+          "user_prompt": "Думаю — открыть разгадку",
+          "reveal_text": "Разница скоростей: 10 - 1 = 9 м/с. Чтобы преодолеть 100 м форы, нужно 100 / 9 ≈ 11.11 секунды. Через ряд: 10 + 1 + 0.1 + 0.01 + ... = 10 / (1 - 0.1) = 11.11 секунды. Та же цифра. Парадокс — не «нельзя догнать», а «бесконечность шагов помещается в 11.11 секунды».",
+          "formula": "Сумма геометрической прогрессии:\nS = a / (1 - r)\nS = 10 / (1 - 0.1) = 11.11 сек",
+          "intuition_trap": "Интуиция считает «бесконечное число шагов = бесконечное время». Но если каждый следующий шаг занимает в 10 раз меньше времени — сумма сходится. Бесконечность ≠ бесконечная длительность."
+        } },
+        { "type": "trap", "props": {
+          "label": "Глубже",
+          "text": "Парадокс важен философски: он показывает что {{em:наша интуиция о бесконечности — сломана}}. Это объясняет почему квантовая механика и теория относительности кажутся «странными» — они работают на масштабах, где интуиция не калибрована."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это всплывает",
+          "items": [
+            { "label": "В математике",  "example": "Все интегралы — это сходящиеся ряды Зенона. Площадь под кривой = сумма бесконечного числа бесконечно тонких полосок." },
+            { "label": "В физике",     "example": "Квантовая механика: частица в коробке имеет бесконечно много возможных состояний — но конечное распределение." },
+            { "label": "В прогрессе","example": "Обучение чему-то новому: первые 80% мастерства за 20% времени, последние 20% за 80%. Зенон в действии." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Вспомните задачу которая кажется бесконечной (учить язык до perfection, оптимизировать продукт до совершенства). Это парадокс Зенона: каждый следующий шаг даёт всё меньше. Признайте — и решите когда остановиться."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №4" } },
+        { "type": "hook", "props": { "text": "Achilles is the fastest runner in Greece. The tortoise is the slowest animal. Zeno gives the tortoise a 100-meter head start. And claims: Achilles will never catch it. The logic looks airtight…" } },
+        { "type": "title", "props": { "text": "{{accent:Zeno's}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Achilles & Tortoise · Zeno of Elea · 5th c. BC" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Zeno's argument: by the time Achilles covers the 100-meter head start, the tortoise has moved 10. While he covers those 10, it moves 1. And so on. {{em:Infinite steps — so he can never catch up}}.",
+            "The paradox tormented mathematicians for 2000 years. Until the 17th century discovered {{em:convergent series}}: 100 + 10 + 1 + 0.1 + ... = 111.111... An infinite sum can equal a finite number. Time for infinite steps — finite.",
+            "The paradox wasn't «solved» — Zeno's logic was correct. Our intuition just can't handle that infinitely many things fit into a finite container. That's a real fact about math and physics."
+          ]
+        } },
+        { "type": "riddle_reveal", "props": {
+          "tag": "Paradox",
+          "question": "If Achilles runs 10 m/s, the tortoise 1 m/s, head start 100 m — how long until he catches it?",
+          "hint": "Use closing speed. Or sum the convergent series from Zeno.",
+          "user_prompt": "Show me the answer",
+          "reveal_text": "Closing speed: 10 - 1 = 9 m/s. To close the 100-meter gap, 100 / 9 ≈ 11.11 seconds. Via series: 10 + 1 + 0.1 + 0.01 + ... = 10 / (1 - 0.1) = 11.11 seconds. Same number. The paradox isn't «can't catch» — it's «infinite steps fit in 11.11 seconds».",
+          "formula": "Geometric series:\nS = a / (1 - r)\nS = 10 / (1 - 0.1) = 11.11 sec",
+          "intuition_trap": "Intuition reads «infinite steps = infinite time». But if each step takes 10x less than the previous — the sum converges. Infinity ≠ infinite duration."
+        } },
+        { "type": "trap", "props": {
+          "label": "Deeper",
+          "text": "The paradox matters philosophically: it shows that {{em:our intuition about infinity is broken}}. That's why quantum mechanics and relativity feel «weird» — they operate at scales where intuition isn't calibrated."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where this surfaces",
+          "items": [
+            { "label": "In math",       "example": "Every integral is a Zeno-style convergent series. The area under a curve = sum of infinitely many infinitely thin strips." },
+            { "label": "In physics",    "example": "Quantum mechanics: a particle in a box has infinitely many possible states — but finite distribution." },
+            { "label": "In progress",   "example": "Learning something: first 80% of mastery in 20% of time, last 20% takes 80%. Zeno in action." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Recall a task that feels infinite (learning a language to perfection, polishing a product forever). It's Zeno: each next step yields less. Acknowledge — and decide when to stop."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/zenos_paradox" }]
+}

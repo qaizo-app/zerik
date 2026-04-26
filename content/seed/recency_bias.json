@@ -1,0 +1,110 @@
+{
+  "id": "recency_bias",
+  "category": "cognitive_biases",
+  "release_number": 23,
+  "release_date": "2026-04-17",
+  "tags": ["memory", "investing", "decision_making"],
+  "difficulty": 2,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №8" } },
+        { "type": "hook", "props": { "text": "В 2021-м все говорили: «Биткоин будет 1 миллион». В 2023-м: «Крипта мертва». В 2024-м снова: «Это новая эра, теперь точно». Аргументы менялись каждый год — потому что мозг переоценивает то, что было недавно…" } },
+        { "type": "title", "props": { "text": "Эффект {{accent:недавнего}}" } },
+        { "type": "subtitle", "props": { "text": "Recency Bias · Memory research · XX век" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Память не плоская. Она делает несколько событий — {{em:недавние и эмоциональные}} — крупными, остальные сжимает в фон. Это эффективно для выживания, опасно для прогнозов.",
+            "На рынке после месяца роста инвесторы покупают активнее — рост кажется новой нормой. После месяца падения продают, забыв что вчера было ровно противоположно. Цикл повторяется.",
+            "В отношениях один плохой разговор перевешивает шесть хороших, если он был последним. В карьере одна неудачная неделя перечёркивает квартал — потому что она ещё яркая в памяти."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Недавнее весит больше чем заслуживает. Среднесрочная перспектива требует усилия — мозг сам её не достанет."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Сотрудник год работал отлично, но последний месяц провалил два дедлайна. Оцените его?",
+          "setup": null,
+          "options": [
+            { "id": "recent",  "text": "Сейчас плохо — нужно говорить об увольнении",  "is_wiser": false },
+            { "id": "annual",  "text": "Год отлично, последний месяц — обсудить причины", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "судят по недавнему",
+            "explanation": "11 месяцев успеха перевешивают 1 месяц провала — арифметически. Но мозг помнит последние 4 недели ярче чем 48 предыдущих. Менеджеры с этим искажением теряют хороших сотрудников из-за временных кризисов.",
+            "wisdom": "Энни Дюк: {{em:«Сужу людей по результатам последнего месяца — это не суд, это слепой выстрел»}}.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где вы встретите это сегодня",
+          "items": [
+            { "label": "В инвестициях","example": "Купить «то что выросло за месяц» — почти гарантированно купить на пике. Цикл переоценки." },
+            { "label": "В оценке людей","example": "Последний разговор с другом был сухой — кажется что отношения портятся. Хотя десять до этого были тёплые." },
+            { "label": "В работе",    "example": "Один провальный проект на ретроспективе перевешивает три успешных. Команда уходит расстроенной без причины." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Перед оценкой кого-то или чего-то — запишите факты не за последние 2 недели, а за последние 6 месяцев. Распределение сильно изменится."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №8" } },
+        { "type": "hook", "props": { "text": "In 2021 everyone said «Bitcoin to a million». In 2023 «Crypto is dead». In 2024 «New era, this time for real». The arguments shifted each year — because the brain overweights what just happened…" } },
+        { "type": "title", "props": { "text": "{{accent:Recency}} Bias" } },
+        { "type": "subtitle", "props": { "text": "Recency Bias · Memory research · 20th c." } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Memory isn't flat. It enlarges a few events — {{em:recent and emotional}} ones — and compresses the rest into background. Efficient for survival, dangerous for forecasts.",
+            "After a month of rising markets, investors buy more — growth feels like the new normal. After a month of falling, they sell, forgetting that yesterday was the opposite. The cycle repeats.",
+            "In relationships, one bad talk outweighs six good ones if it was last. In careers, a bad week erases a quarter — because the week is still vivid."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "Recent events carry more weight than they deserve. Mid-range perspective requires effort — the brain won't supply it on its own."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "An employee worked great for a year, missed two deadlines this month. Your move?",
+          "setup": null,
+          "options": [
+            { "id": "recent", "text": "Bad now — start firing conversations",          "is_wiser": false },
+            { "id": "annual", "text": "Great year, bad month — find out the cause",     "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "judge by recent",
+            "explanation": "11 months of success outweigh 1 of failure — arithmetically. But the brain remembers last 4 weeks more vividly than 48 before. Managers with this bias lose good people to temporary slumps.",
+            "wisdom": "Annie Duke: {{em:«Judging people by last month's outcomes isn't judgment — it's a blind shot»}}.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where you'll meet it today",
+          "items": [
+            { "label": "In investing",  "example": "Buying «what's up this month» almost guarantees buying near a peak. The repricing cycle." },
+            { "label": "In judging people", "example": "Last talk with a friend was dry — feels like the friendship is slipping. The ten before were warm." },
+            { "label": "At work",       "example": "One failed project at retro outweighs three successes. The team leaves discouraged for no good reason." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Before evaluating someone or something — write facts from the last 6 months, not last 2 weeks. The distribution shifts a lot."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/recency_bias" }]
+}

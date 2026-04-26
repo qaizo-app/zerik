@@ -1,0 +1,118 @@
+{
+  "id": "dunbar_number",
+  "category": "mental_models",
+  "release_number": 31,
+  "release_date": "2026-05-12",
+  "tags": ["sociology", "dunbar", "anthropology"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №10" } },
+        { "type": "hook", "props": { "text": "У вас 1000 «друзей» в Facebook. Если завтра попадёте в больницу — сколько из них принесут суп? Антрополог Робин Данбар изучил неокортекс приматов и нашёл число: 150…" } },
+        { "type": "title", "props": { "text": "Число {{accent:Данбара}}" } },
+        { "type": "subtitle", "props": { "text": "Dunbar's Number · R. Dunbar · 1992" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Робин Данбар сравнил размер неокортекса приматов с размером их социальных групп. Получил формулу. Применил к человеку — получил 150. {{em:Это максимальное число людей, с которыми мы можем поддерживать стабильные отношения}}.",
+            "Не «знаем», а {{em:знаем как они с нами связаны}}. История групп, контекст, кто кому что должен. Дальше 150 — мозг физически не вмещает. Появляются «знакомые», но не «свои».",
+            "Современные племена по 150 человек, римские военные центурии, корпоративные команды успешные на 150 — везде эта цифра. Outlook, Goretex, Spotify держат продуктовые команды до 150. Свыше — теряется культура."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Близких отношений у человека ограниченное число — около 150. После — это знакомые, не друзья. Социальные сети не отменяют биологию мозга."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Стартап растёт от 50 до 200 сотрудников. Что меняется?",
+          "setup": null,
+          "options": [
+            { "id": "scale",   "text": "Просто масштабируется — нужен HR и процессы",        "is_wiser": false },
+            { "id": "phase",   "text": "Качественный сдвиг — пропадает «семья», нужна структура", "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "По данным {{votes_count}} ответов",
+            "big_stat_text": "видят сдвиг",
+            "explanation": "До 150 все знают всех — решения принимаются в коридоре. После 150 этого больше нет. Нужны процессы, документация, формальные мил. Не просто «больше людей» — другая компания. Многие фаундеры теряют компанию на этом переходе, не понимая что культура работала именно благодаря размеру.",
+            "wisdom": "Билл Гор (Goretex): {{em:«Когда наш завод дорастает до 150 — открываем новый. Не масштабируем — клонируем»}}.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Число Данбара — приближение, не закон. У интровертов меньше — около 100. У экстравертов больше — 200. И структура иерархична: 5 близких, 15 хороших друзей, 50 знакомых, 150 распознаваемых лиц с историей."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это работает",
+          "items": [
+            { "label": "В команде",   "example": "До 150 — горизонтальная коммуникация. После — нужны слои. Это не «бюрократия», это нейробиология." },
+            { "label": "В соцсетях", "example": "Ваши 1000 «друзей» — пассивная аудитория. Реальные отношения — те 30-50 кому вы реально пишете." },
+            { "label": "В обществе","example": "Малые религиозные общины (амиши, гуттериты) разделяются когда достигают 150. Они знают этот закон без Данбара." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Перепишите свой контакт-лист. Помечайте только тех, с кем общались за последние 6 месяцев. Сколько остаётся? Это ваше реальное число Данбара."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №10" } },
+        { "type": "hook", "props": { "text": "You have 1000 «friends» on Facebook. If you ended up in hospital tomorrow — how many would bring soup? Anthropologist Robin Dunbar studied primate neocortex and found the number: 150…" } },
+        { "type": "title", "props": { "text": "{{accent:Dunbar's}} Number" } },
+        { "type": "subtitle", "props": { "text": "Dunbar's Number · R. Dunbar · 1992" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Robin Dunbar compared primate neocortex size to social group size. Found a formula. Applied it to humans — got 150. {{em:That's the max number of people we can maintain stable relationships with}}.",
+            "Not just «know» — but {{em:know how they relate to us}}. The history of the group, the context, who owes what to whom. Past 150, the brain physically can't hold it. They become «acquaintances», not «one of us».",
+            "Modern tribes of about 150, Roman centuries, corporate teams that work at 150 — the number recurs. Outlook, Gore-Tex, Spotify keep product teams under 150. Beyond — culture leaks."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "A person has a limited number of close relationships — around 150. Past that, they're acquaintances, not friends. Social networks don't override neural biology."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "A startup grows from 50 to 200 people. What changes?",
+          "setup": null,
+          "options": [
+            { "id": "scale", "text": "Just scaling — need HR and processes",                                "is_wiser": false },
+            { "id": "phase", "text": "A phase shift — «family» dies, structure needed",                     "is_wiser": true }
+          ],
+          "reveal": {
+            "source_note": "Based on {{votes_count}} responses",
+            "big_stat_text": "see the shift",
+            "explanation": "Below 150 everyone knows everyone — decisions happen in hallways. Above 150 that's gone. Need processes, documentation, formal meetings. Not just «more people» — different company. Many founders lose their company at this transition, missing that the culture worked precisely because of size.",
+            "wisdom": "Bill Gore (Gore-Tex): {{em:«When a plant hits 150, we open a new one. Don't scale — clone»}}.",
+            "hardcoded_stats": null
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "Dunbar's number is an approximation, not a law. Introverts have fewer — around 100. Extroverts more — around 200. And the structure is layered: 5 intimate, 15 close friends, 50 acquaintances, 150 recognizable faces with history."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where it works",
+          "items": [
+            { "label": "In teams",         "example": "Up to 150 — horizontal communication. Past that — layers needed. Not «bureaucracy» — neurobiology." },
+            { "label": "On social media", "example": "Your 1000 «friends» are a passive audience. Real relationships — the 30-50 you actually message." },
+            { "label": "In society",      "example": "Small religious communities (Amish, Hutterites) split at 150. They know the rule without Dunbar." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Go through your contact list. Mark only those you've talked to in the last 6 months. How many remain? That's your real Dunbar number."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/dunbar_number" }]
+}

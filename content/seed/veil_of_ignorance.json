@@ -1,0 +1,134 @@
+{
+  "id": "veil_of_ignorance",
+  "category": "thought_experiments",
+  "release_number": 28,
+  "release_date": "2026-05-09",
+  "tags": ["ethics", "rawls", "justice"],
+  "difficulty": 4,
+  "reading_time_sec": 195,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №5" } },
+        { "type": "hook", "props": { "text": "Представь: ты сейчас разрабатываешь правила общества, в которое родишься. Но не знаешь — будешь ли ты богатым или бедным, мужчиной или женщиной, здоровым или больным. Как изменятся правила?" } },
+        { "type": "title", "props": { "text": "{{accent:Завеса}} незнания" } },
+        { "type": "subtitle", "props": { "text": "Veil of Ignorance · J. Rawls · 1971" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "Джон Ролз в «Теории справедливости» (1971) предложил мысленный эксперимент для проверки этических норм. Если бы вы выбирали правила {{em:не зная вашего места в системе}} — какие бы вы выбрали?",
+            "Ответ Ролза: вы бы предпочли правила, которые {{em:максимизируют положение наименее благополучных}}. Не «среднее» — потому что вы можете оказаться внизу. И не «максимум» — потому что не знаете окажетесь ли наверху.",
+            "Это переворачивает обычное обсуждение политики. Прогрессивный налог, всеобщая медицина, доступное образование — становятся не «помощью бедным», а {{em:рациональным выбором каждого}} кто не знает где окажется."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Принцип",
+          "text": "Справедливые правила — те, которые ты бы выбрал не зная своего положения в системе. Если правило «работает только для тех кто наверху» — оно не справедливое."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Проверь себя",
+          "question": "Под завесой незнания — какую систему здравоохранения выберешь?",
+          "setup": "Не знаешь будешь ли ты здоровым/больным, богатым/бедным.",
+          "options": [
+            { "id": "private", "text": "Частная — кто платит, тот и лечится",                 "is_wiser": false },
+            { "id": "universal","text": "Всеобщая — всех лечат, налоги выше",                 "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Опросы Гарварда, 2018",
+            "big_stat_text": "выбирают всеобщую",
+            "explanation": "Под завесой большинство выбирает всеобщее — потому что не знают, окажутся ли больны и без денег. Это не «доброта», это рациональное хеджирование риска. Если бы знали — здоровые богатые выбрали бы частную, бедные больные — всеобщую. Завеса нивелирует личный интерес.",
+            "wisdom": "Ролз: {{em:«Справедливость — не благотворительность. Это правила, которые мы бы согласились принять до того как узнали кем родимся»}}.",
+            "hardcoded_stats": {
+              "total_votes": 9800,
+              "options": {
+                "private":  { "count": 2940 },
+                "universal":{ "count": 6860 }
+              },
+              "source": "Harvard ethics surveys",
+              "year": "2018"
+            }
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "Ловушка",
+          "text": "Завеса работает только если ты честно «забываешь» свои привилегии. На практике это очень сложно — наш мозг автоматически защищает текущее положение. Это инструмент рефлексии, не алгоритм."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Где это применяется",
+          "items": [
+            { "label": "В семейном бюджете","example": "Делишь наследство между братом и сестрой. Под завесой не знаешь кем будешь — выбираешь равно. С знанием — споришь." },
+            { "label": "В компании",      "example": "Распределение бонусов: под завесой не знаешь сениор ты или джуниор — система получается более справедливой." },
+            { "label": "В дружбе",        "example": "Решаешь куда поехать вдвоём. Под завесой не знаешь чьи деньги — выбор станет более сбалансированным." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Действие на сегодня",
+          "text": "Возьмите одно правило вашего общества или семьи которое вам кажется справедливым. Спросите: выбрал бы я его не зная свою позицию? Если ответ «нет» — оно справедливо для вас, не вообще."
+        } }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №5" } },
+        { "type": "hook", "props": { "text": "Imagine: you're designing the rules of a society you'll be born into. But you don't know — will you be rich or poor, male or female, healthy or sick? How do the rules change?" } },
+        { "type": "title", "props": { "text": "{{accent:Veil}} of Ignorance" } },
+        { "type": "subtitle", "props": { "text": "Veil of Ignorance · J. Rawls · 1971" } },
+        { "type": "body_paragraphs", "props": {
+          "drop_cap": true,
+          "paragraphs": [
+            "John Rawls in «A Theory of Justice» (1971) proposed a thought experiment for testing ethical rules. If you were choosing rules {{em:without knowing your place in the system}} — which would you pick?",
+            "Rawls' answer: you'd prefer rules that {{em:maximize the position of the worst-off}}. Not «average» — because you might land at the bottom. Not «maximum» — because you don't know if you'll be at the top.",
+            "This flips ordinary political debate. Progressive taxation, universal healthcare, free education stop being «help for the poor» and become {{em:the rational choice of anyone}} who doesn't know where they'll land."
+          ]
+        } },
+        { "type": "principle", "props": {
+          "label": "Principle",
+          "text": "Just rules are the ones you'd accept without knowing your position in the system. If a rule «only works for those at the top» — it isn't just."
+        } },
+        { "type": "scenario", "props": {
+          "tag": "Test yourself",
+          "question": "Behind the veil — which healthcare system do you pick?",
+          "setup": "You don't know if you'll be healthy/sick, rich/poor.",
+          "options": [
+            { "id": "private",  "text": "Private — pay-to-play",                          "is_wiser": false },
+            { "id": "universal","text": "Universal — all covered, higher taxes",          "is_wiser": false }
+          ],
+          "reveal": {
+            "source_note": "Harvard surveys, 2018",
+            "big_stat_text": "pick universal",
+            "explanation": "Behind the veil most pick universal — because they don't know if they'll end up sick and broke. Not «kindness» — rational hedging. With knowledge: the healthy and rich pick private, the sick and poor pick universal. The veil neutralizes self-interest.",
+            "wisdom": "Rawls: {{em:«Justice isn't charity. It's the rules we'd agree to before we knew who we'd be born as»}}.",
+            "hardcoded_stats": {
+              "total_votes": 9800,
+              "options": {
+                "private":  { "count": 2940 },
+                "universal":{ "count": 6860 }
+              },
+              "source": "Harvard ethics surveys",
+              "year": "2018"
+            }
+          }
+        } },
+        { "type": "trap", "props": {
+          "label": "The trap",
+          "text": "The veil works only if you genuinely «forget» your privileges. In practice that's hard — your brain automatically protects current position. It's a reflection tool, not an algorithm."
+        } },
+        { "type": "domains", "props": {
+          "heading": "Where to apply it",
+          "items": [
+            { "label": "In family money", "example": "Splitting an inheritance between siblings. Behind the veil — equal split. With knowledge — argument." },
+            { "label": "At a company",    "example": "Distributing bonuses. Behind the veil — you don't know if you're senior or junior. The system comes out fairer." },
+            { "label": "In friendship",   "example": "Deciding where to travel together. Behind the veil — whose money pays — the choice gets more balanced." }
+          ]
+        } },
+        { "type": "action_today", "props": {
+          "label": "Action for today",
+          "text": "Take one rule of your society or family that feels just. Ask: would I pick it not knowing my position? If «no» — it's just for you, not in general."
+        } }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/veil_of_ignorance" }]
+}

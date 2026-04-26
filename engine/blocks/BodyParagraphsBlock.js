@@ -1,11 +1,15 @@
 // Body — массив абзацев. Первый абзац опционально с drop_cap (большая буквица).
-// Drop-cap пока упрощённый: первая буква стоит как обычный inline-Text, но
-// крупнее и в акцентной палитре. Точная имитация HTML float:left будет позже,
-// когда внедрим react-native-paper или собственный layout-хак.
+//
+// Layout drop-cap: flexDirection row — буквица слева в фиксированной колонке,
+// текст справа во flex-области. Это не идеальное HTML float:left обтекание
+// (текст не идёт под буквицу когда она кончается), но визуально близко и
+// реализуется без хаков с измерением высоты в RN.
 
 import { View, Text } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 import InlineText from './utils/InlineText';
+
+const DROP_CAP_COLUMN_WIDTH = 56;  // ширина колонки буквицы
 
 export default function BodyParagraphsBlock({ paragraphs, drop_cap }) {
   const { palette, tokens } = useTheme();
@@ -15,41 +19,51 @@ export default function BodyParagraphsBlock({ paragraphs, drop_cap }) {
     <View style={{ paddingHorizontal: tokens.screen.card_padding_h_text }}>
       {paragraphs.map((p, idx) => {
         const isLead = drop_cap && idx === 0;
+
+        if (isLead) {
+          const firstLetter = p.charAt(0);
+          const rest = p.slice(1);
+          return (
+            <View key={idx} style={{
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              marginBottom: 18
+            }}>
+              <View style={{ width: DROP_CAP_COLUMN_WIDTH, alignItems: 'flex-start' }}>
+                <Text style={{
+                  fontFamily: tokens.fonts.serif_display,
+                  fontSize: tokens.fontSizes.drop_cap,
+                  lineHeight: tokens.fontSizes.drop_cap * 0.92,
+                  color: palette.accent,
+                  marginTop: -4         // оптическая компенсация: верх буквицы
+                }}>{firstLetter}</Text>
+              </View>
+              <View style={{ flex: 1 }}>
+                <InlineText
+                  text={rest}
+                  style={{
+                    fontFamily: tokens.fonts.serif_body,
+                    fontSize: tokens.fontSizes.body,
+                    lineHeight: tokens.fontSizes.body * 1.55,
+                    color: palette.text
+                  }}
+                />
+              </View>
+            </View>
+          );
+        }
+
         return (
           <View key={idx} style={{ marginBottom: 18 }}>
-            {isLead ? (
-              <Text style={{
+            <InlineText
+              text={p}
+              style={{
                 fontFamily: tokens.fonts.serif_body,
                 fontSize: tokens.fontSizes.body,
                 lineHeight: tokens.fontSizes.body * 1.65,
                 color: palette.text
-              }}>
-                <Text style={{
-                  fontFamily: tokens.fonts.serif_display,
-                  fontSize: tokens.fontSizes.drop_cap,
-                  color: palette.accent,
-                  lineHeight: tokens.fontSizes.drop_cap
-                }}>{p.charAt(0)}</Text>
-                <InlineText
-                  text={p.slice(1)}
-                  style={{
-                    fontFamily: tokens.fonts.serif_body,
-                    fontSize: tokens.fontSizes.body,
-                    color: palette.text
-                  }}
-                />
-              </Text>
-            ) : (
-              <InlineText
-                text={p}
-                style={{
-                  fontFamily: tokens.fonts.serif_body,
-                  fontSize: tokens.fontSizes.body,
-                  lineHeight: tokens.fontSizes.body * 1.65,
-                  color: palette.text
-                }}
-              />
-            )}
+              }}
+            />
           </View>
         );
       })}

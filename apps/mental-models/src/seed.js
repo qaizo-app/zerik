@@ -23,9 +23,18 @@ import hanlon           from '@content/seed/hanlon_razor.json';
 import secondOrder      from '@content/seed/second_order.json';
 import birthday         from '@content/seed/birthday_paradox.json';
 import brainInVat       from '@content/seed/brain_in_vat.json';
+import availability     from '@content/seed/availability_heuristic.json';
+import recency          from '@content/seed/recency_bias.json';
+import goodhart         from '@content/seed/goodharts_law.json';
+import schelling        from '@content/seed/schelling_point.json';
+import zeno             from '@content/seed/zenos_paradox.json';
+import platosCave       from '@content/seed/platos_cave.json';
+import veil             from '@content/seed/veil_of_ignorance.json';
+import banachTarski     from '@content/seed/banach_tarski.json';
+import pyrrhonism       from '@content/seed/pyrrhonism.json';
+import dunbar           from '@content/seed/dunbar_number.json';
 
 // Карта уровней — приложение прокидывает её в CardStackScreen.resolveLevels.
-// Корневая карточка имеет level: 1, deep — level: 2 (и т.д.).
 const deepCards = {
   sunk_cost:   sunkCostDeep,
   occam_razor: occamRazorDeep
@@ -42,23 +51,33 @@ export function resolveLevels(card) {
 // Сортировка по release_date — новейшие первыми. ContentService отдаёт
 // только release_date <= today, остальные показываются когда дата наступит.
 export const seedCards = [
-  brainInVat,      // 2026-05-04
-  birthday,        // 2026-05-03
-  secondOrder,     // 2026-05-02
-  hanlon,          // 2026-05-01
-  simpsons,        // 2026-04-30
-  theseus,         // 2026-04-29
-  pareto,          // 2026-04-28
-  anchoring,       // 2026-04-27
-  survivorship,    // 2026-04-26
-  dunningKruger,   // 2026-04-26
-  occamRazor,      // 2026-04-25
-  sunkCost,        // 2026-04-24
-  montyHall,       // 2026-04-23
-  hindsight,       // 2026-04-22
-  trolley,         // 2026-04-22
-  inversion,       // 2026-04-21
-  lossAversion,    // 2026-04-21
-  firstPrinc,      // 2026-04-20
-  confirmation     // 2026-04-19
+  dunbar,            // 2026-05-12
+  pyrrhonism,        // 2026-05-11
+  banachTarski,      // 2026-05-10
+  veil,              // 2026-05-09
+  platosCave,        // 2026-05-08
+  zeno,              // 2026-05-07
+  schelling,         // 2026-05-06
+  goodhart,          // 2026-05-05
+  brainInVat,        // 2026-05-04
+  birthday,          // 2026-05-03
+  secondOrder,       // 2026-05-02
+  hanlon,            // 2026-05-01
+  simpsons,          // 2026-04-30
+  theseus,           // 2026-04-29
+  pareto,            // 2026-04-28
+  anchoring,         // 2026-04-27
+  survivorship,      // 2026-04-26
+  dunningKruger,     // 2026-04-26
+  occamRazor,        // 2026-04-25
+  sunkCost,          // 2026-04-24
+  montyHall,         // 2026-04-23
+  hindsight,         // 2026-04-22
+  trolley,           // 2026-04-22
+  inversion,         // 2026-04-21
+  lossAversion,      // 2026-04-21
+  firstPrinc,        // 2026-04-20
+  confirmation,      // 2026-04-19
+  availability,      // 2026-04-18
+  recency            // 2026-04-17
 ];
