@@ -92,6 +92,8 @@ extendStrings({
     version: 'Версия',
     update_channel: 'Канал обновлений',
     update_id: 'ID обновления',
+    clear_cache: 'Очистить кэш',
+    clear_cache_warning: 'Будут удалены все локальные данные: прогресс, настройки, сохранённые карточки, расписание уведомлений. Действие необратимо.',
     // errors
     network_error: 'Нет соединения',
     try_again: 'Попробовать снова'
@@ -137,6 +139,8 @@ extendStrings({
     version: 'Version',
     update_channel: 'Update channel',
     update_id: 'Update ID',
+    clear_cache: 'Clear cache',
+    clear_cache_warning: 'This will delete all local data: progress, settings, saved cards, scheduled notifications. Action is irreversible.',
     network_error: 'No connection',
     try_again: 'Try again'
   }

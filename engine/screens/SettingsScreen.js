@@ -1,13 +1,14 @@
 // SettingsScreen — общие настройки + cross-promotion другими приложениями студии.
 
 import { useEffect, useState } from 'react';
-import { Linking, Pressable, ScrollView, Switch, Text, View } from 'react-native';
+import { Alert, Linking, Pressable, ScrollView, Switch, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeContext';
 import { usePalette } from '../theme/usePalette';
 import { t, setLanguage, getLanguage } from '../i18n';
 import consentService from '../core/consentService';
 import pushService from '../core/pushService';
+import * as storage from '../core/storage';
 
 function SectionHeader({ children }) {
   const { palette, tokens } = useTheme();
@@ -87,7 +88,8 @@ export default function SettingsScreen({
   onOpenPaywall,
   hasSubscription,
   appVersion = '',
-  updateInfo = null
+  updateInfo = null,
+  onClearedCache = null
 }) {
   const { palette, tokens, brand } = useTheme();
   const insets = useSafeAreaInsets();
@@ -138,6 +140,24 @@ export default function SettingsScreen({
   function flipLang() {
     const next = lang === 'ru' ? 'en' : 'ru';
     setLang(next); setLanguage(next);
+  }
+
+  function confirmClearCache() {
+    Alert.alert(
+      t('clear_cache'),
+      t('clear_cache_warning'),
+      [
+        { text: t('cancel'), style: 'cancel' },
+        { text: t('clear_cache'), style: 'destructive', onPress: async () => {
+          try {
+            await pushService.cancelDailyReminder();
+            await pushService.cancelStreakAlert();
+          } catch (e) {}
+          await storage.clearAll();
+          if (typeof onClearedCache === 'function') onClearedCache();
+        }}
+      ]
+    );
   }
 
   const otherApps = studioApps.filter(a => a.slug !== currentAppSlug);
@@ -193,6 +213,9 @@ export default function SettingsScreen({
         <Row label={t('support')} value={brand.legal.supportEmail} onPress={() => Linking.openURL(`mailto:${brand.legal.supportEmail}`)} />
       ) : null}
       <Row label={t('version')} value={appVersion} />
+      <Row label={t('clear_cache')} onPress={confirmClearCache}
+        right={<Text style={{ fontFamily: tokens.fonts.mono, fontSize: 11, color: palette.picked, letterSpacing: 1.4 }}>→</Text>}
+      />
       {updateInfo?.channel ? (
         <Row label={t('update_channel')} value={updateInfo.channel} />
       ) : null}

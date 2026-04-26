@@ -45,3 +45,16 @@ export async function getCached(key, ttlMs) {
 export async function setCached(key, value) {
   return setItem(key, { _ts: Date.now(), value });
 }
+
+// Полная очистка ВСЕГО AsyncStorage. Используется в Settings → Clear cache
+// и при reset progress. Возвращает количество удалённых ключей.
+export async function clearAll() {
+  try {
+    const keys = await AsyncStorage.getAllKeys();
+    await AsyncStorage.multiRemove(keys);
+    return keys.length;
+  } catch (e) {
+    if (__DEV__) console.warn('[storage.clearAll]', e);
+    return 0;
+  }
+}

@@ -219,6 +219,9 @@ export default function App() {
                             channel:  Updates.channel || null,
                             updateId: Updates.updateId || null
                           }}
+                          onClearedCache={() => {
+                            try { Updates.reloadAsync(); } catch (e) {}
+                          }}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
                           onOpenPaywall={() => navigation.getParent()?.navigate('Paywall')}
