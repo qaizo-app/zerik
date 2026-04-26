@@ -12,7 +12,20 @@
           "package_name": "com.zerik.mentalmodels"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "116778984611-tau60c15cg64k5cer34ge866e0skpcan.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zerik.mentalmodels",
+            "certificate_hash": "c9d04885dfa287968cbb9959485997d7f151983e"
+          }
+        },
+        {
+          "client_id": "116778984611-4essoktqdriqfshup3m2bf8o7ire3qrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCHl7Bh0roCys_pi7dllc56BZCs-EfNnZA"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116778984611-4essoktqdriqfshup3m2bf8o7ire3qrr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "116778984611-dp88i988i5jcr1gpvbhisp9rb7bjabp7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zerik.mentalmodels"
+              }
+            }
+          ]
         }
       }
     }
