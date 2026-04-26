@@ -1,251 +1,93 @@
 # Dev Build для Mental Models
 
-Гайд по сборке development-клиента, который запускает приложение **с настоящим Firebase** (не на bundled seed). После этого:
+Гайд по запуску локального development-клиента после первого `eas build`.
+Используй `git log` для актуальной истории коммитов — этот файл описывает только текущее устойчивое состояние.
 
-- Auth (Email/Google) реально работает — пользователь логинится в твой Firebase project
-- Карточки приходят из Firestore коллекции `models`
-- Голосования пишутся в `scenario_stats` с distributed counters
-- Прогресс синхронизируется в `user_progress/{uid}`
-
-В Expo Go нативные модули `@react-native-firebase/*` не работают — поэтому нужен **dev build** с нативной сборкой.
+В Expo Go нативные модули `@react-native-firebase/*` не работают — поэтому нужен **dev build** с нативной сборкой через EAS Build.
 
 ---
 
-## Что нужно установить один раз
+## Текущее состояние (что уже сделано)
 
-### 1. Expo account
+Если ты вернулся в проект после паузы — этим уже не нужно заниматься, оно сделано:
 
-Если ещё нет — зарегистрируйся бесплатно на [expo.dev](https://expo.dev). Понадобится email + пароль.
-
-### 2. EAS CLI
-
-```powershell
-npm install -g eas-cli
-eas login
-```
-
-Логин один раз, токен живёт долго. Проверь:
-```powershell
-eas whoami
-```
-
-### 3. Native модули в проекте
-
-Сейчас `paywallService` и `authService` в коде имеют graceful fallback (`tryFirestore()` возвращает `null` если модуль недоступен). После добавления модулей — Firebase заработает автоматически.
-
-```powershell
-cd c:\Users\bestc_000\Desktop\Zerik\apps\mental-models
-
-npx expo install @react-native-firebase/app
-npx expo install @react-native-firebase/auth
-npx expo install @react-native-firebase/firestore
-npx expo install @react-native-firebase/analytics
-npx expo install @react-native-google-signin/google-signin
-npx expo install react-native-purchases
-```
-
-`expo install` подбирает версии, совместимые с Expo SDK 54. Не используй обычный `npm install` — версии могут разойтись.
-
-### 4. Расширить app.json для Firebase
-
-Добавь в `apps/mental-models/app.json` секцию `plugins` и ссылку на google-services:
-
-```json
-"plugins": [
-  "expo-font",
-  "@react-native-firebase/app",
-  "@react-native-firebase/auth"
-],
-"android": {
-  "package": "com.zerik.mentalmodels",
-  "googleServicesFile": "./google-services.json",
-  "adaptiveIcon": {
-    "backgroundColor": "#0E1014"
-  }
-}
-```
-
-`google-services.json` уже лежит в `apps/mental-models/` (ты скачал его раньше).
+- ✅ Expo project: `@qaizo/mental-models`, projectId `fef49184-7cf2-45f8-a6d1-5ff878c08d3d`
+- ✅ EAS init выполнен, `eas.json` сконфигурирован (development / preview / production профили)
+- ✅ Firebase project `mental-models-mvp` (location `europe-west1`)
+- ✅ Native deps установлены: firebase/app + auth + firestore + analytics + messaging + app-check, google-signin, react-native-purchases
+- ✅ `google-services.json` закоммичен (Android Firebase config — публичный, защищён SHA-1 + package name)
+- ✅ EAS keystore сгенерирован, SHA-1 `C9:D0:48:85:DF:A2:87:96:8C:BB:99:59:48:59:97:D7:F1:51:98:3E` зарегистрирован в Firebase → OAuth client создан
+- ✅ Production Firestore Rules задеплоены (`npm run rules:deploy`, ruleset `41e662cf`)
+- ✅ 31 карточка загружена в Firestore (`npm run seed:upload`)
+- ✅ App Check код активируется на старте app (`appCheckService.activate()`), debug provider в dev / Play Integrity в production
+- ✅ Иконки PNG сгенерированы из `assets/icon.svg` (`npm run icons:generate`)
 
 ---
 
-## Первый dev build (10-15 минут)
+## Build → Install → Run
 
-### 1. Инициализация EAS
+### 1. Запустить EAS build (когда нужен новый APK)
 
 ```powershell
 cd c:\Users\bestc_000\Desktop\Zerik\apps\mental-models
-eas init
-```
-
-EAS спросит создать новый проект — соглашайся. Создаст `projectId` и положит его в `app.json`.
-
-### 2. Настройка профилей сборки
-
-```powershell
-eas build:configure
-```
-
-Создаст `eas.json` с тремя профилями: `development`, `preview`, `production`. Тебе нужен **development**.
-
-Проверь что в `eas.json` профиль `development` имеет `developmentClient: true`:
-
-```json
-{
-  "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal",
-      "android": { "buildType": "apk" }
-    }
-  }
-}
-```
-
-### 3. Сборка APK
-
-```powershell
 eas build --profile development --platform android
 ```
 
-EAS отправляет проект в облако и собирает APK ~10 минут. Получишь URL вида `https://expo.dev/.../builds/...`. Дождись `Build finished`.
+Облачная сборка ~10-15 мин. На выходе URL вида `https://expo.dev/accounts/qaizo/projects/mental-models/builds/<id>`.
 
-### 4. Установка APK на телефон
+Free план EAS — 30 builds/мес. Не пересобирай зря: чисто JS-изменения подхватываются Metro hot-reload без rebuild. Rebuild нужен только при:
 
-В выводе EAS будет ссылка на `.apk`. Два пути:
-- **Через QR** — открой ссылку в браузере телефона → Download → Install (нужно разрешение «Install from unknown sources»)
-- **Через USB** — скачай `.apk` на компьютер, потом:
-  ```powershell
-  adb install путь\к\application-xxxx.apk
-  ```
+- Изменении `app.json` (permissions, plugins, package, version)
+- Добавлении нового native package (`expo install <name>`)
+- Изменении `google-services.json` или керамических Firebase-конфигов
+- Изменении нативного кода (редко)
 
-После установки на телефоне появится приложение **Mental Models** (рядом с другими, как настоящее).
+### 2. Установить APK на телефон
 
----
+После `Build finished` открой ссылку → Install. На Android разреши «Install from unknown sources» для своего браузера.
 
-## Запуск с dev build
+Альтернатива через USB:
+```powershell
+adb install <путь>\application-<id>.apk
+```
 
-### 1. Старт Metro
+### 3. Запустить Metro
 
 ```powershell
 cd c:\Users\bestc_000\Desktop\Zerik\apps\mental-models
 npx expo start --dev-client
 ```
 
-`--dev-client` = режим для собранного APK (вместо Expo Go).
+Открой установленный **Mental Models** на телефоне → автоматически найдёт Metro по локальной сети.
 
-### 2. Подключение телефона
-
-Открой установленный **Mental Models** на телефоне. Он сам найдёт Metro и начнёт грузить bundle. Если не находит — встряхни телефон → введи URL вручную (`exp://10.x.x.x:8081`).
-
-### 3. Что должно произойти
-
-При первом запуске:
-- Onboarding (3 слайда)
-- Today таб с карточкой Sunk Cost
-- При нажатии **Sign in** → реальная Google авторизация → создаётся юзер в Firebase Auth
-- При голосовании в scenario → шард `scenario_stats/sunk_cost/shards/shard_X` создаётся в Firestore (открой Firebase Console → Firestore → `scenario_stats` → увидишь данные)
-- При Save → `user_progress/{твой_uid}` обновляется
+Если **«There was a problem loading the project» / SocketTimeoutException**:
+- Самый надёжный вариант — **USB ADB reverse**: подключи телефон USB-кабелем с включённым USB Debugging → выполни `adb reverse tcp:8081 tcp:8081` → перезапусти app
+- Альтернатива — **tunnel-режим**: `npx expo start --dev-client --tunnel` (медленнее, но работает через любой Wi-Fi)
 
 ---
 
-## Загрузка карточек в Firestore
+## Скрипты в `package.json` (root)
 
-Сейчас карточки приходят из bundled seed (12 штук в `apps/mental-models/src/seed.js`). Чтобы они работали с настоящего бэкенда:
-
-### Создать сервисный аккаунт Firebase
-
-1. Firebase Console → Project Settings → Service Accounts → **Generate new private key**
-2. Скачается `.json` файл — переименуй в `serviceAccount.json`
-3. Положи в `c:\Users\bestc_000\Desktop\Zerik\` (корень workspace)
-4. **Не коммить!** В `.gitignore` уже есть `*.key`, добавь явно `serviceAccount.json`
-
-### Скрипт загрузки
-
-Создай `scripts/upload-seed.js`:
-
-```js
-const admin = require('firebase-admin');
-const fs = require('fs');
-const path = require('path');
-
-admin.initializeApp({
-  credential: admin.credential.cert(require('../serviceAccount.json'))
-});
-
-const db = admin.firestore();
-const dir = path.join(__dirname, '..', 'content', 'seed');
-
-(async () => {
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
-  for (const f of files) {
-    const card = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    await db.collection('models').doc(card.id).set(card);
-    console.log(`✓ ${card.id}`);
-  }
-  console.log(`\nUploaded ${files.length} cards.`);
-  process.exit(0);
-})();
-```
-
-```powershell
-cd c:\Users\bestc_000\Desktop\Zerik
-npm install firebase-admin
-node scripts/upload-seed.js
-```
-
-В Firebase Console → Firestore → коллекция `models` появится 12 документов.
-
-После этого `contentService.getCardChain()` будет возвращать карточки из Firestore (если в нём свежее, чем bundled seed).
+| Команда | Что делает |
+|---|---|
+| `npm run validate:seed` | Валидирует все JSON в `content/seed/` против `card_schema.json` |
+| `npm run syntax:check` | `node -c` проверка JS-файлов engine + apps |
+| `npm run seed:upload` | Загружает `content/seed/*.json` в Firestore коллекцию `models` (нужен `serviceAccount.json` в корне) |
+| `npm run rules:deploy` | Деплоит `firestore.rules` через Admin SDK (нужен `serviceAccount.json`) |
+| `npm run icons:generate` | Перегенерирует PNG-иконки из `apps/mental-models/assets/icon.svg` |
+| `npm run mental-models` | `expo start` |
+| `npm run mental-models:android` | `expo start --android` (запускает на эмулятор) |
 
 ---
 
-## Troubleshooting
+## Перед public-релизом в Play Store
 
-### `eas init` ошибка
+1. **App Check** — Firebase Console → App Check → Apps → Android → провайдер **Play Integrity**. Запусти dev APK, скопируй debug-token из logcat → "Manage debug tokens" в Firebase Console. Включи Monitor mode на неделю → потом Enforce. Подробнее в memory `firestore_security_todo.md`.
 
-Если `eas init` ругается на «no Expo account» — проверь `eas whoami`. Если пусто — `eas login`.
+2. **Production-keystore** — EAS-managed default (тот же что у dev) или Play App Signing. SHA-1 production-сборки зарегистрировать в Firebase отдельно, иначе Google Sign-In упадёт.
 
-### `eas build` ошибка
+3. **EAS Submit** — `eas submit --profile production --platform android --track internal`. Нужен Play Console аккаунт ($25 один раз) + загруженный билд preview profile.
 
-В выводе будет конкретная ошибка. Частые:
-- `keystore` нужно сгенерировать → `eas credentials` выберет `Generate new keystore`
-- `google-services.json` не найден — проверь путь в `app.json`
-- Версии модулей конфликтуют → `npx expo doctor` покажет несовместимости
+4. **Screenshots** — Play Store требует минимум 2 (рекомендация 5-8) скриншотов 1080×1920+. Снять руками с тестового телефона.
 
-### APK устанавливается, но падает при запуске
-
-Открой логи через `adb`:
-```powershell
-adb logcat | findstr ReactNative
-```
-
-Часто это:
-- Не подключён `googleServicesFile` в `app.json`
-- Bundle id в Firebase не совпадает с `app.json`
-
-### Слишком медленные сборки
-
-- Первая сборка 10-15 минут, последующие ~5-7 минут (благодаря кэшу EAS)
-- Бесплатный тариф EAS — 30 builds/месяц. Для разработки достаточно.
-
----
-
-## Что НЕ нужно для первого dev build
-
-- iOS app (отложен до Apple Developer)
-- RevenueCat (paywall работает в demo-режиме)
-- Apple Sign-In (только Google)
-- Cloud Functions (агрегация шардов делается клиентом)
-- Sentry (можно добавить позже)
-
-Это всё подключим позже, по мере готовности линейки.
-
----
-
-## После первого успешного dev build
-
-1. Прислать скриншот того что в Firebase Console после первого голосования и логина
-2. Загрузить 12 карточек в Firestore через `upload-seed.js`
-3. Проверить что в `Today` табе карточки приходят из Firestore (сравнить timestamps в Firebase vs в seed.js)
-4. Сделать первый production-ready build через `eas build --profile preview` для тестировщиков
+5. **Listing copy** — заголовок, описание, изменения. Готовая копия — `docs/ASO.md`.
