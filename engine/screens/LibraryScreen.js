@@ -69,13 +69,19 @@ export default function LibraryScreen({ getSavedCards, onCardPress, locale = 'ru
 
   return (
     <View style={{ flex: 1, backgroundColor: palette.bg, paddingTop: insets.top }}>
-      <Text style={{
-        paddingHorizontal: 24,
-        paddingVertical: 24,
-        fontFamily: tokens.fonts.serif_display,
-        fontSize: 28,
-        color: palette.text
-      }}>{t('library')}</Text>
+      <View style={{ paddingHorizontal: 24, paddingVertical: 24, flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' }}>
+        <Text style={{
+          fontFamily: tokens.fonts.serif_display,
+          fontSize: 28,
+          color: palette.text
+        }}>{t('library')}</Text>
+        {cards.length > 0 ? (
+          <Text style={{
+            fontFamily: tokens.fonts.mono, fontSize: 11, letterSpacing: 1.4,
+            color: palette.text_mute, textTransform: 'uppercase'
+          }}>{cards.length}</Text>
+        ) : null}
+      </View>
 
       {!loading && cards.length === 0 ? (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

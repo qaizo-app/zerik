@@ -8,6 +8,17 @@ import { useTheme } from '../theme/ThemeContext';
 import { usePalette } from '../theme/usePalette';
 import { t } from '../i18n';
 
+function formatHistoryDate(dateStr, locale) {
+  if (!dateStr) return '';
+  try {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
+    return d.toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', { day: '2-digit', month: 'short' });
+  } catch (e) {
+    return dateStr;
+  }
+}
+
 function HistoryItem({ card, locale, onPress }) {
   const palette = usePalette(card.category);
   const { tokens } = useTheme();
@@ -25,13 +36,15 @@ function HistoryItem({ card, locale, onPress }) {
       gap: 12,
       alignItems: 'center'
     }}>
+      <View style={{ width: 4, alignSelf: 'stretch', backgroundColor: palette.accent, opacity: 0.6 }} />
       <Text style={{
         fontFamily: tokens.fonts.mono,
-        fontSize: 11,
+        fontSize: 10,
         letterSpacing: 1.4,
         color: palette.text_mute,
-        width: 64
-      }}>{card.release_date || ''}</Text>
+        textTransform: 'uppercase',
+        width: 56
+      }}>{formatHistoryDate(card.release_date, locale)}</Text>
       <Text style={{
         flex: 1,
         fontFamily: tokens.fonts.serif_body,
@@ -63,13 +76,19 @@ export default function HistoryScreen({ getHistory, onCardPress, locale = 'ru' }
 
   return (
     <View style={{ flex: 1, backgroundColor: palette.bg, paddingTop: insets.top }}>
-      <Text style={{
-        paddingHorizontal: 24,
-        paddingVertical: 24,
-        fontFamily: tokens.fonts.serif_display,
-        fontSize: 28,
-        color: palette.text
-      }}>{t('history')}</Text>
+      <View style={{ paddingHorizontal: 24, paddingVertical: 24, flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' }}>
+        <Text style={{
+          fontFamily: tokens.fonts.serif_display,
+          fontSize: 28,
+          color: palette.text
+        }}>{t('history')}</Text>
+        {cards.length > 0 ? (
+          <Text style={{
+            fontFamily: tokens.fonts.mono, fontSize: 11, letterSpacing: 1.4,
+            color: palette.text_mute, textTransform: 'uppercase'
+          }}>{cards.length}</Text>
+        ) : null}
+      </View>
 
       {!loading && cards.length === 0 ? (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
