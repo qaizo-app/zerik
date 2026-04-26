@@ -1,0 +1,43 @@
+rules_version = '2';
+
+// Mental Models — production Firestore Rules
+//
+// Принцип:
+// - Контент карточек (`models`) — public read, write только через admin SDK
+//   (npm run seed:upload). Реверс APK не даёт писать в БД.
+// - Голосования (`scenario_stats`) — read public для отображения процентов;
+//   write только аутентифицированным пользователям и только в их шард.
+//   Агрегаты в самом документе scenario пишутся Cloud Function (потом).
+// - Прогресс пользователя (`user_progress/{uid}`) — только сам владелец.
+// - Всё остальное — закрыто.
+//
+// Перед public-релизом: включить App Check Play Integrity (UI Firebase Console),
+// тогда дополнительно отрезаются клиенты без валидной подписи Play Store.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /models/{cardId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /scenario_stats/{scenarioId} {
+      allow read: if true;
+      allow write: if false;
+
+      match /shards/{shardId} {
+        allow read: if true;
+        allow write: if request.auth != null;
+      }
+    }
+
+    match /user_progress/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
