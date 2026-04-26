@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Dimensions, FlatList, View } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 import CardScreen from './CardScreen';
+import CardLevelStack from './CardLevelStack';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -18,7 +19,8 @@ export default function CardStackScreen({
   onCardOpened,
   savedIds,
   onSavePress,
-  onSharePress
+  onSharePress,
+  resolveLevels
 }) {
   const { palette, setCategory } = useTheme();
   const [activeIndex, setActiveIndex] = useState(initialIndex);
@@ -43,18 +45,23 @@ export default function CardStackScreen({
     if (idx !== activeIndex) setActiveIndex(idx);
   }, [activeIndex]);
 
-  const renderItem = useCallback(({ item }) => (
-    <View style={{ width: SCREEN_WIDTH, height: '100%' }}>
-      <CardScreen
-        card={item}
+  const renderItem = useCallback(({ item }) => {
+    const levels = typeof resolveLevels === 'function'
+      ? resolveLevels(item)
+      : [{ level: 1, card: item }];
+    const isSaved = Array.isArray(savedIds) && savedIds.includes(item.id);
+    return (
+      <CardLevelStack
+        levels={levels}
+        width={SCREEN_WIDTH}
         locale={locale}
         dynamic={dynamic}
-        isSaved={Array.isArray(savedIds) && savedIds.includes(item.id)}
+        isSaved={isSaved}
         onSave={() => onSavePress?.(item)}
         onShare={() => onSharePress?.(item)}
       />
-    </View>
-  ), [locale, dynamic, savedIds, onSavePress, onSharePress]);
+    );
+  }, [locale, dynamic, savedIds, onSavePress, onSharePress, resolveLevels]);
 
   if (!Array.isArray(cards) || cards.length === 0) {
     return <View style={{ flex: 1, backgroundColor: palette.bg }} />;

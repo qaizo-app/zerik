@@ -29,13 +29,13 @@ export default function BodyParagraphsBlock({ paragraphs, drop_cap }) {
               alignItems: 'flex-start',
               marginBottom: 18
             }}>
-              <View style={{ width: DROP_CAP_COLUMN_WIDTH, alignItems: 'flex-start' }}>
+              <View style={{ width: DROP_CAP_COLUMN_WIDTH, alignItems: 'flex-start', paddingTop: 6 }}>
                 <Text style={{
                   fontFamily: tokens.fonts.serif_display,
                   fontSize: tokens.fontSizes.drop_cap,
-                  lineHeight: tokens.fontSizes.drop_cap * 0.92,
+                  lineHeight: tokens.fontSizes.drop_cap * 1.05,
                   color: palette.accent,
-                  marginTop: -4         // оптическая компенсация: верх буквицы
+                  includeFontPadding: false
                 }}>{firstLetter}</Text>
               </View>
               <View style={{ flex: 1 }}>

@@ -13,7 +13,7 @@ import CardBottomBar from '../components/CardBottomBar';
 
 export default function CardScreen({ card, locale = 'ru', dynamic, isSaved, onSave, onShare }) {
   return (
-    <CardThemeScope category={card?.category}>
+    <CardThemeScope category={card?.category} cardId={card?.id}>
       <CardScreenInner
         card={card} locale={locale} dynamic={dynamic}
         isSaved={isSaved} onSave={onSave} onShare={onShare}

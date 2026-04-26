@@ -29,4 +29,23 @@ export function registerAppIllustrations() {
   registerIllustration('pareto',            Pareto);
   registerIllustration('theseus',           Theseus);
   registerIllustration('simpson',           Simpson);
+
+  registerIllustration('hindsight',              ConfirmationBias);
+  registerIllustration('loss_aversion',          SunkCost);
+  registerIllustration('survivorship_bias',      ConfirmationBias);
+  registerIllustration('availability_heuristic', Anchoring);
+  registerIllustration('recency_bias',           Anchoring);
+  registerIllustration('hanlon_razor',           OccamRazor);
+  registerIllustration('second_order',           FirstPrinciples);
+  registerIllustration('birthday_paradox',       MontyHall);
+  registerIllustration('brain_in_vat',           Trolley);
+  registerIllustration('goodharts_law',          Pareto);
+  registerIllustration('schelling_point',        FirstPrinciples);
+  registerIllustration('pyrrhonism',             FirstPrinciples);
+  registerIllustration('dunbar_number',          Pareto);
+  registerIllustration('zenos_paradox',          MontyHall);
+  registerIllustration('platos_cave',            Trolley);
+  registerIllustration('veil_of_ignorance',      Trolley);
+  registerIllustration('banach_tarski',          MontyHall);
+  registerIllustration('placeholder',            ConfirmationBias);
 }
