@@ -60,10 +60,29 @@ export default function CardViewerScreen({ route, navigation, contentService, lo
     <View style={{ flex: 1, backgroundColor: palette.bg }}>
       <Pressable
         onPress={() => navigation.goBack()}
-        style={{ position: 'absolute', top: insets.top + 8, right: 16, zIndex: 10, padding: 8 }}
-        hitSlop={12}
+        style={{
+          position: 'absolute',
+          top: insets.top + 12,
+          right: 16,
+          zIndex: 10,
+          width: 44,
+          height: 44,
+          borderRadius: 22,
+          backgroundColor: palette.bg_card,
+          borderWidth: 1,
+          borderColor: palette.border_bright,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        hitSlop={8}
       >
-        <Text style={{ color: palette.accent, fontFamily: tokens.fonts.mono, fontSize: 18 }}>×</Text>
+        <Text style={{
+          color: palette.accent,
+          fontFamily: tokens.fonts.mono_medium,
+          fontSize: 22,
+          lineHeight: 22,
+          marginTop: -2
+        }}>×</Text>
       </Pressable>
       <ErrorBoundary>
         <CardScreen card={card} locale={locale} />
