@@ -3,7 +3,11 @@
   "category": "mental_models",
   "release_number": 7,
   "release_date": "2026-04-25",
-  "tags": ["epistemology", "ockham", "mdl"],
+  "tags": [
+    "epistemology",
+    "ockham",
+    "mdl"
+  ],
   "difficulty": 4,
   "reading_time_sec": 220,
   "theme_override": null,
@@ -11,78 +15,172 @@
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Глубже · Бритва Оккама · Уровень 2" } },
-        { "type": "hook", "props": { "text": "Простое часто верное — но не всегда. Дальше — формальная теория того, когда бритва работает, а когда нет. Меньше фольклора, больше математики." } },
-        { "type": "title", "props": { "text": "Когда бритва {{accent:обманывает}}" } },
-        { "type": "subtitle", "props": { "text": "Solomonoff Induction · MDL · Information Theory" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Бритва Оккама — не «всегда выбирай простое». Это про {{em:оптимальное соотношение между простотой модели и точностью на данных}}. В теории информации это формализовано: Minimum Description Length (MDL).",
-            "Идея MDL: лучшая гипотеза — та, которая короче всего описывает данные, считая длину гипотезы плюс длину «исключений», которые она не объясняет. Слишком простая модель пропускает много исключений → длинное описание. Слишком сложная — всё объясняет, но сама длинная. Оптимум посередине.",
-            "Бритва обманывает когда: данных мало (тогда любая «простая» модель проходит), исключения дёшевы (тогда сложность не штрафуется), или когда важна предсказательная сила, а не описательная."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Глубина",
-          "text": "Простота — не цель. Цель — минимизировать общую сложность объяснения данных. Иногда добавить переменную = убрать десять исключений."
-        } },
-        { "type": "trap", "props": {
-          "label": "Где бритва режет не туда",
-          "text": "Эпидемиологи в начале COVID выбирали «простую» модель: один вирус, один путь передачи. Реальность оказалась сложнее (мутации, бессимптомные носители). Бритва была применена слишком рано — данных не хватало. {{em:Простота без достаточных данных — догадка, а не вывод}}."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где работает MDL-логика",
-          "items": [
-            { "label": "В машинном обучении", "example": "Регуляризация (L1, L2) — буквально штраф за сложность модели. То же что Оккам — но с точной формулой." },
-            { "label": "В диагностике",      "example": "«Стук копыт = лошадь» работает только если у вас 1000 пациентов и 999 с лошадьми. С 5 пациентами — нужны больше тестов." },
-            { "label": "В науке",            "example": "Эпициклы Птолемея были «простыми» 1500 лет, пока данных не накопилось столько, что простой стала эллиптическая орбита Кеплера." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Упражнение глубины",
-          "text": "Возьмите гипотезу, к которой вы пришли по бритве Оккама. Спросите: достаточно ли у меня данных, чтобы простота победила сложность? Если меньше десятка наблюдений — это догадка, не вывод."
-        } }
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Глубже · Бритва Оккама · Уровень 2"
+          }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Простое часто верное — но не всегда. Дальше — формальная теория того, когда бритва работает, а когда нет. Меньше фольклора, больше математики."
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Когда бритва {{accent:обманывает}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Solomonoff Induction · MDL · Information Theory"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Бритва Оккама — не «всегда выбирай простое». Это про {{em:оптимальное соотношение между простотой модели и точностью на данных}}. В теории информации это формализовано: Minimum Description Length (MDL).",
+              "Идея MDL: лучшая гипотеза — та, которая короче всего описывает данные, считая длину гипотезы плюс длину «исключений», которые она не объясняет. Слишком простая модель пропускает много исключений → длинное описание. Слишком сложная — всё объясняет, но сама длинная. Оптимум посередине.",
+              "Бритва обманывает когда: данных мало (тогда любая «простая» модель проходит), исключения дёшевы (тогда сложность не штрафуется), или когда важна предсказательная сила, а не описательная."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Глубина",
+            "text": "Простота — не цель. Цель — минимизировать общую сложность объяснения данных. Иногда добавить переменную = убрать десять исключений."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Где бритва режет не туда",
+            "text": "Эпидемиологи в начале COVID выбирали «простую» модель: один вирус, один путь передачи. Реальность оказалась сложнее (мутации, бессимптомные носители). Бритва была применена слишком рано — данных не хватало. {{em:Простота без достаточных данных — догадка, а не вывод}}."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где работает MDL-логика",
+            "items": [
+              {
+                "label": "В машинном обучении",
+                "example": "Регуляризация (L1, L2) — буквально штраф за сложность модели. То же что Оккам — но с точной формулой."
+              },
+              {
+                "label": "В диагностике",
+                "example": "«Стук копыт = лошадь» работает только если у вас 1000 пациентов и 999 с лошадьми. С 5 пациентами — нужны больше тестов."
+              },
+              {
+                "label": "В науке",
+                "example": "Эпициклы Птолемея были «простыми» 1500 лет, пока данных не накопилось столько, что простой стала эллиптическая орбита Кеплера."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Упражнение глубины",
+            "text": "Возьмите гипотезу, к которой вы пришли по бритве Оккама. Спросите: достаточно ли у меня данных, чтобы простота победила сложность? Если меньше десятка наблюдений — это догадка, не вывод."
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Deeper · Occam's Razor · Level 2" } },
-        { "type": "hook", "props": { "text": "Simple is often right — but not always. What follows is the formal theory of when the razor works and when it cuts wrong. Less folklore, more math." } },
-        { "type": "title", "props": { "text": "When the razor {{accent:lies}}" } },
-        { "type": "subtitle", "props": { "text": "Solomonoff Induction · MDL · Information Theory" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Occam's Razor isn't «always pick simple». It's about {{em:the optimal trade-off between model simplicity and fit to data}}. Information theory formalized this as Minimum Description Length (MDL).",
-            "The MDL idea: the best hypothesis is the one that gives the shortest total description of the data — counting both the hypothesis itself and the «exceptions» it doesn't explain. Too simple a model misses many exceptions → long description. Too complex — fits everything but is itself long. The optimum is in between.",
-            "The razor misleads when: data is sparse (any «simple» model fits), exceptions are cheap (complexity isn't penalized enough), or when prediction matters more than description."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Depth",
-          "text": "Simplicity isn't the goal. Minimizing total explanation length is. Sometimes adding one variable removes ten exceptions."
-        } },
-        { "type": "trap", "props": {
-          "label": "Where the razor cuts wrong",
-          "text": "Early-COVID epidemiologists chose the «simple» model: one virus, one transmission path. Reality was messier (mutations, asymptomatic carriers). The razor was applied too soon — not enough data yet. {{em:Simplicity without enough data is a guess, not a conclusion}}."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where MDL-logic works",
-          "items": [
-            { "label": "In machine learning", "example": "Regularization (L1, L2) — literally a penalty for model complexity. Same as Occam, but with a precise formula." },
-            { "label": "In diagnosis",        "example": "«Hoofbeats = horses» works only if you have 1000 patients and 999 are horses. With 5 patients — you need more tests." },
-            { "label": "In science",          "example": "Ptolemy's epicycles were «simple» for 1500 years, until enough data accumulated that elliptical orbits (Kepler) became the simpler model." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Depth exercise",
-          "text": "Take a hypothesis you reached via Occam's Razor. Ask: do I have enough data for simplicity to outweigh complexity? With fewer than ten observations — it's a guess, not a conclusion."
-        } }
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Deeper · Occam's Razor · Level 2"
+          }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Simple is often right — but not always. What follows is the formal theory of when the razor works and when it cuts wrong. Less folklore, more math."
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "When the razor {{accent:lies}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Solomonoff Induction · MDL · Information Theory"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Occam's Razor isn't «always pick simple». It's about {{em:the optimal trade-off between model simplicity and fit to data}}. Information theory formalized this as Minimum Description Length (MDL).",
+              "The MDL idea: the best hypothesis is the one that gives the shortest total description of the data — counting both the hypothesis itself and the «exceptions» it doesn't explain. Too simple a model misses many exceptions → long description. Too complex — fits everything but is itself long. The optimum is in between.",
+              "The razor misleads when: data is sparse (any «simple» model fits), exceptions are cheap (complexity isn't penalized enough), or when prediction matters more than description."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Depth",
+            "text": "Simplicity isn't the goal. Minimizing total explanation length is. Sometimes adding one variable removes ten exceptions."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Where the razor cuts wrong",
+            "text": "Early-COVID epidemiologists chose the «simple» model: one virus, one transmission path. Reality was messier (mutations, asymptomatic carriers). The razor was applied too soon — not enough data yet. {{em:Simplicity without enough data is a guess, not a conclusion}}."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where MDL-logic works",
+            "items": [
+              {
+                "label": "In machine learning",
+                "example": "Regularization (L1, L2) — literally a penalty for model complexity. Same as Occam, but with a precise formula."
+              },
+              {
+                "label": "In diagnosis",
+                "example": "«Hoofbeats = horses» works only if you have 1000 patients and 999 are horses. With 5 patients — you need more tests."
+              },
+              {
+                "label": "In science",
+                "example": "Ptolemy's epicycles were «simple» for 1500 years, until enough data accumulated that elliptical orbits (Kepler) became the simpler model."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Depth exercise",
+            "text": "Take a hypothesis you reached via Occam's Razor. Ask: do I have enough data for simplicity to outweigh complexity? With fewer than ten observations — it's a guess, not a conclusion."
+          }
+        }
       ]
     }
   },
   "levels": [
-    { "level": 2, "doc_ref": "models/occam_razor_deep" }
-  ]
+    {
+      "level": 2,
+      "doc_ref": "models/occam_razor_deep"
+    }
+  ],
+  "deep": {
+    "type": "boundaries"
+  }
 }

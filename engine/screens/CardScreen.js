@@ -18,7 +18,8 @@ export default function CardScreen({
   // CardLevelStack opt-in deeper навигация (Variant A):
   onContinueDeeper = null,   // если задан — внизу карточки кнопка "↓ Глубже"
   onBackToParent  = null,    // если задан — сверху ссылка "← К Уровню 1"
-  levelLabel      = null     // строка для шапки если показываем "УРОВЕНЬ 2" и т.п.
+  levelLabel      = null,    // строка для шапки если показываем "УРОВЕНЬ 2" и т.п.
+  deeperType      = null     // тип level 2: 'biology' | 'case_study' | 'boundaries' | 'apply_drill' | 'connections' | 'sources'
 }) {
   return (
     <CardThemeScope category={card?.category} cardId={card?.id}>
@@ -29,12 +30,13 @@ export default function CardScreen({
         onContinueDeeper={onContinueDeeper}
         onBackToParent={onBackToParent}
         levelLabel={levelLabel}
+        deeperType={deeperType}
       />
     </CardThemeScope>
   );
 }
 
-function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, onContinueDeeper, onBackToParent, levelLabel }) {
+function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, onContinueDeeper, onBackToParent, levelLabel, deeperType }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -118,39 +120,43 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
 
       <BlockRenderer blocks={blocks} card={card} locale={locale} dynamic={dynamic} />
 
-      {onContinueDeeper ? (
-        <Pressable
-          onPress={onContinueDeeper}
-          style={{
-            marginHorizontal: 24,
-            marginTop: 32,
-            marginBottom: 12,
-            paddingVertical: 18,
-            paddingHorizontal: 20,
-            borderRadius: tokens.radius.tight,
-            borderWidth: 1,
-            borderColor: palette.accent,
-            backgroundColor: palette.bg_card,
-            alignItems: 'center'
-          }}
-        >
-          <Text style={{
-            fontFamily: tokens.fonts.mono_medium,
-            fontSize: 11,
-            letterSpacing: 2,
-            color: palette.accent,
-            textTransform: 'uppercase',
-            marginBottom: 6
-          }}>↓ {t('go_deeper')}</Text>
-          <Text style={{
-            fontFamily: tokens.fonts.serif_italic,
-            fontStyle: 'italic',
-            fontSize: 13,
-            color: palette.text_dim,
-            textAlign: 'center'
-          }}>{t('go_deeper_hint')}</Text>
-        </Pressable>
-      ) : null}
+      {onContinueDeeper ? (() => {
+        const labelKey = deeperType ? `go_deeper_${deeperType}`        : 'go_deeper';
+        const hintKey  = deeperType ? `go_deeper_${deeperType}_hint`   : 'go_deeper_hint';
+        return (
+          <Pressable
+            onPress={onContinueDeeper}
+            style={{
+              marginHorizontal: 24,
+              marginTop: 32,
+              marginBottom: 12,
+              paddingVertical: 18,
+              paddingHorizontal: 20,
+              borderRadius: tokens.radius.tight,
+              borderWidth: 1,
+              borderColor: palette.accent,
+              backgroundColor: palette.bg_card,
+              alignItems: 'center'
+            }}
+          >
+            <Text style={{
+              fontFamily: tokens.fonts.mono_medium,
+              fontSize: 11,
+              letterSpacing: 2,
+              color: palette.accent,
+              textTransform: 'uppercase',
+              marginBottom: 6
+            }}>↓ {t(labelKey)}</Text>
+            <Text style={{
+              fontFamily: tokens.fonts.serif_italic,
+              fontStyle: 'italic',
+              fontSize: 13,
+              color: palette.text_dim,
+              textAlign: 'center'
+            }}>{t(hintKey)}</Text>
+          </Pressable>
+        );
+      })() : null}
 
       <CardBottomBar
         card={card}

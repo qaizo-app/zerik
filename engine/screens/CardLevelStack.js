@@ -30,6 +30,8 @@ export default function CardLevelStack({
   const current = levels[Math.min(activeIdx, levels.length - 1)];
   const hasDeeper = activeIdx < levels.length - 1;
   const hasParent = activeIdx > 0;
+  const nextDeep  = hasDeeper ? levels[activeIdx + 1] : null;
+  const deeperType = nextDeep?.card?.deep?.type || null;
 
   return (
     <View style={{ width, height: '100%' }}>
@@ -44,6 +46,7 @@ export default function CardLevelStack({
           onContinueDeeper={hasDeeper ? () => setActiveIdx(activeIdx + 1) : null}
           onBackToParent={hasParent ? () => setActiveIdx(activeIdx - 1) : null}
           levelLabel={hasParent ? `${t('level_label')} ${current.level}` : null}
+          deeperType={deeperType}
         />
       </ErrorBoundary>
     </View>
