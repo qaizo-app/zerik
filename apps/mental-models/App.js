@@ -13,7 +13,7 @@ import {
   ThemeProvider,
   registerEngineBlocks,
   CardStackScreen, LibraryScreen, HistoryScreen, AuthScreen,
-  PaywallScreen, OnboardingScreen, SettingsScreen,
+  PaywallScreen, OnboardingScreen, SettingsScreen, CardViewerScreen,
   AppNavigator, RootStackNavigator,
   setLanguage,
   consentService, pushService, appCheckService
@@ -187,7 +187,7 @@ export default function App() {
                   <AppNavigator
                     screens={{
                       Today: () => <TodayTabScreen />,
-                      Library: () => (
+                      Library: ({ navigation }) => (
                         <LibraryScreen
                           locale={detectLanguage()}
                           getSavedCards={async () => {
@@ -199,12 +199,14 @@ export default function App() {
                             }
                             return out;
                           }}
+                          onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
                         />
                       ),
-                      History: () => (
+                      History: ({ navigation }) => (
                         <HistoryScreen
                           locale={detectLanguage()}
                           getHistory={async () => contentService.getCardChain({ limit: 50 })}
+                          onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
                         />
                       ),
                       Settings: ({ navigation }) => (
@@ -228,6 +230,15 @@ export default function App() {
                         />
                       )
                     }}
+                  />
+                ),
+                CardViewer: ({ route, navigation }) => (
+                  <CardViewerScreen
+                    route={route}
+                    navigation={navigation}
+                    contentService={contentService}
+                    locale={detectLanguage()}
+                    resolveLevels={resolveLevels}
                   />
                 )
               }}

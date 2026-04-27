@@ -17,6 +17,7 @@ export { default as CardBottomBar }    from './components/CardBottomBar';
 export { default as ErrorBoundary }     from './components/ErrorBoundary';
 export { default as LibraryScreen }    from './screens/LibraryScreen';
 export { default as HistoryScreen }    from './screens/HistoryScreen';
+export { default as CardViewerScreen } from './screens/CardViewerScreen';
 export { default as AuthScreen }       from './screens/AuthScreen';
 export { default as PaywallScreen }    from './screens/PaywallScreen';
 export { default as OnboardingScreen } from './screens/OnboardingScreen';

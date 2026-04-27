@@ -103,6 +103,9 @@ export function RootStackNavigator({ screens, initialRoute }) {
       <Stack.Screen name="Auth"       component={screens.Auth}       options={{ presentation: 'modal' }} />
       <Stack.Screen name="Paywall"    component={screens.Paywall}    options={{ presentation: 'modal' }} />
       <Stack.Screen name="Main"       component={screens.Main} />
+      {screens.CardViewer ? (
+        <Stack.Screen name="CardViewer" component={screens.CardViewer} options={{ presentation: 'modal' }} />
+      ) : null}
     </Stack.Navigator>
   );
 }
