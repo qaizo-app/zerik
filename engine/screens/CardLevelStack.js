@@ -1,19 +1,21 @@
-// CardLevelStack — вертикальный FlatList уровней глубины одной карточки.
-// Каждый level — отдельная "карточка" с тем же category palette, но другим
-// контентом (level 2 — деталь/история/научный разбор, level 3 — мета-обсуждение).
+// CardLevelStack — вертикальный стек уровней одной карточки.
+// Single ScrollView, контент течёт непрерывно: level 1 → level 2 → ...
+// Без paging-снапа — простой continuous scroll. Это устраняет конфликт
+// вложенных вертикальных скроллов (раньше FlatList застревал посередине)
+// и даёт более естественный reading flow.
 //
-// Используется внутри ячейки горизонтального CardStackScreen: каждая
-// горизонтальная "страница" = вертикальный стек уровней.
+// Когда levels.length > 1, CardScreen рендерится с noScroll=true: верхний
+// ScrollView сам управляет скроллом, нижний CardScreen просто рендерит
+// контент в плоский View.
 
-import { useCallback, useRef, useState } from 'react';
-import { FlatList, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 import CardScreen from './CardScreen';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export default function CardLevelStack({
-  levels,            // [{ level: 1, card: rootCard }, { level: 2, card: deepCard }, ...]
-  width,             // должен совпадать с шириной горизонтальной ячейки
+  levels,
+  width,
   locale = 'ru',
   dynamic,
   isSaved,
@@ -21,15 +23,12 @@ export default function CardLevelStack({
   onShare
 }) {
   const { palette } = useTheme();
-  const [activeLevel, setActiveLevel] = useState(0);
-  const [containerHeight, setContainerHeight] = useState(0);
-  const listRef = useRef(null);
 
   if (!Array.isArray(levels) || levels.length === 0) {
     return <View style={{ width, height: '100%', backgroundColor: palette.bg }} />;
   }
 
-  // Single-level — без FlatList, чтобы не нарушать inner ScrollView CardScreen.
+  // Single-level — CardScreen со своим ScrollView (быстрее).
   if (levels.length === 1) {
     return (
       <View style={{ width, height: '100%' }}>
@@ -47,49 +46,25 @@ export default function CardLevelStack({
     );
   }
 
-  const renderItem = ({ item }) => (
-    <View style={{ width, height: containerHeight }}>
-      <ErrorBoundary>
-        <CardScreen
-          card={item.card}
-          locale={locale}
-          dynamic={dynamic}
-          isSaved={isSaved}
-          onSave={onSave}
-          onShare={onShare}
-        />
-      </ErrorBoundary>
-    </View>
-  );
-
-  const onMomentumScrollEnd = useCallback((e) => {
-    if (!containerHeight) return;
-    const y = e.nativeEvent.contentOffset.y;
-    const idx = Math.round(y / containerHeight);
-    if (idx !== activeLevel) setActiveLevel(idx);
-  }, [activeLevel, containerHeight]);
-
+  // Multi-level — единый ScrollView, контент уровней друг за другом.
   return (
-    <View
-      style={{ width, height: '100%' }}
-      onLayout={(e) => {
-        const h = e.nativeEvent.layout.height;
-        if (h && h !== containerHeight) setContainerHeight(h);
-      }}
+    <ScrollView
+      style={{ width, flex: 1, backgroundColor: palette.bg }}
+      showsVerticalScrollIndicator={false}
     >
-      {containerHeight > 0 ? (
-        <FlatList
-          ref={listRef}
-          data={levels}
-          keyExtractor={(it) => `level_${it.level}_${it.card.id}`}
-          renderItem={renderItem}
-          pagingEnabled
-          showsVerticalScrollIndicator={false}
-          onMomentumScrollEnd={onMomentumScrollEnd}
-          getItemLayout={(_, idx) => ({ length: containerHeight, offset: containerHeight * idx, index: idx })}
-          style={{ backgroundColor: palette.bg }}
-        />
-      ) : null}
-    </View>
+      {levels.map((item) => (
+        <ErrorBoundary key={`level_${item.level}_${item.card.id}`}>
+          <CardScreen
+            card={item.card}
+            locale={locale}
+            dynamic={dynamic}
+            isSaved={isSaved}
+            onSave={onSave}
+            onShare={onShare}
+            noScroll
+          />
+        </ErrorBoundary>
+      ))}
+    </ScrollView>
   );
 }

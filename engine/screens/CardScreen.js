@@ -12,18 +12,19 @@ import BlockRenderer from '../blocks/BlockRenderer';
 import CardBottomBar from '../components/CardBottomBar';
 import { t } from '../i18n';
 
-export default function CardScreen({ card, locale = 'ru', dynamic, isSaved, onSave, onShare }) {
+export default function CardScreen({ card, locale = 'ru', dynamic, isSaved, onSave, onShare, noScroll = false }) {
   return (
     <CardThemeScope category={card?.category} cardId={card?.id}>
       <CardScreenInner
         card={card} locale={locale} dynamic={dynamic}
         isSaved={isSaved} onSave={onSave} onShare={onShare}
+        noScroll={noScroll}
       />
     </CardThemeScope>
   );
 }
 
-function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare }) {
+function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -42,12 +43,20 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare }) {
     ? new Date(card.release_date).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', { weekday: 'short', day: '2-digit', month: 'short' })
     : '';
 
+  // Когда noScroll=true — рендерим без ScrollView, контейнер-родитель (CardLevelStack)
+  // оборачивает несколько карточек в один общий ScrollView. Это устраняет конфликт
+  // вложенных вертикальных scroll-жестов.
+  const Container = noScroll ? View : ScrollView;
+  const containerProps = noScroll
+    ? { style: { backgroundColor: palette.bg, paddingTop: insets.top, paddingBottom: insets.bottom + 100 } }
+    : {
+        style: { flex: 1, backgroundColor: palette.bg },
+        contentContainerStyle: { paddingTop: insets.top, paddingBottom: insets.bottom + 100 },
+        showsVerticalScrollIndicator: false
+      };
+
   return (
-    <ScrollView
-      style={{ flex: 1, backgroundColor: palette.bg }}
-      contentContainerStyle={{ paddingTop: insets.top, paddingBottom: insets.bottom + 100 }}
-      showsVerticalScrollIndicator={false}
-    >
+    <Container {...containerProps}>
       <View style={[styles.topbar, {
         borderBottomColor: palette.border,
         paddingHorizontal: 24
@@ -90,7 +99,7 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare }) {
         onSharePress={onShare}
         showSwipeUpHint={Array.isArray(card.levels) && card.levels.length > 1}
       />
-    </ScrollView>
+    </Container>
   );
 }
 
