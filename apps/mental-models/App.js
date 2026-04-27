@@ -15,7 +15,7 @@ import {
   CardStackScreen, LibraryScreen, HistoryScreen, AuthScreen,
   PaywallScreen, OnboardingScreen, SettingsScreen, CardViewerScreen,
   AppNavigator, RootStackNavigator,
-  setLanguage,
+  setLanguage, getLanguage, useLanguage,
   consentService, pushService, appCheckService
 } from '@engine';
 
@@ -187,28 +187,34 @@ export default function App() {
                   <AppNavigator
                     screens={{
                       Today: () => <TodayTabScreen />,
-                      Library: ({ navigation }) => (
-                        <LibraryScreen
-                          locale={detectLanguage()}
-                          getSavedCards={async () => {
-                            const ids = await progressService.getSavedIds();
-                            const out = [];
-                            for (const id of ids) {
-                              const c = await contentService.getCardById(id);
-                              if (c) out.push(c);
-                            }
-                            return out;
-                          }}
-                          onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
-                        />
-                      ),
-                      History: ({ navigation }) => (
-                        <HistoryScreen
-                          locale={detectLanguage()}
-                          getHistory={async () => contentService.getCardChain({ limit: 50 })}
-                          onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
-                        />
-                      ),
+                      Library: ({ navigation }) => {
+                        const lang = useLanguage();
+                        return (
+                          <LibraryScreen
+                            locale={lang}
+                            getSavedCards={async () => {
+                              const ids = await progressService.getSavedIds();
+                              const out = [];
+                              for (const id of ids) {
+                                const c = await contentService.getCardById(id);
+                                if (c) out.push(c);
+                              }
+                              return out;
+                            }}
+                            onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
+                          />
+                        );
+                      },
+                      History: ({ navigation }) => {
+                        const lang = useLanguage();
+                        return (
+                          <HistoryScreen
+                            locale={lang}
+                            getHistory={async () => contentService.getCardChain({ limit: 50 })}
+                            onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
+                          />
+                        );
+                      },
                       Settings: ({ navigation }) => (
                         <SettingsScreen
                           studioApps={studioApps}
@@ -232,15 +238,18 @@ export default function App() {
                     }}
                   />
                 ),
-                CardViewer: ({ route, navigation }) => (
+                CardViewer: ({ route, navigation }) => {
+                  const lang = useLanguage();
+                  return (
                   <CardViewerScreen
                     route={route}
                     navigation={navigation}
                     contentService={contentService}
-                    locale={detectLanguage()}
+                    locale={lang}
                     resolveLevels={resolveLevels}
                   />
-                )
+                  );
+                }
               }}
             />
           </NavigationContainer>
@@ -251,6 +260,7 @@ export default function App() {
 }
 
 function TodayTabScreen() {
+  const lang = useLanguage();
   const [cards, setCards] = useState(null);
   const [savedIds, setSavedIds] = useState([]);
 
@@ -279,7 +289,7 @@ function TodayTabScreen() {
     // Сейчас shareService падает на URL fallback автоматически.
     await shareService.shareCard(null, {
       card,
-      locale: 'ru',
+      locale: lang,
       fallbackUrl: `https://zerik.app/cards/${card.id}`
     }).catch(() => {});
   }
@@ -289,7 +299,7 @@ function TodayTabScreen() {
   return (
     <CardStackScreen
       cards={cards}
-      locale="ru"
+      locale={lang}
       savedIds={savedIds}
       onSavePress={handleSave}
       onSharePress={handleShare}
