@@ -3,116 +3,249 @@
   "category": "mental_models",
   "release_number": 24,
   "release_date": "2026-05-05",
-  "tags": ["measurement", "kpi", "incentives"],
+  "tags": [
+    "measurement",
+    "kpi",
+    "incentives"
+  ],
   "difficulty": 3,
   "reading_time_sec": 175,
   "theme_override": null,
-  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "illustration_ref": "bundle://illustrations/goodharts_law.svg",
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Ментальная модель · №7" } },
-        { "type": "hook", "props": { "text": "В колониальной Индии хотели уменьшить количество кобр — заплатили за каждую убитую. Через год кобр стало больше: их разводили чтобы убивать. Метрика «количество убитых кобр» перестала отражать реальность когда стала целью…" } },
-        { "type": "title", "props": { "text": "Закон {{accent:Гудхарта}}" } },
-        { "type": "subtitle", "props": { "text": "Goodhart's Law · C. Goodhart · 1975" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Чарльз Гудхарт сформулировал в 1975-м: {{em:«Когда метрика становится целью, она перестаёт быть хорошей метрикой»}}. Метрика была отражением чего-то реального — её начали оптимизировать напрямую — связь с реальностью разорвалась.",
-            "Это работает потому что любая метрика — упрощение. Реальность сложнее. Пока метрика побочный эффект — она коррелирует. Как только она цель — люди начинают gaming её, забивая на исходную реальность.",
-            "Британские чиновники в Индии не врали о цели. Просто система им сказала: больше дохлых кобр = выше зарплата. Они вырастили оптимальное поведение под систему."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Принцип",
-          "text": "Любая метрика — приближение к настоящей цели. Когда вознаграждение завязано на метрику, люди оптимизируют метрику — не цель."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Проверь себя",
-          "question": "Команда поддержки получает бонусы за «время ответа». Через 3 месяца клиенты жалуются что качество упало. Что происходит?",
-          "setup": null,
-          "options": [
-            { "id": "more_train", "text": "Нужно больше обучения — они стараются, но не умеют",   "is_wiser": false },
-            { "id": "metric_gaming", "text": "Они оптимизируют скорость ответа, не качество — Goodhart", "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "По данным {{votes_count}} ответов",
-            "big_stat_text": "видят Goodhart",
-            "explanation": "«Время ответа» — упрощение «хорошего сервиса». Когда оно становится целью, агенты быстро отвечают «спасибо за обращение, проверим» и закрывают тикет — таймер сброшен, бонус получен. Качество выпадает из системы вознаграждения.",
-            "wisdom": "Эдвард Деминг: {{em:«Если можешь измерить — управляешь. Если не можешь измерить — управляешь, но не понимаешь чем»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Ментальная модель · №7"
           }
-        } },
-        { "type": "trap", "props": {
-          "label": "Ловушка",
-          "text": "Goodhart не значит «не используйте метрики». Метрики нужны. Goodhart значит — {{em:не привязывайте к метрике сильное вознаграждение}}, или сделайте метрику близкой к настоящей цели (трудно, но возможно)."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где вы встретите это сегодня",
-          "items": [
-            { "label": "В работе",     "example": "KPI «количество кода» → разработчик пишет много плохого кода. Лучший код = меньше строк." },
-            { "label": "В образовании","example": "Школа оцениваемая по среднему баллу избавляется от слабых учеников. Цель «образовывать всех» проиграла метрике." },
-            { "label": "В соцсетях", "example": "Алгоритм, оптимизирующий «время в приложении» → продвигает конфликтный контент. Цель «вовлечение» победила цель «полезность»." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Действие на сегодня",
-          "text": "Возьмите одну метрику, по которой оцениваете себя или команду. Спросите: «Что я мог бы сделать чтобы улучшить эту метрику, но навредить настоящей цели?» Если ответ есть — Goodhart живой."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "В колониальной Индии хотели уменьшить количество кобр — заплатили за каждую убитую. Через год кобр стало больше: их разводили чтобы убивать. Метрика «количество убитых кобр» перестала отражать реальность когда стала целью…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Закон {{accent:Гудхарта}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Goodhart's Law · C. Goodhart · 1975"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/goodharts_law.svg",
+            "alt": "Когда метрика становится целью, она перестаёт быть хорошей метрикой"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Чарльз Гудхарт сформулировал в 1975-м: {{em:«Когда метрика становится целью, она перестаёт быть хорошей метрикой»}}. Метрика была отражением чего-то реального — её начали оптимизировать напрямую — связь с реальностью разорвалась.",
+              "Это работает потому что любая метрика — упрощение. Реальность сложнее. Пока метрика побочный эффект — она коррелирует. Как только она цель — люди начинают gaming её, забивая на исходную реальность.",
+              "Британские чиновники в Индии не врали о цели. Просто система им сказала: больше дохлых кобр = выше зарплата. Они вырастили оптимальное поведение под систему."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Любая метрика — приближение к настоящей цели. Когда вознаграждение завязано на метрику, люди оптимизируют метрику — не цель."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Команда поддержки получает бонусы за «время ответа». Через 3 месяца клиенты жалуются что качество упало. Что происходит?",
+            "setup": null,
+            "options": [
+              {
+                "id": "more_train",
+                "text": "Нужно больше обучения — они стараются, но не умеют",
+                "is_wiser": false
+              },
+              {
+                "id": "metric_gaming",
+                "text": "Они оптимизируют скорость ответа, не качество — Goodhart",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "видят Goodhart",
+              "explanation": "«Время ответа» — упрощение «хорошего сервиса». Когда оно становится целью, агенты быстро отвечают «спасибо за обращение, проверим» и закрывают тикет — таймер сброшен, бонус получен. Качество выпадает из системы вознаграждения.",
+              "wisdom": "Эдвард Деминг: {{em:«Если можешь измерить — управляешь. Если не можешь измерить — управляешь, но не понимаешь чем»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Goodhart не значит «не используйте метрики». Метрики нужны. Goodhart значит — {{em:не привязывайте к метрике сильное вознаграждение}}, или сделайте метрику близкой к настоящей цели (трудно, но возможно)."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В работе",
+                "example": "KPI «количество кода» → разработчик пишет много плохого кода. Лучший код = меньше строк."
+              },
+              {
+                "label": "В образовании",
+                "example": "Школа оцениваемая по среднему баллу избавляется от слабых учеников. Цель «образовывать всех» проиграла метрике."
+              },
+              {
+                "label": "В соцсетях",
+                "example": "Алгоритм, оптимизирующий «время в приложении» → продвигает конфликтный контент. Цель «вовлечение» победила цель «полезность»."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одну метрику, по которой оцениваете себя или команду. Спросите: «Что я мог бы сделать чтобы улучшить эту метрику, но навредить настоящей цели?» Если ответ есть — Goodhart живой."
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Mental Model · №7" } },
-        { "type": "hook", "props": { "text": "In colonial India they wanted fewer cobras — bounty per dead snake. A year later there were more cobras: people bred them to kill. The metric «dead cobras» stopped reflecting reality the moment it became the target…" } },
-        { "type": "title", "props": { "text": "{{accent:Goodhart's}} Law" } },
-        { "type": "subtitle", "props": { "text": "Goodhart's Law · C. Goodhart · 1975" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Charles Goodhart wrote in 1975: {{em:«When a measure becomes a target, it ceases to be a good measure»}}. The metric used to reflect something real — it became the optimization target — the link to reality snapped.",
-            "It works because every metric is a simplification. Reality is messier. While the metric is a side-effect, it correlates. The moment it's the target, people start gaming it, abandoning the underlying reality.",
-            "British officials in India weren't lying about the goal. The system told them: more dead cobras = higher pay. They evolved optimal behavior for the system."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Principle",
-          "text": "Every metric is an approximation of the real goal. When reward is tied to the metric, people optimize the metric — not the goal."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Test yourself",
-          "question": "Support team is bonused on «response time». 3 months in, customers complain quality dropped. What happened?",
-          "setup": null,
-          "options": [
-            { "id": "more_train",     "text": "They need more training — they try but can't",                "is_wiser": false },
-            { "id": "metric_gaming",  "text": "They optimize speed, not quality — Goodhart",                  "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "Based on {{votes_count}} responses",
-            "big_stat_text": "see Goodhart",
-            "explanation": "«Response time» is a proxy for «good service». Once it's the target, agents reply «thanks, we'll check» and close the ticket — timer reset, bonus earned. Quality drops out of the reward system.",
-            "wisdom": "W. Edwards Deming: {{em:«If you can measure it, you can manage it. If you can't measure it, you still manage it — you just don't know what»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Mental Model · №7"
           }
-        } },
-        { "type": "trap", "props": {
-          "label": "The trap",
-          "text": "Goodhart doesn't mean «don't use metrics». You need metrics. It means: {{em:don't tie strong rewards to metrics}}, or make metrics very close to the real goal (hard, but possible)."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where you'll meet it today",
-          "items": [
-            { "label": "At work",       "example": "KPI «lines of code» → developer writes lots of bad code. The best code is fewer lines." },
-            { "label": "In education", "example": "Schools graded by average score push out weak students. The goal «educate everyone» loses to the metric." },
-            { "label": "In social media", "example": "Algorithm optimizing «time in app» → promotes outrage. Engagement beats usefulness." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Action for today",
-          "text": "Pick one metric you're judged by — yourself or your team. Ask: «What could I do to improve this metric while hurting the real goal?» If an answer exists, Goodhart is alive."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "In colonial India they wanted fewer cobras — bounty per dead snake. A year later there were more cobras: people bred them to kill. The metric «dead cobras» stopped reflecting reality the moment it became the target…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "{{accent:Goodhart's}} Law"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Goodhart's Law · C. Goodhart · 1975"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/goodharts_law.svg",
+            "alt": "When a measure becomes a target, it ceases to be a good measure"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Charles Goodhart wrote in 1975: {{em:«When a measure becomes a target, it ceases to be a good measure»}}. The metric used to reflect something real — it became the optimization target — the link to reality snapped.",
+              "It works because every metric is a simplification. Reality is messier. While the metric is a side-effect, it correlates. The moment it's the target, people start gaming it, abandoning the underlying reality.",
+              "British officials in India weren't lying about the goal. The system told them: more dead cobras = higher pay. They evolved optimal behavior for the system."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Every metric is an approximation of the real goal. When reward is tied to the metric, people optimize the metric — not the goal."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Support team is bonused on «response time». 3 months in, customers complain quality dropped. What happened?",
+            "setup": null,
+            "options": [
+              {
+                "id": "more_train",
+                "text": "They need more training — they try but can't",
+                "is_wiser": false
+              },
+              {
+                "id": "metric_gaming",
+                "text": "They optimize speed, not quality — Goodhart",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see Goodhart",
+              "explanation": "«Response time» is a proxy for «good service». Once it's the target, agents reply «thanks, we'll check» and close the ticket — timer reset, bonus earned. Quality drops out of the reward system.",
+              "wisdom": "W. Edwards Deming: {{em:«If you can measure it, you can manage it. If you can't measure it, you still manage it — you just don't know what»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Goodhart doesn't mean «don't use metrics». You need metrics. It means: {{em:don't tie strong rewards to metrics}}, or make metrics very close to the real goal (hard, but possible)."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              {
+                "label": "At work",
+                "example": "KPI «lines of code» → developer writes lots of bad code. The best code is fewer lines."
+              },
+              {
+                "label": "In education",
+                "example": "Schools graded by average score push out weak students. The goal «educate everyone» loses to the metric."
+              },
+              {
+                "label": "In social media",
+                "example": "Algorithm optimizing «time in app» → promotes outrage. Engagement beats usefulness."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Pick one metric you're judged by — yourself or your team. Ask: «What could I do to improve this metric while hurting the real goal?» If an answer exists, Goodhart is alive."
+          }
+        }
       ]
     }
   },
-  "levels": [{ "level": 1, "doc_ref": "models/goodharts_law" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/goodharts_law"
+    }
+  ]
 }

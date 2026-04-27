@@ -3,108 +3,235 @@
   "category": "mental_models",
   "release_number": 25,
   "release_date": "2026-05-06",
-  "tags": ["coordination", "schelling", "game_theory"],
+  "tags": [
+    "coordination",
+    "schelling",
+    "game_theory"
+  ],
   "difficulty": 3,
   "reading_time_sec": 165,
   "theme_override": null,
-  "illustration_ref": "bundle://illustrations/placeholder.svg",
+  "illustration_ref": "bundle://illustrations/schelling_point.svg",
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Ментальная модель · №8" } },
-        { "type": "hook", "props": { "text": "Шеллинг спросил студентов: «Тебе и другу нужно встретиться завтра в Нью-Йорке. Места и времени не договорились, связи нет. Где будешь?» Самый частый ответ — Гранд-Сентрал, в полдень. Никто не сговаривался — но все думали одинаково…" } },
-        { "type": "title", "props": { "text": "Точка {{accent:Шеллинга}}" } },
-        { "type": "subtitle", "props": { "text": "Schelling Point · T. Schelling · 1960" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Томас Шеллинг получил Нобелевку за концепцию: {{em:когда координация невозможна, люди сходятся в очевидной точке}}. Не «лучшей по логике», а «той которую выберут другие». Это базовое свойство координации без коммуникации.",
-            "Полдень — потому что круглое число. Гранд-Сентрал — потому что главный вокзал. Эти выборы не оптимальны — они {{em:очевидны}}. И потому работают.",
-            "Деньги — точка Шеллинга. Никто не выбирал доллар как стандарт расчёта — но он стал им потому что все верили что другие тоже его примут. Биткоин пытается стать новой точкой Шеллинга — пока неуверенно."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Принцип",
-          "text": "Когда нельзя договориться, выбирай очевидное — потому что другие выберут то же. Не оптимально, но согласованно."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Проверь себя",
-          "question": "Стартап выпустил продукт. У них есть два варианта: бесплатно навсегда или $9.99/мес. Что выбрать?",
-          "setup": "Никаких других подсказок про продукт.",
-          "options": [
-            { "id": "free",       "text": "Бесплатно — больше юзеров",                          "is_wiser": false },
-            { "id": "schelling",  "text": "$9.99 — это «обычная цена» для подписки в SaaS",   "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "По данным {{votes_count}} ответов",
-            "big_stat_text": "не используют Schelling",
-            "explanation": "$9.99 — точка Шеллинга для SaaS-подписки. Не оптимальная — для одного продукта правильно $4.99, для другого $19.99. Но «9.99» — то на чём согласились пользователи и рынок. Уход от точки требует обоснования: почему ваш продукт другой? Без обоснования — теряете доверие.",
-            "wisdom": "Шеллинг: {{em:«Самые сильные институты — те, в которых очевидное и оптимальное совпадают»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Ментальная модель · №8"
           }
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где это работает",
-          "items": [
-            { "label": "В переговорах","example": "Делить пополам — Schelling. Не «справедливо» (зависит от вкладов), но устойчиво потому что оба понимают исход." },
-            { "label": "В стандартах","example": "QWERTY клавиатура — не оптимальна. Но все её знают. Альтернативы провалились не потому что хуже." },
-            { "label": "В деньгах",  "example": "Цены 9.99/19.99/49.99 — Schelling. Прайсинг 8.73 кажется странным, даже если он математически правильный." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Действие на сегодня",
-          "text": "В одной задаче где надо координироваться без обсуждения — спросите: «Что выбрал бы случайный человек на моём месте?» Часто это ответ."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Шеллинг спросил студентов: «Тебе и другу нужно встретиться завтра в Нью-Йорке. Места и времени не договорились, связи нет. Где будешь?» Самый частый ответ — Гранд-Сентрал, в полдень. Никто не сговаривался — но все думали одинаково…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Точка {{accent:Шеллинга}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Schelling Point · T. Schelling · 1960"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/schelling_point.svg",
+            "alt": "Точка фокуса — то, что выбирают без предварительной коммуникации"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Томас Шеллинг получил Нобелевку за концепцию: {{em:когда координация невозможна, люди сходятся в очевидной точке}}. Не «лучшей по логике», а «той которую выберут другие». Это базовое свойство координации без коммуникации.",
+              "Полдень — потому что круглое число. Гранд-Сентрал — потому что главный вокзал. Эти выборы не оптимальны — они {{em:очевидны}}. И потому работают.",
+              "Деньги — точка Шеллинга. Никто не выбирал доллар как стандарт расчёта — но он стал им потому что все верили что другие тоже его примут. Биткоин пытается стать новой точкой Шеллинга — пока неуверенно."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда нельзя договориться, выбирай очевидное — потому что другие выберут то же. Не оптимально, но согласованно."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Стартап выпустил продукт. У них есть два варианта: бесплатно навсегда или $9.99/мес. Что выбрать?",
+            "setup": "Никаких других подсказок про продукт.",
+            "options": [
+              {
+                "id": "free",
+                "text": "Бесплатно — больше юзеров",
+                "is_wiser": false
+              },
+              {
+                "id": "schelling",
+                "text": "$9.99 — это «обычная цена» для подписки в SaaS",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "не используют Schelling",
+              "explanation": "$9.99 — точка Шеллинга для SaaS-подписки. Не оптимальная — для одного продукта правильно $4.99, для другого $19.99. Но «9.99» — то на чём согласились пользователи и рынок. Уход от точки требует обоснования: почему ваш продукт другой? Без обоснования — теряете доверие.",
+              "wisdom": "Шеллинг: {{em:«Самые сильные институты — те, в которых очевидное и оптимальное совпадают»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где это работает",
+            "items": [
+              {
+                "label": "В переговорах",
+                "example": "Делить пополам — Schelling. Не «справедливо» (зависит от вкладов), но устойчиво потому что оба понимают исход."
+              },
+              {
+                "label": "В стандартах",
+                "example": "QWERTY клавиатура — не оптимальна. Но все её знают. Альтернативы провалились не потому что хуже."
+              },
+              {
+                "label": "В деньгах",
+                "example": "Цены 9.99/19.99/49.99 — Schelling. Прайсинг 8.73 кажется странным, даже если он математически правильный."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В одной задаче где надо координироваться без обсуждения — спросите: «Что выбрал бы случайный человек на моём месте?» Часто это ответ."
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Mental Model · №8" } },
-        { "type": "hook", "props": { "text": "Schelling asked students: «You and a friend must meet tomorrow in New York. No place, no time agreed, no contact. Where do you go?» The most common answer — Grand Central, at noon. Nobody coordinated — they all thought the same…" } },
-        { "type": "title", "props": { "text": "{{accent:Schelling}} Point" } },
-        { "type": "subtitle", "props": { "text": "Schelling Point · T. Schelling · 1960" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Thomas Schelling won a Nobel for this idea: {{em:when coordination is impossible, people converge on the obvious point}}. Not the «logically best» one — the one others will pick too. This is the foundation of coordination without communication.",
-            "Noon, because it's a round number. Grand Central, because it's the main station. These choices aren't optimal — they're {{em:obvious}}. And that's why they work.",
-            "Money is a Schelling point. Nobody chose the dollar as the standard — it became one because everyone believed others would accept it. Bitcoin is trying to become a new Schelling point — still uncertain."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Principle",
-          "text": "When you can't agree, pick the obvious — because others will pick it too. Not optimal, but coordinated."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Test yourself",
-          "question": "A startup ships a product. Two options: free forever, or $9.99/mo. Which do you pick?",
-          "setup": "No other context about the product.",
-          "options": [
-            { "id": "free",      "text": "Free — more users",                                        "is_wiser": false },
-            { "id": "schelling", "text": "$9.99 — that's the «standard» SaaS subscription price",   "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "Based on {{votes_count}} responses",
-            "big_stat_text": "miss Schelling",
-            "explanation": "$9.99 is the SaaS-subscription Schelling point. Not optimal for every product — some need $4.99, others $19.99. But «9.99» is what users and market converged on. Departing from it requires justification: why is your product different? Without it, you lose trust.",
-            "wisdom": "Schelling: {{em:«The strongest institutions are those where the obvious and the optimal coincide»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Mental Model · №8"
           }
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where it works",
-          "items": [
-            { "label": "In negotiation", "example": "Splitting 50/50 is Schelling. Not «fair» (it ignores contributions), but stable because both grasp it instantly." },
-            { "label": "In standards",   "example": "QWERTY isn't optimal. But everyone knows it. Alternatives failed not because they were worse." },
-            { "label": "In money",       "example": "Prices like $9.99/19.99/49.99 are Schelling. $8.73 feels weird even when it's mathematically right." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Action for today",
-          "text": "On one task where you need to coordinate without discussion — ask: «What would a random stranger in my position pick?» Often that's the answer."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Schelling asked students: «You and a friend must meet tomorrow in New York. No place, no time agreed, no contact. Where do you go?» The most common answer — Grand Central, at noon. Nobody coordinated — they all thought the same…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "{{accent:Schelling}} Point"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Schelling Point · T. Schelling · 1960"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/schelling_point.svg",
+            "alt": "A focal point — what people converge to without prior communication"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Thomas Schelling won a Nobel for this idea: {{em:when coordination is impossible, people converge on the obvious point}}. Not the «logically best» one — the one others will pick too. This is the foundation of coordination without communication.",
+              "Noon, because it's a round number. Grand Central, because it's the main station. These choices aren't optimal — they're {{em:obvious}}. And that's why they work.",
+              "Money is a Schelling point. Nobody chose the dollar as the standard — it became one because everyone believed others would accept it. Bitcoin is trying to become a new Schelling point — still uncertain."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When you can't agree, pick the obvious — because others will pick it too. Not optimal, but coordinated."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A startup ships a product. Two options: free forever, or $9.99/mo. Which do you pick?",
+            "setup": "No other context about the product.",
+            "options": [
+              {
+                "id": "free",
+                "text": "Free — more users",
+                "is_wiser": false
+              },
+              {
+                "id": "schelling",
+                "text": "$9.99 — that's the «standard» SaaS subscription price",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "miss Schelling",
+              "explanation": "$9.99 is the SaaS-subscription Schelling point. Not optimal for every product — some need $4.99, others $19.99. But «9.99» is what users and market converged on. Departing from it requires justification: why is your product different? Without it, you lose trust.",
+              "wisdom": "Schelling: {{em:«The strongest institutions are those where the obvious and the optimal coincide»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where it works",
+            "items": [
+              {
+                "label": "In negotiation",
+                "example": "Splitting 50/50 is Schelling. Not «fair» (it ignores contributions), but stable because both grasp it instantly."
+              },
+              {
+                "label": "In standards",
+                "example": "QWERTY isn't optimal. But everyone knows it. Alternatives failed not because they were worse."
+              },
+              {
+                "label": "In money",
+                "example": "Prices like $9.99/19.99/49.99 are Schelling. $8.73 feels weird even when it's mathematically right."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "On one task where you need to coordinate without discussion — ask: «What would a random stranger in my position pick?» Often that's the answer."
+          }
+        }
       ]
     }
   },
-  "levels": [{ "level": 1, "doc_ref": "models/schelling_point" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/schelling_point"
+    }
+  ]
 }
