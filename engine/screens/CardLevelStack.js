@@ -33,7 +33,7 @@ export default function CardLevelStack({
 
   return (
     <View style={{ width, height: '100%' }}>
-      <ErrorBoundary>
+      <ErrorBoundary key={`lvl_${activeIdx}_${current.card.id}`}>
         <CardScreen
           card={current.card}
           locale={locale}

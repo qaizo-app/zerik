@@ -122,14 +122,20 @@ export class ContentService {
     const col = this._col();
     const today = this._todayIso();
 
+    // Deep-карточки (level 2+) не попадают в основной feed — они достижимы
+    // только через onContinueDeeper кнопку из родительской level 1 карточки.
+    const isRoot = (c) => c && c.id && !c.id.endsWith('_deep') && !c.parent_id;
+
     if (col) {
       try {
+        // Берём с запасом, фильтруем deep-карточки клиентом (Firestore where !endsWith
+        // не поддерживает; запрашиваем limit*2 чтобы после фильтра набрать limit).
         let query = col
           .where('release_date', '<=', before || today)
           .orderBy('release_date', 'desc')
-          .limit(limit);
+          .limit(limit * 2);
         const snap = await query.get();
-        const cards = snap.docs.map(d => d.data());
+        const cards = snap.docs.map(d => d.data()).filter(isRoot).slice(0, limit);
 
         if (!before) {
           await setItem(RECENT_CACHE_KEY(this.collectionName), cards.slice(0, RECENT_LIMIT));
@@ -143,7 +149,7 @@ export class ContentService {
     // Offline fallback
     const recent = await getItem(RECENT_CACHE_KEY(this.collectionName), null);
     const source = (Array.isArray(recent) && recent.length > 0) ? recent : this.bundledSeed;
-    const sorted = source.slice().sort((a, b) => (b.release_date || '').localeCompare(a.release_date || ''));
+    const sorted = source.slice().filter(isRoot).sort((a, b) => (b.release_date || '').localeCompare(a.release_date || ''));
     const filtered = before ? sorted.filter(c => c.release_date < before) : sorted.filter(c => c.release_date <= today);
     return filtered.slice(0, limit);
   }
