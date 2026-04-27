@@ -54,43 +54,36 @@ export default function CardViewerScreen({ route, navigation, contentService, lo
 
   return (
     <View style={{ flex: 1, backgroundColor: palette.bg }}>
-      {/* Header-бар: своё пространство для × выше topbar карточки */}
-      <View style={{
-        paddingTop: insets.top + 8,
-        paddingBottom: 8,
-        paddingHorizontal: 16,
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        backgroundColor: palette.bg
-      }}>
-        <Pressable
-          onPress={() => navigation.goBack()}
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 22,
-            backgroundColor: palette.bg_card,
-            borderWidth: 1,
-            borderColor: palette.border_bright,
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-          hitSlop={8}
-        >
-          <Text style={{
-            color: palette.accent,
-            fontFamily: tokens.fonts.mono_medium,
-            fontSize: 22,
-            lineHeight: 22,
-            marginTop: -2
-          }}>×</Text>
-        </Pressable>
-      </View>
-      <View style={{ flex: 1 }}>
-        <ErrorBoundary>
-          <CardScreen card={card} locale={locale} noTopInset />
-        </ErrorBoundary>
-      </View>
+      <ErrorBoundary>
+        <CardScreen card={card} locale={locale} />
+      </ErrorBoundary>
+      {/* Floating × — поверх контента, ниже topbar чтобы не перекрывать 🔥 streak */}
+      <Pressable
+        onPress={() => navigation.goBack()}
+        style={{
+          position: 'absolute',
+          top: insets.top + 56,
+          right: 16,
+          zIndex: 10,
+          width: 36,
+          height: 36,
+          borderRadius: 18,
+          backgroundColor: palette.bg_card,
+          borderWidth: 1,
+          borderColor: palette.border_bright,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        hitSlop={10}
+      >
+        <Text style={{
+          color: palette.accent,
+          fontFamily: tokens.fonts.mono_medium,
+          fontSize: 18,
+          lineHeight: 18,
+          marginTop: -1
+        }}>×</Text>
+      </Pressable>
     </View>
   );
 }
