@@ -8,7 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeContext';
-import { t } from '../i18n';
+import { t, useLanguage } from '../i18n';
 
 const Tab   = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -32,6 +32,7 @@ function tabLabel(label, focused, palette, fonts) {
 export default function AppNavigator({ screens }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
+  useLanguage(); // re-render когда меняется язык — обновляет tabBarLabel
 
   // Android gesture bar — на MIUI/Samsung One UI insets.bottom часто = 0,
   // минимум 65 поднимает текст табов высоко над системной полосой жестов.

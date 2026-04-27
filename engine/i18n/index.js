@@ -4,6 +4,8 @@
 // Не используем react-i18next/intl чтобы не тащить лишний bundle. Когда понадобится
 // плюрализация и сложные форматы — мигрируем на одно из них без боли.
 
+import { useEffect, useState } from 'react';
+
 const _strings = { ru: {}, en: {} };
 let _lang = 'ru';
 const _listeners = new Set();
@@ -19,6 +21,15 @@ export function getLanguage() { return _lang; }
 export function onLanguageChange(fn) {
   _listeners.add(fn);
   return () => _listeners.delete(fn);
+}
+
+// React hook — компоненты subscribed на этот hook пере-рендериваются
+// при смене языка. Используется в AppNavigator/Tab labels чтобы UI
+// обновлялся без выхода-входа в экран.
+export function useLanguage() {
+  const [lang, setLangState] = useState(_lang);
+  useEffect(() => onLanguageChange(setLangState), []);
+  return lang;
 }
 
 export function extendStrings(byLang) {
@@ -65,6 +76,8 @@ extendStrings({
     // levels
     swipe_up_deeper: 'Свайп вверх — глубже в модель',
     level_indicator: 'Уровень {{current}} · {{total}}',
+    level_label: 'Уровень',
+    level_intro: 'Глубже в модель — биология, формализация, исключения',
     // auth
     sign_in: 'Войти', sign_up: 'Регистрация', sign_out: 'Выйти',
     email: 'Email', password: 'Пароль',
@@ -120,6 +133,8 @@ extendStrings({
     join_the_first: 'You\'re #{{n}} to answer',
     swipe_up_deeper: 'Swipe up — deeper into the model',
     level_indicator: 'Level {{current}} of {{total}}',
+    level_label: 'Level',
+    level_intro: 'Deeper into the model — biology, formalization, edge cases',
     sign_in: 'Sign in', sign_up: 'Sign up', sign_out: 'Sign out',
     email: 'Email', password: 'Password',
     continue_with_google: 'Continue with Google',
@@ -152,4 +167,4 @@ extendStrings({
   }
 });
 
-export default { t, setLanguage, getLanguage, extendStrings, onLanguageChange };
+export default { t, setLanguage, getLanguage, extendStrings, onLanguageChange, useLanguage };

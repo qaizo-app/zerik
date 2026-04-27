@@ -32,4 +32,4 @@ export {
 } from './core';
 
 // i18n
-export { default as i18n, t, setLanguage, getLanguage, extendStrings, onLanguageChange } from './i18n';
+export { default as i18n, t, setLanguage, getLanguage, extendStrings, onLanguageChange, useLanguage } from './i18n';
