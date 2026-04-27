@@ -15,8 +15,15 @@ import Anchoring         from './Anchoring';
 import Pareto            from './Pareto';
 import Theseus           from './Theseus';
 import Simpson           from './Simpson';
+import Hindsight         from './Hindsight';
+import Survivorship      from './Survivorship';
+import LossAversion      from './LossAversion';
+import Hanlon            from './Hanlon';
+import SecondOrder       from './SecondOrder';
+import BrainVat          from './BrainVat';
 
 export function registerAppIllustrations() {
+  // Карточки со своей собственной SVG (18 шт)
   registerIllustration('sunk_cost',         SunkCost);
   registerIllustration('occam_razor',       OccamRazor);
   registerIllustration('confirmation_bias', ConfirmationBias);
@@ -29,29 +36,29 @@ export function registerAppIllustrations() {
   registerIllustration('pareto',            Pareto);
   registerIllustration('theseus',           Theseus);
   registerIllustration('simpson',           Simpson);
+  registerIllustration('hindsight',         Hindsight);
+  registerIllustration('survivorship',      Survivorship);
+  registerIllustration('survivorship_bias', Survivorship);
+  registerIllustration('loss_aversion',     LossAversion);
+  registerIllustration('hanlon',            Hanlon);
+  registerIllustration('hanlon_razor',      Hanlon);
+  registerIllustration('second_order',      SecondOrder);
+  registerIllustration('brain_vat',         BrainVat);
+  registerIllustration('brain_in_vat',      BrainVat);
 
-  // Aliases: каждая карточка без собственной SVG получает SVG близкой темы.
-  // Стараемся не давать одну и ту же SVG соседним карточкам в линейке.
-  registerIllustration('hindsight',              DunningKruger);
-  registerIllustration('survivorship',           Simpson);
-  registerIllustration('survivorship_bias',      Simpson);
-  registerIllustration('availability_heuristic', Pareto);
-  registerIllustration('recency_bias',           Anchoring);
-  registerIllustration('loss_aversion',          SunkCost);
-  registerIllustration('hanlon',                 OccamRazor);
-  registerIllustration('hanlon_razor',           OccamRazor);
-  registerIllustration('second_order',           Pareto);
-  registerIllustration('schelling_point',        Theseus);
-  registerIllustration('pyrrhonism',             ConfirmationBias);
-  registerIllustration('goodharts_law',          Anchoring);
-  registerIllustration('dunbar_number',          Simpson);
-  registerIllustration('birthday',               DunningKruger);
+  // Aliases для оставшихся 11 карточек — каждая алиасит на УНИКАЛЬНУЮ SVG,
+  // чтобы ни одна SVG не использовалась 3+ раз и соседние карточки не повторялись.
+  registerIllustration('availability_heuristic', Pareto);          // pareto_principle
+  registerIllustration('recency_bias',           Anchoring);       // anchoring
+  registerIllustration('schelling_point',        Theseus);         // theseus_ship
+  registerIllustration('pyrrhonism',             ConfirmationBias);// confirmation_bias
+  registerIllustration('goodharts_law',          LossAversion);    // loss_aversion (метрика ≈ потеря смысла)
+  registerIllustration('dunbar_number',          Simpson);         // simpsons_paradox
+  registerIllustration('birthday',               DunningKruger);   // dunning_kruger
   registerIllustration('birthday_paradox',       DunningKruger);
-  registerIllustration('zenos_paradox',          Theseus);
-  registerIllustration('banach_tarski',          Inversion);
-  registerIllustration('brain_vat',              Inversion);
-  registerIllustration('brain_in_vat',           Inversion);
-  registerIllustration('platos_cave',            ConfirmationBias);
-  registerIllustration('veil_of_ignorance',      Trolley);
-  registerIllustration('placeholder',            FirstPrinciples);
+  registerIllustration('zenos_paradox',          MontyHall);       // monty_hall (parodox)
+  registerIllustration('banach_tarski',          Inversion);       // inversion (counterintuitive)
+  registerIllustration('platos_cave',            Trolley);         // trolley_problem
+  registerIllustration('veil_of_ignorance',      FirstPrinciples); // first_principles (этика с нуля)
+  registerIllustration('placeholder',            Hanlon);
 }
