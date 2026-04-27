@@ -6,25 +6,35 @@
 // палитры при свайпе между карточками разных категорий.
 
 import { CardThemeScope, useTheme } from '../theme/ThemeContext';
-import { ScrollView, View, Text, StyleSheet } from 'react-native';
+import { Pressable, ScrollView, View, Text, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import BlockRenderer from '../blocks/BlockRenderer';
 import CardBottomBar from '../components/CardBottomBar';
 import { t } from '../i18n';
 
-export default function CardScreen({ card, locale = 'ru', dynamic, isSaved, onSave, onShare, noScroll = false }) {
+export default function CardScreen({
+  card, locale = 'ru', dynamic, isSaved, onSave, onShare,
+  noScroll = false,
+  // CardLevelStack opt-in deeper навигация (Variant A):
+  onContinueDeeper = null,   // если задан — внизу карточки кнопка "↓ Глубже"
+  onBackToParent  = null,    // если задан — сверху ссылка "← К Уровню 1"
+  levelLabel      = null     // строка для шапки если показываем "УРОВЕНЬ 2" и т.п.
+}) {
   return (
     <CardThemeScope category={card?.category} cardId={card?.id}>
       <CardScreenInner
         card={card} locale={locale} dynamic={dynamic}
         isSaved={isSaved} onSave={onSave} onShare={onShare}
         noScroll={noScroll}
+        onContinueDeeper={onContinueDeeper}
+        onBackToParent={onBackToParent}
+        levelLabel={levelLabel}
       />
     </CardThemeScope>
   );
 }
 
-function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll }) {
+function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, onContinueDeeper, onBackToParent, levelLabel }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -57,6 +67,22 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
 
   return (
     <Container {...containerProps}>
+      {onBackToParent ? (
+        <Pressable
+          onPress={onBackToParent}
+          style={{ paddingHorizontal: 24, paddingTop: 12, paddingBottom: 8 }}
+          hitSlop={12}
+        >
+          <Text style={{
+            fontFamily: tokens.fonts.mono,
+            fontSize: 11,
+            letterSpacing: 1.6,
+            color: palette.accent,
+            textTransform: 'uppercase'
+          }}>← {t('back_to_level_1')}</Text>
+        </Pressable>
+      ) : null}
+
       <View style={[styles.topbar, {
         borderBottomColor: palette.border,
         paddingHorizontal: 24
@@ -68,7 +94,7 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
           color: palette.accent,
           textTransform: 'uppercase'
         }}>
-          {t('issue_label') + ' ' + String(card.release_number).padStart(3, '0')}
+          {levelLabel || t('issue_label') + ' ' + String(card.release_number).padStart(3, '0')}
         </Text>
         <Text style={{
           fontFamily: tokens.fonts.mono,
@@ -92,12 +118,46 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
 
       <BlockRenderer blocks={blocks} card={card} locale={locale} dynamic={dynamic} />
 
+      {onContinueDeeper ? (
+        <Pressable
+          onPress={onContinueDeeper}
+          style={{
+            marginHorizontal: 24,
+            marginTop: 32,
+            marginBottom: 12,
+            paddingVertical: 18,
+            paddingHorizontal: 20,
+            borderRadius: tokens.radius.tight,
+            borderWidth: 1,
+            borderColor: palette.accent,
+            backgroundColor: palette.bg_card,
+            alignItems: 'center'
+          }}
+        >
+          <Text style={{
+            fontFamily: tokens.fonts.mono_medium,
+            fontSize: 11,
+            letterSpacing: 2,
+            color: palette.accent,
+            textTransform: 'uppercase',
+            marginBottom: 6
+          }}>↓ {t('go_deeper')}</Text>
+          <Text style={{
+            fontFamily: tokens.fonts.serif_italic,
+            fontStyle: 'italic',
+            fontSize: 13,
+            color: palette.text_dim,
+            textAlign: 'center'
+          }}>{t('go_deeper_hint')}</Text>
+        </Pressable>
+      ) : null}
+
       <CardBottomBar
         card={card}
         isSaved={isSaved}
         onSavePress={onSave}
         onSharePress={onShare}
-        showSwipeUpHint={Array.isArray(card.levels) && card.levels.length > 1}
+        showSwipeUpHint={false}
       />
     </Container>
   );
