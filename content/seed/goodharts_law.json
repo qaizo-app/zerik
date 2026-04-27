@@ -138,7 +138,7 @@
         {
           "type": "hook",
           "props": {
-            "text": "In colonial India they wanted fewer cobras — bounty per dead snake. A year later there were more cobras: people bred them to kill. The metric «dead cobras» stopped reflecting reality the moment it became the target…"
+            "text": "In colonial India they wanted fewer cobras — bounty per dead snake. A year later there were more cobras: people bred them to kill. The metric “dead cobras” stopped reflecting reality the moment it became the target…"
           }
         },
         {
@@ -165,7 +165,7 @@
           "props": {
             "drop_cap": true,
             "paragraphs": [
-              "Charles Goodhart wrote in 1975: {{em:«When a measure becomes a target, it ceases to be a good measure»}}. The metric used to reflect something real — it became the optimization target — the link to reality snapped.",
+              "Charles Goodhart wrote in 1975: {{em:“When a measure becomes a target, it ceases to be a good measure”}}. The metric used to reflect something real — it became the optimization target — the link to reality snapped.",
               "It works because every metric is a simplification. Reality is messier. While the metric is a side-effect, it correlates. The moment it's the target, people start gaming it, abandoning the underlying reality.",
               "British officials in India weren't lying about the goal. The system told them: more dead cobras = higher pay. They evolved optimal behavior for the system."
             ]
@@ -182,7 +182,7 @@
           "type": "scenario",
           "props": {
             "tag": "Test yourself",
-            "question": "Support team is bonused on «response time». 3 months in, customers complain quality dropped. What happened?",
+            "question": "Support team is bonused on “response time.” 3 months in, customers complain quality dropped. What happened?",
             "setup": null,
             "options": [
               {
@@ -199,8 +199,8 @@
             "reveal": {
               "source_note": "Based on {{votes_count}} responses",
               "big_stat_text": "see Goodhart",
-              "explanation": "«Response time» is a proxy for «good service». Once it's the target, agents reply «thanks, we'll check» and close the ticket — timer reset, bonus earned. Quality drops out of the reward system.",
-              "wisdom": "W. Edwards Deming: {{em:«If you can measure it, you can manage it. If you can't measure it, you still manage it — you just don't know what»}}.",
+              "explanation": "“Response time” is a proxy for “good service.” Once it's the target, agents reply “thanks, we'll check” and close the ticket — timer reset, bonus earned. Quality drops out of the reward system.",
+              "wisdom": "W. Edwards Deming: {{em:“If you can measure it, you can manage it. If you can't measure it, you still manage it — you just don't know what”}}.",
               "hardcoded_stats": null
             }
           }
@@ -209,7 +209,7 @@
           "type": "trap",
           "props": {
             "label": "The trap",
-            "text": "Goodhart doesn't mean «don't use metrics». You need metrics. It means: {{em:don't tie strong rewards to metrics}}, or make metrics very close to the real goal (hard, but possible)."
+            "text": "Goodhart doesn't mean “don't use metrics.” You need metrics. It means: {{em:don't tie strong rewards to metrics}}, or make metrics very close to the real goal (hard, but possible)."
           }
         },
         {
@@ -219,15 +219,15 @@
             "items": [
               {
                 "label": "At work",
-                "example": "KPI «lines of code» → developer writes lots of bad code. The best code is fewer lines."
+                "example": "KPI “lines of code” → developer writes lots of bad code. The best code is fewer lines."
               },
               {
                 "label": "In education",
-                "example": "Schools graded by average score push out weak students. The goal «educate everyone» loses to the metric."
+                "example": "Schools graded by average score push out weak students. The goal “educate everyone” loses to the metric."
               },
               {
                 "label": "In social media",
-                "example": "Algorithm optimizing «time in app» → promotes outrage. Engagement beats usefulness."
+                "example": "Algorithm optimizing “time in app” → promotes outrage. Engagement beats usefulness."
               }
             ]
           }
@@ -236,7 +236,7 @@
           "type": "action_today",
           "props": {
             "label": "Action for today",
-            "text": "Pick one metric you're judged by — yourself or your team. Ask: «What could I do to improve this metric while hurting the real goal?» If an answer exists, Goodhart is alive."
+            "text": "Pick one metric you're judged by — yourself or your team. Ask: “What could I do to improve this metric while hurting the real goal?” If an answer exists, Goodhart is alive."
           }
         }
       ]

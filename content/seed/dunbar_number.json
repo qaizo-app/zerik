@@ -138,7 +138,7 @@
         {
           "type": "hook",
           "props": {
-            "text": "You have 1000 «friends» on Facebook. If you ended up in hospital tomorrow — how many would bring soup? Anthropologist Robin Dunbar studied primate neocortex and found the number: 150…"
+            "text": "You have 1000 “friends” on Facebook. If you ended up in hospital tomorrow — how many would bring soup? Anthropologist Robin Dunbar studied primate neocortex and found the number: 150…"
           }
         },
         {
@@ -166,7 +166,7 @@
             "drop_cap": true,
             "paragraphs": [
               "Robin Dunbar compared primate neocortex size to social group size. Found a formula. Applied it to humans — got 150. {{em:That's the max number of people we can maintain stable relationships with}}.",
-              "Not just «know» — but {{em:know how they relate to us}}. The history of the group, the context, who owes what to whom. Past 150, the brain physically can't hold it. They become «acquaintances», not «one of us».",
+              "Not just “know” — but {{em:know how they relate to us}}. The history of the group, the context, who owes what to whom. Past 150, the brain physically can't hold it. They become “acquaintances,” not “one of us.”",
               "Modern tribes of about 150, Roman centuries, corporate teams that work at 150 — the number recurs. Outlook, Gore-Tex, Spotify keep product teams under 150. Beyond — culture leaks."
             ]
           }
@@ -192,15 +192,15 @@
               },
               {
                 "id": "phase",
-                "text": "A phase shift — «family» dies, structure needed",
+                "text": "A phase shift — “family” dies, structure needed",
                 "is_wiser": true
               }
             ],
             "reveal": {
               "source_note": "Based on {{votes_count}} responses",
               "big_stat_text": "see the shift",
-              "explanation": "Below 150 everyone knows everyone — decisions happen in hallways. Above 150 that's gone. Need processes, documentation, formal meetings. Not just «more people» — different company. Many founders lose their company at this transition, missing that the culture worked precisely because of size.",
-              "wisdom": "Bill Gore (Gore-Tex): {{em:«When a plant hits 150, we open a new one. Don't scale — clone»}}.",
+              "explanation": "Below 150 everyone knows everyone — decisions happen in hallways. Above 150 that's gone. Need processes, documentation, formal meetings. Not just “more people” — different company. Many founders lose their company at this transition, missing that the culture worked precisely because of size.",
+              "wisdom": "Bill Gore (Gore-Tex): {{em:“When a plant hits 150, we open a new one. Don't scale — clone”}}.",
               "hardcoded_stats": null
             }
           }
@@ -219,11 +219,11 @@
             "items": [
               {
                 "label": "In teams",
-                "example": "Up to 150 — horizontal communication. Past that — layers needed. Not «bureaucracy» — neurobiology."
+                "example": "Up to 150 — horizontal communication. Past that — layers needed. Not “bureaucracy” — neurobiology."
               },
               {
                 "label": "On social media",
-                "example": "Your 1000 «friends» are a passive audience. Real relationships — the 30-50 you actually message."
+                "example": "Your 1000 “friends” are a passive audience. Real relationships — the 30-50 you actually message."
               },
               {
                 "label": "In society",

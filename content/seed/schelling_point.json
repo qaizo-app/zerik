@@ -131,7 +131,7 @@
         {
           "type": "hook",
           "props": {
-            "text": "Schelling asked students: «You and a friend must meet tomorrow in New York. No place, no time agreed, no contact. Where do you go?» The most common answer — Grand Central, at noon. Nobody coordinated — they all thought the same…"
+            "text": "Schelling asked students: “You and a friend must meet tomorrow in New York. No place, no time agreed, no contact. Where do you go?” The most common answer — Grand Central, at noon. Nobody coordinated — they all thought the same…"
           }
         },
         {
@@ -158,7 +158,7 @@
           "props": {
             "drop_cap": true,
             "paragraphs": [
-              "Thomas Schelling won a Nobel for this idea: {{em:when coordination is impossible, people converge on the obvious point}}. Not the «logically best» one — the one others will pick too. This is the foundation of coordination without communication.",
+              "Thomas Schelling won a Nobel for this idea: {{em:when coordination is impossible, people converge on the obvious point}}. Not the “logically best” one — the one others will pick too. This is the foundation of coordination without communication.",
               "Noon, because it's a round number. Grand Central, because it's the main station. These choices aren't optimal — they're {{em:obvious}}. And that's why they work.",
               "Money is a Schelling point. Nobody chose the dollar as the standard — it became one because everyone believed others would accept it. Bitcoin is trying to become a new Schelling point — still uncertain."
             ]
@@ -185,15 +185,15 @@
               },
               {
                 "id": "schelling",
-                "text": "$9.99 — that's the «standard» SaaS subscription price",
+                "text": "$9.99 — that's the “standard” SaaS subscription price",
                 "is_wiser": true
               }
             ],
             "reveal": {
               "source_note": "Based on {{votes_count}} responses",
               "big_stat_text": "miss Schelling",
-              "explanation": "$9.99 is the SaaS-subscription Schelling point. Not optimal for every product — some need $4.99, others $19.99. But «9.99» is what users and market converged on. Departing from it requires justification: why is your product different? Without it, you lose trust.",
-              "wisdom": "Schelling: {{em:«The strongest institutions are those where the obvious and the optimal coincide»}}.",
+              "explanation": "$9.99 is the SaaS-subscription Schelling point. Not optimal for every product — some need $4.99, others $19.99. But “9.99” is what users and market converged on. Departing from it requires justification: why is your product different? Without it, you lose trust.",
+              "wisdom": "Schelling: {{em:“The strongest institutions are those where the obvious and the optimal coincide”}}.",
               "hardcoded_stats": null
             }
           }
@@ -205,7 +205,7 @@
             "items": [
               {
                 "label": "In negotiation",
-                "example": "Splitting 50/50 is Schelling. Not «fair» (it ignores contributions), but stable because both grasp it instantly."
+                "example": "Splitting 50/50 is Schelling. Not “fair” (it ignores contributions), but stable because both grasp it instantly."
               },
               {
                 "label": "In standards",
@@ -222,7 +222,7 @@
           "type": "action_today",
           "props": {
             "label": "Action for today",
-            "text": "On one task where you need to coordinate without discussion — ask: «What would a random stranger in my position pick?» Often that's the answer."
+            "text": "On one task where you need to coordinate without discussion — ask: “What would a random stranger in my position pick?” Often that's the answer."
           }
         }
       ]

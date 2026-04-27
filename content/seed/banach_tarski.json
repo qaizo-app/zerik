@@ -144,7 +144,7 @@
             "drop_cap": true,
             "paragraphs": [
               "This is a proven theorem, not a riddle. The ball gets cut into 5 pieces, the pieces are rotated and translated — and you get two full balls of the same radius. Volume doubled from nothing. The conservation law {{em:isn't violated}} — it applies to measurable sets, and the pieces in this cut {{em:aren't measurable}}.",
-              "The key is the Axiom of Choice — the math claim that from infinitely many sets you can «pick» one element from each. Sounds innocent. Produces oddities like Banach-Tarski.",
+              "The key is the Axiom of Choice — the math claim that from infinitely many sets you can “pick” one element from each. Sounds innocent. Produces oddities like Banach-Tarski.",
               "This paradox isn't a problem — it's {{em:proof}} that our intuition about infinity doesn't match math. Volume in the physical world doesn't grow — because the physical world is finite and measurable. The paradox lives only in pure math."
             ]
           }
@@ -156,7 +156,7 @@
             "question": "If you can mathematically double a ball — why can't I double an orange at home?",
             "hint": "What separates a mathematical ball from a physical orange?",
             "user_prompt": "Show me the answer",
-            "reveal_text": "A mathematical ball is an uncountable infinity of points, cut into sets that have no volume (non-measurable). A physical orange consists of a finite number of atoms. You can't «cut atoms into sets with a fractional number of atoms». The paradox only works in an idealized world where matter is infinitely divisible. Our world is discrete.",
+            "reveal_text": "A mathematical ball is an uncountable infinity of points, cut into sets that have no volume (non-measurable). A physical orange consists of a finite number of atoms. You can't “cut atoms into sets with a fractional number of atoms.” The paradox only works in an idealized world where matter is infinitely divisible. Our world is discrete.",
             "formula": "B = A₁ ∪ A₂ ∪ A₃ ∪ A₄ ∪ A₅\nA₁ ∪ A₂ ⟶ B (via rotation)\nA₃ ∪ A₄ ∪ A₅ ⟶ B (via rotation)",
             "intuition_trap": "Intuition treats volume as fundamental. In pure math, volume is a measurement operation — and it isn't defined for all sets. {{em:Not all things have volume in the strict sense}}."
           }
@@ -179,7 +179,7 @@
               },
               {
                 "label": "About math",
-                "example": "Realizing not everything in math is «real» physically — frees you from naive realism. Math is a tool, not a description."
+                "example": "Realizing not everything in math is “real” physically — frees you from naive realism. Math is a tool, not a description."
               },
               {
                 "label": "About axioms",
@@ -192,7 +192,7 @@
           "type": "action_today",
           "props": {
             "label": "Action for today",
-            "text": "Take one «obvious» belief about the world (something can't be doubled from nothing, time goes forward, etc.). Ask: which axioms is it built on? What if the axioms were different?"
+            "text": "Take one “obvious” belief about the world (something can't be doubled from nothing, time goes forward, etc.). Ask: which axioms is it built on? What if the axioms were different?"
           }
         }
       ]

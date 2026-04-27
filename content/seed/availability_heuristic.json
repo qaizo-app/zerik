@@ -159,7 +159,7 @@
             "drop_cap": true,
             "paragraphs": [
               "Tversky and Kahneman showed in 1973: to estimate probability, the brain doesn't count statistics. It asks itself — {{em:how easily can I recall an example?}} Easy means common. Hard means rare.",
-              "It fails on simple cases («Which is more common as the first letter: K or R?» — the brain recalls K-words faster, most say «K». Actually R is three times more common as a starting letter). And it warps risk assessment dramatically.",
+              "It fails on simple cases (“Which is more common as the first letter: K or R?” — the brain recalls K-words faster, most say “K.” Actually R is three times more common as a starting letter). And it warps risk assessment dramatically.",
               "Media amplifies the effect. Plane crashes make news; car accidents don't. Murders make news; suicides rarely. Result: people fear what's vivid in memory, not what's actually common."
             ]
           }
@@ -193,7 +193,7 @@
               "source_note": "Based on {{votes_count}} responses · CDC 2014",
               "big_stat_text": "pick sharks",
               "explanation": "Cows kill about 20 people a year in the US. Sharks — about 1. But Jaws and the news make sharks vivid. A cow crushing a farmer doesn't make headlines.",
-              "wisdom": "Kahneman: {{em:«We don't assess risk — we remember dramas»}}.",
+              "wisdom": "Kahneman: {{em:“We don't assess risk — we remember dramas”}}.",
               "hardcoded_stats": null
             }
           }
@@ -209,7 +209,7 @@
               },
               {
                 "label": "At work",
-                "example": "Remember one toxic client and conclude «all clients are awful». One vivid, the rest forgotten."
+                "example": "Remember one toxic client and conclude “all clients are awful.” One vivid, the rest forgotten."
               },
               {
                 "label": "In money",

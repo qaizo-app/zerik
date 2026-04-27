@@ -3,7 +3,11 @@
   "category": "mental_models",
   "release_number": 10,
   "release_date": "2026-04-28",
-  "tags": ["productivity", "vilfredo_pareto", "80_20"],
+  "tags": [
+    "productivity",
+    "vilfredo_pareto",
+    "80_20"
+  ],
   "difficulty": 2,
   "reading_time_sec": 170,
   "theme_override": null,
@@ -11,110 +15,237 @@
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Ментальная модель · №4" } },
-        { "type": "hook", "props": { "text": "Вильфредо Парето заметил: 80% земли в Италии принадлежит 20% людей. Потом то же — у других стран. Потом — в его огороде: 20% стручков давали 80% урожая. Слишком красиво, чтобы быть совпадением…" } },
-        { "type": "title", "props": { "text": "Принцип {{accent:80/20}}" } },
-        { "type": "subtitle", "props": { "text": "Pareto Principle · V. Pareto · 1896" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/pareto.svg", "alt": "Маленький столбик 20% производит большой столбик 80% результата" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Парето сформулировал это сухо: {{em:в любом распределении небольшая часть входов даёт большую часть выходов}}. С тех пор «80/20» нашли везде — в продажах (20% клиентов = 80% выручки), в багах (20% багов = 80% жалоб), в книгах (20% страниц = 80% полезной мысли).",
-            "Соотношение не точно 80/20 — иногда 90/10, иногда 70/30. Главное — оно асимметричное. Это значит: {{em:не все часы равны, не все клиенты равны, не все задачи равны}}. Большинство — шум; меньшинство — почти весь результат.",
-            "Практическое следствие: спросить «какие 20% даёт мне 80%?» — и сосредоточиться на них. Остальное либо делегировать, либо отказаться вообще."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Принцип",
-          "text": "Большая часть результата приходит от маленькой части усилий. Не делать всё хорошо — делать важное лучше всех."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Проверь себя",
-          "question": "У вас в продукте 50 фич, и время заканчивается. Как расставить приоритеты?",
-          "setup": null,
-          "options": [
-            { "id": "spread", "text": "Распределить равномерно — каждая фича получит немного", "is_wiser": false },
-            { "id": "focus",  "text": "Найти 10 фич, которые дают 80% ценности — отполировать их",  "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "По данным {{votes_count}} ответов",
-            "big_stat_text": "распределяют равномерно",
-            "explanation": "«Равномерно» — комфортный выбор: никто не обижен, всё «как-то готово». Но 40 средненьких фич хуже чем 10 отличных. 10 отличных делают продукт «вау». 50 средненьких — «нормально», что синоним «забыто».",
-            "wisdom": "Стив Джобс: {{em:«Концентрация значит сказать «нет» сотне хороших идей. Тщательно выбирать»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Ментальная модель · №4"
           }
-        } },
-        { "type": "trap", "props": {
-          "label": "Ловушка",
-          "text": "80/20 — описание, не закон природы. Иногда долгий хвост — это и есть продукт (длинный нишевый ассортимент Amazon). Не применяй вслепую: сначала спроси, действительно ли в этой задаче асимметрия."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где вы встретите это сегодня",
-          "items": [
-            { "label": "В работе",     "example": "20% задач недели определяют 80% результата месяца. Найдите их в понедельник, а не в пятницу." },
-            { "label": "В отношениях","example": "20% разговоров с партнёром — глубокие, остальные — бытовые. Качество отношений зависит от качества первых." },
-            { "label": "В обучении", "example": "В новом языке 1000 самых частых слов покрывают 90% речи. Учить 1000 эффективнее чем 5000." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Действие на сегодня",
-          "text": "Список ваших 5 главных задач этого дня. Какая из них одна — даст больший результат, чем остальные четыре вместе? Сделайте её. Остальные подождут."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Вильфредо Парето заметил: 80% земли в Италии принадлежит 20% людей. Потом то же — у других стран. Потом — в его огороде: 20% стручков давали 80% урожая. Слишком красиво, чтобы быть совпадением…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Принцип {{accent:80/20}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Pareto Principle · V. Pareto · 1896"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/pareto.svg",
+            "alt": "Маленький столбик 20% производит большой столбик 80% результата"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Парето сформулировал это сухо: {{em:в любом распределении небольшая часть входов даёт большую часть выходов}}. С тех пор «80/20» нашли везде — в продажах (20% клиентов = 80% выручки), в багах (20% багов = 80% жалоб), в книгах (20% страниц = 80% полезной мысли).",
+              "Соотношение не точно 80/20 — иногда 90/10, иногда 70/30. Главное — оно асимметричное. Это значит: {{em:не все часы равны, не все клиенты равны, не все задачи равны}}. Большинство — шум; меньшинство — почти весь результат.",
+              "Практическое следствие: спросить «какие 20% даёт мне 80%?» — и сосредоточиться на них. Остальное либо делегировать, либо отказаться вообще."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Большая часть результата приходит от маленькой части усилий. Не делать всё хорошо — делать важное лучше всех."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "У вас в продукте 50 фич, и время заканчивается. Как расставить приоритеты?",
+            "setup": null,
+            "options": [
+              {
+                "id": "spread",
+                "text": "Распределить равномерно — каждая фича получит немного",
+                "is_wiser": false
+              },
+              {
+                "id": "focus",
+                "text": "Найти 10 фич, которые дают 80% ценности — отполировать их",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "распределяют равномерно",
+              "explanation": "«Равномерно» — комфортный выбор: никто не обижен, всё «как-то готово». Но 40 средненьких фич хуже чем 10 отличных. 10 отличных делают продукт «вау». 50 средненьких — «нормально», что синоним «забыто».",
+              "wisdom": "Стив Джобс: {{em:«Концентрация значит сказать «нет» сотне хороших идей. Тщательно выбирать»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "80/20 — описание, не закон природы. Иногда долгий хвост — это и есть продукт (длинный нишевый ассортимент Amazon). Не применяй вслепую: сначала спроси, действительно ли в этой задаче асимметрия."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В работе",
+                "example": "20% задач недели определяют 80% результата месяца. Найдите их в понедельник, а не в пятницу."
+              },
+              {
+                "label": "В отношениях",
+                "example": "20% разговоров с партнёром — глубокие, остальные — бытовые. Качество отношений зависит от качества первых."
+              },
+              {
+                "label": "В обучении",
+                "example": "В новом языке 1000 самых частых слов покрывают 90% речи. Учить 1000 эффективнее чем 5000."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Список ваших 5 главных задач этого дня. Какая из них одна — даст больший результат, чем остальные четыре вместе? Сделайте её. Остальные подождут."
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Mental Model · №4" } },
-        { "type": "hook", "props": { "text": "Vilfredo Pareto noticed 80% of Italy's land belonged to 20% of people. Then he saw it in other countries. Then in his own garden — 20% of pea pods produced 80% of the harvest. Too clean to be coincidence…" } },
-        { "type": "title", "props": { "text": "The {{accent:80/20}} Principle" } },
-        { "type": "subtitle", "props": { "text": "Pareto Principle · V. Pareto · 1896" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/pareto.svg", "alt": "A small bar labeled 20% produces a large bar labeled 80% output" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Pareto put it dryly: {{em:in any distribution, a small portion of inputs produces most of the outputs}}. Since then «80/20» has been spotted everywhere — sales (20% of customers = 80% of revenue), bugs (20% of bugs = 80% of complaints), books (20% of pages = 80% of the useful thought).",
-            "The ratio isn't exactly 80/20 — sometimes 90/10, sometimes 70/30. What matters is the asymmetry. Which means: {{em:not all hours are equal, not all customers are equal, not all tasks are equal}}. Most is noise; a minority drives almost everything.",
-            "The practical move: ask «which 20% gets me 80%?» and concentrate there. Delegate or drop the rest."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Principle",
-          "text": "Most of the result comes from a small portion of the effort. Don't do everything well — do what matters better than anyone else."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Test yourself",
-          "question": "Your product has 50 features and time is running out. How do you prioritize?",
-          "setup": null,
-          "options": [
-            { "id": "spread", "text": "Spread evenly — every feature gets a bit",                  "is_wiser": false },
-            { "id": "focus",  "text": "Find the 10 features that drive 80% of value — polish those", "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "Based on {{votes_count}} responses",
-            "big_stat_text": "spread evenly",
-            "explanation": "«Spread evenly» feels safe — nobody's offended, everything is «kind of done». But 40 mediocre features are worse than 10 great ones. 10 great makes a product «wow». 50 mediocre makes it «fine», which is shorthand for «forgotten».",
-            "wisdom": "Steve Jobs: {{em:«Focus means saying no to a hundred good ideas. Choose carefully»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Mental Model · №4"
           }
-        } },
-        { "type": "trap", "props": {
-          "label": "The trap",
-          "text": "80/20 is a description, not a law of nature. Sometimes the long tail IS the product (Amazon's deep niche catalog). Don't apply it blindly — first check whether this problem is actually asymmetric."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where you'll meet it today",
-          "items": [
-            { "label": "At work",          "example": "20% of this week's tasks drive 80% of the month's outcome. Find them on Monday, not Friday." },
-            { "label": "In relationships", "example": "20% of conversations with your partner are the deep ones; the rest is logistics. Relationship quality lives in the first 20%." },
-            { "label": "In learning",      "example": "In a new language, the 1000 most frequent words cover 90% of speech. Learning 1000 beats learning 5000." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Action for today",
-          "text": "List your top 5 tasks for today. Which single one would produce more output than the other four combined? Do that one. The rest can wait."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Vilfredo Pareto noticed 80% of Italy's land belonged to 20% of people. Then he saw it in other countries. Then in his own garden — 20% of pea pods produced 80% of the harvest. Too clean to be coincidence…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "The {{accent:80/20}} Principle"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Pareto Principle · V. Pareto · 1896"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/pareto.svg",
+            "alt": "A small bar labeled 20% produces a large bar labeled 80% output"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Pareto put it dryly: {{em:in any distribution, a small portion of inputs produces most of the outputs}}. Since then “80/20” has been spotted everywhere — sales (20% of customers = 80% of revenue), bugs (20% of bugs = 80% of complaints), books (20% of pages = 80% of the useful thought).",
+              "The ratio isn't exactly 80/20 — sometimes 90/10, sometimes 70/30. What matters is the asymmetry. Which means: {{em:not all hours are equal, not all customers are equal, not all tasks are equal}}. Most is noise; a minority drives almost everything.",
+              "The practical move: ask “which 20% gets me 80%?” and concentrate there. Delegate or drop the rest."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Most of the result comes from a small portion of the effort. Don't do everything well — do what matters better than anyone else."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your product has 50 features and time is running out. How do you prioritize?",
+            "setup": null,
+            "options": [
+              {
+                "id": "spread",
+                "text": "Spread evenly — every feature gets a bit",
+                "is_wiser": false
+              },
+              {
+                "id": "focus",
+                "text": "Find the 10 features that drive 80% of value — polish those",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "spread evenly",
+              "explanation": "“Spread evenly” feels safe — nobody's offended, everything is “kind of done.” But 40 mediocre features are worse than 10 great ones. 10 great makes a product “wow.” 50 mediocre makes it “fine,” which is shorthand for “forgotten.”",
+              "wisdom": "Steve Jobs: {{em:“Focus means saying no to a hundred good ideas. Choose carefully”}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "80/20 is a description, not a law of nature. Sometimes the long tail IS the product (Amazon's deep niche catalog). Don't apply it blindly — first check whether this problem is actually asymmetric."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              {
+                "label": "At work",
+                "example": "20% of this week's tasks drive 80% of the month's outcome. Find them on Monday, not Friday."
+              },
+              {
+                "label": "In relationships",
+                "example": "20% of conversations with your partner are the deep ones; the rest is logistics. Relationship quality lives in the first 20%."
+              },
+              {
+                "label": "In learning",
+                "example": "In a new language, the 1000 most frequent words cover 90% of speech. Learning 1000 beats learning 5000."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "List your top 5 tasks for today. Which single one would produce more output than the other four combined? Do that one. The rest can wait."
+          }
+        }
       ]
     }
   },
-  "levels": [{ "level": 1, "doc_ref": "models/pareto_principle" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/pareto_principle"
+    }
+  ]
 }

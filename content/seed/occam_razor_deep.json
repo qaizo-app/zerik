@@ -124,9 +124,9 @@
           "props": {
             "drop_cap": true,
             "paragraphs": [
-              "Occam's Razor isn't «always pick simple». It's about {{em:the optimal trade-off between model simplicity and fit to data}}. Information theory formalized this as Minimum Description Length (MDL).",
-              "The MDL idea: the best hypothesis is the one that gives the shortest total description of the data — counting both the hypothesis itself and the «exceptions» it doesn't explain. Too simple a model misses many exceptions → long description. Too complex — fits everything but is itself long. The optimum is in between.",
-              "The razor misleads when: data is sparse (any «simple» model fits), exceptions are cheap (complexity isn't penalized enough), or when prediction matters more than description."
+              "Occam's Razor isn't “always pick simple.” It's about {{em:the optimal trade-off between model simplicity and fit to data}}. Information theory formalized this as Minimum Description Length (MDL).",
+              "The MDL idea: the best hypothesis is the one that gives the shortest total description of the data — counting both the hypothesis itself and the “exceptions” it doesn't explain. Too simple a model misses many exceptions → long description. Too complex — fits everything but is itself long. The optimum is in between.",
+              "The razor misleads when: data is sparse (any “simple” model fits), exceptions are cheap (complexity isn't penalized enough), or when prediction matters more than description."
             ]
           }
         },
@@ -141,7 +141,7 @@
           "type": "trap",
           "props": {
             "label": "Where the razor cuts wrong",
-            "text": "Early-COVID epidemiologists chose the «simple» model: one virus, one transmission path. Reality was messier (mutations, asymptomatic carriers). The razor was applied too soon — not enough data yet. {{em:Simplicity without enough data is a guess, not a conclusion}}."
+            "text": "Early-COVID epidemiologists chose the “simple” model: one virus, one transmission path. Reality was messier (mutations, asymptomatic carriers). The razor was applied too soon — not enough data yet. {{em:Simplicity without enough data is a guess, not a conclusion}}."
           }
         },
         {
@@ -155,11 +155,11 @@
               },
               {
                 "label": "In diagnosis",
-                "example": "«Hoofbeats = horses» works only if you have 1000 patients and 999 are horses. With 5 patients — you need more tests."
+                "example": "“Hoofbeats = horses” works only if you have 1000 patients and 999 are horses. With 5 patients — you need more tests."
               },
               {
                 "label": "In science",
-                "example": "Ptolemy's epicycles were «simple» for 1500 years, until enough data accumulated that elliptical orbits (Kepler) became the simpler model."
+                "example": "Ptolemy's epicycles were “simple” for 1500 years, until enough data accumulated that elliptical orbits (Kepler) became the simpler model."
               }
             ]
           }

@@ -3,7 +3,11 @@
   "category": "cognitive_biases",
   "release_number": 15,
   "release_date": "2026-04-22",
-  "tags": ["memory", "fischhoff", "narrative"],
+  "tags": [
+    "memory",
+    "fischhoff",
+    "narrative"
+  ],
   "difficulty": 2,
   "reading_time_sec": 165,
   "theme_override": null,
@@ -11,102 +15,223 @@
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Когнитивное искажение · №6" } },
-        { "type": "hook", "props": { "text": "После каждого финансового кризиса аналитики дают комментарии: «Это было очевидно — пузырь на рынке, перегрев, всё указывало». До кризиса те же аналитики писали: «Рынок здоров, рост обоснован»…" } },
-        { "type": "title", "props": { "text": "Эффект {{accent:знал-я-это}}" } },
-        { "type": "subtitle", "props": { "text": "Hindsight Bias · B. Fischhoff · 1975" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/hindsight.svg", "alt": "Густой туман до события, после события — прямая дорожка от A к B как будто была ясна с самого начала" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Барух Фишхофф в 1975-м доказал: после того как событие случилось, мы помним свои предсказания искажённо. Если оно произошло — мы говорим «я так и знал». Если нет — «я и не верил». Память подгоняется под результат, а не наоборот.",
-            "В эксперименте Фишхофф спрашивал людей до и после визита Никсона в Китай: оцените вероятность 15 разных результатов. После визита те же люди вспоминали свои оценки {{em:совершенно неправильно}} — те результаты что произошли, они «всегда считали высоковероятными».",
-            "Это критично для оценки решений. Принимать решения нужно с информацией доступной {{em:в момент принятия}}, а не задним числом. «Они должны были видеть кризис» — это hindsight, а не справедливая оценка."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Принцип",
-          "text": "После события всё кажется очевидным. Это иллюзия — память переписывает прошлое. Оценивать решения надо по доступной на момент информации, не по результату."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Проверь себя",
-          "question": "Команда продакта запустила фичу — провалилась. На ретро вы говорите...",
-          "setup": null,
-          "options": [
-            { "id": "obvious",  "text": "«Это было очевидно — мы должны были увидеть»",      "is_wiser": false },
-            { "id": "process",  "text": "«Какая информация была доступна на момент решения?»","is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "По данным {{votes_count}} ответов",
-            "big_stat_text": "видят «очевидное»",
-            "explanation": "«Это было очевидно» — иллюзия, искажающая ретро. Если в момент решения 8 из 10 экспертов считали запуск удачным — провал не доказывает что было очевидно. Лучший вопрос: «как процесс может выявить это раньше в следующий раз».",
-            "wisdom": "Аннабелла Рейнолдс: {{em:«Хорошие решения иногда дают плохие результаты. Не путай оценку процесса с оценкой исхода»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Когнитивное искажение · №6"
           }
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где это всплывает",
-          "items": [
-            { "label": "В постмортемах",   "example": "«Они должны были увидеть» — да, после факта. До факта — было десять равновероятных сценариев." },
-            { "label": "В отношениях",   "example": "«Я знала что он не годится» — нет, не знала. Иначе бы и не была с ним." },
-            { "label": "В инвестициях", "example": "«Очевидно надо было покупать в 2020» — мнение появилось в 2024, не в 2020." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Действие на сегодня",
-          "text": "Перед важным решением запишите свои предсказания — конкретные, с числами. Через месяц сравните: память не сможет переписать письменные данные."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "После каждого финансового кризиса аналитики дают комментарии: «Это было очевидно — пузырь на рынке, перегрев, всё указывало». До кризиса те же аналитики писали: «Рынок здоров, рост обоснован»…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Эффект {{accent:знал-я-это}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Hindsight Bias · B. Fischhoff · 1975"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/hindsight.svg",
+            "alt": "Густой туман до события, после события — прямая дорожка от A к B как будто была ясна с самого начала"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Барух Фишхофф в 1975-м доказал: после того как событие случилось, мы помним свои предсказания искажённо. Если оно произошло — мы говорим «я так и знал». Если нет — «я и не верил». Память подгоняется под результат, а не наоборот.",
+              "В эксперименте Фишхофф спрашивал людей до и после визита Никсона в Китай: оцените вероятность 15 разных результатов. После визита те же люди вспоминали свои оценки {{em:совершенно неправильно}} — те результаты что произошли, они «всегда считали высоковероятными».",
+              "Это критично для оценки решений. Принимать решения нужно с информацией доступной {{em:в момент принятия}}, а не задним числом. «Они должны были видеть кризис» — это hindsight, а не справедливая оценка."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "После события всё кажется очевидным. Это иллюзия — память переписывает прошлое. Оценивать решения надо по доступной на момент информации, не по результату."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Команда продакта запустила фичу — провалилась. На ретро вы говорите...",
+            "setup": null,
+            "options": [
+              {
+                "id": "obvious",
+                "text": "«Это было очевидно — мы должны были увидеть»",
+                "is_wiser": false
+              },
+              {
+                "id": "process",
+                "text": "«Какая информация была доступна на момент решения?»",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "видят «очевидное»",
+              "explanation": "«Это было очевидно» — иллюзия, искажающая ретро. Если в момент решения 8 из 10 экспертов считали запуск удачным — провал не доказывает что было очевидно. Лучший вопрос: «как процесс может выявить это раньше в следующий раз».",
+              "wisdom": "Аннабелла Рейнолдс: {{em:«Хорошие решения иногда дают плохие результаты. Не путай оценку процесса с оценкой исхода»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где это всплывает",
+            "items": [
+              {
+                "label": "В постмортемах",
+                "example": "«Они должны были увидеть» — да, после факта. До факта — было десять равновероятных сценариев."
+              },
+              {
+                "label": "В отношениях",
+                "example": "«Я знала что он не годится» — нет, не знала. Иначе бы и не была с ним."
+              },
+              {
+                "label": "В инвестициях",
+                "example": "«Очевидно надо было покупать в 2020» — мнение появилось в 2024, не в 2020."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Перед важным решением запишите свои предсказания — конкретные, с числами. Через месяц сравните: память не сможет переписать письменные данные."
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Cognitive Bias · №6" } },
-        { "type": "hook", "props": { "text": "After every financial crisis analysts comment: «It was obvious — bubble on the market, overheated, all the signs were there». Before the crisis those same analysts wrote: «Market is healthy, growth is justified»…" } },
-        { "type": "title", "props": { "text": "{{accent:I-knew-it}} Effect" } },
-        { "type": "subtitle", "props": { "text": "Hindsight Bias · B. Fischhoff · 1975" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/hindsight.svg", "alt": "Dense fog before the event; after the event a straight path from A to B as if it had always been clear" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Baruch Fischhoff proved it in 1975: after an event happens, we remember our own predictions in a distorted way. If it happened — we say «I knew it». If it didn't — «I never believed it». Memory rewrites itself to match the outcome.",
-            "Fischhoff's experiment: ask people before and after Nixon's China visit to rate the likelihood of 15 outcomes. After the visit, those same people recalled their estimates {{em:totally wrong}} — outcomes that occurred were «always rated high probability» in their reconstructed memory.",
-            "This matters for evaluating decisions. Decisions must be judged by the information available {{em:at the time}}, not in hindsight. «They should have seen the crisis» is hindsight, not fair assessment."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Principle",
-          "text": "After the fact, everything looks obvious. That's an illusion — memory rewrites the past. Judge decisions by what was knowable at the time, not by the outcome."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Test yourself",
-          "question": "Your product team launched a feature — it failed. At the retro you say...",
-          "setup": null,
-          "options": [
-            { "id": "obvious",  "text": "«It was obvious — we should have seen»",                 "is_wiser": false },
-            { "id": "process",  "text": "«What information was available at decision time?»",     "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "Based on {{votes_count}} responses",
-            "big_stat_text": "see «obvious»",
-            "explanation": "«It was obvious» distorts the retro. If 8 out of 10 experts thought the launch was solid at decision time — the failure doesn't prove obviousness. The better question: «how can the process catch this earlier next time».",
-            "wisdom": "Annie Duke: {{em:«Good decisions sometimes give bad outcomes. Don't conflate process quality with outcome quality»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Cognitive Bias · №6"
           }
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where this surfaces",
-          "items": [
-            { "label": "In post-mortems",  "example": "«They should have seen it» — yes, after the fact. At decision time there were ten equally likely scenarios." },
-            { "label": "In relationships","example": "«I knew he wasn't right for me» — no, you didn't. Otherwise you wouldn't have been with him." },
-            { "label": "In investing",    "example": "«Obviously you had to buy in 2020» — that opinion formed in 2024, not 2020." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Action for today",
-          "text": "Before an important decision, write down your predictions — concrete, with numbers. A month later compare: memory can't rewrite written data."
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "After every financial crisis analysts comment: “It was obvious — bubble on the market, overheated, all the signs were there.” Before the crisis those same analysts wrote: “Market is healthy, growth is justified”…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "{{accent:I-knew-it}} Effect"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Hindsight Bias · B. Fischhoff · 1975"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/hindsight.svg",
+            "alt": "Dense fog before the event; after the event a straight path from A to B as if it had always been clear"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Baruch Fischhoff proved it in 1975: after an event happens, we remember our own predictions in a distorted way. If it happened — we say “I knew it.” If it didn't — “I never believed it.” Memory rewrites itself to match the outcome.",
+              "Fischhoff's experiment: ask people before and after Nixon's China visit to rate the likelihood of 15 outcomes. After the visit, those same people recalled their estimates {{em:totally wrong}} — outcomes that occurred were “always rated high probability” in their reconstructed memory.",
+              "This matters for evaluating decisions. Decisions must be judged by the information available {{em:at the time}}, not in hindsight. “They should have seen the crisis” is hindsight, not fair assessment."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "After the fact, everything looks obvious. That's an illusion — memory rewrites the past. Judge decisions by what was knowable at the time, not by the outcome."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your product team launched a feature — it failed. At the retro you say...",
+            "setup": null,
+            "options": [
+              {
+                "id": "obvious",
+                "text": "“It was obvious — we should have seen”",
+                "is_wiser": false
+              },
+              {
+                "id": "process",
+                "text": "“What information was available at decision time?”",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see “obvious”",
+              "explanation": "“It was obvious” distorts the retro. If 8 out of 10 experts thought the launch was solid at decision time — the failure doesn't prove obviousness. The better question: “how can the process catch this earlier next time.”",
+              "wisdom": "Annie Duke: {{em:“Good decisions sometimes give bad outcomes. Don't conflate process quality with outcome quality”}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where this surfaces",
+            "items": [
+              {
+                "label": "In post-mortems",
+                "example": "“They should have seen it” — yes, after the fact. At decision time there were ten equally likely scenarios."
+              },
+              {
+                "label": "In relationships",
+                "example": "“I knew he wasn't right for me” — no, you didn't. Otherwise you wouldn't have been with him."
+              },
+              {
+                "label": "In investing",
+                "example": "“Obviously you had to buy in 2020” — that opinion formed in 2024, not 2020."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Before an important decision, write down your predictions — concrete, with numbers. A month later compare: memory can't rewrite written data."
+          }
+        }
       ]
     }
   },
-  "levels": [{ "level": 1, "doc_ref": "models/hindsight_bias" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/hindsight_bias"
+    }
+  ]
 }

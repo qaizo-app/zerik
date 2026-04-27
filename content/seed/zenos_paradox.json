@@ -145,7 +145,7 @@
             "paragraphs": [
               "Zeno's argument: by the time Achilles covers the 100-meter head start, the tortoise has moved 10. While he covers those 10, it moves 1. And so on. {{em:Infinite steps — so he can never catch up}}.",
               "The paradox tormented mathematicians for 2000 years. Until the 17th century discovered {{em:convergent series}}: 100 + 10 + 1 + 0.1 + ... = 111.111... An infinite sum can equal a finite number. Time for infinite steps — finite.",
-              "The paradox wasn't «solved» — Zeno's logic was correct. Our intuition just can't handle that infinitely many things fit into a finite container. That's a real fact about math and physics."
+              "The paradox wasn't “solved” — Zeno's logic was correct. Our intuition just can't handle that infinitely many things fit into a finite container. That's a real fact about math and physics."
             ]
           }
         },
@@ -156,16 +156,16 @@
             "question": "If Achilles runs 10 m/s, the tortoise 1 m/s, head start 100 m — how long until he catches it?",
             "hint": "Use closing speed. Or sum the convergent series from Zeno.",
             "user_prompt": "Show me the answer",
-            "reveal_text": "Closing speed: 10 - 1 = 9 m/s. To close the 100-meter gap, 100 / 9 ≈ 11.11 seconds. Via series: 10 + 1 + 0.1 + 0.01 + ... = 10 / (1 - 0.1) = 11.11 seconds. Same number. The paradox isn't «can't catch» — it's «infinite steps fit in 11.11 seconds».",
+            "reveal_text": "Closing speed: 10 - 1 = 9 m/s. To close the 100-meter gap, 100 / 9 ≈ 11.11 seconds. Via series: 10 + 1 + 0.1 + 0.01 + ... = 10 / (1 - 0.1) = 11.11 seconds. Same number. The paradox isn't “can't catch” — it's “infinite steps fit in 11.11 seconds.”",
             "formula": "Geometric series:\nS = a / (1 - r)\nS = 10 / (1 - 0.1) = 11.11 sec",
-            "intuition_trap": "Intuition reads «infinite steps = infinite time». But if each step takes 10x less than the previous — the sum converges. Infinity ≠ infinite duration."
+            "intuition_trap": "Intuition reads “infinite steps = infinite time.” But if each step takes 10x less than the previous — the sum converges. Infinity ≠ infinite duration."
           }
         },
         {
           "type": "trap",
           "props": {
             "label": "Deeper",
-            "text": "The paradox matters philosophically: it shows that {{em:our intuition about infinity is broken}}. That's why quantum mechanics and relativity feel «weird» — they operate at scales where intuition isn't calibrated."
+            "text": "The paradox matters philosophically: it shows that {{em:our intuition about infinity is broken}}. That's why quantum mechanics and relativity feel “weird” — they operate at scales where intuition isn't calibrated."
           }
         },
         {

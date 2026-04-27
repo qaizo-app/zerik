@@ -3,7 +3,11 @@
   "category": "cognitive_biases",
   "release_number": 14,
   "release_date": "2026-04-21",
-  "tags": ["kahneman", "tversky", "prospect_theory"],
+  "tags": [
+    "kahneman",
+    "tversky",
+    "prospect_theory"
+  ],
   "difficulty": 2,
   "reading_time_sec": 170,
   "theme_override": null,
@@ -11,102 +15,223 @@
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Когнитивное искажение · №5" } },
-        { "type": "hook", "props": { "text": "Эксперимент: подбросим монету. Решка — даю 100 шекелей. Орёл — забираю 100. Согласны? Большинство отказывается. Хотя математически — 50/50…" } },
-        { "type": "title", "props": { "text": "{{accent:Боязнь}} потери" } },
-        { "type": "subtitle", "props": { "text": "Loss Aversion · Kahneman & Tversky · 1979" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/loss_aversion.svg", "alt": "Весы — справа маленький груз потери, слева большой груз эквивалентного выигрыша" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Канеман и Тверски в 1979-м измерили: чтобы человек согласился играть в монетку с равной вероятностью потери и выигрыша 100 шекелей — выигрыш должен быть {{em:минимум 200 шекелей}}. Не 100. Не 110. Двести.",
-            "Это значит мозг считает потерю {{em:в 2-2.5 раза тяжелее}} эквивалентного выигрыша. Эволюционно понятно: терять источник пищи опаснее, чем не получить лишний кусок. Но в современном мире эта асимметрия мешает.",
-            "Loss aversion — почему трудно продать падающую акцию (надеемся вернуть до уровня покупки), почему трудно бросить плохую работу (теряем стабильность), почему трудно расставаться (страх остаться без)."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Принцип",
-          "text": "Боль потери в 2-2.5 раза сильнее радости равного выигрыша. Чтобы принять рискованное решение объективно — мысленно удвой выгоду."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Проверь себя",
-          "question": "У вас две вакансии: A — стабильная, ок зарплата. B — рискованная, может дать в 2 раза больше или закрыться через год. Какую выберете?",
-          "setup": null,
-          "options": [
-            { "id": "stable", "text": "A — стабильно, не теряю текущее",       "is_wiser": false },
-            { "id": "risky",  "text": "B — потенциал выше, попробую",          "is_wiser": false }
-          ],
-          "reveal": {
-            "source_note": "По данным {{votes_count}} ответов",
-            "big_stat_text": "выбирают стабильное",
-            "explanation": "Большинство выбирает A — но если посчитать ожидание: B даёт 50% × (2x) + 50% × 0 = 1x в среднем, столько же сколько A. Чисто математически — равно. Но «потерять стабильность» весит вдвое — поэтому риск кажется хуже чем он есть.",
-            "wisdom": "Тверски говорил: {{em:«Мы не выбираем хорошее. Мы избегаем плохого. Это две разные оптимизации»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Когнитивное искажение · №5"
           }
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где вы встретите это сегодня",
-          "items": [
-            { "label": "В деньгах",     "example": "Скидка «было 1000, стало 700» работает не потому что 700 — хорошо. А потому что без покупки вы «теряете 300»." },
-            { "label": "В продуктах",   "example": "Free trial автоматически продлевается — кончается, и вы «теряете» доступ. Платите чтобы не потерять." },
-            { "label": "В отношениях", "example": "«Зачем что-то менять, у нас и так нормально» — мысль про потенциальную потерю стабильности перевешивает потенциальное улучшение." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Действие на сегодня",
-          "text": "Возьмите одно своё «нет» — где боялись потерять что-то и поэтому не сделали шаг. Удвойте мысленно потенциальный выигрыш. Решение бы изменилось?"
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Эксперимент: подбросим монету. Решка — даю 100 шекелей. Орёл — забираю 100. Согласны? Большинство отказывается. Хотя математически — 50/50…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "{{accent:Боязнь}} потери"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Loss Aversion · Kahneman & Tversky · 1979"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/loss_aversion.svg",
+            "alt": "Весы — справа маленький груз потери, слева большой груз эквивалентного выигрыша"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Канеман и Тверски в 1979-м измерили: чтобы человек согласился играть в монетку с равной вероятностью потери и выигрыша 100 шекелей — выигрыш должен быть {{em:минимум 200 шекелей}}. Не 100. Не 110. Двести.",
+              "Это значит мозг считает потерю {{em:в 2-2.5 раза тяжелее}} эквивалентного выигрыша. Эволюционно понятно: терять источник пищи опаснее, чем не получить лишний кусок. Но в современном мире эта асимметрия мешает.",
+              "Loss aversion — почему трудно продать падающую акцию (надеемся вернуть до уровня покупки), почему трудно бросить плохую работу (теряем стабильность), почему трудно расставаться (страх остаться без)."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Боль потери в 2-2.5 раза сильнее радости равного выигрыша. Чтобы принять рискованное решение объективно — мысленно удвой выгоду."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "У вас две вакансии: A — стабильная, ок зарплата. B — рискованная, может дать в 2 раза больше или закрыться через год. Какую выберете?",
+            "setup": null,
+            "options": [
+              {
+                "id": "stable",
+                "text": "A — стабильно, не теряю текущее",
+                "is_wiser": false
+              },
+              {
+                "id": "risky",
+                "text": "B — потенциал выше, попробую",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают стабильное",
+              "explanation": "Большинство выбирает A — но если посчитать ожидание: B даёт 50% × (2x) + 50% × 0 = 1x в среднем, столько же сколько A. Чисто математически — равно. Но «потерять стабильность» весит вдвое — поэтому риск кажется хуже чем он есть.",
+              "wisdom": "Тверски говорил: {{em:«Мы не выбираем хорошее. Мы избегаем плохого. Это две разные оптимизации»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В деньгах",
+                "example": "Скидка «было 1000, стало 700» работает не потому что 700 — хорошо. А потому что без покупки вы «теряете 300»."
+              },
+              {
+                "label": "В продуктах",
+                "example": "Free trial автоматически продлевается — кончается, и вы «теряете» доступ. Платите чтобы не потерять."
+              },
+              {
+                "label": "В отношениях",
+                "example": "«Зачем что-то менять, у нас и так нормально» — мысль про потенциальную потерю стабильности перевешивает потенциальное улучшение."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одно своё «нет» — где боялись потерять что-то и поэтому не сделали шаг. Удвойте мысленно потенциальный выигрыш. Решение бы изменилось?"
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Cognitive Bias · №5" } },
-        { "type": "hook", "props": { "text": "Experiment: flip a coin. Heads — I give you $100. Tails — I take $100. In? Most people refuse. Even though it's mathematically 50/50…" } },
-        { "type": "title", "props": { "text": "{{accent:Loss}} Aversion" } },
-        { "type": "subtitle", "props": { "text": "Loss Aversion · Kahneman & Tversky · 1979" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/loss_aversion.svg", "alt": "A scale — small weight of loss on the right, much larger equivalent gain on the left" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Kahneman and Tversky measured it in 1979: for someone to accept a coin flip with equal odds of losing or winning $100, the win has to be {{em:at least $200}}. Not $100. Not $110. Two hundred.",
-            "Which means the brain weighs a loss {{em:2 to 2.5 times heavier}} than an equivalent gain. Evolutionarily fine — losing food was deadlier than missing extra food. In the modern world, this asymmetry costs us.",
-            "Loss aversion is why it's hard to sell a falling stock (we hope to break even), hard to leave a bad job (we lose stability), hard to break up (we fear what's left)."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Principle",
-          "text": "The pain of loss is 2-2.5x stronger than the joy of an equal gain. To weigh a risky decision objectively, mentally double the upside."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Test yourself",
-          "question": "Two job offers: A — stable, decent pay. B — risky, could pay 2x or fold in a year. Which do you take?",
-          "setup": null,
-          "options": [
-            { "id": "stable", "text": "A — keep what I have, don't lose it", "is_wiser": false },
-            { "id": "risky",  "text": "B — bigger upside, I'll try",          "is_wiser": false }
-          ],
-          "reveal": {
-            "source_note": "Based on {{votes_count}} responses",
-            "big_stat_text": "pick stable",
-            "explanation": "Most pick A — but expected value of B is 50% × 2x + 50% × 0 = 1x on average, same as A. Mathematically equal. But «losing stability» weighs double, so the risk feels worse than it is.",
-            "wisdom": "Tversky used to say: {{em:«We don't choose good things. We avoid bad things. They're not the same optimization»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Cognitive Bias · №5"
           }
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where you'll meet it today",
-          "items": [
-            { "label": "In money",         "example": "«Was $1000, now $700» works not because $700 is great. It works because not buying means you «lose $300»." },
-            { "label": "In products",      "example": "Free trials auto-renew — when they end, you «lose» access. You pay to not lose, not to keep." },
-            { "label": "In relationships","example": "«Why change anything, we're fine» — the loss of stability outweighs potential improvement." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Action for today",
-          "text": "Take one of your «no»s — where fear of losing something blocked you. Mentally double the upside. Would the decision change?"
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Experiment: flip a coin. Heads — I give you $100. Tails — I take $100. In? Most people refuse. Even though it's mathematically 50/50…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "{{accent:Loss}} Aversion"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Loss Aversion · Kahneman & Tversky · 1979"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/loss_aversion.svg",
+            "alt": "A scale — small weight of loss on the right, much larger equivalent gain on the left"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Kahneman and Tversky measured it in 1979: for someone to accept a coin flip with equal odds of losing or winning $100, the win has to be {{em:at least $200}}. Not $100. Not $110. Two hundred.",
+              "Which means the brain weighs a loss {{em:2 to 2.5 times heavier}} than an equivalent gain. Evolutionarily fine — losing food was deadlier than missing extra food. In the modern world, this asymmetry costs us.",
+              "Loss aversion is why it's hard to sell a falling stock (we hope to break even), hard to leave a bad job (we lose stability), hard to break up (we fear what's left)."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The pain of loss is 2-2.5x stronger than the joy of an equal gain. To weigh a risky decision objectively, mentally double the upside."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Two job offers: A — stable, decent pay. B — risky, could pay 2x or fold in a year. Which do you take?",
+            "setup": null,
+            "options": [
+              {
+                "id": "stable",
+                "text": "A — keep what I have, don't lose it",
+                "is_wiser": false
+              },
+              {
+                "id": "risky",
+                "text": "B — bigger upside, I'll try",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "pick stable",
+              "explanation": "Most pick A — but expected value of B is 50% × 2x + 50% × 0 = 1x on average, same as A. Mathematically equal. But “losing stability” weighs double, so the risk feels worse than it is.",
+              "wisdom": "Tversky used to say: {{em:“We don't choose good things. We avoid bad things. They're not the same optimization”}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              {
+                "label": "In money",
+                "example": "“Was $1000, now $700” works not because $700 is great. It works because not buying means you “lose $300.”"
+              },
+              {
+                "label": "In products",
+                "example": "Free trials auto-renew — when they end, you “lose” access. You pay to not lose, not to keep."
+              },
+              {
+                "label": "In relationships",
+                "example": "“Why change anything, we're fine” — the loss of stability outweighs potential improvement."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one of your “no”s — where fear of losing something blocked you. Mentally double the upside. Would the decision change?"
+          }
+        }
       ]
     }
   },
-  "levels": [{ "level": 1, "doc_ref": "models/loss_aversion" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/loss_aversion"
+    }
+  ]
 }

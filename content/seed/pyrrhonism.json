@@ -166,8 +166,8 @@
             "drop_cap": true,
             "paragraphs": [
               "Pyrrho proposed an unusual path to calm: for every claim, an equally strong opposite exists. {{em:So nothing can be asserted with certainty}}. Once you grasp that, you stop suffering from opinions — your own and others'.",
-              "This isn't «know nothing». It's «know you don't know finally». You still live: drink water when thirsty, eat when hungry. But you don't build identity on beliefs that might turn out wrong.",
-              "Paradoxically, this delivers {{em:ataraxia}} — equanimity. You're no longer bound to «being right». Freedom from needing to be right frees you from the fear of being wrong."
+              "This isn't “know nothing.” It's “know you don't know finally.” You still live: drink water when thirsty, eat when hungry. But you don't build identity on beliefs that might turn out wrong.",
+              "Paradoxically, this delivers {{em:ataraxia}} — equanimity. You're no longer bound to “being right.” Freedom from needing to be right frees you from the fear of being wrong."
             ]
           }
         },
@@ -175,7 +175,7 @@
           "type": "principle",
           "props": {
             "label": "Principle",
-            "text": "Deep certainty about everything is the source of most suffering. Admitting «I don't know finally» frees you from defending what's wrong."
+            "text": "Deep certainty about everything is the source of most suffering. Admitting “I don't know finally” frees you from defending what's wrong."
           }
         },
         {
@@ -192,15 +192,15 @@
               },
               {
                 "id": "epoche",
-                "text": "Epoché — suspend judgment, ask «why»",
+                "text": "Epoché — suspend judgment, ask “why”",
                 "is_wiser": true
               }
             ],
             "reveal": {
               "source_note": "Based on {{votes_count}} responses",
               "big_stat_text": "argue",
-              "explanation": "Pyrrhonism recommends epoché — suspension of judgment. Not «agree», not «reject». This turns argument into inquiry. Often both speakers see that both sides have a point — and that ends the drama.",
-              "wisdom": "Socrates: {{em:«I know that I know nothing»}}. Pyrrhonism in one sentence.",
+              "explanation": "Pyrrhonism recommends epoché — suspension of judgment. Not “agree,” not “reject.” This turns argument into inquiry. Often both speakers see that both sides have a point — and that ends the drama.",
+              "wisdom": "Socrates: {{em:“I know that I know nothing”}}. Pyrrhonism in one sentence.",
               "hardcoded_stats": null
             }
           }
@@ -209,7 +209,7 @@
           "type": "trap",
           "props": {
             "label": "The trap",
-            "text": "Pyrrhonism isn't nihilism or paralysis. You still act. Actions just aren't based on «I'm sure» — they're based on {{em:«this works in this situation»}}. When the situation changes, the approach changes — without drama."
+            "text": "Pyrrhonism isn't nihilism or paralysis. You still act. Actions just aren't based on “I'm sure” — they're based on {{em:“this works in this situation”}}. When the situation changes, the approach changes — without drama."
           }
         },
         {
@@ -219,11 +219,11 @@
             "items": [
               {
                 "label": "In arguments",
-                "example": "«Maybe you're right. I'll think about it». Not weakness — strength unavailable to anyone who has to win."
+                "example": "“Maybe you're right. I'll think about it.” Not weakness — strength unavailable to anyone who has to win."
               },
               {
                 "label": "In stress",
-                "example": "Most stress comes from certainty that something «should be» a certain way. Epoché removes it."
+                "example": "Most stress comes from certainty that something “should be” a certain way. Epoché removes it."
               },
               {
                 "label": "In learning",

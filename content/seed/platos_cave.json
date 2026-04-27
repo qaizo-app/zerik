@@ -162,7 +162,7 @@
         {
           "type": "subtitle",
           "props": {
-            "text": "Allegory of the Cave · Plato, «Republic» · ~380 BC"
+            "text": "Allegory of the Cave · Plato, “Republic” · ~380 BC"
           }
         },
         {
@@ -178,8 +178,8 @@
             "drop_cap": true,
             "paragraphs": [
               "Plato continues: one prisoner gets free. Turns toward the fire — eyes hurt, images blur. Walks out of the cave — sunlight blinds him. Gradually his eyes adjust; he sees the real world: trees, people, sky. He finally grasps that the shadows were {{em:shadows}}.",
-              "He returns to tell the others. But his eyes are now adjusted to light; in the dark he can't make out the shadows well. The prisoners laugh: «He went out and lost his sight. Don't go — it's dangerous».",
-              "Plato is talking about philosophy and education. Most people live in «shadows» — accepted opinions, cultural norms, familiar categories. The one who sees them as shadows becomes either unintelligible or threatening."
+              "He returns to tell the others. But his eyes are now adjusted to light; in the dark he can't make out the shadows well. The prisoners laugh: “He went out and lost his sight. Don't go — it's dangerous.”",
+              "Plato is talking about philosophy and education. Most people live in “shadows” — accepted opinions, cultural norms, familiar categories. The one who sees them as shadows becomes either unintelligible or threatening."
             ]
           }
         },
@@ -194,7 +194,7 @@
           "type": "scenario",
           "props": {
             "tag": "Test yourself",
-            "question": "If you've «left the cave» on something, what do you do?",
+            "question": "If you've “left the cave” on something, what do you do?",
             "setup": "Example: you realize social media wrecks mental health, while everyone around treats it as normal.",
             "options": [
               {
@@ -210,9 +210,9 @@
             ],
             "reveal": {
               "source_note": "Based on {{votes_count}} responses",
-              "big_stat_text": "say «live it»",
-              "explanation": "Plato doesn't give an easy answer. Socrates chose «tell» — and was executed for «corrupting the youth». Modern philosophy: change practice, not rhetoric. Show how you live, don't argue how others should.",
-              "wisdom": "Epictetus: {{em:«Don't explain your philosophy. Embody it»}}.",
+              "big_stat_text": "say “live it”",
+              "explanation": "Plato doesn't give an easy answer. Socrates chose “tell” — and was executed for “corrupting the youth.” Modern philosophy: change practice, not rhetoric. Show how you live, don't argue how others should.",
+              "wisdom": "Epictetus: {{em:“Don't explain your philosophy. Embody it”}}.",
               "hardcoded_stats": {
                 "total_votes": 14200,
                 "options": {
@@ -233,7 +233,7 @@
           "type": "trap",
           "props": {
             "label": "The trap",
-            "text": "Anyone can think «I'm the one who left the cave» — even while sitting deepest. Skepticism must apply {{em:to yourself first}} — otherwise you've just swapped one set of shadows for a more refined one."
+            "text": "Anyone can think “I'm the one who left the cave” — even while sitting deepest. Skepticism must apply {{em:to yourself first}} — otherwise you've just swapped one set of shadows for a more refined one."
           }
         },
         {
@@ -247,11 +247,11 @@
               },
               {
                 "label": "In politics",
-                "example": "Each side is sure they have «reality» and the others have propaganda. Everyone can be in the cave at once."
+                "example": "Each side is sure they have “reality” and the others have propaganda. Everyone can be in the cave at once."
               },
               {
                 "label": "At work",
-                "example": "«That's how every company does it» — those are shadows. The adjacent industry does it differently. You've only seen this cave."
+                "example": "“That's how every company does it” — those are shadows. The adjacent industry does it differently. You've only seen this cave."
               }
             ]
           }
@@ -260,7 +260,7 @@
           "type": "action_today",
           "props": {
             "label": "Action for today",
-            "text": "Name one thing you assume «is how it should be» because everyone around does it that way. Ask: what if this is a shadow, not the thing?"
+            "text": "Name one thing you assume “is how it should be” because everyone around does it that way. Ask: what if this is a shadow, not the thing?"
           }
         }
       ]

@@ -3,52 +3,84 @@
   "category": "mental_models",
   "release_number": 3,
   "release_date": "2026-04-21",
-  "tags": ["reasoning", "munger", "jacobi"],
+  "tags": [
+    "reasoning",
+    "munger",
+    "jacobi"
+  ],
   "difficulty": 2,
   "reading_time_sec": 175,
   "theme_override": null,
   "illustration_ref": "bundle://illustrations/inversion.svg",
-
   "i18n": {
-
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Ментальная модель · №3" } },
-
-        { "type": "hook", "props": {
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Ментальная модель · №3"
+          }
+        },
+        {
+          "type": "hook",
+          "props": {
             "text": "Бизнес-консультанты любят вопрос «Как стать успешным?» Чарли Мангер задавал другой: «Как точно провалиться?» — и просто избегал этого. Получалось эффективнее…"
-        } },
-
-        { "type": "title", "props": { "text": "Думай {{accent:наоборот}}" } },
-
-        { "type": "subtitle", "props": { "text": "Inversion · C. Jacobi · XIX в. (Ch. Munger)" } },
-
-        { "type": "illustration", "props": {
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Думай {{accent:наоборот}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Inversion · C. Jacobi · XIX в. (Ch. Munger)"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
             "ref": "bundle://illustrations/inversion.svg",
             "alt": "Стрелка идёт справа налево — путь решения от конца к началу"
-        } },
-
-        { "type": "body_paragraphs", "props": {
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
             "drop_cap": true,
             "paragraphs": [
               "Карл Якоби, математик XIX века, повторял студентам одну фразу: {{em:«invertieren, immer invertieren»}} — «переворачивай, всегда переворачивай». Если задача не поддаётся в лоб — переверни её и реши перевёрнутую.",
               "Чарли Мангер, партнёр Уоррена Баффета, превратил это в инвестиционную религию. {{em:«Скажите мне, где я умру, и я туда не поеду»}} — его любимая шутка. Вместо «как заработать», он спрашивал «как потерять» — и не делал этого. Список «как разорить компанию» оказался короче и яснее списка «как заработать».",
               "Большинство стратегий проще описывать через избегание ошибок, чем через позитивные действия."
             ]
-        } },
-
-        { "type": "principle", "props": {
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
             "label": "Принцип",
             "text": "Переверни задачу. Спроси не «как достичь?», а «как точно не достичь?». Список ответов — карта мин, по которой не нужно идти."
-        } },
-
-        { "type": "scenario", "props": {
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
             "tag": "Проверь себя",
             "question": "Вы хотите построить доверие с командой. С чего начнёте?",
             "setup": null,
             "options": [
-              { "id": "build", "text": "Подумаю, какие действия укрепляют доверие — буду их делать", "is_wiser": false },
-              { "id": "avoid", "text": "Подумаю, что разрушает доверие — это перестану делать",       "is_wiser": true }
+              {
+                "id": "build",
+                "text": "Подумаю, какие действия укрепляют доверие — буду их делать",
+                "is_wiser": false
+              },
+              {
+                "id": "avoid",
+                "text": "Подумаю, что разрушает доверие — это перестану делать",
+                "is_wiser": true
+              }
             ],
             "reveal": {
               "source_note": "По данным {{votes_count}} ответов",
@@ -57,98 +89,163 @@
               "wisdom": "Тот же принцип у Толстого: {{em:«Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему»}}. Способов проиграть много — способов выиграть мало.",
               "hardcoded_stats": null
             }
-        } },
-
-        { "type": "trap", "props": {
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
             "label": "Ловушка",
             "text": "Инверсия не заменяет позитивную стратегию. Она дополняет её. Избегать ошибок ≠ выигрывать. Сначала — что ты хочешь. Потом — как точно туда не прийти."
-        } },
-
-        { "type": "domains", "props": {
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
             "heading": "Где вы встретите это сегодня",
             "items": [
-              { "label": "В карьере",     "example": "«Чего точно нельзя делать на этой работе?» вместо «Что нужно сделать, чтобы повысили?»." },
-              { "label": "В переговорах","example": "«Какой ответ оттолкнёт собеседника?» — список из 3-4 пунктов, которых легко избежать." },
-              { "label": "В здоровье",   "example": "«Что точно вредит сну?» — кофе вечером, экраны, поздний ужин — короткий и понятный список." }
+              {
+                "label": "В карьере",
+                "example": "«Чего точно нельзя делать на этой работе?» вместо «Что нужно сделать, чтобы повысили?»."
+              },
+              {
+                "label": "В переговорах",
+                "example": "«Какой ответ оттолкнёт собеседника?» — список из 3-4 пунктов, которых легко избежать."
+              },
+              {
+                "label": "В здоровье",
+                "example": "«Что точно вредит сну?» — кофе вечером, экраны, поздний ужин — короткий и понятный список."
+              }
             ]
-        } },
-
-        { "type": "action_today", "props": {
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
             "label": "Действие на сегодня",
             "text": "Возьмите одну цель, к которой стремитесь. Запишите три способа гарантированно не достичь её. Уберите эти три способа из своего поведения сегодня."
-        } }
+          }
+        }
       ]
     },
-
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Mental Model · №3" } },
-
-        { "type": "hook", "props": {
-            "text": "Business consultants love the question «How do I succeed?» Charlie Munger preferred: «How do I guarantee failure?» — and just avoided that. It worked better…"
-        } },
-
-        { "type": "title", "props": { "text": "Think {{accent:Backwards}}" } },
-
-        { "type": "subtitle", "props": { "text": "Inversion · C. Jacobi · 19th c. (popularized by Munger)" } },
-
-        { "type": "illustration", "props": {
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Mental Model · №3"
+          }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Business consultants love the question “How do I succeed?” Charlie Munger preferred: “How do I guarantee failure?” — and just avoided that. It worked better…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Think {{accent:Backwards}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Inversion · C. Jacobi · 19th c. (popularized by Munger)"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
             "ref": "bundle://illustrations/inversion.svg",
             "alt": "An arrow runs right-to-left — solving the path from the end to the start"
-        } },
-
-        { "type": "body_paragraphs", "props": {
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
             "drop_cap": true,
             "paragraphs": [
-              "Carl Jacobi, the 19th-century mathematician, kept telling students one phrase: {{em:«invertieren, immer invertieren»}} — invert, always invert. If a problem won't yield head-on, flip it and solve the flipped version.",
-              "Charlie Munger, Warren Buffett's partner, turned this into an investing religion. {{em:«Tell me where I'm going to die, and I won't go there»}} was his favorite line. Instead of «how do we make money», he asked «how do we lose money» — and stopped doing those things. The «how to ruin a company» list was shorter and clearer than the «how to win» list.",
+              "Carl Jacobi, the 19th-century mathematician, kept telling students one phrase: {{em:“invertieren, immer invertieren”}} — invert, always invert. If a problem won't yield head-on, flip it and solve the flipped version.",
+              "Charlie Munger, Warren Buffett's partner, turned this into an investing religion. {{em:“Tell me where I'm going to die, and I won't go there”}} was his favorite line. Instead of “how do we make money,” he asked “how do we lose money” — and stopped doing those things. The “how to ruin a company” list was shorter and clearer than the “how to win” list.",
               "Most strategies are easier to describe through what to avoid than through what to do."
             ]
-        } },
-
-        { "type": "principle", "props": {
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
             "label": "Principle",
-            "text": "Flip the question. Ask not «how do I get there?» but «how would I guarantee I don't?» The answers form a minefield map — the path is the inverse."
-        } },
-
-        { "type": "scenario", "props": {
+            "text": "Flip the question. Ask not “how do I get there?” but “how would I guarantee I don't?” The answers form a minefield map — the path is the inverse."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
             "tag": "Test yourself",
             "question": "You want to build trust with your team. Where do you start?",
             "setup": null,
             "options": [
-              { "id": "build", "text": "Think about what builds trust — and start doing it",  "is_wiser": false },
-              { "id": "avoid", "text": "Think about what destroys trust — and stop doing it", "is_wiser": true }
+              {
+                "id": "build",
+                "text": "Think about what builds trust — and start doing it",
+                "is_wiser": false
+              },
+              {
+                "id": "avoid",
+                "text": "Think about what destroys trust — and stop doing it",
+                "is_wiser": true
+              }
             ],
             "reveal": {
               "source_note": "Based on {{votes_count}} responses",
               "big_stat_text": "build",
-              "explanation": "«What builds trust» is dozens of contradictory tips from dozens of books. «What destroys trust» is a short, concrete, consistent list: saying one thing and doing another, promising and forgetting, interrupting, claiming the team's wins. Stopping these gets immediate results.",
-              "wisdom": "Tolstoy noticed the same shape: {{em:«All happy families are alike; each unhappy family is unhappy in its own way»}}. There are many ways to lose, few ways to win.",
+              "explanation": "“What builds trust” is dozens of contradictory tips from dozens of books. “What destroys trust” is a short, concrete, consistent list: saying one thing and doing another, promising and forgetting, interrupting, claiming the team's wins. Stopping these gets immediate results.",
+              "wisdom": "Tolstoy noticed the same shape: {{em:“All happy families are alike; each unhappy family is unhappy in its own way”}}. There are many ways to lose, few ways to win.",
               "hardcoded_stats": null
             }
-        } },
-
-        { "type": "trap", "props": {
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
             "label": "The trap",
             "text": "Inversion doesn't replace positive strategy. It complements it. Avoiding mistakes ≠ winning. First decide what you want. Then map how to definitely not get there."
-        } },
-
-        { "type": "domains", "props": {
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
             "heading": "Where you'll meet it today",
             "items": [
-              { "label": "In your career",   "example": "«What would definitely block a promotion?» instead of «what should I do to get one?»." },
-              { "label": "In negotiation",   "example": "«What answer pushes the other side away?» — a tight 3-4 item list, easy to avoid." },
-              { "label": "In health",        "example": "«What definitely wrecks my sleep?» — coffee late, screens, late dinners — short and concrete." }
+              {
+                "label": "In your career",
+                "example": "“What would definitely block a promotion?” instead of “what should I do to get one?.”"
+              },
+              {
+                "label": "In negotiation",
+                "example": "“What answer pushes the other side away?” — a tight 3-4 item list, easy to avoid."
+              },
+              {
+                "label": "In health",
+                "example": "“What definitely wrecks my sleep?” — coffee late, screens, late dinners — short and concrete."
+              }
             ]
-        } },
-
-        { "type": "action_today", "props": {
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
             "label": "Action for today",
             "text": "Pick one goal you're chasing. Write down three ways to absolutely guarantee you won't reach it. Remove those three from your behavior today."
-        } }
+          }
+        }
       ]
     }
   },
-
-  "levels": [{ "level": 1, "doc_ref": "models/inversion" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/inversion"
+    }
+  ]
 }

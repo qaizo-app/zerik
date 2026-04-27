@@ -177,9 +177,9 @@
           "props": {
             "drop_cap": true,
             "paragraphs": [
-              "John Rawls in «A Theory of Justice» (1971) proposed a thought experiment for testing ethical rules. If you were choosing rules {{em:without knowing your place in the system}} — which would you pick?",
-              "Rawls' answer: you'd prefer rules that {{em:maximize the position of the worst-off}}. Not «average» — because you might land at the bottom. Not «maximum» — because you don't know if you'll be at the top.",
-              "This flips ordinary political debate. Progressive taxation, universal healthcare, free education stop being «help for the poor» and become {{em:the rational choice of anyone}} who doesn't know where they'll land."
+              "John Rawls in “A Theory of Justice” (1971) proposed a thought experiment for testing ethical rules. If you were choosing rules {{em:without knowing your place in the system}} — which would you pick?",
+              "Rawls' answer: you'd prefer rules that {{em:maximize the position of the worst-off}}. Not “average” — because you might land at the bottom. Not “maximum” — because you don't know if you'll be at the top.",
+              "This flips ordinary political debate. Progressive taxation, universal healthcare, free education stop being “help for the poor” and become {{em:the rational choice of anyone}} who doesn't know where they'll land."
             ]
           }
         },
@@ -187,7 +187,7 @@
           "type": "principle",
           "props": {
             "label": "Principle",
-            "text": "Just rules are the ones you'd accept without knowing your position in the system. If a rule «only works for those at the top» — it isn't just."
+            "text": "Just rules are the ones you'd accept without knowing your position in the system. If a rule “only works for those at the top” — it isn't just."
           }
         },
         {
@@ -211,8 +211,8 @@
             "reveal": {
               "source_note": "Harvard surveys, 2018",
               "big_stat_text": "pick universal",
-              "explanation": "Behind the veil most pick universal — because they don't know if they'll end up sick and broke. Not «kindness» — rational hedging. With knowledge: the healthy and rich pick private, the sick and poor pick universal. The veil neutralizes self-interest.",
-              "wisdom": "Rawls: {{em:«Justice isn't charity. It's the rules we'd agree to before we knew who we'd be born as»}}.",
+              "explanation": "Behind the veil most pick universal — because they don't know if they'll end up sick and broke. Not “kindness” — rational hedging. With knowledge: the healthy and rich pick private, the sick and poor pick universal. The veil neutralizes self-interest.",
+              "wisdom": "Rawls: {{em:“Justice isn't charity. It's the rules we'd agree to before we knew who we'd be born as”}}.",
               "hardcoded_stats": {
                 "total_votes": 9800,
                 "options": {
@@ -233,7 +233,7 @@
           "type": "trap",
           "props": {
             "label": "The trap",
-            "text": "The veil works only if you genuinely «forget» your privileges. In practice that's hard — your brain automatically protects current position. It's a reflection tool, not an algorithm."
+            "text": "The veil works only if you genuinely “forget” your privileges. In practice that's hard — your brain automatically protects current position. It's a reflection tool, not an algorithm."
           }
         },
         {
@@ -260,7 +260,7 @@
           "type": "action_today",
           "props": {
             "label": "Action for today",
-            "text": "Take one rule of your society or family that feels just. Ask: would I pick it not knowing my position? If «no» — it's just for you, not in general."
+            "text": "Take one rule of your society or family that feels just. Ask: would I pick it not knowing my position? If “no” — it's just for you, not in general."
           }
         }
       ]

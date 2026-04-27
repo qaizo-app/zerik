@@ -131,7 +131,7 @@
         {
           "type": "hook",
           "props": {
-            "text": "In 2021 everyone said «Bitcoin to a million». In 2023 «Crypto is dead». In 2024 «New era, this time for real». The arguments shifted each year — because the brain overweights what just happened…"
+            "text": "In 2021 everyone said “Bitcoin to a million.” In 2023 “Crypto is dead.” In 2024 “New era, this time for real.” The arguments shifted each year — because the brain overweights what just happened…"
           }
         },
         {
@@ -193,7 +193,7 @@
               "source_note": "Based on {{votes_count}} responses",
               "big_stat_text": "judge by recent",
               "explanation": "11 months of success outweigh 1 of failure — arithmetically. But the brain remembers last 4 weeks more vividly than 48 before. Managers with this bias lose good people to temporary slumps.",
-              "wisdom": "Annie Duke: {{em:«Judging people by last month's outcomes isn't judgment — it's a blind shot»}}.",
+              "wisdom": "Annie Duke: {{em:“Judging people by last month's outcomes isn't judgment — it's a blind shot”}}.",
               "hardcoded_stats": null
             }
           }
@@ -205,7 +205,7 @@
             "items": [
               {
                 "label": "In investing",
-                "example": "Buying «what's up this month» almost guarantees buying near a peak. The repricing cycle."
+                "example": "Buying “what's up this month” almost guarantees buying near a peak. The repricing cycle."
               },
               {
                 "label": "In judging people",

@@ -3,7 +3,11 @@
   "category": "mental_models",
   "release_number": 17,
   "release_date": "2026-05-02",
-  "tags": ["thinking", "consequences", "munger"],
+  "tags": [
+    "thinking",
+    "consequences",
+    "munger"
+  ],
   "difficulty": 3,
   "reading_time_sec": 185,
   "theme_override": null,
@@ -11,110 +15,237 @@
   "i18n": {
     "ru": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Ментальная модель · №6" } },
-        { "type": "hook", "props": { "text": "В Индии при колониальной власти британцы боялись кобр. Объявили награду за каждую убитую змею. Сначала кобр стало меньше. Потом снова больше — потому что предприимчивые индийцы начали разводить кобр, чтобы убивать и сдавать. Когда программу отменили, кобр выпустили. Стало хуже чем было…" } },
-        { "type": "title", "props": { "text": "Мышление {{accent:второго порядка}}" } },
-        { "type": "subtitle", "props": { "text": "Second-Order Thinking · H. Marks, R. Dalio" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/second_order.svg", "alt": "Цепочка причин: A → B → C → D, где D — неожиданное последствие, обратное намерению" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "Первый порядок — последствие, которое мы видим сразу. Второй — последствия наших последствий. Третий — реакция системы на нашу реакцию. Большинство людей думает только в первом порядке. {{em:Все хорошие решения — на втором}}.",
-            "Кобр-эффект из Дели — классический пример. {{em:Первый порядок}}: награда → люди убивают кобр → их меньше. {{em:Второй}}: люди начинают разводить кобр для убийства → меньше пользы. {{em:Третий}}: программа отменена → разводчики выпускают кобр → стало хуже.",
-            "Чтобы думать на втором порядке, нужно задать один вопрос: «А что будет {{em:после}} того что я сделал? Как ответят те, на кого это влияет?» Это всё. Просто, но почти никто этого не делает."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Принцип",
-          "text": "Первый порядок — что произойдёт сразу. Второй — что произойдёт в ответ на это. Хорошие решения учитывают и второе, и третье."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Проверь себя",
-          "question": "Государство хочет, чтобы люди больше копили. Введёт штраф за низкие сбережения. Что произойдёт?",
-          "setup": null,
-          "options": [
-            { "id": "first",  "text": "Люди начнут больше откладывать — цель достигнута",         "is_wiser": false },
-            { "id": "second", "text": "Люди найдут способ обойти штраф или ответят негативом",  "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "По данным {{votes_count}} ответов",
-            "big_stat_text": "думают первым порядком",
-            "explanation": "Реальный сценарий (Норвегия 2008, Аргентина 2001 и др.): люди не начинают копить — они переводят активы в кэш, золото, оффшоры. Получается обратное: меньше прозрачных сбережений, больше теневой экономики, плюс политическое сопротивление.",
-            "wisdom": "Чарли Мангер: {{em:«Я скажу тебе что я буду делать после твоего хода. Это и есть второй порядок. Жаль что 90% людей останавливаются на первом»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Ментальная модель · №6"
           }
-        } },
-        { "type": "trap", "props": {
-          "label": "Ловушка",
-          "text": "Второй порядок не значит «всегда не делай». Иногда негативные реакции есть, но действие всё равно полезно. Цель — {{em:знать}} что будет, а не парализовать решения."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Где вы встретите это сегодня",
-          "items": [
-            { "label": "В компании",     "example": "Запретили работать из дома — лучшие сотрудники уйдут к конкуренту, который позволяет. Цель «дисциплина» → результат «потеря талантов»." },
-            { "label": "В отношениях", "example": "«Я ему всё расскажу, чтобы знал» — он расскажет другим, ваши отношения изменятся в общем поле, не только между вами." },
-            { "label": "В продукте",    "example": "Закрыли скидки → меньше пользователей → меньше отзывов → ниже органика → меньше пользователей. Цикл, начатый «оптимизацией»." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Действие на сегодня",
-          "text": "Перед одним решением сегодня спросите: «А что произойдёт ПОСЛЕ моего действия — как отреагируют те, на кого это влияет?» Запишите 2-3 сценария. Решение поменяется?"
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "В Индии при колониальной власти британцы боялись кобр. Объявили награду за каждую убитую змею. Сначала кобр стало меньше. Потом снова больше — потому что предприимчивые индийцы начали разводить кобр, чтобы убивать и сдавать. Когда программу отменили, кобр выпустили. Стало хуже чем было…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "Мышление {{accent:второго порядка}}"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Second-Order Thinking · H. Marks, R. Dalio"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/second_order.svg",
+            "alt": "Цепочка причин: A → B → C → D, где D — неожиданное последствие, обратное намерению"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Первый порядок — последствие, которое мы видим сразу. Второй — последствия наших последствий. Третий — реакция системы на нашу реакцию. Большинство людей думает только в первом порядке. {{em:Все хорошие решения — на втором}}.",
+              "Кобр-эффект из Дели — классический пример. {{em:Первый порядок}}: награда → люди убивают кобр → их меньше. {{em:Второй}}: люди начинают разводить кобр для убийства → меньше пользы. {{em:Третий}}: программа отменена → разводчики выпускают кобр → стало хуже.",
+              "Чтобы думать на втором порядке, нужно задать один вопрос: «А что будет {{em:после}} того что я сделал? Как ответят те, на кого это влияет?» Это всё. Просто, но почти никто этого не делает."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Первый порядок — что произойдёт сразу. Второй — что произойдёт в ответ на это. Хорошие решения учитывают и второе, и третье."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Государство хочет, чтобы люди больше копили. Введёт штраф за низкие сбережения. Что произойдёт?",
+            "setup": null,
+            "options": [
+              {
+                "id": "first",
+                "text": "Люди начнут больше откладывать — цель достигнута",
+                "is_wiser": false
+              },
+              {
+                "id": "second",
+                "text": "Люди найдут способ обойти штраф или ответят негативом",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "думают первым порядком",
+              "explanation": "Реальный сценарий (Норвегия 2008, Аргентина 2001 и др.): люди не начинают копить — они переводят активы в кэш, золото, оффшоры. Получается обратное: меньше прозрачных сбережений, больше теневой экономики, плюс политическое сопротивление.",
+              "wisdom": "Чарли Мангер: {{em:«Я скажу тебе что я буду делать после твоего хода. Это и есть второй порядок. Жаль что 90% людей останавливаются на первом»}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Второй порядок не значит «всегда не делай». Иногда негативные реакции есть, но действие всё равно полезно. Цель — {{em:знать}} что будет, а не парализовать решения."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В компании",
+                "example": "Запретили работать из дома — лучшие сотрудники уйдут к конкуренту, который позволяет. Цель «дисциплина» → результат «потеря талантов»."
+              },
+              {
+                "label": "В отношениях",
+                "example": "«Я ему всё расскажу, чтобы знал» — он расскажет другим, ваши отношения изменятся в общем поле, не только между вами."
+              },
+              {
+                "label": "В продукте",
+                "example": "Закрыли скидки → меньше пользователей → меньше отзывов → ниже органика → меньше пользователей. Цикл, начатый «оптимизацией»."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Перед одним решением сегодня спросите: «А что произойдёт ПОСЛЕ моего действия — как отреагируют те, на кого это влияет?» Запишите 2-3 сценария. Решение поменяется?"
+          }
+        }
       ]
     },
     "en": {
       "blocks": [
-        { "type": "category_label", "props": { "text": "Mental Model · №6" } },
-        { "type": "hook", "props": { "text": "In colonial India the British feared cobras. They put a bounty on every dead snake. First, cobra numbers dropped. Then they rose — because enterprising locals started breeding cobras to kill and turn in. When the program was cancelled, the breeders released their cobras. The situation was worse than the start…" } },
-        { "type": "title", "props": { "text": "{{accent:Second-Order}} Thinking" } },
-        { "type": "subtitle", "props": { "text": "Second-Order Thinking · H. Marks, R. Dalio" } },
-        { "type": "illustration", "props": { "ref": "bundle://illustrations/second_order.svg", "alt": "A chain of causes: A → B → C → D, where D is an unexpected consequence opposite to the intent" } },
-        { "type": "body_paragraphs", "props": {
-          "drop_cap": true,
-          "paragraphs": [
-            "First-order is the consequence we see immediately. Second-order is the consequence of our consequence. Third — the system's reaction to our reaction. Most people think first-order only. {{em:All good decisions live at second-order}}.",
-            "The Cobra Effect from Delhi is a classic. {{em:First-order}}: bounty → people kill cobras → fewer cobras. {{em:Second-order}}: people start breeding cobras to kill → less benefit. {{em:Third-order}}: program cancelled → breeders release cobras → outcome worse than start.",
-            "To think second-order you need one question: «What happens {{em:after}} I do this? How will the people affected respond?» That's it. Simple, but almost nobody does it."
-          ]
-        } },
-        { "type": "principle", "props": {
-          "label": "Principle",
-          "text": "First-order — what happens right away. Second — what happens in response. Good decisions account for both — and the third."
-        } },
-        { "type": "scenario", "props": {
-          "tag": "Test yourself",
-          "question": "Government wants people to save more. They introduce a penalty for low savings. What happens?",
-          "setup": null,
-          "options": [
-            { "id": "first",  "text": "People save more — goal achieved",                       "is_wiser": false },
-            { "id": "second", "text": "People find ways to dodge the penalty or push back",   "is_wiser": true }
-          ],
-          "reveal": {
-            "source_note": "Based on {{votes_count}} responses",
-            "big_stat_text": "think first-order",
-            "explanation": "Real-world cases (Norway 2008, Argentina 2001, etc.): people don't save more — they shift assets to cash, gold, offshore. Result: less visible saving, more shadow economy, plus political backlash.",
-            "wisdom": "Charlie Munger: {{em:«I'll tell you what I'm going to do after you make your move. That's second-order. 90% of people stop at the first»}}.",
-            "hardcoded_stats": null
+        {
+          "type": "category_label",
+          "props": {
+            "text": "Mental Model · №6"
           }
-        } },
-        { "type": "trap", "props": {
-          "label": "The trap",
-          "text": "Second-order doesn't mean «never act». Sometimes the backlash is real but the action is still worth it. The goal is to {{em:know}} what's coming, not to paralyze decisions."
-        } },
-        { "type": "domains", "props": {
-          "heading": "Where you'll meet it today",
-          "items": [
-            { "label": "In a company",     "example": "Banned remote work → best employees leave for a competitor that allows it. Goal «discipline» → result «talent loss»." },
-            { "label": "In relationships","example": "«I'll tell him so he knows» — he'll tell others, the relationship reshapes across a wider field, not just between you two." },
-            { "label": "In product",       "example": "Killed discounts → fewer users → fewer reviews → less organic → fewer users. A loop started by «optimization»." }
-          ]
-        } },
-        { "type": "action_today", "props": {
-          "label": "Action for today",
-          "text": "Before one decision today ask: «What happens AFTER my action — how do the people affected respond?» Write down 2-3 scenarios. Does the decision change?"
-        } }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "In colonial India the British feared cobras. They put a bounty on every dead snake. First, cobra numbers dropped. Then they rose — because enterprising locals started breeding cobras to kill and turn in. When the program was cancelled, the breeders released their cobras. The situation was worse than the start…"
+          }
+        },
+        {
+          "type": "title",
+          "props": {
+            "text": "{{accent:Second-Order}} Thinking"
+          }
+        },
+        {
+          "type": "subtitle",
+          "props": {
+            "text": "Second-Order Thinking · H. Marks, R. Dalio"
+          }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/second_order.svg",
+            "alt": "A chain of causes: A → B → C → D, where D is an unexpected consequence opposite to the intent"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "First-order is the consequence we see immediately. Second-order is the consequence of our consequence. Third — the system's reaction to our reaction. Most people think first-order only. {{em:All good decisions live at second-order}}.",
+              "The Cobra Effect from Delhi is a classic. {{em:First-order}}: bounty → people kill cobras → fewer cobras. {{em:Second-order}}: people start breeding cobras to kill → less benefit. {{em:Third-order}}: program cancelled → breeders release cobras → outcome worse than start.",
+              "To think second-order you need one question: “What happens {{em:after}} I do this? How will the people affected respond?” That's it. Simple, but almost nobody does it."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "First-order — what happens right away. Second — what happens in response. Good decisions account for both — and the third."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Government wants people to save more. They introduce a penalty for low savings. What happens?",
+            "setup": null,
+            "options": [
+              {
+                "id": "first",
+                "text": "People save more — goal achieved",
+                "is_wiser": false
+              },
+              {
+                "id": "second",
+                "text": "People find ways to dodge the penalty or push back",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think first-order",
+              "explanation": "Real-world cases (Norway 2008, Argentina 2001, etc.): people don't save more — they shift assets to cash, gold, offshore. Result: less visible saving, more shadow economy, plus political backlash.",
+              "wisdom": "Charlie Munger: {{em:“I'll tell you what I'm going to do after you make your move. That's second-order. 90% of people stop at the first”}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Second-order doesn't mean “never act.” Sometimes the backlash is real but the action is still worth it. The goal is to {{em:know}} what's coming, not to paralyze decisions."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet it today",
+            "items": [
+              {
+                "label": "In a company",
+                "example": "Banned remote work → best employees leave for a competitor that allows it. Goal “discipline” → result “talent loss.”"
+              },
+              {
+                "label": "In relationships",
+                "example": "“I'll tell him so he knows” — he'll tell others, the relationship reshapes across a wider field, not just between you two."
+              },
+              {
+                "label": "In product",
+                "example": "Killed discounts → fewer users → fewer reviews → less organic → fewer users. A loop started by “optimization.”"
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Before one decision today ask: “What happens AFTER my action — how do the people affected respond?” Write down 2-3 scenarios. Does the decision change?"
+          }
+        }
       ]
     }
   },
-  "levels": [{ "level": 1, "doc_ref": "models/second_order" }]
+  "levels": [
+    {
+      "level": 1,
+      "doc_ref": "models/second_order"
+    }
+  ]
 }
