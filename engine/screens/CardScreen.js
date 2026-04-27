@@ -15,18 +15,19 @@ import { t } from '../i18n';
 export default function CardScreen({
   card, locale = 'ru', dynamic, isSaved, onSave, onShare,
   noScroll = false,
+  noTopInset = false,        // когда родитель уже учёл safe area top (CardViewer header)
   // CardLevelStack opt-in deeper навигация (Variant A):
-  onContinueDeeper = null,   // если задан — внизу карточки кнопка "↓ Глубже"
-  onBackToParent  = null,    // если задан — сверху ссылка "← К Уровню 1"
-  levelLabel      = null,    // строка для шапки если показываем "УРОВЕНЬ 2" и т.п.
-  deeperType      = null     // тип level 2: 'biology' | 'case_study' | 'boundaries' | 'apply_drill' | 'connections' | 'sources'
+  onContinueDeeper = null,
+  onBackToParent  = null,
+  levelLabel      = null,
+  deeperType      = null
 }) {
   return (
     <CardThemeScope category={card?.category} cardId={card?.id}>
       <CardScreenInner
         card={card} locale={locale} dynamic={dynamic}
         isSaved={isSaved} onSave={onSave} onShare={onShare}
-        noScroll={noScroll}
+        noScroll={noScroll} noTopInset={noTopInset}
         onContinueDeeper={onContinueDeeper}
         onBackToParent={onBackToParent}
         levelLabel={levelLabel}
@@ -36,7 +37,7 @@ export default function CardScreen({
   );
 }
 
-function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, onContinueDeeper, onBackToParent, levelLabel, deeperType }) {
+function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, noTopInset, onContinueDeeper, onBackToParent, levelLabel, deeperType }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -55,15 +56,16 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
     ? new Date(card.release_date).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', { weekday: 'short', day: '2-digit', month: 'short' })
     : '';
 
+  const topPad = noTopInset ? 0 : insets.top;
   // Когда noScroll=true — рендерим без ScrollView, контейнер-родитель (CardLevelStack)
   // оборачивает несколько карточек в один общий ScrollView. Это устраняет конфликт
   // вложенных вертикальных scroll-жестов.
   const Container = noScroll ? View : ScrollView;
   const containerProps = noScroll
-    ? { style: { backgroundColor: palette.bg, paddingTop: insets.top, paddingBottom: insets.bottom + 100 } }
+    ? { style: { backgroundColor: palette.bg, paddingTop: topPad, paddingBottom: insets.bottom + 100 } }
     : {
         style: { flex: 1, backgroundColor: palette.bg },
-        contentContainerStyle: { paddingTop: insets.top, paddingBottom: insets.bottom + 100 },
+        contentContainerStyle: { paddingTop: topPad, paddingBottom: insets.bottom + 100 },
         showsVerticalScrollIndicator: false
       };
 

@@ -52,41 +52,45 @@ export default function CardViewerScreen({ route, navigation, contentService, lo
     );
   }
 
-  // Resolve levels: если у карточки есть deep — показываем кнопку "Глубже" работающей.
-  const levels = typeof resolveLevels === 'function' ? resolveLevels(card) : [{ level: 1, card }];
-
-  // Если есть level 2 — простая state-based навигация как в CardLevelStack
   return (
     <View style={{ flex: 1, backgroundColor: palette.bg }}>
-      <Pressable
-        onPress={() => navigation.goBack()}
-        style={{
-          position: 'absolute',
-          top: insets.top + 12,
-          right: 16,
-          zIndex: 10,
-          width: 44,
-          height: 44,
-          borderRadius: 22,
-          backgroundColor: palette.bg_card,
-          borderWidth: 1,
-          borderColor: palette.border_bright,
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-        hitSlop={8}
-      >
-        <Text style={{
-          color: palette.accent,
-          fontFamily: tokens.fonts.mono_medium,
-          fontSize: 22,
-          lineHeight: 22,
-          marginTop: -2
-        }}>×</Text>
-      </Pressable>
-      <ErrorBoundary>
-        <CardScreen card={card} locale={locale} />
-      </ErrorBoundary>
+      {/* Header-бар: своё пространство для × выше topbar карточки */}
+      <View style={{
+        paddingTop: insets.top + 8,
+        paddingBottom: 8,
+        paddingHorizontal: 16,
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        backgroundColor: palette.bg
+      }}>
+        <Pressable
+          onPress={() => navigation.goBack()}
+          style={{
+            width: 44,
+            height: 44,
+            borderRadius: 22,
+            backgroundColor: palette.bg_card,
+            borderWidth: 1,
+            borderColor: palette.border_bright,
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          hitSlop={8}
+        >
+          <Text style={{
+            color: palette.accent,
+            fontFamily: tokens.fonts.mono_medium,
+            fontSize: 22,
+            lineHeight: 22,
+            marginTop: -2
+          }}>×</Text>
+        </Pressable>
+      </View>
+      <View style={{ flex: 1 }}>
+        <ErrorBoundary>
+          <CardScreen card={card} locale={locale} noTopInset />
+        </ErrorBoundary>
+      </View>
     </View>
   );
 }

@@ -11,7 +11,10 @@
 import { tryFirestore } from './firebase';
 import { getItem, setItem } from './storage';
 
-const CACHE_PREFIX = 'zerik:content:';
+// Bump CACHE_VERSION when filter/structure changes so старые кэши инвалидируются
+// без ручного Clear cache. v2 — после добавления фильтра deep-карточек.
+const CACHE_VERSION = 2;
+const CACHE_PREFIX = `zerik:content:v${CACHE_VERSION}:`;
 const RECENT_CACHE_KEY = (collection) => `${CACHE_PREFIX}${collection}:recent`;
 const CARD_CACHE_KEY = (collection, id) => `${CACHE_PREFIX}${collection}:card:${id}`;
 const RECENT_LIMIT = 30;
