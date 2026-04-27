@@ -26,3 +26,4 @@ android/.gradle/
 *.iml
 apps/mental-models/assets/fonts/*.ttf
 !apps/mental-models/assets/fonts/.gitkeep
+.claude/
