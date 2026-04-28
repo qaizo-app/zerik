@@ -1,8 +1,8 @@
 {
-  "name": "zerik-workspace",
+  "name": "qaizo-workspace",
   "private": true,
   "version": "0.1.0",
-  "description": "Zerik Studio monorepo. Engine + apps (Mental Models is the first product). Qaizo lives separately.",
+  "description": "Qaizo Studio monorepo. Engine + apps (Senik — first product, mental models). Qaizo's other products live separately.",
   "workspaces": [
     "engine",
     "apps/*"
@@ -18,13 +18,14 @@
     "seed:upload": "node scripts/upload-seed.js",
     "rules:deploy": "node scripts/deploy-firestore-rules.js",
     "icons:generate": "node scripts/generate-icons.js",
-    "mental-models": "npm --workspace mental-models start",
-    "mental-models:android": "npm --workspace mental-models run android",
-    "mental-models:ios": "npm --workspace mental-models run ios"
+    "senik": "npm --workspace senik start",
+    "senik:android": "npm --workspace senik run android",
+    "senik:ios": "npm --workspace senik run ios"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "ajv": "^8.17.1"
+    "ajv": "^8.17.1",
+    "jimp": "^1.6.1"
   },
   "dependencies": {
     "firebase-admin": "^13.8.0"
