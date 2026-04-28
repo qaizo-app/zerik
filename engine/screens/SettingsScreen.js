@@ -91,6 +91,7 @@ export default function SettingsScreen({
   user,
   onSignIn,
   onSignOut,
+  onDeleteAccount,
   onOpenPaywall,
   hasSubscription,
   appVersion = '',
@@ -148,6 +149,26 @@ export default function SettingsScreen({
     setLang(next); setLanguage(next);
   }
 
+  function confirmDeleteAccount() {
+    if (typeof onDeleteAccount !== 'function') return;
+    Alert.alert(
+      t('delete_account'),
+      t('delete_account_warning'),
+      [
+        { text: t('cancel'), style: 'cancel' },
+        { text: t('delete'), style: 'destructive', onPress: async () => {
+          const res = await onDeleteAccount();
+          if (res && res.success === false) {
+            const msg = res.error === 'reauth_required'
+              ? t('delete_account_reauth')
+              : t('delete_account_error');
+            Alert.alert(t('delete_account'), msg);
+          }
+        }}
+      ]
+    );
+  }
+
   function confirmClearCache() {
     Alert.alert(
       t('clear_cache'),
@@ -186,6 +207,11 @@ export default function SettingsScreen({
       {!hasSubscription ? (
         <Row label={t('upgrade_to_pro')} onPress={onOpenPaywall}
           right={<Text style={{ fontFamily: tokens.fonts.mono_medium, fontSize: 11, color: palette.accent, letterSpacing: 1.4 }}>→</Text>}
+        />
+      ) : null}
+      {user && typeof onDeleteAccount === 'function' ? (
+        <Row label={t('delete_account')} onPress={confirmDeleteAccount}
+          right={<Text style={{ fontFamily: tokens.fonts.mono, fontSize: 11, color: palette.picked, letterSpacing: 1.4 }}>→</Text>}
         />
       ) : null}
 
@@ -244,7 +270,7 @@ export default function SettingsScreen({
         fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 1.4,
         color: palette.text_mute, textTransform: 'uppercase', textAlign: 'center'
       }}>
-        {brand?.app?.name || 'Mental Models'}
+        {brand?.app?.name || 'Senik'}
       </Text>
     </ScrollView>
   );

@@ -3,20 +3,22 @@ import * as Font from 'expo-font';
 import * as Localization from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { Dimensions, FlatList, Pressable, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import * as Updates from 'expo-updates';
 
 import {
-  ThemeProvider,
+  ThemeProvider, useTheme,
   registerEngineBlocks,
-  CardStackScreen, LibraryScreen, HistoryScreen, AuthScreen,
+  CardLevelStack, LibraryScreen, HistoryScreen, AuthScreen,
   PaywallScreen, OnboardingScreen, SettingsScreen, CardViewerScreen,
   AppNavigator, RootStackNavigator,
   setLanguage, getLanguage, useLanguage,
-  consentService, pushService, appCheckService
+  consentService, pushService, appCheckService,
+  usePalette,
+  t
 } from '@engine';
 
 import { categoryPalettes } from './config/theme.config';
@@ -186,7 +188,7 @@ export default function App() {
                 Main: () => (
                   <AppNavigator
                     screens={{
-                      Today: () => <TodayTabScreen />,
+                      Today: ({ navigation }) => <TodayTabScreen navigation={navigation} hasSubscription={hasSubscription} />,
                       Library: ({ navigation }) => {
                         const lang = useLanguage();
                         return (
@@ -212,13 +214,16 @@ export default function App() {
                             locale={lang}
                             getHistory={async () => contentService.getCardChain({ limit: 50 })}
                             onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
+                            lockedTail={!hasSubscription}
+                            lockedTailLimit={7}
+                            onUnlock={() => navigation.getParent()?.navigate('Paywall')}
                           />
                         );
                       },
                       Settings: ({ navigation }) => (
                         <SettingsScreen
                           studioApps={studioApps}
-                          currentAppSlug="mental_models"
+                          currentAppSlug="senik"
                           pushDefaults={push}
                           user={user}
                           hasSubscription={hasSubscription}
@@ -232,6 +237,7 @@ export default function App() {
                           }}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
+                          onDeleteAccount={() => authService.deleteAccount()}
                           onOpenPaywall={() => navigation.getParent()?.navigate('Paywall')}
                         />
                       )
@@ -259,23 +265,45 @@ export default function App() {
   );
 }
 
-function TodayTabScreen() {
+function TodayTabScreen({ navigation, hasSubscription }) {
   const lang = useLanguage();
+  const { setCategory } = useTheme();
   const [cards, setCards] = useState(null);
   const [savedIds, setSavedIds] = useState([]);
+  const [streak, setStreak] = useState({ current: 0, best: 0, at_risk: false });
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const list = await contentService.getCardChain({ limit: 20 });
-      const ids  = await progressService.getSavedIds();
+      const list   = await contentService.getCardChain({ limit: 6 });
+      const ids    = await progressService.getSavedIds();
+      const streakNow = await progressService.getStreak();
       if (!cancelled) {
         setCards(list);
         setSavedIds(ids);
+        setStreak(streakNow);
       }
     })();
     return () => { cancelled = true; };
   }, []);
+
+  // Синхронизируем глобальную категорию с карточкой дня — чтобы таб-бар
+  // и прочий внекарточный UI окрашивался в её палитру.
+  // Также фиксируем просмотр карточки дня (обновляет streak) и
+  // перечитываем актуальное значение, чтобы 🔥 на топбаре было корректным.
+  useEffect(() => {
+    const top = cards?.[0];
+    if (!top) return;
+    if (top.category) setCategory(top.category);
+    if (!top.id) return;
+    (async () => {
+      try {
+        await progressService.recordCardOpened(top.id);
+        const s = await progressService.getStreak();
+        setStreak(s);
+      } catch (e) {}
+    })();
+  }, [cards, setCategory]);
 
   async function handleSave(card) {
     const next = await progressService.toggleSaved(card.id);
@@ -284,9 +312,6 @@ function TodayTabScreen() {
 
   async function handleShare(card) {
     const { shareService } = await import('@engine');
-    // viewRef можно прокинуть через CardStackScreen.onActiveCardCaptureRefChange
-    // когда подключим image-capture (рефакторинг CardScreen в forwardRef).
-    // Сейчас shareService падает на URL fallback автоматически.
     await shareService.shareCard(null, {
       card,
       locale: lang,
@@ -296,17 +321,111 @@ function TodayTabScreen() {
 
   if (!cards) return <View style={{ flex: 1, backgroundColor: '#0E1014' }} />;
 
+  const today = cards[0];
+  const earlier = cards.slice(1);
+  const isSaved = today ? savedIds.includes(today.id) : false;
+
+  if (!today) {
+    return (
+      <View style={{ flex: 1, backgroundColor: '#0E1014', alignItems: 'center', justifyContent: 'center', padding: 32 }}>
+        <Text style={{ color: '#9AA0A6', fontFamily: 'Spectral-Italic', fontStyle: 'italic', fontSize: 14, textAlign: 'center' }}>
+          {t('no_card_today')}
+        </Text>
+      </View>
+    );
+  }
+
+  const todayLevels = resolveLevels(today);
+  const screenWidth = Dimensions.get('window').width;
+
   return (
-    <CardStackScreen
-      cards={cards}
+    <CardLevelStack
+      levels={todayLevels}
+      width={screenWidth}
       locale={lang}
-      savedIds={savedIds}
-      onSavePress={handleSave}
-      onSharePress={handleShare}
-      resolveLevels={resolveLevels}
-      onCardOpened={(id) => {
-        progressService.recordCardOpened(id).catch(() => {});
-      }}
+      dynamic={{ streak: streak.current }}
+      isSaved={isSaved}
+      onSave={() => handleSave(today)}
+      onShare={() => handleShare(today)}
+      hasSubscription={hasSubscription}
+      onLockedDeeper={() => navigation?.getParent()?.navigate('Paywall')}
+      extraBottomSection={
+        earlier.length > 0 ? (
+          <EarlierStrip
+            cards={earlier}
+            locale={lang}
+            onCardPress={(c) => navigation?.getParent()?.navigate('CardViewer', { cardId: c.id })}
+          />
+        ) : null
+      }
     />
+  );
+}
+
+function EarlierStrip({ cards, locale, onCardPress }) {
+  const { palette, tokens } = useTheme();
+  return (
+    <View style={{ paddingTop: 8, paddingBottom: 12 }}>
+      <Text style={{
+        fontFamily: tokens.fonts.mono,
+        fontSize: 11,
+        letterSpacing: 1.6,
+        color: palette.text_mute,
+        textTransform: 'uppercase',
+        paddingHorizontal: 24,
+        paddingBottom: 12
+      }}>{t('earlier_this_week')}</Text>
+
+      <FlatList
+        data={cards}
+        keyExtractor={(c) => c.id}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 16 }}
+        renderItem={({ item }) => (
+          <EarlierCard card={item} locale={locale} onPress={() => onCardPress?.(item)} />
+        )}
+      />
+    </View>
+  );
+}
+
+function EarlierCard({ card, locale, onPress }) {
+  const cardPalette = usePalette(card.category);
+  const { tokens } = useTheme();
+  const localeContent = card.i18n?.[locale] || Object.values(card.i18n || {})[0];
+  const titleBlock = (localeContent?.blocks || []).find(b => b.type === 'title');
+  const titleText = titleBlock?.props?.text?.replace(/\{\{accent:([^}]+)\}\}/g, '$1') || card.id;
+  const dateLabel = card.release_date
+    ? new Date(card.release_date).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', { day: '2-digit', month: 'short' })
+    : '';
+
+  return (
+    <Pressable onPress={onPress} style={{
+      width: 180,
+      marginHorizontal: 8,
+      paddingVertical: 14,
+      paddingHorizontal: 14,
+      borderRadius: tokens.radius.tight,
+      borderWidth: 1,
+      borderColor: cardPalette.border,
+      backgroundColor: cardPalette.bg_card
+    }}>
+      <View style={{ height: 3, width: 28, backgroundColor: cardPalette.accent, marginBottom: 10, opacity: 0.8 }} />
+      <Text numberOfLines={3} style={{
+        fontFamily: tokens.fonts.serif_body,
+        fontSize: 14,
+        lineHeight: 18,
+        color: cardPalette.text,
+        marginBottom: 10
+      }}>{titleText}</Text>
+      <Text style={{
+        fontFamily: tokens.fonts.mono,
+        fontSize: 9.5,
+        letterSpacing: 1.4,
+        color: cardPalette.text_mute,
+        textTransform: 'uppercase'
+      }}>{dateLabel}</Text>
+    </Pressable>
   );
 }
