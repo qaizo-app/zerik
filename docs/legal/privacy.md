@@ -1,8 +1,8 @@
-# Privacy Policy — Mental Models
+# Privacy Policy — Senik
 
 _Last updated: 2026-04-27_
 
-This Privacy Policy describes what data Mental Models ("the App", "we") collects, how we use it, and your choices.
+This Privacy Policy describes what data Senik ("the App", "we") collects, how we use it, and your choices.
 
 ## Data we collect
 

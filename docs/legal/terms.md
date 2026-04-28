@@ -1,12 +1,12 @@
-# Terms of Service — Mental Models
+# Terms of Service — Senik
 
 _Last updated: 2026-04-27_
 
-By using Mental Models ("the App"), you agree to these Terms.
+By using Senik ("the App"), you agree to these Terms.
 
 ## The service
 
-Mental Models is a mobile app that delivers daily editorial content about mental models, cognitive biases, paradoxes, and thought experiments. It is provided as-is for personal, non-commercial use.
+Senik is a mobile app that delivers daily editorial content about mental models, cognitive biases, paradoxes, and thought experiments. It is provided as-is for personal, non-commercial use.
 
 ## Account
 
@@ -17,7 +17,7 @@ You may use the App without an account. If you sign in (email or Google), you ag
 
 ## Content ownership
 
-- All content (cards, illustrations, text) is © Mental Models / its authors. You may read it, share it via the in-app Share button, or quote short passages with attribution. You may not republish or reproduce content commercially.
+- All content (cards, illustrations, text) is © Senik / its authors. You may read it, share it via the in-app Share button, or quote short passages with attribution. You may not republish or reproduce content commercially.
 - Your votes on scenarios become part of aggregated public statistics shown in the App. We do not associate them with your identity.
 
 ## Subscriptions (when launched)

@@ -20,7 +20,7 @@ Two markdown files here:
 
 1. Copy/paste content into a Notion page
 2. Share → Publish → "Anyone with the link"
-3. Use that URL in `apps/mental-models/config/brand.config.js → legal.privacyUrl`
+3. Use that URL in `apps/senik/config/brand.config.js → legal.privacyUrl`
 
 **Option 3 — Standalone landing site (zerik.app)**
 
@@ -28,7 +28,7 @@ When you set up the marketing landing page, add `/privacy` and `/terms` routes t
 
 ## Wiring into the app
 
-Once URLs are live, fill them in `apps/mental-models/config/brand.config.js`:
+Once URLs are live, fill them in `apps/senik/config/brand.config.js`:
 
 ```js
 legal: {
