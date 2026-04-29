@@ -212,7 +212,14 @@ export default function App() {
                         return (
                           <HistoryScreen
                             locale={lang}
-                            getHistory={async () => contentService.getCardChain({ limit: 50 })}
+                            getHistory={async () => {
+                              const openedIds = await progressService.getOpenedIds();
+                              if (!openedIds.length) return [];
+                              const cards = await Promise.all(openedIds.map(id => contentService.getCardById(id)));
+                              return cards
+                                .filter(Boolean)
+                                .sort((a, b) => (b.release_date || '').localeCompare(a.release_date || ''));
+                            }}
                             onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
                             lockedTail={!hasSubscription}
                             lockedTailLimit={7}

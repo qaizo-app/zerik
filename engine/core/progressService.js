@@ -19,6 +19,7 @@ const DEFAULT_PROGRESS = {
   last_opened_date: null,
   total_cards_read: 0,
   saved_card_ids: [],
+  opened_card_ids: [],
   scenario_answers: {},
   language_preference: 'ru',
   subscription: { active: false, plan: null, renews_at: null }
@@ -94,32 +95,42 @@ export class ProgressService {
   }
 
   /**
-   * Зафиксировать что пользователь открыл карточку. Обновляет streak и
-   * total_cards_read. Вызывать один раз при первом открытии в день.
+   * Зафиксировать что пользователь открыл карточку. Обновляет streak,
+   * total_cards_read и opened_card_ids[]. Можно вызывать при каждом открытии —
+   * streak инкрементируется максимум раз в день, история не дублируется.
    */
-  async recordCardOpened(/* cardId */) {
+  async recordCardOpened(cardId) {
     const prog = await this._read();
     const today = todayIso();
+    const openedIds = prog.opened_card_ids || [];
+    const alreadyInHistory = cardId ? openedIds.includes(cardId) : false;
 
-    if (prog.last_opened_date === today) {
-      return prog; // уже зафиксировано сегодня
+    if (prog.last_opened_date === today && alreadyInHistory) {
+      return prog; // ничего нового
     }
 
-    let newStreak;
-    if (prog.last_opened_date === prevDayIso(today)) {
-      newStreak = (prog.streak_current || 0) + 1;
-    } else if (prog.last_opened_date === today) {
-      newStreak = prog.streak_current || 1;
-    } else {
-      newStreak = 1; // streak оборвался — стартуем заново
+    const patch = {};
+
+    // Streak обновляется только при первом открытии за день
+    if (prog.last_opened_date !== today) {
+      let newStreak;
+      if (prog.last_opened_date === prevDayIso(today)) {
+        newStreak = (prog.streak_current || 0) + 1;
+      } else {
+        newStreak = 1; // streak оборвался
+      }
+      patch.streak_current = newStreak;
+      patch.streak_best = Math.max(newStreak, prog.streak_best || 0);
+      patch.last_opened_date = today;
+      patch.total_cards_read = (prog.total_cards_read || 0) + 1;
     }
 
-    return await this._write({
-      streak_current: newStreak,
-      streak_best: Math.max(newStreak, prog.streak_best || 0),
-      last_opened_date: today,
-      total_cards_read: (prog.total_cards_read || 0) + 1
-    });
+    if (cardId && !alreadyInHistory) {
+      patch.opened_card_ids = [...openedIds, cardId];
+    }
+
+    if (Object.keys(patch).length === 0) return prog;
+    return await this._write(patch);
   }
 
   async recordScenarioAnswer(cardId, optionId) {
@@ -169,6 +180,11 @@ export class ProgressService {
     return await this._write({ subscription: sub });
   }
 
+  async getOpenedIds() {
+    const prog = await this._read();
+    return prog.opened_card_ids || [];
+  }
+
   /**
    * При логине — переносим guest-прогресс из AsyncStorage в Firestore-документ.
    * Вызывать сразу после успешного auth.
@@ -192,6 +208,7 @@ export class ProgressService {
           streak_best: Math.max(guest.streak_best || 0, cloud.streak_best || 0),
           total_cards_read: Math.max(guest.total_cards_read || 0, cloud.total_cards_read || 0),
           saved_card_ids: Array.from(new Set([...(guest.saved_card_ids || []), ...(cloud.saved_card_ids || [])])),
+          opened_card_ids: Array.from(new Set([...(guest.opened_card_ids || []), ...(cloud.opened_card_ids || [])])),
           scenario_answers: { ...(cloud.scenario_answers || {}), ...(guest.scenario_answers || {}) },
           last_opened_date: [guest.last_opened_date, cloud.last_opened_date].filter(Boolean).sort().pop() || null
         }, { merge: true });

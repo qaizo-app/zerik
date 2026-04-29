@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Mental Models",
+    "name": "Senik",
     "slug": "mental-models",
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "scheme": "mentalmodels",
+    "scheme": "senik",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -15,12 +15,8 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "_ios_disabled_until_apple_developer": {
-      "bundleIdentifier": "com.zerik.mentalmodels",
-      "supportsTablet": false
-    },
     "android": {
-      "package": "com.zerik.mentalmodels",
+      "package": "com.qaizo.senik",
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -42,14 +38,16 @@
         "expo-build-properties",
         {
           "android": {
-            "useNextNotificationsApi": true
+            "useNextNotificationsApi": true,
+            "enableProguardInReleaseBuilds": false
           },
           "ios": {
             "useFrameworks": "static"
           }
         }
       ],
-      "@react-native-firebase/app-check"
+      "@react-native-firebase/app-check",
+      "./plugins/with-adi-registration.js"
     ],
     "extra": {
       "appSlug": "mental-models",
