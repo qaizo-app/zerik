@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Scale beam pivot -->
+  <circle cx="200" cy="120" r="8" fill="#6c6c8c"/>
+  <rect x="196" y="128" width="8" height="60" rx="3" fill="#6c6c8c"/>
+  <rect x="172" y="185" width="56" height="8" rx="3" fill="#6c6c8c"/>
+  <!-- Scale beam — tilted to left (heavier side) -->
+  <line x1="80" y1="135" x2="320" y2="108" stroke="#aaaacc" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left pan (heavy) -->
+  <ellipse cx="82" cy="155" rx="44" ry="10" fill="#4a4a7a" stroke="#6c6c8c" stroke-width="1.5"/>
+  <!-- Left pan contents: many items -->
+  <circle cx="68" cy="142" r="6" fill="#cc6b8e" opacity="0.9"/>
+  <circle cx="82" cy="138" r="6" fill="#cc6b8e" opacity="0.9"/>
+  <circle cx="96" cy="140" r="6" fill="#cc6b8e" opacity="0.9"/>
+  <circle cx="74" cy="130" r="5" fill="#cc6b8e" opacity="0.7"/>
+  <circle cx="90" cy="128" r="5" fill="#cc6b8e" opacity="0.7"/>
+  <text x="82" y="172" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">97%</text>
+  <!-- Right pan (light) -->
+  <ellipse cx="318" cy="128" rx="44" ry="10" fill="#4a4a7a" stroke="#6c6c8c" stroke-width="1.5"/>
+  <!-- Right pan contents: one item -->
+  <circle cx="318" cy="116" r="6" fill="#4a9a4a" opacity="0.9"/>
+  <text x="318" y="143" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">3%</text>
+  <!-- "РАВНО" label in the middle — wrong -->
+  <rect x="162" y="195" width="76" height="26" rx="6" fill="#cc4444" opacity="0.85"/>
+  <text x="200" y="212" text-anchor="middle" fill="white" font-family="sans-serif" font-size="12" font-weight="bold">= РАВНО</text>
+  <!-- X mark over it -->
+  <line x1="162" y1="195" x2="238" y2="221" stroke="#f7d060" stroke-width="2" opacity="0.7"/>
+  <line x1="238" y1="195" x2="162" y2="221" stroke="#f7d060" stroke-width="2" opacity="0.7"/>
+  <!-- Labels -->
+  <text x="82" y="240" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="10">97 учёных</text>
+  <text x="318" y="240" text-anchor="middle" fill="#4a9a4a" font-family="sans-serif" font-size="10">3 учёных</text>
+  <!-- Bottom -->
+  <text x="200" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="10">Сходство в одном — не равенство по всем значимым параметрам</text>
+</svg>

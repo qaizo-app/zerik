@@ -26,8 +26,11 @@
           "type": "book_quote",
           "props": {
             "quote": "Препятствие на пути становится путём. Никогда не забывайте это. Всегда.",
-            "attribution": "Марк Аврелий, «Размышления», II в. н.э. — эпиграф к книге Холидея",
-            "context": "Холидей систематизирует стоическую философию — прежде всего Марка Аврелия, Эпиктета и Сенеку — и показывает, как её применяли реальные люди в реальных кризисах. Книга — не самопомощь, а операционное руководство по применению стоицизма."
+            "book_title": "Препятствие — это путь",
+            "author": "Райан Холидей",
+            "year": "2014",
+            "chapter": "Эпиграф (Марк Аврелий, «Размышления»)",
+            "application": "Холидей систематизирует стоическую философию — прежде всего Марка Аврелия, Эпиктета и Сенеку — и показывает, как её применяли реальные люди в реальных кризисах. Книга — не самопомощь, а операционное руководство по применению стоицизма."
           }
         },
         {
@@ -111,8 +114,11 @@
           "type": "book_quote",
           "props": {
             "quote": "The impediment to action advances action. What stands in the way becomes the way. Never forget this. Always.",
-            "attribution": "Marcus Aurelius, Meditations, 2nd century AD — epigraph to Holiday's book",
-            "context": "Holiday systematizes Stoic philosophy — primarily Marcus Aurelius, Epictetus, and Seneca — and shows how real people applied it in real crises. The book isn't self-help — it's an operational manual for applying Stoicism."
+            "book_title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "year": "2014",
+            "chapter": "Epigraph (Marcus Aurelius, Meditations)",
+            "application": "Holiday systematizes Stoic philosophy — primarily Marcus Aurelius, Epictetus, and Seneca — and shows how real people applied it in real crises. The book isn't self-help — it's an operational manual for applying Stoicism."
           }
         },
         {

@@ -107,7 +107,7 @@
           "props": {
             "tag": "Paradox",
             "question": "Can a group of rational people with rational preferences collectively make an irrational decision?",
-            "hint": "Is individual rationality and collective rationality the same thing?",
+            "hint": "Are individual rationality and collective rationality the same thing?",
             "user_prompt": "I have a thought — reveal the analysis",
             "reveal_text": "Yes — this is exactly what Condorcet's paradox shows. The \"collective will\" is not simply the sum of individual wills. With certain distributions of preferences, any pair of options loses to a third in pairwise voting — a cycle. This isn't a failure of democracy — it's a mathematical constraint on any aggregation system. Solutions: ranked-choice voting, random tiebreakers, delegation — each with its own trade-offs.",
             "intuition_trap": "Intuition: \"the majority is always right.\" Mathematics: a majority can form a cycle where there is no \"right\" option. This isn't a reason to abandon democracy — it's a reason to understand its limitations and choose voting systems consciously."

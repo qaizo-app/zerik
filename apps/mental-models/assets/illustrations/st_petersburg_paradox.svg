@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Coin flip at top -->
+  <circle cx="55" cy="50" r="22" fill="#f7d060" opacity="0.9"/>
+  <text x="55" y="56" text-anchor="middle" fill="#1a1a2e" font-family="sans-serif" font-size="18" font-weight="bold">?</text>
+  <!-- Exponential bars: flip 1, 2, 3, 4 ... -->
+  <!-- Bar 1: $2, prob 1/2 -->
+  <rect x="30" y="230" width="28" height="28" rx="3" fill="#4a9a4a" opacity="0.85"/>
+  <text x="44" y="245" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8">$2</text>
+  <text x="44" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="8">½</text>
+  <!-- Bar 2: $4 -->
+  <rect x="70" y="216" width="28" height="42" rx="3" fill="#4a9a4a" opacity="0.85"/>
+  <text x="84" y="235" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8">$4</text>
+  <text x="84" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="8">¼</text>
+  <!-- Bar 3: $8 -->
+  <rect x="110" y="196" width="28" height="62" rx="3" fill="#4a9a4a" opacity="0.85"/>
+  <text x="124" y="225" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8">$8</text>
+  <text x="124" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="8">⅛</text>
+  <!-- Bar 4: $16 -->
+  <rect x="150" y="166" width="28" height="92" rx="3" fill="#4a9a4a" opacity="0.85"/>
+  <text x="164" y="205" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8">$16</text>
+  <text x="164" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="7">1/16</text>
+  <!-- Bar 5: $32 -->
+  <rect x="190" y="126" width="28" height="132" rx="3" fill="#4a9a4a" opacity="0.85"/>
+  <text x="204" y="175" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8">$32</text>
+  <text x="204" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="7">1/32</text>
+  <!-- Bar 6: $64 -->
+  <rect x="230" y="90" width="28" height="168" rx="3" fill="#cc6b8e" opacity="0.7"/>
+  <text x="244" y="168" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8">$64</text>
+  <!-- Infinity symbol -->
+  <text x="290" y="160" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="54" font-weight="bold">∞</text>
+  <text x="290" y="200" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="10">ожидаемый</text>
+  <text x="290" y="213" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="10">выигрыш</text>
+  <!-- Human verdict -->
+  <rect x="315" y="225" width="75" height="36" rx="6" fill="#2a1a2a" stroke="#cc6b8e" stroke-width="1.5"/>
+  <text x="352" y="239" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="9">Люди платят</text>
+  <text x="352" y="254" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="12" font-weight="bold">~$25</text>
+  <!-- Bottom label -->
+  <text x="200" y="290" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="10">Полезность нелинейна: каждый следующий доллар значит меньше</text>
+</svg>

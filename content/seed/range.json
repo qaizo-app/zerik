@@ -26,8 +26,10 @@
           "type": "book_quote",
           "props": {
             "quote": "В сложных и непредсказуемых мирах широта опыта обеспечивает важные преимущества — когда нужны творческие связи, которые специалисты не могут увидеть.",
-            "attribution": "Дэвид Эпштейн, «Диапазон», 2019",
-            "context": "Эпштейн разграничивает «доброжелательные» домены (шахматы, гольф, классическая музыка — правила фиксированы, обратная связь мгновенна) и «злобные» (медицина, бизнес, политика — правила меняются, паттерны не повторяются). В злобных доменах ранняя гиперспециализация опасна."
+            "book_title": "Диапазон",
+            "author": "Дэвид Эпштейн",
+            "year": "2019",
+            "application": "Эпштейн разграничивает «доброжелательные» домены (шахматы, гольф, классическая музыка — правила фиксированы, обратная связь мгновенна) и «злобные» (медицина, бизнес, политика — правила меняются, паттерны не повторяются). В злобных доменах ранняя гиперспециализация опасна."
           }
         },
         {
@@ -111,8 +113,10 @@
           "type": "book_quote",
           "props": {
             "quote": "In complex and unpredictable domains, breadth of experience provides important advantages — when creative connections are needed that specialists cannot see.",
-            "attribution": "David Epstein, Range, 2019",
-            "context": "Epstein distinguishes \"kind\" learning environments (chess, golf, classical music — fixed rules, instant feedback) from \"wicked\" ones (medicine, business, politics — rules change, patterns don't repeat). In wicked domains, early hyper-specialization is dangerous."
+            "book_title": "Range",
+            "author": "David Epstein",
+            "year": "2019",
+            "application": "Epstein distinguishes \"kind\" learning environments (chess, golf, classical music — fixed rules, instant feedback) from \"wicked\" ones (medicine, business, politics — rules change, patterns don't repeat). In wicked domains, early hyper-specialization is dangerous."
           }
         },
         {

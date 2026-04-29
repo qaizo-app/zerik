@@ -26,8 +26,10 @@
           "type": "book_quote",
           "props": {
             "quote": "У того, кто знает «зачем» жить, почти любое «как» по плечу.",
-            "attribution": "Виктор Франкл, цитируя Ницше в «Человек в поисках смысла», 1946",
-            "context": "Франкл написал книгу за девять дней после освобождения. Он потерял жену, родителей и брата. Его идея: человек может пережить почти любые обстоятельства, если видит в них смысл. Бессмысленность страдания — невыносима. Осмысленное страдание — переносимо."
+            "book_title": "Человек в поисках смысла",
+            "author": "Виктор Франкл",
+            "year": "1946",
+            "application": "Франкл написал книгу за девять дней после освобождения. Он потерял жену, родителей и брата. Его идея: человек может пережить почти любые обстоятельства, если видит в них смысл. Бессмысленность страдания — невыносима. Осмысленное страдание — переносимо."
           }
         },
         {
@@ -111,8 +113,10 @@
           "type": "book_quote",
           "props": {
             "quote": "He who has a why to live can bear with almost any how.",
-            "attribution": "Viktor Frankl, quoting Nietzsche in Man's Search for Meaning, 1946",
-            "context": "Frankl wrote the book in nine days after liberation. He lost his wife, parents, and brother. His idea: a person can survive almost any circumstances if they see meaning in them. Meaningless suffering is unbearable. Meaningful suffering is endurable."
+            "book_title": "Man's Search for Meaning",
+            "author": "Viktor Frankl",
+            "year": "1946",
+            "application": "Frankl wrote the book in nine days after liberation. He lost his wife, parents, and brother. His idea: a person can survive almost any circumstances if they see meaning in them. Meaningless suffering is unbearable. Meaningful suffering is endurable."
           }
         },
         {
@@ -121,7 +125,7 @@
             "drop_cap": true,
             "paragraphs": [
               "Frankl contrasted his logotherapy with the two major psychological schools of his time. Freud: the primary driver is the pleasure principle. Adler: the will to power. Frankl: the primary human motivation is the will to meaning. When meaning is found, a person can bear almost any conditions. When lost — they break down even in comfort.",
-              "Meaning, for Frankl, cannot be invented — it must be found. It exists in three forms: in doing (work, creation), in experiencing (love, beauty, truth), and in the stance one takes toward unavoidable suffering. {{em:The last human freedom is the choice of one's attitude toward circumstances.}} This is what cannot be taken away, even in any prison camp.",
+              "Meaning, for Frankl, cannot be invented — it must be found. It exists in three forms: in doing (work, creation), in experiencing (love, beauty, truth), and in the stance one takes toward unavoidable suffering. {{em:The last human freedom is the choice of one's attitude toward circumstances.}} This is what cannot be taken away — not even in a concentration camp.",
               "The \"existential vacuum\" — the lack of meaning — Frankl considered the central problem of the modern Western person. Not poverty, not disease, but the sense that existence is meaningless. The neuroses of our time are largely neuroses without meaning."
             ]
           }

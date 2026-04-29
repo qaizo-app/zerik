@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Axes -->
+  <line x1="50" y1="40" x2="50" y2="225" stroke="#3a3a5a" stroke-width="2"/>
+  <line x1="50" y1="225" x2="370" y2="225" stroke="#3a3a5a" stroke-width="2"/>
+  <text x="38" y="44" text-anchor="middle" fill="#6c6c8c" font-family="sans-serif" font-size="9">+</text>
+  <text x="38" y="228" text-anchor="middle" fill="#6c6c8c" font-family="sans-serif" font-size="9">–</text>
+  <text x="370" y="238" text-anchor="middle" fill="#6c6c8c" font-family="sans-serif" font-size="9">время</text>
+  <!-- Experience curve (grey = "not remembered") -->
+  <polyline points="50,180 90,165 130,155 160,145 190,140 220,170 250,160 280,175 310,168 340,165"
+    stroke="#4a4a7a" stroke-width="2.5" fill="none" stroke-dasharray="4,3"/>
+  <!-- Peak point circled (highlighted) -->
+  <circle cx="190" cy="82" r="0"/>
+  <!-- Peak spike (the remembered peak) -->
+  <polyline points="170,140 190,72 210,140" stroke="#f7d060" stroke-width="2.5" fill="none"/>
+  <circle cx="190" cy="72" r="10" fill="none" stroke="#f7d060" stroke-width="2.5"/>
+  <text x="190" y="55" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="10" font-weight="bold">ПИК</text>
+  <!-- End point (highlighted) -->
+  <circle cx="340" cy="192" r="10" fill="none" stroke="#cc6b8e" stroke-width="2.5"/>
+  <circle cx="340" cy="192" r="4" fill="#cc6b8e"/>
+  <text x="340" y="210" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="10" font-weight="bold">КОНЕЦ</text>
+  <!-- Grey out middle section -->
+  <rect x="215" y="40" width="120" height="185" fill="#1a1a2e" opacity="0.5"/>
+  <text x="275" y="140" text-anchor="middle" fill="#3a3a5a" font-family="sans-serif" font-size="10">не</text>
+  <text x="275" y="153" text-anchor="middle" fill="#3a3a5a" font-family="sans-serif" font-size="10">помнят</text>
+  <!-- Two remembering self boxes -->
+  <rect x="50" y="240" width="140" height="30" rx="5" fill="#2a1a2a" stroke="#f7d060" stroke-width="1"/>
+  <text x="120" y="258" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="9">Пик: самый сильный момент</text>
+  <rect x="200" y="240" width="140" height="30" rx="5" fill="#2a1a2a" stroke="#cc6b8e" stroke-width="1"/>
+  <text x="270" y="258" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="9">Конец: как всё завершилось</text>
+  <!-- Duration neglect label -->
+  <text x="200" y="285" text-anchor="middle" fill="#6c6c8c" font-family="sans-serif" font-size="9">Продолжительность — почти не влияет на оценку (пренебрежение длительностью)</text>
+</svg>

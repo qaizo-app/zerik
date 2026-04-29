@@ -26,8 +26,10 @@
           "type": "book_quote",
           "props": {
             "quote": "Конкуренция — это для проигравших.",
-            "attribution": "Питер Тиль, «От нуля к единице», 2014",
-            "context": "Тиль, сооснователь PayPal и один из первых инвесторов Facebook, утверждает: компании, конкурирующие за одинаковые рынки, разрушают ценность. Монополия — не зло, а сигнал создания чего-то принципиально нового. Google — монополия, потому что создала что-то, чего не было. Авиакомпании — квазиконкуренты, потому что делают то же самое."
+            "book_title": "От нуля к единице",
+            "author": "Питер Тиль",
+            "year": "2014",
+            "application": "Тиль, сооснователь PayPal и один из первых инвесторов Facebook, утверждает: компании, конкурирующие за одинаковые рынки, разрушают ценность. Монополия — не зло, а сигнал создания чего-то принципиально нового. Google — монополия, потому что создала что-то, чего не было. Авиакомпании — квазиконкуренты, потому что делают то же самое."
           }
         },
         {
@@ -111,8 +113,10 @@
           "type": "book_quote",
           "props": {
             "quote": "Competition is for losers.",
-            "attribution": "Peter Thiel, Zero to One, 2014",
-            "context": "Thiel, co-founder of PayPal and one of Facebook's first investors, argues that companies competing over identical markets destroy value. Monopoly isn't evil — it's a signal of creating something genuinely new. Google is a monopoly because it created something that didn't exist. Airlines are quasi-competitors because they all do the same thing."
+            "book_title": "Zero to One",
+            "author": "Peter Thiel",
+            "year": "2014",
+            "application": "Thiel, co-founder of PayPal and one of Facebook's first investors, argues that companies competing over identical markets destroy value. Monopoly isn't evil — it's a signal of creating something genuinely new. Google is a monopoly because it created something that didn't exist. Airlines are quasi-competitors because they all do the same thing."
           }
         },
         {

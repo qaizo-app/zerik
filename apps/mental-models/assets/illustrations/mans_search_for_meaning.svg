@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Dark surroundings -->
+  <rect x="0" y="0" width="155" height="300" fill="#0d0d1a"/>
+  <rect x="0" y="0" width="400" height="300" fill="url(#darkGrad)" opacity="0.7"/>
+  <defs>
+    <radialGradient id="lightBeam" cx="90%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#f7d060" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1a1a2e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d0d1a" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#0d0d1a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0d0d1a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Light beam from right -->
+  <rect width="400" height="300" fill="url(#lightBeam)"/>
+  <!-- Beam rays -->
+  <line x1="370" y1="150" x2="100" y2="100" stroke="#f7d060" stroke-width="1" opacity="0.2"/>
+  <line x1="370" y1="150" x2="80" y2="150" stroke="#f7d060" stroke-width="2" opacity="0.3"/>
+  <line x1="370" y1="150" x2="100" y2="200" stroke="#f7d060" stroke-width="1" opacity="0.2"/>
+  <!-- Person figure (silhouette, left side, in darkness) -->
+  <circle cx="90" cy="160" r="18" fill="#4a4a7a"/>
+  <rect x="76" y="178" width="28" height="45" rx="8" fill="#4a4a7a"/>
+  <!-- Person looking right — head turned -->
+  <circle cx="96" cy="158" r="5" fill="#6c8ebf" opacity="0.8"/>
+  <!-- Goal/purpose silhouette on horizon (right, in light) -->
+  <circle cx="355" cy="148" r="16" fill="#f7d060" opacity="0.6"/>
+  <rect x="342" y="164" width="26" height="32" rx="6" fill="#f7d060" opacity="0.6"/>
+  <!-- Path / line of light connecting them -->
+  <line x1="120" y1="195" x2="340" y2="170" stroke="#f7d060" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Three meaning sources (icons) -->
+  <text x="200" y="75" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="10">СМЫСЛ</text>
+  <!-- Work -->
+  <rect x="140" y="82" width="34" height="28" rx="5" fill="#2a2a4a" stroke="#6c6c8c" stroke-width="1"/>
+  <text x="157" y="100" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="10">Дело</text>
+  <!-- Love -->
+  <rect x="183" y="82" width="34" height="28" rx="5" fill="#2a2a4a" stroke="#6c6c8c" stroke-width="1"/>
+  <text x="200" y="100" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="10">Любовь</text>
+  <!-- Stance -->
+  <rect x="226" y="82" width="34" height="28" rx="5" fill="#2a2a4a" stroke="#6c6c8c" stroke-width="1"/>
+  <text x="243" y="98" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">Пози-</text>
+  <text x="243" y="108" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">ция</text>
+  <!-- Quote -->
+  <text x="200" y="248" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="10" font-style="italic">«У знающего зачем — выдержит любое как»</text>
+  <text x="200" y="264" text-anchor="middle" fill="#6c6c8c" font-family="sans-serif" font-size="9">— Виктор Франкл (по Ницше)</text>
+</svg>
