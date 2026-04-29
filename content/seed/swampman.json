@@ -1,0 +1,170 @@
+{
+  "id": "swampman",
+  "category": "thought_experiments",
+  "release_number": 106,
+  "release_date": "2026-07-26",
+  "tags": ["davidson", "personal_identity", "causal_history", "consciousness", "meaning", "philosophy_of_mind"],
+  "difficulty": 4,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/swampman.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "Молния ударяет в болото — и вас одновременно. Вы погибаете. Из той же молнии случайно собирается точная физическая копия вас: те же атомы, те же нейроны, та же «память». Болотный человек встаёт, идёт к вашим друзьям, говорит с ними. Он считает себя вами. Но является ли он вами? Является ли он вообще человеком с мыслями и убеждениями?" }
+        },
+        { "type": "title", "props": { "text": "Болотный {{accent:человек}}" } },
+        { "type": "subtitle", "props": { "text": "Swampman · Дональд Дэвидсон · «Знание разума и мира» · 1987" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/swampman.svg", "alt": "Молния бьёт в болото — из него поднимается фигура, идентичная человеку, но исходящая из случайности, а не истории" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Дэвидсон использует болотного человека для критики «интерналистских» теорий разума: взгляда, что мысли и убеждения определяются только тем, что происходит внутри черепа. Болотный человек физически идентичен вам — но его «память о друзьях» никогда не формировалась через реальный опыт с этими людьми. Его «убеждение о кошке» никогда не создавалось через контакт с кошками.",
+              "Дэвидсон утверждает: мысль о X требует причинно-исторической связи с X. Болотный человек «думает о воде», но его «мысль» не имеет надлежащей каузальной истории. {{em:Значение — не в голове. Значение вырастает из отношения между разумом, языком и миром во времени.}} Это называют «семантическим экстернализмом».",
+              "Эксперимент ставит под вопрос: является ли болотный человек моральной персоной? Должен ли он нести ответственность за «свои» прошлые действия — хотя он их не совершал? Должны ли друзья относиться к нему как к вам? Ответы зависят от того, что мы считаем конституирующим личность: физическая структура или причинно-историческая непрерывность."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мысли и убеждения не определяются только текущим состоянием мозга — они требуют надлежащей причинно-исторической связи с миром. Одной физической идентичности недостаточно для идентичности личности или значения слов."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Болотный человек встречает вашего лучшего друга и думает: «Я его знаю». Является ли это убеждение настоящим?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — он физически идентичен вам, значит его убеждения так же реальны", "is_wiser": false },
+              { "id": "no", "text": "Нет — убеждение требует реальной причинной истории знакомства, которой у него нет", "is_wiser": true },
+              { "id": "unclear", "text": "Неизвестно — это зависит от того, что мы считаем «настоящим» убеждением", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают убеждение настоящим",
+              "explanation": "Дэвидсон настаивает: нет. Убеждение «я знаю Х» требует реальной каузальной истории с X. У болотного человека есть нейронная структура, которая у вас возникла через годы опыта, — но сам он эту историю не прожил. По аналогии: точная копия картины Рембрандта, созданная машиной, не является «картиной Рембрандта» — несмотря на физическую идентичность. Происхождение имеет значение.",
+              "wisdom": "{{em:Идентичность — это не только структура. Это история, которая её создала.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Болотный человек — не аргумент против ИИ или за мистицизм сознания. Он ставит точный философский вопрос: где находится граница между «иметь убеждение» и «функционировать так, будто имеешь убеждение»? Этот вопрос становится острее с развитием ИИ — без мистических допущений."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В философии ИИ", "example": "LLM-модели генерируют текст, который выглядит как «убеждения». Болотный человек ставит вопрос: является ли это убеждениями без надлежащей каузальной истории? Или новый вид убеждений требует новых критериев?" },
+              { "label": "В медицинской этике", "example": "Пациент с тяжёлой амнезией — физически тот же человек, но без непрерывности памяти. Является ли он «тем же лицом» в юридическом, моральном, личном смысле? Болотный человек делает этот вопрос острее." },
+              { "label": "В теории языка", "example": "«Твёртая земля» Хилари Патнэма — похожий эксперимент: значение слова «вода» определяется реальным составом вещества, а не только ощущением. Экстернализм значения — широкая философская программа, частью которой является болотный человек." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли у вас убеждение, которое вы считаете «своим», но которое на самом деле унаследовали без личного опыта — из медиа, семьи, авторитетов? Болотный человек напоминает: убеждение без каузальной истории — не вполне ваше. Проверьте его источник."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "Lightning strikes a swamp — and you simultaneously. You die. From the same lightning, an exact physical copy of you happens to assemble: the same atoms, the same neurons, the same \"memories.\" The Swampman stands up, walks to your friends, talks with them. He believes he is you. But is he you? Does he even have thoughts and beliefs at all?" }
+        },
+        { "type": "title", "props": { "text": "{{accent:Swamp}}man" } },
+        { "type": "subtitle", "props": { "text": "Swampman · Donald Davidson · Knowing One's Own Mind · 1987" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/swampman.svg", "alt": "Lightning strikes a swamp — a figure rises from it, identical to a human, but arising from chance rather than history" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Davidson uses Swampman to critique \"internalist\" theories of mind: the view that thoughts and beliefs are determined solely by what happens inside the skull. Swampman is physically identical to you — but his \"memories of friends\" were never formed through real experience with those people. His \"belief about a cat\" was never created through contact with cats.",
+              "Davidson argues: a thought about X requires a causal-historical connection to X. Swampman \"thinks about water,\" but his \"thought\" lacks the proper causal history. {{em:Meaning is not in the head. Meaning grows from the relationship between mind, language, and world over time.}} This is called \"semantic externalism.\"",
+              "The experiment raises questions: is Swampman a moral person? Should he bear responsibility for \"his\" past actions — though he didn't perform them? Should friends treat him as you? The answers depend on what we take to constitute personhood: physical structure or causal-historical continuity."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Thoughts and beliefs aren't determined solely by the current state of the brain — they require proper causal-historical connection to the world. Physical identity alone is not sufficient for personal identity or for the meaning of words."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Swampman meets your best friend and thinks: \"I know him.\" Is this a genuine belief?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — he is physically identical to you, so his beliefs are just as real", "is_wiser": false },
+              { "id": "no", "text": "No — a belief requires a real causal history of acquaintance, which he lacks", "is_wiser": true },
+              { "id": "unclear", "text": "Unknown — it depends on what we consider a \"genuine\" belief", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "consider it a genuine belief",
+              "explanation": "Davidson insists: no. The belief \"I know X\" requires a real causal history with X. Swampman has a neural structure that in you arose from years of experience — but he himself didn't live that history. By analogy: an exact copy of a Rembrandt painting created by a machine is not \"a Rembrandt\" — despite physical identity. Origin matters.",
+              "wisdom": "{{em:Identity is not only structure. It's the history that created it.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Swampman is not an argument against AI or for mysticism about consciousness. It poses a precise philosophical question: where is the boundary between \"having a belief\" and \"functioning as if you have a belief\"? This question becomes sharper as AI develops — without mystical assumptions."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In AI philosophy", "example": "LLM models generate text that looks like \"beliefs.\" Swampman raises the question: are these beliefs without proper causal history? Or do new kinds of beliefs require new criteria?" },
+              { "label": "In medical ethics", "example": "A patient with severe amnesia is physically the same person but has no memory continuity. Are they the \"same person\" in a legal, moral, personal sense? Swampman makes this question sharper." },
+              { "label": "In philosophy of language", "example": "Hilary Putnam's \"Twin Earth\" is a similar experiment: the meaning of the word \"water\" is determined by the substance's real composition, not just the feeling. Semantic externalism is a broad philosophical program of which Swampman is a part." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Do you hold a belief you consider \"yours\" but that you actually inherited without personal experience — from media, family, or authority? Swampman reminds us: a belief without a causal history isn't fully yours. Check its source."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/swampman" }]
+}

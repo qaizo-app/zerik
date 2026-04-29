@@ -1,0 +1,168 @@
+{
+  "id": "lindy_effect",
+  "category": "mental_models",
+  "release_number": 95,
+  "release_date": "2026-07-15",
+  "tags": ["taleb", "lindy", "longevity", "antifragile", "survival", "time"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/lindy_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "Книга, которой 100 лет, вероятно, проживёт ещё 100. Стартап, которому полгода, вероятно, умрёт в течение пяти лет. Технология, которой 50 лет — скорее переживёт технологию, которой год. Идея Талеба проста и контринтуитивна: для нефизических вещей время выживания предсказывает ожидаемую будущую жизнь. Чем дольше существовало — тем дольше проживёт." }
+        },
+        { "type": "title", "props": { "text": "Эффект {{accent:Линди}}" } },
+        { "type": "subtitle", "props": { "text": "Lindy Effect · Нассим Талеб · «Антихрупкость» · 2012" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/lindy_effect.svg", "alt": "Временная шкала: старая книга и колесо живут дальше; молодой стартап обрывается вскоре после старта" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Название происходит от нью-йоркского ресторана Lindy's, где актёры обсуждали: комедийное шоу, выжившее ещё 100 дней на Бродвее, вероятно, продержится ещё 100. Математическое обоснование: многие нефизические вещи следуют распределению Парето, а не нормальному. Для них нет «среднего срока жизни» — чем дольше они существуют, тем больше будущего у них впереди.",
+              "Эффект Линди применяется к идеям, технологиям, институтам, книгам. {{em:Молоток существует тысячи лет — вероятно, переживёт большинство современных гаджетов. «Илиада» пережила тысячи бестселлеров — вероятно, переживёт и нынешние.}} Это не ностальгия — это статистика выживания. Время — фильтр, который отбраковывает нежизнеспособное.",
+              "Важная оговорка: эффект Линди не работает для биологических организмов (у людей есть максимальная продолжительность жизни) и для физических объектов, подверженных износу. Он работает там, где нет внутреннего «старения» — в информации, идеях, культуре, технологиях-инструментах."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Для нефизических вещей — идей, технологий, книг, институтов — ожидаемая будущая жизнь пропорциональна прожитой. Долголетие — сигнал адаптивности. Новизна — ещё не доказательство ценности."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вам нужно выбрать технологию для долгосрочного проекта. Одна — новейшая (год), другая — зрелая (15 лет). При прочих равных — что важнее?",
+            "setup": null,
+            "options": [
+              { "id": "new", "text": "Новейшая — современнее, больше возможностей и поддержки сообщества", "is_wiser": false },
+              { "id": "mature", "text": "Зрелая — 15 лет выживания означают 15 лет доказанной полезности", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают новейшую технологию",
+              "explanation": "Данные о выживаемости технологий подтверждают эффект Линди: большинство новых фреймворков и инструментов умирают в течение 3-5 лет. 15-летняя технология уже прошла этот фильтр. Это не значит игнорировать новое — значит понимать, что новизна сама по себе не является аргументом надёжности. Лучшая стратегия часто: зрелый инструмент + минимальная зависимость от молодых.",
+              "wisdom": "{{em:Время — беспристрастный редактор: оставляет лучшее, выбрасывает нежизнеспособное.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эффект Линди не оправдывает консерватизм ради консерватизма. Иногда старое существует потому, что его заменить дорого — а не потому что оно лучше. Эффект Линди — о статистике выживания в условиях свободного выбора, а не о системах с высокими барьерами выхода."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В инвестициях", "example": "Компании с долгой историей в устойчивых нишах (Coca-Cola, Johnson & Johnson) — «Линди-активы». Они с большей вероятностью переживут следующие 50 лет, чем большинство технологических стартапов последних двух." },
+              { "label": "В выборе чтения", "example": "Эффект Линди — аргумент в пользу классики. Книга, которую читают 200 лет, прошла конкурс читательского внимания строже, чем бестселлер этого года. Это не значит не читать новое — но объясняет, почему инвестировать в классику безопаснее." },
+              { "label": "В медицине", "example": "Зрелые, многократно проверенные методы лечения надёжнее новейших, едва прошедших клинические испытания. Это не аргумент против инноваций — аргумент за понимание, что время — это форма доказательства." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Посмотрите на свой список задач или инструментов. Что из этого существует меньше двух лет? Насколько вы зависите от этого? Спросите: есть ли более зрелая альтернатива, которая решает ту же задачу — с меньшим риском исчезнуть."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "A book that's 100 years old will probably survive another 100. A startup that's six months old will probably die within five years. A technology that's been around 50 years is more likely to outlast a technology that's one year old. Taleb's idea is simple and counterintuitive: for non-physical things, survival time predicts expected future life. The longer something has existed — the longer it will live." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Lindy}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Lindy Effect · Nassim Taleb · Antifragile · 2012" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/lindy_effect.svg", "alt": "A timeline: an old book and a wheel continue far into the future; a young startup cuts off shortly after launch" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The name comes from Lindy's, a New York deli where actors observed: a comedy show that survived another 100 days on Broadway would probably run for 100 more. The mathematical basis: many non-physical things follow a Pareto distribution rather than a normal one. They have no \"average lifespan\" — the longer they've existed, the more future they have ahead of them.",
+              "The Lindy Effect applies to ideas, technologies, institutions, books. {{em:A hammer has existed for thousands of years — it will likely outlast most modern gadgets. The Iliad has outlasted thousands of bestsellers — and will likely outlast today's as well.}} This isn't nostalgia — it's survival statistics. Time is a filter that culls the non-viable.",
+              "An important caveat: the Lindy Effect doesn't apply to biological organisms (humans have a maximum lifespan) or physical objects subject to wear. It works where there's no intrinsic \"aging\" — in information, ideas, culture, and tool-technologies."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "For non-physical things — ideas, technologies, books, institutions — expected future lifespan is proportional to lifespan already lived. Longevity is a signal of adaptability. Novelty is not yet proof of value."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You need to choose a technology for a long-term project. One is brand-new (one year old), the other is mature (15 years). All else being equal — what matters most?",
+            "setup": null,
+            "options": [
+              { "id": "new", "text": "The newest one — more modern, more features and community support", "is_wiser": false },
+              { "id": "mature", "text": "The mature one — 15 years of survival means 15 years of proven usefulness", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose the newest technology",
+              "explanation": "Technology survival data confirms the Lindy Effect: most new frameworks and tools die within 3-5 years. A 15-year technology has already passed that filter. This doesn't mean ignoring the new — it means understanding that novelty itself is not an argument for reliability. The best strategy is often: mature tool + minimal dependency on young ones.",
+              "wisdom": "{{em:Time is an impartial editor: it keeps the best and discards the non-viable.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The Lindy Effect doesn't justify conservatism for its own sake. Sometimes old things persist because replacement is costly — not because they're better. The Lindy Effect is about survival statistics in conditions of free choice — not about systems with high switching costs."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In investing", "example": "Companies with long histories in stable niches (Coca-Cola, Johnson & Johnson) are \"Lindy assets.\" They're more likely to survive the next 50 years than most tech startups of the past two." },
+              { "label": "In choosing what to read", "example": "The Lindy Effect argues for classics. A book that's been read for 200 years has passed a more demanding reader-attention competition than this year's bestseller. This doesn't mean avoiding the new — but it explains why investing in classics is safer." },
+              { "label": "In medicine", "example": "Well-established treatments that have been tested many times over are more reliable than the latest therapies that have barely passed clinical trials. Not an argument against innovation — an argument for understanding that time itself is a form of evidence." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Look at your list of tasks or tools. What among them has existed for less than two years? How dependent on it are you? Ask: is there a more mature alternative that solves the same problem — with less risk of disappearing?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/lindy_effect" }]
+}

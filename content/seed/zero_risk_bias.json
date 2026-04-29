@@ -1,0 +1,168 @@
+{
+  "id": "zero_risk_bias",
+  "category": "cognitive_biases",
+  "release_number": 105,
+  "release_date": "2026-07-25",
+  "tags": ["zero_risk", "risk_perception", "safety", "probability", "policy", "kahneman"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/zero_risk_bias.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "Два варианта снижения риска: вариант А снижает большой риск с 60% до 20% — экономит 400 смертей из 1000. Вариант Б полностью устраняет малый риск с 5% до 0% — экономит 50 смертей. Вариант А объективно лучше. Большинство людей выбирают вариант Б. Ноль обладает психологической силой, которую не имеет никакое другое число." }
+        },
+        { "type": "title", "props": { "text": "Предвзятость {{accent:нулевого}} риска" } },
+        { "type": "subtitle", "props": { "text": "Zero-Risk Bias · Цукерман и Сис · 1995 / систематизация Канеманом" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/zero_risk_bias.svg", "alt": "Две полосы риска: одна уменьшается с 60% до 20%, другая исчезает с 5% до 0. Большая стрелка тянется к нулю." }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Предвзятость нулевого риска — склонность предпочитать полное устранение малого риска значительному снижению большого риска, даже если второй вариант объективно спасает больше жизней или создаёт больше пользы. Психологический механизм: «ноль» обладает особым ощущением безопасности — «полностью защищён», «больше не нужно думать об этом».",
+              "Это объясняет многие иррациональные политические решения. Огромные ресурсы тратятся на устранение маленьких рисков до нуля — в то время как гораздо большие риски остаются в значительной мере неуправляемыми. {{em:Ноль — не числовое, а эмоциональное понятие. Переход от 1% к 0% психологически несравнимо ценнее перехода от 50% к 49%, хотя математически второй важнее.}}",
+              "Аверсия к потерям усиливает эффект: малый риск, который уже остался, воспринимается как «потеря», которую хочется устранить. Психологическая «тяга к нулю» приводит к переинвестированию в ликвидацию незначительных угроз при недоинвестировании в снижение крупных."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Ноль обладает непропорциональной психологической привлекательностью. Полное устранение малого риска предпочитается значительному снижению большого — даже когда второй вариант объективно полезнее. Решения о безопасности требуют оценки совокупного ущерба, а не «красоты» нуля."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "У вас €10 000 на улучшение безопасности. Вариант А снижает риск несчастных случаев с 5% до 1%. Вариант Б устраняет отдельный риск с 1% до 0%. Что выбрать?",
+            "setup": null,
+            "options": [
+              { "id": "zero", "text": "Вариант Б — полностью устранить один риск лучше, чем частично снизить другой", "is_wiser": false },
+              { "id": "rational", "text": "Вариант А — снижение с 5% до 1% экономит гораздо больше инцидентов", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают устранение риска до нуля",
+              "explanation": "Математически: вариант А снижает риск на 4 процентных пункта, вариант Б — на 1. При прочих равных, вариант А в четыре раза эффективнее. Но «ноль» создаёт иллюзию окончательной безопасности, которую 1% не даёт. Политика безопасности, основанная на аппетите к «нулю», систематически недооценивает крупные, частичные, «неустранимые» риски.",
+              "wisdom": "{{em:Ноль — это чувство безопасности, а не её мера. Мера — сколько вреда мы предотвратили.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Иногда ноль действительно имеет особую ценность: если риск катастрофичен или необратим — ликвидация до нуля может быть правильной. Ядерная безопасность, биозащита от пандемий — случаи, где хвостовой риск оправдывает «охоту на ноль». Проблема — когда эту логику применяют к обычным рискам."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В публичной политике", "example": "Огромные бюджеты тратятся на «нулевую терпимость» к редким угрозам (терроризм в безопасных странах) — при хроническом недофинансировании обычных убийц (автокатастрофы, сердечно-сосудистые заболевания)." },
+              { "label": "В продуктовой безопасности", "example": "Компании вкладывают непропорционально много в устранение нишевых, редко встречающихся багов — оставляя частичные, но более распространённые проблемы. Ноль жалоб по одной категории привлекательнее, чем снижение жалоб по всем." },
+              { "label": "В личной жизни", "example": "Человек платит за страховку от события с вероятностью 0,1%, полностью устраняя его риск — и не инвестирует в снижение вероятности события с 20%, которое гораздо более вероятно и дорогостояще." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей жизни или работе риск, который вы пытаетесь устранить до нуля? Спросите: существует ли другой риск, значительно больший, которым вы управляете хуже — потому что он не поддаётся устранению до нуля? Перераспределите усилия."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "Two risk-reduction options: Option A reduces a large risk from 60% to 20% — saving 400 lives out of 1,000. Option B completely eliminates a small risk from 5% to 0% — saving 50 lives. Option A is objectively better. Most people choose Option B. Zero has a psychological power no other number possesses." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Zero-Risk}} Bias" } },
+        { "type": "subtitle", "props": { "text": "Zero-Risk Bias · Zeckhauser & Viscusi · 1995 / systematized by Kahneman" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/zero_risk_bias.svg", "alt": "Two risk bars: one shrinks from 60% to 20%, the other disappears from 5% to 0. A large arrow pulls toward zero." }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Zero-risk bias is the tendency to prefer completely eliminating a small risk over substantially reducing a large one — even when the second option objectively saves more lives or creates more benefit. The psychological mechanism: \"zero\" carries a special feeling of safety — \"fully protected,\" \"no longer need to think about this.\"",
+              "This explains many irrational policy decisions. Enormous resources are spent eliminating small risks to zero — while much larger risks remain largely unmanaged. {{em:Zero is not a numerical concept — it's an emotional one. Moving from 1% to 0% is psychologically incomparably more valuable than moving from 50% to 49%, even though mathematically the second matters more.}}",
+              "Loss aversion amplifies the effect: a small remaining risk is perceived as a \"loss\" that must be eliminated. The psychological pull toward zero leads to overinvestment in eliminating minor threats while underinvesting in reducing large ones."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Zero has disproportionate psychological appeal. Completely eliminating a small risk is preferred over significantly reducing a large one — even when the second option is objectively more beneficial. Safety decisions require assessing total harm prevented, not the aesthetic appeal of zero."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You have €10,000 to improve safety. Option A reduces accident risk from 5% to 1%. Option B eliminates a separate risk from 1% to 0%. What do you choose?",
+            "setup": null,
+            "options": [
+              { "id": "zero", "text": "Option B — completely eliminating one risk is better than partially reducing another", "is_wiser": false },
+              { "id": "rational", "text": "Option A — reducing from 5% to 1% prevents far more incidents", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose eliminating the risk to zero",
+              "explanation": "Mathematically: Option A reduces risk by 4 percentage points, Option B by 1. All else equal, Option A is four times more effective. But \"zero\" creates the illusion of final safety that 1% doesn't. Safety policy based on appetite for \"zero\" systematically undervalues large, partial, \"irreducible\" risks.",
+              "wisdom": "{{em:Zero is the feeling of safety, not its measure. The measure is how much harm we prevented.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Sometimes zero really does have special value: if a risk is catastrophic or irreversible — elimination to zero may be correct. Nuclear safety, pandemic biosafety — cases where tail risk justifies \"hunting for zero.\" The problem is applying this logic to ordinary risks."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In public policy", "example": "Massive budgets are spent on \"zero tolerance\" toward rare threats (terrorism in safe countries) — while chronically underfunding ordinary killers (car accidents, cardiovascular disease)." },
+              { "label": "In product safety", "example": "Companies invest disproportionately in eliminating niche, rarely-occurring bugs — leaving partial but more widespread problems unresolved. Zero complaints in one category is more appealing than reduced complaints across all." },
+              { "label": "In personal life", "example": "A person pays for insurance against a 0.1%-probability event, completely eliminating its risk — and doesn't invest in reducing a 20%-probability event that is far more likely and costly." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there a risk in your life or work that you're trying to eliminate to zero? Ask: is there a significantly larger risk you're managing less well — because it can't be brought to zero? Redistribute your efforts."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/zero_risk_bias" }]
+}

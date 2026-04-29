@@ -1,0 +1,170 @@
+{
+  "id": "teleporter_paradox",
+  "category": "thought_experiments",
+  "release_number": 78,
+  "release_date": "2026-06-28",
+  "tags": ["personal_identity", "parfit", "teleporter", "continuity", "consciousness"],
+  "difficulty": 3,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/teleporter_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "Телепортация работает так: ваше тело сканируется до последнего атома, разрушается, а затем точная копия создаётся на Марсе из новых атомов. Копия помнит всё, что помнили вы. С её точки зрения — это непрерывный опыт. Вопрос: этот человек на Марсе — это вы? Или вас только что убили и создали кого-то нового?" }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:телепортации}}" } },
+        { "type": "subtitle", "props": { "text": "Teleporter Paradox · Дерек Парфит · «Причины и личности» · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/teleporter_paradox.svg", "alt": "Фигура человека распадается на частицы слева, собирается заново справа — между ними вопрос тождества" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Парфит использовал этот эксперимент, чтобы показать: наша интуиция о личностной идентичности противоречива. Возможны три позиции. «Физическая непрерывность»: вас убили — человек на Марсе не вы, это копия. «Психологическая непрерывность»: если есть непрерывность памяти, убеждений и личности — это вы. «Идентичность не имеет значения»: важно не кем является человек, а что с ним происходит.",
+              "Парфит предпочитал третью позицию — и считал её освобождающей. {{em:Если «Я» — это иллюзия непрерывности, а не что-то неделимое, то страх смерти, эго и личный интерес теряют свою абсолютность.}} Его вывод: мы должны заботиться о будущих людях так же, как о «будущем себе» — потому что граница условна.",
+              "Парадокс обостряет вариант с двойником: что если телепортатор сломался и создал двух одинаковых копий одновременно? Обе помнят оригинал, обе убеждены, что они — «настоящий» оригинал. Кто прав? Каждый? Ни один? Стандартная логика идентичности рушится."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Личностная идентичность — это не единый неделимый факт, а степень непрерывности разных видов связей. «Я» сегодня и «Я» через 20 лет — не одно и то же существо, а два, связанные цепочкой изменений."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Если телепортатор уничтожает оригинал и создаёт точную копию — вы согласились бы телепортироваться?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — если всё идентично, это я", "is_wiser": false },
+              { "id": "no", "text": "Нет — копия не будет мной, даже если это убедительно выглядит", "is_wiser": false },
+              { "id": "unsure", "text": "Зависит от того, что значит \"я\" — вопрос без однозначного ответа", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "отказались бы от телепортации",
+              "explanation": "Парфит показал: выбор зависит от вашей теории личностной идентичности, а не от фактов. Если идентичность — это физическая непрерывность, телепортация = смерть. Если психологическая — это вы. Парфит считал, что сам вопрос «а это я?» задан неверно — важно то, что с копией всё будет в порядке.",
+              "wisdom": "{{em:«Я» — это история, которую мозг рассказывает о непрерывности, а не сама непрерывность.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Наша интуиция о «я» так сильна, что мы не замечаем: в жизни мы постоянно меняемся — физически, психологически. Клетки обновляются, убеждения меняются. Человек, которым вы были 10 лет назад, связан с вами так же, как ваша телепортационная копия — только медленнее. Телепортер просто обнажает вопрос, который всегда существовал."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В AI и цифровой идентичности", "example": "Что если оцифровать сознание? Будет ли цифровая копия «вами»? Телепортационный парадокс — прямая рамка для дискуссий о digital immortality и mind uploading." },
+              { "label": "В праве", "example": "Кто несёт ответственность за действия человека, который изменился до неузнаваемости? Философия личностной идентичности влияет на юридические концепции ответственности и реабилитации." },
+              { "label": "В этике долгосрочного мышления", "example": "Почему мы должны заботиться о «своём» будущем? Парфит: потому что мы связаны со своим будущим «я» — но не более тесно, чем с другими людьми. Это аргумент за альтруизм и долгосрочное мышление." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните себя 10 лет назад. Те же ли убеждения? Те же ли ценности? Те же ли клетки тела? Парфит спрашивает: в каком смысле тот человек — это вы? Что из этого следует для ваших отношений с будущим «собой»?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "Teleportation works like this: your body is scanned down to the last atom, destroyed, and then an exact copy is assembled on Mars from new atoms. The copy remembers everything you remembered. From its point of view, it's a continuous experience. The question: is that person on Mars you? Or were you just killed and someone new created?" }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Teleporter}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Teleporter Paradox · Derek Parfit · Reasons and Persons · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/teleporter_paradox.svg", "alt": "A human figure dissolves into particles on the left, reassembles on the right — a question of identity between them" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Parfit used this experiment to show that our intuitions about personal identity are contradictory. Three positions are possible. \"Physical continuity\": you were killed — the person on Mars isn't you, it's a copy. \"Psychological continuity\": if memory, beliefs, and personality are continuous — it is you. \"Identity doesn't matter\": what matters isn't who someone is, but what happens to them.",
+              "Parfit favored the third position — and found it liberating. {{em:If \"I\" is an illusion of continuity rather than something indivisible, then fear of death, ego, and self-interest lose their absolute force.}} His conclusion: we should care about future people as much as about our \"future selves\" — because the boundary is arbitrary.",
+              "The paradox sharpens with the duplicate scenario: what if the teleporter malfunctions and creates two identical copies simultaneously? Both remember the original, both are convinced they are the \"real\" original. Who is right? Both? Neither? Standard identity logic collapses."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Personal identity is not a single indivisible fact but a degree of continuity across different kinds of connections. \"I\" today and \"I\" in 20 years are not the same entity — two entities connected by a chain of changes."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "If the teleporter destroys the original and creates an exact copy — would you agree to teleport?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — if everything is identical, it's me", "is_wiser": false },
+              { "id": "no", "text": "No — the copy won't be me, even if it convincingly seems so", "is_wiser": false },
+              { "id": "unsure", "text": "Depends on what \"I\" means — a question with no definitive answer", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "would refuse teleportation",
+              "explanation": "Parfit showed: the choice depends on your theory of personal identity, not on facts. If identity is physical continuity — teleportation is death. If psychological — it is you. Parfit thought the question itself (\"is it me?\") is wrongly framed — what matters is that the copy will be fine.",
+              "wisdom": "{{em:\"I\" is a story the brain tells about continuity — not the continuity itself.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Our intuition about \"self\" is so powerful that we don't notice: in life we change constantly — physically and psychologically. Cells renew, beliefs shift. The person you were 10 years ago is connected to you the same way your teleportation copy would be — just more slowly. The teleporter merely exposes a question that always existed."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In AI and digital identity", "example": "What if consciousness could be digitized? Would a digital copy be \"you\"? The teleporter paradox is the direct frame for debates about digital immortality and mind uploading." },
+              { "label": "In law", "example": "Who bears responsibility for actions of someone who has changed beyond recognition? Philosophy of personal identity shapes legal concepts of responsibility and rehabilitation." },
+              { "label": "In long-term ethics", "example": "Why should we care about our \"own\" future? Parfit: because we are connected to our future self — but no more closely than to other people. This is an argument for altruism and long-term thinking." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of yourself 10 years ago. Same beliefs? Same values? Same cells? Parfit asks: in what sense was that person you? What does this imply for your relationship with your future self?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/teleporter_paradox" }]
+}

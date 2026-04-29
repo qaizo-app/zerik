@@ -1,0 +1,168 @@
+{
+  "id": "in_group_bias",
+  "category": "cognitive_biases",
+  "release_number": 91,
+  "release_date": "2026-07-11",
+  "tags": ["in_group", "tajfel", "minimal_group", "tribalism", "favoritism", "social_identity"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/in_group_bias.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "1971 год. Анри Тэджфел разделил школьников на две группы — совершенно случайно, якобы по предпочтению живописи Клее или Кандинского. Затем попросил распределить деньги между незнакомыми участниками. Дети систематически давали больше тем, кто был в их группе — хотя не знали об этих людях ничего, кроме принадлежности к одному «лагерю». Достаточно быть «нашими»." }
+        },
+        { "type": "title", "props": { "text": "Фаворитизм {{accent:своих}}" } },
+        { "type": "subtitle", "props": { "text": "In-Group Bias · Анри Тэджфел · Эксперимент минимальных групп · 1971" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/in_group_bias.svg", "alt": "Две группы фигурок — одна группа ближе, ярче, с ресурсами; другая в тени, на расстоянии" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Эксперимент с «минимальными группами» Тэджфела — одно из самых воспроизводимых открытий социальной психологии. Для возникновения внутригрупповой предвзятости не нужен общий опыт, история конфликта или реальные различия между группами. Достаточно знать, что ты часть одной и той же категории. Это называют «трибализмом без трибы».",
+              "Механизм описывается теорией социальной идентичности: мы частично строим самооценку через принадлежность к группам. Успех «нашей» группы — это наш успех. Превосходство над «чужими» — наше превосходство. {{em:Это не злоба к другим — это забота о себе, выраженная через группу.}} Фаворитизм «своих» эволюционно древнее любых сознательных убеждений.",
+              "Важно: in-group bias — не только о поведении. Это о восприятии. Одни и те же действия оцениваются иначе в зависимости от того, кто их совершает — «наш» или «чужой». Ошибки «своих» объясняются обстоятельствами; ошибки «чужих» — их характером. Это фундаментальная асимметрия."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мы систематически благоволим членам своей группы — в распределении ресурсов, оценке действий и интерпретации мотивов — даже когда принадлежность к группе случайна и не имеет значимых оснований."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Два кандидата на повышение: одинаково компетентны, но один из вашего города, другой — нет. Что влияет на ваш выбор?",
+            "setup": null,
+            "options": [
+              { "id": "nothing", "text": "Ничего — я оцениваю только профессиональные качества", "is_wiser": false },
+              { "id": "bias", "text": "Скорее всего, незначительно, но в пользу «земляка» — это и есть in-group bias", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "уверены, что не подвержены этому",
+              "explanation": "Эксперименты Тэджфела и последующие работы (Brewer, 1979; Turner, 1981) показывают: in-group bias активируется даже при самой минимальной общности — одинаковое имя, город рождения, университет. Мы почти не осознаём это влияние, но оно измеримо. Именно поэтому слепые прослушивания в оркестрах увеличили долю женщин-музыкантов — устранили видимые «группы».",
+              "wisdom": "{{em:«Наши» — не те, кто лучше. Это те, кого мы считаем своими. Разница огромна.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Осознание in-group bias не устраняет его — оно лишь первый шаг. Исследования показывают: люди, уверенные в своей объективности, нередко более подвержены предвзятости — потому что меньше проверяют себя. Структурные решения (анонимный найм, разнообразные комитеты) эффективнее личного самоконтроля."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В найме", "example": "«Культурное соответствие» (culture fit) нередко является эвфемизмом для in-group bias: мы предпочитаем похожих на нас. Это снижает разнообразие и воспроизводит уже существующие группы." },
+              { "label": "В медиа и политике", "example": "Поляризация медиапотребления создаёт пузыри «своих»: одни и те же факты оцениваются диаметрально по-разному в зависимости от политической идентификации — это in-group bias в массовом масштабе." },
+              { "label": "В науке", "example": "Peer review показывает in-group bias: рецензенты более снисходительны к работам из «своих» лабораторий или школ. Двойное слепое рецензирование частично устраняет этот эффект." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последнее решение, в котором «свои» имели преимущество. Могли ли бы вы принять то же решение, если бы принадлежность к группе была скрыта? Это вопрос структуры — не морали."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "1971. Henri Tajfel divided schoolchildren into two groups — completely at random, ostensibly based on their preference for Klee or Kandinsky paintings. He then asked them to distribute money between unknown participants. The children systematically gave more to those in their own group — despite knowing nothing about these people except that they shared the same \"side.\" Being \"one of us\" was enough." }
+        },
+        { "type": "title", "props": { "text": "{{accent:In-Group}} Bias" } },
+        { "type": "subtitle", "props": { "text": "In-Group Bias · Henri Tajfel · Minimal Group Experiments · 1971" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/in_group_bias.svg", "alt": "Two groups of figures — one group closer, brighter, with resources; the other in shadow, at a distance" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Tajfel's \"minimal groups\" experiment is one of the most replicated findings in social psychology. In-group favoritism doesn't require shared history, a conflict narrative, or any real differences between groups. Knowing you belong to the same category is enough. This has been called \"tribalism without a tribe.\"",
+              "The mechanism is explained by social identity theory: we partly build our self-esteem through group membership. Our group's success is our success. Superiority over \"outsiders\" is our superiority. {{em:This isn't hostility toward others — it's self-regard expressed through the group.}} In-group favoritism is evolutionarily older than any conscious belief.",
+              "Importantly, in-group bias isn't only about behavior — it's about perception. The same actions are evaluated differently depending on whether they're performed by an \"insider\" or an \"outsider.\" Mistakes by \"our people\" are explained by circumstances; mistakes by \"others\" by their character. This is a fundamental asymmetry."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "We systematically favor members of our own group — in resource allocation, action evaluation, and motive interpretation — even when group membership is random and carries no meaningful basis."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Two candidates for promotion: equally competent, but one is from your hometown, the other isn't. What influences your choice?",
+            "setup": null,
+            "options": [
+              { "id": "nothing", "text": "Nothing — I only evaluate professional qualities", "is_wiser": false },
+              { "id": "bias", "text": "Probably slightly in favor of the \"hometown person\" — that's in-group bias", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "are confident they're unaffected",
+              "explanation": "Tajfel's experiments and subsequent work (Brewer, 1979; Turner, 1981) show that in-group bias activates even with the most minimal commonality — same name, birth city, university. We're almost unaware of this influence, but it's measurable. This is exactly why blind auditions in orchestras increased the proportion of female musicians — they removed visible \"groups.\"",
+              "wisdom": "{{em:\"Our people\" aren't those who are better. They're those we consider ours. The difference is enormous.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Awareness of in-group bias doesn't eliminate it — it's only the first step. Research shows that people confident in their own objectivity are often more susceptible to bias — because they check themselves less. Structural solutions (anonymous hiring, diverse committees) work better than personal self-monitoring."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In hiring", "example": "\"Culture fit\" is often a euphemism for in-group bias: we prefer people similar to us. This reduces diversity and reproduces existing group compositions." },
+              { "label": "In media and politics", "example": "Polarized media consumption creates \"in-group bubbles\": the same facts are evaluated in diametrically opposite ways based on political identity — in-group bias at mass scale." },
+              { "label": "In science", "example": "Peer review shows in-group bias: reviewers are more lenient with papers from \"their\" labs or schools. Double-blind review partially eliminates this effect." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a recent decision where \"insiders\" had an advantage. Could you have made the same decision if group membership had been hidden? This is a question of structure — not morality."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/in_group_bias" }]
+}

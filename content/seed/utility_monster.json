@@ -1,0 +1,168 @@
+{
+  "id": "utility_monster",
+  "category": "thought_experiments",
+  "release_number": 92,
+  "release_date": "2026-07-12",
+  "tags": ["nozick", "utilitarianism", "ethics", "utility", "moral_philosophy", "distribution"],
+  "difficulty": 3,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/utility_monster.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте существо, которое получает от ресурсов в тысячу раз больше удовольствия, чем любой человек. Утилитаризм говорит: максимизируй общую пользу. Значит, нужно отдать всё этому существу — оно будет счастливее всех нас вместе взятых. Роберт Нозик предложил этот эксперимент в 1974 году, чтобы показать: интуитивно верная этика и формальная логика утилитаризма расходятся." }
+        },
+        { "type": "title", "props": { "text": "Монстр {{accent:полезно}}сти" } },
+        { "type": "subtitle", "props": { "text": "Utility Monster · Роберт Нозик · «Анархия, государство и утопия» · 1974" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/utility_monster.svg", "alt": "Большая фигура поглощает ресурсы из рук маленьких фигур — весы показывают суммарную «пользу» на стороне монстра" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Утилитаризм в классическом виде (Бентам, Милль) требует максимизировать суммарное счастье всех. Это кажется разумным, пока не появляется монстр полезности. Если существо способно конвертировать ресурсы в удовольствие эффективнее всех остальных — утилитарный расчёт требует концентрировать у него всё. Даже если при этом все остальные страдают.",
+              "Нозик использует этот аргумент для критики утилитаризма как распределительного принципа. Проблема: утилитаризм не имеет встроенных ограничений на неравенство. {{em:Максимизация суммарной пользы может требовать жертвы отдельными людьми, если это повышает общий показатель.}} Интуиция справедливости говорит: нет — у каждого человека есть права, которые не исчезают ради суммы.",
+              "Нозик предлагал либертарианскую альтернативу: права не нарушаемы даже ради большей суммарной пользы. Но и эта позиция имеет контрпримеры. Эксперимент не решает задачу — он делает противоречие видимым: любая этическая система имеет слепые пятна."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Формальные этические системы, последовательно применённые, дают интуитивно неприемлемые результаты. Монстр полезности показывает: максимизация суммарного блага не равна справедливости. Этика требует множества принципов, не только одного."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Корпорация приносит огромную пользу акционерам и потребителям, но загрязняет воздух одного района. «Суммарная польза» положительна. Это приемлемо?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — суммарная польза больше ущерба, значит это оправдано", "is_wiser": false },
+              { "id": "no", "text": "Нет — жители района имеют права, которые не исчезают ради суммарной пользы других", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "оправдывают действие по суммарной пользе",
+              "explanation": "Именно этот вопрос лежит в основе дебатов об экстерналиях в экономике. Чистый утилитаризм разрешил бы загрязнение, если суммарная польза больше ущерба. Но большинство правовых систем признают: жители имеют права, которые нельзя «купить» совокупной пользой посторонних. Монстр полезности — это не только философия: это ядро споров об ESG, регулировании и правах.",
+              "wisdom": "{{em:Максимизация суммы не означает справедливости для каждого слагаемого.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Нозик критикует утилитаризм — но его либертарианская альтернатива тоже имеет проблемы: неприкосновенность прав собственности также может порождать катастрофическое неравенство. Мысленный эксперимент не дает готового ответа — он показывает, что любая система ценностей имеет свою версию «монстра»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В алгоритмах ИИ", "example": "Оптимизация по суммарному показателю (клики, время на сайте) — утилитаризм в чистом виде. Он создаёт «монстров»: алгоритм жертвует качеством информации меньшинства ради агрегированного вовлечения большинства." },
+              { "label": "В публичной политике", "example": "Польза инфраструктурного проекта для миллионов vs права жителей изымаемых территорий — классическая утилитарная vs деонтологическая дилемма. Суд выносит решение с обеих сторон в зависимости от принятой правовой доктрины." },
+              { "label": "В менеджменте", "example": "KPI по средним показателям — форма утилитаризма: высокий средний скрывает монстра полезности (суперпроизводительный сотрудник перекрывает страдание остальных). Медиана честнее среднего." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей работе метрика «среднего»? Подумайте: не скрывает ли она монстра полезности — одного человека или группу, которые перекрывают неблагополучие остальных? Как выглядело бы распределение?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine a being that gets a thousand times more pleasure from resources than any human does. Utilitarianism says: maximize total utility. So everything should be given to this creature — it will be happier than all of us combined. Robert Nozick proposed this experiment in 1974 to show: intuitive ethics and the formal logic of utilitarianism diverge." }
+        },
+        { "type": "title", "props": { "text": "The Utility {{accent:Monster}}" } },
+        { "type": "subtitle", "props": { "text": "Utility Monster · Robert Nozick · Anarchy, State, and Utopia · 1974" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/utility_monster.svg", "alt": "A large figure consuming resources from the hands of smaller figures — scales show total \"utility\" on the monster's side" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Classical utilitarianism (Bentham, Mill) demands maximizing total happiness for all. This seems reasonable — until the utility monster appears. If a being can convert resources into pleasure more efficiently than everyone else, the utilitarian calculation demands concentrating everything with it. Even if everyone else suffers as a result.",
+              "Nozick uses this argument to critique utilitarianism as a distributive principle. The problem: utilitarianism has no built-in constraints on inequality. {{em:Maximizing total utility can require sacrificing particular individuals if this raises the aggregate score.}} The intuition of justice says: no — every person has rights that don't disappear for the sake of a sum.",
+              "Nozick proposed a libertarian alternative: rights are inviolable even for greater aggregate utility. But this position also has counterexamples. The experiment doesn't solve the problem — it makes the contradiction visible: every ethical system has blind spots."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Formal ethical systems, consistently applied, produce intuitively unacceptable results. The utility monster shows: maximizing aggregate good is not the same as justice. Ethics requires multiple principles, not just one."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A corporation brings enormous benefit to shareholders and consumers, but pollutes the air in one neighborhood. Total utility is positive. Is this acceptable?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — aggregate benefit exceeds the harm, so it's justified", "is_wiser": false },
+              { "id": "no", "text": "No — residents have rights that don't disappear for the sake of others' aggregate benefit", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "justify the action by aggregate benefit",
+              "explanation": "This exact question underlies debates about externalities in economics. Pure utilitarianism would permit pollution if total benefit exceeds total harm. But most legal systems recognize: residents have rights that cannot be \"bought out\" by strangers' aggregate utility. The utility monster isn't just philosophy — it's at the core of disputes about ESG, regulation, and rights.",
+              "wisdom": "{{em:Maximizing the sum doesn't mean justice for every term in the sum.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Nozick critiques utilitarianism — but his libertarian alternative also has problems: the inviolability of property rights can also produce catastrophic inequality. The thought experiment doesn't provide a ready answer — it shows that any value system has its own version of the \"monster.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In AI algorithms", "example": "Optimizing by aggregate metrics (clicks, time on site) is pure utilitarianism. It creates monsters: the algorithm sacrifices information quality for a minority in exchange for aggregate engagement from the majority." },
+              { "label": "In public policy", "example": "Benefits of an infrastructure project for millions vs the rights of displaced residents — a classic utilitarian vs deontological dilemma. Courts rule both ways depending on the adopted legal doctrine." },
+              { "label": "In management", "example": "KPIs based on averages are a form of utilitarianism: a high average conceals the utility monster (a superproductive employee masking others' distress). Median is more honest than mean." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there an \"average\" metric in your work? Think: might it be hiding a utility monster — one person or group masking others' underperformance or distress? What would the distribution look like?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/utility_monster" }]
+}

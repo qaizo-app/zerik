@@ -1,0 +1,184 @@
+{
+  "id": "mans_search_for_meaning",
+  "category": "book_idea",
+  "release_number": 83,
+  "release_date": "2026-07-03",
+  "tags": ["frankl", "logotherapy", "meaning", "existentialism", "resilience"],
+  "difficulty": 3,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/mans_search_for_meaning.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "Психиатр Виктор Франкл пережил Освенцим и три других лагеря. Наблюдая, кто выживал, он заметил: не самые сильные физически, а те, кто нашёл смысл. Смысл страдания. Смысл работы. Смысл, ради которого стоит продолжать. Это наблюдение стало основой целого направления психотерапии." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Смысл}} жизни" } },
+        { "type": "subtitle", "props": { "text": "Man's Search for Meaning · Виктор Франкл · 1946" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/mans_search_for_meaning.svg", "alt": "Человек в темноте, смотрящий на луч света с силуэтом цели на горизонте" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "У того, кто знает «зачем» жить, почти любое «как» по плечу.",
+            "attribution": "Виктор Франкл, цитируя Ницше в «Человек в поисках смысла», 1946",
+            "context": "Франкл написал книгу за девять дней после освобождения. Он потерял жену, родителей и брата. Его идея: человек может пережить почти любые обстоятельства, если видит в них смысл. Бессмысленность страдания — невыносима. Осмысленное страдание — переносимо."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Франкл противопоставил свою логотерапию двум главным психологическим школам своего времени. Фрейд: главный двигатель — стремление к удовольствию. Адлер: стремление к власти. Франкл: первичная мотивация человека — стремление к смыслу. Когда смысл найден, человек способен переносить любые условия. Когда утрачен — разрушается даже в комфорте.",
+              "Смысл, по Франклу, нельзя изобрести — его нужно найти. Он существует в трёх формах: в делании (работа, творчество), в переживании (любовь, красота, истина) и в позиции по отношению к неизбежному страданию. {{em:Последняя свобода человека — выбор своего отношения к обстоятельствам.}} Это то, что нельзя отнять ни в каком лагере.",
+              "«Экзистенциальный вакуум» — нехватка смысла — Франкл считал главной проблемой современного западного человека. Не бедность, не болезнь, а ощущение бессмысленности существования. Нейрозы нашего времени — в значительной мере нейрозы без смысла."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Смысл — первичная мотивация человека, более фундаментальная, чем удовольствие или власть. Смысл можно найти в любых обстоятельствах; неспособность его найти — источник глубочайшего психологического страдания."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Человек работает на нелюбимой работе ради высокой зарплаты. Он живёт в комфорте, но чувствует пустоту. Что говорит Франкл?",
+            "setup": null,
+            "options": [
+              { "id": "comfort", "text": "Комфорт важнее — большинство людей так и живут", "is_wiser": false },
+              { "id": "meaning", "text": "Пустота — экзистенциальный вакуум, который комфорт не заполнит", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "предпочитают комфорт смыслу",
+              "explanation": "Франкл наблюдал это явление в клинике: пациенты с высоким доходом и отсутствием объективных проблем страдали от «ноогенного невроза» — невроза от потери смысла. Ни деньги, ни статус, ни удовольствие не закрывают экзистенциальный вакуум. Смысл — не роскошь, а базовая потребность.",
+              "wisdom": "{{em:Счастье не ищут — оно следствие нахождения смысла. Кто ищет счастья прямо, теряет и то, и другое.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Франкл предостерегает: смысл нельзя принудительно назначить другому. Психотерапевт не говорит пациенту, в чём его смысл — помогает найти самому. Попытка навязать смысл разрушает его. Это личный поиск, который нельзя заменить готовым ответом."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В психотерапии", "example": "Логотерапия применяется при депрессии, суицидальных мыслях, экзистенциальном кризисе. Фокус не на симптомах, а на поиске или восстановлении смысла." },
+              { "label": "В организациях", "example": "Исследования показывают: сотрудники, видящие смысл в работе, в 3 раза менее склонны к выгоранию, чем те, кто работает только ради зарплаты. Смысл — рабочий ресурс, а не философская абстракция." },
+              { "label": "В экстремальных ситуациях", "example": "Выжившие в катастрофах, военнопленные, тяжелобольные — исследования подтверждают: ощущение смысла коррелирует с выживаемостью сильнее, чем физическая подготовка." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Задайте себе три вопроса Франкла: что я создаю или делаю, что наполнено смыслом? Что я переживаю или кого люблю? Как я отношусь к тому, что не могу изменить? Запишите ответы. Это карта вашего смысла прямо сейчас."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "Psychiatrist Viktor Frankl survived Auschwitz and three other camps. Observing who survived, he noticed: not the physically strongest, but those who found meaning. The meaning of suffering. The meaning of work. A reason to keep going. This observation became the foundation of an entire school of psychotherapy." }
+        },
+        { "type": "title", "props": { "text": "Man's Search for {{accent:Meaning}}" } },
+        { "type": "subtitle", "props": { "text": "Man's Search for Meaning · Viktor Frankl · 1946" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/mans_search_for_meaning.svg", "alt": "A person in darkness looking toward a beam of light with a silhouette of purpose on the horizon" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "He who has a why to live can bear with almost any how.",
+            "attribution": "Viktor Frankl, quoting Nietzsche in Man's Search for Meaning, 1946",
+            "context": "Frankl wrote the book in nine days after liberation. He lost his wife, parents, and brother. His idea: a person can survive almost any circumstances if they see meaning in them. Meaningless suffering is unbearable. Meaningful suffering is endurable."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Frankl contrasted his logotherapy with the two major psychological schools of his time. Freud: the primary driver is the pleasure principle. Adler: the will to power. Frankl: the primary human motivation is the will to meaning. When meaning is found, a person can bear almost any conditions. When lost — they break down even in comfort.",
+              "Meaning, for Frankl, cannot be invented — it must be found. It exists in three forms: in doing (work, creation), in experiencing (love, beauty, truth), and in the stance one takes toward unavoidable suffering. {{em:The last human freedom is the choice of one's attitude toward circumstances.}} This is what cannot be taken away, even in any prison camp.",
+              "The \"existential vacuum\" — the lack of meaning — Frankl considered the central problem of the modern Western person. Not poverty, not disease, but the sense that existence is meaningless. The neuroses of our time are largely neuroses without meaning."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Meaning is the primary human motivation — more fundamental than pleasure or power. Meaning can be found in any circumstance; inability to find it is the source of the deepest psychological suffering."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A person works a job they dislike for a high salary. They live comfortably but feel empty. What does Frankl say?",
+            "setup": null,
+            "options": [
+              { "id": "comfort", "text": "Comfort matters more — most people live this way", "is_wiser": false },
+              { "id": "meaning", "text": "The emptiness is an existential vacuum that comfort won't fill", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "prefer comfort to meaning",
+              "explanation": "Frankl observed this in his clinic: high-income patients with no objective problems suffered from \"noogenic neurosis\" — neurosis from the loss of meaning. Neither money nor status nor pleasure closes the existential vacuum. Meaning is not a luxury — it's a basic need.",
+              "wisdom": "{{em:Happiness is not pursued — it follows from finding meaning. Whoever seeks happiness directly loses both.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Frankl warns: meaning cannot be forcibly assigned to another person. A therapist doesn't tell a patient what their meaning is — they help the patient find it themselves. Imposing meaning destroys it. This is a personal search that cannot be replaced with a ready-made answer."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In psychotherapy", "example": "Logotherapy is applied to depression, suicidal ideation, and existential crisis. The focus is not on symptoms but on finding or restoring meaning." },
+              { "label": "In organizations", "example": "Research shows: employees who see meaning in their work are 3× less likely to experience burnout than those working purely for salary. Meaning is a work resource, not a philosophical abstraction." },
+              { "label": "In extreme situations", "example": "Survivors of disasters, prisoners of war, seriously ill patients — research confirms: a sense of meaning correlates with survival more strongly than physical fitness." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Ask yourself Frankl's three questions: what am I creating or doing that is full of meaning? What am I experiencing or who do I love? How do I relate to what I cannot change? Write down your answers. This is your meaning map right now."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/mans_search_for_meaning" }]
+}

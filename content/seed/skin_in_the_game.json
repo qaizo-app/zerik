@@ -1,0 +1,168 @@
+{
+  "id": "skin_in_the_game",
+  "category": "mental_models",
+  "release_number": 102,
+  "release_date": "2026-07-22",
+  "tags": ["taleb", "skin_in_the_game", "risk", "accountability", "symmetry", "agency"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/skin_in_the_game.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №21" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы идёте к врачу. Он рекомендует операцию с 20% риском осложнений — но сам ничем не рискует за исход. Его стимул — провести операцию, а не вашу безопасность. Теперь: он рекомендует операцию и берёт на себя финансовую ответственность при осложнениях. Его рекомендация изменится? Скорее всего — да. Нассим Талеб называет этот принцип «шкурой в игре»." }
+        },
+        { "type": "title", "props": { "text": "Шкура {{accent:в игре}}" } },
+        { "type": "subtitle", "props": { "text": "Skin in the Game · Нассим Талеб · 2018" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/skin_in_the_game.svg", "alt": "Две чаши весов: на одной — советник с пустыми руками, на другой — советник, вкладывающий собственные ресурсы" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Талеб формулирует принцип через симметрию: «Не принимай советов от людей, которые не несут последствий своих советов». Консультанты, которые советуют войны, не воюют. Банкиры, рекомендующие рискованные продукты, часто не держат их в портфеле. Политики, продвигающие экономические реформы, не живут на среднюю зарплату.",
+              "«Шкура в игре» — не только о деньгах. Это о любой форме симметрии рисков: когда советующий разделяет негативные последствия своих советов. {{em:Без симметрии возникает «моральная опасность»: тот, кто принимает решения, не несёт их последствий — и принимает слишком много риска за чужой счёт.}} Это системная проблема, а не личная нечестность.",
+              "Историческая традиция «шкуры в игре» огромна: архитекторы в Риме жили под мостами, которые строили; арабский врач нёс ответственность за смерть пациента от лечения. Принцип древний — современные институты его систематически подрывают через ограниченную ответственность и бонусные структуры."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Советник, рекомендующий действие, должен разделять риски его последствий. Без симметрии рисков стимулы искажаются: тот, кто принимает решения, склонен к избыточному риску за счёт других."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Финансовый консультант рекомендует вам рискованную инвестицию. Как проверить качество совета?",
+            "setup": null,
+            "options": [
+              { "id": "trust", "text": "Довериться его профессиональной репутации и регалиям", "is_wiser": false },
+              { "id": "skin", "text": "Спросить: держит ли он сам эти активы в своём портфеле?", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "доверяют репутации без проверки",
+              "explanation": "Исследования финансовых советников показывают: те, кто инвестирует собственные деньги в рекомендуемые продукты, дают статистически более точные прогнозы доходности — потому что несут последствия ошибок. «Держит ли он сам это?» — один из лучших эвристических фильтров качества совета. Если нет и не может объяснить почему — это сигнал.",
+              "wisdom": "{{em:Не спрашивай у человека, что ты должен делать. Смотри, что делает он сам.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "«Шкура в игре» не означает «доверяй только тем, у кого есть личный интерес». Конфликт интересов — тоже проблема. Принцип — о симметрии последствий, а не о наличии любого личного стимула. Хирург, который заработает на лишней операции, имеет шкуру в игре — но неправильного типа."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В стартапах", "example": "Основатели с большой долей в компании — «шкура в игре» в чистом виде. Менеджеры на зарплате без опционов имеют стимулы, которые расходятся с долгосрочными интересами компании и инвесторов." },
+              { "label": "В регулировании", "example": "Банки, которые могут социализировать убытки (bailout) и приватизировать прибыль, — систематическое отсутствие «шкуры в игре». Требование держать достаточный собственный капитал — попытка восстановить симметрию." },
+              { "label": "В найме", "example": "Лучший способ проверить уверенность кандидата в своей экспертизе: предложить частично переменную оплату, привязанную к результату. Готов ли он рискнуть своей «шкурой» на свои прогнозы?" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли кто-то, чьи советы вы часто берёте? Спросите: несёт ли этот человек последствия, если его совет окажется неверным? Если нет — взвешивайте его слова соответственно."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №21" } },
+        {
+          "type": "hook",
+          "props": { "text": "You go to a doctor. He recommends surgery with a 20% complication risk — but bears no personal cost from the outcome. His incentive is to perform the surgery, not your safety. Now: he recommends the same surgery and takes on personal financial liability for complications. Will his recommendation change? Most likely — yes. Nassim Taleb calls this principle \"skin in the game.\"" }
+        },
+        { "type": "title", "props": { "text": "Skin in the {{accent:Game}}" } },
+        { "type": "subtitle", "props": { "text": "Skin in the Game · Nassim Taleb · 2018" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/skin_in_the_game.svg", "alt": "Two sides of a scale: on one, an advisor with empty hands; on the other, an advisor investing their own resources" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Taleb frames the principle through symmetry: \"Never take advice from someone who doesn't bear the consequences of that advice.\" Consultants who advise wars don't fight them. Bankers recommending risky products often don't hold them in their own portfolios. Politicians pushing economic reforms don't live on average salaries.",
+              "\"Skin in the game\" isn't only about money. It's about any form of risk symmetry: when the advisor shares the negative consequences of their own advice. {{em:Without symmetry, \"moral hazard\" arises: those who make decisions don't bear their consequences — and take on too much risk at others' expense.}} This is a systemic problem, not personal dishonesty.",
+              "The historical tradition of skin in the game is vast: Roman architects lived under the bridges they built; the Arab physician bore responsibility for a patient's death from treatment. The principle is ancient — modern institutions systematically undermine it through limited liability and bonus structures."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "An advisor recommending an action should share in the risks of its consequences. Without risk symmetry, incentives become distorted: those who make decisions are prone to excessive risk-taking at others' expense."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A financial advisor recommends a risky investment. How do you check the quality of the advice?",
+            "setup": null,
+            "options": [
+              { "id": "trust", "text": "Trust their professional reputation and credentials", "is_wiser": false },
+              { "id": "skin", "text": "Ask: does he hold these assets in his own portfolio?", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "trust reputation without verification",
+              "explanation": "Research on financial advisors shows: those who invest their own money in recommended products give statistically more accurate return forecasts — because they bear the consequences of errors. \"Does he hold this himself?\" is one of the best heuristic filters for advice quality. If no, and they can't explain why — that's a signal.",
+              "wisdom": "{{em:Don't ask a person what you should do. Watch what they do themselves.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "\"Skin in the game\" doesn't mean \"only trust those with a personal stake.\" Conflicts of interest are also a problem. The principle is about symmetry of consequences — not the mere presence of any personal incentive. A surgeon who profits from an unnecessary operation has skin in the game — but of the wrong kind."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In startups", "example": "Founders with a large equity stake — skin in the game in its purest form. Salaried managers without options have incentives that diverge from the long-term interests of the company and investors." },
+              { "label": "In regulation", "example": "Banks that can socialize losses (bailouts) and privatize profits — systemic absence of skin in the game. Capital adequacy requirements are an attempt to restore symmetry." },
+              { "label": "In hiring", "example": "The best way to test a candidate's confidence in their own expertise: offer partially variable compensation tied to results. Are they willing to put their own \"skin\" on their predictions?" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there someone whose advice you frequently take? Ask: does this person bear consequences if their advice turns out to be wrong? If not — weigh their words accordingly."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/skin_in_the_game" }]
+}

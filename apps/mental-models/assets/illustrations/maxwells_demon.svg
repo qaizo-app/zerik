@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Container left chamber -->
+  <rect x="40" y="60" width="140" height="180" rx="4" fill="#2a2a4a" stroke="#6c8ebf" stroke-width="2"/>
+  <!-- Container right chamber -->
+  <rect x="220" y="60" width="140" height="180" rx="4" fill="#2a2a4a" stroke="#cc6b8e" stroke-width="2"/>
+  <!-- Partition -->
+  <rect x="178" y="60" width="4" height="180" fill="#4a4a7a"/>
+  <!-- Door gap -->
+  <rect x="178" y="135" width="4" height="30" fill="#1a1a2e"/>
+  <!-- Demon at door -->
+  <text x="193" y="157" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="20">👹</text>
+  <!-- Fast molecules (red) in right -->
+  <circle cx="260" cy="100" r="8" fill="#cc4444" opacity="0.9"/>
+  <circle cx="300" cy="130" r="8" fill="#cc4444" opacity="0.8"/>
+  <circle cx="280" cy="170" r="8" fill="#cc4444" opacity="0.85"/>
+  <circle cx="330" cy="110" r="6" fill="#cc4444" opacity="0.7"/>
+  <!-- Fast molecule arrows -->
+  <line x1="258" y1="98" x2="270" y2="90" stroke="#cc4444" stroke-width="1.5"/>
+  <line x1="298" y1="128" x2="312" y2="118" stroke="#cc4444" stroke-width="1.5"/>
+  <!-- Slow molecules (blue) in left -->
+  <circle cx="80" cy="100" r="8" fill="#4488cc" opacity="0.85"/>
+  <circle cx="120" cy="140" r="8" fill="#4488cc" opacity="0.8"/>
+  <circle cx="90" cy="180" r="8" fill="#4488cc" opacity="0.9"/>
+  <circle cx="150" cy="110" r="6" fill="#4488cc" opacity="0.7"/>
+  <!-- Labels -->
+  <text x="110" y="260" text-anchor="middle" fill="#4488cc" font-family="sans-serif" font-size="12">Холодно</text>
+  <text x="290" y="260" text-anchor="middle" fill="#cc4444" font-family="sans-serif" font-size="12">Горячо</text>
+  <text x="200" y="40" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="12">Второй закон сохраняется: память = энтропия</text>
+</svg>

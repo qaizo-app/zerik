@@ -1,0 +1,150 @@
+{
+  "id": "hasty_generalization",
+  "category": "rhetorical_fallacies",
+  "release_number": 96,
+  "release_date": "2026-07-16",
+  "tags": ["hasty_generalization", "sampling", "fallacy", "induction", "stereotypes", "statistics"],
+  "difficulty": 1,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/hasty_generalization.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Я три раза обращался в эту компанию и каждый раз получал ужасный сервис — они плохие». «Все мои знакомые программисты интроверты — значит, программисты интроверты». «Один раз не пристегнулся — ничего не случилось, ремни бесполезны». Поспешное обобщение — перенос выводов с малой или нерепрезентативной выборки на большую группу." }
+        },
+        { "type": "title", "props": { "text": "Поспешное {{accent:обобще}}ние" } },
+        { "type": "subtitle", "props": { "text": "Hasty Generalization · риторическая ошибка · класс «ошибок индукции»" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/hasty_generalization.svg", "alt": "Одна красная точка в выборке из трёх — и вывод «все точки красные» применяется к тысяче точек" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Поспешное обобщение — наиболее распространённая ошибка индуктивного мышления. Вывод распространяется на всю категорию на основании слишком малого числа наблюдений или нерепрезентативной выборки. Оба условия важны: иногда выборка велика, но систематически смещена — и это тоже поспешное обобщение.",
+              "Психологический механизм: мозг настроен на поиск паттернов. Один яркий пример часто перевешивает десятки нейтральных статистических данных. {{em:Личный опыт имеет непропорционально большой вес в наших обобщениях — хотя статистически один случай не значит ничего.}} Это та же причина, по которой авиакатастрофа пугает сильнее, чем автомобильная статистика.",
+              "Особая разновидность — анекдотическое доказательство: «мой дед курил до 90 лет» как аргумент против вреда курения. Один случай против миллионов наблюдений — не равновесная аргументация."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Обоснованное обобщение требует достаточной, репрезентативной выборки. Малое число наблюдений или систематически смещённая выборка делают вывод о «всех» или «никогда» неоправданным."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "В дискуссии об образовании:",
+            "example_quote": "— Я преподаю 20 лет и вижу: молодёжь сегодня стала ленивее и не хочет работать. Так было всегда — это новое поколение.",
+            "recognition_signal": "Сигнал: «я видел», «из моего опыта», «все X такие». Вопрос: насколько велика выборка? Она репрезентативна для всей группы? Учитель видит только тех, кто пришёл на его курс — это не случайная выборка «молодёжи». Каждое поколение взрослых жаловалось на следующее — это само по себе статистически значимое наблюдение.",
+            "nuance_warning": "Не путайте с обоснованной индукцией: если выборка достаточно велика и случайна, обобщение законно. Ошибка не в самом обобщении — в его торопливости. Три случая — не данные. Тысяча случайных случаев — уже данные."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Поспешное обобщение — источник большинства стереотипов. Они возникают не из злого умысла, а из нормального механизма мозга: экономить когнитивные ресурсы, делая быстрые выводы из ограниченных данных. Осознание этого не устраняет стереотипы — только создаёт мотив их проверять."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В маркетинге и продукте", "example": "Пять отзывов на бета-тесте — не основание для вывода о всей аудитории. Нерепрезентативные ранние пользователи систематически искажают обратную связь о продукте." },
+              { "label": "В медицине", "example": "«Мне помогло» — анекдотическое доказательство. Плацебо, спонтанная ремиссия и регрессия к среднему делают личный опыт крайне ненадёжным источником медицинских обобщений." },
+              { "label": "В политике и СМИ", "example": "Один вирусный инцидент становится «трендом» или «кризисом» — без данных о реальной частоте. Поспешное обобщение по одному яркому случаю формирует повестку." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните убеждение о какой-то группе людей или явлении. Откуда оно взялось? Сколько наблюдений лежит в его основе? Репрезентативны ли они? Один вопрос «сколько случаев — и каких?» часто разрушает поспешное обобщение."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"I've dealt with this company three times and got terrible service every time — they're bad.\" \"All the programmers I know are introverts — so programmers are introverts.\" \"I drove without a seatbelt once and nothing happened — seatbelts are useless.\" Hasty generalization is drawing broad conclusions from a small or unrepresentative sample." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Hasty}} Generalization" } },
+        { "type": "subtitle", "props": { "text": "Hasty Generalization · rhetorical fallacy · class: induction errors" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/hasty_generalization.svg", "alt": "One red dot in a sample of three — and the conclusion \"all dots are red\" applied to a thousand dots" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Hasty generalization is the most common error in inductive reasoning. A conclusion is extended to an entire category based on too few observations or an unrepresentative sample. Both conditions matter: sometimes a sample is large but systematically biased — and that's also a hasty generalization.",
+              "The psychological mechanism: the brain is tuned to find patterns. One vivid example often outweighs dozens of neutral statistical data points. {{em:Personal experience carries disproportionate weight in our generalizations — even though statistically, one case means nothing.}} This is the same reason a plane crash scares us more than car accident statistics.",
+              "A special variant is anecdotal evidence: \"my grandfather smoked until 90\" as an argument against the harms of smoking. One case against millions of observations is not balanced reasoning."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A justified generalization requires a sufficient, representative sample. A small number of observations or a systematically biased sample makes conclusions about \"all\" or \"never\" unwarranted."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a discussion about education:",
+            "example_quote": "— I've been teaching for 20 years and I can see: young people today have become lazier and don't want to work. It's always like this — it's the new generation.",
+            "recognition_signal": "Signal: \"I've seen,\" \"from my experience,\" \"all X are like this.\" Question: how large is the sample? Is it representative of the whole group? A teacher only sees those who enrolled in their course — that's not a random sample of \"young people.\" Every generation of adults has complained about the next — that itself is a statistically notable observation.",
+            "nuance_warning": "Don't confuse with legitimate induction: if the sample is large enough and random, generalization is valid. The error isn't in generalizing — it's in the hastiness. Three cases aren't data. A thousand random cases start to be."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Hasty generalization is the source of most stereotypes. They arise not from malice but from a normal brain mechanism: conserving cognitive resources by making quick judgments from limited data. Recognizing this doesn't eliminate stereotypes — it only creates the motivation to check them."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In marketing and product", "example": "Five reviews from beta testers are not grounds for conclusions about the whole audience. Unrepresentative early users systematically distort product feedback." },
+              { "label": "In medicine", "example": "\"It worked for me\" is anecdotal evidence. Placebo, spontaneous remission, and regression to the mean make personal experience an extremely unreliable source of medical generalizations." },
+              { "label": "In politics and media", "example": "One viral incident becomes a \"trend\" or \"crisis\" — without data on actual frequency. Hasty generalization from one vivid case shapes the news agenda." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a belief you hold about some group of people or phenomenon. Where did it come from? How many observations underlie it? Are they representative? One question — \"how many cases, and what kind?\" — often dismantles a hasty generalization."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/hasty_generalization" }]
+}

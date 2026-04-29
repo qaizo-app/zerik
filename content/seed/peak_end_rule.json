@@ -1,0 +1,168 @@
+{
+  "id": "peak_end_rule",
+  "category": "cognitive_biases",
+  "release_number": 84,
+  "release_date": "2026-07-04",
+  "tags": ["peak_end_rule", "kahneman", "memory", "experience", "duration_neglect"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/peak_end_rule.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Двум группам пациентов проводили неприятную медицинскую процедуру. Группа A: 60 секунд при 14°C. Группа B: 60 секунд при 14°C, затем 30 секунд при 15°C. Группа B пережила дольше и суммарно больший дискомфорт — но оценила процедуру как менее неприятную. Конец был чуть лучше. Этого оказалось достаточно." }
+        },
+        { "type": "title", "props": { "text": "Правило {{accent:пика}} и конца" } },
+        { "type": "subtitle", "props": { "text": "Peak-End Rule · Канеман, Фредриксон · 1993" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/peak_end_rule.svg", "alt": "График опыта: пик в середине, финальная точка — две точки с кружками, остальное серое" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Канеман разграничил «переживающее я» (experiencing self) и «вспоминающее я» (remembering self). Переживающее я живёт в каждом моменте и реагирует на текущий опыт. Вспоминающее я — сторителлер, который создаёт воспоминание о прошедшем. Именно оно принимает будущие решения: «пойти ли снова». И оно руководствуется не средним уровнем боли или удовольствия — только пиком и концом.",
+              "Правило объясняет парадоксы повседневного опыта. Короткий, но плохо завершившийся отпуск оценивается хуже долгого, но с прекрасным финальным вечером. {{em:«Продолжительность» почти не влияет на оценку — это «пренебрежение продолжительностью».}} Два часа ожидания, после которых вас отлично обслужили, вспоминаются лучше, чем 15 минут с финальным грубым кассиром.",
+              "Вспоминающее и переживающее я конфликтуют. Вы наслаждаетесь долгим отдыхом каждую минуту — но потом вспоминаете только пик и конец. Это означает, что наши воспоминания и решения систематически искажают реальность прожитого опыта."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мы оцениваем пережитый опыт не по среднему уровню, а по пику (самой интенсивной точке) и концу. Продолжительность почти не влияет на ретроспективную оценку."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Ресторан хочет, чтобы гости вспоминали визит как отличный. Что важнее всего?",
+            "setup": null,
+            "options": [
+              { "id": "average", "text": "Стабильно высокое качество еды на протяжении всего вечера", "is_wiser": false },
+              { "id": "peakend", "text": "Один запоминающийся момент и отличное завершение (десерт, прощание)", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают стабильное качество",
+              "explanation": "Данные Канемана говорят другое: гость, у которого было одно восхитительное блюдо и тёплое прощание, вспомнит вечер лучше, чем тот, кому всё было «хорошо, но ничего особенного». Рестораны мирового уровня интуитивно это знают: комплимент от шефа и провожание гостей — инвестиция в воспоминание.",
+              "wisdom": "{{em:Не важно, насколько хорошо — важно, как это закончилось.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Знание о правиле пика и конца создаёт этическую дилемму в медицине. Чтобы пациент вспоминал процедуру как менее болезненную, стоит добавить менее интенсивный дискомфорт в конце. Объективно — больше страданий. Субъективно — лучше воспоминание. Что важнее: опыт или воспоминание о нём?"
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В UX и продуктах", "example": "Продукты проектируются с пиком вовлечённости и позитивным завершением сессии. «Онбординг» и «выход» — самые важные точки пользовательского опыта по правилу пика и конца." },
+              { "label": "В переговорах", "example": "Как заканчивается сложная встреча — важнее, чем её середина. Опытные переговорщики специально создают позитивный итог даже после сложного обсуждения." },
+              { "label": "В управлении персоналом", "example": "Выходное интервью и увольнение определяют, как бывший сотрудник будет рассказывать о компании. Конец рабочих отношений — самая важная точка с точки зрения репутации работодателя." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните важный предстоящий опыт, который вы организуете (встреча, презентация, мероприятие). Спланируйте его пик и финал: что будет самым запоминающимся моментом? Как он завершится? Всё остальное — фон."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Two groups of patients underwent an unpleasant medical procedure. Group A: 60 seconds at 14°C. Group B: 60 seconds at 14°C, then 30 seconds at 15°C. Group B experienced more total discomfort and a longer procedure — but rated it as less unpleasant. The end was slightly better. That was enough." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Peak}}-End Rule" } },
+        { "type": "subtitle", "props": { "text": "Peak-End Rule · Kahneman & Fredrickson · 1993" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/peak_end_rule.svg", "alt": "An experience chart: a peak in the middle, a final point — two circled points, everything else is grey" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Kahneman distinguished the \"experiencing self\" and the \"remembering self.\" The experiencing self lives in each moment, reacting to current experience. The remembering self is the storyteller that creates a memory of what happened. It's the one that makes future decisions: \"should I go again?\" And it operates not on the average level of pain or pleasure — only the peak and the end.",
+              "The rule explains paradoxes of everyday experience. A short but badly-ended vacation is rated worse than a longer one with a magnificent final evening. {{em:\"Duration\" barely affects the rating — this is \"duration neglect.\"}} Two hours of waiting followed by excellent service is remembered better than 15 minutes with a rude final cashier.",
+              "The remembering and experiencing selves conflict. You enjoy a long vacation every minute — but then remember only the peak and the end. This means our memories and decisions systematically distort the reality of lived experience."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "We evaluate a lived experience not by average level but by the peak (most intense moment) and the ending. Duration barely influences the retrospective rating."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A restaurant wants guests to remember their visit as excellent. What matters most?",
+            "setup": null,
+            "options": [
+              { "id": "average", "text": "Consistently high food quality throughout the entire evening", "is_wiser": false },
+              { "id": "peakend", "text": "One memorable moment and an excellent ending (dessert, farewell)", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose consistent quality",
+              "explanation": "Kahneman's data says otherwise: a guest who had one extraordinary dish and a warm farewell will remember the evening better than one for whom everything was \"good but nothing special.\" World-class restaurants know this intuitively: a gift from the chef and personal send-off are investments in memory.",
+              "wisdom": "{{em:What matters isn't how good it was — it's how it ended.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Knowing the peak-end rule creates an ethical dilemma in medicine. To make a patient remember a procedure as less painful, you can add less intense discomfort at the end. Objectively — more suffering. Subjectively — a better memory. What matters more: the experience or the memory of it?"
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In UX and products", "example": "Products are designed with a peak of engagement and a positive session ending. \"Onboarding\" and \"exit\" are the most important points in user experience by the peak-end rule." },
+              { "label": "In negotiations", "example": "How a difficult meeting ends matters more than its middle. Experienced negotiators deliberately create a positive conclusion even after hard discussion." },
+              { "label": "In HR", "example": "Exit interviews and how termination is handled determine how a former employee will describe the company. The end of a work relationship is the most important point for employer reputation." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of an important upcoming experience you're organizing (meeting, presentation, event). Plan its peak and finale: what will be the most memorable moment? How will it end? Everything else is background."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/peak_end_rule" }]
+}

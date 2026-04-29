@@ -1,0 +1,150 @@
+{
+  "id": "false_equivalence",
+  "category": "rhetorical_fallacies",
+  "release_number": 82,
+  "release_date": "2026-07-02",
+  "tags": ["false_equivalence", "bothsidesism", "fallacy", "logic", "media"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/false_equivalence.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Вакцины иногда вызывают побочные эффекты. Автомобили тоже убивают людей. Значит, вакцины и автомобили одинаково опасны». «Учёные говорят, что Земля круглая, но некоторые считают иначе — у каждого своя точка зрения». Ложная эквивалентность приравнивает несравнимое — и это один из самых распространённых приёмов в публичных дискуссиях." }
+        },
+        { "type": "title", "props": { "text": "Ложная {{accent:эквива}}лентность" } },
+        { "type": "subtitle", "props": { "text": "False Equivalence · риторическая ошибка · класс «ошибок сравнения»" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/false_equivalence.svg", "alt": "Весы с явно неравными чашами, но подписью «одинаково» между ними" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ложная эквивалентность возникает, когда два явления сравниваются как равнозначные, хотя реально между ними есть существенная разница в масштабе, контексте или природе. Формальное сходство («оба X») используется как доказательство равенства по всем значимым параметрам. Это злоупотребление аналогией.",
+              "Особую опасность представляет «both-sidesism» в медиа — журналистская практика представлять «обе стороны» любой дискуссии как равнозначные. Когда 97% климатологов согласны с одним выводом и 3% — с другим, представление их мнений как «равных точек зрения» создаёт искажённую картину реальности. {{em:Не каждая дискуссия имеет две равноценных стороны.}} Некоторые вопросы имеют ответы, другие — нет.",
+              "Ложная эквивалентность часто используется для защиты: «Ты критикуешь X — но такие же вещи делает и Y!» Это переключение с оценки X на сравнение с Y — которое не отменяет проблему X. Даже если Y виноват сильнее, это не делает X невиновным."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Сходство в одном отношении не означает равенства по всем значимым параметрам. Перед сравнением необходимо проверить: сопоставимы ли масштаб, контекст и природа явлений."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "В дискуссии о безопасности медицины:",
+            "example_quote": "— Лекарства убивают тысячи людей каждый год от побочных эффектов. Нелечение тоже убивает людей. Значит, лечиться так же опасно, как не лечиться.",
+            "recognition_signal": "Сигнал: «X тоже вызывает Y, поэтому X и Z одинаково плохи». Проверьте: в каком масштабе и при каком базовом уровне? Лекарства убивают в среднем меньше, чем болезни, которые они лечат. Эквивалентность требует сопоставимости по всем значимым параметрам, а не только по одному.",
+            "nuance_warning": "Не путайте с законной аналогией: сравнение сходных вещей для понимания — это нормально. Ошибка — в выводе о равенстве на основе частичного сходства. «Оба летают» — не делает самолёт и комара одинаково опасными в турбулентность."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Ложная эквивалентность особенно привлекательна, когда мы хотим защитить то, что нам нравится. «Критикуют нашу страну — но та же страна делает то же самое!» Это защита через отвлечение, а не опровержение. Действие X остаётся тем, чем оно является, независимо от действий Y."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В медиа", "example": "«Both-sidesism»: интервью с учёным-климатологом и отрицателем изменений климата как «двумя равными точками зрения». Формальный баланс создаёт фактический дисбаланс." },
+              { "label": "В политике", "example": "«Все политики одинаковы» — ложная эквивалентность, стирающая реальные различия в политике, поведении и последствиях. Приводит к апатии и абсентеизму." },
+              { "label": "В корпоративных спорах", "example": "«Наш продукт имеет ошибки — но у конкурентов тоже». Эквивалентность ошибок разного масштаба и природы — распространённый приём в PR и переговорах." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующий раз, когда услышите «А — это как Б», задайте вопрос: в чём именно похожи? Сопоставимы ли они по масштабу, контексту, последствиям? Сходство в одном не равно равенству во всём."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"Vaccines sometimes cause side effects. Cars kill people too. So vaccines and cars are equally dangerous.\" \"Scientists say the Earth is round, but some disagree — everyone has their own perspective.\" False equivalence treats the incomparable as equal — and it's one of the most common devices in public discourse." }
+        },
+        { "type": "title", "props": { "text": "{{accent:False}} Equivalence" } },
+        { "type": "subtitle", "props": { "text": "False Equivalence · rhetorical fallacy · class: comparison errors" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/false_equivalence.svg", "alt": "A scale with clearly unequal pans but the label \"equal\" between them" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "False equivalence occurs when two phenomena are compared as though equal, despite substantial differences in scale, context, or nature. Formal similarity (\"both are X\") is used as proof of equality on all significant parameters. This is an abuse of analogy.",
+              "Particularly dangerous is \"both-sidesism\" in media — the journalistic practice of presenting \"both sides\" of any debate as equally valid. When 97% of climate scientists agree on one finding and 3% disagree, presenting these as \"equal viewpoints\" creates a distorted picture of reality. {{em:Not every debate has two equally valid sides.}} Some questions have answers; others don't.",
+              "False equivalence is frequently used as a defense: \"You criticize X — but Y does the same things!\" This shifts attention from evaluating X to comparing with Y — which doesn't nullify the problem with X. Even if Y is more culpable, this doesn't make X innocent."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Similarity in one respect doesn't mean equality on all significant parameters. Before drawing a comparison, verify: are the scale, context, and nature of the phenomena comparable?"
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a discussion about medical safety:",
+            "example_quote": "— Medications kill thousands of people every year from side effects. Not treating also kills people. So treating is just as dangerous as not treating.",
+            "recognition_signal": "Signal: \"X also causes Y, so X and Z are equally bad.\" Check: at what scale and what baseline rate? Medications on average kill fewer people than the diseases they treat. Equivalence requires comparability on all significant parameters, not just one.",
+            "nuance_warning": "Don't confuse with legitimate analogy: comparing similar things to build understanding is fine. The fallacy is in concluding equality from partial similarity. \"Both fly\" doesn't make an airplane and a mosquito equally dangerous in turbulence."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "False equivalence is especially appealing when we want to defend something we like. \"They criticize our country — but that other country does the same things!\" This is a defense through distraction, not a refutation. Action X remains what it is, regardless of action Y."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In media", "example": "Both-sidesism: interviewing a climate scientist and a climate denier as \"two equal viewpoints.\" Formal balance creates factual imbalance." },
+              { "label": "In politics", "example": "\"All politicians are the same\" — false equivalence that erases real differences in policy, behavior, and consequences. Leads to apathy and abstentionism." },
+              { "label": "In corporate disputes", "example": "\"Our product has bugs — but competitors do too.\" Equivalence of bugs of different scales and types is a common PR and negotiation tactic." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Next time you hear \"A is like B,\" ask: in what specific way? Are they comparable in scale, context, consequences? Similarity in one dimension is not equality across all."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/false_equivalence" }]
+}

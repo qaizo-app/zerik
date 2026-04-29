@@ -1,0 +1,170 @@
+{
+  "id": "philosophical_zombie",
+  "category": "thought_experiments",
+  "release_number": 99,
+  "release_date": "2026-07-19",
+  "tags": ["chalmers", "consciousness", "qualia", "hard_problem", "mind", "philosophy_of_mind"],
+  "difficulty": 4,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/philosophical_zombie.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте существо, физически идентичное вам до атома: те же нейроны, те же реакции, те же слова в ответ на те же вопросы. Но внутри — темнота. Нет никакого субъективного опыта, никакого «ощущения красного», никакой боли изнутри — только механизм, симулирующий человека. Чалмерс называет это «философским зомби». Мыслимо ли такое? И что это говорит о природе сознания?" }
+        },
+        { "type": "title", "props": { "text": "Философский {{accent:зомби}}" } },
+        { "type": "subtitle", "props": { "text": "Philosophical Zombie · Дэвид Чалмерс · «Сознательный разум» · 1996" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/philosophical_zombie.svg", "alt": "Два силуэта: один с цветным внутренним светом (сознание), другой внешне идентичный, но тёмный внутри" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Чалмерс использует «философского зомби» для формулировки «трудной проблемы сознания». Лёгкие проблемы — как мозг обрабатывает информацию, реагирует на стимулы, управляет поведением — в принципе решаемы наукой. Трудная проблема — почему вообще существует субъективный опыт. Почему есть «каково это — видеть красное», а не просто нейронная обработка длины волны 700 нм.",
+              "Если философский зомби мыслим — значит, физические факты о мозге не объясняют сознание полностью. {{em:Физически полное описание мира не включает объяснения того, почему что-то «ощущается» изнутри.}} Это называют «объяснительным провалом». Материализм в чистом виде не справляется с этим провалом.",
+              "Критики возражают: Чалмерс показывает лишь, что мы не можем вообразить, как физический процесс порождает сознание — не то, что оно действительно невозможно. Деннет: концепция зомби бессвязна, потому что «поведение без сознания» — не то, что можно по-настоящему представить. Дискуссия остаётся открытой и является одной из центральных в современной философии разума."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Субъективный опыт — «каково это» быть кем-то — не вытекает автоматически из физического описания мозга. Это «трудная проблема сознания»: объяснить не функцию, а само существование внутренней перспективы."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Искусственный интеллект ведёт себя точно как человек: отвечает на вопросы, описывает эмоции, говорит «мне больно». Это доказывает, что он чувствует?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — поведение неотличимо от человеческого, значит чувствует то же", "is_wiser": false },
+              { "id": "no", "text": "Нет — поведение не доказывает наличие субъективного опыта", "is_wiser": true },
+              { "id": "unknown", "text": "Неизвестно — это именно то, что мы не умеем проверить", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что поведение доказывает сознание",
+              "explanation": "Проблема философского зомби прямо встроена в дискуссию о сознании ИИ. Тест Тьюринга проверяет поведение — не сознание. Система может имитировать все признаки сознания без субъективного опыта. «Знает ли» ChatGPT, что он говорит? Наука и философия пока не имеют теста, который отличал бы «зомби» от «сознательного» существа.",
+              "wisdom": "{{em:Поведение — это то, что видно снаружи. Сознание — то, что есть изнутри. Это разные вещи.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Философский зомби — не аргумент против материализма в жизненных вопросах. Он не говорит, что мозг и поведение не важны — он говорит, что физическое описание неполно как объяснение сознания. Это вопрос метафизики, а не нейробиологии. Не путайте уровни объяснения."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В философии ИИ", "example": "Права ИИ, моральный статус систем, «страдает ли» нейронная сеть — всё это упирается в трудную проблему сознания и философского зомби. Без решения этой проблемы нет ответа на вопрос о правах ИИ." },
+              { "label": "В медицине", "example": "Пациенты в вегетативном состоянии или с синдромом «запертого человека» могут проявлять поведение без видимого сознания — или сознание без видимого поведения. Различение этих состояний критично этически." },
+              { "label": "В нейронауке", "example": "Нейронные корреляты сознания (NCC) — активные области при сознательном восприятии — известны. Почему именно они порождают опыт, а не просто обрабатывают информацию — остаётся открытым вопросом." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Подумайте об одном человеке, с которым вы сегодня взаимодействовали. Вы видели их поведение. Но что именно вы знаете об их внутреннем опыте? Философский зомби — это приглашение к эмпатии: «снаружи» и «изнутри» — разные реальности."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine a being physically identical to you down to the atom: the same neurons, the same reactions, the same words in response to the same questions. But inside — darkness. No subjective experience, no \"feeling of redness,\" no pain from the inside — just a mechanism simulating a human. Chalmers calls this a \"philosophical zombie.\" Is it conceivable? And what does it tell us about the nature of consciousness?" }
+        },
+        { "type": "title", "props": { "text": "Philosophical {{accent:Zombie}}" } },
+        { "type": "subtitle", "props": { "text": "Philosophical Zombie · David Chalmers · The Conscious Mind · 1996" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/philosophical_zombie.svg", "alt": "Two silhouettes: one with colorful inner light (consciousness), the other outwardly identical but dark inside" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Chalmers uses the \"philosophical zombie\" to formulate the \"hard problem of consciousness.\" The easy problems — how the brain processes information, responds to stimuli, controls behavior — are in principle solvable by science. The hard problem is why subjective experience exists at all. Why is there \"what it's like to see red,\" rather than merely neural processing of a 700nm wavelength.",
+              "If a philosophical zombie is conceivable, then physical facts about the brain don't fully explain consciousness. {{em:A physically complete description of the world doesn't include an explanation of why anything is \"felt\" from the inside.}} This is called the \"explanatory gap.\" Pure materialism doesn't bridge this gap.",
+              "Critics object: Chalmers only shows we can't imagine how a physical process generates consciousness — not that it's truly impossible. Dennett argues: the zombie concept is incoherent because \"behavior without consciousness\" isn't something we can genuinely conceive. The debate remains open and is one of the central disputes in contemporary philosophy of mind."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Subjective experience — \"what it's like\" to be someone — doesn't automatically follow from a physical description of the brain. This is the hard problem of consciousness: explaining not the function, but the very existence of an inner perspective."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "An AI behaves exactly like a human: answers questions, describes emotions, says \"I'm in pain.\" Does this prove it feels?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — its behavior is indistinguishable from a human's, so it feels the same", "is_wiser": false },
+              { "id": "no", "text": "No — behavior doesn't prove the existence of subjective experience", "is_wiser": true },
+              { "id": "unknown", "text": "Unknown — this is exactly what we don't know how to test", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think behavior proves consciousness",
+              "explanation": "The philosophical zombie problem is directly embedded in the AI consciousness debate. The Turing test checks behavior — not consciousness. A system can simulate all signs of consciousness without subjective experience. Does ChatGPT \"know\" what it's saying? Science and philosophy don't yet have a test that distinguishes a \"zombie\" from a conscious being.",
+              "wisdom": "{{em:Behavior is what's visible from the outside. Consciousness is what exists from the inside. These are different things.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The philosophical zombie is not an argument against materialism in everyday life. It doesn't say the brain and behavior don't matter — it says physical description is incomplete as an explanation of consciousness. This is a question of metaphysics, not neuroscience. Don't confuse levels of explanation."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In AI philosophy", "example": "AI rights, moral status of systems, whether a neural network \"suffers\" — all run into the hard problem of consciousness and the philosophical zombie. Without solving that problem, there's no answer to AI rights." },
+              { "label": "In medicine", "example": "Patients in vegetative states or with locked-in syndrome may show behavior without visible consciousness — or consciousness without visible behavior. Distinguishing these states is critical ethically." },
+              { "label": "In neuroscience", "example": "Neural correlates of consciousness (NCC) — brain areas active during conscious perception — are known. Why specifically they generate experience, rather than simply processing information, remains an open question." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of someone you interacted with today. You saw their behavior. But what do you actually know about their inner experience? The philosophical zombie is an invitation to empathy: \"from the outside\" and \"from the inside\" are different realities."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/philosophical_zombie" }]
+}

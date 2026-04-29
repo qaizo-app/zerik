@@ -1,0 +1,170 @@
+{
+  "id": "bystander_effect",
+  "category": "psychology_experiments",
+  "release_number": 100,
+  "release_date": "2026-07-20",
+  "tags": ["bystander", "darley", "latane", "diffusion_of_responsibility", "kitty_genovese", "social"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/bystander_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "1968 год. Участник эксперимента слышит через наушники, как другой человек теряет сознание в припадке. Если он думал, что беседа тет-а-тет — звал на помощь в 85% случаев. Если думал, что разговор с пятью другими участниками — реагировал только в 31% случаев. Чем больше свидетелей — тем меньше каждый чувствовал себя ответственным." }
+        },
+        { "type": "title", "props": { "text": "Эффект {{accent:зрителя}}" } },
+        { "type": "subtitle", "props": { "text": "Bystander Effect · Дарли и Латанэ · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bystander_effect.svg", "alt": "Человек упал в центре — вокруг стоят свидетели, каждый смотрит на других, никто не движется" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Джон Дарли и Биб Латанэ начали исследование под впечатлением от убийства Китти Дженовезе в Нью-Йорке — по ранним сообщениям, 38 свидетелей наблюдали нападение и не вызвали полицию. Позднейший анализ показал, что история была мифологизирована — но исследование дало реальный результат: присутствие других снижает вероятность индивидуального вмешательства.",
+              "Механизм — «диффузия ответственности»: когда свидетелей много, каждый ощущает себя менее ответственным за действие — «кто-то другой это сделает». Второй механизм — «плюралистическое невежество»: каждый видит, что другие не реагируют, и интерпретирует это как сигнал, что ситуация не опасна. {{em:Два человека, каждый из которых думает, что другой что-то сделает — вместе не делают ничего.}}",
+              "Для преодоления эффекта зрителя нужна конкретность: «Вы в синей куртке — вызовите скорую». Выделение конкретного человека из толпы разрушает диффузию ответственности и заставляет его действовать."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Присутствие других свидетелей снижает вероятность индивидуального вмешательства в чрезвычайной ситуации. Ответственность «размывается» между всеми — и в итоге не берёт её никто. Больше свидетелей — не больше помощи."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Человеку плохо на улице. Вокруг 20 человек. Кто-то должен вызвать скорую. Что произойдёт скорее всего?",
+            "setup": null,
+            "options": [
+              { "id": "helped", "text": "Кто-то из 20 точно поможет — большая группа надёжнее одного", "is_wiser": false },
+              { "id": "diffusion", "text": "Каждый будет ждать, что другой сделает — может не помочь никто", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "верят, что большая группа надёжнее",
+              "explanation": "Данные Дарли и Латанэ и последующие метаанализы (Fischer et al., 2011) подтверждают: в реальных ситуациях больше свидетелей коррелирует с меньшей вероятностью помощи — особенно когда неясно, кто несёт ответственность. Исключение: опасная ситуация с видимой угрозой повышает вероятность помощи даже в группе. Нейтральные ситуации — наиболее уязвимы к эффекту зрителя.",
+              "wisdom": "{{em:Если в толпе вы ожидаете, что «кто-то поможет» — вы и есть тот, кто не помогает.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Современный взгляд",
+            "text": "Мета-анализ Fischer et al. (2011) уточнил: эффект зрителя слабее в реально опасных ситуациях (физическое нападение) и сильнее в неоднозначных. Данные с камер наблюдения (Philpot et al., 2020) показывают: в 90% реальных уличных инцидентов хотя бы один свидетель вмешивается. Лабораторный эффект реален, но его масштаб в жизни меньше, чем первоначально думали.",
+            "citation": "Fischer, P. et al. (2011). The bystander-effect: A meta-analytic review on bystander intervention in dangerous and non-dangerous emergencies. Psychological Bulletin, 137(4), 517–537."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В организациях", "example": "«Кто-нибудь это сделает» — корпоративная версия эффекта зрителя. Задачи без назначенного ответственного системно остаются невыполненными. RACI-матрица и явное назначение owner — структурный ответ на эффект зрителя." },
+              { "label": "В онлайн-сообществах", "example": "Токсичные комментарии в больших сообществах редко получают отпор: «кто-нибудь ответит». Небольшие, плотные сообщества с явными нормами реагируют быстрее — диффузия ответственности ниже." },
+              { "label": "В безопасности", "example": "Инструктажи по экстренным ситуациям специально учат называть конкретного человека: «Вы — вызовите 112». Это стандартный метод разрушения диффузии ответственности, основанный на исследовании Дарли и Латанэ." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей команде или жизни задача, которую «кто-нибудь сделает»? Назовите конкретного человека — или возьмите ответственность сами. Превратите диффузию в назначение."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "1968. A participant hears through headphones that another person is having a seizure and losing consciousness. If they thought it was a one-on-one conversation — they sought help 85% of the time. If they thought five others were also listening — they responded only 31% of the time. The more witnesses, the less each person felt responsible." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Bystander}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Bystander Effect · Darley & Latané · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bystander_effect.svg", "alt": "A person collapsed in the center — bystanders standing around, each looking at the others, no one moving" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "John Darley and Bibb Latané began their research inspired by the murder of Kitty Genovese in New York — early reports claimed 38 witnesses watched the attack without calling police. Later analysis showed the story was mythologized — but the research produced a real finding: the presence of others reduces the likelihood of individual intervention.",
+              "The mechanism is \"diffusion of responsibility\": when many witnesses are present, each feels less personally responsible — \"someone else will do it.\" A second mechanism is \"pluralistic ignorance\": each person sees others not reacting and interprets this as a signal that the situation isn't dangerous. {{em:Two people each expecting the other to act — together do nothing.}}",
+              "To overcome the bystander effect, specificity is required: \"You in the blue jacket — call an ambulance.\" Singling out a specific individual from the crowd breaks diffusion of responsibility and compels them to act."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The presence of other witnesses reduces the likelihood of individual intervention in an emergency. Responsibility \"diffuses\" across everyone — and ultimately no one takes it. More bystanders doesn't mean more help."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Someone collapses on the street. There are 20 people around. Someone should call an ambulance. What will most likely happen?",
+            "setup": null,
+            "options": [
+              { "id": "helped", "text": "Someone among the 20 will definitely help — a larger group is more reliable than one person", "is_wiser": false },
+              { "id": "diffusion", "text": "Each person will wait for someone else to act — and no one may help at all", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "believe larger groups are more reliable",
+              "explanation": "Darley and Latané's data and subsequent meta-analyses (Fischer et al., 2011) confirm: in real-life situations, more witnesses correlates with lower probability of help — especially when it's unclear who bears responsibility. Exception: clearly dangerous situations with visible threat increase the likelihood of help even in groups. Ambiguous situations are most vulnerable to the bystander effect.",
+              "wisdom": "{{em:If you're in a crowd expecting that \"someone will help\" — you're the one who isn't helping.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Modern view",
+            "text": "Fischer et al.'s 2011 meta-analysis clarified: the bystander effect is weaker in genuinely dangerous situations (physical assault) and stronger in ambiguous ones. CCTV data (Philpot et al., 2020) shows that in 90% of real street incidents, at least one bystander intervenes. The laboratory effect is real, but its real-world magnitude is smaller than originally thought.",
+            "citation": "Fischer, P. et al. (2011). The bystander-effect: A meta-analytic review on bystander intervention in dangerous and non-dangerous emergencies. Psychological Bulletin, 137(4), 517–537."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In organizations", "example": "\"Someone will handle it\" — the corporate version of the bystander effect. Tasks without an assigned owner are systematically left undone. RACI matrices and explicit owner assignment are the structural answer to the bystander effect." },
+              { "label": "In online communities", "example": "Toxic comments in large communities rarely get challenged: \"someone will respond.\" Small, dense communities with explicit norms respond faster — diffusion of responsibility is lower." },
+              { "label": "In safety training", "example": "Emergency training specifically teaches you to name a specific person: \"You — call 112.\" This is the standard method for breaking diffusion of responsibility, based directly on Darley and Latané's research." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there a task in your team or life that \"someone will handle\"? Name a specific person — or take responsibility yourself. Turn diffusion into assignment."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/bystander_effect" }]
+}

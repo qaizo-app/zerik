@@ -1,0 +1,170 @@
+{
+  "id": "pygmalion_effect",
+  "category": "psychology_experiments",
+  "release_number": 86,
+  "release_date": "2026-07-06",
+  "tags": ["pygmalion", "rosenthal", "jacobson", "expectations", "self_fulfilling_prophecy", "education"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/pygmalion_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "1968 год. Учителям начальной школы в Сан-Франциско сообщили, что специальный тест выявил «интеллектуальных расцветателей» — детей, которые вот-вот совершат резкий умственный скачок. Через год эти дети действительно показали значительный рост IQ по сравнению с остальными. Одна деталь: «расцветатели» были выбраны случайно." }
+        },
+        { "type": "title", "props": { "text": "Эффект {{accent:Пигмалиона}}" } },
+        { "type": "subtitle", "props": { "text": "Pygmalion Effect · Розенталь и Якобсон · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/pygmalion_effect.svg", "alt": "Учитель смотрит на ученика с надеждой — линия роста результатов ребёнка идёт вверх" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Роберт Розенталь и Леноре Якобсон показали: ожидания учителя влияют на реальные результаты учеников. Механизм — не магия. Учитель, верящий в потенциал ребёнка, иначе с ним взаимодействует: даёт больше времени на ответ, задаёт более сложные вопросы, реагирует теплее на ошибки, предлагает дополнительную обратную связь. Ребёнок чувствует это — и работает иначе.",
+              "Эффект Пигмалиона — самосбывающееся пророчество в образовании. Его зеркало — «эффект Голема»: низкие ожидания снижают результаты. {{em:Ожидания создают реальность — не напрямую, а через изменение поведения того, кто их держит.}} Учитель не «передаёт» ожидания телепатически — он меняет качество взаимодействия.",
+              "Важная оговорка: репликации эффекта неодинаковы. Мета-анализы (Raudenbush, 1984) показали: эффект сильнее в первые встречи с новым классом — когда учитель ещё не имеет собственной информации о детях. Устойчивые ожидания сложнее изменить ложной информацией. Но даже умеренный эффект — значителен для образования."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Ожидания других влияют на наши результаты — через изменение качества взаимодействия: внимания, сложности задач, терпения, обратной связи. Высокие ожидания создают условия для роста; низкие — для стагнации."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Менеджер думает про нового сотрудника: «Этот не потянет». Что, скорее всего, произойдёт?",
+            "setup": null,
+            "options": [
+              { "id": "nothing", "text": "Ничего особенного — сотрудник покажет то, на что способен", "is_wiser": false },
+              { "id": "pygmalion", "text": "Менеджер будет давать меньше задач, меньше поддержки — сотрудник действительно покажет меньше", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что ожидания не влияют",
+              "explanation": "Ожидание «не потянет» проявляется в деталях: меньше сложных задач, меньше обратной связи, меньше терпения при ошибках. Сотрудник получает меньше возможностей для роста и подтверждает прогноз — не потому что он действительно слаб, а потому что не получил условий для развития. Это петля обратной связи, которую создаёт сам менеджер.",
+              "wisdom": "{{em:Ожидание — не предсказание. Это программа поведения, которую вы запускаете в отношении другого.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Современный взгляд",
+            "text": "Мета-анализ Raudenbush (1984) и последующие работы уточнили границы эффекта. Он наиболее выражен в первые недели взаимодействия, когда у учителя нет собственного опыта с учеником. С накоплением реальных данных ложные ожидания ослабевают. Это хорошая новость: устойчивые негативные стереотипы не всесильны — реальное взаимодействие их корректирует.",
+            "citation": "Raudenbush, S. W. (1984). Magnitude of teacher expectancy effects on pupil IQ as a function of the credibility of expectancy induction. Journal of Educational Psychology, 76(1), 85–97."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В управлении", "example": "«Эффект Пигмалиона для менеджеров» (Eden, 1990): руководители, которым сказали, что их подчинённые высокопотенциальны, показывали лучшие результаты команды. Ожидания влияют на стиль руководства." },
+              { "label": "В спорте", "example": "Тренеры, верящие в потенциал спортсмена, дают более сложные упражнения, больше индивидуального внимания и продуктивной критики. Вера тренера статистически связана с результатами спортсмена." },
+              { "label": "В здравоохранении", "example": "Медицинский персонал с разными ожиданиями от пациентов оказывает им разное качество помощи. Стереотипы о «трудных» пациентах ухудшают их лечение — и их результаты." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Выберите одного человека, к которому у вас низкие ожидания. Намеренно дайте ему более сложную задачу, больше времени на ответ и больше поддержки в этой неделе. Не меняйте мнение — измените поведение. Посмотрите, что изменится."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "1968. Teachers at a San Francisco elementary school were told that a special test had identified \"intellectual bloomers\" — children about to experience a dramatic intellectual spurt. A year later, these children showed significantly greater IQ gains than their classmates. One detail: the \"bloomers\" had been chosen at random." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Pygmalion}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Pygmalion Effect · Rosenthal & Jacobson · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/pygmalion_effect.svg", "alt": "A teacher looking at a student with hope — a rising performance line above the child" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Robert Rosenthal and Lenore Jacobson demonstrated that a teacher's expectations influence students' actual outcomes. The mechanism isn't magic. A teacher who believes in a child's potential interacts with them differently: gives more time for answers, asks more challenging questions, responds more warmly to mistakes, offers more feedback. The child feels this — and performs differently.",
+              "The Pygmalion effect is a self-fulfilling prophecy in education. Its mirror is the \"Golem effect\": low expectations lower performance. {{em:Expectations create reality — not directly, but by changing the behavior of the person who holds them.}} A teacher doesn't \"transmit\" expectations telepathically — they change the quality of interaction.",
+              "An important caveat: replications of the effect vary. Meta-analyses (Raudenbush, 1984) showed the effect is strongest at the beginning of a new relationship — when the teacher has no independent data about the children yet. Established expectations are harder to shift with false information. But even a moderate effect is significant for education."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Others' expectations affect our outcomes — by changing the quality of interaction: attention, task difficulty, patience, feedback. High expectations create conditions for growth; low expectations create conditions for stagnation."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A manager thinks about a new employee: \"This one won't cut it.\" What will most likely happen?",
+            "setup": null,
+            "options": [
+              { "id": "nothing", "text": "Nothing special — the employee will show what they're actually capable of", "is_wiser": false },
+              { "id": "pygmalion", "text": "The manager will assign fewer tasks, less support — and the employee will underperform as a result", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think expectations don't affect outcomes",
+              "explanation": "The expectation of \"won't cut it\" shows up in details: fewer complex tasks, less feedback, less patience with mistakes. The employee gets fewer growth opportunities and confirms the prediction — not because they're actually weak, but because they weren't given the conditions to develop. This is a feedback loop the manager creates themselves.",
+              "wisdom": "{{em:An expectation isn't a prediction. It's a behavioral program you run toward another person.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Modern view",
+            "text": "Raudenbush's 1984 meta-analysis and subsequent work clarified the effect's boundaries. It is most pronounced in the first weeks of interaction, when the teacher has no independent experience with the student. As real data accumulates, false expectations weaken. This is good news: persistent negative stereotypes are not all-powerful — real interaction corrects them.",
+            "citation": "Raudenbush, S. W. (1984). Magnitude of teacher expectancy effects on pupil IQ as a function of the credibility of expectancy induction. Journal of Educational Psychology, 76(1), 85–97."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In management", "example": "\"The Pygmalion effect for managers\" (Eden, 1990): managers told their subordinates were high-potential showed better team results. Expectations influence management style." },
+              { "label": "In sports", "example": "Coaches who believe in an athlete's potential assign more challenging exercises, give more individual attention, and offer more productive criticism. A coach's belief is statistically linked to athlete outcomes." },
+              { "label": "In healthcare", "example": "Medical staff with different expectations about patients provide different quality of care. Stereotypes about \"difficult\" patients worsen their treatment — and their outcomes." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Choose one person you hold low expectations for. Deliberately give them a more challenging task, more time to respond, and more support this week. Don't change your opinion — change your behavior. See what changes."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/pygmalion_effect" }]
+}

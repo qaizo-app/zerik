@@ -1,0 +1,170 @@
+{
+  "id": "maxwells_demon",
+  "category": "thought_experiments",
+  "release_number": 85,
+  "release_date": "2026-07-05",
+  "tags": ["maxwell", "thermodynamics", "entropy", "information", "szilard", "landauer"],
+  "difficulty": 4,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/maxwells_demon.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте контейнер, разделённый перегородкой с маленькой дверцей. Крошечный демон стоит у дверцы. Он видит молекулы воздуха и пропускает быстрые вправо, медленные — влево. Через некоторое время: справа горячий газ, слева холодный. Без затраты энергии! Второй закон термодинамики нарушен? Или нет?" }
+        },
+        { "type": "title", "props": { "text": "Демон {{accent:Максвелла}}" } },
+        { "type": "subtitle", "props": { "text": "Maxwell's Demon · Джеймс Клерк Максвелл · 1867" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/maxwells_demon.svg", "alt": "Контейнер с перегородкой, демон у дверцы, быстрые молекулы справа (красные), медленные слева (синие)" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Второй закон термодинамики утверждает: тепло не может само по себе перейти от холодного тела к горячему, а энтропия изолированной системы только растёт. Максвелл предложил демона как мысленный вызов этому закону: если существо способно наблюдать молекулы без затраты энергии, оно может создать температурный градиент из ничего — вечный двигатель второго рода.",
+              "Ответ пришёл через 60 лет. Лео Силард в 1929 году показал: чтобы различать молекулы, демон должен получать информацию о каждой из них. Информация — физическая. Реймон Ландауэр доказал в 1961 году: {{em:стирание одного бита информации выделяет тепло — минимум kT·ln2 джоулей.}} Когда демон сбрасывает «память» о предыдущих молекулах, он производит ровно ту энтропию, которую сэкономил.",
+              "Демон Максвелла показал, что информация — не абстракция, а физическая реалия с термодинамической ценой. «Бесплатного» наблюдения не существует. Это открытие связало физику, теорию информации и вычисления в единую картину мира."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Информация физична: её получение, хранение и стирание имеют термодинамическую цену. «Бесплатного» наблюдения не существует — второй закон термодинамики сохраняется именно потому, что обработка информации сама генерирует энтропию."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Демон наблюдает молекулы и сортирует их весь день. Он так и не нарушит второй закон. Почему?",
+            "setup": null,
+            "options": [
+              { "id": "tired", "text": "Он устанет и начнёт ошибаться", "is_wiser": false },
+              { "id": "memory", "text": "Стирание памяти о каждой молекуле производит ровно столько же энтропии, сколько он сэкономил", "is_wiser": true },
+              { "id": "impossible", "text": "Он вообще не может наблюдать молекулы без взаимодействия с ними", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "думают, что демон просто устанет",
+              "explanation": "Демон Максвелла не нарушает законы, потому что его «память» о молекулах должна быть конечной. Когда она заполнена, он вынужден её стирать. Принцип Ландауэра (1961) показывает: каждое стирание бита информации при температуре T выделяет минимум kT·ln2 джоулей тепла. Это компенсирует любое снижение энтропии при сортировке. Информация — не бесплатна.",
+              "wisdom": "{{em:Наблюдать — значит взаимодействовать. Информация имеет физическую цену.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Интуиция говорит: «наблюдение пассивно». Но в физике наблюдение всегда означает взаимодействие. Квантовая механика идёт дальше: акт измерения изменяет систему. Демон Максвелла предвосхитил эту идею за 60 лет до квантовой революции."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В вычислениях", "example": "Принцип Ландауэра задаёт физический предел энергоэффективности компьютеров. Современные процессоры тратят в миллиарды раз больше минимума — но этот предел реален и принципиально важен для квантовых вычислений." },
+              { "label": "В теории информации", "example": "Связь Шеннона и Больцмана: информационная энтропия и термодинамическая энтропия описываются схожими формулами не случайно — это два лица одного явления." },
+              { "label": "В обратимых вычислениях", "example": "Квантовые компьютеры используют обратимые операции именно чтобы не стирать информацию — и не платить термодинамическую цену по Ландауэру." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Следующий раз, когда вам покажется, что вы «просто наблюдаете» ситуацию — в переговорах, в отношениях, в команде — вспомните демона Максвелла: наблюдатель всегда влияет на систему. Ваше присутствие и внимание не нейтральны."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine a container divided by a partition with a tiny door. A minuscule demon stands at the door. It can see air molecules — and lets fast ones pass to the right, slow ones to the left. Soon: hot gas on the right, cold on the left. No energy spent! Has the second law of thermodynamics been violated? Or not?" }
+        },
+        { "type": "title", "props": { "text": "Maxwell's {{accent:Demon}}" } },
+        { "type": "subtitle", "props": { "text": "Maxwell's Demon · James Clerk Maxwell · 1867" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/maxwells_demon.svg", "alt": "A partitioned container; a demon at the door, fast molecules on the right (red), slow on the left (blue)" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The second law of thermodynamics states: heat cannot spontaneously flow from cold to hot, and the entropy of an isolated system only increases. Maxwell proposed his demon as a thought challenge to this law: if a being could observe molecules without expending energy, it could create a temperature gradient from nothing — a perpetual motion machine of the second kind.",
+              "The answer came sixty years later. Leó Szilárd showed in 1929 that to distinguish molecules, the demon must acquire information about each one. Information is physical. Rolf Landauer proved in 1961: {{em:erasing one bit of information releases heat — at minimum kT·ln2 joules.}} When the demon clears its \"memory\" of past molecules, it generates exactly the entropy it appeared to save.",
+              "Maxwell's Demon showed that information is not an abstraction but a physical reality with a thermodynamic cost. \"Free\" observation doesn't exist. This insight unified physics, information theory, and computation into a single picture of reality."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Information is physical: acquiring, storing, and erasing it all carry a thermodynamic cost. \"Free\" observation doesn't exist — the second law of thermodynamics holds precisely because information processing itself generates entropy."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "The demon observes and sorts molecules all day. It never violates the second law. Why?",
+            "setup": null,
+            "options": [
+              { "id": "tired", "text": "It will eventually get tired and make mistakes", "is_wiser": false },
+              { "id": "memory", "text": "Erasing its memory of each molecule produces exactly as much entropy as it saved", "is_wiser": true },
+              { "id": "impossible", "text": "It can't observe molecules at all without interacting with them", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think the demon just gets tired",
+              "explanation": "Maxwell's Demon doesn't violate the laws because its \"memory\" of molecules must be finite. When full, it must be erased. Landauer's principle (1961) shows: erasing each bit of information at temperature T releases at minimum kT·ln2 joules of heat. This exactly compensates any entropy reduction from sorting. Information is never free.",
+              "wisdom": "{{em:To observe is to interact. Information has a physical price.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Intuition says: \"observation is passive.\" But in physics, observation always means interaction. Quantum mechanics goes further: the act of measurement changes the system. Maxwell's Demon anticipated this idea sixty years before the quantum revolution."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In computing", "example": "Landauer's principle sets a physical lower bound on computational energy efficiency. Modern processors spend billions of times more than this minimum — but the limit is real and fundamentally important for quantum computing." },
+              { "label": "In information theory", "example": "The connection between Shannon and Boltzmann is no coincidence: informational entropy and thermodynamic entropy are described by similar formulas because they are two faces of the same phenomenon." },
+              { "label": "In reversible computing", "example": "Quantum computers use reversible operations precisely to avoid erasing information — and avoid paying the thermodynamic cost described by Landauer." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Next time you think you're \"just observing\" a situation — in negotiations, relationships, or a team — remember Maxwell's Demon: the observer always influences the system. Your presence and attention are never neutral."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/maxwells_demon" }]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "parkinsons_law",
+  "category": "mental_models",
+  "release_number": 88,
+  "release_date": "2026-07-08",
+  "tags": ["parkinson", "time_management", "work_expansion", "bureaucracy", "productivity"],
+  "difficulty": 1,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/parkinsons_law.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "Работа расширяется так, чтобы заполнить всё отведённое для неё время. Если у вас есть час на задачу — вы потратите час. Если три часа — потратите три часа. Задача не изменится. Изменится её обволакивание: согласования, доработки, перфекционизм, ожидание. Сирил Норткот Паркинсон описал это в 1955 году — и назвал законом." }
+        },
+        { "type": "title", "props": { "text": "Закон {{accent:Паркин}}сона" } },
+        { "type": "subtitle", "props": { "text": "Parkinson's Law · С.Н. Паркинсон · The Economist · 1955" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/parkinsons_law.svg", "alt": "Задача — маленькая точка — расширяется до заполнения всего прямоугольника дедлайна" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Паркинсон сформулировал закон, наблюдая за британской колониальной бюрократией: число чиновников растёт независимо от объёма работы. Статья в The Economist стала книгой и законом, применимым далеко за пределами бюрократии. Механизм прост: мы заполняем время, а не задачу. Расширение происходит за счёт второстепенного — дополнительных согласований, шлифовки деталей, которые никто не заметит, прокрастинации в ожидании «лучшего момента».",
+              "Следствие закона: жёсткий дедлайн — лучший инструмент продуктивности. {{em:Не потому что стресс полезен, а потому что ограничение времени заставляет расставлять приоритеты.}} Студент за ночь перед экзаменом усваивает больше, чем за неделю без давления — не потому что учится эффективнее, а потому что перестаёт заниматься несущественным.",
+              "Закон объясняет парадокс удалённой работы: когда рабочий день «без границ», продуктивность не растёт — работа просто расползается на всё доступное время. Обратная стратегия — намеренное сжатие временны́х рамок до минимально реалистичных. Это некомфортно, но эффективно."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Работа расширяется, чтобы заполнить отведённое время. Ограничение времени не снижает качество — оно принуждает к расстановке приоритетов и устранению несущественного."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Команде дали 3 недели на задачу, которую технически можно сделать за 5 дней. Что произойдёт?",
+            "setup": null,
+            "options": [
+              { "id": "better", "text": "Больше времени → лучший результат: больше времени на обдумывание и доработку", "is_wiser": false },
+              { "id": "parkinson", "text": "Задача «вырастет»: добавятся согласования, переработки, ожидания — результат схож с 5-дневным", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "ожидают, что больше времени = лучший результат",
+              "explanation": "Исследования планирования проектов показывают: задачи с длинными сроками часто не дают пропорционально лучшего результата. Дополнительное время тратится на переработки, «улучшения», которые отменяются, и встречи для координации. Паркинсон предлагал радикальное средство: ставьте дедлайны настолько короткими, насколько это реалистично — и смотрите, что можно убрать.",
+              "wisdom": "{{em:Дедлайн — это фильтр: он оставляет важное и выметает несущественное.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Закон Паркинсона не означает, что всегда нужно торопиться. Он предупреждает: не давайте времени больше, чем нужно. Некоторые задачи требуют инкубации — идеи должны «отлежаться». Знание о том, что именно требует времени, а что нет — и есть мастерство управления временем."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В личной продуктивности", "example": "Техника Pomodoro (25 минут работы) — прямое следствие закона Паркинсона: жёсткий временной блок принуждает к фокусу. Короткие временные рамки дают непропорционально высокую отдачу." },
+              { "label": "В управлении проектами", "example": "Agile-спринты длиной 1-2 недели вместо квартальных циклов — частичный ответ на закон Паркинсона. Короткие циклы снижают разрастание задач и ускоряют получение обратной связи." },
+              { "label": "В бюрократии", "example": "Паркинсон наблюдал: штат организации растёт на 5-7% в год независимо от задач. Бюрократия создаёт работу для себя — заседания, отчёты, процедуры — вне зависимости от реальной необходимости." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите задачу из вашего списка, которая «ждёт своего часа». Поставьте на неё сегодня конкретный временной лимит — вполовину от того, который вы планировали. Начните. Посмотрите, сколько вы успеете."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "Work expands to fill the time available for its completion. Give yourself an hour for a task — you'll spend an hour. Give yourself three hours — you'll spend three hours. The task won't change. What changes is the wrapping: approvals, revisions, perfectionism, waiting. Cyril Northcote Parkinson described this in 1955 — and called it a law." }
+        },
+        { "type": "title", "props": { "text": "Parkinson's {{accent:Law}}" } },
+        { "type": "subtitle", "props": { "text": "Parkinson's Law · C.N. Parkinson · The Economist · 1955" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/parkinsons_law.svg", "alt": "A task — a tiny dot — expanding to fill the entire deadline rectangle" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Parkinson formulated the law while observing British colonial bureaucracy: the number of civil servants grows regardless of workload. His Economist article became a book — and a law applicable far beyond bureaucracy. The mechanism is simple: we fill time, not tasks. Expansion happens through the secondary: extra approvals, polishing details no one will notice, procrastination while waiting for the \"right moment.\"",
+              "The law's corollary: a hard deadline is the best productivity tool. {{em:Not because stress is good, but because time constraints force prioritization.}} A student who crams the night before an exam learns more than in a week without pressure — not because they learn more efficiently, but because they stop doing the inessential.",
+              "The law explains the remote work paradox: when the workday has \"no limits,\" productivity doesn't rise — work simply spreads to fill all available time. The counter-strategy is deliberately shrinking time frames to the minimum realistic. It's uncomfortable — but effective."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Work expands to fill the time allotted. Constraining time doesn't lower quality — it forces prioritization and the elimination of the non-essential."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A team is given 3 weeks for a task that could technically be done in 5 days. What will happen?",
+            "setup": null,
+            "options": [
+              { "id": "better", "text": "More time → better result: more time to think and refine", "is_wiser": false },
+              { "id": "parkinson", "text": "The task will \"grow\": approvals, revisions, waiting will accumulate — the result is similar to a 5-day effort", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "expect more time equals better result",
+              "explanation": "Project planning research shows that tasks with long deadlines rarely produce proportionally better outcomes. Extra time is spent on rework, \"improvements\" that get scrapped, and coordination meetings. Parkinson's radical prescription: set deadlines as short as is realistic — and see what can be cut.",
+              "wisdom": "{{em:A deadline is a filter: it keeps the important and sweeps away the inessential.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Parkinson's Law doesn't mean always rushing. It warns: don't allocate more time than needed. Some tasks genuinely require incubation — ideas need to sit and develop. Knowing which tasks need time and which don't is the actual skill of time management."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In personal productivity", "example": "The Pomodoro technique (25-minute work blocks) is a direct consequence of Parkinson's Law: a hard time constraint forces focus. Short time frames deliver disproportionately high output." },
+              { "label": "In project management", "example": "Agile sprints of 1-2 weeks instead of quarterly cycles are a partial answer to Parkinson's Law. Short cycles reduce task bloat and accelerate feedback." },
+              { "label": "In bureaucracy", "example": "Parkinson observed: organizational headcount grows 5-7% annually regardless of actual workload. Bureaucracy creates work for itself — meetings, reports, procedures — irrespective of real necessity." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Pick a task on your list that's been \"waiting for its moment.\" Set a specific time limit on it today — half of what you'd normally plan. Start. See how much you accomplish."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/parkinsons_law" }]
+}

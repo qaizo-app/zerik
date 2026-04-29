@@ -1,0 +1,184 @@
+{
+  "id": "zero_to_one",
+  "category": "book_idea",
+  "release_number": 97,
+  "release_date": "2026-07-17",
+  "tags": ["thiel", "startup", "monopoly", "innovation", "competition", "secrets"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/zero_to_one.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "Скопировать что-то существующее — значит сделать шаг с 1 до n. Создать что-то принципиально новое — значит перейти от 0 до 1. Питер Тиль утверждает: большинство компаний занимаются первым и называют это инновацией. Но единственный способ создать исключительную ценность — найти секрет, который никто ещё не видит." }
+        },
+        { "type": "title", "props": { "text": "От {{accent:нуля}} к единице" } },
+        { "type": "subtitle", "props": { "text": "Zero to One · Питер Тиль · 2014" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/zero_to_one.svg", "alt": "Числовая ось: множество компаний движутся от 1 к n; одна стрелка прорывается от 0 к 1 в стороне от всех" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Конкуренция — это для проигравших.",
+            "attribution": "Питер Тиль, «От нуля к единице», 2014",
+            "context": "Тиль, сооснователь PayPal и один из первых инвесторов Facebook, утверждает: компании, конкурирующие за одинаковые рынки, разрушают ценность. Монополия — не зло, а сигнал создания чего-то принципиально нового. Google — монополия, потому что создала что-то, чего не было. Авиакомпании — квазиконкуренты, потому что делают то же самое."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Тиль предлагает провокационный тезис: совершенная конкуренция уничтожает прибыль и инновации. Конкурирующие компании снижают цены, сводя маржу к нулю, и вынуждены тратить ресурсы на войну с соперниками вместо создания нового. Монополия, напротив, даёт ресурсы для долгосрочного мышления. Amazon и Google могут инвестировать в то, что не окупается годами — именно потому что не заняты борьбой за выживание.",
+              "Центральная идея книги — «секреты»: всё важное, что ещё не знает большинство. {{em:Великие компании строятся на убеждении, что мир содержит важные нераскрытые истины — и на готовности действовать на их основе.}} Тиль спрашивает: «Что вы считаете правдой, с чем большинство людей не согласны?» Если ваш ответ — банальность, вы не строите то, что он называет «0 to 1».",
+              "Критика Тиля: он описывает мир, где монополии хорошие, если создают что-то новое — но граница между инновационной монополией и антиконкурентным злоупотреблением власти тонка. Его тезис лучше работает как мыслительный инструмент для основателей, чем как общая экономическая теория."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Настоящая инновация — это создание чего-то принципиально нового, а не улучшение существующего. Исключительную ценность создают компании, нашедшие «секрет» — важную истину, которую большинство не видит — и построившие на ней защищённую позицию."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Стартап выходит на рынок, где уже есть 10 конкурентов с похожим продуктом. Это хороший знак?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Да — значит рынок есть, проверен, и место найти можно", "is_wiser": false },
+              { "id": "bad", "text": "Нет — если все делают то же самое, маржа будет нулевой и преимущества нет", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают наличие конкурентов хорошим знаком",
+              "explanation": "Тиль приводит данные: большинство стартапов, выходящих в конкурентные рынки, не создают значимой ценности — они вытесняются или продаются за бесценок. Исключения — те, кто нашёл дифференциацию, которую нельзя скопировать. Ключевой вопрос не «есть ли рынок?», а «чем мы отличаемся настолько, что нас нельзя скопировать за год?»",
+              "wisdom": "{{em:Если вы конкурируете — значит, ещё не нашли своего «от нуля к единице».}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "«От нуля к единице» — не оправдание любой монополии. Монополия, построенная на патентных блокировках или политическом давлении, а не на реальной ценности для пользователя, — это паразитизм, а не инновация. Тиль описывает монополию, заработанную созданием чего-то лучшего — а не захватом чужого рынка."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В венчурных инвестициях", "example": "Лучшие венчурные фонды ищут не «большой рынок» и «отличную команду», а уникальный инсайт, который основатели видят, а рынок ещё нет. Это и есть «секрет» по Тилю." },
+              { "label": "В карьере", "example": "«От нуля к единице» применимо к личному брендингу: конкурировать с тысячей похожих резюме — значит застрять в «1 to n». Найти область, где ваш набор навыков уникален, — значит двигаться к «0 to 1»." },
+              { "label": "В продуктовой стратегии", "example": "PayPal не конкурировал с банками — он создал новую категорию. iPhone не конкурировал с Nokia — он переопределил рынок. «0 to 1» означает создание рынка, а не борьбу за долю на существующем." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Ответьте на вопрос Тиля: «Что вы считаете важной истиной, с которой большинство людей не согласны?» Это не тест на оригинальность — это поиск вашего «секрета». Запишите один честный ответ."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "Copying something that already exists means going from 1 to n. Creating something genuinely new means going from 0 to 1. Peter Thiel argues: most companies do the former and call it innovation. But the only way to create exceptional value is to find a secret no one else has seen yet." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Zero}} to One" } },
+        { "type": "subtitle", "props": { "text": "Zero to One · Peter Thiel · 2014" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/zero_to_one.svg", "alt": "A number line: many companies move from 1 to n; one arrow breaks away from 0 to 1, apart from all the rest" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Competition is for losers.",
+            "attribution": "Peter Thiel, Zero to One, 2014",
+            "context": "Thiel, co-founder of PayPal and one of Facebook's first investors, argues that companies competing over identical markets destroy value. Monopoly isn't evil — it's a signal of creating something genuinely new. Google is a monopoly because it created something that didn't exist. Airlines are quasi-competitors because they all do the same thing."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Thiel offers a provocative thesis: perfect competition destroys profit and innovation. Competing companies drive prices down, reduce margins to zero, and are forced to spend resources fighting rivals instead of creating new things. A monopoly, by contrast, provides resources for long-term thinking. Amazon and Google can invest in things that won't pay off for years — precisely because they're not busy fighting for survival.",
+              "The book's central idea is \"secrets\": important things most people don't yet know. {{em:Great companies are built on the conviction that the world contains important undiscovered truths — and on the willingness to act on them.}} Thiel asks: \"What do you believe to be true that most people disagree with?\" If your answer is a banality, you're not building what he calls \"0 to 1.\"",
+              "A critique of Thiel: he describes a world where monopolies are good if they create something new — but the line between an innovative monopoly and anticompetitive abuse of power is thin. His thesis works better as a thinking tool for founders than as a general economic theory."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Real innovation is creating something fundamentally new, not improving the existing. Exceptional value is created by companies that found a \"secret\" — an important truth most people can't see — and built a defensible position on it."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A startup enters a market where 10 competitors already have similar products. Is this a good sign?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Yes — it means there's a proven market and room to find a place", "is_wiser": false },
+              { "id": "bad", "text": "No — if everyone does the same thing, margins will be zero and there's no real advantage", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see competition as a good sign",
+              "explanation": "Thiel cites data: most startups entering competitive markets don't create meaningful value — they get squeezed out or sold for nothing. Exceptions are those who found differentiation that can't be copied. The key question isn't \"is there a market?\" — it's \"what makes us different enough that we can't be copied in a year?\"",
+              "wisdom": "{{em:If you're competing, you haven't found your \"zero to one\" yet.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "\"Zero to One\" is not a justification for any monopoly. A monopoly built on patent blockades or political pressure, rather than real user value, is parasitism — not innovation. Thiel describes monopoly earned by creating something better — not by capturing someone else's market."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In venture investing", "example": "The best VC funds don't look for \"large markets\" and \"great teams\" — they look for a unique insight that founders see but the market hasn't yet. That's Thiel's \"secret.\"" },
+              { "label": "In career", "example": "\"Zero to One\" applies to personal branding: competing with thousands of similar resumes means being stuck in \"1 to n.\" Finding the area where your skill set is unique means moving toward \"0 to 1.\"" },
+              { "label": "In product strategy", "example": "PayPal didn't compete with banks — it created a new category. iPhone didn't compete with Nokia — it redefined the market. \"0 to 1\" means creating a market, not fighting for share in an existing one." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Answer Thiel's question: \"What important truth do you believe that most people disagree with?\" This isn't a test of originality — it's a search for your \"secret.\" Write down one honest answer."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/zero_to_one" }]
+}

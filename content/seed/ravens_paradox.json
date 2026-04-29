@@ -1,0 +1,138 @@
+{
+  "id": "ravens_paradox",
+  "category": "paradoxes",
+  "release_number": 94,
+  "release_date": "2026-07-14",
+  "tags": ["hempel", "ravens", "confirmation", "induction", "logic", "scientific_method"],
+  "difficulty": 4,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/ravens_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Все вороны чёрные. Логически эквивалентно: всё нечёрное — не ворона. Каждая жёлтая ручка подтверждает второй вариант. Значит, жёлтая ручка также подтверждает утверждение «все вороны чёрные». Это кажется абсурдом. Но Карл Гемпель в 1945 году показал, что этот вывод следует из стандартной теории подтверждения. И это проблема." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:воро}}нов" } },
+        { "type": "subtitle", "props": { "text": "Raven's Paradox · Карл Гемпель · 1945" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/ravens_paradox.svg", "alt": "Чёрный ворон слева и жёлтая ручка справа — стрелка указывает: оба подтверждают одно и то же утверждение" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Логика подтверждения утверждает: каждый наблюдаемый пример, соответствующий гипотезе, её подтверждает. «Все вороны чёрные» подтверждается каждым чёрным вороном. Но «все вороны чёрные» логически эквивалентно «всё нечёрное — не ворона». А жёлтая ручка — нечёрная и не ворона. Значит, она подтверждает «всё нечёрное — не ворона», а через эквивалентность — «все вороны чёрные».",
+              "Парадокс обнажает проблему в основании индуктивной науки. {{em:Интуиция говорит: наблюдение жёлтой ручки не имеет отношения к воронам. Логика говорит: имеет.}} Либо наша интуиция ошибается, либо стандартная теория подтверждения неполна. Оба варианта неудобны.",
+              "Философы предложили несколько выходов. Один: подтверждение — это не бинарное да/нет, а степень (байесовское обновление). Жёлтая ручка действительно слегка подтверждает гипотезу — но настолько мало, что практически незаметно. Другой выход: контекст важен — мы наблюдаем ручки, а не ищем воронов, и это меняет вес наблюдения."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Подтверждение гипотезы нельзя сводить к простому подсчёту подтверждающих примеров. Важны контекст наблюдения, выборка, и то, что именно мы намерены проверять. Логическая эквивалентность не означает равной подтверждающей силы."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Делает ли жёлтая ручка гипотезу «все вороны чёрные» хоть немного более правдоподобной?",
+            "hint": "Допустим, мир содержит 1 ворона и 1 миллиард нечёрных не-воронов. Как сильно одна новая ручка обновит наш прогноз?",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Строго говоря — да, но ничтожно. Байесовский анализ показывает: подтверждающая сила жёлтой ручки для воронов пропорциональна вероятности наткнуться на ворона при случайном наблюдении. Если воронов мало относительно всего нечёрного — сила подтверждения практически нулевая. Парадокс не исчезает — он квантифицируется: ручка подтверждает, но в миллион раз слабее ворона.",
+            "intuition_trap": "Интуиция настаивает на нуле. Логика настаивает на ненуле. Байесовский взгляд мирит обоих: ненуль, но практически незначимый. Это точнее, чем «имеет значение» или «не имеет значения»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В науке и исследованиях", "example": "Парадокс Гемпеля мотивировал байесовскую статистику как замену классическому подтверждению. P-value — это не подтверждение гипотезы, а мера несовместимости данных с нулевой гипотезой. Разница принципиальна." },
+              { "label": "В праве", "example": "«Отсутствие доказательств — не доказательство отсутствия» — аналог парадокса воронов. Суды должны различать косвенные подтверждения и прямые доказательства." },
+              { "label": "В машинном обучении", "example": "Обучение на несбалансированных классах — практический аналог парадокса. Если в данных 99% «ручек» и 1% «воронов», модель выучивает «всё — ручка» и добивается 99% точности, не научившись ничему о воронах." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните убеждение, которое вы считаете подтверждённым. Какие наблюдения его поддерживают? Искали ли вы опровергающие свидетельства — или только подтверждающие? Парадокс воронов напоминает: подтверждения легко набрать. Опровержения важнее."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "All ravens are black. Logically equivalent: all non-black things are non-ravens. Every yellow pen confirms the second version. So a yellow pen also confirms \"all ravens are black.\" This seems absurd. But Carl Hempel showed in 1945 that this conclusion follows from standard confirmation theory. And that's a problem." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Raven}}s Paradox" } },
+        { "type": "subtitle", "props": { "text": "Raven's Paradox · Carl Hempel · 1945" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/ravens_paradox.svg", "alt": "A black raven on the left and a yellow pen on the right — an arrow indicates both confirm the same statement" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Confirmation theory holds: every observed instance consistent with a hypothesis confirms it. \"All ravens are black\" is confirmed by each black raven. But \"all ravens are black\" is logically equivalent to \"all non-black things are non-ravens.\" A yellow pen is non-black and not a raven. So it confirms \"all non-black things are non-ravens\" — and by equivalence — \"all ravens are black.\"",
+              "The paradox exposes a problem at the foundation of inductive science. {{em:Intuition says: observing a yellow pen has nothing to do with ravens. Logic says: it does.}} Either our intuition is wrong, or standard confirmation theory is incomplete. Both options are uncomfortable.",
+              "Philosophers have proposed several resolutions. One: confirmation is not binary yes/no, but a matter of degree (Bayesian updating). A yellow pen genuinely confirms the hypothesis — but so weakly it's practically invisible. Another: context matters — we're looking at pens, not searching for ravens, and that changes the weight of the observation."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Confirming a hypothesis can't be reduced to counting confirming examples. Context, sampling, and what specifically we intend to test all matter. Logical equivalence doesn't mean equal confirmatory power."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "Does a yellow pen make the hypothesis \"all ravens are black\" even slightly more plausible?",
+            "hint": "Suppose the world contains 1 raven and 1 billion non-black non-ravens. How much does one new pen update our estimate?",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "Strictly speaking — yes, but negligibly. Bayesian analysis shows: the confirmatory power of a yellow pen for ravens is proportional to the probability of randomly encountering a raven. If ravens are rare relative to all non-black things, the confirmatory power is practically zero. The paradox doesn't disappear — it gets quantified: the pen confirms, but a million times more weakly than a raven does.",
+            "intuition_trap": "Intuition insists on zero. Logic insists on non-zero. The Bayesian view reconciles both: non-zero, but practically insignificant. This is more precise than either \"it matters\" or \"it doesn't matter.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In science and research", "example": "Hempel's paradox motivated Bayesian statistics as a replacement for classical confirmation. A p-value is not confirmation of a hypothesis — it's a measure of data incompatibility with the null hypothesis. The distinction is fundamental." },
+              { "label": "In law", "example": "\"Absence of evidence is not evidence of absence\" — an analogue of the raven paradox. Courts must distinguish indirect confirmations from direct evidence." },
+              { "label": "In machine learning", "example": "Training on imbalanced classes is a practical analogue. If 99% of data is \"pens\" and 1% \"ravens,\" a model learns \"everything is a pen\" and achieves 99% accuracy without learning anything about ravens." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a belief you consider confirmed. What observations support it? Have you sought disconfirming evidence — or only confirming instances? The raven paradox reminds us: confirmations are easy to collect. Disconfirmations matter more."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/ravens_paradox" }]
+}

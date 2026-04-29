@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Three option nodes in triangle -->
+  <circle cx="200" cy="80" r="32" fill="#2a3a4a" stroke="#6c8ebf" stroke-width="2"/>
+  <text x="200" y="75" text-anchor="middle" fill="#6c8ebf" font-family="sans-serif" font-size="18" font-weight="bold">A</text>
+  <text x="200" y="93" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">вариант</text>
+  <circle cx="90" cy="210" r="32" fill="#2a3a4a" stroke="#f7d060" stroke-width="2"/>
+  <text x="90" y="205" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="18" font-weight="bold">B</text>
+  <text x="90" y="223" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">вариант</text>
+  <circle cx="310" cy="210" r="32" fill="#2a3a4a" stroke="#cc6b8e" stroke-width="2"/>
+  <text x="310" y="205" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="18" font-weight="bold">C</text>
+  <text x="310" y="223" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="9">вариант</text>
+  <!-- Cyclic majority arrows -->
+  <defs>
+    <marker id="arrc" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#aaaacc"/>
+    </marker>
+  </defs>
+  <!-- A beats B -->
+  <path d="M175 105 Q130 155 115 188" stroke="#6c8ebf" stroke-width="2.5" fill="none" marker-end="url(#arrc)" stroke-linecap="round"/>
+  <text x="130" y="155" fill="#6c8ebf" font-family="sans-serif" font-size="10">A>B</text>
+  <!-- B beats C -->
+  <path d="M122 210 L278 210" stroke="#f7d060" stroke-width="2.5" fill="none" marker-end="url(#arrc)" stroke-linecap="round"/>
+  <text x="200" y="205" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="10">B>C</text>
+  <!-- C beats A (completing cycle!) -->
+  <path d="M285 188 Q270 140 228 100" stroke="#cc6b8e" stroke-width="2.5" fill="none" marker-end="url(#arrc)" stroke-linecap="round"/>
+  <text x="270" y="150" fill="#cc6b8e" font-family="sans-serif" font-size="10">C>A!</text>
+  <!-- Cycle symbol in center -->
+  <text x="200" y="175" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="18">↻</text>
+  <text x="200" y="270" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="10">Коллективная нерациональность при рациональных предпочтениях</text>
+</svg>

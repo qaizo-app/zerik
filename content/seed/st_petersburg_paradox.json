@@ -1,0 +1,138 @@
+{
+  "id": "st_petersburg_paradox",
+  "category": "paradoxes",
+  "release_number": 80,
+  "release_date": "2026-06-30",
+  "tags": ["bernoulli", "expected_value", "utility", "decision_theory", "probability"],
+  "difficulty": 4,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/st_petersburg_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы платите взнос, бросаете монету. Орёл — игра заканчивается. Нет — продолжаете: 1-й орёл = 2$, 2-й подряд = 4$, 3-й подряд = 8$... и так до бесконечности. Математическое ожидание выигрыша бесконечно. Сколько вы готовы заплатить за участие? Большинство людей называют 20-25$. Почему математика и здравый смысл настолько расходятся?" }
+        },
+        { "type": "title", "props": { "text": "Санкт-{{accent:Петербург}}ский парадокс" } },
+        { "type": "subtitle", "props": { "text": "St. Petersburg Paradox · Даниил Бернулли · 1738" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/st_petersburg_paradox.svg", "alt": "Экспоненциально растущие столбцы выигрышей, монета в центре, бесконечность справа" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Математическое ожидание выигрыша: (1/2 × 2$) + (1/4 × 4$) + (1/8 × 8$) + ... = 1 + 1 + 1 + ... = ∞. Если вы максимизируете ожидаемый выигрыш, вы должны отдать всё своё состояние за право сыграть. Но никто так не делает — и это рационально. Парадокс показывает, что теория ожидаемой ценности неполна как модель принятия решений.",
+              "Бернулли предложил решение: полезность денег убывает с ростом богатства. Каждый следующий доллар значит для вас меньше, чем предыдущий. Десятый миллион добавляет к счастью гораздо меньше, чем первый. {{em:Это концепция убывающей предельной полезности — одна из основ современной экономики.}} При логарифмической полезности бесконечный выигрыш имеет конечную ожидаемую ценность, и рационально заплатить ~25$.",
+              "Более поздняя проблема: даже с убывающей полезностью можно сконструировать версии парадокса с «гиперболическими выигрышами», которые снова дают бесконечное ожидание. Проблема глубже математики — она о границах формальных моделей рациональности."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Ожидаемая ценность — мощный инструмент, но не универсальный. Когда на кону бесконечные или катастрофические суммы, стандартный расчёт даёт неинтуитивные ответы. Полезность нелинейна."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Ожидаемый выигрыш бесконечен. Сколько вы заплатите за участие?",
+            "hint": "Рассмотрите реальную вероятность большого выигрыша. Выигрыш > 1000$ требует 10 орлов подряд (вероятность ~0.1%).",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Большинство платит 20-25$. Почему? Во-первых, убывающая полезность: 1024$ — не в 512 раз ценнее 2$. Во-вторых, риск разорения казино: реальная игра с конечным казино не может выплатить бесконечность. В-третьих, когнитивное неприятие маловероятных исходов. Бернулли решил через логарифмическую полезность: ожидаемая ценность игры ≈ 25$ — близко к интуиции большинства людей. Парадокс стал основой теории ожидаемой полезности.",
+            "intuition_trap": "Интуиция говорит: «бесконечный ожидаемый выигрыш = заплати всё». Реальность: вероятность выигрыша, которая покроет большую ставку, ничтожно мала. 99% игр заканчиваются до 7 бросков."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В страховании", "example": "Убывающая предельная полезность объясняет, почему мы платим за страховку больше, чем математически ожидаемый ущерб. Потеря всего значит гораздо больше, чем линейная модель предсказывает." },
+              { "label": "В ИИ и алгоритмах", "example": "Алгоритмы максимизации ожидаемой ценности дают нерациональные ответы на задачи с бесконечными выигрышами. Санкт-Петербургский парадокс — стандартный тест для теорий принятия решений." },
+              { "label": "В экзистенциальных рисках", "example": "Если вероятность глобальной катастрофы мала, но ущерб «бесконечен» — сколько вкладывать в её предотвращение? Парадокс Бернулли встроен в любую дискуссию об экзистенциальных рисках." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в ваших решениях ситуации с «бесконечными» выигрышами или потерями? Лотерея, стартап, карьерная ставка — где вы используете ожидаемую ценность, не поправляя её на убывающую полезность?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "You pay an entry fee and flip a coin. Tails — the game ends. Heads — you keep going: 1st heads = $2, 2nd in a row = $4, 3rd in a row = $8... infinitely. The mathematical expected value of the prize is infinite. How much would you pay to play? Most people say $20-25. Why do mathematics and common sense diverge so dramatically?" }
+        },
+        { "type": "title", "props": { "text": "The St. {{accent:Petersburg}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "St. Petersburg Paradox · Daniel Bernoulli · 1738" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/st_petersburg_paradox.svg", "alt": "Exponentially growing prize columns, a coin in the center, infinity symbol at right" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Expected winnings: (1/2 × $2) + (1/4 × $4) + (1/8 × $8) + ... = 1 + 1 + 1 + ... = ∞. If you maximize expected value, you should stake your entire fortune for the right to play. But nobody does — and this is rational. The paradox shows that expected value theory is incomplete as a model of decision-making.",
+              "Bernoulli proposed a resolution: the utility of money decreases as wealth grows. Each additional dollar matters less than the previous one. The tenth million adds far less to happiness than the first. {{em:This is diminishing marginal utility — one of the foundations of modern economics.}} With logarithmic utility, an infinite prize has finite expected utility, and it becomes rational to pay ~$25.",
+              "A later problem: even with diminishing utility, you can construct versions of the paradox with \"hyperbolic payoffs\" that again produce infinite expectation. The problem runs deeper than mathematics — it's about the limits of formal models of rationality."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Expected value is a powerful tool — but not a universal one. When infinite or catastrophic sums are at stake, standard calculations produce counterintuitive answers. Utility is nonlinear."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "Expected winnings are infinite. How much would you pay to play?",
+            "hint": "Consider the real probability of a large payoff. Winning more than $1,000 requires 10 heads in a row (probability ~0.1%).",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "Most pay $20-25. Why? First, diminishing utility: $1,024 is not 512 times more valuable than $2. Second, casino ruin risk: a real game with a finite casino can't pay out infinity. Third, cognitive discounting of very unlikely outcomes. Bernoulli solved it via logarithmic utility: expected utility of the game ≈ $25 — close to most people's intuition. The paradox became the foundation of expected utility theory.",
+            "intuition_trap": "Intuition says: \"infinite expected value = pay everything.\" Reality: the probability of a payoff that would justify a large stake is vanishingly small. 99% of games end within 7 flips."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In insurance", "example": "Diminishing marginal utility explains why we pay more for insurance than the mathematically expected loss. Losing everything matters far more than a linear model predicts." },
+              { "label": "In AI and algorithms", "example": "Expected value maximization algorithms give irrational answers on problems with infinite payoffs. The St. Petersburg Paradox is a standard test for theories of decision-making." },
+              { "label": "In existential risk", "example": "If the probability of global catastrophe is small but the damage is \"infinite\" — how much to invest in prevention? Bernoulli's paradox is embedded in any discussion of existential risks." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Are there situations in your decisions with \"infinite\" payoffs or losses? Lottery, startup, career bet — where are you using expected value without adjusting for diminishing utility?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/st_petersburg_paradox" }]
+}

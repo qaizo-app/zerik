@@ -1,0 +1,170 @@
+{
+  "id": "learned_helplessness",
+  "category": "psychology_experiments",
+  "release_number": 93,
+  "release_date": "2026-07-13",
+  "tags": ["seligman", "helplessness", "control", "depression", "resilience", "behaviorism"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/learned_helplessness.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "1967 год. Мартин Селигман подверг собак лёгким ударам тока, которые они не могли предотвратить. Потом поместил их в ящик, из которого легко выпрыгнуть — и включил ток снова. Собаки не прыгали. Они просто ложились и терпели. Контрольные собаки, не прошедшие первый этап, выпрыгивали немедленно. Беспомощность — не черта характера. Её можно выучить." }
+        },
+        { "type": "title", "props": { "text": "Выученная {{accent:беспомощ}}ность" } },
+        { "type": "subtitle", "props": { "text": "Learned Helplessness · Мартин Селигман и Стивен Майер · 1967" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/learned_helplessness.svg", "alt": "Фигура человека внутри клетки с открытой дверью — но фигура не пытается выйти" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Селигман открыл, что живые существа, подвергаясь неконтролируемым негативным событиям, перестают пытаться — даже когда ситуация меняется и контроль становится возможным. Выученная беспомощность — убеждение, что ваши действия не влияют на исход. Это убеждение обобщается: потеряв контроль в одной области, существо прекращает попытки и в других.",
+              "Параллели с клинической депрессией были очевидны. Люди в депрессии часто убеждены, что их усилия бессмысленны — вне зависимости от объективных обстоятельств. {{em:Селигман предположил, что многие депрессии — это выученная беспомощность, а не биохимический дефицит или слабый характер.}} Это открыло путь к когнитивно-поведенческой терапии и позитивной психологии.",
+              "Позднейшие работы Майера и Селигмана (2016) уточнили механизм: мозг изначально пассивен в ответ на неконтролируемые стрессоры — это дефолт. Контроль и активность — то, что нужно выучить. Это переворачивает первоначальную концепцию: беспомощность не выучивается, она встроена; выучивается — способность действовать."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Опыт неконтролируемых негативных событий формирует убеждение в бессмысленности собственных действий — и это убеждение переносится на новые ситуации, где контроль возможен. Беспомощность обучаема — и преодолима."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Сотрудник перестал предлагать идеи на совещаниях. Руководитель думает: «Ему просто нечего сказать». Что на самом деле могло произойти?",
+            "setup": null,
+            "options": [
+              { "id": "nothing", "text": "Скорее всего, действительно нечего сказать — или незаинтересован", "is_wiser": false },
+              { "id": "helplessness", "text": "Возможно, предыдущие идеи игнорировались — и он выучил, что предлагать бессмысленно", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "думают, что это незаинтересованность",
+              "explanation": "Исследования по выученной беспомощности в организациях (Martinko & Gardner, 1982) показывают: сотрудники, чьи инициативы систематически игнорировались или отклонялись без объяснений, прекращают их выдвигать — даже когда руководство меняется и обстановка становится благоприятной. Восстановление требует не просто «попроси идеи» — а конкретного, видимого подтверждения, что участие имеет эффект.",
+              "wisdom": "{{em:Молчание сотрудника — не отсутствие мыслей. Это история прошлых попыток.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Современный взгляд",
+            "text": "Майер и Селигман (2016) пересмотрели первоначальную модель: пассивность — не выученный ответ, а исходный дефолт мозга при неконтролируемом стрессе. Что выучивается — это активность и контроль. Критика также касается этики экспериментов на животных: современные стандарты не допустили бы оригинальный протокол. Но валидность концепции для людей подтверждается клинически.",
+            "citation": "Maier, S. F., & Seligman, M. E. P. (2016). Learned helplessness at fifty: Insights from neuroscience. Psychological Review, 123(4), 349–367."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В клинической психологии", "example": "Когнитивно-поведенческая терапия (КПТ) депрессии напрямую работает с убеждениями выученной беспомощности: оспаривает «мои действия не имеют значения» через поведенческие эксперименты с реальным контролем." },
+              { "label": "В образовании", "example": "Дети, которым систематически давали задачи не по силам без поддержки, перестают пытаться в схожих задачах — даже когда те им по силам. Обратное — «рост мышления» (growth mindset) — требует опыта преодолимых трудностей." },
+              { "label": "В реабилитации", "example": "Пациенты после тяжёлых травм или болезней нередко демонстрируют выученную беспомощность: «я уже не смогу». Реабилитация строится на постепенном восстановлении опыта контроля — малыми шагами." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли область, где вы перестали пытаться? Спросите: это потому что невозможно — или потому что прошлые попытки не давали эффекта? Если второе — попробуйте одно маленькое действие с видимым результатом. Это начало выхода из беспомощности."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "1967. Martin Seligman subjected dogs to mild electric shocks they couldn't prevent. Then he placed them in a box they could easily jump out of — and turned on the shocks again. The dogs didn't jump. They simply lay down and endured. Control dogs that hadn't gone through the first phase jumped out immediately. Helplessness isn't a character trait. It can be learned." }
+        },
+        { "type": "title", "props": { "text": "Learned {{accent:Helplessness}}" } },
+        { "type": "subtitle", "props": { "text": "Learned Helplessness · Martin Seligman & Steven Maier · 1967" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/learned_helplessness.svg", "alt": "A human figure inside a cage with an open door — but the figure makes no attempt to leave" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Seligman discovered that living beings exposed to uncontrollable negative events stop trying — even when the situation changes and control becomes possible. Learned helplessness is the belief that your actions don't affect outcomes. This belief generalizes: having lost control in one domain, the organism stops trying in others as well.",
+              "The parallels with clinical depression were immediate. People with depression are often convinced that their efforts are meaningless — regardless of objective circumstances. {{em:Seligman proposed that much depression is learned helplessness, not a biochemical deficit or weak character.}} This opened the path to cognitive-behavioral therapy and positive psychology.",
+              "Later work by Maier and Seligman (2016) refined the mechanism: the brain defaults to passivity in response to uncontrollable stressors — this is the default state. Control and agency are what must be learned. This inverts the original concept: helplessness isn't learned, it's built in; what's learned is the capacity to act."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Experience with uncontrollable negative events creates the belief that one's own actions are meaningless — and this belief transfers to new situations where control is possible. Helplessness can be learned — and overcome."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "An employee has stopped suggesting ideas in meetings. The manager thinks: \"They just don't have anything to say.\" What might have actually happened?",
+            "setup": null,
+            "options": [
+              { "id": "nothing", "text": "Probably they genuinely have nothing to say — or aren't interested", "is_wiser": false },
+              { "id": "helplessness", "text": "Their previous ideas may have been ignored — and they learned that suggesting is pointless", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "assume it's disengagement",
+              "explanation": "Research on learned helplessness in organizations (Martinko & Gardner, 1982) shows: employees whose initiatives were consistently ignored or rejected without explanation stop offering them — even when management changes and the environment becomes supportive. Recovery requires not just \"ask for ideas\" — but concrete, visible confirmation that participation has an effect.",
+              "wisdom": "{{em:An employee's silence isn't the absence of thoughts. It's the history of past attempts.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Modern view",
+            "text": "Maier and Seligman (2016) revised the original model: passivity is not a learned response — it's the brain's default under uncontrollable stress. What's learned is agency and control. Critics also note the ethics of animal experiments: modern standards would not permit the original protocol. But the concept's validity for humans is clinically confirmed.",
+            "citation": "Maier, S. F., & Seligman, M. E. P. (2016). Learned helplessness at fifty: Insights from neuroscience. Psychological Review, 123(4), 349–367."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In clinical psychology", "example": "Cognitive-behavioral therapy (CBT) for depression directly addresses learned helplessness beliefs: it challenges \"my actions don't matter\" through behavioral experiments that demonstrate real control." },
+              { "label": "In education", "example": "Children consistently given tasks beyond their ability without support stop trying even on tasks they can handle. The antidote — growth mindset — requires experience with surmountable difficulties." },
+              { "label": "In rehabilitation", "example": "Patients after serious trauma or illness often show learned helplessness: \"I'll never be able to.\" Rehabilitation is built on gradually restoring the experience of control — in small steps." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there an area where you've stopped trying? Ask yourself: is it because it's impossible — or because past attempts had no effect? If the latter — try one small action with a visible result. That's the beginning of escaping helplessness."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/learned_helplessness" }]
+}

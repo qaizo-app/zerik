@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Two opposing groups -->
+  <!-- Group 1 - Eagles (left) -->
+  <circle cx="60" cy="140" r="18" fill="#f7d060" opacity="0.9"/>
+  <circle cx="95" cy="155" r="18" fill="#f7d060" opacity="0.9"/>
+  <circle cx="60" cy="175" r="18" fill="#f7d060" opacity="0.9"/>
+  <text x="72" y="220" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="12" font-weight="bold">Орлы</text>
+  <!-- Group 2 - Rattlers (right) -->
+  <circle cx="340" cy="140" r="18" fill="#cc6b8e" opacity="0.9"/>
+  <circle cx="305" cy="155" r="18" fill="#cc6b8e" opacity="0.9"/>
+  <circle cx="340" cy="175" r="18" fill="#cc6b8e" opacity="0.9"/>
+  <text x="323" y="220" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="12" font-weight="bold">Гремучники</text>
+  <!-- Conflict arrows -->
+  <line x1="115" y1="155" x2="175" y2="155" stroke="#f7d060" stroke-width="2" marker-end="url(#arr1)"/>
+  <line x1="285" y1="155" x2="225" y2="155" stroke="#cc6b8e" stroke-width="2" marker-end="url(#arr2)"/>
+  <defs>
+    <marker id="arr1" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#f7d060"/>
+    </marker>
+    <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#cc6b8e"/>
+    </marker>
+  </defs>
+  <!-- Superordinate goal bridge -->
+  <rect x="165" y="230" width="70" height="30" rx="6" fill="#4a7a4a" opacity="0.9"/>
+  <text x="200" y="249" text-anchor="middle" fill="white" font-family="sans-serif" font-size="10">Общая цель</text>
+  <!-- Curved arrows down to bridge -->
+  <path d="M72 225 Q72 260 165 245" stroke="#6c6c8c" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <path d="M323 225 Q323 260 235 245" stroke="#6c6c8c" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <!-- Camp labels -->
+  <text x="200" y="60" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="12">Конфликт → Суперординированная цель</text>
+</svg>

@@ -1,0 +1,138 @@
+{
+  "id": "condorcets_paradox",
+  "category": "paradoxes",
+  "release_number": 101,
+  "release_date": "2026-07-21",
+  "tags": ["condorcet", "voting", "democracy", "cycles", "social_choice", "arrow"],
+  "difficulty": 3,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/condorcets_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Три голосующих, три варианта: A, B, C. Первый предпочитает A > B > C. Второй: B > C > A. Третий: C > A > B. Большинство предпочитает A над B (1 и 3). Большинство предпочитает B над C (1 и 2). По транзитивности: большинство должно предпочитать A над C. Но большинство предпочитает C над A (2 и 3). Группа из разумных людей с непротиворечивыми предпочтениями — коллективно нерациональна." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Кондорсе}}" } },
+        { "type": "subtitle", "props": { "text": "Condorcet's Paradox · Маркиз де Кондорсе · 1785" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/condorcets_paradox.svg", "alt": "Три варианта A, B, C в цикле: стрелки от A к B, B к C, C к A — бесконечный цикл большинства" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Маркиз де Кондорсе обнаружил: даже когда у каждого избирателя есть рациональные, транзитивные предпочтения, их агрегация через голосование большинством может порождать нетранзитивный, цикличный «коллективный выбор». Это не ошибка голосующих — это математическое свойство агрегации предпочтений.",
+              "Кеннет Эрроу в 1951 году формализовал проблему в теореме невозможности: не существует системы голосования, которая одновременно удовлетворяла бы всем разумным критериям справедливости — транзитивности, независимости от посторонних альтернатив, ненасилию и суверенитету. {{em:Любая система голосования нарушает хотя бы одно из этих условий.}} Нобелевская премия по экономике 1972 года.",
+              "Практическое следствие: порядок голосования имеет значение. Если сначала голосуют A против B, потом победитель против C — результат иной, чем B против C, потом победитель против A. Тот, кто контролирует повестку, влияет на исход — даже при честном голосовании."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Агрегация индивидуальных рациональных предпочтений через голосование большинством может давать нерациональный коллективный результат. Не существует идеальной системы демократического выбора, которая удовлетворяла бы всем разумным критериям одновременно."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Может ли группа разумных людей с разумными предпочтениями принять коллективно нерациональное решение?",
+            "hint": "Разумность индивидуальная и разумность коллективная — это одно и то же?",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Да — именно это показывает парадокс Кондорсе. «Коллективная воля» — не просто сумма индивидуальных воль. При определённых распределениях предпочтений любая пара вариантов проигрывает третьему в парном голосовании — цикл. Это не сбой демократии — это математическое ограничение любой системы агрегации. Решения: рейтинговое голосование, случайный тай-брейк, делегирование выбора — каждое с собственными компромиссами.",
+            "intuition_trap": "Интуиция: «большинство всегда право». Математика: большинство может образовывать цикл, где нет «правого» варианта. Это не повод отказаться от демократии — повод понять её ограничения и выбирать системы голосования осознанно."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В парламентских дебатах", "example": "«Gerrymandering повестки»: контроль над очерёдностью голосования позволяет провести нужный результат даже при непредсказуемом исходе каждого отдельного голосования." },
+              { "label": "В корпоративных решениях", "example": "Комитеты с парным голосованием по вариантам стратегии могут давать цикличные результаты. Хорошие председатели знают: порядок голосования — это инструмент власти." },
+              { "label": "В ранжировании продуктов", "example": "A/B/C тест с разными метриками может показать: версия A лучше B по конверсии, B лучше C по удержанию, C лучше A по прибыли. «Лучшей» версии не существует без выбора весовой системы." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующий раз, когда группа «проголосует» за решение — спросите: в каком порядке рассматривались варианты? Изменился бы результат, если бы порядок был другим? Если да — решение зависит от повестки, а не только от предпочтений."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Three voters, three options: A, B, C. First voter prefers A > B > C. Second: B > C > A. Third: C > A > B. A majority prefers A over B (voters 1 and 3). A majority prefers B over C (voters 1 and 2). By transitivity: a majority should prefer A over C. But a majority prefers C over A (voters 2 and 3). A group of rational people with consistent preferences — is collectively irrational." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Condorcet's}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Condorcet's Paradox · Marquis de Condorcet · 1785" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/condorcets_paradox.svg", "alt": "Three options A, B, C in a cycle: arrows from A to B, B to C, C to A — an endless majority cycle" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The Marquis de Condorcet discovered: even when every voter has rational, transitive preferences, their aggregation through majority voting can produce an intransitive, cyclical \"collective choice.\" This isn't a failure of the voters — it's a mathematical property of preference aggregation.",
+              "Kenneth Arrow formalized the problem in 1951 with the impossibility theorem: no voting system can simultaneously satisfy all reasonable fairness criteria — transitivity, independence of irrelevant alternatives, non-dictatorship, and unanimity. {{em:Every voting system violates at least one of these conditions.}} Arrow won the Nobel Prize in Economics in 1972.",
+              "The practical implication: the order of voting matters. If A is voted against B first, then the winner against C — the result differs from B versus C first, then the winner against A. Whoever controls the agenda influences the outcome — even with honest voting."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Aggregating individual rational preferences through majority voting can produce an irrational collective result. No ideal democratic choice system exists that satisfies all reasonable criteria simultaneously."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "Can a group of rational people with rational preferences collectively make an irrational decision?",
+            "hint": "Is individual rationality and collective rationality the same thing?",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "Yes — this is exactly what Condorcet's paradox shows. The \"collective will\" is not simply the sum of individual wills. With certain distributions of preferences, any pair of options loses to a third in pairwise voting — a cycle. This isn't a failure of democracy — it's a mathematical constraint on any aggregation system. Solutions: ranked-choice voting, random tiebreakers, delegation — each with its own trade-offs.",
+            "intuition_trap": "Intuition: \"the majority is always right.\" Mathematics: a majority can form a cycle where there is no \"right\" option. This isn't a reason to abandon democracy — it's a reason to understand its limitations and choose voting systems consciously."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In parliamentary debates", "example": "\"Agenda gerrymandering\": controlling the order of votes allows pushing through a desired outcome even with unpredictable results on any individual vote." },
+              { "label": "In corporate decisions", "example": "Committees using pairwise voting on strategic options can produce cyclical results. Good chairs know: the order of voting is an instrument of power." },
+              { "label": "In product ranking", "example": "An A/B/C test with different metrics might show: version A beats B on conversion, B beats C on retention, C beats A on revenue. There's no \"best\" version without choosing a weighting system." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Next time a group \"votes\" on a decision — ask: in what order were options considered? Would the result change if the order were different? If yes — the decision depends on the agenda, not just on preferences."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/condorcets_paradox" }]
+}

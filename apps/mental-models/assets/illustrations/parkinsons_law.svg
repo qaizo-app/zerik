@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Timeline bar -->
+  <rect x="40" y="130" width="320" height="24" rx="12" fill="#2a2a4a" stroke="#4a4a7a" stroke-width="1.5"/>
+  <!-- Available time fill -->
+  <rect x="40" y="130" width="320" height="24" rx="12" fill="#cc6b8e" opacity="0.4"/>
+  <!-- Task dot (small actual task) -->
+  <circle cx="80" cy="142" r="12" fill="#4a9a4a" opacity="0.9"/>
+  <text x="80" y="147" text-anchor="middle" fill="white" font-family="sans-serif" font-size="9" font-weight="bold">ЗАДАЧА</text>
+  <!-- Expansion arrows showing task growing -->
+  <line x1="92" y1="142" x2="320" y2="142" stroke="#cc6b8e" stroke-width="2"/>
+  <polygon points="320,142 308,136 308,148" fill="#cc6b8e"/>
+  <!-- Deadline flag -->
+  <line x1="360" y1="100" x2="360" y2="170" stroke="#f7d060" stroke-width="2.5"/>
+  <rect x="360" y="100" width="30" height="18" rx="3" fill="#f7d060"/>
+  <text x="375" y="112" text-anchor="middle" fill="#1a1a2e" font-family="sans-serif" font-size="9" font-weight="bold">ДЛ</text>
+  <!-- Filler items (procrastination bubbles) -->
+  <ellipse cx="180" cy="105" rx="35" ry="16" fill="#3a2a4a" stroke="#cc6b8e" stroke-width="1" opacity="0.7"/>
+  <text x="180" y="110" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="10">согласования</text>
+  <ellipse cx="270" cy="175" rx="38" ry="16" fill="#3a2a4a" stroke="#cc6b8e" stroke-width="1" opacity="0.7"/>
+  <text x="270" y="180" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="10">«доработка»</text>
+  <!-- Clock icon -->
+  <circle cx="200" cy="55" r="28" fill="#2a2a4a" stroke="#6c8ebf" stroke-width="2"/>
+  <line x1="200" y1="55" x2="200" y2="35" stroke="#f7d060" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="200" y1="55" x2="215" y2="62" stroke="#aaaacc" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="200" cy="55" r="3" fill="#f7d060"/>
+  <text x="200" y="265" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="11">Работа расширяется, чтобы заполнить время</text>
+</svg>

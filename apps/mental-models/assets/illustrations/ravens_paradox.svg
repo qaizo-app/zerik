@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Black raven left -->
+  <ellipse cx="90" cy="155" rx="45" ry="35" fill="#2a2a3a" stroke="#4a4a6a" stroke-width="1.5"/>
+  <text x="90" y="163" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="36">🐦</text>
+  <text x="90" y="200" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="11">Ворон (чёрный)</text>
+  <!-- Yellow pen right -->
+  <ellipse cx="310" cy="155" rx="45" ry="35" fill="#2a2a2a" stroke="#4a4a2a" stroke-width="1.5"/>
+  <!-- Pen shape -->
+  <rect x="285" y="140" width="12" height="40" rx="4" fill="#f7d060"/>
+  <polygon points="285,140 297,140 291,128" fill="#f7d060"/>
+  <rect x="285" y="175" width="12" height="8" rx="2" fill="#4a4a4a"/>
+  <text x="310" y="200" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="11">Жёлтая ручка</text>
+  <!-- Check marks for confirmation -->
+  <text x="90" y="115" text-anchor="middle" fill="#4a9a4a" font-family="sans-serif" font-size="18">✓</text>
+  <text x="310" y="115" text-anchor="middle" fill="#f7d060" font-family="sans-serif" font-size="18">?</text>
+  <!-- Both arrows to hypothesis -->
+  <rect x="130" y="70" width="140" height="30" rx="8" fill="#2a3a4a" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="200" y="88" text-anchor="middle" fill="#6c8ebf" font-family="sans-serif" font-size="11">«Все вороны чёрные»</text>
+  <line x1="110" y1="120" x2="155" y2="100" stroke="#4a9a4a" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="285" y1="120" x2="245" y2="100" stroke="#f7d060" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Paradox label -->
+  <text x="200" y="250" text-anchor="middle" fill="#cc6b8e" font-family="sans-serif" font-size="12" font-weight="bold">Парадокс: ручка тоже подтверждает?</text>
+  <text x="200" y="268" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="10">Да — но в миллион раз слабее ворона (Байес)</text>
+</svg>

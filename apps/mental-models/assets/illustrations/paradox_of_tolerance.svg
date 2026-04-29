@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Large circle of tolerance -->
+  <circle cx="200" cy="150" r="110" fill="#2a3a4a" stroke="#6c8ebf" stroke-width="2" opacity="0.8"/>
+  <!-- Inner light area -->
+  <circle cx="200" cy="150" r="90" fill="#1e2e3e" opacity="0.5"/>
+  <!-- Diverse figures inside -->
+  <circle cx="160" cy="150" r="14" fill="#f7d060" opacity="0.9"/>
+  <circle cx="200" cy="130" r="14" fill="#4a9a4a" opacity="0.9"/>
+  <circle cx="240" cy="150" r="14" fill="#6c8ebf" opacity="0.9"/>
+  <circle cx="180" cy="175" r="14" fill="#cc6b8e" opacity="0.9"/>
+  <circle cx="220" cy="175" r="14" fill="#9a6acc" opacity="0.9"/>
+  <!-- Intolerant entity trying to enter (dark figure at edge) -->
+  <circle cx="200" cy="42" r="18" fill="#cc4444" opacity="0.9"/>
+  <text x="200" y="49" text-anchor="middle" fill="white" font-family="sans-serif" font-size="14" font-weight="bold">✕</text>
+  <!-- Blocking hand -->
+  <text x="200" y="80" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="24">🤚</text>
+  <!-- Label -->
+  <text x="200" y="42" text-anchor="middle" fill="#cc4444" font-family="sans-serif" font-size="10">Нетерпимость</text>
+  <text x="200" y="265" text-anchor="middle" fill="#aaaacc" font-family="sans-serif" font-size="11">Безграничная терпимость саморазрушительна</text>
+</svg>

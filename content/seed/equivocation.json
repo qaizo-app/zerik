@@ -1,0 +1,150 @@
+{
+  "id": "equivocation",
+  "category": "rhetorical_fallacies",
+  "release_number": 89,
+  "release_date": "2026-07-09",
+  "tags": ["equivocation", "fallacy", "ambiguity", "language", "logic", "rhetoric"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/equivocation.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Закон природы гласит, что сильнейший выживает. Законы должны отражать природу. Значит, наши законы должны позволять сильнейшим доминировать над слабыми». Что здесь не так? Слово «закон» использовано в двух разных смыслах — и этого достаточно, чтобы аргумент рассыпался. Эквивокация — ловушка одного слова с двумя лицами." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Эквиво}}кация" } },
+        { "type": "subtitle", "props": { "text": "Equivocation · риторическая ошибка · класс «ошибок языка»" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/equivocation.svg", "alt": "Одно слово — два разных значения-облака расходятся в разные стороны" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Эквивокация возникает, когда слово или фраза используются в аргументе в разных смыслах, но слушатель воспринимает их как один и тот же. Каждая отдельная посылка может быть верна — но вывод неверен, потому что «склейка» происходит через подмену смысла. Это злоупотребление естественной многозначностью языка.",
+              "Классические примеры: «Верить в эволюцию — просто теория. Теория — это предположение без доказательств. Значит, эволюция недоказана». Здесь «теория» сначала означает научную теорию (систематически подтверждённую модель), потом — обыденное предположение. {{em:Эквивокация особенно опасна с красивыми абстрактными словами: «свобода», «справедливость», «природа», «права».}} У них много смыслов — и их можно незаметно менять по ходу аргумента.",
+              "Обнаружить эквивокацию сложнее, чем кажется: переключение смыслов часто происходит постепенно, через несколько шагов. Проверка: замените слово его точным определением в каждой посылке — и посмотрите, выдержит ли аргумент."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Если ключевое слово в аргументе используется в разных значениях — аргумент недействителен, даже если каждая посылка верна в своём смысле. Логика требует, чтобы термины сохраняли значение на протяжении всего рассуждения."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "В дискуссии о правах:",
+            "example_quote": "— Все люди от природы свободны (в смысле: автономны, обладают свободной волей). Свободного человека нельзя принуждать. Значит, налоги — принуждение, которое нарушает естественную свободу человека.",
+            "recognition_signal": "«Свобода» используется в двух смыслах: метафизическом (наличие воли) и политическом (отсутствие внешнего принуждения). Обнаружив ключевое слово — спросите: «Какое точно определение вы используете здесь?» Если в начале и в конце аргумента определения разные — перед вами эквивокация.",
+            "nuance_warning": "Не путайте с законной метафорой: поэтический и литературный язык намеренно играет смыслами. Ошибка — в притворстве, что два разных смысла одного слова образуют один логический вывод."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эквивокация часто неосознанна: говорящий сам не замечает, что переключает смыслы. Особенно при использовании слов из разных дискурсов — научного и бытового (теория, критический, органический), юридического и нравственного (право, справедливость). Чем более «очевидно» значение слова — тем опаснее его многозначность."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "«Нейтральность» СМИ — эквивокация: в одном смысле «не пропагандировать партию», в другом — «давать одинаковое место всем точкам зрения». Смешение этих смыслов порождает путаницу о функции прессы." },
+              { "label": "В науке и медиа", "example": "Слово «органический» в маркетинге (натуральный, без химии) и в химии (содержащий углерод) — разные вещи. Аргументы об «органических продуктах» часто эксплуатируют эту путаницу." },
+              { "label": "В юридических спорах", "example": "Слово «собственность» в разных правовых системах означает разное. Международные переговоры часто заходят в тупик именно потому, что стороны вкладывают разные смыслы в одни и те же термины." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующий раз, услышав сильный аргумент, найдите ключевое слово и задайте вопрос: «Что именно вы имеете в виду под X?» Если собеседник затрудняется с ответом или меняет определение по ходу — возможно, вы нашли эквивокацию."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"The law of nature says the strongest survive. Laws should reflect nature. Therefore, our laws should allow the strong to dominate the weak.\" What's wrong here? The word \"law\" is used in two different senses — and that's enough to make the argument collapse. Equivocation is the trap of one word with two faces." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Equivo}}cation" } },
+        { "type": "subtitle", "props": { "text": "Equivocation · rhetorical fallacy · class: language errors" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/equivocation.svg", "alt": "One word — two different meaning-clouds diverging in opposite directions" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Equivocation occurs when a word or phrase is used in different senses within an argument, but the listener assumes a single consistent meaning. Each individual premise may be true — but the conclusion is invalid because the glue holding the argument together is a shift in meaning. It's an exploitation of language's natural ambiguity.",
+              "Classic examples: \"Believing in evolution is just a theory. A theory is an unproven guess. So evolution is unproven.\" Here \"theory\" first means a scientific theory (a systematically confirmed model), then an everyday hunch. {{em:Equivocation is especially dangerous with beautiful abstract words: \"freedom,\" \"justice,\" \"nature,\" \"rights.\"}} They carry many meanings — which can be quietly swapped mid-argument.",
+              "Equivocation is harder to detect than it seems: the meaning shift often happens gradually, across several steps. The test: replace the word with its precise definition in each premise — and see if the argument still holds."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "If a key word in an argument is used in different senses, the argument is invalid — even if each premise is true in its own sense. Logic requires terms to maintain their meaning throughout the entire chain of reasoning."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a discussion about rights:",
+            "example_quote": "— All people are by nature free (meaning: autonomous, possessing free will). A free person cannot be coerced. Therefore, taxation is coercion that violates the natural freedom of persons.",
+            "recognition_signal": "\"Freedom\" is used in two senses: metaphysical (having a will) and political (absence of external coercion). When you spot a key word, ask: \"What exactly do you mean by X?\" If the definition shifts between the start and end of the argument — you've found equivocation.",
+            "nuance_warning": "Don't confuse with legitimate metaphor: poetry and literature intentionally play with meanings. The fallacy is in pretending that two different senses of the same word can be combined to form one valid logical conclusion."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Equivocation is often unconscious: the speaker doesn't notice they're switching meanings. This is especially common with words borrowed across registers — scientific and everyday (theory, critical, organic), legal and moral (right, justice). The more \"obvious\" a word's meaning seems, the more dangerous its ambiguity."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In politics", "example": "Media \"neutrality\" is equivocated: in one sense it means \"don't advocate for a party,\" in another \"give equal space to all viewpoints.\" Mixing these senses creates confusion about what the press is for." },
+              { "label": "In science and media", "example": "The word \"organic\" in marketing (natural, chemical-free) and in chemistry (carbon-containing) are different things. Arguments about \"organic food\" frequently exploit this confusion." },
+              { "label": "In legal disputes", "example": "The word \"property\" means different things in different legal systems. International negotiations often stall precisely because parties load different meanings into the same terms." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "The next time you hear a compelling argument, find the key word and ask: \"What exactly do you mean by X?\" If the other person struggles to answer or shifts their definition mid-argument — you may have found equivocation."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/equivocation" }]
+}

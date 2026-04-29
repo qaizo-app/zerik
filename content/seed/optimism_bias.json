@@ -1,0 +1,170 @@
+{
+  "id": "optimism_bias",
+  "category": "cognitive_biases",
+  "release_number": 77,
+  "release_date": "2026-06-27",
+  "tags": ["optimism_bias", "sharot", "unrealistic_optimism", "planning", "risk"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/optimism_bias.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "80% водителей считают себя лучше среднего за рулём. 50% пар убеждены, что их брак никогда не закончится разводом. Большинство из нас считают, что рак, несчастный случай или финансовый крах случится скорее с другими, чем с нами. Мы все оптимисты — и это влияет на каждое наше решение." }
+        },
+        { "type": "title", "props": { "text": "Искажение {{accent:оптимизма}}" } },
+        { "type": "subtitle", "props": { "text": "Optimism Bias · Тали Шарот · «Мозг-оптимист» · 2011" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/optimism_bias.svg", "alt": "Человек смотрит вперёд через розовые очки — препятствие на пути не замечено" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Нейробиолог Тали Шарот установила, что оптимистическое искажение присутствует у 80% людей и имеет биологическую основу. Мозг более активно обновляет убеждения в ответ на хорошие новости, чем на плохие. Когда вам говорят, что риск рака выше, чем вы думали, — ваш мозг слабо корректирует оценку. Когда говорят, что ниже — корректирует сильно. Результат: систематически заниженные оценки личного риска.",
+              "Оптимистическое искажение — эволюционно выгодное. Оно снижает тревогу, повышает мотивацию, улучшает здоровье. Но у него есть прямая цена: мы недооцениваем сроки, бюджеты и риски в проектах. {{em:«Синдром планирования» — оптимизм в действии.}} Почти все крупные проекты превышают бюджет и срок именно потому, что на этапе планирования команды думают, что у них всё пойдёт лучше, чем у всех остальных.",
+              "Ирония: даже когда мы знаем об оптимистическом искажении, мы применяем это знание к другим, но не к себе. «Конечно, большинство оптимисты — но моя оценка реалистична». Именно это и есть искажение."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мы систематически переоцениваем вероятность хороших событий и недооцениваем вероятность плохих — применительно к себе. Это нейробиологический факт, а не характеристика личности."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы запускаете новый бизнес. Статистика говорит: 50% стартапов закрываются в первые 5 лет. Как вы воспринимаете этот факт?",
+            "setup": null,
+            "options": [
+              { "id": "applies", "text": "Применяю к себе — честно оцениваю риск", "is_wiser": false },
+              { "id": "exception", "text": "Мой случай лучше среднего — у меня есть преимущества", "is_wiser": false },
+              { "id": "outside", "text": "Знаю, что думаю «мой случай лучше», и корректирую оценку вниз", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают свой случай лучше среднего",
+              "explanation": "Большинство предпринимателей знают статистику закрытий — и всё равно считают, что к ним она не относится. Это не уверенность в себе и не ошибка мышления. Это нейробиологический механизм. Работает с ним только осознанная коррекция: «Что конкретно сделает меня лучше статистики — и насколько реально это преимущество?»",
+              "wisdom": "{{em:Оптимизм мотивирует. Некорректированный оптимизм убивает планирование.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Борьба с оптимистическим искажением не означает пессимизм. Шарот показывает: умеренный оптимизм полезен — он коррелирует с лучшим здоровьем и большей настойчивостью. Задача не уничтожить оптимизм, а добавить к нему реалистичную оценку вероятностей. «Думай как оптимист, планируй как пессимист»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В строительстве и IT", "example": "Проекты в среднем превышают бюджет на 27%. Разработчики называют этот феномен «синдромом 90%» — когда последние 10% задачи занимают 90% времени." },
+              { "label": "В здравоохранении", "example": "Курильщики знают статистику рака лёгких — и всё равно считают, что у них риск ниже среднего. Оптимистическое искажение объясняет, почему рациональная информация о рисках не меняет поведение." },
+              { "label": "В инвестициях", "example": "80% активных управляющих считают, что будут бить рынок. Реально это делают менее 20% на горизонте 10+ лет. Оптимизм — крупнейший враг инвестиционной дисциплины." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите ближайший важный прогноз (срок, бюджет, результат). Найдите среднестатистическое значение для аналогичных ситуаций. Честно спросите себя: насколько реально моё преимущество перед средним? Скорректируйте прогноз в сторону базовой ставки."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "80% of drivers consider themselves better than average. 50% of married couples believe their marriage will never end in divorce. Most of us believe cancer, accidents, or financial ruin are more likely to hit others than ourselves. We are all optimists — and it shapes every decision we make." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Optimism}} Bias" } },
+        { "type": "subtitle", "props": { "text": "Optimism Bias · Tali Sharot · The Optimism Bias · 2011" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/optimism_bias.svg", "alt": "A person looking ahead through rose-tinted glasses — an obstacle ahead goes unnoticed" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Neuroscientist Tali Sharot established that optimism bias is present in 80% of people and has a biological basis. The brain updates beliefs more readily in response to good news than bad. When told that your cancer risk is higher than you thought — the brain makes a weak correction. When told it's lower — it adjusts strongly. The result: systematically underestimated personal risk assessments.",
+              "Optimism bias is evolutionarily advantageous. It reduces anxiety, boosts motivation, and improves health outcomes. But it has a direct cost: we underestimate timelines, budgets, and risks in projects. {{em:\"Planning syndrome\" is optimism in action.}} Nearly all large projects exceed budget and schedule because at the planning stage, teams believe things will go better for them than for everyone else.",
+              "The irony: even when we know about optimism bias, we apply that knowledge to others — not ourselves. \"Of course most people are optimists — but my estimate is realistic.\" That is precisely the bias."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "We systematically overestimate the probability of good events and underestimate bad ones — as applied to ourselves. This is a neuroscientific fact, not a personality trait."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're launching a new business. Statistics say 50% of startups close within 5 years. How do you process this?",
+            "setup": null,
+            "options": [
+              { "id": "applies", "text": "I apply it to myself — honestly assessing the risk", "is_wiser": false },
+              { "id": "exception", "text": "My case is better than average — I have advantages", "is_wiser": false },
+              { "id": "outside", "text": "I know I'm thinking \"my case is better\" and consciously correct my estimate downward", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "believe their case is better than average",
+              "explanation": "Most entrepreneurs know the failure statistics — and still believe those statistics don't apply to them. This isn't self-confidence or faulty reasoning. It's a neurological mechanism. The only thing that works against it is deliberate correction: \"What specifically makes me better than the baseline — and how realistic is that advantage?\"",
+              "wisdom": "{{em:Optimism motivates. Uncorrected optimism kills planning.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Fighting optimism bias doesn't mean becoming a pessimist. Sharot shows: moderate optimism is beneficial — it correlates with better health and greater persistence. The goal isn't to eliminate optimism but to add realistic probability assessment alongside it. \"Think like an optimist, plan like a pessimist.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In construction and IT", "example": "Projects exceed budget by an average of 27%. Developers call the phenomenon the \"90% syndrome\" — when the last 10% of a task takes 90% of the time." },
+              { "label": "In healthcare", "example": "Smokers know the lung cancer statistics — and still believe their personal risk is below average. Optimism bias explains why rational risk information doesn't change behavior." },
+              { "label": "In investing", "example": "80% of active fund managers believe they'll beat the market. In reality, fewer than 20% do over a 10+ year horizon. Optimism is the biggest enemy of investment discipline." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take your next important forecast (deadline, budget, outcome). Find the average statistical value for similar situations. Honestly ask: how real is my advantage over the baseline? Adjust your forecast toward the base rate."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/optimism_bias" }]
+}

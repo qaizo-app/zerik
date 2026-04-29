@@ -1,0 +1,184 @@
+{
+  "id": "range",
+  "category": "book_idea",
+  "release_number": 90,
+  "release_date": "2026-07-10",
+  "tags": ["epstein", "generalist", "breadth", "specialization", "learning", "interdisciplinary"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/range.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "Тигр Вудс начал играть в гольф в 2 года — и стал лучшим. Роджер Федерер до 16 лет пробовал несколько видов спорта, и только потом сосредоточился на теннисе — и тоже стал лучшим. Культура восхваляет Вудса и говорит: «начинай рано, специализируйся немедленно». Дэвид Эпштейн изучил данные и обнаружил: для большинства сложных областей путь Федерера надёжнее." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Широкий}} диапазон" } },
+        { "type": "subtitle", "props": { "text": "Range · Дэвид Эпштейн · 2019" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/range.svg", "alt": "Широкая дуга, охватывающая несколько разных иконок-дисциплин, — против узкой вертикальной линии-специализации" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "В сложных и непредсказуемых мирах широта опыта обеспечивает важные преимущества — когда нужны творческие связи, которые специалисты не могут увидеть.",
+            "attribution": "Дэвид Эпштейн, «Диапазон», 2019",
+            "context": "Эпштейн разграничивает «доброжелательные» домены (шахматы, гольф, классическая музыка — правила фиксированы, обратная связь мгновенна) и «злобные» (медицина, бизнес, политика — правила меняются, паттерны не повторяются). В злобных доменах ранняя гиперспециализация опасна."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Эпштейн анализирует данные по науке, спорту, искусству и бизнесу и находит контринтуитивную закономерность: самые инновационные специалисты часто имеют широкий опыт за пределами своей области. Нобелевские лауреаты в 22 раза чаще среднего учёного имеют хобби, связанное с искусством или ремёслами. Патентные заявки на стыке дисциплин цитируются вдвое чаще узкоспециализированных.",
+              "Механизм: широкий диапазон создаёт «переносимые аналогии» — паттерны из одной области, применимые в другой. {{em:Специалист видит текущую задачу через призму прошлого опыта в своей области. Генералист видит её через призму десятков областей.}} В знакомых задачах специалист выигрывает. В новых — генералист.",
+              "Эпштейн также описывает «сэмплирование» — период широкого пробования в молодости. Культура давления «определись сейчас» сокращает этот период — и снижает вероятность найти область, где вы действительно сильны, а не просто рано начали."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "В сложных, изменчивых доменах широкий опыт и поздняя специализация часто дают преимущество над ранней гиперспециализацией. Разнообразный опыт создаёт «переносимые аналогии», которые позволяют решать новые задачи нестандартными способами."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Найти специалиста для решения трудной нестандартной задачи. Кого выбрать?",
+            "setup": null,
+            "options": [
+              { "id": "specialist", "text": "Лучшего эксперта именно в этой области — глубина важнее ширины", "is_wiser": false },
+              { "id": "generalist", "text": "Человека с опытом в нескольких смежных областях — он может увидеть нестандартную связь", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают узкого специалиста",
+              "explanation": "Эпштейн анализирует случаи решения «открытых задач» на платформах типа InnoCentive: задачи, которые не могли решить внутренние эксперты, чаще всего решали специалисты из смежных или далёких областей. Почему? Они не знали, почему это «невозможно» — и применяли аналогии из своей области. Для стандартных задач лучший специалист выигрывает. Для нестандартных — широкий диапазон.",
+              "wisdom": "{{em:Специалист знает всё о своей области. Генералист знает, где её границы — и что лежит за ними.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "«Диапазон» не означает «не специализируйся никогда». Эпштейн описывает модель «поздней специализации» — после периода широкого сэмплирования. Цель широты — не поверхностность, а более осознанный выбор специализации и более богатые аналогии внутри неё."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В образовании", "example": "Университеты с широким liberal arts образованием против узкоспециализированных программ — давний спор. Эпштейн предлагает данные в пользу широты на начальном этапе, с последующей специализацией." },
+              { "label": "В найме", "example": "Растущий интерес к T-shaped специалистам (глубина в одном + ширина в смежных) — прямое следствие осознания ценности диапазона в быстро меняющихся индустриях." },
+              { "label": "В карьере", "example": "Смена карьеры в 30-40 лет статистически коррелирует с более высокой удовлетворённостью и нередко с более высокими результатами — люди нашли область, где их диапазон ценен." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните проблему, над которой застряли в своей области. Спросите: какая другая область имеет похожую структуру? Как её решают там? Это упражнение в «переносимых аналогиях» — главный инструмент широкого диапазона."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "Tiger Woods started playing golf at age 2 — and became the best. Roger Federer tried several sports until he was 16, then focused on tennis — and also became the best. Culture glorifies Woods and says: start early, specialize immediately. David Epstein studied the data and found: for most complex fields, Federer's path is more reliable." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Range}}" } },
+        { "type": "subtitle", "props": { "text": "Range · David Epstein · 2019" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/range.svg", "alt": "A wide arc spanning several different discipline icons — versus a narrow vertical line of specialization" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "In complex and unpredictable domains, breadth of experience provides important advantages — when creative connections are needed that specialists cannot see.",
+            "attribution": "David Epstein, Range, 2019",
+            "context": "Epstein distinguishes \"kind\" learning environments (chess, golf, classical music — fixed rules, instant feedback) from \"wicked\" ones (medicine, business, politics — rules change, patterns don't repeat). In wicked domains, early hyper-specialization is dangerous."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Epstein analyzes data across science, sports, art, and business and finds a counterintuitive pattern: the most innovative specialists often have broad experience outside their field. Nobel laureates are 22 times more likely than the average scientist to have a hobby involving arts or crafts. Patent applications at the intersection of disciplines are cited twice as often as narrowly specialized ones.",
+              "The mechanism: a wide range creates \"transferable analogies\" — patterns from one domain applicable in another. {{em:A specialist views a current problem through the lens of past experience in their field. A generalist views it through the lens of dozens of fields.}} In familiar problems, the specialist wins. In novel ones — the generalist.",
+              "Epstein also describes \"sampling\" — a period of broad exploration in youth. The cultural pressure to \"decide now\" shortens this period — and reduces the probability of finding the domain where you're genuinely strong, rather than just early."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "In complex, changing domains, broad experience and late specialization often outperform early hyper-specialization. Varied experience creates \"transferable analogies\" that allow solving novel problems in unconventional ways."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You need to find someone to solve a difficult, non-standard problem. Who do you choose?",
+            "setup": null,
+            "options": [
+              { "id": "specialist", "text": "The top expert in exactly this field — depth matters more than breadth", "is_wiser": false },
+              { "id": "generalist", "text": "Someone with experience across several related fields — they may see an unconventional connection", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose the narrow specialist",
+              "explanation": "Epstein analyzes \"open innovation\" cases on platforms like InnoCentive: problems that internal experts couldn't solve were most often cracked by specialists from adjacent or distant fields. Why? They didn't know why it was \"impossible\" — and applied analogies from their own domain. For standard problems, the best specialist wins. For novel ones — broad range does.",
+              "wisdom": "{{em:A specialist knows everything about their field. A generalist knows where the field's edges are — and what lies beyond.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "\"Range\" doesn't mean \"never specialize.\" Epstein describes a model of \"late specialization\" — after a period of broad sampling. The goal of breadth isn't superficiality — it's a more informed choice of specialization and richer analogies within it."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In education", "example": "Universities with broad liberal arts curricula versus narrowly specialized programs — a long-standing debate. Epstein offers data in favor of breadth early on, followed by specialization." },
+              { "label": "In hiring", "example": "The growing interest in T-shaped professionals (depth in one area + breadth in adjacent ones) is a direct consequence of recognizing the value of range in fast-changing industries." },
+              { "label": "In careers", "example": "Career changes at 30-40 statistically correlate with higher satisfaction and often higher performance — people found a domain where their range is genuinely valued." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a problem you're stuck on in your field. Ask: what other domain has a similar structure? How is it solved there? This is the \"transferable analogy\" exercise — the core tool of range."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/range" }]
+}

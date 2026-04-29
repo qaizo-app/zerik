@@ -1,0 +1,168 @@
+{
+  "id": "gamblers_fallacy",
+  "category": "cognitive_biases",
+  "release_number": 98,
+  "release_date": "2026-07-18",
+  "tags": ["gamblers_fallacy", "probability", "randomness", "hot_hand", "independence", "regression"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/gamblers_fallacy.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "Колесо рулетки выпало на красное 10 раз подряд. Игроки ставят всё на чёрное: «оно должно выпасть». В Монте-Карло в 1913 году чёрное выпадало 26 раз подряд — и с каждым разом ставки на красное росли. Колесо не помнит предыдущих результатов. Мозг помнит — и ищет паттерн там, где его нет." }
+        },
+        { "type": "title", "props": { "text": "Ошибка {{accent:игрока}}" } },
+        { "type": "subtitle", "props": { "text": "Gambler's Fallacy · классическое когнитивное искажение · систематизировано Канеманом и Тверски · 1970-е" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/gamblers_fallacy.svg", "alt": "Серия монет: 9 орлов — и огромная красная стрелка на «решку», которая «должна» выпасть" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ошибка игрока возникает, когда прошлые независимые события воспринимаются как влияющие на будущие. Монета не знает, что выпала орлом девять раз подряд. Вероятность следующего орла по-прежнему 50%. Серии случайных событий не «выравниваются» в коротком периоде — они выравниваются в бесконечно длинном. Мозг путает эти два утверждения.",
+              "Механизм: Канеман и Тверски описали его как проявление эвристики репрезентативности. Случайная серия орлов кажется «нетипичной» — и мозг ожидает коррекции. {{em:Но случайность не обязана выглядеть «сбалансированной» в коротком промежутке. Именно это делает её случайностью.}} Серии из 10 орлов случаются гораздо чаще, чем интуиция подсказывает.",
+              "Зеркальное искажение — «эффект горячей руки»: баскетболист, бросивший несколько мячей подряд, «в ударе» — и следующий бросок должен тоже попасть. Здесь случайное переоценивается как паттерн. Оба искажения — об одном: наш мозг плохо переносит идею чистой случайности."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Независимые случайные события не имеют «памяти». Прошлые результаты не изменяют вероятности будущих. Закон больших чисел работает в бесконечности — не в следующих нескольких попытках."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы подбрасываете честную монету. Выпало 7 орлов подряд. Каков шанс решки на восьмом броске?",
+            "setup": null,
+            "options": [
+              { "id": "higher", "text": "Выше 50% — «пора бы уже выпасть»", "is_wiser": false },
+              { "id": "fifty", "text": "Ровно 50% — каждый бросок независим", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "думают, что решка «назрела»",
+              "explanation": "Каждый бросок монеты — независимое событие с вероятностью 50/50, вне зависимости от предыдущих. Серия из 7 орлов подряд не делает следующий бросок «должным». Математика: вероятность 8 орлов подряд — 1/256. Но это не значит, что после 7 орлов «должна быть» решка. Просто 8 орлов подряд будет неожиданно — задним числом.",
+              "wisdom": "{{em:Случайность не долг. Монета ничего не «должна».}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Ошибка игрока не означает, что паттерны в данных всегда иллюзия. Если монета регулярно выдаёт орла — возможно, она нечестная. Ключ — в различении независимых случайных событий (ошибка игрока неприменима) и автокоррелированных рядов (где прошлое действительно предсказывает будущее). Финансовые рынки — между этими полюсами."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В инвестициях", "example": "«Рынок рос 5 лет — значит, скоро обвалится» — классическая ошибка игрока. Годы роста не делают коррекцию более вероятной в следующем квартале. Рынки не «знают», что растут слишком долго." },
+              { "label": "В азартных играх", "example": "Казино разрешают отображать историю рулетки — это увеличивает ставки. Игроки видят «серии» и делают выводы о «задолженности». Это продуманный дизайн, эксплуатирующий ошибку игрока." },
+              { "label": "В найме и оценке", "example": "«Мы взяли трёх кандидатов подряд — плохих. Следующий должен быть хорошим» — та же ошибка. Каждое интервью независимо. Прошлые неудачи не повышают вероятность успеха следующего." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли область в вашей жизни, где вы ждёте «своей очереди» — успеха, удачи, перемен — потому что «уже пора»? Спросите: независимы ли события в этой области? Если да — «очередь» не придёт сама. Нужны другие действия."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "The roulette wheel has landed on red 10 times in a row. Players bet everything on black: \"it has to come up.\" In Monte Carlo in 1913, black came up 26 times in a row — and with every spin, bets on red grew. The wheel has no memory of previous results. The brain does — and searches for a pattern where there is none." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Gambler's}} Fallacy" } },
+        { "type": "subtitle", "props": { "text": "Gambler's Fallacy · classic cognitive bias · systematized by Kahneman & Tversky · 1970s" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/gamblers_fallacy.svg", "alt": "A sequence of coins: 9 heads — and a large red arrow pointing to \"tails\" which is \"overdue\"" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The gambler's fallacy occurs when past independent events are perceived as influencing future ones. A coin doesn't know it landed heads nine times in a row. The probability of the next heads is still 50%. Random sequences don't \"even out\" in short stretches — they even out over an infinitely long one. The brain confuses these two statements.",
+              "The mechanism: Kahneman and Tversky described it as a manifestation of the representativeness heuristic. A random streak of heads seems \"atypical\" — and the brain expects a correction. {{em:But randomness is not obligated to look \"balanced\" over a short stretch. That's precisely what makes it random.}} Runs of 10 heads happen far more often than intuition suggests.",
+              "The mirror bias is the \"hot hand\" effect: a basketball player who's made several shots in a row is \"on fire\" — and the next shot will surely go in too. Here randomness is overinterpreted as a pattern. Both biases are about the same thing: our brains struggle with the idea of pure randomness."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Independent random events have no memory. Past results don't change the probabilities of future ones. The law of large numbers operates over infinity — not over the next few attempts."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're flipping a fair coin. It's come up heads 7 times in a row. What's the probability of tails on the eighth flip?",
+            "setup": null,
+            "options": [
+              { "id": "higher", "text": "Above 50% — \"it's due\"", "is_wiser": false },
+              { "id": "fifty", "text": "Exactly 50% — every flip is independent", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think tails is \"overdue\"",
+              "explanation": "Every coin flip is an independent event with 50/50 probability, regardless of what came before. A streak of 7 heads doesn't make the next flip \"owed.\" The math: the probability of 8 heads in a row is 1/256. But that doesn't mean tails is \"due\" after 7 heads. It just means 8 heads in a row will seem surprising — in retrospect.",
+              "wisdom": "{{em:Randomness has no debts. A coin owes you nothing.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The gambler's fallacy doesn't mean patterns in data are always an illusion. If a coin consistently comes up heads — it may be unfair. The key is distinguishing independent random events (the gambler's fallacy doesn't apply) from autocorrelated series (where the past does genuinely predict the future). Financial markets live somewhere between these poles."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In investing", "example": "\"The market has risen for 5 years — a crash must be coming\" — a classic gambler's fallacy. Years of gains don't make a correction more likely in the next quarter. Markets don't \"know\" they've risen too long." },
+              { "label": "In gambling", "example": "Casinos allow roulette history to be displayed — it increases bets. Players see \"streaks\" and draw conclusions about what's \"owed.\" This is deliberate design exploiting the gambler's fallacy." },
+              { "label": "In hiring and evaluation", "example": "\"We hired three bad candidates in a row — the next one should be good\" — the same fallacy. Each interview is independent. Past failures don't increase the probability that the next one succeeds." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there an area of your life where you're waiting for \"your turn\" — success, luck, change — because it's \"about time\"? Ask: are events in this area actually independent? If so, the turn won't come on its own. Different actions are needed."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/gamblers_fallacy" }]
+}

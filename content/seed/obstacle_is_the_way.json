@@ -1,0 +1,184 @@
+{
+  "id": "obstacle_is_the_way",
+  "category": "book_idea",
+  "release_number": 104,
+  "release_date": "2026-07-24",
+  "tags": ["holiday", "stoicism", "obstacle", "resilience", "marcus_aurelius", "adversity"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/obstacle_is_the_way.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "Рок Феллер потерял отца и бизнес в молодости — и использовал это как урок. Томас Эдисон смотрел, как горит его завод, и сказал: «Смотрите, все наши ошибки сгорели. Можно начать заново». Стив Джобс вернулся в Apple после увольнения — и создал iPod. Препятствие не мешает пути. Препятствие — это и есть путь." }
+        },
+        { "type": "title", "props": { "text": "Препятствие — {{accent:это путь}}" } },
+        { "type": "subtitle", "props": { "text": "The Obstacle Is the Way · Райан Холидей · 2014" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/obstacle_is_the_way.svg", "alt": "Большой камень на пути — но дорога огибает и проходит через него, превращая препятствие в ступень" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Препятствие на пути становится путём. Никогда не забывайте это. Всегда.",
+            "attribution": "Марк Аврелий, «Размышления», II в. н.э. — эпиграф к книге Холидея",
+            "context": "Холидей систематизирует стоическую философию — прежде всего Марка Аврелия, Эпиктета и Сенеку — и показывает, как её применяли реальные люди в реальных кризисах. Книга — не самопомощь, а операционное руководство по применению стоицизма."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Холидей выделяет три дисциплины стоиков: восприятие (как мы видим ситуацию), действие (что мы делаем с ней) и воля (как мы принимаем то, что не можем изменить). Препятствие трансформируется через все три: изменив восприятие — видим возможность; изменив действие — используем препятствие как ресурс; тренируя волю — принимаем то, что неизменно.",
+              "Ключевой принцип: «amor fati» — любовь к судьбе. {{em:Не просто принятие плохого — активная любовь к нему, потому что оно делает тебя сильнее.}} Холидей показывает: все великие исторические фигуры, которых он исследует, не избегали препятствий — они перерабатывали их в топливо.",
+              "Книга разделена на три части: восприятие (видеть по-другому), действие (делать по-другому) и воля (быть по-другому). Каждая часть — набор конкретных практик, не абстрактных советов. Это делает стоицизм Холидея прикладным, а не философским."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Препятствие содержит в себе возможность — если изменить угол зрения. Трансформация препятствия в ресурс требует трёх дисциплин: восприятия (видеть иначе), действия (использовать иначе) и воли (принять неизменное)."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Проект отменили в последний момент. Месяцы работы впустую. Как реагирует стоик по Холидею?",
+            "setup": null,
+            "options": [
+              { "id": "accept", "text": "Принимает потерю и переключается — прошлого не изменить", "is_wiser": false },
+              { "id": "transform", "text": "Находит в ситуации то, что можно использовать — опыт, связи, ясность", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают просто принятие",
+              "explanation": "Холидей различает пассивное принятие и активную трансформацию. Стоик не просто терпит — он спрашивает: «Что это препятствие открывает или даёт мне, чего не было раньше?» Отменённый проект — это, возможно, свобода для лучшего, опыт управления неопределённостью, понимание, что именно важно. Инструментализация потери — не цинизм, а практический стоицизм.",
+              "wisdom": "{{em:«Огонь испытывает золото, невзгоды — сильных людей». — Сенека}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "«Препятствие — это путь» — не оправдание пассивности или токсичного позитивизма. Стоицизм требует действия — умного, целеустремлённого действия — а не примирения с любым исходом. Марк Аврелий управлял империей в разгар войн и чумы — он не «принимал всё как есть»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В спорте", "example": "Исследования элитных спортсменов показывают: лучшие не избегают поражений — они перерабатывают их в информацию. «Что именно я узнал об этом поражении?» — конкретный вопрос, а не риторика." },
+              { "label": "В бизнесе", "example": "Кризис — один из лучших фильтров рынка: слабые конкуренты уходят, ресурсы освобождаются, клиенты становятся лояльнее к тем, кто выжил. Amazon вырос из пузыря доткомов именно потому, что видел в кризисе возможность." },
+              { "label": "В личной жизни", "example": "Посттравматический рост — задокументированное явление: люди после тяжёлых кризисов нередко сообщают о большей ясности, близости и смысле. Препятствие трансформировало их — не несмотря на боль, а через неё." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Назовите одно препятствие, с которым вы сейчас столкнулись. Спросите: что оно даёт мне, чего не было бы без него? Один конкретный ответ — не утешение, а реальная возможность или урок. Запишите его."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "Rockefeller lost his father and his business in his youth — and used this as a lesson. Thomas Edison watched his factory burn and said: \"Look — all our mistakes are gone. We can start fresh.\" Steve Jobs returned to Apple after being fired — and created the iPod. The obstacle doesn't block the path. The obstacle is the path." }
+        },
+        { "type": "title", "props": { "text": "The Obstacle Is {{accent:the Way}}" } },
+        { "type": "subtitle", "props": { "text": "The Obstacle Is the Way · Ryan Holiday · 2014" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/obstacle_is_the_way.svg", "alt": "A large rock on a path — but the road curves and passes through it, turning the obstacle into a stepping stone" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "The impediment to action advances action. What stands in the way becomes the way. Never forget this. Always.",
+            "attribution": "Marcus Aurelius, Meditations, 2nd century AD — epigraph to Holiday's book",
+            "context": "Holiday systematizes Stoic philosophy — primarily Marcus Aurelius, Epictetus, and Seneca — and shows how real people applied it in real crises. The book isn't self-help — it's an operational manual for applying Stoicism."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Holiday identifies three Stoic disciplines: perception (how we see the situation), action (what we do with it), and will (how we accept what we cannot change). The obstacle is transformed through all three: change perception and you see opportunity; change action and you use the obstacle as a resource; train the will and you accept what cannot be changed.",
+              "The core principle: \"amor fati\" — love of fate. {{em:Not just acceptance of the bad — an active love of it, because it makes you stronger.}} Holiday shows: every great historical figure he examines didn't avoid obstacles — they converted them into fuel.",
+              "The book is divided into three parts: perception (seeing differently), action (doing differently), and will (being differently). Each part is a set of concrete practices, not abstract advice. This is what makes Holiday's Stoicism practical rather than philosophical."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "An obstacle contains opportunity — if you change the angle of view. Transforming an obstacle into a resource requires three disciplines: perception (seeing differently), action (using differently), and will (accepting what cannot change)."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A project is cancelled at the last moment. Months of work wasted. How does a Stoic in Holiday's sense respond?",
+            "setup": null,
+            "options": [
+              { "id": "accept", "text": "Accepts the loss and moves on — the past can't be changed", "is_wiser": false },
+              { "id": "transform", "text": "Finds in the situation what can be used — experience, connections, clarity", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose simple acceptance",
+              "explanation": "Holiday distinguishes passive acceptance from active transformation. The Stoic doesn't just endure — they ask: \"What does this obstacle reveal or give me that I didn't have before?\" A cancelled project may mean freedom for something better, experience navigating uncertainty, clarity about what actually matters. Instrumentalizing loss isn't cynicism — it's practical Stoicism.",
+              "wisdom": "{{em:\"Fire tests gold; adversity tests strong men.\" — Seneca}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "\"The obstacle is the way\" is not a justification for passivity or toxic positivity. Stoicism demands action — smart, purposeful action — not resignation to any outcome. Marcus Aurelius governed an empire through wars and plagues — he was not merely \"accepting things as they are.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In sports", "example": "Research on elite athletes shows: the best don't avoid failures — they convert them into information. \"What exactly did I learn from this loss?\" is a concrete question, not rhetoric." },
+              { "label": "In business", "example": "Crisis is one of the best market filters: weaker competitors leave, resources free up, customers become more loyal to those who survive. Amazon grew from the dot-com crash precisely because it saw opportunity in the crisis." },
+              { "label": "In personal life", "example": "Post-traumatic growth is a documented phenomenon: people after serious crises often report greater clarity, closeness, and meaning. The obstacle transformed them — not despite the pain, but through it." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Name one obstacle you're facing right now. Ask: what does it give me that I wouldn't have without it? One concrete answer — not consolation, but a real opportunity or lesson. Write it down."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/obstacle_is_the_way" }]
+}

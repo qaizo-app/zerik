@@ -1,0 +1,150 @@
+{
+  "id": "tu_quoque",
+  "category": "rhetorical_fallacies",
+  "release_number": 103,
+  "release_date": "2026-07-23",
+  "tags": ["tu_quoque", "whataboutism", "fallacy", "hypocrisy", "ad_hominem", "deflection"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/tu_quoque.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Ты говоришь, что курение вредно — но ты же сам куришь!» «Вы критикуете наши действия, но вы сами делаете то же самое!» «Зачем слушать твой совет об экономии, если ты сам тратишь деньги бездумно?» Ту-квоке — апелляция к лицемерию критика вместо ответа на его аргумент." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Ту-квоке}}" } },
+        { "type": "subtitle", "props": { "text": "Tu Quoque · «И ты тоже» · риторическая ошибка · класс ad hominem" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/tu_quoque.svg", "alt": "Человек А указывает на проблему; человек Б разворачивает палец обратно на А — аргумент остаётся без ответа" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ту-квоке (лат. «и ты тоже») — разновидность ad hominem: атака на человека вместо аргумента. Вместо того чтобы ответить на критику, говорящий указывает на непоследовательность критика. Логика: «твоё поведение не соответствует твоим словам, поэтому твои слова неверны». Это не работает: лицемерие критика не делает критику ложной.",
+              "«Whataboutism» — политическая разновидность ту-квоке: «А что насчёт X?» в ответ на критику Y. {{em:Переключение на поведение оппонента не отвечает на вопрос о поведении X — оно только меняет тему.}} Советская пропаганда систематически использовала whataboutism: любая критика советских практик парировалась ссылкой на практики Запада. Двойные стандарты — реальная проблема; ту-квоке — ненадлежащий способ её поднять.",
+              "Важно: иногда лицемерие критика имеет значение — но не как ответ на его аргумент, а как отдельный вопрос о достоверности. Это два разных вопроса: «Прав ли он?» и «Последователен ли он?» Ответ на второй не отменяет ответ на первый."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Лицемерие критика не делает критику ложной. Аргумент оценивается по своим достоинствам, а не по поведению того, кто его выдвигает. Апелляция к непоследовательности оппонента — не ответ на его аргумент."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "В дискуссии о корпоративной этике:",
+            "example_quote": "— Ваша компания нарушила трудовое законодательство в трёх странах. — А ваша компания нарушала его в пяти! Вы вообще не имеете права нас критиковать.",
+            "recognition_signal": "Сигнал: «а сам-то», «а вы», «whatabout». Вопрос: решает ли апелляция к поведению критика исходную проблему? Пять нарушений у критика не отменяют трёх нарушений у вас — обе вещи могут быть правдой одновременно.",
+            "nuance_warning": "Не путайте с законной апелляцией к избирательному правосудию: «Почему вы преследуете нас, но не их?» — это уже вопрос о последовательном применении правил, а не просто ту-квоке. Двойные стандарты — реальная проблема. Проблема ту-квоке — в использовании их для уклонения от ответа на исходное обвинение."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Ту-квоке особенно действенна, когда критик действительно лицемерит — это делает апелляцию эмоционально убедительной. Но эмоциональная убедительность не является логическим ответом. Распознав ту-квоке, можно ответить: «Возможно, я непоследователен — и это отдельный разговор. Но мой аргумент от этого не становится неверным»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "«Вы критикуете нашу экономическую политику — а при вас было ещё хуже!» Whataboutism — стандартный инструмент политических дебатов. Он переводит разговор с оценки текущих действий на сравнение с прошлым." },
+              { "label": "В семейных спорах", "example": "«Ты говоришь, что я трачу слишком много — но ты сам купил машину дороже моей!» Обе проблемы могут быть реальными. Ту-квоке их не решает — только добавляет защитный слой." },
+              { "label": "В этике бизнеса", "example": "«Не вам нас учить — у самих рыльце в пушку» — корпоративная версия ту-квоке. Нарушения конкурента не делают ваши нарушения меньше." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последний спор, в котором вы или собеседник использовали «а сам-то». Отделите: каким был исходный аргумент? Он был верен? Лицемерие критика делало его неверным? Часто эти вещи вообще не связаны."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"You say smoking is harmful — but you smoke yourself!\" \"You criticize our actions, but you do the same things!\" \"Why take your advice about saving money when you spend recklessly yourself?\" Tu quoque is an appeal to the critic's hypocrisy instead of answering their argument." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Tu Quoque}}" } },
+        { "type": "subtitle", "props": { "text": "Tu Quoque · \"You Too\" · rhetorical fallacy · ad hominem class" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/tu_quoque.svg", "alt": "Person A points to a problem; person B turns the finger back at A — the argument remains unanswered" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Tu quoque (Latin for \"you too\") is a form of ad hominem: attacking the person instead of the argument. Rather than responding to criticism, the speaker points to the critic's inconsistency. The logic: \"your behavior contradicts your words, therefore your words are wrong.\" This doesn't work: a critic's hypocrisy doesn't make the criticism false.",
+              "\"Whataboutism\" is the political variant of tu quoque: \"But what about X?\" in response to criticism of Y. {{em:Redirecting to the opponent's behavior doesn't address the question about X — it only changes the subject.}} Soviet propaganda systematically used whataboutism: any criticism of Soviet practices was deflected by pointing to Western ones. Double standards are a real problem; tu quoque is an improper way to raise them.",
+              "Importantly: sometimes a critic's hypocrisy does matter — not as an answer to their argument, but as a separate question about credibility. These are two different questions: \"Are they right?\" and \"Are they consistent?\" An answer to the second doesn't negate the need to answer the first."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A critic's hypocrisy doesn't make the criticism false. An argument is evaluated on its own merits, not by the behavior of whoever makes it. Appealing to an opponent's inconsistency is not an answer to their argument."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a discussion about corporate ethics:",
+            "example_quote": "— Your company violated labor law in three countries. — And yours violated it in five! You have no right to criticize us.",
+            "recognition_signal": "Signal: \"look who's talking,\" \"but what about you,\" \"whatabout.\" Question: does appealing to the critic's behavior resolve the original problem? Five violations by the critic don't cancel your three — both things can be true simultaneously.",
+            "nuance_warning": "Don't confuse with a legitimate appeal to selective enforcement: \"Why do you prosecute us but not them?\" — this is a question about consistent rule application, not simple tu quoque. Double standards are a real problem. Tu quoque's problem is using them to dodge the original accusation."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Tu quoque is especially effective when the critic is genuinely hypocritical — this makes the appeal emotionally compelling. But emotional persuasiveness is not a logical response. Recognizing tu quoque, you can reply: \"Perhaps I'm inconsistent — and that's a separate conversation. But my argument isn't wrong because of it.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In politics", "example": "\"You criticize our economic policy — but things were even worse under you!\" Whataboutism is a standard tool in political debate. It shifts discussion from evaluating current actions to comparing with the past." },
+              { "label": "In family arguments", "example": "\"You say I spend too much — but you bought a more expensive car than mine!\" Both problems may be real. Tu quoque doesn't solve either — it just adds a defensive layer." },
+              { "label": "In business ethics", "example": "\"You're not one to lecture us — you have your own skeletons\" — the corporate version of tu quoque. A competitor's violations don't make yours smaller." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a recent argument where you or someone else used \"look who's talking.\" Separate out: what was the original argument? Was it valid? Did the critic's hypocrisy make it invalid? These things are usually entirely unconnected."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/tu_quoque" }]
+}

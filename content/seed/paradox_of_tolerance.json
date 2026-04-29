@@ -1,0 +1,138 @@
+{
+  "id": "paradox_of_tolerance",
+  "category": "paradoxes",
+  "release_number": 87,
+  "release_date": "2026-07-07",
+  "tags": ["popper", "tolerance", "democracy", "liberalism", "self_defeating"],
+  "difficulty": 3,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/paradox_of_tolerance.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Если общество полностью терпимо — в том числе к нетерпимым — нетерпимые в конечном счёте уничтожат терпимых. Значит, безграничная терпимость саморазрушительна. Но если ограничить терпимость — она уже не безгранична. Карл Поппер сформулировал этот парадокс в 1945 году. Он актуален как никогда." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:терпи}}мости" } },
+        { "type": "subtitle", "props": { "text": "Paradox of Tolerance · Карл Поппер · «Открытое общество» · 1945" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/paradox_of_tolerance.svg", "alt": "Круг терпимости с дырой в нём — за дырой тьма, внутри свет; рука с ограничительным жестом у края" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Поппер сформулировал парадокс в примечании к «Открытому обществу и его врагам»: «Если мы безгранично терпимы, даже к нетерпимым, если мы не готовы защищать терпимое общество от натиска нетерпимости, то терпимые будут уничтожены, а терпимость вместе с ними». Это не призыв к цензуре — это логический анализ условий существования открытого общества.",
+              "Поппер предлагал конкретный критерий: сначала — открытая дискуссия и рациональный аргумент. {{em:Право на ограничение нетерпимости возникает только тогда, когда нетерпимые отказываются от дискуссии и прибегают к силе или угрозе силой.}} Не идеи подлежат ограничению — насилие и прямые призывы к нему. Разница принципиальна.",
+              "Парадокс не имеет чистого решения, потому что граница между «нетерпимостью» и «меньшинством с непопулярным мнением» всегда спорна. Именно поэтому Поппер настаивал на институтах, а не на чьих-то личных суждениях. Демократические институты — суды, свободная пресса, разделение властей — должны проводить эту границу, а не доверять её одному человеку."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Безграничная терпимость саморазрушительна: она создаёт условия для собственного уничтожения. Открытое общество должно иметь право не терпеть нетерпимость — но только когда та отвергает разум и прибегает к силе."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Может ли полностью терпимое общество существовать долго?",
+            "hint": "Подумайте: что происходит с правилом «мы терпим всех», если в обществе появляется группа с правилом «мы не терпим никого»?",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Нет — если только не ограничить нетерпимость. Полная терпимость — самоотменяющее правило: оно должно применяться ко всем, включая тех, кто использует эту терпимость для её уничтожения. Поппер не говорил «запретите идеи» — он говорил «защитите институты от тех, кто хочет уничтожить саму возможность дискуссии». Демократия — это не самоубийственный пакт.",
+            "intuition_trap": "Интуиция говорит: «ограничить что-либо — значит нарушить принцип». Но Поппер показывает: принцип без самозащиты — не принцип, а механизм самоуничтожения. Правило «терпеть всех» превращается в правило «позволить уничтожить терпимость»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В модерации сообществ", "example": "Онлайн-платформы с нулевой модерацией быстро превращаются в пространства, где агрессивное меньшинство вытесняет остальных. Ограничения на разжигание ненависти — это парадокс Поппера в действии." },
+              { "label": "В политической философии", "example": "Дискуссия о границах свободы слова, запрете партий и деплатформинге прямо ссылается на Поппера. Разные стороны используют его аргумент для противоположных выводов." },
+              { "label": "В корпоративной культуре", "example": "Команда с «культурой терпимости ко всему» часто оказывается беспомощна перед одним токсичным участником. Толерантность к интолерантному поведению уничтожает безопасную среду." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей команде или окружении поведение, которое вы терпите из принципа? Спросите: терпимость к чему именно? К человеку — или к конкретному поведению? Поппер разграничивал людей и действия. Это разграничение практично."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "If a society is completely tolerant — including of the intolerant — the intolerant will eventually destroy the tolerant. So unlimited tolerance is self-defeating. But if you limit tolerance, it's no longer unlimited. Karl Popper formulated this paradox in 1945. It has never been more relevant." }
+        },
+        { "type": "title", "props": { "text": "The Paradox of {{accent:Tolerance}}" } },
+        { "type": "subtitle", "props": { "text": "Paradox of Tolerance · Karl Popper · The Open Society · 1945" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/paradox_of_tolerance.svg", "alt": "A circle of tolerance with a hole — darkness beyond the hole, light within; a restraining hand at the edge" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Popper formulated the paradox in a footnote to The Open Society and Its Enemies: \"If we are not prepared to defend a tolerant society against the onslaught of the intolerant, then the tolerant will be destroyed, and tolerance with them.\" This wasn't a call for censorship — it was a logical analysis of the conditions for an open society to exist.",
+              "Popper proposed a specific criterion: first, open discussion and rational argument. {{em:The right to restrict intolerance arises only when the intolerant reject discussion and resort to force or the threat of force.}} It's not ideas that should be restricted — it's violence and direct incitement to it. The distinction is fundamental.",
+              "The paradox has no clean solution, because the line between \"intolerance\" and \"a minority with an unpopular opinion\" is always contested. This is precisely why Popper insisted on institutions rather than any individual's judgment. Democratic institutions — courts, a free press, separation of powers — must draw this line, rather than entrusting it to one person."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Unlimited tolerance is self-defeating: it creates the conditions for its own destruction. An open society must have the right to not tolerate intolerance — but only when that intolerance rejects reason and resorts to force."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "Can a completely tolerant society survive long-term?",
+            "hint": "Consider: what happens to a rule of \"we tolerate everyone\" when a group appears that follows the rule \"we tolerate no one\"?",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "No — not without limiting intolerance. Complete tolerance is a self-canceling rule: it must apply to everyone, including those who use it to destroy it. Popper didn't say \"ban ideas\" — he said \"protect institutions from those who want to eliminate the very possibility of discussion.\" Democracy is not a suicide pact.",
+            "intuition_trap": "Intuition says: \"limiting anything violates the principle.\" But Popper shows: a principle without self-defense isn't a principle — it's a mechanism of self-destruction. The rule \"tolerate everyone\" becomes the rule \"permit the destruction of tolerance.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In community moderation", "example": "Online platforms with zero moderation quickly become spaces where an aggressive minority drives everyone else away. Rules against hate speech are Popper's paradox in action." },
+              { "label": "In political philosophy", "example": "Debates over free speech limits, party bans, and deplatforming explicitly reference Popper. Different sides use his argument to reach opposite conclusions." },
+              { "label": "In company culture", "example": "A team with a \"culture of tolerance for everything\" is often helpless against one toxic member. Tolerating intolerant behavior destroys the safe environment for everyone else." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there behavior in your team or circle that you tolerate out of principle? Ask yourself: tolerant of what exactly? Of the person — or of a specific behavior? Popper distinguished people from actions. That distinction is practical."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/paradox_of_tolerance" }]
+}

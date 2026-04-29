@@ -78,6 +78,36 @@ import unexpectedHang   from '@content/seed/unexpected_hanging.json';
 import aschConformity   from '@content/seed/asch_conformity.json';
 import pascalsWager     from '@content/seed/pascals_wager.json';
 import preMortem        from '@content/seed/pre_mortem.json';
+import optimismBias     from '@content/seed/optimism_bias.json';
+import teleporterPar    from '@content/seed/teleporter_paradox.json';
+import robbersCave      from '@content/seed/robbers_cave.json';
+import stPetersburg     from '@content/seed/st_petersburg_paradox.json';
+import chestertonsFence from '@content/seed/chestertons_fence.json';
+import falseEquiv       from '@content/seed/false_equivalence.json';
+import mansSearch       from '@content/seed/mans_search_for_meaning.json';
+import peakEndRule      from '@content/seed/peak_end_rule.json';
+import maxwellsDemon    from '@content/seed/maxwells_demon.json';
+import pygmalionEffect  from '@content/seed/pygmalion_effect.json';
+import paradoxTolerance from '@content/seed/paradox_of_tolerance.json';
+import parkinsonsLaw    from '@content/seed/parkinsons_law.json';
+import equivocation     from '@content/seed/equivocation.json';
+import rangeBook        from '@content/seed/range.json';
+import inGroupBias      from '@content/seed/in_group_bias.json';
+import utilityMonster   from '@content/seed/utility_monster.json';
+import learnedHelp      from '@content/seed/learned_helplessness.json';
+import ravensParadox    from '@content/seed/ravens_paradox.json';
+import lindyEffect      from '@content/seed/lindy_effect.json';
+import hastyGeneral     from '@content/seed/hasty_generalization.json';
+import zeroToOne        from '@content/seed/zero_to_one.json';
+import gamblersFallacy  from '@content/seed/gamblers_fallacy.json';
+import philZombie       from '@content/seed/philosophical_zombie.json';
+import bystanderEffect  from '@content/seed/bystander_effect.json';
+import condorcetPar     from '@content/seed/condorcets_paradox.json';
+import skinInGame       from '@content/seed/skin_in_the_game.json';
+import tuQuoque         from '@content/seed/tu_quoque.json';
+import obstacleWay      from '@content/seed/obstacle_is_the_way.json';
+import zeroRiskBias     from '@content/seed/zero_risk_bias.json';
+import swampman         from '@content/seed/swampman.json';
 
 // Все известные deep-карточки. Соглашение: id оканчивается на `_deep`,
 // привязка к parent — по prefix (вырезаем '_deep' из id).
@@ -104,6 +134,36 @@ export function resolveLevels(card) {
 // Сортировка по release_date — новейшие первыми. ContentService отдаёт
 // только release_date <= today, остальные показываются когда дата наступит.
 export const seedCards = [
+  swampman,           // 2026-07-26
+  zeroRiskBias,       // 2026-07-25
+  obstacleWay,        // 2026-07-24
+  tuQuoque,           // 2026-07-23
+  skinInGame,         // 2026-07-22
+  condorcetPar,       // 2026-07-21
+  bystanderEffect,    // 2026-07-20
+  philZombie,         // 2026-07-19
+  gamblersFallacy,    // 2026-07-18
+  zeroToOne,          // 2026-07-17
+  hastyGeneral,       // 2026-07-16
+  lindyEffect,        // 2026-07-15
+  ravensParadox,      // 2026-07-14
+  learnedHelp,        // 2026-07-13
+  utilityMonster,     // 2026-07-12
+  inGroupBias,        // 2026-07-11
+  rangeBook,          // 2026-07-10
+  equivocation,       // 2026-07-09
+  parkinsonsLaw,      // 2026-07-08
+  paradoxTolerance,   // 2026-07-07
+  pygmalionEffect,    // 2026-07-06
+  maxwellsDemon,      // 2026-07-05
+  peakEndRule,        // 2026-07-04
+  mansSearch,         // 2026-07-03
+  falseEquiv,         // 2026-07-02
+  chestertonsFence,   // 2026-07-01
+  stPetersburg,       // 2026-06-30
+  robbersCave,        // 2026-06-29
+  teleporterPar,      // 2026-06-28
+  optimismBias,       // 2026-06-27
   preMortem,          // 2026-06-26
   pascalsWager,       // 2026-06-25
   aschConformity,     // 2026-06-24

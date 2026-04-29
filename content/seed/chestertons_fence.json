@@ -1,0 +1,168 @@
+{
+  "id": "chestertons_fence",
+  "category": "mental_models",
+  "release_number": 81,
+  "release_date": "2026-07-01",
+  "tags": ["chesterton", "reform", "second_order_thinking", "understanding", "caution"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/chestertons_fence.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте: вы видите забор посреди дороги. Он кажется бессмысленным. Вы хотите его снести. Честертон говорит: не трогайте его, пока не поймёте, зачем он здесь. Тот, кто не понимает, зачем он стоит, не имеет права его сносить. Сначала — понять. Потом — решать." }
+        },
+        { "type": "title", "props": { "text": "Забор {{accent:Честертона}}" } },
+        { "type": "subtitle", "props": { "text": "Chesterton's Fence · Г.К. Честертон · «Суть» · 1929" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/chestertons_fence.svg", "alt": "Деревянный забор с вопросом «зачем?» над ним — рука с молотком остановлена" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Честертон сформулировал принцип как критику бездумного реформаторства. Любой закон, традиция или институт, который кажется нам бессмысленным, был когда-то создан ради конкретной цели. Если мы не понимаем этой цели — наша некомпетентность, а не бессмысленность самого установления. Реформировать то, что не понимаешь, — значит создавать неизвестные последствия.",
+              "Принцип применяется везде, где есть «устаревшие» правила. Технический долг в коде: тот странный условный оператор, который никто не понимает, — возможно, обходит редкий баг. {{em:Удаление «ненужного кода» без понимания его роли — один из главных источников регрессий в программировании.}} Корпоративные процессы: абсурдная бюрократия часто появилась после какого-то скандала или катастрофы.",
+              "Честертон не был против реформ — он был против реформ без понимания. Его правило: «Объясни мне, зачем это существует, и я готов обсуждать снос. Если не можешь объяснить — значит не готов сносить». Это не консерватизм, а методологическая осторожность."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Прежде чем отменять, изменять или убирать что-либо — поймите, зачем оно существует. Неспособность объяснить причину существования — признак недопонимания, а не бессмысленности самой вещи."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Новый руководитель видит странное правило: все запросы на серверы нужно согласовывать с тремя людьми. «Бюрократия!» Что делать?",
+            "setup": null,
+            "options": [
+              { "id": "remove", "text": "Убрать правило — оно замедляет работу", "is_wiser": false },
+              { "id": "understand", "text": "Сначала понять, почему оно появилось, — потом решать", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "хотят убрать правило сразу",
+              "explanation": "Правило могло появиться после инцидента с несанкционированным доступом, утечки данных или дорогостоящей ошибки конфигурации. Три подписи — это три точки проверки. Убрав их без понимания, вы убираете защиту от неизвестной вам угрозы. Честертон: сначала найдите людей, которые помнят, почему это правило появилось.",
+              "wisdom": "{{em:Непонимание — причина не сносить. Понимание — причина сносить.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Принцип Честертона не означает, что всё нужно сохранять. Он означает: понять сначала. Иногда вы поймёте — и всё равно снесёте, потому что причина устарела. Иногда поймёте — и оставите. Ключевое: нельзя принимать решение об изменении без понимания функции изменяемого."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В программировании", "example": "«Не трогай этот код, он работает». Легаси-код часто содержит неочевидную мудрость. Рефакторинг без понимания создаёт баги; понимание — создаёт лучший код." },
+              { "label": "В управлении", "example": "Новые CEO часто первые 100 дней «ломают» устоявшееся. Данные McKinsey показывают: быстрые масштабные изменения без диагностики чаще ухудшают показатели компании." },
+              { "label": "В медицине", "example": "Симптом — это «забор Честертона». Уничтожить симптом без понимания его причины (жаропонижающие при защитной горячке) — убрать защитный механизм." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей работе или жизни правило или практика, которая кажется вам бессмысленной? Прежде чем изменить — поговорите с тем, кто её помнит или создал. Возможно, смысл есть, просто невидимый снаружи."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine you see a fence in the middle of a road. It seems pointless. You want to tear it down. Chesterton says: don't touch it until you understand why it's there. The person who can't explain why the fence exists has no right to remove it. First — understand. Then — decide." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Chesterton's}} Fence" } },
+        { "type": "subtitle", "props": { "text": "Chesterton's Fence · G.K. Chesterton · The Thing · 1929" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/chestertons_fence.svg", "alt": "A wooden fence with a \"why?\" above it — a hand holding a hammer stopped mid-swing" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Chesterton formulated the principle as a critique of mindless reformism. Any law, tradition, or institution that seems pointless to us was once created for a specific purpose. If we don't understand that purpose — the fault is our incompetence, not the pointlessness of the institution. To reform what you don't understand is to create unknown consequences.",
+              "The principle applies everywhere there are \"outdated\" rules. Technical debt in code: that strange conditional nobody understands — it may be working around a rare bug. {{em:Deleting \"unnecessary code\" without understanding its role is one of the biggest sources of regressions in software development.}} Corporate processes: absurd bureaucracy often emerged after some scandal or disaster.",
+              "Chesterton wasn't against reform — he was against reform without understanding. His rule: \"Explain to me why this exists, and I'm ready to discuss tearing it down. If you can't explain — you're not ready to tear it down.\" This isn't conservatism — it's methodological caution."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Before abolishing, changing, or removing something — understand why it exists. Inability to explain its purpose is a sign of your misunderstanding, not of the thing's pointlessness."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A new manager sees a strange rule: all server requests require sign-off from three people. \"Bureaucracy!\" What to do?",
+            "setup": null,
+            "options": [
+              { "id": "remove", "text": "Remove the rule — it's slowing everything down", "is_wiser": false },
+              { "id": "understand", "text": "First understand why it appeared — then decide", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "want to remove the rule immediately",
+              "explanation": "The rule may have appeared after an unauthorized access incident, a data breach, or a costly configuration error. Three signatures are three verification checkpoints. Removing them without understanding removes protection against a threat you don't know about. Chesterton: first find the people who remember why the rule was created.",
+              "wisdom": "{{em:Not understanding is a reason not to remove. Understanding is a reason to remove.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Chesterton's principle doesn't mean preserving everything. It means: understand first. Sometimes you'll understand — and still remove it, because the reason is obsolete. Sometimes you'll understand — and keep it. The key: you can't make a change decision without understanding the function of what you're changing."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In programming", "example": "\"Don't touch that code — it works.\" Legacy code often contains non-obvious wisdom. Refactoring without understanding creates bugs; understanding creates better code." },
+              { "label": "In management", "example": "New CEOs often \"break\" established things in their first 100 days. McKinsey data shows: fast large-scale changes without diagnosis more often worsen company performance." },
+              { "label": "In medicine", "example": "A symptom is Chesterton's fence. Destroying the symptom without understanding its cause (antipyretics during protective fever) removes a defensive mechanism." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there a rule or practice in your work or life that seems pointless? Before changing it — talk to someone who remembers or created it. The meaning may exist and simply be invisible from the outside."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/chestertons_fence" }]
+}
