@@ -1,0 +1,196 @@
+{
+  "id": "straw_man",
+  "category": "rhetorical_fallacies",
+  "release_number": 34,
+  "release_date": "2026-05-15",
+  "tags": ["rhetoric", "fallacy", "argumentation", "logic"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/straw_man.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Риторическая ошибка · №1" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Вы предлагаете уменьшить финансирование одной из городских программ. Оппонент отвечает: «Значит, вы хотите бросить нуждающихся на произвол судьбы?» Это не ваша позиция — но спор теперь идёт именно об этом."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "Чучело {{accent:соломенного}} человека" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Straw Man Fallacy · Классическая риторика · описана с VI в. до н.э." }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/straw_man.svg",
+            "alt": "Фигура человека и её искажённая тень — разные по форме"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Приём прост: вместо того чтобы отвечать на реальный аргумент оппонента, его позицию упрощают, карикатуризируют или заменяют более слабой версией. Эту версию — «соломенного человека» — и опровергают. Побить соломенное чучело легко. Настоящий спор тем временем остался нетронутым.",
+              "«Вы выступаете за снижение налогов — значит, вы хотите уничтожить школы и больницы». «Вы против этой реформы — значит, вам нравится как есть?» Ни один из этих выводов не следует из исходной позиции. Но они переключают аудиторию: теперь защищаться приходится уже от искажённой версии своих слов.",
+              "Приём особенно эффективен там, где у аудитории нет времени или желания проверить, что именно было сказано на самом деле. Он работает на скорости восприятия: первое услышанное — то, за что цепляется память."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Соломенный человек заменяет реальную позицию оппонента слабой карикатурой — и атакует её вместо оригинала."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "Представьте дискуссию о рабочих часах в компании:",
+            "example_quote": "— Я думаю, нам стоит пересмотреть политику переработок.\n— То есть ты считаешь, что люди должны работать меньше и получать больше? Что никто не должен стараться?",
+            "recognition_signal": "Сигнал: когда в ответ на предложение вы слышите «то есть ты хочешь» с чем-то, чего вы точно не говорили — это почти всегда соломенный человек.",
+            "nuance_warning": "Иногда оппонент искренне неправильно понял вашу позицию. Сначала уточните — прежде чем обвинять в манипуляции."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Защита от соломенного человека парадоксальна: чем точнее вы объясняете свою реальную позицию, тем дольше остаётесь на поле оппонента — ведь именно это он и хотел. Иногда продуктивнее назвать приём вслух: {{em:«Это не то, что я сказал. Вот что я имел в виду»}} — и вернуться к реальному вопросу."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В политике",
+                "example": "Кандидат предлагает реформу судебной системы — оппонент говорит, что тот хочет «уничтожить правопорядок». Разрыв между предложением и интерпретацией — в несколько световых лет."
+              },
+              {
+                "label": "В переговорах",
+                "example": "«Я прошу о дополнительных ресурсах» → «Ты считаешь, что мы плохо управляем бюджетом?» Реальный запрос подменён атакой на воображаемую позицию."
+              },
+              {
+                "label": "В семейных разговорах",
+                "example": "«Мне кажется, мы редко проводим время вместе» → «То есть ты думаешь, что я плохой партнёр?». Тот же механизм — только в частном разговоре."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующий раз, когда вам начнут возражать, спросите себя: они отвечают на то, что я сказал, или на то, что им удобнее опровергать? Это разные вещи."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Rhetorical Fallacy · №1" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "You suggest trimming one government program's budget. Your opponent responds: \"So you want to abandon the most vulnerable people in this country?\" That's not your position — but now the argument is about that."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "The {{accent:Straw}} Man" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Straw Man Fallacy · Classical Rhetoric · documented since the 6th century BC" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/straw_man.svg",
+            "alt": "A figure and its distorted shadow — different in shape"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The move is straightforward: instead of addressing what your opponent actually said, you replace their position with a simpler, weaker, or more extreme version — then attack that. Beating a straw man is easy. The real argument goes untouched.",
+              "\"You support cutting defense spending — so you want the country left defenseless?\" \"You're against this regulation — so you're fine with people getting hurt?\" Neither conclusion follows. But they redirect the audience: suddenly you're defending a position you never took.",
+              "The tactic is most effective when the audience has no time or interest in checking the original source. It works at the speed of first impressions: what gets heard first is what memory holds on to."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A straw man replaces your opponent's actual position with a weaker caricature — then defeats the caricature instead of the argument."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "Imagine a workplace discussion about overtime policy:",
+            "example_quote": "— I think we should reconsider how we handle mandatory overtime.\n— So you're saying people should work less and get paid more? That no one should have to put in effort anymore?",
+            "recognition_signal": "The signal: when someone responds to your proposal with \"so you're saying...\" and then something you definitely didn't say — that's almost always a straw man.",
+            "nuance_warning": "Sometimes people genuinely misunderstand your position. Clarify before accusing them of bad faith."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Defending against a straw man can backfire: the longer you spend clarifying what you actually meant, the longer you stay on your opponent's terrain. Sometimes it's more effective to name the move aloud: {{em:\"That's not what I said. Here's what I mean\"}} — and return to the real question."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              {
+                "label": "In politics",
+                "example": "A candidate proposes judiciary reform — an opponent says they want to \"dismantle law and order.\" The gap between the proposal and the interpretation is enormous."
+              },
+              {
+                "label": "In negotiations",
+                "example": "\"I'm asking for more resources\" → \"You think we're mismanaging the budget?\" The actual request has been replaced by an attack on an imagined position."
+              },
+              {
+                "label": "At home",
+                "example": "\"I feel like we don't spend much time together\" → \"So you think I'm a bad partner?\" Same mechanism, private context."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Next time someone pushes back on something you said, ask: are they responding to what I actually said, or to something easier to argue against? Those are different conversations."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/straw_man" }]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "cognitive_dissonance",
+  "category": "psychology_experiments",
+  "release_number": 38,
+  "release_date": "2026-05-19",
+  "tags": ["festinger", "belief", "motivation", "self_justification", "psychology"],
+  "difficulty": 2,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/cognitive_dissonance.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №2" } },
+        {
+          "type": "hook",
+          "props": { "text": "Час скучной монотонной работы. После — двум группам предложили рассказать следующему участнику, что задание «очень интересное». Одних заплатили двадцать долларов. Других — один. Группа за доллар искренне поверила в интересность задания. Группа за двадцать — нет." }
+        },
+        { "type": "title", "props": { "text": "Когнитивный {{accent:диссонанс}}" } },
+        { "type": "subtitle", "props": { "text": "Cognitive Dissonance · Leon Festinger & J. M. Carlsmith · Stanford, 1959" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/cognitive_dissonance.svg", "alt": "Две стрелки, направленные в противоположные стороны внутри контура головы" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Теория Леона Фестингера (1957) гласит: когда человек держит в голове два противоречивых убеждения или когда его действия расходятся с убеждениями, он испытывает дискомфорт — диссонанс. И стремится его устранить. Проблема: устранение чаще всего происходит не через изменение поведения, а через изменение убеждений.",
+              "Эксперимент Фестингера и Карлсмита объяснил парадокс. Тот, кто получил 20 долларов, имел внешнее оправдание своей лжи: деньги. Диссонанса почти не возникало. Тот, кто получил 1 доллар, не мог оправдать ложь деньгами — слишком мало. Его мозг выбрал другой выход: {{em:убедил себя, что задание действительно было интересным}}. Иначе он оказывался лжецом за бесценок.",
+              "Это явление объясняет поведение, которое иначе выглядит нелогично. Человек, купивший дорогой, но неудачный продукт, начинает активнее его защищать. Солдат, прошедший тяжёлую подготовку, ценит свой отряд сильнее. Студент, подготовившийся к экзамену, который не состоялся, переоценивает важность пропущенного материала."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда действия расходятся с убеждениями, мозг чаще меняет убеждения, а не действия. Это позволяет сохранить цельное ощущение себя — но за счёт точности суждений."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы потратили полгода на проект, который, как вам теперь ясно, не работает. Как вы объясняете это себе?",
+            "setup": null,
+            "options": [
+              {
+                "id": "justify",
+                "text": "«Он не такой уж плохой, просто нужно немного доработать»",
+                "is_wiser": false
+              },
+              {
+                "id": "accept",
+                "text": "«Это был важный опыт — и я его завершаю, чтобы двигаться дальше»",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "оправдывают проект",
+              "explanation": "Первый ответ — классическое устранение диссонанса: «я потратил столько времени» → «значит, оно того стоило». Второй принимает диссонанс и разрешает его честным путём. Разница в долгосрочных последствиях огромна.",
+              "wisdom": "{{em:Самооправдание — не ложь самому себе. Это правда, которую мозг выстраивает, чтобы не разрушить ощущение целостности.}} — Эллиот Аронсон",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2019",
+            "text": "Кризис воспроизводимости 2010-х затронул и эксперименты с диссонансом. Ряд классических эффектов воспроизвёлся с трудом при более строгом контроле. Тем не менее базовый механизм — рационализация поведения постфактум — подтверждён многократно в разных дизайнах. Современные нейронаучные исследования показывают, что при обнаружении противоречий активируются зоны мозга, связанные с дискомфортом, и последующее изменение установок снижает эту активацию.",
+            "sources": [
+              {
+                "title": "Cognitive Dissonance: Reexamining a Pivotal Theory in Psychology",
+                "authors": "Eddie Harmon-Jones & Cindy Harmon-Jones",
+                "year": "2019"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В потреблении", "example": "Купили дорогой гаджет, который оказался не нужным — и начали активнее убеждать других в его ценности. Это диссонанс, а не энтузиазм." },
+              { "label": "В политике", "example": "Сторонник политика, пойманного на ошибке, не меняет поддержку — он меняет интерпретацию ошибки. Диссонанс устраняется через изменение реальности, а не поведения." },
+              { "label": "В отношениях", "example": "«Я столько вложил в эти отношения» становится аргументом в пользу их продолжения — независимо от текущего качества. Это sunk cost плюс диссонанс." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните убеждение, которое вы укрепили после какого-то действия, а не до него. Возможно, это был не вывод из опыта, а самооправдание. Можете ли вы удержать оба взгляда одновременно?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №2" } },
+        {
+          "type": "hook",
+          "props": { "text": "One hour of tedious, repetitive work. Afterwards, participants were asked to tell the next person that the task was \"really enjoyable.\" One group was paid twenty dollars. Another was paid one. The one-dollar group genuinely came to believe the task was interesting. The twenty-dollar group didn't." }
+        },
+        { "type": "title", "props": { "text": "Cognitive {{accent:Dissonance}}" } },
+        { "type": "subtitle", "props": { "text": "Cognitive Dissonance · Leon Festinger & J. M. Carlsmith · Stanford, 1959" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/cognitive_dissonance.svg", "alt": "Two arrows pointing in opposite directions inside a head outline" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Leon Festinger's 1957 theory: when a person holds two contradictory beliefs — or when their actions conflict with their beliefs — they experience discomfort. And they work to resolve it. The problem is that resolution usually happens not by changing behavior, but by changing beliefs.",
+              "Festinger and Carlsmith's experiment explained the paradox. The person paid $20 had an external justification for lying: the money. Little dissonance. The person paid $1 couldn't justify the lie financially — too small. Their brain chose a different resolution: {{em:it convinced itself the task actually had been interesting.}} Otherwise they were a liar for almost nothing.",
+              "This explains behavior that otherwise looks irrational. Someone who bought an expensive, disappointing product becomes its loudest advocate. A soldier who survived brutal training values their unit more intensely. A student who studied hard for an exam that was cancelled overestimates how important the missed material was."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When actions and beliefs conflict, the brain more often changes the beliefs than the actions. This preserves a sense of coherence — at the cost of accuracy."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You've spent six months on a project you now clearly see isn't working. How do you explain this to yourself?",
+            "setup": null,
+            "options": [
+              {
+                "id": "justify",
+                "text": "\"It's not that bad — it just needs a bit more work\"",
+                "is_wiser": false
+              },
+              {
+                "id": "accept",
+                "text": "\"It was important experience — and I'm closing it to move forward\"",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "rationalize the project",
+              "explanation": "The first answer is classic dissonance reduction: \"I spent so much time\" → \"therefore it must have been worth it.\" The second accepts the dissonance and resolves it honestly. The long-term difference is significant.",
+              "wisdom": "{{em:Self-justification is not lying to yourself. It's the truth the mind constructs to preserve a sense of wholeness.}} — Elliot Aronson",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2019",
+            "text": "The replication crisis of the 2010s touched cognitive dissonance research too. Some classic effects proved harder to reproduce under stricter controls. But the core mechanism — post-hoc rationalization of behavior — has been confirmed across many different study designs. Modern neuroscience research shows that detected contradictions activate brain regions linked to discomfort, and subsequent attitude change reduces that activation.",
+            "sources": [
+              {
+                "title": "Cognitive Dissonance: Reexamining a Pivotal Theory in Psychology",
+                "authors": "Eddie Harmon-Jones & Cindy Harmon-Jones",
+                "year": "2019"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In consumer behavior", "example": "You bought an expensive gadget you don't actually use — and then became its most vocal advocate. That's dissonance reduction, not enthusiasm." },
+              { "label": "In politics", "example": "A supporter whose favored politician makes an obvious mistake doesn't change their support — they change their interpretation of the mistake. Reality is adjusted, not behavior." },
+              { "label": "In relationships", "example": "\"I've invested so much in this relationship\" becomes an argument for staying — regardless of the current quality. Sunk cost meets cognitive dissonance." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a belief you strengthened after taking an action, rather than before it. It may have been rationalization, not a conclusion from experience. Can you hold both views at once?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/cognitive_dissonance" }]
+}

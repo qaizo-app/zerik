@@ -1,0 +1,50 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#14100C"/>
+  <!-- Ground line -->
+  <line x1="30" y1="220" x2="370" y2="220" stroke="#2A241E" stroke-width="1"/>
+  <!-- Figures all moving right (8 figures, getting denser) -->
+  <!-- Figure 1 -->
+  <ellipse cx="55" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="47" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="51" y1="200" x2="47" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="59" y1="200" x2="63" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.5"/>
+  <!-- Arrow on figure 1 (small) -->
+  <line x1="65" y1="178" x2="80" y2="178" stroke="#E89647" stroke-width="1" stroke-opacity="0.3"/>
+  <!-- Figure 2 -->
+  <ellipse cx="100" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1" stroke-opacity="0.6"/>
+  <rect x="92" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="96" y1="200" x2="92" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="104" y1="200" x2="108" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Figure 3 -->
+  <ellipse cx="142" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1.2" stroke-opacity="0.7"/>
+  <rect x="134" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="138" y1="200" x2="134" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.7"/>
+  <line x1="146" y1="200" x2="150" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.7"/>
+  <!-- Figure 4 -->
+  <ellipse cx="183" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1.2" stroke-opacity="0.75"/>
+  <rect x="175" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1.2" stroke-opacity="0.75"/>
+  <line x1="179" y1="200" x2="175" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.75"/>
+  <line x1="187" y1="200" x2="191" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.75"/>
+  <!-- Figure 5 -->
+  <ellipse cx="222" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1.5" stroke-opacity="0.8"/>
+  <rect x="214" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1.5" stroke-opacity="0.8"/>
+  <line x1="218" y1="200" x2="214" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.8"/>
+  <line x1="226" y1="200" x2="230" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.8"/>
+  <!-- Figure 6 -->
+  <ellipse cx="260" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1.5" stroke-opacity="0.85"/>
+  <rect x="252" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1.5" stroke-opacity="0.85"/>
+  <line x1="256" y1="200" x2="252" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.85"/>
+  <line x1="264" y1="200" x2="268" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.85"/>
+  <!-- Figure 7 (laggard, looking back) -->
+  <ellipse cx="298" cy="165" rx="9" ry="9" fill="#251D15" stroke="#E89647" stroke-width="1.5" stroke-opacity="0.9"/>
+  <rect x="290" y="175" width="16" height="25" rx="3" fill="#251D15" stroke="#E89647" stroke-width="1.5" stroke-opacity="0.9"/>
+  <line x1="294" y1="200" x2="290" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.9"/>
+  <line x1="302" y1="200" x2="306" y2="220" stroke="#E89647" stroke-width="1" stroke-opacity="0.9"/>
+  <!-- Large arrow showing direction -->
+  <line x1="50" y1="245" x2="340" y2="245" stroke="#E89647" stroke-width="2" stroke-opacity="0.5"/>
+  <polygon points="335,240 348,245 335,250" fill="#E89647" fill-opacity="0.5"/>
+  <!-- "все туда" label -->
+  <text x="190" y="265" text-anchor="middle" font-family="monospace" font-size="9" fill="#E89647" fill-opacity="0.5">все туда</text>
+  <!-- Question mark figure (last one, standing still) -->
+  <text x="335" y="160" font-family="monospace" font-size="22" fill="#E89647" fill-opacity="0.3">?</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#15110A"/>
+  <!-- Ground line -->
+  <line x1="40" y1="230" x2="360" y2="230" stroke="#43381F" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Real figure (left, precise) -->
+  <ellipse cx="130" cy="100" rx="16" ry="16" fill="#282113" stroke="#FBBF24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <rect x="118" y="117" width="24" height="50" rx="4" fill="#282113" stroke="#FBBF24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <!-- Real figure legs -->
+  <line x1="124" y1="167" x2="118" y2="230" stroke="#FBBF24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="136" y1="167" x2="142" y2="230" stroke="#FBBF24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <!-- Real figure arms -->
+  <line x1="118" y1="130" x2="96" y2="155" stroke="#FBBF24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="142" y1="130" x2="164" y2="155" stroke="#FBBF24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <!-- "Original" label -->
+  <text x="130" y="250" text-anchor="middle" font-family="monospace" font-size="8" fill="#FBBF24" fill-opacity="0.7">оригинал</text>
+  <!-- Shadow / distorted straw man (right, larger and exaggerated) -->
+  <!-- Shadow is larger and more monstrous -->
+  <ellipse cx="280" cy="88" rx="28" ry="28" fill="#43381F" fill-opacity="0.5" stroke="#FBBF24" stroke-width="0.6" stroke-opacity="0.3"/>
+  <rect x="255" y="116" width="50" height="68" rx="2" fill="#43381F" fill-opacity="0.5" stroke="#FBBF24" stroke-width="0.6" stroke-opacity="0.3"/>
+  <!-- Distorted legs (spread wide) -->
+  <line x1="265" y1="184" x2="240" y2="230" stroke="#FBBF24" stroke-width="0.8" stroke-opacity="0.3"/>
+  <line x1="295" y1="184" x2="320" y2="230" stroke="#FBBF24" stroke-width="0.8" stroke-opacity="0.3"/>
+  <!-- Distorted arms (raised threateningly) -->
+  <line x1="255" y1="135" x2="215" y2="108" stroke="#FBBF24" stroke-width="0.8" stroke-opacity="0.3"/>
+  <line x1="305" y1="135" x2="345" y2="108" stroke="#FBBF24" stroke-width="0.8" stroke-opacity="0.3"/>
+  <!-- "Distorted" label -->
+  <text x="280" y="250" text-anchor="middle" font-family="monospace" font-size="8" fill="#FBBF24" fill-opacity="0.4">искажение</text>
+  <!-- Arrow from real to shadow -->
+  <path d="M 155 140 Q 200 120 245 140" stroke="#FBBF24" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="4 3" fill="none"/>
+  <polygon points="242,136 248,143 254,136" fill="#FBBF24" fill-opacity="0.5"/>
+</svg>

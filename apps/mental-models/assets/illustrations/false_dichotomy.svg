@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFFBEB"/>
+
+  <!-- Road stem -->
+  <path d="M200 260 L200 180" stroke="#D1D5DB" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Left fork (visible path) -->
+  <path d="M200 180 Q160 150 100 120" stroke="#D1D5DB" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Right fork (visible path) -->
+  <path d="M200 180 Q240 150 300 120" stroke="#D1D5DB" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Hidden third path (faded, going straight/up) -->
+  <path d="M200 180 L200 90" stroke="#E5E7EB" stroke-width="10" stroke-dasharray="8 6" stroke-linecap="round"/>
+
+  <!-- Left path label -->
+  <rect x="55" y="85" width="80" height="28" rx="6" fill="#FBBF24" opacity="0.9"/>
+  <text x="95" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#78350F">Вариант A</text>
+
+  <!-- Right path label -->
+  <rect x="265" y="85" width="80" height="28" rx="6" fill="#FBBF24" opacity="0.9"/>
+  <text x="305" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#78350F">Вариант B</text>
+
+  <!-- Hidden path label — faded -->
+  <rect x="155" y="52" width="90" height="28" rx="6" fill="#F3F4F6" opacity="0.85"/>
+  <text x="200" y="71" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#9CA3AF">и другие...</text>
+
+  <!-- "OR" divider between A and B -->
+  <text x="200" y="168" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#92400E">или</text>
+
+  <!-- Standing figure at the fork bottom -->
+  <circle cx="200" cy="243" r="10" fill="#374151"/>
+  <line x1="200" y1="253" x2="200" y2="275" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+  <line x1="185" y1="262" x2="200" y2="258" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="215" y1="262" x2="200" y2="258" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="193" y1="275" x2="200" y2="290" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="207" y1="275" x2="200" y2="290" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+</svg>

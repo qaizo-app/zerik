@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#10130E"/>
+  <!-- Axes -->
+  <line x1="60" y1="220" x2="360" y2="220" stroke="#333B26" stroke-width="1"/>
+  <line x1="60" y1="60" x2="60" y2="220" stroke="#333B26" stroke-width="1"/>
+  <!-- Fragile line (red, drops and stays down) -->
+  <polyline points="60,130 120,130 160,185 200,200 260,210 320,215" stroke="#C4614F" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-dasharray="4 3"/>
+  <!-- Robust line (flat) -->
+  <polyline points="60,130 320,130" stroke="#6B6A56" stroke-width="1" stroke-opacity="0.5" fill="none" stroke-dasharray="2 4"/>
+  <!-- Antifragile line (dips, then rises higher) - main focus -->
+  <path d="M 60 130 C 100 130 110 130 140 155 C 160 170 170 175 190 170 C 220 160 260 120 300 90 C 320 78 330 72 340 68" stroke="#A3B18A" stroke-width="2.5" fill="none"/>
+  <!-- Shaded area under antifragile rise -->
+  <path d="M 190 170 C 220 160 260 120 300 90 C 320 78 330 72 340 68 L 340 220 L 190 220 Z" fill="#A3B18A" fill-opacity="0.07"/>
+  <!-- Disruption marker -->
+  <line x1="140" y1="60" x2="140" y2="220" stroke="#A3B18A" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+  <text x="143" y="80" font-family="monospace" font-size="8" fill="#A3B18A" fill-opacity="0.6">стресс</text>
+  <!-- Labels on right -->
+  <text x="345" y="72" font-family="monospace" font-size="8" fill="#A3B18A" fill-opacity="0.9">антихрупкое</text>
+  <text x="325" y="132" font-family="monospace" font-size="8" fill="#6B6A56" fill-opacity="0.7">устойчивое</text>
+  <text x="325" y="213" font-family="monospace" font-size="8" fill="#C4614F" fill-opacity="0.6">хрупкое</text>
+  <!-- Arrow up on antifragile end -->
+  <line x1="340" y1="68" x2="340" y2="52" stroke="#A3B18A" stroke-width="1.5" stroke-opacity="0.7"/>
+  <polygon points="336,56 340,46 344,56" fill="#A3B18A" fill-opacity="0.7"/>
+</svg>

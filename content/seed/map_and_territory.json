@@ -1,0 +1,176 @@
+{
+  "id": "map_and_territory",
+  "category": "mental_models",
+  "release_number": 42,
+  "release_date": "2026-05-23",
+  "tags": ["korzybski", "mental_models", "perception", "epistemology", "decision_making"],
+  "difficulty": 2,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/map_and_territory.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "Карта Лондонского метро не отражает реальные расстояния между станциями. Она создавалась для навигации, а не для точности. Когда пассажиры идут пешком, опираясь на эту карту, они удивляются: «Почему так далеко?» Карта их обманула — хотя она никогда не обещала правды о расстояниях." }
+        },
+        { "type": "title", "props": { "text": "Карта — это не {{accent:территория}}" } },
+        { "type": "subtitle", "props": { "text": "The Map is Not the Territory · Alfred Korzybski · 1931" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/map_and_territory.svg", "alt": "Схематичная карта слева и органичный ландшафт справа — одно и то же место" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Альфред Коржибски сформулировал принцип в 1931 году: «Карта — это не территория». Ментальные модели, которые мы строим о мире, — не сам мир. Они упрощают, отбирают информацию, игнорируют детали. Это не дефект — это функция: мозг не может обработать реальность целиком, поэтому создаёт карты. Проблема начинается тогда, когда карту принимают за саму территорию.",
+              "Каждое убеждение — карта. Каждый план — карта. Каждая бизнес-модель — карта. Карты полезны и необходимы. Но {{em:все карты устаревают}}: территория меняется, карта — нет. Карты содержат предубеждения их создателей. Карты игнорируют то, что неудобно картировать. И самое важное: ошибка в карте — это не ошибка в реальности, но действия по ошибочной карте — вполне реальная проблема.",
+              "Чарли Мангер переформулировал принцип прикладнее: «Все модели ошибаются, но некоторые полезны». Задача не в том, чтобы найти идеальную карту — её нет. Задача — знать, для чего эта карта сделана, где она точна, а где её точность заканчивается."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Ваша модель реальности — карта, а не сама реальность. Чем лучше вы знаете ограничения своей карты, тем лучше вы пользуетесь ею."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Ваша компания провела исследование рынка. Результаты говорят, что новый продукт не нужен. Первые клиенты хотят его покупать. Чему вы верите?",
+            "setup": null,
+            "options": [
+              {
+                "id": "research",
+                "text": "Исследованию — это системный взгляд, а не единичные случаи",
+                "is_wiser": false
+              },
+              {
+                "id": "customers",
+                "text": "Клиентам — реальное поведение важнее модели поведения",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "доверяют исследованию",
+              "explanation": "Исследование рынка — карта. Реальные покупки первых клиентов — территория. Карта может быть полезна, но когда она расходится с территорией, обновлять нужно карту, а не игнорировать территорию. Многие из самых успешных продуктов создавались вопреки исследованиям.",
+              "wisdom": "{{em:Когда карта и территория расходятся — верьте территории.}} — общий принцип в естественных науках",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Принцип не означает «никогда не доверяй моделям». Модели необходимы — без них невозможно действовать в сложном мире. Ловушка в другом: принятие своей карты за единственно верную. Особенно опасны «невидимые» карты — убеждения, которые мы считаем фактами, а не интерпретациями."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В стратегии", "example": "Бизнес-план — карта будущего. Отличные планы рушатся, когда территория оказывается другой. Ценится не план, а умение обновлять карту по мере движения." },
+              { "label": "В отношениях", "example": "«Я знаю, что он думает» — это карта другого человека. Точность этой карты редко проверяется напрямую — и часто оказывается ошибочной." },
+              { "label": "В науке", "example": "Каждая теория — карта. Ньютоновская механика работает прекрасно для большинства задач. Она устаревает вблизи скорости света и при квантовых масштабах. Знание её границ — часть образования физика." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одну свою убеждённость о человеке, ситуации или рынке. Спросите: это факт или моя карта? Когда последний раз я проверял её по территории — реальным поведением, реальными данными, реальным разговором?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "The London Underground map doesn't reflect actual distances between stations. It was designed for navigation, not accuracy. When passengers walk between stops following the map, they're often surprised: \"Why is it so far?\" The map misled them — even though it never claimed to be truthful about distances." }
+        },
+        { "type": "title", "props": { "text": "The Map Is Not the {{accent:Territory}}" } },
+        { "type": "subtitle", "props": { "text": "The Map is Not the Territory · Alfred Korzybski · 1931" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/map_and_territory.svg", "alt": "A schematic map on the left and an organic landscape on the right — the same place" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Alfred Korzybski formulated the principle in 1931: \"The map is not the territory.\" The mental models we build of the world are not the world itself. They simplify, select, and omit. This isn't a flaw — it's the function. The brain can't process reality in full, so it makes maps. The problem starts when the map is mistaken for the territory.",
+              "Every belief is a map. Every plan is a map. Every business model is a map. Maps are useful and necessary. But {{em:all maps go stale}}: the territory changes, the map doesn't. Maps carry the biases of whoever drew them. Maps ignore whatever is inconvenient to map. And most importantly: an error in the map isn't an error in reality — but acting on a faulty map produces real-world consequences.",
+              "Charlie Munger restated the principle practically: \"All models are wrong, but some are useful.\" The goal isn't to find a perfect map — there isn't one. The goal is to know what the map was built for, where it's accurate, and where its accuracy ends."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Your model of reality is a map — not reality itself. The better you know your map's limitations, the better you can use it."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your company ran market research. The results say the new product isn't needed. Early customers want to buy it. Which do you trust?",
+            "setup": null,
+            "options": [
+              { "id": "research", "text": "The research — it's a systematic view, not a handful of cases", "is_wiser": false },
+              { "id": "customers", "text": "The customers — real behavior matters more than modeled behavior", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "trust the research",
+              "explanation": "Market research is a map. Real purchases by early customers are the territory. When map and territory conflict, update the map — don't dismiss the territory. Many of the most successful products were built against research findings.",
+              "wisdom": "{{em:When the map and territory disagree — trust the territory.}} — a general principle in the natural sciences",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The principle doesn't mean \"never trust models.\" Models are necessary — you can't act in a complex world without them. The trap is different: treating your map as the only correct one. Especially dangerous are \"invisible\" maps — beliefs you treat as facts rather than interpretations."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In strategy", "example": "A business plan is a map of the future. Great plans collapse when the territory turns out different. What's valued isn't the plan — it's the ability to update the map as you move." },
+              { "label": "In relationships", "example": "\"I know what he's thinking\" is a map of another person. The accuracy of that map is rarely verified directly — and often proves wrong." },
+              { "label": "In science", "example": "Every theory is a map. Newtonian mechanics works excellently for most purposes. It breaks near the speed of light and at quantum scales. Knowing its limits is part of a physicist's education." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one conviction you hold about a person, situation, or market. Ask: is this a fact or my map? When did I last check it against the territory — real behavior, real data, a real conversation?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/map_and_territory" }]
+}

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#0B0E1A"/>
+  <!-- Growing heap of dots from left to right -->
+  <!-- Column 1: 1 dot -->
+  <circle cx="60" cy="210" r="4" fill="#6366F1" fill-opacity="0.9"/>
+  <!-- Column 2: 2 dots -->
+  <circle cx="100" cy="210" r="4" fill="#6366F1" fill-opacity="0.85"/>
+  <circle cx="100" cy="198" r="4" fill="#6366F1" fill-opacity="0.8"/>
+  <!-- Column 3: 3 dots -->
+  <circle cx="140" cy="210" r="4" fill="#6366F1" fill-opacity="0.8"/>
+  <circle cx="140" cy="198" r="4" fill="#6366F1" fill-opacity="0.75"/>
+  <circle cx="140" cy="186" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <!-- Column 4: 6 dots (2 wide) -->
+  <circle cx="178" cy="210" r="4" fill="#6366F1" fill-opacity="0.75"/>
+  <circle cx="190" cy="210" r="4" fill="#6366F1" fill-opacity="0.75"/>
+  <circle cx="178" cy="198" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="190" cy="198" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="178" cy="186" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <circle cx="190" cy="186" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <!-- Column 5: larger heap -->
+  <circle cx="225" cy="210" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="237" cy="210" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="249" cy="210" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="225" cy="198" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <circle cx="237" cy="198" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <circle cx="249" cy="198" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <circle cx="225" cy="186" r="4" fill="#6366F1" fill-opacity="0.6"/>
+  <circle cx="237" cy="186" r="4" fill="#6366F1" fill-opacity="0.6"/>
+  <circle cx="237" cy="174" r="4" fill="#6366F1" fill-opacity="0.55"/>
+  <!-- Large heap -->
+  <circle cx="298" cy="210" r="4" fill="#6366F1" fill-opacity="0.85"/>
+  <circle cx="310" cy="210" r="4" fill="#6366F1" fill-opacity="0.85"/>
+  <circle cx="322" cy="210" r="4" fill="#6366F1" fill-opacity="0.85"/>
+  <circle cx="334" cy="210" r="4" fill="#6366F1" fill-opacity="0.85"/>
+  <circle cx="298" cy="198" r="4" fill="#6366F1" fill-opacity="0.8"/>
+  <circle cx="310" cy="198" r="4" fill="#6366F1" fill-opacity="0.8"/>
+  <circle cx="322" cy="198" r="4" fill="#6366F1" fill-opacity="0.8"/>
+  <circle cx="334" cy="198" r="4" fill="#6366F1" fill-opacity="0.8"/>
+  <circle cx="298" cy="186" r="4" fill="#6366F1" fill-opacity="0.75"/>
+  <circle cx="310" cy="186" r="4" fill="#6366F1" fill-opacity="0.75"/>
+  <circle cx="322" cy="186" r="4" fill="#6366F1" fill-opacity="0.75"/>
+  <circle cx="304" cy="174" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="316" cy="174" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="328" cy="174" r="4" fill="#6366F1" fill-opacity="0.7"/>
+  <circle cx="310" cy="162" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <circle cx="322" cy="162" r="4" fill="#6366F1" fill-opacity="0.65"/>
+  <circle cx="316" cy="150" r="4" fill="#6366F1" fill-opacity="0.6"/>
+  <!-- Baseline -->
+  <line x1="40" y1="222" x2="360" y2="222" stroke="#2F3858" stroke-width="1"/>
+  <!-- Question mark in the middle -->
+  <text x="200" y="260" text-anchor="middle" font-family="monospace" font-size="11" fill="#6366F1" fill-opacity="0.5">когда это стало кучей?</text>
+  <!-- Labels -->
+  <text x="60" y="240" text-anchor="middle" font-family="monospace" font-size="8" fill="#5C6478">1</text>
+  <text x="316" y="240" text-anchor="middle" font-family="monospace" font-size="8" fill="#6366F1" fill-opacity="0.7">N</text>
+</svg>

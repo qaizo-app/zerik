@@ -1,0 +1,190 @@
+{
+  "id": "antifragile",
+  "category": "book_idea",
+  "release_number": 37,
+  "release_date": "2026-05-18",
+  "tags": ["taleb", "resilience", "volatility", "risk", "systems"],
+  "difficulty": 3,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/antifragile.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №1" } },
+        {
+          "type": "hook",
+          "props": { "text": "Кость становится крепче после микротрещин. Иммунитет усиливается после встречи с патогеном. Некоторые системы не просто переносят стресс — они от него выигрывают. У этого явления не было названия, пока Нассим Талеб не придумал одно." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Антихрупкость}}" } },
+        { "type": "subtitle", "props": { "text": "Antifragile · Nassim Nicholas Taleb · 2012" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/antifragile.svg", "alt": "Линия графика, которая падает, а затем поднимается выше исходной точки" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Ветер гасит свечу и раздувает огонь. То же самое — с неопределённостью, беспорядком и стрессом: они гасят слабое и усиливают сильное.",
+            "book_title": "Антихрупкость. Как извлечь выгоду из хаоса",
+            "author": "Nassim Nicholas Taleb",
+            "year": "2012",
+            "application": "Спросите себя: этот стресс меня ломает или обучает? Это различие — ключ к тому, как выстраивать жизнь и бизнес."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Талеб вводит три категории. Хрупкое: то, что ломается от стресса (фарфоровая чашка, переоптимизированная компания). Устойчивое: то, что остаётся прежним под нагрузкой (камень, бюрократия). Антихрупкое: то, что становится лучше от встряски — мышцы, иммунная система, некоторые финансовые стратегии, живые языки.",
+              "Центральный тезис книги: современный мир одержим устойчивостью — стабильностью, предсказуемостью, нулевым риском. Но попытки полностью убрать волатильность и стресс из системы делают её хрупкой. {{em:Лесные пожары, которые не дают разгораться маленьким, создают условия для катастрофического большого}}. Дети, которых оберегают от любого падения, не учатся падать.",
+              "Практика антихрупкости — это не поиск риска ради риска. Это ассиметричность: маленькие регулярные стрессы, которые обучают, при защите от катастрофических потерь. В портфеле — «штанга»: 90% в сверхнадёжных активах, 10% в крайне рискованных с ограниченными потерями. В жизни — аналогично."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Антихрупкая система не просто выдерживает беспорядок — она от него улучшается. Цель не устранить стресс, а позиционировать себя так, чтобы выигрывать от его неизбежности."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Ваш бизнес стабильно работает два года. Неожиданно появляется сильный конкурент. Что это для вас?",
+            "setup": null,
+            "options": [
+              {
+                "id": "threat",
+                "text": "Угроза, которую нужно минимизировать и защититься от неё",
+                "is_wiser": false
+              },
+              {
+                "id": "signal",
+                "text": "Сигнал, который вынудит улучшить то, что вы откладывали",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "видят угрозу",
+              "explanation": "Компании, которые смотрят на конкуренцию как на стресс-тест своих слабых мест, в среднем выходят из него сильнее. Компании, которые пытаются «защититься», часто укрепляют именно те процессы, которые давно устарели.",
+              "wisdom": "{{em:«Лучшее, что может случиться с рестораном — ресторан напротив.»}} — Nassim Taleb",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В здоровье", "example": "Интервальное голодание, холодный душ, физические нагрузки — всё это управляемые стрессы, которые делают систему более адаптивной." },
+              { "label": "В карьере", "example": "Провал проекта, который вы потом разобрали и переосмыслили — антихрупкий опыт. Тот же провал, который просто забыли — нет." },
+              { "label": "В портфеле", "example": "Диверсификация с защитой от катастрофы — классическая «штанга» Талеба. Не бояться волатильности, но ограничить максимально возможные потери." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Назовите одну область вашей жизни или работы, которую вы намеренно держите в зоне комфорта. Что произойдёт, если намеренно добавить туда управляемый стресс? Что вы при этом узнаете?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №1" } },
+        {
+          "type": "hook",
+          "props": { "text": "Bones grow stronger after micro-fractures. The immune system improves after encountering pathogens. Some things don't just survive stress — they benefit from it. This phenomenon existed long before Nassim Taleb gave it a name." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Antifragility}}" } },
+        { "type": "subtitle", "props": { "text": "Antifragile · Nassim Nicholas Taleb · 2012" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/antifragile.svg", "alt": "A curve that drops, then rises above its starting point" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Wind extinguishes a candle and energizes fire. The same is true of randomness, uncertainty, and disorder: they expose the weak and nourish the strong.",
+            "book_title": "Antifragile: Things That Gain from Disorder",
+            "author": "Nassim Nicholas Taleb",
+            "year": "2012",
+            "application": "Ask: is this stress breaking me or teaching me? That distinction is the key to how you build a life and a business."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Taleb introduces three categories. Fragile: things that break under stress (a porcelain cup, an over-optimized supply chain). Robust: things that stay the same under load (stone, bureaucracy). Antifragile: things that improve when shaken — muscles, immune systems, certain investment strategies, living languages.",
+              "The book's central claim: modern institutions are obsessed with stability, predictability, and zero-risk. But eliminating volatility from a system makes it fragile. {{em:Forest fires that aren't allowed to burn small create the conditions for catastrophic large ones.}} Children shielded from every fall never learn to fall.",
+              "Practicing antifragility isn't about seeking risk for its own sake. It's about asymmetry: small, regular stresses that teach, combined with protection from catastrophic losses. In a portfolio — the \"barbell\": 90% in ultra-safe assets, 10% in high-risk positions with capped downside. In life, the same logic applies."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "An antifragile system doesn't just survive disorder — it improves from it. The goal isn't to eliminate stress, but to position yourself to benefit from its inevitability."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your business has been running smoothly for two years. A strong competitor suddenly appears. What is this for you?",
+            "setup": null,
+            "options": [
+              {
+                "id": "threat",
+                "text": "A threat to defend against and minimize",
+                "is_wiser": false
+              },
+              {
+                "id": "signal",
+                "text": "A signal that will force you to improve what you've been deferring",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see a threat",
+              "explanation": "Companies that treat competition as a stress-test of their weaknesses tend to emerge stronger. Those that focus on \"defending\" often end up reinforcing exactly the processes that had already grown stale.",
+              "wisdom": "{{em:\"The best thing that can happen to a restaurant is another restaurant opening across the street.\"}} — Nassim Taleb",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In health", "example": "Intermittent fasting, cold showers, physical training — all managed stresses that make the system more adaptive." },
+              { "label": "In your career", "example": "A project failure you later unpacked and rethought is antifragile experience. The same failure, forgotten — is not." },
+              { "label": "In a portfolio", "example": "Diversification with catastrophe protection — Taleb's classic \"barbell.\" Don't fear volatility; cap the maximum possible loss." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Name one area of your life or work you deliberately keep inside your comfort zone. What would happen if you added a managed stress to it? What would you learn?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/antifragile" }]
+}

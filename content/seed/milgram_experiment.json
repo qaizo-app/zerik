@@ -1,0 +1,248 @@
+{
+  "id": "milgram_experiment",
+  "category": "psychology_experiments",
+  "release_number": 32,
+  "release_date": "2026-05-13",
+  "tags": ["authority", "obedience", "social_psychology", "milgram"],
+  "difficulty": 3,
+  "reading_time_sec": 200,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/milgram.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Психологический эксперимент · №1" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Стэнли Милгрэм сказал участникам, что изучает влияние наказания на обучение. Перед ними — панель с кнопками от 15 до 450 вольт. В соседней комнате — другой человек. За каждую ошибку — разряд. Все участники заранее были уверены: они остановятся."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "Подчинение {{accent:авторитету}}" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Milgram Experiment · Stanley Milgram · Yale, 1961" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/milgram.svg",
+            "alt": "Панель управления с кнопками и фигура авторитетного исследователя"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "65% участников дошли до максимального разряда — 450 вольт, отмеченного на панели как «XXX. Опасно: тяжёлый удар». Никто из них не был садистом. Это были обычные люди — учителя, врачи, служащие. Но когда исследователь в белом халате говорил «продолжайте», большинство продолжало.",
+              "Милгрэм назвал это {{em:состоянием агентности}}: человек переключается из режима самостоятельного актора в режим инструмента чужой воли. В этом режиме моральная ответственность в его голове переходит к тому, кто отдаёт приказ. Иерархия снимает с него груз выбора.",
+              "Эксперимент повторяли в десятках стран на протяжении шести десятилетий — результаты стабильны. Дело не в американской культуре, не в послевоенной травме и не в специфике выборки. Дело в том, как устроена власть и как мозг реагирует на её символы: форму, звание, интонацию."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "В присутствии воспринимаемого авторитета большинство людей делегируют ему собственное моральное суждение — часто не замечая этого."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Руководитель просит вас передать клиенту неполную информацию — «чтобы не пугать раньше времени». Срок горит, начальник торопит. Что делаете?",
+            "setup": null,
+            "options": [
+              {
+                "id": "comply",
+                "text": "Передаю как сказали — это решение руководителя, не моё",
+                "is_wiser": false
+              },
+              {
+                "id": "refuse",
+                "text": "Говорю клиенту полную картину — даже если это неудобно",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "следуют приказу",
+              "explanation": "В реальных организациях большинство выбирает «передаю как сказали» — это рационализируется как лояльность, командная работа, уважение к иерархии. Но именно так выглядит обычная ошибка в 99% корпоративных скандалов: не злодеи, а люди, которые «просто выполняли инструкции».",
+              "wisdom": "Разница между преступлением и поступком часто определяется тем, {{em:кто именно принял решение отвечать}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2009",
+            "text": "Джерри Бургер (Santa Clara University, 2009) повторил эксперимент Милгрэма с остановкой на 150 В — критической отметке, после которой большинство участников оригинала продолжали. 70% новых участников готовы были продолжить. Спустя 48 лет, в другой культурной среде — цифры почти те же. Отдельные исследователи критикуют интерпретацию Милгрэма: некоторые участники подозревали, что никакого удара тока нет. Но даже с этой поправкой эффект подчинения авторитету оказался устойчивым.",
+            "sources": [
+              {
+                "title": "Replicating Milgram: Would People Still Obey Today?",
+                "authors": "Jerry Burger",
+                "year": "2009",
+                "doi": "10.1037/a0010932"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "На работе",
+                "example": "«Бухгалтер оформил всё правильно — так сказал директор». Моральная ответственность незаметно передаётся по цепочке вверх."
+              },
+              {
+                "label": "В медицине",
+                "example": "Пациенты не задают вопросов врачу не потому что нечего спросить — а потому что «он же врач». Белый халат — это 450 вольт доверия."
+              },
+              {
+                "label": "В социальных сетях",
+                "example": "Платформа решила, что контент допустимый — значит, его можно репостить. Алгоритм стал тем самым исследователем в халате."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните одно решение на этой неделе, которое вы приняли, потому что «так сказали». Спросите себя: если бы я был единственным, кто несёт ответственность — я бы сделал то же самое?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Psychology Experiment · №1" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Stanley Milgram told volunteers they were testing how punishment affects learning. A panel of switches, 15 to 450 volts. Someone strapped to a chair in the next room. Every wrong answer, another shock. Every participant was certain they'd stop before it went too far."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "Obedience to {{accent:Authority}}" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Milgram Experiment · Stanley Milgram · Yale, 1961" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/milgram.svg",
+            "alt": "A control panel with voltage switches and the silhouette of an authority figure"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "65% of participants went all the way to 450 volts — labeled on the panel as \"XXX. Danger: Severe Shock.\" None of them were sadists. They were teachers, office workers, tradespeople. Ordinary people who, when a man in a lab coat said \"please continue,\" continued.",
+              "Milgram called it the {{em:agentic state}}: a shift from acting as a moral agent to functioning as an instrument of someone else's will. In this state, the weight of responsibility moves — in the participant's mind — to the authority giving the orders. The hierarchy absorbs the guilt.",
+              "The experiment has been replicated across dozens of countries over six decades. The numbers hold. It isn't a product of American culture, post-war trauma, or a quirky sample. It's a feature of how authority works: its symbols — a uniform, a title, a confident tone — short-circuit independent judgment."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "In the presence of perceived authority, most people hand over their moral judgment — and rarely notice they've done it."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your manager asks you to send a client a report with a key risk omitted — \"we'll address it later.\" The deadline is today. What do you do?",
+            "setup": null,
+            "options": [
+              {
+                "id": "comply",
+                "text": "Send it as instructed — it's the manager's call, not mine",
+                "is_wiser": false
+              },
+              {
+                "id": "refuse",
+                "text": "Tell the client the full picture, even if it creates friction",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "follow orders",
+              "explanation": "In real organizations, most people choose compliance — rationalizing it as teamwork, loyalty, or respect for hierarchy. But this is exactly how ordinary scandals unfold: not villains, but people who were \"just following instructions.\"",
+              "wisdom": "The difference between an ethical lapse and a courageous act is often just {{em:who decided to own the responsibility}}.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2009",
+            "text": "Jerry Burger (Santa Clara University, 2009) replicated Milgram's design, stopping at 150 volts — the critical threshold after which most original participants continued. 70% of new participants were willing to go further. 48 years later, in a different cultural moment, the numbers barely moved. Some researchers argue that many of Milgram's subjects suspected the shocks were fake. Even accounting for that, the effect of authority on compliance proves remarkably durable.",
+            "sources": [
+              {
+                "title": "Replicating Milgram: Would People Still Obey Today?",
+                "authors": "Jerry Burger",
+                "year": "2009",
+                "doi": "10.1037/a0010932"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              {
+                "label": "At work",
+                "example": "\"The accountant signed off — that's what the CFO said.\" Moral responsibility moves silently up the chain."
+              },
+              {
+                "label": "In healthcare",
+                "example": "Patients don't ask their doctors questions — not because there's nothing to ask, but because the white coat says: trust me. That coat is 450 volts of deference."
+              },
+              {
+                "label": "In social media",
+                "example": "\"The platform allows it, so it must be fine to share.\" The algorithm became the man in the lab coat."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of one decision you made this week because someone told you to. Ask: if I were the only person accountable for this — would I still do it?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/milgram_experiment" }]
+}

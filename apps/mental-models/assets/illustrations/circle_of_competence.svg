@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#0E1014"/>
+  <!-- Outer circle (unknown territory) -->
+  <circle cx="200" cy="140" r="110" fill="#171B21" stroke="#5EEAD4" stroke-width="0.8" stroke-opacity="0.2" stroke-dasharray="6 4"/>
+  <!-- Middle circle (familiar but not mastered) -->
+  <circle cx="200" cy="140" r="72" fill="#1D2129" stroke="#5EEAD4" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+  <!-- Inner circle (competence zone) -->
+  <circle cx="200" cy="140" r="38" fill="#232831" stroke="#5EEAD4" stroke-width="1.5" stroke-opacity="0.8"/>
+  <!-- Center dot -->
+  <circle cx="200" cy="140" r="4" fill="#5EEAD4" fill-opacity="0.9"/>
+  <!-- Labels -->
+  <text x="200" y="144" text-anchor="middle" font-family="monospace" font-size="7" fill="#5EEAD4" fill-opacity="0.9">ТЫ ЗНАЕШЬ</text>
+  <text x="200" y="220" text-anchor="middle" font-family="monospace" font-size="7" fill="#5EEAD4" fill-opacity="0.4">знакомо</text>
+  <text x="200" y="258" text-anchor="middle" font-family="monospace" font-size="7" fill="#5C6472" fill-opacity="0.6">неизвестное</text>
+  <!-- Radial tick marks on boundary -->
+  <line x1="200" y1="102" x2="200" y2="95" stroke="#5EEAD4" stroke-width="1.5" stroke-opacity="0.7"/>
+  <line x1="238" y1="140" x2="245" y2="140" stroke="#5EEAD4" stroke-width="1.5" stroke-opacity="0.7"/>
+  <line x1="200" y1="178" x2="200" y2="185" stroke="#5EEAD4" stroke-width="1.5" stroke-opacity="0.7"/>
+  <line x1="162" y1="140" x2="155" y2="140" stroke="#5EEAD4" stroke-width="1.5" stroke-opacity="0.7"/>
+  <!-- "Edge" annotation -->
+  <text x="206" y="97" font-family="monospace" font-size="7" fill="#5EEAD4" fill-opacity="0.6">граница</text>
+</svg>

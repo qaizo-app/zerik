@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#15100E"/>
+  <!-- Head outline -->
+  <ellipse cx="200" cy="115" rx="80" ry="85" fill="#28201D" stroke="#F87171" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Left arrow (pointing left) -->
+  <line x1="185" y1="110" x2="135" y2="110" stroke="#F87171" stroke-width="2.5" stroke-opacity="0.8"/>
+  <polygon points="135,104 122,110 135,116" fill="#F87171" fill-opacity="0.8"/>
+  <!-- Right arrow (pointing right) -->
+  <line x1="215" y1="110" x2="265" y2="110" stroke="#F87171" stroke-width="2.5" stroke-opacity="0.8"/>
+  <polygon points="265,104 278,110 265,116" fill="#F87171" fill-opacity="0.8"/>
+  <!-- Tension lines between arrows -->
+  <line x1="190" y1="100" x2="210" y2="120" stroke="#F87171" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="210" y1="100" x2="190" y2="120" stroke="#F87171" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Center dot (tension point) -->
+  <circle cx="200" cy="110" r="5" fill="#F87171" fill-opacity="0.6"/>
+  <!-- Left label -->
+  <text x="115" y="138" text-anchor="middle" font-family="monospace" font-size="8" fill="#F87171" fill-opacity="0.7">убеждение</text>
+  <!-- Right label -->
+  <text x="285" y="138" text-anchor="middle" font-family="monospace" font-size="8" fill="#F87171" fill-opacity="0.7">поведение</text>
+  <!-- Dissonance label at bottom -->
+  <text x="200" y="230" text-anchor="middle" font-family="monospace" font-size="9" fill="#9A8B83" fill-opacity="0.7">дискомфорт — дискомфорт — дискомфорт</text>
+  <!-- Wavy lines suggesting tension at top of head -->
+  <path d="M 170 42 Q 180 36 190 42 Q 200 48 210 42 Q 220 36 230 42" stroke="#F87171" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+</svg>

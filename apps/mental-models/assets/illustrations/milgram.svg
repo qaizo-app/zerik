@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="280" fill="#15100E"/>
+  <!-- Control panel box -->
+  <rect x="80" y="100" width="240" height="110" rx="6" fill="#28201D" stroke="#F87171" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Voltage buttons row 1 -->
+  <rect x="100" y="118" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.15" stroke="#F87171" stroke-width="0.8"/>
+  <rect x="130" y="118" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.15" stroke="#F87171" stroke-width="0.8"/>
+  <rect x="160" y="118" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.15" stroke="#F87171" stroke-width="0.8"/>
+  <rect x="190" y="118" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.25" stroke="#F87171" stroke-width="0.8"/>
+  <rect x="220" y="118" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.4" stroke="#F87171" stroke-width="0.8"/>
+  <rect x="250" y="118" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.6" stroke="#F87171" stroke-width="1.2"/>
+  <!-- Voltage buttons row 2 -->
+  <rect x="100" y="140" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.06" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.5"/>
+  <rect x="130" y="140" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.06" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.5"/>
+  <rect x="160" y="140" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.06" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.5"/>
+  <rect x="190" y="140" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.1" stroke="#F87171" stroke-width="0.5"/>
+  <rect x="220" y="140" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.2" stroke="#F87171" stroke-width="0.8"/>
+  <rect x="250" y="140" width="22" height="14" rx="2" fill="#F87171" fill-opacity="0.8" stroke="#F87171" stroke-width="1.5"/>
+  <!-- XXX label on last button -->
+  <text x="256" y="171" font-family="monospace" font-size="7" fill="#F87171" fill-opacity="0.9">XXX</text>
+  <!-- Voltage scale -->
+  <line x1="100" y1="165" x2="280" y2="165" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="100" y="178" font-family="monospace" font-size="8" fill="#9A8B83" fill-opacity="0.7">15V</text>
+  <text x="252" y="178" font-family="monospace" font-size="8" fill="#F87171" fill-opacity="0.9">450V</text>
+  <!-- Authority figure silhouette (right side) -->
+  <ellipse cx="330" cy="58" rx="14" ry="14" fill="#28201D" stroke="#F87171" stroke-width="0.8" stroke-opacity="0.5"/>
+  <rect x="316" y="74" width="28" height="40" rx="4" fill="#28201D" stroke="#F87171" stroke-width="0.8" stroke-opacity="0.5"/>
+  <!-- Lab coat detail -->
+  <line x1="330" y1="74" x2="330" y2="114" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.4"/>
+  <!-- Arrow from authority to panel -->
+  <path d="M 316 95 L 285 130" stroke="#F87171" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#F87171" fill-opacity="0.4"/>
+    </marker>
+  </defs>
+  <!-- "Please continue" text hint -->
+  <text x="295" y="100" font-family="monospace" font-size="7" fill="#F87171" fill-opacity="0.5" font-style="italic">continue</text>
+  <!-- Participant silhouette (left) -->
+  <ellipse cx="46" cy="160" rx="10" ry="10" fill="#28201D" stroke="#9A8B83" stroke-width="0.8" stroke-opacity="0.4"/>
+  <rect x="36" y="172" width="20" height="30" rx="3" fill="#28201D" stroke="#9A8B83" stroke-width="0.8" stroke-opacity="0.4"/>
+  <!-- Hand reaching for panel -->
+  <path d="M 56 185 Q 70 185 80 170" stroke="#9A8B83" stroke-width="1" stroke-opacity="0.4"/>
+</svg>

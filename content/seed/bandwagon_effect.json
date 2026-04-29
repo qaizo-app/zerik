@@ -1,0 +1,176 @@
+{
+  "id": "bandwagon_effect",
+  "category": "cognitive_biases",
+  "release_number": 39,
+  "release_date": "2026-05-20",
+  "tags": ["social_proof", "herd_behavior", "conformity", "cialdini", "groupthink"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/bandwagon_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "В 1948 году все опросы показывали поражение Трумэна на президентских выборах США. Редакции уже готовили первые полосы. Крупные доноры перешли к сопернику. Трумэн выиграл. Те, кто вышел из его кампании, потеряли — не только политически." }
+        },
+        { "type": "title", "props": { "text": "Эффект {{accent:толпы}}" } },
+        { "type": "subtitle", "props": { "text": "Bandwagon Effect · термин популяризован в XIX в., исследован Cialdini · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bandwagon_effect.svg", "alt": "Ряд фигур, все движутся в одном направлении" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "«Все так делают» — одно из самых мощных когнитивных якорей. Роберт Чалдини в книге «Психология влияния» (1984) назвал социальное доказательство одним из шести принципов убеждения: когда человек не знает, что делать правильно, он смотрит на поведение других и копирует его. В условиях неопределённости это разумная эвристика. В условиях информированного выбора — ловушка.",
+              "Толпа делает три вещи с нашим суждением. Первое: она подменяет анализ. Зачем думать, если уже видно, что делают другие? Второе: она создаёт ощущение безопасности. «Если все делают это — значит, это нормально». Третье: она снижает ответственность. {{em:«Это был консенсус» — универсальное оправдание задним числом}}.",
+              "В финансах это известно как «пузырь»: цены растут, потому что все покупают; все покупают, потому что цены растут. Причина и следствие меняются местами, и система держится на убеждении до тех пор, пока не держится. 2000 год. 2008 год. 2021 год."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда большинство делает что-то — это информация о поведении большинства, но не доказательство правильности этого поведения. Толпа может ошибаться синхронно."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Коллеги в вашей отрасли массово переходят на новую платформу. Все обсуждают её как «очевидный выбор». Что вы делаете?",
+            "setup": null,
+            "options": [
+              {
+                "id": "follow",
+                "text": "Перехожу — не хочу отставать от отрасли",
+                "is_wiser": false
+              },
+              {
+                "id": "evaluate",
+                "text": "Оцениваю по собственным критериям, независимо от того, что делают другие",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "следуют отрасли",
+              "explanation": "Следование отрасли — не всегда ошибка. Иногда консенсус отражает реальный опыт многих людей. Но «все переходят» — это не аргумент. Аргумент — «вот что конкретно это решает для нас». Разница принципиальная.",
+              "wisdom": "{{em:Когда все смотрят в одну сторону — стоит посмотреть в другую.}} Не как правило, а как вопрос: что там?",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Антагонизм к толпе — такое же искажение, как следование ей. Контрарианизм ради контрарианизма — просто обратный вариант того же эффекта. Цель — независимое суждение, а не обязательное несогласие."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В инвестициях", "example": "«Все покупают — значит, надо брать». История финансовых пузырей — это история всеобщего консенсуса, который оказывался неправым." },
+              { "label": "В продукте", "example": "«У конкурентов такая функция есть — давайте и мы добавим». Это не продуктовая стратегия, это эффект толпы в дизайне." },
+              { "label": "В карьере", "example": "«Все идут в этот сектор» — не повод туда идти. Хорошие возможности часто в местах, куда толпа ещё не добралась." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одно убеждение, которое вы держите потому, что «все так думают». Спросите: если бы никто другой этого не думал — я бы всё равно пришёл к тому же выводу? Если нет — это хорошее место для проверки."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "In 1948, every poll showed Truman losing the presidential election. Newspapers prepared their front pages. Major donors switched to his opponent. Truman won. Those who had abandoned his campaign lost — not just politically." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Bandwagon}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Bandwagon Effect · term popularized in the 19th century, studied by Cialdini · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bandwagon_effect.svg", "alt": "A row of figures all moving in the same direction" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "\"Everyone's doing it\" is one of the most powerful cognitive anchors there is. Robert Cialdini, in Influence (1984), named social proof one of the six principles of persuasion: when people don't know what the right thing to do is, they look at what others are doing and copy it. Under genuine uncertainty, this is a reasonable heuristic. Under conditions where independent judgment is possible, it's a trap.",
+              "The crowd does three things to our thinking. First: it substitutes for analysis. Why think when you can see what others are doing? Second: it creates an illusion of safety. \"If everyone's doing this, it must be okay.\" Third: it dilutes accountability. {{em:\"It was the consensus\" is history's most reliable retroactive excuse.\"}}",
+              "In finance, this is called a bubble: prices rise because everyone buys; everyone buys because prices rise. Cause and effect swap places, and the system holds together on belief — until it doesn't. 2000. 2008. 2021."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When most people are doing something, that's information about most people's behavior — not proof that the behavior is right. Crowds can be wrong in unison."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Everyone in your industry is migrating to a new platform. It's being called \"the obvious choice.\" What do you do?",
+            "setup": null,
+            "options": [
+              { "id": "follow", "text": "Switch — I don't want to fall behind the industry", "is_wiser": false },
+              { "id": "evaluate", "text": "Evaluate it on its own merits, independent of what others are doing", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "follow the industry",
+              "explanation": "Following the industry isn't always wrong. Sometimes consensus reflects genuine collective experience. But \"everyone's switching\" isn't an argument. \"Here's what this specifically solves for us\" is. The difference matters.",
+              "wisdom": "{{em:When everyone is looking in one direction — it's worth looking in the other.}} Not as a rule, but as a question: what's over there?",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Contrarianism is just the bandwagon effect in reverse. Disagreeing with the crowd for its own sake is the same cognitive error, pointing in a different direction. The goal is independent judgment — not obligatory dissent."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In investing", "example": "\"Everyone's buying — I should too.\" The history of financial bubbles is a history of consensus that turned out to be wrong." },
+              { "label": "In product design", "example": "\"Our competitors have this feature — let's add it.\" That's not a product strategy. That's the bandwagon effect applied to your roadmap." },
+              { "label": "In career", "example": "\"Everyone's moving into this sector\" isn't a reason to follow. Good opportunities are often in places the crowd hasn't reached yet." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one belief you hold because \"everyone thinks so.\" Ask: if no one else believed this, would I still have arrived at the same conclusion on my own? If not — that's a good place to probe."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/bandwagon_effect" }]
+}

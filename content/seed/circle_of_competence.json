@@ -1,0 +1,230 @@
+{
+  "id": "circle_of_competence",
+  "category": "mental_models",
+  "release_number": 35,
+  "release_date": "2026-05-16",
+  "tags": ["decision_making", "expertise", "buffett", "munger", "self_awareness"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/circle_of_competence.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Ментальная модель · №11" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Уоррен Баффет десятилетиями избегал технологических компаний. Не потому что считал их плохими — он просто не понимал их достаточно хорошо. В 2000-х, когда рухнул dot-com пузырь, Berkshire Hathaway потерял меньше всех крупных фондов."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "Круг {{accent:компетентности}}" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Circle of Competence · Warren Buffett & Charlie Munger · 1996" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/circle_of_competence.svg",
+            "alt": "Концентрические круги: внутренний — зона знания, внешний — зона неизвестного"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В письме акционерам 1996 года Баффет сформулировал принцип: важно не то, насколько велик ваш круг компетентности — важно, где проходит его граница. Человек, который точно знает, где заканчивается его понимание, надёжнее того, кто уверен, что разбирается во всём.",
+              "Мангер добавил практическое следствие: самые дорогостоящие ошибки происходят именно на границе круга — там, где человек «почти знает». Уверенности достаточно, чтобы действовать. Понимания — недостаточно, чтобы предвидеть последствия.",
+              "Круг компетентности — не повод для самоограничения. Его можно расширять: через опыт, обучение, работу с людьми, у которых он больше. Но расширять осознанно, а не иллюзией. {{em:«Я знаком с этой темой» и «я понимаю эту тему» — совсем разные позиции}}."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Знать, где проходит граница вашей компетентности — важнее, чем знать много. Действуйте уверенно внутри круга; за его пределами — с осторожностью или не действуйте вовсе."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Знакомый предлагает вам войти в долю в бизнесе, о котором вы много слышали, но лично никогда не работали в этой отрасли. Обещает хорошую доходность. Что делаете?",
+            "setup": null,
+            "options": [
+              {
+                "id": "invest",
+                "text": "Инвестирую — я достаточно разбираюсь, чтобы оценить перспективы",
+                "is_wiser": false
+              },
+              {
+                "id": "pass_or_learn",
+                "text": "Прохожу мимо или сначала трачу время на реальное изучение отрасли",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "входят «на слух»",
+              "explanation": "«Много слышал» и «понимаю» — разные вещи. Инвесторы, которые чётко знают границы своего понимания, систематически обходят тех, кто уверен, что разбирается в любом бизнесе. Пропустить хорошую сделку дёшево. Войти в плохую — дорого.",
+              "wisdom": "{{em:«Знай то, что ты знаешь, и знай то, чего ты не знаешь. Это — знание.»}} — Конфуций",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Круг компетентности легко перепутать с зоной комфорта. Один говорит: «я здесь понимаю последствия своих действий». Другой говорит: «здесь мне не страшно». Это разные вещи — и смешивание их дороже обходится в долгосрочной перспективе."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В карьере",
+                "example": "Специалист по маркетингу берётся за стратегическое консультирование — потому что «принципы те же». Принципы похожи, но детали другие, и именно в деталях живут провалы."
+              },
+              {
+                "label": "В инвестициях",
+                "example": "«Я понял, как работают крипто-рынки» после двух недель чтения Reddit. Понимания обычно хватает ровно до следующего разворота рынка."
+              },
+              {
+                "label": "В советах",
+                "example": "Вас просят о совете в области, которая вам незнакома. Самое ценное, что вы можете сказать — «я здесь не эксперт, но вот кто им является»."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Нарисуйте мысленно (или на бумаге) три концентрических круга. Внутренний — то, в чём вы действительно разбираетесь. Средний — то, что вы знаете «в общих чертах». Внешний — то, о чём вы имеете понятие, но не более. Какие решения вы принимаете из среднего круга, притворяясь что они из внутреннего?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Mental Model · №11" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Warren Buffett avoided tech companies for decades. Not because he thought they were bad businesses — he simply didn't understand them well enough. During the dot-com crash of 2000, Berkshire Hathaway lost less than almost any major fund."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "Circle of {{accent:Competence}}" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Circle of Competence · Warren Buffett & Charlie Munger · 1996" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/circle_of_competence.svg",
+            "alt": "Concentric circles: inner — what you know, outer — what you don't"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In his 1996 shareholder letter, Buffett put it plainly: it's not the size of your circle of competence that matters — it's knowing where the edges are. Someone who understands exactly where their knowledge ends is more reliable than someone who thinks they can evaluate anything.",
+              "Munger added the practical corollary: the most expensive mistakes happen right at the boundary — where you \"almost understand.\" Confident enough to act. Not informed enough to foresee the consequences.",
+              "The circle isn't an excuse to stay small. You can expand it — through experience, study, and working alongside people whose circle includes what yours doesn't. But expand it deliberately, not by illusion. {{em:\"I've heard about this\" and \"I understand this\" are very different positions.}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Knowing where your competence ends matters more than knowing a lot. Act with conviction inside the circle; outside it — proceed carefully or not at all."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A friend offers you a stake in a business you've heard a lot about but have never worked in. Good returns promised. What do you do?",
+            "setup": null,
+            "options": [
+              {
+                "id": "invest",
+                "text": "Invest — I know enough to assess the potential",
+                "is_wiser": false
+              },
+              {
+                "id": "pass_or_learn",
+                "text": "Pass, or spend time genuinely studying the industry first",
+                "is_wiser": true
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "invest on hearsay",
+              "explanation": "\"I've heard a lot about it\" and \"I understand it\" are different. Investors who know the edges of their understanding consistently outperform those who believe they can evaluate any business. Missing a good deal is cheap. Entering a bad one isn't.",
+              "wisdom": "{{em:\"Know what you know and know what you don't know. That is knowledge.\"}} — Confucius",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "It's easy to confuse circle of competence with comfort zone. One says: \"I understand the consequences of my actions here.\" The other says: \"I'm not scared here.\" Different things — and confusing them is expensive over time."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              {
+                "label": "In your career",
+                "example": "A marketing expert takes on strategic consulting — \"the principles are the same.\" They're similar, but the details differ, and failure lives in the details."
+              },
+              {
+                "label": "In investing",
+                "example": "\"I understand how crypto markets work\" after two weeks of reading. That understanding usually lasts until the next sharp reversal."
+              },
+              {
+                "label": "When giving advice",
+                "example": "Someone asks for guidance in an area you don't know. The most valuable thing you can say is: \"I'm not the expert here — but here's who is.\""
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Draw three concentric circles in your mind (or on paper). Inner: what you genuinely understand. Middle: what you know in broad strokes. Outer: what you've heard about but no more. Which decisions are you making from the middle circle while pretending they're from the inner one?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/circle_of_competence" }]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "hawthorne_effect",
+  "category": "psychology_experiments",
+  "release_number": 45,
+  "release_date": "2026-05-26",
+  "tags": ["observation", "workplace", "productivity", "hawthorne", "social_psychology"],
+  "difficulty": 2,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/hawthorne_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №3" } },
+        {
+          "type": "hook",
+          "props": { "text": "На заводе Western Electric в Хоторне исследователи улучшили освещение — производительность выросла. Они снизили освещение — производительность снова выросла. Уменьшили зарплату — выросла. Что бы они ни меняли, рабочие работали лучше. Потом поняли почему." }
+        },
+        { "type": "title", "props": { "text": "Хоторнский {{accent:эффект}}" } },
+        { "type": "subtitle", "props": { "text": "Hawthorne Effect · Elton Mayo · Western Electric, Chicago · 1924–1932" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/hawthorne_effect.svg", "alt": "Глаз наблюдателя над рядом фигур — поведение меняется под наблюдением" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Исследования в Хоторне проводились с 1924 по 1932 год. Элтон Мэйо и его команда из Гарварда изучали факторы производительности: освещение, перерывы, длина рабочего дня. Каждое изменение давало рост производительности. Когда вернули исходные условия — производительность осталась высокой. Вывод: дело было не в условиях труда, а в самом факте наблюдения. Рабочие знали, что за ними наблюдают, и работали лучше.",
+              "Эффект описывает феномен: {{em:люди меняют поведение, когда осознают, что находятся под наблюдением}}. Это происходит не обязательно осознанно. Это не притворство — это реальное изменение внимания, старательности, мотивации. Присутствие наблюдателя само по себе является интервенцией.",
+              "Значение для исследований огромно. Любой эксперимент с людьми потенциально искажён фактом участия. Человек в исследовании — не тот же человек в обычной жизни. Это заставило науку разрабатывать слепые протоколы, контрольные группы и методы, минимизирующие осознание наблюдения."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Наблюдение изменяет наблюдаемое. Люди, которые знают, что за ними смотрят, ведут себя иначе — в рабочей среде, в исследованиях и в жизни."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "В вашей компании внедрили систему мониторинга рабочего времени. Производительность выросла на 20%. Что произошло?",
+            "setup": null,
+            "options": [
+              {
+                "id": "better_process",
+                "text": "Люди стали работать эффективнее — структура помогает",
+                "is_wiser": false
+              },
+              {
+                "id": "observation",
+                "text": "Хоторнский эффект — люди изменили поведение из-за осознания наблюдения",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "называют хоторнский эффект",
+              "explanation": "Оба варианта могут быть правдой одновременно. Мониторинг помогает AND создаёт хоторнский эффект. Разделить их сложно — именно это и делает эффект важным: он загрязняет почти любое измерение человеческого поведения. Вопрос не «что именно произошло», а «как долго это продолжится после прекращения мониторинга».",
+              "wisdom": "{{em:Измерение — это интервенция. Забывать об этом — значит принимать карту за территорию.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2009",
+            "text": "В 2009 году экономисты Левитт и Лист (Levitt & List) переанализировали оригинальные данные исследований в Хоторне и обнаружили, что эффект был значительно слабее, чем описывала легенда. В некоторых сериях данные не подтверждали исходной интерпретации Мэйо. Тем не менее базовый феномен — изменение поведения под наблюдением — хорошо задокументирован в последующих исследованиях с более строгим дизайном. Эффект реален, но его масштаб в оригинальных экспериментах был преувеличен.",
+            "sources": [
+              {
+                "title": "Was there really a Hawthorne effect at the Hawthorne plant?",
+                "authors": "Steven D. Levitt & John A. List",
+                "year": "2011",
+                "doi": "10.1257/app.3.1.224"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В менеджменте", "example": "Сотрудник, которому менеджер уделяет внимание — даже критическое — обычно работает лучше того, которого игнорируют. Внимание само по себе является управленческим инструментом." },
+              { "label": "В исследованиях", "example": "Клинические испытания делают двойное ослепление именно поэтому: ни пациент, ни врач не должны знать, кто получает препарат, а кто — плацебо." },
+              { "label": "В образовании", "example": "Исследования показывают: ученики, которых чаще вызывают к доске и отслеживают прогресс, учатся лучше. Вопрос — причина в методике или в самом внимании?" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одно измерение в вашей работе или жизни, которое вы проводите регулярно. Спросите: оно действительно показывает то, что происходит — или оно само по себе меняет то, что происходит?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №3" } },
+        {
+          "type": "hook",
+          "props": { "text": "At the Western Electric plant in Hawthorne, researchers improved lighting — productivity went up. They dimmed it — productivity went up again. Cut pay — productivity rose. Whatever they changed, workers performed better. Then they figured out why." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Hawthorne}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Hawthorne Effect · Elton Mayo · Western Electric, Chicago · 1924–1932" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/hawthorne_effect.svg", "alt": "An observer's eye above a row of figures — behavior changes under observation" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The Hawthorne studies ran from 1924 to 1932. Elton Mayo and his Harvard team studied productivity factors: lighting, rest breaks, workday length. Each change produced performance gains. When conditions were returned to baseline — performance stayed high. The conclusion: it wasn't the conditions that mattered. It was the fact of being observed. The workers knew they were being watched, and they worked better.",
+              "The effect describes a phenomenon: {{em:people change their behavior when they know they are being observed.}} This doesn't necessarily happen consciously. It isn't pretense — it's a real shift in attention, effort, and motivation. The presence of an observer is itself an intervention.",
+              "The implications for research are significant. Any experiment involving people is potentially distorted by the act of participation. A person in a study is not the same person in ordinary life. This drove science to develop blind protocols, control groups, and methods that minimize awareness of observation."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Observation changes what is observed. People who know they're being watched behave differently — in the workplace, in research, and in life."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your company rolls out a work-time monitoring system. Productivity rises 20%. What happened?",
+            "setup": null,
+            "options": [
+              { "id": "better_process", "text": "People started working more efficiently — structure helps", "is_wiser": false },
+              { "id": "observation", "text": "Hawthorne effect — people changed behavior because they knew they were being watched", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "name the Hawthorne effect",
+              "explanation": "Both can be true simultaneously. Monitoring helps AND creates a Hawthorne effect. Separating them is hard — and that's exactly what makes the effect important: it contaminates almost any measurement of human behavior. The real question isn't \"what happened\" — it's \"how long will it last once the monitoring stops?\"",
+              "wisdom": "{{em:Measurement is an intervention. Forgetting this is mistaking the map for the territory.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2009",
+            "text": "In 2009, economists Levitt and List reanalyzed the original Hawthorne data and found the effect was considerably weaker than legend suggested. Some data series didn't support Mayo's original interpretation. That said, the core phenomenon — behavior changing under observation — is well-documented in subsequent, more rigorously designed studies. The effect is real; its scale in the original experiments was overstated.",
+            "sources": [
+              {
+                "title": "Was there really a Hawthorne effect at the Hawthorne plant?",
+                "authors": "Steven D. Levitt & John A. List",
+                "year": "2011",
+                "doi": "10.1257/app.3.1.224"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In management", "example": "An employee who receives a manager's attention — even critical attention — typically performs better than one who is ignored. Attention itself is a management tool." },
+              { "label": "In research", "example": "Clinical trials use double-blinding precisely for this reason: neither patient nor doctor should know who receives the drug and who receives a placebo." },
+              { "label": "In education", "example": "Research shows students who are called on more often and whose progress is tracked tend to perform better. The question: is it the method — or the attention itself?" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one metric you track regularly at work or in life. Ask: is it actually showing you what's happening — or is it changing what's happening just by being measured?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/hawthorne_effect" }]
+}

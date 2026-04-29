@@ -1,0 +1,150 @@
+{
+  "id": "false_dichotomy",
+  "category": "rhetorical_fallacies",
+  "release_number": 41,
+  "release_date": "2026-05-22",
+  "tags": ["rhetoric", "logic", "fallacy", "black_and_white_thinking", "argumentation"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/false_dichotomy.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №2" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Либо вы с нами, либо против нас». Эта фраза, произнесённая с трибуны в 2001 году, стала одним из самых дорогостоящих риторических ходов в современной истории. В мире было больше двух позиций." }
+        },
+        { "type": "title", "props": { "text": "Ложная {{accent:дихотомия}}" } },
+        { "type": "subtitle", "props": { "text": "False Dichotomy / False Dilemma · классическая логика · описана Аристотелем" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/false_dichotomy.svg", "alt": "Дорога, разделяющаяся на две видимые тропы, и скрытая третья" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ложная дихотомия — представление ситуации как будто существует только два варианта, хотя в действительности их больше. Это делается намеренно (риторический манипулятивный ход) или непреднамеренно (когнитивная ошибка упрощения). В обоих случаях результат одинаков: у слушателя возникает иллюзия, что он выбирает между единственными возможными вариантами.",
+              "«Или вы принимаете наши условия, или переговоры провалятся». «Либо мы расширяем бюджет, либо продукт не выйдет в срок». «Ты либо ценишь эту работу, либо нет». Во всех этих случаях спектр возможностей шире, но говорящий его убрал. {{em:Выбор в рамках фальшивой дихотомии — не выбор, а подчинение структуре, навязанной другим.}}",
+              "Опасность приёма — в его убедительности. Крайние варианты обычно сконструированы так, чтобы один из них казался очевидно неприемлемым. Поэтому слушатель «сам выбирает» нужный вариант — и чувствует, что принял свободное решение."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда вам предлагают выбор между двумя вариантами, сначала спросите: это действительно все варианты? Почти всегда — нет."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "Руководитель на совещании о сроках проекта:",
+            "example_quote": "— Либо мы сдаём в четверг как договорились, либо клиент уйдёт навсегда. Выбирайте.",
+            "recognition_signal": "Сигнал: «либо-либо», «или-или», «если не это — то то». Особенно когда один из вариантов очевидно нежелателен — это почти всегда конструкция, а не реальный выбор.",
+            "nuance_warning": "Иногда дихотомия реальная. «Ты либо подписал договор, либо нет» — не ложная дихотомия, это описание факта. Ключ — в том, сконструирована ли ситуация как бинарная или она действительно таковой является."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Антидот к ложной дихотомии — вопрос «что ещё?». Но люди часто не задают его под давлением срочности или авторитета. Именно поэтому ложная дихотомия так часто используется в переговорах и политике: времени на поиск третьего варианта нет."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В переговорах", "example": "«Либо полная предоплата, либо мы не начинаем». Третий вариант — поэтапная оплата — существует, но не произнесён." },
+              { "label": "В личных решениях", "example": "«Либо я остаюсь на этой работе, либо открываю своё». Между этими полюсами — ещё дюжина позиций." },
+              { "label": "В медиа", "example": "«Вы либо поддерживаете реформу, либо защищаете старую систему». Нейтральная позиция, частичная поддержка, предложение альтернативы — всё исчезло из повестки." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните дилемму, с которой вы столкнулись на этой неделе. Запишите оба варианта. Теперь найдите хотя бы три дополнительных варианта между ними или вне их. Они почти всегда существуют."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №2" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"Either you're with us or you're against us.\" Spoken from a podium in 2001, that sentence became one of the most expensive rhetorical moves in recent history. There were more than two positions in the world." }
+        },
+        { "type": "title", "props": { "text": "The False {{accent:Dichotomy}}" } },
+        { "type": "subtitle", "props": { "text": "False Dichotomy / False Dilemma · classical logic · described by Aristotle" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/false_dichotomy.svg", "alt": "A road splitting into two visible paths, with a hidden third one" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "A false dichotomy frames a situation as if only two options exist, when in reality there are more. This happens deliberately — as a rhetorical manipulation — or accidentally, as a cognitive shortcut. Either way, the effect is the same: the listener believes they're choosing between the only available options.",
+              "\"Accept our terms or the deal is off.\" \"Either we increase the budget or the product won't ship.\" \"You either care about this job or you don't.\" In each case, the real spectrum of possibilities has been removed. {{em:Choosing within a false dichotomy isn't a choice — it's submission to a structure someone else built.}}",
+              "The technique's power lies in its plausibility. The extreme options are usually constructed so that one is obviously unacceptable — making the listener feel they're exercising free will when they pick the \"right\" one."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When offered a choice between two options, first ask: are these really all the options? Almost always — no."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "A manager in a project deadline meeting:",
+            "example_quote": "— Either we ship by Thursday as agreed, or the client walks away forever. Choose.",
+            "recognition_signal": "Signal: \"either-or\", \"with us or against us\", \"if not this — then that\". Especially when one option is obviously undesirable — that structure is almost always constructed, not real.",
+            "nuance_warning": "Sometimes a dichotomy is genuine. \"You either signed the contract or you didn't\" isn't a false dichotomy — it describes a fact. The key is whether the situation is constructed as binary or is actually binary."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The antidote is asking \"what else?\" — but people often don't ask it under time pressure or authority. That's exactly why false dichotomies are so common in negotiations and politics: there's no time to find a third option."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In negotiations", "example": "\"Full payment upfront, or we don't start.\" The third option — staged payments — exists but wasn't offered." },
+              { "label": "In personal decisions", "example": "\"Either I stay in this job or I start my own business.\" There are a dozen positions between those two poles." },
+              { "label": "In media", "example": "\"You either support the reform or you're defending the old system.\" Neutral positions, partial support, alternative proposals — all disappeared from the frame." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a dilemma you faced this week. Write down both options. Now find at least three additional options — between them or outside of them entirely. They almost always exist."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/false_dichotomy" }]
+}

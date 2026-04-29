@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFF1F2"/>
+
+  <!-- Large observer eye at the top center -->
+  <!-- Eye white -->
+  <ellipse cx="200" cy="75" rx="72" ry="38" fill="white" stroke="#F87171" stroke-width="2.5"/>
+  <!-- Iris -->
+  <circle cx="200" cy="75" r="24" fill="#F87171" opacity="0.25"/>
+  <circle cx="200" cy="75" r="17" fill="#F87171" opacity="0.55"/>
+  <!-- Pupil -->
+  <circle cx="200" cy="75" r="9" fill="#991B1B"/>
+  <!-- Eye highlight -->
+  <circle cx="207" cy="70" r="3.5" fill="white" opacity="0.8"/>
+  <!-- Eyelid line top -->
+  <path d="M128 75 Q200 30 272 75" stroke="#F87171" stroke-width="2" fill="none"/>
+  <!-- Eyelid line bottom -->
+  <path d="M128 75 Q200 118 272 75" stroke="#F87171" stroke-width="2" fill="none"/>
+
+  <!-- Gaze rays radiating downward from eye -->
+  <line x1="200" y1="113" x2="200" y2="155" stroke="#FECACA" stroke-width="2" stroke-dasharray="5 4" opacity="0.8"/>
+  <line x1="178" y1="108" x2="155" y2="155" stroke="#FECACA" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.6"/>
+  <line x1="222" y1="108" x2="245" y2="155" stroke="#FECACA" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.6"/>
+  <line x1="158" y1="100" x2="118" y2="155" stroke="#FECACA" stroke-width="1" stroke-dasharray="5 4" opacity="0.4"/>
+  <line x1="242" y1="100" x2="282" y2="155" stroke="#FECACA" stroke-width="1" stroke-dasharray="5 4" opacity="0.4"/>
+
+  <!-- Five worker figures below, all working hard (being observed) -->
+  <!-- Figure 1 -->
+  <circle cx="100" cy="185" r="10" fill="#374151"/>
+  <line x1="100" y1="195" x2="100" y2="220" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+  <line x1="85" y1="205" x2="100" y2="202" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="115" y1="205" x2="100" y2="202" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="93" y1="220" x2="87" y2="238" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="107" y1="220" x2="113" y2="238" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Figure 2 -->
+  <circle cx="152" cy="183" r="10" fill="#374151"/>
+  <line x1="152" y1="193" x2="152" y2="218" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+  <line x1="137" y1="203" x2="152" y2="200" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="167" y1="203" x2="152" y2="200" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="145" y1="218" x2="139" y2="236" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="159" y1="218" x2="165" y2="236" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Figure 3 (center, most prominent) -->
+  <circle cx="200" cy="180" r="12" fill="#1F2937"/>
+  <line x1="200" y1="192" x2="200" y2="220" stroke="#1F2937" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="183" y1="202" x2="200" y2="198" stroke="#1F2937" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="217" y1="202" x2="200" y2="198" stroke="#1F2937" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="192" y1="220" x2="186" y2="240" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+  <line x1="208" y1="220" x2="214" y2="240" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Figure 4 -->
+  <circle cx="248" cy="183" r="10" fill="#374151"/>
+  <line x1="248" y1="193" x2="248" y2="218" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+  <line x1="233" y1="203" x2="248" y2="200" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="263" y1="203" x2="248" y2="200" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="241" y1="218" x2="235" y2="236" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="255" y1="218" x2="261" y2="236" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Figure 5 -->
+  <circle cx="300" cy="185" r="10" fill="#374151"/>
+  <line x1="300" y1="195" x2="300" y2="220" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+  <line x1="285" y1="205" x2="300" y2="202" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="315" y1="205" x2="300" y2="202" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="293" y1="220" x2="287" y2="238" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+  <line x1="307" y1="220" x2="313" y2="238" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Work surface / bench line -->
+  <line x1="60" y1="248" x2="340" y2="248" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="200" y="275" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#9CA3AF" font-style="italic">Поведение меняется под наблюдением</text>
+</svg>

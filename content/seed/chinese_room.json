@@ -1,0 +1,176 @@
+{
+  "id": "chinese_room",
+  "category": "thought_experiments",
+  "release_number": 40,
+  "release_date": "2026-05-21",
+  "tags": ["searle", "consciousness", "AI", "semantics", "philosophy_of_mind"],
+  "difficulty": 4,
+  "reading_time_sec": 210,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/chinese_room.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "Программа переводит с китайского идеально — быстро, точно, без ошибок. Понимает ли она хоть одно слово? Джон Сёрл спросил иначе: а что если внутри программы сижу я сам — с книгой правил и словарём?" }
+        },
+        { "type": "title", "props": { "text": "Китайская {{accent:комната}}" } },
+        { "type": "subtitle", "props": { "text": "Chinese Room · John Searle · 1980 · Behavioral and Brain Sciences" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/chinese_room.svg", "alt": "Человек внутри ящика принимает иероглифы через щель и возвращает ответы по правилам" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Джон Сёрл предложил мысленный эксперимент в 1980 году как аргумент против «сильного ИИ» — идеи о том, что компьютерная программа, правильно запущенная, буквально понимает и думает. Представьте: вы сидите в запертой комнате, через щель вам передают карточки с китайскими иероглифами. У вас — детальная книга правил на вашем языке, которая говорит, как отвечать на каждую комбинацию. Снаружи выглядит, будто вы понимаете китайский. Но вы не понимаете ни слова.",
+              "Сёрл разграничил два уровня. {{em:Синтаксис}} — манипуляция символами по правилам (это может делать программа). {{em:Семантика}} — понимание смысла, который за этими символами стоит. Его тезис: синтаксис не порождает семантику. Сколько бы правильно ни были составлены правила, манипуляция символами — не понимание.",
+              "Аргумент вызвал волну ответов. Критики предложили возражение «системы»: может быть, понимает не человек в комнате, а вся система — человек плюс книга плюс комната. Сёрл ответил: тогда представьте, что вы всё это запомнили и гуляете по улице. Система теперь у вас в голове — и вы всё равно не понимаете китайского."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Правильный вывод из правильных входных данных — не то же самое, что понимание. Функциональная имитация и подлинное осмысление — разные вещи, даже если снаружи их не различить."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Языковая модель пишет текст, который вы не можете отличить от написанного человеком. Понимает ли она то, что пишет?",
+            "setup": null,
+            "options": [
+              {
+                "id": "yes",
+                "text": "Да — если результат неотличим, значит, процесс эквивалентен",
+                "is_wiser": false
+              },
+              {
+                "id": "no",
+                "text": "Нет — внешнее сходство не говорит ничего о внутреннем состоянии",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "Открытый вопрос философии сознания",
+              "big_stat_text": "не уверены",
+              "explanation": "Оба ответа обоснованы — и именно это делает эксперимент живым 45 лет спустя. Сёрл уверен, что «нет». Сторонники функционализма уверены, что «да, если поведение идентично». Нейробиологи, философы и разработчики ИИ до сих пор не пришли к единому ответу. Это один из немногих вопросов, где честное «не знаю» — самый точный ответ.",
+              "wisdom": "{{em:Тест Тьюринга проверяет поведение, но не проверяет понимание. Сёрл поставил вопрос: что именно мы хотим проверить?}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Аргумент Сёрла часто применяют как доказательство того, что ИИ «никогда не поймёт». Но сам Сёрл никогда не утверждал ничего о будущих возможностях ИИ — только о том, что синтаксис сам по себе не является семантикой. Вопрос о возможности понимания у системы с другой архитектурой остаётся открытым."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В разработке ИИ", "example": "Большая языковая модель генерирует медицинский диагноз. Отвечает ли кто-то за понимание этого диагноза — или только за правильность выхода?" },
+              { "label": "В образовании", "example": "Студент воспроизводит правильные ответы, не понимая принципов. Снаружи — успех. Внутри — китайская комната." },
+              { "label": "В корпоративной культуре", "example": "Сотрудник идеально соблюдает процессы и заполняет отчёты — но не понимает, зачем. Система работает правильно; понимания нет." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите процесс или инструмент, который вы используете регулярно, но не до конца понимаете. Вы работаете с ним как человек в китайской комнате — или вы понимаете механику изнутри? Какую разницу это делает в вашей работе?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "A program translates Chinese perfectly — fast, accurate, no errors. Does it understand a single word? John Searle asked the question differently: what if I was sitting inside the program, with a rulebook and a dictionary?" }
+        },
+        { "type": "title", "props": { "text": "The Chinese {{accent:Room}}" } },
+        { "type": "subtitle", "props": { "text": "Chinese Room · John Searle · 1980 · Behavioral and Brain Sciences" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/chinese_room.svg", "alt": "A person inside a box receiving Chinese characters through a slot and returning answers by following rules" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "John Searle proposed the experiment in 1980 as an argument against \"strong AI\" — the claim that a correctly programmed computer literally understands and thinks. Imagine: you're locked in a room. Through a slot, you receive cards with Chinese characters. You have a detailed rulebook in your own language telling you how to respond to each combination. From outside, it looks like you understand Chinese. But you don't understand a single word.",
+              "Searle draws a distinction between two levels. {{em:Syntax}} — manipulating symbols according to rules (something a program can do). {{em:Semantics}} — understanding the meaning those symbols carry. His thesis: syntax does not generate semantics. No matter how perfectly the rules are written, symbol manipulation is not understanding.",
+              "The argument sparked a wave of responses. Critics offered the \"systems reply\": perhaps the understanding belongs not to the person in the room but to the entire system — person plus rulebook plus room. Searle's counter: imagine you memorize everything and walk outside. The system is now in your head — and you still don't understand Chinese."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Correct output from correct input is not the same as understanding. Functional imitation and genuine comprehension are different things — even when they're indistinguishable from the outside."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A language model writes text you cannot distinguish from something written by a human. Does it understand what it's writing?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — if the output is indistinguishable, the process is equivalent", "is_wiser": false },
+              { "id": "no", "text": "No — external similarity says nothing about internal states", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "An open question in philosophy of mind",
+              "big_stat_text": "are unsure",
+              "explanation": "Both answers are defensible — which is precisely why the experiment remains alive 45 years on. Searle is confident the answer is no. Functionalists are confident it's yes, if the behavior is identical. Neuroscientists, philosophers, and AI researchers still disagree. This is one of the few questions where an honest \"I don't know\" is the most accurate answer.",
+              "wisdom": "{{em:The Turing Test checks behavior — but doesn't check understanding. Searle's question: what exactly are we trying to test?}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Searle's argument is often used as proof that AI \"can never understand.\" But Searle himself never claimed anything about AI's future capabilities — only that syntax is not, by itself, semantics. Whether a system with a different architecture could possess genuine understanding remains an open question."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In AI development", "example": "A large language model generates a medical diagnosis. Who is responsible for understanding that diagnosis — or is correctness of output enough?" },
+              { "label": "In education", "example": "A student reproduces the right answers without understanding the underlying principles. Externally: success. Internally: the Chinese room." },
+              { "label": "In organizations", "example": "An employee follows processes and fills reports perfectly — without understanding why. The system works correctly; comprehension is absent." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one process or tool you use regularly but don't fully understand. Are you working with it like the person in the Chinese room — or do you understand the mechanics from the inside? What difference does that make?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/chinese_room" }]
+}

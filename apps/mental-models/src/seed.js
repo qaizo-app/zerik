@@ -33,17 +33,40 @@ import veil             from '@content/seed/veil_of_ignorance.json';
 import banachTarski     from '@content/seed/banach_tarski.json';
 import pyrrhonism       from '@content/seed/pyrrhonism.json';
 import dunbar           from '@content/seed/dunbar_number.json';
+import milgram          from '@content/seed/milgram_experiment.json';
+import framingEffect    from '@content/seed/framing_effect.json';
+import strawMan         from '@content/seed/straw_man.json';
+import circleCompetence from '@content/seed/circle_of_competence.json';
+import sorites          from '@content/seed/sorites_paradox.json';
+import antifragile      from '@content/seed/antifragile.json';
+import cogDissonance    from '@content/seed/cognitive_dissonance.json';
+import bandwagon        from '@content/seed/bandwagon_effect.json';
+import chineseRoom      from '@content/seed/chinese_room.json';
+import falseDichotomy   from '@content/seed/false_dichotomy.json';
+import mapTerritory     from '@content/seed/map_and_territory.json';
+import russellParadox   from '@content/seed/russell_paradox.json';
+import mementoMori      from '@content/seed/stoic_memento_mori.json';
+import hawthorneEffect  from '@content/seed/hawthorne_effect.json';
+import statusQuoBias    from '@content/seed/status_quo_bias.json';
 
-// Карта уровней — приложение прокидывает её в CardStackScreen.resolveLevels.
-const deepCards = {
-  sunk_cost:   sunkCostDeep,
-  occam_razor: occamRazorDeep
-};
+// Все известные deep-карточки. Соглашение: id оканчивается на `_deep`,
+// привязка к parent — по prefix (вырезаем '_deep' из id).
+// Чтобы добавить новую: создать <id>_deep.json в content/seed/, импортировать
+// сверху и пушнуть в этот массив.
+const deepCardList = [
+  sunkCostDeep,
+  occamRazorDeep
+];
+const deepCardsByParentId = Object.fromEntries(
+  deepCardList
+    .filter(c => c?.id?.endsWith('_deep'))
+    .map(c => [c.id.replace(/_deep$/, ''), c])
+);
 
 export function resolveLevels(card) {
   if (!card) return [];
   const out = [{ level: 1, card }];
-  const deep = deepCards[card.id];
+  const deep = deepCardsByParentId[card.id];
   if (deep) out.push({ level: 2, card: deep });
   return out;
 }
@@ -51,6 +74,21 @@ export function resolveLevels(card) {
 // Сортировка по release_date — новейшие первыми. ContentService отдаёт
 // только release_date <= today, остальные показываются когда дата наступит.
 export const seedCards = [
+  statusQuoBias,     // 2026-05-27
+  hawthorneEffect,   // 2026-05-26
+  mementoMori,       // 2026-05-25
+  russellParadox,    // 2026-05-24
+  mapTerritory,      // 2026-05-23
+  falseDichotomy,    // 2026-05-22
+  chineseRoom,       // 2026-05-21
+  bandwagon,         // 2026-05-20
+  cogDissonance,     // 2026-05-19
+  antifragile,       // 2026-05-18
+  sorites,           // 2026-05-17
+  circleCompetence,  // 2026-05-16
+  strawMan,          // 2026-05-15
+  framingEffect,     // 2026-05-14
+  milgram,           // 2026-05-13
   dunbar,            // 2026-05-12
   pyrrhonism,        // 2026-05-11
   banachTarski,      // 2026-05-10

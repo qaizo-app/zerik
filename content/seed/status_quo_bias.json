@@ -1,0 +1,176 @@
+{
+  "id": "status_quo_bias",
+  "category": "cognitive_biases",
+  "release_number": 46,
+  "release_date": "2026-05-27",
+  "tags": ["status_quo", "decision_making", "inertia", "loss_aversion", "cognitive_biases"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/status_quo_bias.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "Исследователи предложили людям на выбор два тарифных плана телефонной связи. Когда один объявляли «текущим», его выбирали в два раза чаще — независимо от того, был ли он реально выгоднее. Люди не выбирали лучший вариант. Они выбирали привычный." }
+        },
+        { "type": "title", "props": { "text": "Предпочтение {{accent:статус-кво}}" } },
+        { "type": "subtitle", "props": { "text": "Status Quo Bias · Самуэльсон и Зекхаузер · 1988" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/status_quo_bias.svg", "alt": "Якорь, удерживающий фигуру на месте — инерция перед лицом перемен" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В 1988 году Уильям Самуэльсон и Ричард Зекхаузер описали предпочтение статус-кво: люди систематически отдают предпочтение текущему положению дел, даже когда объективно лучшая альтернатива лежит прямо перед ними. Эффект наблюдался при выборе пенсионных планов, медицинских страховок, инвестиций и даже марок автомобилей.",
+              "Почему так происходит? Изменение воспринимается как риск потери, а не возможность выигрыша. Потери ощущаются острее, чем эквивалентная выгода — это потеря-неприятие (loss aversion). Кроме того, отказ от перемен снимает ответственность: если что-то пойдёт не так при сохранении статус-кво, это «само по себе произошло»; если при смене — это моя ошибка. {{em:Бездействие кажется безопаснее действия, даже когда оно таковым не является.}}",
+              "Эффект усиливается при большом количестве альтернатив и при неопределённости. Именно поэтому банки держат людей на невыгодных ставках, компании — на устаревших инструментах, а люди — на нелюбимых должностях. Переключение требует усилий. Оставаться — нет."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Текущее положение дел воспринимается как точка отсчёта. Любое отклонение от неё ощущается как потеря — даже если оно объективно лучше. Это делает инерцию не ленью, а систематической ошибкой суждения."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Ваш банк предлагает вам перейти на новый тариф: та же стоимость, но в подарок — бесплатный год страховки. Вы переходите?",
+            "setup": null,
+            "options": [
+              {
+                "id": "switch",
+                "text": "Да — объективно выгоднее, зачем отказываться",
+                "is_wiser": true
+              },
+              {
+                "id": "stay",
+                "text": "Нет — лишний раз лучше ничего не менять",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "остаются на старом тарифе",
+              "explanation": "Большинство людей не переходят — несмотря на очевидную выгоду. Это и есть предпочтение статус-кво в действии. Стоимость переключения («надо заполнить форму», «а вдруг что-то пойдёт не так») переоценивается, а выгода — недооценивается. Банки это знают и рассчитывают именно на такую инерцию.",
+              "wisdom": "{{em:Если вы не выбираете — вы всё равно делаете выбор. Просто выбор бездействия.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Не каждое предпочтение текущего состояния — это искажение. Иногда статус-кво реально лучший вариант, а инерция — разумная экономия усилий. Проблема начинается, когда вы не можете объяснить, почему остаётесь, кроме как «так было всегда» или «не хочется разбираться». Это сигнал предпочтения статус-кво, а не рационального решения."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В финансах", "example": "Люди десятилетиями держат деньги на депозите с низкой ставкой, зная, что есть лучшие варианты. Стоимость переключения мизерная — но привычка сильнее." },
+              { "label": "В карьере", "example": "«Нелюбимая работа, зато стабильно» — классическое предпочтение статус-кво. Потенциальные потери при смене места ощущаются острее, чем реальные потери от ежедневного дискомфорта." },
+              { "label": "В продукте", "example": "Пользователи сопротивляются редизайну, даже когда новый интерфейс объективно удобнее. Потеря привычного расположения кнопок воспринимается болезненнее, чем выигрыш от новой логики." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одну область в своей жизни, где вы что-то не меняли уже больше года. Задайте себе вопрос: я остаюсь, потому что это действительно лучший вариант — или просто потому что так сложилось?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "Researchers offered people a choice between two phone plans. When one was labeled \"current,\" it was chosen twice as often — regardless of which was actually the better deal. People weren't picking the best option. They were picking the familiar one." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Status Quo}} Bias" } },
+        { "type": "subtitle", "props": { "text": "Status Quo Bias · Samuelson & Zeckhauser · 1988" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/status_quo_bias.svg", "alt": "An anchor holding a figure in place — inertia in the face of change" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In 1988, William Samuelson and Richard Zeckhauser described the status quo bias: people systematically prefer the current state of affairs, even when an objectively better alternative is right in front of them. The effect appeared in choices about pension plans, health insurance, investments, and even car brands.",
+              "Why does this happen? Change is perceived as the risk of loss, not the chance of gain. Losses feel sharper than equivalent gains — this is loss aversion. There's also a responsibility effect: if things go wrong while you maintained the status quo, it \"just happened\"; if things go wrong after you switched, it's your fault. {{em:Inaction feels safer than action, even when it isn't.}}",
+              "The effect grows stronger with more alternatives and more uncertainty. This is why banks keep people on unfavorable rates, companies cling to outdated tools, and people stay in jobs they don't like. Switching costs effort. Staying doesn't."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The current state is treated as the reference point. Any deviation from it feels like a loss — even when it's objectively better. This turns inertia from laziness into a systematic error of judgment."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your bank offers to switch you to a new plan: same price, but with a free year of insurance included. Do you switch?",
+            "setup": null,
+            "options": [
+              { "id": "switch", "text": "Yes — it's objectively better, why wouldn't I?", "is_wiser": true },
+              { "id": "stay", "text": "No — better not to change things unnecessarily", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "stay on the old plan",
+              "explanation": "Most people don't switch — despite the obvious benefit. That's status quo bias in action. The switching cost (\"I'd have to fill out a form,\" \"what if something goes wrong\") is overweighted, and the gain is underweighted. Banks know this and count on exactly that inertia.",
+              "wisdom": "{{em:If you don't choose — you're still making a choice. Just the choice to do nothing.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Not every preference for the current state is a bias. Sometimes the status quo really is the best option, and inertia is a reasonable way to conserve effort. The problem starts when you can't explain why you're staying other than \"this is how it's always been\" or \"I don't want to deal with it.\" That's the bias talking, not a reasoned decision."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In finance", "example": "People keep money in low-yield accounts for decades, knowing better options exist. The switching cost is trivial — but habit is stronger." },
+              { "label": "In career", "example": "\"A job I don't love, but at least it's stable\" — classic status quo bias. The potential losses of switching feel sharper than the real, daily cost of staying." },
+              { "label": "In product", "example": "Users resist redesigns even when the new interface is objectively better. Losing familiar button placement feels worse than gaining better logic." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one area of your life you haven't changed in over a year. Ask: am I staying because this is genuinely the best option — or just because it's how things ended up?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/status_quo_bias" }]
+}

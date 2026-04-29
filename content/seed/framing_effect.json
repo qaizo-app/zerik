@@ -1,0 +1,230 @@
+{
+  "id": "framing_effect",
+  "category": "cognitive_biases",
+  "release_number": 33,
+  "release_date": "2026-05-14",
+  "tags": ["framing", "kahneman", "tversky", "decision_making", "prospect_theory"],
+  "difficulty": 2,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/framing_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Когнитивное искажение · №9" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Два хирурга описывают одну операцию. Первый говорит: «Выживаемость — 90%». Второй: «Смертность — 10%». Пациенты достоверно чаще выбирают первого — хотя обе фразы говорят одно и то же."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "Эффект {{accent:фрейминга}}" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Framing Effect · A. Tversky & D. Kahneman · 1981" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/framing_effect.svg",
+            "alt": "Один и тот же стакан воды, представленный двумя разными рамками"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В 1981 году Амос Тверски и Даниэль Канеман опубликовали исследование о принятии решений. Участникам предложили выбрать программу борьбы с эпидемией: «программа А спасёт 200 человек» против «программа Б: 1/3 шанс спасти всех, 2/3 — никого». 72% выбрали А. Затем те же варианты переформулировали: «при программе А погибнут 400» против «программа Б: 1/3 шанс никто не погибнет». Теперь 78% выбрали Б. Математически — это один и тот же выбор.",
+              "Фрейминг работает потому, что мозг не обрабатывает информацию в абсолютных величинах. Он реагирует на {{em:относительные изменения от точки отсчёта}}. «Потерять 400» больно. «Спасти 200» приятно. То, что результат идентичен, остаётся за кадром.",
+              "Эффект встречается везде, где есть выбор и язык. Йогурт с надписью «80% без жира» продаётся лучше, чем с «20% жира». Штраф за позднюю оплату хуже воспринимается, чем «скидка за раннюю». Один и тот же факт — разные решения."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Решения определяются не только фактами, но и тем, как факты поданы. Рамка меняет выбор — даже когда смысл остаётся прежним."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вам предлагают инвестицию. Что звучит привлекательнее?",
+            "setup": "Оба варианта описывают одинаковые инвестиции с одинаковой доходностью.",
+            "options": [
+              {
+                "id": "gain",
+                "text": "«В 80% случаев вы заработаете 1000 долларов»",
+                "is_wiser": false
+              },
+              {
+                "id": "loss",
+                "text": "«В 20% случаев вы ничего не получите»",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают «выиграть»",
+              "explanation": "Большинство выбирает первый вариант — хотя это тот же шанс, только по-другому сформулированный. Осознание того, что вы реагируете на формулировку, а не на суть — первый шаг к более независимым решениям.",
+              "wisdom": "{{em:Прежде чем принять решение — переформулируйте его сами.}} Если смысл тот же, но ощущение изменилось — вы поймали фрейм.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Фрейминг нельзя полностью «выключить» — он встроен в язык. Зная об эффекте, вы не становитесь иммунны к нему. Но вы можете научиться замечать его и сознательно переформулировать условия задачи перед решением."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              {
+                "label": "В переговорах",
+                "example": "«Нам придётся сократить бюджет» звучит иначе, чем «мы предлагаем оптимизированный план». Обе фразы — о том же сокращении."
+              },
+              {
+                "label": "В маркетинге",
+                "example": "«95% без холестерина» на упаковке масла. Масло никогда и не содержало холестерин — но фрейм создаёт иллюзию преимущества."
+              },
+              {
+                "label": "В отношениях",
+                "example": "«Ты мог бы делать это реже» против «ты слишком часто делаешь это» — одна жалоба, два разных ощущения у слушателя."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одно решение, которое вам предстоит принять, и перепишите его условия в противоположном фрейме. Если оно сформулировано через потери — переформулируйте через приобретения, и наоборот. Посмотрите, изменилось ли ощущение."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        {
+          "type": "category_label",
+          "props": { "text": "Cognitive Bias · №9" }
+        },
+        {
+          "type": "hook",
+          "props": {
+            "text": "Two surgeons describe the same procedure. One says: \"There's a 90% survival rate.\" The other: \"One in ten patients doesn't make it.\" Patients reliably prefer the first surgeon — even though both are saying exactly the same thing."
+          }
+        },
+        {
+          "type": "title",
+          "props": { "text": "The {{accent:Framing}} Effect" }
+        },
+        {
+          "type": "subtitle",
+          "props": { "text": "Framing Effect · A. Tversky & D. Kahneman · 1981" }
+        },
+        {
+          "type": "illustration",
+          "props": {
+            "ref": "bundle://illustrations/framing_effect.svg",
+            "alt": "The same glass of water shown through two different frames"
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In 1981, Amos Tversky and Daniel Kahneman published a study on how people make choices under uncertainty. Participants picked between two disease-response programs: \"Program A saves 200 people\" vs. \"Program B: one-third chance of saving everyone, two-thirds chance of saving no one.\" 72% chose A. The same options were then reframed: \"Program A: 400 people will die\" vs. \"Program B: one-third chance nobody dies.\" Now 78% chose B. Same math. Different answer.",
+              "Framing works because the brain doesn't process information in absolute terms. It responds to {{em:changes relative to a reference point}}. \"Losing 400\" is painful. \"Saving 200\" is pleasant. That they produce identical outcomes doesn't register until you stop and do the arithmetic.",
+              "The effect shows up everywhere language shapes choice. Yogurt labeled \"80% fat-free\" sells better than \"20% fat.\" A penalty for late payment is worse received than a discount for early payment. Same fact, different frame — different decision."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Decisions are shaped not just by facts but by how facts are presented. The frame changes the choice — even when the underlying reality is identical."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're offered an investment. Which sounds more appealing?",
+            "setup": "Both options describe the same investment with the same expected return.",
+            "options": [
+              {
+                "id": "gain",
+                "text": "\"In 80% of scenarios you'll earn $1,000\"",
+                "is_wiser": false
+              },
+              {
+                "id": "loss",
+                "text": "\"In 20% of scenarios you'll earn nothing\"",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "pick the gain frame",
+              "explanation": "Most people pick the first — even though it describes the same odds, just differently worded. Noticing that you're reacting to the label rather than the substance is the first step toward more independent decisions.",
+              "wisdom": "{{em:Before deciding, rewrite the problem yourself.}} If the meaning stays the same but the feeling changes — you've caught the frame.",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "You can't fully turn framing off — it's built into language. Knowing about the effect doesn't make you immune. But it gives you a tool: deliberately restating a problem in the opposite frame before deciding."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              {
+                "label": "In negotiations",
+                "example": "\"We'll need to cut the budget\" lands differently than \"we're offering a leaner plan.\" Both describe the same reduction."
+              },
+              {
+                "label": "In marketing",
+                "example": "\"95% cholesterol-free\" on a bottle of vegetable oil. Oil never had cholesterol — but the frame manufactures a health halo."
+              },
+              {
+                "label": "In relationships",
+                "example": "\"Could you do that a bit less often?\" vs. \"You do that way too much\" — one complaint, two very different receptions."
+              }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one decision you need to make today and rewrite the options in the opposite frame. If it's framed as a loss, rewrite it as a gain — and vice versa. Notice whether your gut reaction changes."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/framing_effect" }]
+}

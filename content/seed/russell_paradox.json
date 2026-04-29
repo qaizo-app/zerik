@@ -1,0 +1,152 @@
+{
+  "id": "russell_paradox",
+  "category": "paradoxes",
+  "release_number": 43,
+  "release_date": "2026-05-24",
+  "tags": ["russell", "logic", "set_theory", "foundations", "mathematics"],
+  "difficulty": 4,
+  "reading_time_sec": 195,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/russell_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "В маленьком городе живёт один брадобрей. Он бреет всех, кто не бреется сам. Только их. Кто бреет самого брадобрея?" }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Рассела}}" } },
+        { "type": "subtitle", "props": { "text": "Russell's Paradox · Bertrand Russell · 1901" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/russell_paradox.svg", "alt": "Самозамкнутое кольцо — множество, которое ссылается само на себя" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Бертран Рассел обнаружил парадокс в 1901 году, разбирая основания математики Готлоба Фреге. Фреге только что завершил многолетний труд по логицизму — попытке вывести всю математику из чистой логики. В рукопись уже шли в печать. Рассел прислал письмо с одной формулой: рассмотрим множество всех множеств, которые не содержат сами себя. Содержит ли оно само себя?",
+              "Если содержит — оно должно себя исключить (по определению). Если не содержит — оно должно себя включить (по определению). Противоречие. {{em:Фреге, по собственным словам, пришёл в ужас.}} Его здание рухнуло. Рассел вспоминал, что провёл несколько месяцев в интеллектуальном оцепенении, пытаясь найти выход.",
+              "Выход был найден — через теорию типов и новую аксиоматику (Цермело-Френкель). Суть: нельзя формировать множества произвольно — нужны ограничения на то, что может входить в множество. Парадокс Рассела показал, что интуиция о «произвольных коллекциях» ведёт к противоречию. Это перестроило всю математику XX века."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Самореференция — ссылка системы на саму себя — при определённых условиях ведёт к неразрешимым противоречиям. Это не частная математическая проблема, а фундаментальное свойство формальных систем."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Брадобрей бреет всех, кто не бреется сам — и только их. Бреет ли брадобрей сам себя?",
+            "hint": "Попробуйте ответить «да» и «нет» — и посмотрите, что следует из каждого ответа.",
+            "user_prompt": "Думаю, знаю ответ — открыть разгадку",
+            "reveal_text": "Если брадобрей бреет себя — он бреет кого-то, кто бреется сам. Но он бреет только тех, кто не бреется сам. Противоречие. Если не бреет — он относится к тем, кто не бреется сам. Но тогда он должен брить их по определению. Снова противоречие. Единственный вывод: такого брадобрея не может существовать. Самореферентное определение порождает логический коллапс.",
+            "intuition_trap": "Интуиция ищет «правильный ответ» — да или нет. Парадокс говорит: сама постановка вопроса разрушает себя изнутри. Это не загадка с ответом — это демонстрация предела."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Рассел не просто придумал головоломку. Он разрушил одну из самых серьёзных математических программ своего времени. Вывод для практики: если в системе правил есть самореферентность — проверьте, не создаёт ли она противоречие. Юридические, организационные, программные системы могут содержать аналоги парадокса Рассела."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В праве", "example": "«Закон, объявляющий недействительными все законы» — самореферентная конструкция, которая разрушает сама себя. Законодательство тщательно избегает таких формулировок." },
+              { "label": "В программировании", "example": "Бесконечная рекурсия — программный аналог парадокса Рассела. Функция, которая вызывает сама себя без базового случая, зависает." },
+              { "label": "В менеджменте", "example": "«Комитет, который контролирует все комитеты, включая себя». Кто проверяет проверяющих? Это реальная управленческая проблема, а не только логическая." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одно правило или политику в вашей работе, которая применяется ко «всем». Включает ли она себя? Что происходит, если применить это правило к самому правилу?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "In a small town there is exactly one barber. He shaves all the men who don't shave themselves — and only those men. Who shaves the barber?" }
+        },
+        { "type": "title", "props": { "text": "{{accent:Russell's}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Russell's Paradox · Bertrand Russell · 1901" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/russell_paradox.svg", "alt": "A self-referential loop — a set that refers to itself" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Bertrand Russell discovered the paradox in 1901 while examining the logical foundations of Gottlob Frege's mathematics. Frege had just completed years of work on logicism — the project of deriving all of mathematics from pure logic. His manuscript was heading to press. Russell sent a letter containing one formula: consider the set of all sets that do not contain themselves. Does this set contain itself?",
+              "If it does contain itself — it must exclude itself by definition. If it doesn't contain itself — it must include itself by definition. A contradiction. {{em:Frege, by his own account, was appalled.}} His edifice collapsed. Russell spent months in intellectual paralysis trying to find an escape.",
+              "An escape was found — through type theory and new axiomatic systems (Zermelo-Fraenkel). The principle: you cannot form sets arbitrarily; there must be restrictions on what can belong to a set. Russell's paradox showed that intuitive \"arbitrary collections\" lead to contradiction. It restructured all of 20th-century mathematics."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Self-reference — a system referring to itself — under certain conditions produces irresolvable contradictions. This isn't a niche mathematical problem; it's a fundamental property of formal systems."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "The barber shaves all men who don't shave themselves — and only them. Does the barber shave himself?",
+            "hint": "Try answering \"yes\" and \"no\" — and see what follows from each.",
+            "user_prompt": "I have a thought — reveal the answer",
+            "reveal_text": "If the barber shaves himself — he shaves someone who shaves himself. But he only shaves those who don't. Contradiction. If he doesn't shave himself — he belongs to those who don't shave themselves. But then he must shave them, by definition. Contradiction again. The only conclusion: such a barber cannot exist. The self-referential definition produces a logical collapse.",
+            "intuition_trap": "Intuition looks for \"the right answer\" — yes or no. The paradox says: the question destroys itself from the inside. This isn't a puzzle with a solution — it's a demonstration of a limit."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Russell didn't just invent a puzzle. He demolished one of the most serious mathematical programs of his era. For practical purposes: if a system of rules contains self-reference — check whether it produces a contradiction. Legal, organizational, and software systems can all harbor their own versions of Russell's Paradox."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In law", "example": "\"A law that invalidates all laws\" — a self-referential structure that destroys itself. Legislation carefully avoids such formulations." },
+              { "label": "In programming", "example": "Infinite recursion is the software analog of Russell's Paradox. A function that calls itself with no base case will hang." },
+              { "label": "In management", "example": "\"The committee that oversees all committees, including itself.\" Who audits the auditors? A real governance problem, not just a logical one." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one rule or policy in your work that applies to \"everyone.\" Does it include itself? What happens when you apply the rule to the rule itself?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/russell_paradox" }]
+}

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F0FDF4"/>
+
+  <!-- === LEFT: SCHEMATIC MAP === -->
+  <!-- Map card background -->
+  <rect x="20" y="40" width="155" height="220" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Map grid lines -->
+  <line x1="50" y1="40" x2="50" y2="260" stroke="#E5E7EB" stroke-width="0.8"/>
+  <line x1="90" y1="40" x2="90" y2="260" stroke="#E5E7EB" stroke-width="0.8"/>
+  <line x1="130" y1="40" x2="130" y2="260" stroke="#E5E7EB" stroke-width="0.8"/>
+  <line x1="20" y1="90" x2="175" y2="90" stroke="#E5E7EB" stroke-width="0.8"/>
+  <line x1="20" y1="150" x2="175" y2="150" stroke="#E5E7EB" stroke-width="0.8"/>
+  <line x1="20" y1="210" x2="175" y2="210" stroke="#E5E7EB" stroke-width="0.8"/>
+
+  <!-- Map roads -->
+  <line x1="30" y1="120" x2="165" y2="120" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="97" y1="60" x2="97" y2="250" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="30" y1="180" x2="165" y2="180" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Map blocks (city squares) -->
+  <rect x="35" y="130" width="50" height="40" rx="3" fill="#CBD5E1" opacity="0.8"/>
+  <rect x="110" y="130" width="50" height="40" rx="3" fill="#CBD5E1" opacity="0.8"/>
+  <rect x="35" y="65" width="50" height="45" rx="3" fill="#CBD5E1" opacity="0.8"/>
+  <rect x="110" y="65" width="50" height="45" rx="3" fill="#CBD5E1" opacity="0.8"/>
+  <rect x="35" y="190" width="50" height="48" rx="3" fill="#CBD5E1" opacity="0.8"/>
+  <rect x="110" y="190" width="50" height="48" rx="3" fill="#CBD5E1" opacity="0.8"/>
+
+  <!-- "MAP" label -->
+  <text x="97" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#6B7280" font-style="italic">Карта</text>
+
+  <!-- === DIVIDER with ≠ symbol === -->
+  <text x="200" y="158" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#6EE7B7">≠</text>
+
+  <!-- === RIGHT: ORGANIC LANDSCAPE === -->
+  <!-- Landscape background -->
+  <rect x="225" y="40" width="155" height="220" rx="10" fill="#D1FAE5" stroke="#A7F3D0" stroke-width="1.5"/>
+
+  <!-- Hills -->
+  <ellipse cx="280" cy="180" rx="60" ry="45" fill="#6EE7B7" opacity="0.6"/>
+  <ellipse cx="340" cy="200" rx="45" ry="35" fill="#34D399" opacity="0.5"/>
+
+  <!-- Tree 1 -->
+  <line x1="255" y1="200" x2="255" y2="230" stroke="#065F46" stroke-width="3"/>
+  <ellipse cx="255" cy="188" rx="18" ry="22" fill="#059669" opacity="0.85"/>
+
+  <!-- Tree 2 -->
+  <line x1="295" y1="170" x2="295" y2="200" stroke="#065F46" stroke-width="3"/>
+  <ellipse cx="295" cy="157" rx="15" ry="18" fill="#10B981" opacity="0.85"/>
+
+  <!-- Tree 3 -->
+  <line x1="350" y1="190" x2="350" y2="215" stroke="#065F46" stroke-width="2.5"/>
+  <ellipse cx="350" cy="180" rx="13" ry="16" fill="#059669" opacity="0.8"/>
+
+  <!-- River/path winding organically -->
+  <path d="M230 240 Q260 220 280 215 Q310 205 340 230 Q360 240 375 250" stroke="#93C5FD" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.75"/>
+
+  <!-- Sun -->
+  <circle cx="358" cy="68" r="18" fill="#FDE68A" opacity="0.9"/>
+  <line x1="358" y1="46" x2="358" y2="42" stroke="#FDE68A" stroke-width="2"/>
+  <line x1="358" y1="90" x2="358" y2="94" stroke="#FDE68A" stroke-width="2"/>
+  <line x1="336" y1="68" x2="332" y2="68" stroke="#FDE68A" stroke-width="2"/>
+  <line x1="380" y1="68" x2="384" y2="68" stroke="#FDE68A" stroke-width="2"/>
+
+  <!-- Clouds -->
+  <ellipse cx="248" cy="65" rx="22" ry="12" fill="white" opacity="0.8"/>
+  <ellipse cx="265" cy="60" rx="15" ry="10" fill="white" opacity="0.8"/>
+  <ellipse cx="235" cy="63" rx="12" ry="9" fill="white" opacity="0.8"/>
+
+  <!-- "TERRITORY" label -->
+  <text x="302" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#065F46" font-style="italic">Территория</text>
+</svg>

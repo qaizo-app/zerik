@@ -1,0 +1,152 @@
+{
+  "id": "sorites_paradox",
+  "category": "paradoxes",
+  "release_number": 36,
+  "release_date": "2026-05-17",
+  "tags": ["logic", "vagueness", "language", "philosophy", "eubulides"],
+  "difficulty": 3,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/sorites_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "Одно зерно — не куча. Два — тоже. Добавьте ещё. И ещё. Где именно зёрна превратились в кучу? Если каждое одно зерно разницы не делает — откуда вообще берётся куча?" }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:кучи}}" } },
+        { "type": "subtitle", "props": { "text": "Sorites Paradox · Eubulides of Miletus · ок. IV в. до н.э." } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/sorites_paradox.svg", "alt": "Нарастающая россыпь точек, которая постепенно превращается в кучу" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Евбулид из Милета сформулировал парадокс около 2400 лет назад, и он до сих пор не решён окончательно. Исходная логика безупречна: одно зерно не создаёт кучу. Добавление одного зерна к «не-куче» тоже не создаёт кучи. Следовательно, никакое количество зёрен не образует кучи. Но куча существует.",
+              "Это не игра слов и не детский вопрос. Парадокс указывает на фундаментальную проблему языка: большинство наших понятий {{em:размыты по краям}}. Лысый — это сколько волос? Старый — это с какого возраста? Богатый — с какой суммы? Мы используем эти слова без труда, пока не попробуем провести точную границу.",
+              "Современная логика предлагает несколько выходов: нечёткую логику (fuzzy logic), суперваливационизм, градуированные предикаты. Ни одно решение не является бесспорным. Философы до сих пор спорят — не потому что вопрос прост, а потому что вопрос о природе языка и реальности сложен по-настоящему."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Большинство понятий, которыми мы пользуемся, не имеют чётких границ. Это не дефект языка — это его нормальная черта. Но там, где важна точность, размытость становится проблемой."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Лысый человек имеет 0 волос. Человек с одним волосом тоже лысый? А с двумя? Добавляйте по одному — в какой момент появляется «не лысый»?",
+            "hint": "Попробуйте назвать конкретное число волос, при котором человек перестаёт быть лысым.",
+            "user_prompt": "Думаю, знаю ответ — открыть разгадку",
+            "reveal_text": "Любое конкретное число будет выглядеть произвольным: почему 1000 — уже не лысый, а 999 — ещё лысый? Это и есть соритический парадокс: там, где понятие размыто, любая граница кажется искусственной. Философы называют такие понятия «вагусными» (vague predicates). Выхода нет — если не отказаться от самой идеи чёткой границы.",
+            "intuition_trap": "Интуиция подсказывает, что граница «где-то есть». Но именно это интуитивное ощущение и создаёт парадокс: если граница есть, где именно?"
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Размытость понятий — не только философская проблема. Суды решают, было ли действие «разумным». Регуляторы определяют, является ли компания «доминирующей» на рынке. Врачи ставят диагноз «клинической депрессии». Все эти понятия — соритические, и все споры вокруг них частично являются спорами о том, где провести границу."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В праве", "example": "Что такое «достаточная доказательная база»? Каждое отдельное доказательство может быть недостаточным, но вместе — достаточны. Где граница?" },
+              { "label": "В медицине", "example": "«Умеренное» употребление алкоголя. «Лёгкая» форма болезни. Эти термины имеют клиническое значение, но не имеют абсолютных границ." },
+              { "label": "В бизнесе", "example": "Стартап превращается в корпорацию. Инновационная компания становится бюрократической. Момент перехода никогда не очевиден в реальном времени." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одно понятие, которое вы регулярно используете в работе или жизни («успешный», «готово», «достаточно»). Попробуйте дать ему точное определение. Где проходит граница — и почему именно там?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "One grain of sand isn't a heap. Add one more — still not a heap. Keep going. At what exact moment does it become a heap? And if no single grain makes the difference, where does the heap come from?" }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Heap}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Sorites Paradox · Eubulides of Miletus · c. 4th century BC" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/sorites_paradox.svg", "alt": "A growing scatter of dots gradually forming a heap" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Eubulides of Miletus posed the paradox around 2,400 years ago, and it remains unsettled. The logic is airtight: one grain doesn't make a heap. Adding one grain to a non-heap still doesn't make a heap. Therefore, no number of grains makes a heap. But heaps exist.",
+              "This is not wordplay or a trivial puzzle. It points at a fundamental property of language: most of our concepts {{em:blur at the edges}}. How many hairs make someone not bald? At what age does someone become old? From what income level are you rich? We use these words effortlessly until we try to draw a precise line.",
+              "Modern logic offers responses — fuzzy logic, supervaluationism, degree-theoretic semantics. None is decisive. Philosophers still argue, not because the question is simple, but because questions about language and reality are genuinely hard."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Most concepts we use daily have no sharp boundaries. This isn't a flaw in language — it's a normal feature of it. But where precision matters, vagueness becomes a real problem."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "A bald person has zero hairs. Is someone with one hair also bald? With two? Keep adding — at what exact number does \"not bald\" begin?",
+            "hint": "Try naming a specific number of hairs at which someone stops being bald.",
+            "user_prompt": "I have a thought — reveal the answer",
+            "reveal_text": "Any specific number will seem arbitrary: why is 1,000 hairs \"not bald\" while 999 is still \"bald\"? That's the sorites paradox: wherever a concept is vague, any boundary feels invented. Philosophers call these \"vague predicates.\" There's no clean exit — unless you abandon the idea of a sharp boundary altogether.",
+            "intuition_trap": "Intuition insists the line must exist somewhere. That's exactly what creates the paradox: if the line exists, where — precisely — is it?"
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Vagueness isn't only a philosophical problem. Courts decide what counts as \"reasonable\" conduct. Regulators determine whether a company is \"dominant\" in a market. Doctors diagnose \"clinical depression.\" All of these are sorites concepts — and arguments about them are partly arguments about where to draw the line."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In law", "example": "What constitutes \"sufficient evidence\"? Each piece may be insufficient, but together they may be enough. Where's the threshold?" },
+              { "label": "In medicine", "example": "\"Moderate\" alcohol use. A \"mild\" form of an illness. These terms carry clinical weight — but no absolute boundary." },
+              { "label": "In business", "example": "A startup becomes a corporation. An innovative company turns bureaucratic. The transition moment is never visible in real time." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one concept you use regularly at work or in life — \"successful,\" \"done,\" \"good enough.\" Try giving it a precise definition. Where exactly is the line — and why there?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/sorites_paradox" }]
+}

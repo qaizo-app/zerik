@@ -1,0 +1,184 @@
+{
+  "id": "stoic_memento_mori",
+  "category": "book_idea",
+  "release_number": 44,
+  "release_date": "2026-05-25",
+  "tags": ["stoicism", "marcus_aurelius", "mortality", "purpose", "meditations"],
+  "difficulty": 2,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/stoic_memento_mori.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №2" } },
+        {
+          "type": "hook",
+          "props": { "text": "Марк Аврелий правил крупнейшей империей мира и писал себе в личный дневник: «Скоро ты забудешь всё. Скоро забудут тебя». Не как самобичевание — как инструмент. Напоминание о смерти делало его дни конкретнее и важнее." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Memento}} Mori" } },
+        { "type": "subtitle", "props": { "text": "Помни о смерти · Марк Аврелий · «Размышления» · ок. 170 г. н.э." } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/stoic_memento_mori.svg", "alt": "Песочные часы с текущим песком — конечность и ясность" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Смерть Александра Македонского и смерть его мула — одна и та же вещь. Либо их поглотило одно и то же, либо они рассеялись одинаково.",
+            "book_title": "Размышления (Наедине с собой)",
+            "author": "Марк Аврелий",
+            "year": "ок. 170 г. н.э.",
+            "chapter": "VI, 24",
+            "application": "Не уравнивание, а освобождение: если смерть одинакова для всех — то жизнь стоит прожить по-своему, а не по чужой мерке."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Стоики практиковали memento mori — буквально «помни, что умрёшь» — не как мрачный ритуал, а как когнитивный инструмент. Регулярное обращение к мысли о конечности снимало мелкие тревоги, ставило на место амбиции, обнажало, что действительно важно. Сенека советовал заканчивать каждый день мыслью: «Проживи этот день, как если бы он мог быть последним. Не в страхе — в благодарности».",
+              "Современная психология подтверждает логику стоиков. Теория управления страхом смерти (Terror Management Theory, Greenberg, Solomon & Pyszczynski, 1986) показала: осознание смертности глубоко влияет на мотивацию, ценности и поведение. Люди, осознающие конечность, принимают более осмысленные долгосрочные решения. {{em:Страх смерти — не проблема, которую нужно избегать; это ресурс, который можно использовать.}}",
+              "Марк Аврелий писал «Размышления» не для публики — это были личные заметки, упражнения для ума. Он был императором, у него была вся возможная власть, и он напоминал себе: власть тоже конечна. Пирр завоевал полмира — и что? Александр тоже. И Цезарь. «Они все умерли» — у Аврелия это не трагедия, а освобождающий факт."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Памятование о смерти — не мрачность, а ясность. Осознание конечности обнажает, что реально ценно, и снимает груз того, что таковым не является."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Узнав, что жить вам осталось пять лет — что вы изменили бы в своей нынешней жизни?",
+            "setup": null,
+            "options": [
+              {
+                "id": "lot",
+                "text": "Очень многое — нынешняя жизнь не соответствует тому, что для меня важно",
+                "is_wiser": false
+              },
+              {
+                "id": "little",
+                "text": "Немногое — я в основном уже делаю то, что считаю важным",
+                "is_wiser": false
+              }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "изменили бы многое",
+              "explanation": "Оба ответа честны — и оба полезны. Если бы изменили многое — это сигнал к действию прямо сейчас: пять лет когда-нибудь и вправду наступят. Если немногое — редкое и ценное. Memento mori — это не приговор, а вопрос: ты живёшь своей жизнью или откладываешь её?",
+              "wisdom": "{{em:Смерть — это зеркало. Она показывает, что ты на самом деле ценишь.}} — перефраз Сенеки",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В приоритетах", "example": "Стив Джобс каждое утро задавал себе вопрос: «Если бы сегодня был последний день моей жизни — хотел бы я делать то, что планирую сегодня?» Не анекдот — реальная практика." },
+              { "label": "В отношениях", "example": "Люди, прошедшие через опыт близкой смерти, как правило, ценят близких иначе. Memento mori — способ не ждать этого опыта." },
+              { "label": "В работе", "example": "«Надгробная речь-тест» Bezos: можете ли вы объяснить своё решение в контексте того, как хотите быть запомнены? Это прикладная версия того же инструмента." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Проведите одну минуту с мыслью о том, что этот день конечен. Не в страхе — в любопытстве. Что сегодня было бы важным сделать, если бы вы держали это в уме?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №2" } },
+        {
+          "type": "hook",
+          "props": { "text": "Marcus Aurelius ruled the largest empire in the world and wrote to himself in a private journal: \"Soon you will have forgotten everything. Soon everything will have forgotten you.\" Not as self-punishment — as a tool. Remembering death made his days sharper and more purposeful." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Memento}} Mori" } },
+        { "type": "subtitle", "props": { "text": "Remember You Will Die · Marcus Aurelius · Meditations · c. 170 AD" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/stoic_memento_mori.svg", "alt": "An hourglass with sand flowing — finitude and clarity" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Alexander the Great and his mule driver both died and the same thing happened to both. Either they were absorbed into the same generative principle of the universe, or they were both scattered into atoms.",
+            "book_title": "Meditations",
+            "author": "Marcus Aurelius",
+            "year": "c. 170 AD",
+            "chapter": "VI, 24",
+            "application": "Not equalization — liberation. If death is the same for everyone, then life is worth living on your own terms, not someone else's."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The Stoics practiced memento mori — literally, \"remember that you will die\" — not as a gloomy ritual, but as a cognitive tool. Regularly returning to the thought of finitude dissolved petty anxieties, reoriented ambitions, and made visible what actually mattered. Seneca advised ending each day with the thought: \"Live this day as if it could be your last. Not in fear — in gratitude.\"",
+              "Modern psychology validates the Stoic logic. Terror Management Theory (Greenberg, Solomon & Pyszczynski, 1986) showed that mortality awareness profoundly influences motivation, values, and behavior. People who hold their finitude in mind make more meaningful long-term decisions. {{em:The fear of death isn't a problem to be avoided; it's a resource that can be used.}}",
+              "Marcus Aurelius wrote the Meditations not for an audience — they were private notes, exercises for the mind. He was emperor, with every possible power, and he reminded himself: power is finite too. Pyrrhus conquered half the world — so what? Alexander did too. And Caesar. \"They all died\" — for Aurelius, this isn't tragedy. It's a liberating fact."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Remembering death isn't morbidity — it's clarity. Awareness of finitude reveals what's genuinely valuable and removes the weight of what isn't."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "If you learned you had five years left to live — what would you change about your current life?",
+            "setup": null,
+            "options": [
+              { "id": "lot", "text": "A lot — my current life doesn't match what I actually care about", "is_wiser": false },
+              { "id": "little", "text": "Not much — I'm mostly already doing what I consider important", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "would change a lot",
+              "explanation": "Both answers are honest — and both are useful. If you'd change a lot: that's a signal to act now. Five years will arrive eventually. If you'd change little: that's rare and worth recognizing. Memento mori isn't a verdict — it's a question: are you living your life, or deferring it?",
+              "wisdom": "{{em:Death is a mirror. It shows you what you actually value.}} — paraphrase of Seneca",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In priorities", "example": "Every morning Steve Jobs asked himself: \"If today were the last day of my life, would I want to do what I'm about to do?\" Not apocryphal — a real daily practice." },
+              { "label": "In relationships", "example": "People who've experienced a close brush with death typically value those around them differently. Memento mori is a way to not wait for that experience." },
+              { "label": "At work", "example": "Bezos's \"regret minimization framework\": imagine you're 80 looking back. Would you regret not trying? A practical version of the same tool." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Spend one minute with the thought that this day is finite. Not in fear — in curiosity. What would feel important to do today if you kept that in mind?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/stoic_memento_mori" }]
+}
