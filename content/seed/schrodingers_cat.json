@@ -1,0 +1,154 @@
+{
+  "id": "schrodingers_cat",
+  "category": "thought_experiments",
+  "release_number": 47,
+  "release_date": "2026-05-28",
+  "tags": ["quantum", "schrodinger", "superposition", "observation", "physics"],
+  "difficulty": 3,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/schrodingers_cat.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "В 1935 году Эрвин Шрёдингер описал кошку в закрытой коробке рядом с радиоактивным атомом. Пока коробка закрыта, атом одновременно распался и не распался — а значит, кошка одновременно жива и мертва. Шрёдингер придумал это, чтобы показать абсурдность квантовой механики. Физики восприняли всерьёз." }
+        },
+        { "type": "title", "props": { "text": "Кошка {{accent:Шрёдингера}}" } },
+        { "type": "subtitle", "props": { "text": "Schrödinger's Cat · Эрвин Шрёдингер · 1935" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/schrodingers_cat.svg", "alt": "Закрытая коробка с вопросительным знаком — кошка одновременно жива и мертва" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Квантовая механика утверждает: частица не имеет определённого состояния до момента измерения. Электрон одновременно находится в нескольких местах. Это «суперпозиция» работает для субатомных частиц. Шрёдингер перенёс её на макроуровень: если квантовая механика применима везде, то система «атом + детектор + кошка» тоже находится в суперпозиции — пока мы не открыли коробку.",
+              "Копенгагенская интерпретация говорит: наблюдение коллапсирует суперпозицию в одно состояние. До открытия коробки — и жива, и мертва. После — одно из двух. {{em:Это означает, что наблюдатель влияет на то, чем становится реальность — не только на то, что он видит.}} Многомировая теория предлагает другой выход: оба исхода происходят — в разных ветках реальности. Обе ветки одинаково реальны.",
+              "Шрёдингер хотел показать, что квантовая механика не может быть полным описанием реальности. Вместо этого он создал один из самых известных мысленных экспериментов в истории науки — и открытый вопрос, который физика не закрыла до сих пор: где заканчивается квантовый мир и начинается классический?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Наблюдение — не пассивный акт. В квантовом мире измерение определяет, чем становится система. Граница между «наблюдателем» и «наблюдаемым» оказалась фундаментальной проблемой физики."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "До открытия коробки кошка реально существует в двух состояниях — или это просто описание нашего незнания?",
+            "setup": null,
+            "options": [
+              { "id": "superposition", "text": "Суперпозиция реальна — кошка физически находится в обоих состояниях", "is_wiser": false },
+              { "id": "ignorance", "text": "Это незнание — кошка уже либо жива, либо мертва, мы просто не знаем", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают суперпозицию реальной",
+              "explanation": "Физики разделились именно по этой линии — и до сих пор не пришли к согласию. Копенгагенская школа настаивает: суперпозиция физически реальна до измерения. Эйнштейн и «скрытые переменные»: состояние уже определено, мы просто не знаем. Многомировая теория: оба события происходят в параллельных ветках. Ни одна позиция не опровергнута окончательно.",
+              "wisdom": "{{em:Шрёдингер хотел опровергнуть квантовую механику. Вместо этого он подарил ей самый знаменитый образ.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В технологиях", "example": "Квантовые компьютеры используют суперпозицию кубитов для параллельного вычисления. Кошка Шрёдингера — не абстракция: она стоит в основе реальных машин." },
+              { "label": "В философии", "example": "Вопрос «существует ли луна, когда никто не смотрит?» — прямое следствие копенгагенской интерпретации. Физика неожиданно стала философией." },
+              { "label": "В языке", "example": "«Шрёдингеров кот» вошёл в обиходный язык для описания любой ситуации с неопределённым исходом: «Шрёдингеров проект» — живой или мёртвый, пока не откроешь почту." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одну ситуацию в жизни, которую вы держите «в суперпозиции» — не открываете, не смотрите, не измеряете. Что происходит, когда вы наконец откроете коробку?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "In 1935, Erwin Schrödinger described a cat in a sealed box next to a radioactive atom. Until the box is opened, the atom has both decayed and not decayed — which means the cat is simultaneously alive and dead. Schrödinger invented this to expose the absurdity of quantum mechanics. Physicists took it seriously." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Schrödinger's}} Cat" } },
+        { "type": "subtitle", "props": { "text": "Schrödinger's Cat · Erwin Schrödinger · 1935" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/schrodingers_cat.svg", "alt": "A sealed box with a question mark — the cat is simultaneously alive and dead" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Quantum mechanics says a particle has no definite state until it is measured. An electron exists in multiple places simultaneously. This \"superposition\" works for subatomic particles. Schrödinger scaled it up: if quantum mechanics applies everywhere, then the system of atom + detector + cat is also in superposition — until the box is opened.",
+              "The Copenhagen interpretation says observation collapses superposition into one state. Before opening the box: both alive and dead. After: one or the other. {{em:This means the observer affects what reality becomes — not just what they see.}} The many-worlds interpretation offers another exit: both outcomes happen, in parallel branches of reality that are equally real.",
+              "Schrödinger meant to show that quantum mechanics couldn't be a complete description of reality. Instead, he created one of the most famous thought experiments in the history of science — and an open question physics hasn't closed: where does the quantum world end and the classical world begin?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Observation isn't passive. In the quantum world, measurement determines what a system becomes. The boundary between observer and observed turned out to be a fundamental problem in physics."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Before opening the box, does the cat really exist in two states simultaneously — or is that just a description of our ignorance?",
+            "setup": null,
+            "options": [
+              { "id": "superposition", "text": "Superposition is real — the cat physically exists in both states at once", "is_wiser": false },
+              { "id": "ignorance", "text": "It's just ignorance — the cat is already either alive or dead, we just don't know", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "believe superposition is real",
+              "explanation": "Physicists are divided on exactly this — and have been for a century. Copenhagen: superposition is physically real until measurement. Einstein and hidden variables: the state is already determined, we just don't know it. Many-worlds: both outcomes happen in parallel branches. No position has been definitively refuted.",
+              "wisdom": "{{em:Schrödinger invented the thought experiment to kill quantum mechanics. Instead, he gave it its most famous image.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In technology", "example": "Quantum computers use qubit superposition for parallel computation. Schrödinger's cat isn't just an abstraction — it underpins real machines." },
+              { "label": "In philosophy", "example": "\"Does the moon exist when nobody looks?\" is a direct consequence of the Copenhagen interpretation. Physics unexpectedly became philosophy." },
+              { "label": "In language", "example": "\"Schrödinger's X\" entered everyday speech to describe any ambiguous situation: a Schrödinger job offer, a Schrödinger relationship — alive or dead until you check." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one situation in your life you're keeping in superposition — not looking, not checking, not measuring. What happens when you finally open the box?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/schrodingers_cat" }]
+}

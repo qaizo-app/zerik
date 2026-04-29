@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- LEFT: Non-essentialist - many thin scattered arrows -->
+  <text x="100" y="38" text-anchor="middle" font-size="11" fill="#cc5533" font-family="sans-serif">NON-ESSENTIALIST</text>
+  <!-- Multiple thin arrows in various directions -->
+  <line x1="100" y1="150" x2="40" y2="90" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <line x1="100" y1="150" x2="60" y2="210" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <line x1="100" y1="150" x2="155" y2="95" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <line x1="100" y1="150" x2="155" y2="205" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <line x1="100" y1="150" x2="40" y2="155" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <line x1="100" y1="150" x2="105" y2="80" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <line x1="100" y1="150" x2="105" y2="220" stroke="#cc5533" stroke-width="1.5" opacity="0.7" marker-end="url(#arrRed3)"/>
+  <defs>
+    <marker id="arrRed3" markerWidth="5" markerHeight="5" refX="3" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#cc5533"/>
+    </marker>
+  </defs>
+  <!-- Source dot -->
+  <circle cx="100" cy="150" r="8" fill="#cc5533" opacity="0.8"/>
+  <!-- Label: scattered energy -->
+  <text x="100" y="253" text-anchor="middle" font-size="10" fill="#884433" font-family="sans-serif">scattered energy</text>
+  <text x="100" y="267" text-anchor="middle" font-size="10" fill="#663322" font-family="sans-serif">everything, poorly</text>
+  <!-- Divider -->
+  <line x1="200" y1="55" x2="200" y2="245" stroke="#223344" stroke-width="2"/>
+  <!-- RIGHT: Essentialist - one thick arrow -->
+  <text x="300" y="38" text-anchor="middle" font-size="11" fill="#4caf8a" font-family="sans-serif">ESSENTIALIST</text>
+  <!-- Single thick purposeful arrow -->
+  <line x1="245" y1="150" x2="360" y2="150" stroke="#4caf8a" stroke-width="12" stroke-linecap="round" marker-end="url(#arrGreen)"/>
+  <defs>
+    <marker id="arrGreen" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4caf8a"/>
+    </marker>
+  </defs>
+  <!-- Source dot -->
+  <circle cx="245" cy="150" r="10" fill="#4caf8a"/>
+  <!-- 90% rule label -->
+  <rect x="244" y="110" width="112" height="28" rx="5" fill="#112233" stroke="#4caf8a" stroke-width="1"/>
+  <text x="300" y="122" text-anchor="middle" font-size="9" fill="#4caf8a" font-family="sans-serif">90% rule: if not a</text>
+  <text x="300" y="134" text-anchor="middle" font-size="9" fill="#2a8a5a" font-family="sans-serif">clear YES → clear NO</text>
+  <!-- Label: focused energy -->
+  <text x="300" y="253" text-anchor="middle" font-size="10" fill="#2a8a5a" font-family="sans-serif">focused energy</text>
+  <text x="300" y="267" text-anchor="middle" font-size="10" fill="#1a6a3a" font-family="sans-serif">one thing, well</text>
+  <!-- Quote -->
+  <text x="200" y="285" text-anchor="middle" font-size="9" fill="#334455" font-family="sans-serif">McKeown · 2014 · less but better</text>
+</svg>

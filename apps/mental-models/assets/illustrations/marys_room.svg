@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Room walls (black and white) -->
+  <rect x="30" y="60" width="230" height="200" fill="#111118" stroke="#2a2a3a" stroke-width="2"/>
+  <!-- Floor -->
+  <rect x="30" y="220" width="230" height="40" fill="#1a1a22" stroke="#2a2a3a" stroke-width="1"/>
+  <!-- Wall pattern - striped b&w -->
+  <line x1="60" y1="60" x2="60" y2="220" stroke="#1e1e28" stroke-width="1"/>
+  <line x1="90" y1="60" x2="90" y2="220" stroke="#1e1e28" stroke-width="1"/>
+  <line x1="120" y1="60" x2="120" y2="220" stroke="#1e1e28" stroke-width="1"/>
+  <line x1="150" y1="60" x2="150" y2="220" stroke="#1e1e28" stroke-width="1"/>
+  <line x1="180" y1="60" x2="180" y2="220" stroke="#1e1e28" stroke-width="1"/>
+  <line x1="210" y1="60" x2="210" y2="220" stroke="#1e1e28" stroke-width="1"/>
+  <!-- Book/screen on wall - b&w -->
+  <rect x="55" y="100" width="80" height="55" rx="3" fill="#222232" stroke="#444466" stroke-width="1"/>
+  <text x="95" y="122" text-anchor="middle" font-size="9" fill="#aaaacc" font-family="sans-serif">WAVELENGTH</text>
+  <text x="95" y="135" text-anchor="middle" font-size="9" fill="#aaaacc" font-family="sans-serif">700nm = RED</text>
+  <text x="95" y="148" text-anchor="middle" font-size="9" fill="#aaaacc" font-family="sans-serif">520nm = GREEN</text>
+  <!-- Mary figure (greyscale) -->
+  <circle cx="175" cy="170" r="16" fill="#888899"/>
+  <rect x="162" y="186" width="26" height="34" rx="3" fill="#666677"/>
+  <!-- Dress - greyscale -->
+  <line x1="175" y1="186" x2="165" y2="204" stroke="#555566" stroke-width="2"/>
+  <line x1="175" y1="186" x2="185" y2="204" stroke="#555566" stroke-width="2"/>
+  <!-- Window to outside with color -->
+  <rect x="290" y="80" width="82" height="100" rx="4" fill="#0a1a30" stroke="#334466" stroke-width="2"/>
+  <!-- Window pane dividers -->
+  <line x1="331" y1="80" x2="331" y2="180" stroke="#334466" stroke-width="1.5"/>
+  <line x1="290" y1="130" x2="372" y2="130" stroke="#334466" stroke-width="1.5"/>
+  <!-- Outside: colorful sky, grass, flower -->
+  <rect x="291" y="81" width="39" height="48" fill="#1a4a8a"/>
+  <rect x="332" y="81" width="39" height="48" fill="#2255aa"/>
+  <circle cx="340" cy="92" r="8" fill="#ffcc00" opacity="0.9"/>
+  <rect x="291" y="131" width="39" height="48" fill="#1a4a1a"/>
+  <rect x="332" y="131" width="39" height="48" fill="#2a6a2a"/>
+  <!-- Flower in window -->
+  <circle cx="308" cy="148" r="7" fill="#ff4466"/>
+  <circle cx="304" cy="143" r="4" fill="#ff6688"/>
+  <circle cx="312" cy="143" r="4" fill="#ff6688"/>
+  <line x1="308" y1="155" x2="308" y2="172" stroke="#2a8a2a" stroke-width="2"/>
+  <!-- Glow from window -->
+  <rect x="270" y="80" width="20" height="100" fill="url(#colorGlow)" opacity="0.4"/>
+  <defs>
+    <linearGradient id="colorGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f0f1a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#4488ff" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <!-- Arrow - Mary looking at window / about to see red -->
+  <path d="M196,170 Q240,160 285,130" fill="none" stroke="#886644" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrBrown3)"/>
+  <defs>
+    <marker id="arrBrown3" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#886644"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="200" y="38" text-anchor="middle" font-size="13" fill="#8899bb" font-family="sans-serif" letter-spacing="1">MARY'S ROOM</text>
+  <text x="200" y="56" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif">Frank Jackson · 1982 · the knowledge argument</text>
+  <!-- Labels -->
+  <text x="144" y="268" text-anchor="middle" font-size="10" fill="#555566" font-family="sans-serif">knows everything in b&w</text>
+  <text x="331" y="200" text-anchor="middle" font-size="10" fill="#cc5588" font-family="sans-serif">first time</text>
+  <text x="331" y="213" text-anchor="middle" font-size="10" fill="#cc5588" font-family="sans-serif">seeing RED</text>
+</svg>

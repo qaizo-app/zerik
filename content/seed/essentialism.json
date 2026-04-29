@@ -1,0 +1,184 @@
+{
+  "id": "essentialism",
+  "category": "book_idea",
+  "release_number": 71,
+  "release_date": "2026-06-21",
+  "tags": ["essentialism", "mckeown", "focus", "less_but_better", "priorities"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/essentialism.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "Если вы не расставляете приоритеты в своей жизни — кто-то другой расставит их за вас. Большинство из нас говорят «да» почти всему, а потом удивляются, почему не успеваем. Эссенциализм — это не о том, как сделать больше. Это о том, как делать только то, что действительно важно." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Эссен}}-циализм" } },
+        { "type": "subtitle", "props": { "text": "Essentialism · Грег МакКеон · 2014" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/essentialism.svg", "alt": "Стрелка, разветвляющаяся на множество тонких линий (не-эссенциалист) vs одна жирная стрела (эссенциалист)" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Если вы не сделаете приоритизацию своего вклада, то кто-то другой сделает это за вас.",
+            "attribution": "Грег МакКеон, «Эссенциализм», 2014",
+            "context": "МакКеон работал с руководителями Кремниевой долины и заметил парадокс: чем успешнее становились люди, тем больше возможностей у них появлялось — и тем сильнее они теряли фокус. Успех порождает рассредоточенность, рассредоточенность убивает успех."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Эссенциализм — это не минимализм и не лень. Это дисциплинированный поиск меньшего, но лучшего. МакКеон описывает три ключевые ошибки не-эссенциалиста: «Всё важно», «Я должен делать всё это» и «Я могу делать всё это одновременно». Эссенциалист заменяет их на: «Только немногие вещи действительно важны», «Я могу сделать что-то одно», «Я выбираю намеренно».",
+              "Центральный инструмент — «правило 90%». Оцените каждый вариант по шкале 1–100. Если он не набирает 90 и выше — ответ «нет». Большинство вещей, на которые мы соглашаемся, набирают 60–70: хорошо, но не отлично. {{em:Если не явное «да» — значит явное «нет».}} Это болезненно в краткосрочной перспективе и освобождает в долгосрочной.",
+              "МакКеон вводит понятие «защищённое пространство» — время без встреч, уведомлений и задач других людей, только для осмысления своих приоритетов. Он называет его «пространством для игры»: именно там появляются идеи, определяющие направление всего остального."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Вклад означает не делать больше, а делать правильные вещи. Меньше, но лучше. Намеренный выбор вместо реакции на всё подряд."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Коллега просит взяться за дополнительный проект. Вы знаете, что он не приоритетный для вас. Как реагирует эссенциалист?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Соглашается — не хочет показаться негибким", "is_wiser": false },
+              { "id": "no", "text": "Говорит «нет» или предлагает альтернативу — защищает своё время", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "соглашаются из вежливости",
+              "explanation": "МакКеон: «Слово „нет\" — самый мощный инструмент эссенциалиста». Каждое «да» стоит отказа от чего-то другого. Эссенциалист отказывает намеренно и уважительно — потому что понимает: говорить «да» всему означает говорить «нет» важному.",
+              "wisdom": "{{em:Каждый раз, когда говоришь «да» чему-то неважному, говоришь «нет» чему-то важному.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эссенциализм кажется эгоизмом — особенно в культурах, где «занятость» означает ценность. «Я не успею всё» воспринимается как слабость. Парадокс: пытаясь угодить всем, вы не делаете хорошо ничего. Намеренный отказ от второстепенного — это не эгоизм, а уважение к тем, кому вы действительно важны."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В карьере", "example": "Продвижение по карьере часто означает больше приглашений, встреч и просьб. Эссенциализм — единственный способ не потерять фокус на работе, которая действительно двигает вперёд." },
+              { "label": "В продукте", "example": "Apple под руководством Джобса вернулась к прибыли, сократив ассортимент с 350 продуктов до 10. «Фокус означает говорить нет» (Джобс, 1997)." },
+              { "label": "В личной жизни", "example": "Обязательства накапливаются незаметно. Каждое «да» кажется маленьким — пока вы не посмотрите на весь список и не поймёте, что не выбрали ничего из него сами." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Запишите все проекты и обязательства, которые у вас сейчас есть. Оцените каждый по шкале 1–100. Всё, что ниже 90 — кандидат на отказ или делегирование. Что вы готовы убрать?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "If you don't prioritize your life, someone else will. Most of us say yes to almost everything — then wonder why we can't keep up. Essentialism isn't about how to get more done. It's about how to do only what truly matters." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Essential}}ism" } },
+        { "type": "subtitle", "props": { "text": "Essentialism · Greg McKeown · 2014" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/essentialism.svg", "alt": "An arrow splitting into many thin lines (non-essentialist) vs one thick arrow (essentialist)" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "If you don't prioritize your life, someone else will.",
+            "attribution": "Greg McKeown, Essentialism, 2014",
+            "context": "McKeown worked with Silicon Valley executives and noticed a paradox: the more successful people became, the more options they had — and the more they lost focus. Success breeds diffuseness, diffuseness kills success."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Essentialism isn't minimalism or laziness. It's the disciplined pursuit of less but better. McKeown describes three core mistakes of the non-essentialist: \"Everything is important,\" \"I must do all of this,\" and \"I can do all of this at once.\" The essentialist replaces them with: \"Only a few things truly matter,\" \"I can do one thing,\" and \"I choose deliberately.\"",
+              "The central tool is the \"90% rule.\" Score every option on a scale of 1–100. If it doesn't score 90 or above — the answer is no. Most things we agree to score 60–70: good, but not great. {{em:If it's not a clear yes — it's a clear no.}} This is painful in the short term and liberating in the long term.",
+              "McKeown introduces the concept of \"protected space\" — time without meetings, notifications, or other people's tasks. Time purely to reflect on your own priorities. He calls it play space: this is where the ideas that define everything else emerge."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Contribution doesn't mean doing more — it means doing the right things. Less but better. Deliberate choice instead of reacting to everything."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A colleague asks you to take on an additional project. You know it's not a priority for you. How does an essentialist respond?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Agrees — doesn't want to seem inflexible", "is_wiser": false },
+              { "id": "no", "text": "Says no or offers an alternative — protects their time", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "agree out of politeness",
+              "explanation": "McKeown: \"The word 'no' is the essentialist's most powerful tool.\" Every yes costs a no to something else. The essentialist declines deliberately and respectfully — because they understand that saying yes to everything means saying no to what matters.",
+              "wisdom": "{{em:Every time you say yes to something unimportant, you say no to something that is.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Essentialism can feel like selfishness — especially in cultures where \"being busy\" signals value. \"I can't do everything\" reads as weakness. The paradox: trying to please everyone, you do nothing well. Deliberately declining the secondary isn't selfishness — it's respect for those who actually matter to you."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In careers", "example": "Career advancement often means more invitations, meetings, and requests. Essentialism is the only way not to lose focus on the work that actually moves things forward." },
+              { "label": "In product", "example": "Under Jobs, Apple returned to profitability by cutting its product line from 350 items to 10. \"Focus means saying no\" (Jobs, 1997)." },
+              { "label": "In personal life", "example": "Commitments accumulate imperceptibly. Each yes feels small — until you look at the full list and realize you didn't choose any of it intentionally." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Write down all the projects and commitments you currently have. Score each on a scale of 1–100. Everything below 90 is a candidate for elimination or delegation. What are you willing to remove?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/essentialism" }]
+}

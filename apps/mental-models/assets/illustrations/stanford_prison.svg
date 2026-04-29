@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Prison bars -->
+  <rect x="80" y="70" width="100" height="160" rx="4" fill="none" stroke="#445566" stroke-width="2"/>
+  <line x1="100" y1="70" x2="100" y2="230" stroke="#334455" stroke-width="3"/>
+  <line x1="120" y1="70" x2="120" y2="230" stroke="#334455" stroke-width="3"/>
+  <line x1="140" y1="70" x2="140" y2="230" stroke="#334455" stroke-width="3"/>
+  <line x1="160" y1="70" x2="160" y2="230" stroke="#334455" stroke-width="3"/>
+  <!-- Prisoner figure (left, inside bars) -->
+  <circle cx="130" cy="118" r="16" fill="#7799aa"/>
+  <rect x="116" y="134" width="28" height="38" rx="4" fill="#7799aa" opacity="0.7"/>
+  <!-- Prisoner stripes on shirt -->
+  <line x1="116" y1="141" x2="144" y2="141" stroke="#334455" stroke-width="2" opacity="0.7"/>
+  <line x1="116" y1="151" x2="144" y2="151" stroke="#334455" stroke-width="2" opacity="0.7"/>
+  <line x1="116" y1="161" x2="144" y2="161" stroke="#334455" stroke-width="2" opacity="0.7"/>
+  <!-- Prisoner label -->
+  <text x="130" y="188" text-anchor="middle" font-size="9" fill="#7799aa" font-family="sans-serif">PRISONER</text>
+  <!-- Guard figure (right, outside) -->
+  <circle cx="290" cy="118" r="18" fill="#cc8822"/>
+  <rect x="274" y="136" width="32" height="42" rx="4" fill="#886611"/>
+  <!-- Badge -->
+  <circle cx="283" cy="143" r="5" fill="#ffcc44"/>
+  <text x="283" y="147" text-anchor="middle" font-size="6" fill="#333" font-family="sans-serif">★</text>
+  <!-- Guard hat -->
+  <rect x="272" y="102" width="36" height="10" rx="3" fill="#664400"/>
+  <rect x="268" y="100" width="44" height="5" rx="2" fill="#775511"/>
+  <!-- Guard label -->
+  <text x="290" y="198" text-anchor="middle" font-size="9" fill="#cc8822" font-family="sans-serif">GUARD</text>
+  <!-- Arrows showing role transformation -->
+  <path d="M220,118 C230,100 260,100 270,118" fill="none" stroke="#886644" stroke-width="2" marker-end="url(#arrBrown)" stroke-dasharray="5,4"/>
+  <path d="M220,148 C230,166 260,166 270,148" fill="none" stroke="#886644" stroke-width="2" marker-end="url(#arrBrown2)" stroke-dasharray="5,4"/>
+  <defs>
+    <marker id="arrBrown" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#886644"/>
+    </marker>
+    <marker id="arrBrown2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#886644"/>
+    </marker>
+  </defs>
+  <!-- Role label center -->
+  <text x="216" y="115" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">ROLE</text>
+  <text x="216" y="128" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">shapes</text>
+  <text x="216" y="141" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">behavior</text>
+  <!-- Title -->
+  <text x="200" y="38" text-anchor="middle" font-size="13" fill="#cc8822" font-family="sans-serif" letter-spacing="1">STANFORD PRISON EXPERIMENT</text>
+  <text x="200" y="56" text-anchor="middle" font-size="10" fill="#554422" font-family="sans-serif">Zimbardo · 1971</text>
+  <!-- Warning label -->
+  <text x="200" y="258" text-anchor="middle" font-size="10" fill="#cc4444" font-family="sans-serif">situational forces override character</text>
+  <text x="200" y="275" text-anchor="middle" font-size="9" fill="#663333" font-family="sans-serif">study halted after 6 days</text>
+</svg>

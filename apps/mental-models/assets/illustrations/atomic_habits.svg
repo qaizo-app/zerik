@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Compound growth curve -->
+  <!-- Axis -->
+  <line x1="50" y1="240" x2="370" y2="240" stroke="#334455" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="50" y2="240" stroke="#334455" stroke-width="1.5"/>
+  <!-- Axis labels -->
+  <text x="210" y="265" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif">time</text>
+  <text x="22" y="145" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif" transform="rotate(-90,22,145)">results</text>
+  <!-- "Plateau of Latent Potential" label -->
+  <text x="170" y="235" text-anchor="middle" font-size="9" fill="#556677" font-family="sans-serif">plateau of latent potential</text>
+  <!-- 1% improvement curve (exponential) -->
+  <path d="M50,235 Q100,230 150,225 Q200,218 240,205 Q280,185 310,155 Q340,118 365,70" fill="none" stroke="#4caf8a" stroke-width="3" stroke-linecap="round"/>
+  <!-- 1% worse line (decay) -->
+  <path d="M50,235 Q100,236 160,238 Q220,241 290,246 Q330,249 365,255" fill="none" stroke="#cc4444" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <!-- Small habit dots on the improvement curve -->
+  <circle cx="80" cy="233" r="4" fill="#4caf8a" opacity="0.7"/>
+  <circle cx="120" cy="230" r="4" fill="#4caf8a" opacity="0.8"/>
+  <circle cx="160" cy="226" r="4" fill="#4caf8a" opacity="0.85"/>
+  <circle cx="200" cy="220" r="4" fill="#4caf8a" opacity="0.9"/>
+  <circle cx="240" cy="207" r="4" fill="#4caf8a"/>
+  <circle cx="280" cy="188" r="4" fill="#4caf8a"/>
+  <circle cx="320" cy="160" r="4" fill="#4caf8a"/>
+  <circle cx="360" cy="75" r="4" fill="#4caf8a"/>
+  <!-- Highlight dot - compound moment -->
+  <circle cx="300" cy="170" r="8" fill="none" stroke="#ffcc44" stroke-width="2" opacity="0.8"/>
+  <!-- Labels on curves -->
+  <text x="368" y="65" font-size="10" fill="#4caf8a" font-family="sans-serif">+1%</text>
+  <text x="368" y="258" font-size="10" fill="#cc4444" font-family="sans-serif">−1%</text>
+  <!-- Math labels -->
+  <rect x="58" y="58" width="150" height="50" rx="5" fill="#112233"/>
+  <text x="133" y="74" text-anchor="middle" font-size="10" fill="#4caf8a" font-family="sans-serif">1.01³⁶⁵ = 37.78</text>
+  <text x="133" y="90" text-anchor="middle" font-size="10" fill="#cc4444" font-family="sans-serif">0.99³⁶⁵ = 0.03</text>
+  <text x="133" y="104" text-anchor="middle" font-size="9" fill="#446688" font-family="sans-serif">1% daily × 1 year</text>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-size="13" fill="#4caf8a" font-family="sans-serif" letter-spacing="1">ATOMIC HABITS</text>
+  <text x="200" y="44" text-anchor="middle" font-size="10" fill="#2a6a4a" font-family="sans-serif">James Clear · 2018 · tiny changes, remarkable results</text>
+</svg>

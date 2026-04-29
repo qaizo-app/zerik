@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Coin in air (center top) -->
+  <ellipse cx="200" cy="70" rx="28" ry="28" fill="#cc9922" stroke="#ffcc44" stroke-width="2"/>
+  <ellipse cx="200" cy="70" rx="22" ry="22" fill="none" stroke="#ffcc44" stroke-width="1" opacity="0.6"/>
+  <text x="200" y="66" text-anchor="middle" font-size="11" fill="#fff5cc" font-family="sans-serif" font-weight="bold">FLIP</text>
+  <text x="200" y="80" text-anchor="middle" font-size="10" fill="#cc9933" font-family="sans-serif">H / T</text>
+  <!-- Dividing line from coin -->
+  <line x1="200" y1="98" x2="140" y2="145" stroke="#447744" stroke-width="2" stroke-dasharray="5,4" opacity="0.8"/>
+  <line x1="200" y1="98" x2="260" y2="145" stroke="#cc5533" stroke-width="2" stroke-dasharray="5,4" opacity="0.8"/>
+  <!-- LEFT path: HEADS - one awakening -->
+  <text x="95" y="140" text-anchor="middle" font-size="11" fill="#44aa66" font-family="sans-serif" font-weight="bold">HEADS</text>
+  <!-- Bed/figure - Mon awakening -->
+  <rect x="38" y="158" width="80" height="18" rx="5" fill="#112233" stroke="#224433" stroke-width="1"/>
+  <circle cx="108" cy="164" r="11" fill="#556677"/>
+  <line x1="108" y1="175" x2="108" y2="195" stroke="#556677" stroke-width="3"/>
+  <!-- "zzz" sleeping lines removed - she's awake -->
+  <text x="78" y="205" text-anchor="middle" font-size="9" fill="#44aa66" font-family="sans-serif">Sun: WAKE (×1)</text>
+  <!-- RIGHT path: TAILS - two awakenings -->
+  <text x="305" y="140" text-anchor="middle" font-size="11" fill="#cc5533" font-family="sans-serif" font-weight="bold">TAILS</text>
+  <!-- First awakening - Mon -->
+  <rect x="248" y="148" width="80" height="18" rx="5" fill="#112233" stroke="#443322" stroke-width="1"/>
+  <circle cx="318" cy="154" r="11" fill="#886655"/>
+  <line x1="318" y1="165" x2="318" y2="185" stroke="#886655" stroke-width="3"/>
+  <text x="288" y="198" text-anchor="middle" font-size="9" fill="#cc7744" font-family="sans-serif">Mon: WAKE</text>
+  <!-- Memory erase -->
+  <text x="290" y="212" text-anchor="middle" font-size="9" fill="#663322" font-family="sans-serif">← memory erased</text>
+  <!-- Second awakening - Tue -->
+  <rect x="248" y="220" width="80" height="18" rx="5" fill="#112233" stroke="#443322" stroke-width="1"/>
+  <circle cx="318" cy="226" r="11" fill="#886655"/>
+  <line x1="318" y1="237" x2="318" y2="257" stroke="#886655" stroke-width="3"/>
+  <text x="288" y="268" text-anchor="middle" font-size="9" fill="#cc7744" font-family="sans-serif">Tue: WAKE (×2)</text>
+  <!-- Arrow connecting the two right awakenings -->
+  <path d="M318,185 Q326,198 318,220" fill="none" stroke="#884433" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrRed2)"/>
+  <defs>
+    <marker id="arrRed2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#884433"/>
+    </marker>
+  </defs>
+  <!-- Probability debate bottom -->
+  <text x="200" y="275" text-anchor="middle" font-size="10" fill="#557799" font-family="sans-serif">P(Heads) = 1/2 (Halfers) or 1/3 (Thirders)?</text>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-size="12" fill="#7755aa" font-family="sans-serif" letter-spacing="1">SLEEPING BEAUTY PROBLEM</text>
+  <text x="200" y="44" text-anchor="middle" font-size="10" fill="#443366" font-family="sans-serif">Elga · 2000 · self-location probability</text>
+</svg>

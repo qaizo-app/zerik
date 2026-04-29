@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- LEFT: Reinforcing loop (spiraling outward) -->
+  <text x="100" y="38" text-anchor="middle" font-size="12" fill="#cc7733" font-family="sans-serif" font-weight="bold">REINFORCING</text>
+  <text x="100" y="54" text-anchor="middle" font-size="10" fill="#885522" font-family="sans-serif">+</text>
+  <!-- Spiral arrows -->
+  <circle cx="100" cy="148" r="22" fill="none" stroke="#cc5522" stroke-width="2.5" opacity="0.4"/>
+  <circle cx="100" cy="148" r="38" fill="none" stroke="#cc6633" stroke-width="2" opacity="0.6"/>
+  <circle cx="100" cy="148" r="55" fill="none" stroke="#cc7744" stroke-width="2" opacity="0.8"/>
+  <!-- Outward spiral arrow -->
+  <path d="M100,126 A22,22 0 1,1 100.1,126" fill="none" stroke="#cc5522" stroke-width="2" opacity="0.5"/>
+  <path d="M100,110 A38,38 0 1,1 100.1,110" fill="none" stroke="#cc6633" stroke-width="2.5" opacity="0.6"/>
+  <path d="M100,93 A55,55 0 1,1 100.1,93" fill="none" stroke="#cc7744" stroke-width="2.5" opacity="0.8"/>
+  <!-- Arrow tip -->
+  <polygon points="100,93 92,104 108,104" fill="#cc7744" opacity="0.8"/>
+  <!-- Examples in center -->
+  <text x="100" y="144" text-anchor="middle" font-size="9" fill="#cc8844" font-family="sans-serif">more</text>
+  <text x="100" y="156" text-anchor="middle" font-size="9" fill="#cc8844" font-family="sans-serif">→ MORE</text>
+  <!-- Labels -->
+  <text x="100" y="228" text-anchor="middle" font-size="9" fill="#cc7733" font-family="sans-serif">growth / collapse</text>
+  <text x="100" y="242" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">compound interest</text>
+  <text x="100" y="256" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">viral spread</text>
+  <!-- RIGHT: Balancing loop (stable circle) -->
+  <text x="300" y="38" text-anchor="middle" font-size="12" fill="#3388cc" font-family="sans-serif" font-weight="bold">BALANCING</text>
+  <text x="300" y="54" text-anchor="middle" font-size="10" fill="#225588" font-family="sans-serif">−</text>
+  <!-- Target in center -->
+  <circle cx="300" cy="148" r="18" fill="#112233" stroke="#336688" stroke-width="2"/>
+  <line x1="292" y1="148" x2="308" y2="148" stroke="#336688" stroke-width="2"/>
+  <line x1="300" y1="140" x2="300" y2="156" stroke="#336688" stroke-width="2"/>
+  <text x="300" y="175" text-anchor="middle" font-size="9" fill="#336688" font-family="sans-serif">target</text>
+  <!-- Circular balanced arrows -->
+  <path d="M300,105 Q345,105 345,148 Q345,192 300,192" fill="none" stroke="#3388cc" stroke-width="2.5" opacity="0.8"/>
+  <polygon points="300,192 308,182 292,182" fill="#3388cc" opacity="0.8"/>
+  <path d="M300,192 Q255,192 255,148 Q255,105 300,105" fill="none" stroke="#2266aa" stroke-width="2" opacity="0.7"/>
+  <polygon points="300,105 292,115 308,115" fill="#2266aa" opacity="0.7"/>
+  <!-- Action label on arrows -->
+  <text x="348" y="148" font-size="9" fill="#3388cc" font-family="sans-serif">gap</text>
+  <text x="236" y="148" font-size="9" fill="#2266aa" font-family="sans-serif" text-anchor="end">action</text>
+  <!-- Labels -->
+  <text x="300" y="228" text-anchor="middle" font-size="9" fill="#3388cc" font-family="sans-serif">stability / correction</text>
+  <text x="300" y="242" text-anchor="middle" font-size="9" fill="#225588" font-family="sans-serif">thermostat</text>
+  <text x="300" y="256" text-anchor="middle" font-size="9" fill="#225588" font-family="sans-serif">supply / demand</text>
+  <!-- Divider -->
+  <line x1="200" y1="60" x2="200" y2="270" stroke="#223344" stroke-width="1.5"/>
+  <!-- Title -->
+  <text x="200" y="280" text-anchor="middle" font-size="10" fill="#334455" font-family="sans-serif">Wiener · 1948 · cybernetics</text>
+</svg>

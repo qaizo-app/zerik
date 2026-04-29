@@ -1,0 +1,168 @@
+{
+  "id": "illusion_of_transparency",
+  "category": "cognitive_biases",
+  "release_number": 58,
+  "release_date": "2026-06-08",
+  "tags": ["illusion_transparency", "social_cognition", "self_perception", "communication", "anxiety"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/illusion_of_transparency.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы нервничаете перед презентацией — и уверены, что все это видят. Вы скучаете на встрече — и чувствуете, что ваша незаинтересованность написана на лице. Вы солгали по мелочи — и кажется, что собеседник сразу понял. Исследования говорят: в подавляющем большинстве случаев никто ничего не заметил." }
+        },
+        { "type": "title", "props": { "text": "Иллюзия {{accent:прозрачности}}" } },
+        { "type": "subtitle", "props": { "text": "Illusion of Transparency · Гиловитч, Сэвицки, Медвек · 1998" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/illusion_of_transparency.svg", "alt": "Фигура думает, что она стеклянная — снаружи видно обычного человека" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В 1998 году Гиловитч, Сэвицки и Медвек провели серию экспериментов. Участники пили горький сок с нейтральным выражением лица и оценивали, насколько заметно их отвращение. Наблюдатели угадывали значительно реже, чем ожидали пьющие. В другом эксперименте участники читали новости: некоторые знали тайную информацию и думали, что она «проступает» в их голосе. Слушатели её не слышали.",
+              "Иллюзия прозрачности — следствие эгоцентрической ошибки: мы принимаем свой внутренний опыт как точку отсчёта. Мы знаем, что нервничаем, — и поэтому «видим» нервозность в каждом жесте. Наблюдатель не имеет этой внутренней информации — и замечает значительно меньше. {{em:Изнутри мы кажемся себе стеклянными. Снаружи мы непрозрачны.}}",
+              "Это работает в обе стороны. Мы переоцениваем, насколько видны наши негативные состояния — страх, тревога, ложь. И недооцениваем, насколько видны положительные — интерес, воодушевление, симпатия. В обоих случаях разрыв между «изнутри» и «снаружи» больше, чем нам кажется."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Наши внутренние состояния — эмоции, намерения, ложь — значительно менее заметны окружающим, чем нам кажется. Мы переоцениваем нашу психологическую прозрачность."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы выступаете с презентацией и очень нервничаете. Насколько заметна ваша тревога аудитории?",
+            "setup": null,
+            "options": [
+              { "id": "very", "text": "Очень заметна — такое не скрыть", "is_wiser": false },
+              { "id": "less", "text": "Значительно меньше, чем мне кажется", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "думают, что тревога очень заметна",
+              "explanation": "Исследования Гиловитча показывают: аудитория замечает тревогу оратора примерно вдвое реже, чем сам оратор думает. Ваш внутренний шторм практически не виден снаружи — потому что у аудитории нет доступа к вашим ощущениям. Это и успокаивает, и обязывает: ваша уверенность тоже менее заметна, чем кажется.",
+              "wisdom": "{{em:Ты кажешься себе стеклянным. Для других ты — обычный непрозрачный человек.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Иллюзия прозрачности питает социальную тревожность: «все видят, что я нервничаю, что я некомпетентен, что мне скучно». Осознание того, что этого не видят, — само по себе терапевтично. С другой стороны, иллюзия прозрачности объясняет, почему мы можем недооценивать значимость невербальных сигналов, когда хотим донести что-то важное."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В переговорах", "example": "Вы чувствуете, что блефуете и это очевидно. Скорее всего, собеседник этого не замечает — если только не знает, как и что именно искать." },
+              { "label": "В публичных выступлениях", "example": "Большинство начинающих ораторов убеждены, что их страх «светится». Опытные коучи знают: страх почти невидим, если не говорить о нём вслух." },
+              { "label": "В отношениях", "example": "«Он должен был понять, что я расстроена» — иллюзия прозрачности в отношениях. Прямо сказать — единственный надёжный способ передать внутреннее состояние." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните ситуацию, когда вы думали, что окружающие «всё видят». Узнайте — или честно вспомните — действительно ли кто-то заметил. Скорее всего, нет. А теперь — есть ли что-то, что вы хотите, чтобы люди заметили, но молчите об этом?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "You're nervous before a presentation — and certain everyone can tell. You're bored in a meeting — and convinced your disengagement is written all over your face. You told a small lie — and it seems like the other person caught it immediately. Research says: in the vast majority of cases, no one noticed anything." }
+        },
+        { "type": "title", "props": { "text": "The Illusion of {{accent:Transparency}}" } },
+        { "type": "subtitle", "props": { "text": "Illusion of Transparency · Gilovich, Savitsky & Medvec · 1998" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/illusion_of_transparency.svg", "alt": "A figure who thinks they're made of glass — from outside they look like an ordinary person" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In 1998, Gilovich, Savitsky and Medvec ran a series of experiments. Participants drank bitter juice while trying to keep a neutral expression, then estimated how obvious their disgust was. Observers guessed far less often than the drinkers expected. In another experiment, participants reading the news knew a secret and thought it \"leaked\" into their voice. Listeners didn't hear it.",
+              "The illusion of transparency is a consequence of the egocentric bias: we take our inner experience as a reference point. We know we're nervous — so we \"see\" nervousness in every gesture. An observer doesn't have access to that inner information — and notices significantly less. {{em:From inside, we feel transparent. From outside, we're opaque.}}",
+              "This works in both directions. We overestimate how visible our negative states are — fear, anxiety, deception. And we underestimate how visible our positive states are — interest, enthusiasm, liking. In both cases, the gap between inside and outside is larger than we think."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Our inner states — emotions, intentions, deception — are significantly less visible to others than we think. We overestimate our psychological transparency."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're giving a presentation and you're very nervous. How visible is your anxiety to the audience?",
+            "setup": null,
+            "options": [
+              { "id": "very", "text": "Very visible — you can't hide something like that", "is_wiser": false },
+              { "id": "less", "text": "Significantly less than it feels", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think their anxiety is very visible",
+              "explanation": "Gilovich's research shows audiences notice a speaker's anxiety about half as often as the speaker expects. Your internal storm is nearly invisible from outside — because the audience has no access to your internal experience. This is both reassuring and demanding: your confidence is also less visible than it feels.",
+              "wisdom": "{{em:You feel transparent to yourself. To others, you're a perfectly ordinary opaque person.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The illusion of transparency feeds social anxiety: \"everyone can see that I'm nervous, incompetent, bored.\" Realizing they can't is itself therapeutic. On the flip side, it explains why we may underestimate how much explicit communication is needed when we want to convey something important."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In negotiation", "example": "You feel like you're bluffing and it's obvious. The other person probably doesn't notice — unless they know exactly what to look for." },
+              { "label": "In public speaking", "example": "Most novice speakers are convinced their fear \"shows.\" Experienced coaches know: fear is nearly invisible if you don't mention it out loud." },
+              { "label": "In relationships", "example": "\"He should have seen that I was upset\" — the illusion of transparency in relationships. Saying it directly is the only reliable way to communicate an internal state." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a situation where you thought others could \"see everything.\" Find out — or honestly recall — whether anyone actually noticed. Probably not. And now: is there something you want people to notice, but you're staying silent about it?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/illusion_of_transparency" }]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "opportunity_cost",
+  "category": "mental_models",
+  "release_number": 48,
+  "release_date": "2026-05-29",
+  "tags": ["opportunity_cost", "economics", "decision_making", "tradeoffs", "bastiat"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/opportunity_cost.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Уоррен Баффет не просто спрашивает «это хорошая инвестиция?». Он спрашивает: «что я не куплю вместо этого?». Каждое «да» содержит скрытые «нет». Большинство людей видят то, что получают — но не то, от чего отказываются." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Альтернативная}} стоимость" } },
+        { "type": "subtitle", "props": { "text": "Opportunity Cost · Фредерик Бастиа · «Видимое и невидимое» · 1850" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/opportunity_cost.svg", "alt": "Весы с выбранным вариантом с одной стороны и теневыми отвергнутыми — с другой" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Альтернативная стоимость — это цена лучшей отвергнутой альтернативы. Когда вы тратите вечер на просмотр сериала, альтернативная стоимость — то, чего не сделали: не написали главу, не позвонили другу, не вышли на пробежку. Деньги, потраченные на курс, который вы не проходите, — не только потраченные деньги, но и неприобретённое мастерство.",
+              "Бастиа описал принцип в 1850 году через метафору «видимого и невидимого». Разбитое окно даёт работу стекольщику — это видимо. Но деньги, потраченные на стекло, не пошли на книги или обувь — это невидимо. {{em:Мышление, которое считает только видимые последствия, систематически ошибается.}} Экономическая политика, медицинские решения, корпоративная стратегия — всюду одна ловушка.",
+              "В бизнесе: компания, держащая наличные под 2%, отказывается от 10%, которые мог бы принести капитал в производстве. В карьере: человек, остающийся на «стабильной» работе, не только получает зарплату — он теряет опыт и риск, которые могли бы изменить траекторию. Баффет называет альтернативную стоимость «главным понятием в инвестировании и в жизни»."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Каждое решение содержит невидимую часть — то, от чего вы отказались. Игнорировать альтернативную стоимость значит видеть только половину уравнения."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы получили неожиданную премию и решаете положить её на депозит под 7% годовых. Это хорошее решение?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Да — 7% это неплохо, деньги работают", "is_wiser": false },
+              { "id": "depends", "text": "Зависит от того, что ещё можно было сделать с этими деньгами", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "оценивают решение без альтернатив",
+              "explanation": "7% — хорошо или плохо только относительно лучшей альтернативы. Если ваш бизнес приносит 25% на вложенный капитал — депозит стоит вам 18% в год. Если альтернатива — потребительский кредит под 20% — депозит катастрофически хорош. Вопрос никогда не «хорошо ли это само по себе», а «лучше ли это лучшей альтернативы».",
+              "wisdom": "{{em:Цена выбора — не только то, что вы заплатили. Это лучшее из того, от чего вы отказались.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Альтернативная стоимость существует даже когда вы ничего не делаете. Держать деньги «на всякий случай» — это тоже решение со своей ценой. Бездействие не освобождает от выбора — оно просто делает его невидимым."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В карьере", "example": "Каждый год на «стабильной» должности — это год без роста навыков, который мог бы случиться в другом месте. Стабильность стоит дороже, чем кажется." },
+              { "label": "В политике", "example": "Бюджет, потраченный на субсидии одной отрасли — это бюджет, не потраченный на образование или инфраструктуру. Бастиа описал это 175 лет назад." },
+              { "label": "В личных решениях", "example": "Три часа в социальных сетях — это не просто «потраченное время». Это несделанный звонок маме, неначатый проект, непрочитанная книга." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одно значимое решение, которое вы уже приняли — работу, трату, проект. Запишите лучшую альтернативу, от которой вы отказались. Теперь спросите: вы бы приняли то же решение, зная её цену?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Warren Buffett doesn't just ask \"is this a good investment?\" He asks: \"what am I not buying instead?\" Every yes contains hidden noes. Most people see only what they gain — not what they give up." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Opportunity}} Cost" } },
+        { "type": "subtitle", "props": { "text": "Opportunity Cost · Frédéric Bastiat · \"The Seen and the Unseen\" · 1850" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/opportunity_cost.svg", "alt": "Scales with the chosen option on one side, shadow alternatives on the other" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Opportunity cost is the price of the best rejected alternative. When you spend an evening watching a series, the opportunity cost is what you didn't do: the chapter unwritten, the call unmade, the run not taken. Money spent on a course you never finish isn't just money lost — it's the skill you never gained.",
+              "Bastiat described the principle in 1850 through the parable of the broken window. A broken window gives work to the glazier — this is seen. But the money spent on glass didn't go to books or shoes — this is unseen. {{em:Thinking that counts only visible consequences is systematically wrong.}} Economic policy, medical decisions, corporate strategy — the trap is everywhere.",
+              "In business: a company holding cash at 2% is giving up 10% the capital could earn in production. In career: a person staying at a \"stable\" job isn't just earning a salary — they're losing the experience and risk that might have changed their trajectory. Buffett calls opportunity cost \"the most important concept in investing and in life.\""
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Every decision has an invisible side — what you gave up. Ignoring opportunity cost means seeing only half the equation."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You receive an unexpected bonus and decide to deposit it at 7% annual interest. Is that a good decision?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Yes — 7% is decent, the money is working", "is_wiser": false },
+              { "id": "depends", "text": "Depends on what else you could have done with the money", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "evaluate the decision without alternatives",
+              "explanation": "7% is good or bad only relative to the best alternative. If your business earns 25% on invested capital, the deposit costs you 18% a year. If the alternative is consumer credit at 20%, the deposit is spectacularly good. The question is never \"is this good in itself\" — it's always \"is this better than the best alternative?\"",
+              "wisdom": "{{em:The price of a choice isn't just what you paid. It's the best thing you gave up.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Opportunity cost exists even when you do nothing. Keeping money \"just in case\" is also a decision with a price. Inaction doesn't free you from choice — it just makes the choice invisible."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In career", "example": "Every year in a \"stable\" position is a year without the skill growth that might have happened elsewhere. Stability costs more than it looks." },
+              { "label": "In policy", "example": "A budget spent on subsidizing one industry is a budget not spent on education or infrastructure. Bastiat described this 175 years ago." },
+              { "label": "In daily decisions", "example": "Three hours on social media isn't just \"time spent.\" It's the call not made, the project not started, the book not read." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one significant decision you've already made — a job, a purchase, a project. Write down the best alternative you gave up. Now ask: would you make the same choice knowing its price?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/opportunity_cost" }]
+}

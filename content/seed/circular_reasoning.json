@@ -1,0 +1,150 @@
+{
+  "id": "circular_reasoning",
+  "category": "rhetorical_fallacies",
+  "release_number": 70,
+  "release_date": "2026-06-20",
+  "tags": ["circular_reasoning", "begging_question", "fallacy", "logic", "argumentation"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/circular_reasoning.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Библия — слово Бога, потому что в Библии так написано». «Этот менеджер компетентен, потому что он принимает правильные решения, а решения правильны, потому что он компетентен». Аргумент движется по кругу — и потому не движется никуда." }
+        },
+        { "type": "title", "props": { "text": "Порочный {{accent:круг}}" } },
+        { "type": "subtitle", "props": { "text": "Circular Reasoning / Petitio Principii · классическая логика" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/circular_reasoning.svg", "alt": "Стрела, уходящая вперёд и возвращающаяся к своей же точке отправления" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Порочный круг (лат. petitio principii — «предвосхищение основания») — ошибка, при которой посылки аргумента предполагают то, что нужно доказать. Технически аргумент «валиден»: вывод следует из посылок. Но посылки уже содержат вывод — поэтому аргумент ничего не доказывает. Он не расширяет знание, а просто переформулирует утверждение другими словами.",
+              "Порочный круг часто трудно заметить, когда посылки и вывод не идентичны, а перефразированы. «Свободный рынок работает, потому что конкуренция создаёт эффективность, а эффективность — это то, что создаёт свободный рынок». {{em:Чем длиннее круг, тем труднее его заметить.}} Многие политические и идеологические аргументы — порочные круги с десятком шагов.",
+              "Почему это работает? Потому что мы склонны принимать первые посылки аргумента без проверки, особенно если они звучат убедительно. Когда доходим до вывода — он кажется «доказанным». На самом деле мы просто приняли вывод в начале, не заметив этого."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Аргумент доказывает только то, что не содержалось в посылках. Если посылки уже предполагают вывод — аргумент ничего не доказывает, он лишь утверждает дважды."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "На совещании о корпоративной стратегии:",
+            "example_quote": "— Наш продукт лучший на рынке, потому что у нас самые лояльные клиенты. А клиенты лояльны, потому что мы предлагаем лучший продукт.",
+            "recognition_signal": "Сигнал: аргументация возвращается к исходному тезису. «А, потому что Б — и Б, потому что А». Попробуйте задать вопрос «а как вы это знаете?» — если ответ воспроизводит исходное утверждение, перед вами порочный круг.",
+            "nuance_warning": "Некоторые круги неизбежны в основаниях любой системы (например, логика использует логику для обоснования логики). Это «неизбежный круг» — он другой. Ошибка — когда круг используется там, где должен быть независимый аргумент."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Порочный круг особенно опасен в убеждениях, которые мы разделяем сами — мы не замечаем, что доказываем то, что уже знаем. Самопроверка: можете ли вы обосновать свою позицию без использования её самой как аргумента?"
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "«Мы должны следовать этому закону, потому что это закон». Авторитет закона не может быть обоснован самим законом — это требует внешнего аргумента (справедливость, общественный договор и т.д.)." },
+              { "label": "В бизнесе", "example": "«Мы правы, потому что рынок нас принял, а рынок нас принял, потому что мы правы». Это не анализ успеха — это его воспроизведение." },
+              { "label": "В науке", "example": "«Научный метод достоверен, потому что он даёт воспроизводимые результаты» — эпистемологический круг, который философы науки обсуждают до сих пор." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одно своё важное убеждение и попробуйте его обосновать. Потом спросите: не использую ли я само это убеждение как часть обоснования? Если да — найдите независимый аргумент или признайте, что обоснования нет."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"The Bible is the word of God because the Bible says so.\" \"This manager is competent because he makes good decisions — and his decisions are good because he's competent.\" The argument moves in a circle — and therefore goes nowhere." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Circular}} Reasoning" } },
+        { "type": "subtitle", "props": { "text": "Circular Reasoning / Petitio Principii · classical logic" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/circular_reasoning.svg", "alt": "An arrow moving forward and returning to its own starting point" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Circular reasoning (Latin: petitio principii — \"begging the question\") is the error where the premises of an argument assume what needs to be proved. Technically the argument is \"valid\": the conclusion follows from the premises. But the premises already contain the conclusion — so the argument proves nothing. It doesn't expand knowledge; it just restates the claim in different words.",
+              "Circular reasoning is often hard to spot when premises and conclusion aren't identical but paraphrased. \"The free market works because competition creates efficiency — and efficiency is what the free market creates.\" {{em:The longer the circle, the harder it is to notice.}} Many political and ideological arguments are circular loops with a dozen steps.",
+              "Why does this work? Because we tend to accept the first premises of an argument without checking, especially when they sound convincing. By the time we reach the conclusion, it seems \"proven.\" In reality, we simply accepted the conclusion at the start without noticing."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "An argument only proves what wasn't already in the premises. If the premises already assume the conclusion — the argument proves nothing. It merely asserts the same thing twice."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a corporate strategy meeting:",
+            "example_quote": "— Our product is the best on the market because we have the most loyal customers — and customers are loyal because we offer the best product.",
+            "recognition_signal": "Signal: the argument returns to the original thesis. \"A, because B — and B, because A.\" Try asking \"how do you know that?\" — if the answer reproduces the original claim, you have a circular argument.",
+            "nuance_warning": "Some circles are unavoidable at the foundations of any system (for example, logic uses logic to justify logic). This is an \"inevitable circle\" — different in kind. The fallacy occurs when a circle is used where an independent argument should be."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Circular reasoning is especially dangerous in beliefs we already hold — we don't notice we're proving what we already know. Self-check: can you justify your position without using that position itself as an argument?"
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In politics", "example": "\"We must follow this law because it's the law.\" The authority of law can't be justified by the law itself — it requires an external argument (justice, social contract, etc.)." },
+              { "label": "In business", "example": "\"We're right because the market accepted us — and the market accepted us because we're right.\" This isn't analysis of success — it's reproduction of it." },
+              { "label": "In science", "example": "\"The scientific method is reliable because it produces reproducible results\" — an epistemological circle that philosophers of science still discuss." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one of your important beliefs and try to justify it. Then ask: am I using that belief itself as part of the justification? If yes — find an independent argument, or acknowledge that the justification isn't there."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/circular_reasoning" }]
+}

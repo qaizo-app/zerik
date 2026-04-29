@@ -1,0 +1,138 @@
+{
+  "id": "lottery_paradox",
+  "category": "paradoxes",
+  "release_number": 66,
+  "release_date": "2026-06-16",
+  "tags": ["kyburg", "probability", "belief", "logic", "epistemology"],
+  "difficulty": 4,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/lottery_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "В лотерее миллион билетов. Вы убеждены: билет №1 проиграет. И №2 проиграет. И каждый из миллиона билетов проиграет — по отдельности. Но один из них выиграет. Если рациональное убеждение следует вероятности — вы одновременно убеждены, что каждый билет проиграет, и что какой-то выиграет. Это противоречие." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:лотереи}}" } },
+        { "type": "subtitle", "props": { "text": "Lottery Paradox · Генри Кайберг · 1961" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/lottery_paradox.svg", "alt": "Барабан с билетами — каждый помечен «проигрыш», но один выигрывает" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Генри Кайберг сформулировал парадокс в 1961 году, исследуя природу рационального убеждения. Вопрос: при какой вероятности рационально «верить» в истинность утверждения? Если порог — 99%, то в лотерее с 100 билетами вы рационально верите, что каждый проиграет (вероятность проигрыша любого конкретного билета = 99%). Но из этого следует, что вы верите: ни один не выиграет. Это противоречит вашему же убеждению о том, что один должен выиграть.",
+              "Парадокс обнажает фундаментальное напряжение в теории рационального убеждения. Два разумных принципа конфликтуют: «Если вероятность достаточно высока — можно верить» и «Убеждения должны быть логически согласованы между собой». {{em:Оказывается, нельзя одновременно соблюдать оба принципа.}} Любой порог вероятности создаёт парадокс.",
+              "Философы предложили разные выходы. Одни говорят: вероятности — не убеждения, они несравнимы. Другие: убеждения должны быть «взвешены», а не бинарны. Третьи предлагают отказаться от понятия «верить» в пользу «принимать с вероятностью». Ни одно решение не стало общепринятым."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Рациональные убеждения, основанные на вероятности, могут противоречить друг другу при суммировании. Это не логическая ошибка — это структурная проблема самого понятия «рационального убеждения»."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Миллион билетов. Вы верите, что каждый отдельный билет проиграет. Верите ли вы, что ни один не выиграет?",
+            "hint": "Согласуйте оба убеждения — и посмотрите, что получится.",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Если вы верите, что билет №1 проиграет, и верите, что билет №2 проиграет, ... и верите, что билет №1 000 000 проиграет — то логическая конъюнкция этих убеждений: «ни один не выиграет». Но вы точно знаете, что один выиграет. Значит, вы одновременно убеждены в двух противоречивых вещах — и обе убеждённости рациональны по отдельности. Парадокс показывает: вероятностное мышление и бинарное убеждение несовместимы в одной системе.",
+            "intuition_trap": "Интуиция говорит «конечно, какой-то выиграет» — и это правда. Но она не замечает, что каждое единичное убеждение об отдельном билете тоже рационально. Объединение рациональных убеждений даёт иррациональный результат."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В праве", "example": "Стандарт «вне разумных сомнений» — это по сути лотерейный вопрос. Можно быть на 99,9% уверен в вине — но одновременно знать, что иногда 99,9% ошибаются." },
+              { "label": "В медицине", "example": "Врач убеждён, что конкретный пациент не отреагирует плохо на препарат (вероятность осложнения 0,1%). Из тысячи таких убеждений — одно будет неверным." },
+              { "label": "В ИИ и ML", "example": "Классификаторы с высокой точностью «верят» в каждое отдельное предсказание — и при этом систематически ошибаются на части из них. Парадокс лотереи встроен в любую вероятностную систему." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните убеждение, в котором вы «уверены» (>90%). Теперь подумайте: сколько таких убеждений у вас? Если их сто — статистически несколько неверны. Какие именно — неизвестно. Это парадокс лотереи в вашей голове."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "A lottery has a million tickets. You believe ticket #1 will lose. And ticket #2 will lose. And every individual ticket among the million. But one of them must win. If rational belief follows probability — you simultaneously believe every ticket will lose and that some ticket will win. This is a contradiction." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Lottery}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Lottery Paradox · Henry Kyburg · 1961" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/lottery_paradox.svg", "alt": "A lottery drum with tickets — each marked \"loser,\" but one will win" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Henry Kyburg formulated the paradox in 1961, studying the nature of rational belief. The question: at what probability is it rational to \"believe\" something is true? If the threshold is 99%, then in a lottery with 100 tickets you rationally believe each individual ticket will lose (probability of any specific ticket losing = 99%). But this implies you believe no ticket will win — contradicting your own belief that one must.",
+              "The paradox exposes a fundamental tension in the theory of rational belief. Two reasonable principles conflict: \"If the probability is high enough, you can believe it\" and \"Beliefs must be logically consistent with each other.\" {{em:It turns out you cannot simultaneously satisfy both principles.}} Any probability threshold produces the paradox.",
+              "Philosophers have proposed various exits. Some say: probabilities aren't beliefs — they're incommensurable. Others: beliefs should be \"graded\" rather than binary. Still others propose abandoning \"belief\" in favor of \"accepting with probability.\" No solution has become the consensus."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Rational beliefs grounded in probability can contradict each other when combined. This isn't a logical error — it's a structural problem with the very concept of \"rational belief.\""
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "A million tickets. You believe each individual ticket will lose. Do you believe no ticket will win?",
+            "hint": "Combine both beliefs — and see what you get.",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "If you believe ticket #1 will lose, and ticket #2 will lose, ... and ticket #1,000,000 will lose — then the logical conjunction of those beliefs is: \"none will win.\" But you know for a fact that one will. So you simultaneously hold two contradictory beliefs — and each is rational in isolation. The paradox shows: probabilistic thinking and binary belief are incompatible in one system.",
+            "intuition_trap": "Intuition says \"of course some ticket will win\" — and that's true. But it doesn't notice that each individual belief about a particular ticket is also rational. Combining rational individual beliefs produces an irrational collective result."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In law", "example": "The \"beyond reasonable doubt\" standard is essentially a lottery question. You can be 99.9% certain of guilt — while knowing that 99.9% certainty is sometimes wrong." },
+              { "label": "In medicine", "example": "A doctor believes a specific patient won't react badly to a drug (0.1% complication risk). Among a thousand such beliefs — one will be wrong." },
+              { "label": "In AI and ML", "example": "High-accuracy classifiers \"believe\" each individual prediction — and systematically get some wrong. The lottery paradox is built into any probabilistic system." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a belief you're \"confident\" in (>90%). Now consider: how many such beliefs do you hold? If there are a hundred — statistically, some are wrong. Which ones, you can't know. That's the lottery paradox in your own head."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/lottery_paradox" }]
+}

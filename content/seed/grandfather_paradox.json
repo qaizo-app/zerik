@@ -1,0 +1,138 @@
+{
+  "id": "grandfather_paradox",
+  "category": "paradoxes",
+  "release_number": 59,
+  "release_date": "2026-06-09",
+  "tags": ["time_travel", "paradox", "causality", "logic", "physics"],
+  "difficulty": 3,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/grandfather_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы садитесь в машину времени и отправляетесь в прошлое. Вы убиваете своего дедушку до того, как он встретил бабушку. Значит, ваш родитель никогда не родится. Значит, вы никогда не родитесь. Значит, вы не можете путешествовать в прошлое. Значит, дедушка жив. Значит, вы рождаетесь. Значит, вы отправляетесь в прошлое." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:дедушки}}" } },
+        { "type": "subtitle", "props": { "text": "Grandfather Paradox · Рене Баржавель · 1943" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/grandfather_paradox.svg", "alt": "Стрелка времени, закручивающаяся в петлю и пожирающая саму себя" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Парадокс дедушки — это не просто сюжет для научной фантастики. Он задаёт фундаментальный вопрос о природе времени и причинности: может ли следствие предшествовать причине? Если путешествие в прошлое возможно, то действия в прошлом могут изменить настоящее — включая само существование путешественника. Это замкнутая петля причинности, которая разрушает сама себя.",
+              "Физики предложили несколько разрешений. «Самосогласованность» (принцип Новикова): события в прошлом уже фиксированы — путешественник во времени не может изменить то, что уже произошло, только участвовать в том, что уже произошло. Вы не можете убить дедушку — что-то всегда помешает. {{em:Прошлое неизменно не потому что защищено, а потому что оно уже случилось.}}",
+              "Многомировая интерпретация предлагает другой выход: путешественник попадает не в своё прошлое, а в параллельную ветку реальности. В ней он убивает дедушку — и рождается «другое» будущее. Его собственная ветка остаётся неизменной. Парадокс исчезает — ценой бесконечного умножения реальностей."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Самореференция в причинно-следственных цепочках порождает логические коллапсы. Парадокс дедушки показывает: некоторые предпосылки о мире (например, изменяемое прошлое) несовместимы с другими (причинность)."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Вы путешествуете в прошлое и убиваете своего дедушку до рождения вашего родителя. Что происходит дальше?",
+            "hint": "Попробуйте проследить петлю до конца — дважды.",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Если вы убиваете дедушку → вы не рождаетесь → вы не путешествуете → дедушка жив → вы рождаетесь → вы путешествуете → вы убиваете дедушку → ... Петля не имеет решения внутри линейной модели времени. Физика предлагает три выхода: (1) прошлое самосогласованно и вы просто не смогли бы этого сделать; (2) вы попали в параллельную ветку; (3) путешествие назад по времени физически невозможно.",
+            "intuition_trap": "Интуиция ищет «что произошло». Парадокс показывает: сам вопрос предполагает несовместимые условия. Как и парадокс Рассела — некоторые постановки задачи разрушают сами себя."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В физике", "example": "Уравнения общей теории относительности не запрещают путешествия в прошлое — но такие решения (замкнутые времениподобные кривые) создают именно этот парадокс, что делает их физически сомнительными." },
+              { "label": "В программировании", "example": "Зависимость, которая зависит от своего собственного результата — программный аналог парадокса дедушки. Циклические зависимости в системах часто приводят к взаимоблокировке." },
+              { "label": "В логике", "example": "«Это утверждение ложно» — та же структура. Самореференция, разрушающая систему изнутри, возникает в логике, математике и физике одинаково." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите в своей жизни «петлю»: решение, которое зависит от своего собственного результата. «Я начну делать X, когда Y» — а Y случится только если делать X. Что разрывает эту петлю?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "You get into a time machine and travel to the past. You kill your grandfather before he met your grandmother. That means your parent is never born. That means you're never born. That means you can't travel to the past. That means your grandfather lives. That means you're born. That means you travel to the past." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Grandfather}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Grandfather Paradox · René Barjavel · 1943" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/grandfather_paradox.svg", "alt": "A timeline curling into a loop and consuming itself" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The grandfather paradox isn't just a science fiction plot device. It poses a fundamental question about the nature of time and causality: can an effect precede its cause? If traveling to the past is possible, then actions in the past can change the present — including the very existence of the traveler. This is a closed causal loop that destroys itself.",
+              "Physicists have proposed several resolutions. \"Self-consistency\" (the Novikov principle): events in the past are already fixed — a time traveler can't change what has already happened, only participate in what already happened. You cannot kill your grandfather — something would always prevent it. {{em:The past is unchangeable not because it's protected, but because it has already happened.}}",
+              "The many-worlds interpretation offers a different exit: the traveler arrives not in their own past, but in a parallel branch of reality. In that branch they kill their grandfather — and a \"different\" future is born. Their own branch remains unchanged. The paradox disappears — at the cost of an infinite multiplication of realities."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Self-reference in causal chains produces logical collapse. The grandfather paradox shows: some premises about the world (a changeable past, for instance) are incompatible with others (causality)."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "You travel to the past and kill your grandfather before your parent is born. What happens next?",
+            "hint": "Try following the loop to the end — twice.",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "You kill grandfather → you're not born → you don't travel → grandfather lives → you're born → you travel → you kill grandfather → ... The loop has no solution within a linear model of time. Physics offers three exits: (1) the past is self-consistent and you simply couldn't have done it; (2) you arrived in a parallel branch; (3) backward time travel is physically impossible.",
+            "intuition_trap": "Intuition looks for \"what happened.\" The paradox shows: the question itself assumes incompatible conditions. Like Russell's Paradox — some setups destroy themselves from the inside."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In physics", "example": "General relativity's equations don't prohibit traveling to the past — but such solutions (closed timelike curves) create exactly this paradox, making them physically suspect." },
+              { "label": "In programming", "example": "A dependency that depends on its own output — the software version of the grandfather paradox. Circular dependencies in systems often cause deadlocks." },
+              { "label": "In logic", "example": "\"This statement is false\" — the same structure. Self-reference that destroys the system from inside appears equally in logic, mathematics, and physics." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find a loop in your own life: a decision that depends on its own outcome. \"I'll start doing X once Y happens\" — but Y only happens if you do X. What breaks the loop?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/grandfather_paradox" }]
+}

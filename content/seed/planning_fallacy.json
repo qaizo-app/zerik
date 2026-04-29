@@ -1,0 +1,168 @@
+{
+  "id": "planning_fallacy",
+  "category": "cognitive_biases",
+  "release_number": 65,
+  "release_date": "2026-06-15",
+  "tags": ["planning_fallacy", "optimism_bias", "kahneman", "projects", "time_estimation"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/planning_fallacy.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Сиднейский оперный театр должен был открыться в 1963 году и стоить 7 миллионов долларов. Он открылся в 1973-м и обошёлся в 102 миллиона. Исследования показывают: этот сценарий — норма, а не исключение. Проекты почти всегда позже и дороже, чем планировалось. Причина — не некомпетентность. Это когнитивное искажение." }
+        },
+        { "type": "title", "props": { "text": "Ошибка {{accent:планирования}}" } },
+        { "type": "subtitle", "props": { "text": "Planning Fallacy · Даниэль Канеман, Амос Тверски · 1979" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/planning_fallacy.svg", "alt": "Прямая линия плана и извилистая линия реальности, уходящая далеко вправо" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Канеман и Тверски описали ошибку планирования в 1979 году: люди систематически недооценивают время, стоимость и риски будущих проектов — и переоценивают вероятность успеха. Это происходит, даже когда у них есть опыт аналогичных провалов в прошлом. Психолог Роджер Буэлер провёл эксперимент: студенты предсказывали, когда завершат дипломную работу. Средний оптимистичный прогноз — 34 дня. Среднее реальное время — 55 дней.",
+              "Почему это происходит? При планировании мы опираемся на «внутренний взгляд»: представляем конкретный план и его оптимальное выполнение. Мы не учитываем непредвиденные события, болезни, зависимости от других людей. {{em:«Внешний взгляд» — статистика похожих проектов — систематически игнорируется.}} Данные говорят, что 70% проектов такого типа превышают бюджет на 40% — но наш проект «другой».",
+              "Канеман предложил антидот: Reference Class Forecasting («прогнозирование по классу ссылок»). Вместо «как долго займёт этот проект?» — «как долго обычно занимают проекты этого типа?». Поиск статистики похожих случаев вместо оптимизации конкретного плана."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Планируя, мы видим лучший сценарий изнутри. Реальность — это средний исход класса похожих проектов. Использование внешней статистики вместо внутреннего плана даёт точнее."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы оцениваете задачу в 3 дня. Ваша история показывает, что похожие задачи занимали в среднем 7 дней. Какую цифру называете клиенту?",
+            "setup": null,
+            "options": [
+              { "id": "3", "text": "3 дня — этот раз точно пойдёт по плану", "is_wiser": false },
+              { "id": "7", "text": "7-10 дней — опираюсь на историю аналогичных задач", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "называют оптимистичную цифру",
+              "explanation": "Большинство называют оптимистичный план — и проигрывают. «Внешний взгляд» неудобен: он портит красивые обещания. Но он точнее. Профессиональные оценщики (строительство, IT-тендеры) применяют коэффициент 2-3× к первоначальной оценке — именно потому что знают эту закономерность.",
+              "wisdom": "{{em:Ваш план — это лучший сценарий. Клиенту нужен реалистичный.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Ошибка планирования усиливается при высокой мотивации: чем больше мы хотим успеха, тем оптимистичнее план. Это делает её особенно опасной при старте бизнеса, запуске продуктов и личных обязательствах."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В IT", "example": "«Это займёт две недели» — легендарная фраза разработчиков. Правило удвоения сроков существует не просто так." },
+              { "label": "В инфраструктуре", "example": "Мегапроекты (аэропорты, дороги, стадионы) в среднем превышают бюджет на 45% и сдаются на 17 месяцев позже. Бент Фливбьорг изучил тысячи таких проектов." },
+              { "label": "В личной жизни", "example": "«Я успею сделать это за выходные» — личная версия ошибки планирования. Внутренний взгляд всегда видит пустой календарь и идеальную концентрацию." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите текущую задачу с дедлайном. Найдите три похожих задачи из прошлого. Сколько они реально заняли? Скорректируйте оценку по статистике, а не по плану."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "The Sydney Opera House was supposed to open in 1963 and cost $7 million. It opened in 1973 and cost $102 million. Research shows this isn't an exception — it's the norm. Projects are almost always later and more expensive than planned. The reason isn't incompetence. It's a cognitive bias." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Planning}} Fallacy" } },
+        { "type": "subtitle", "props": { "text": "Planning Fallacy · Daniel Kahneman & Amos Tversky · 1979" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/planning_fallacy.svg", "alt": "A straight plan line and a winding reality line extending far to the right" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Kahneman and Tversky described the planning fallacy in 1979: people systematically underestimate the time, cost, and risks of future projects — and overestimate the probability of success. This happens even when they have experience of similar failures in the past. Psychologist Roger Buehler ran an experiment: students predicted when they would finish their thesis. Average optimistic forecast: 34 days. Average actual time: 55 days.",
+              "Why does this happen? When planning, we rely on the \"inside view\": we picture a specific plan and its optimal execution. We don't account for unexpected events, illness, dependencies on other people. {{em:The \"outside view\" — statistics on similar projects — is systematically ignored.}} The data says 70% of projects of this type exceed budget by 40% — but our project is \"different.\"",
+              "Kahneman proposed an antidote: Reference Class Forecasting. Instead of \"how long will this project take?\" — \"how long do projects of this type typically take?\" Looking for statistics on similar cases instead of optimizing the specific plan."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When planning, we see the best scenario from the inside. Reality is the average outcome for the class of similar projects. Using external statistics instead of the internal plan is more accurate."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You estimate a task at 3 days. Your history shows similar tasks took 7 days on average. What do you tell the client?",
+            "setup": null,
+            "options": [
+              { "id": "3", "text": "3 days — this time it will definitely go according to plan", "is_wiser": false },
+              { "id": "7", "text": "7-10 days — I'm basing this on the history of similar tasks", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "give the optimistic number",
+              "explanation": "Most people give the optimistic estimate — and lose. The \"outside view\" is uncomfortable: it ruins nice promises. But it's more accurate. Professional estimators (construction, IT tenders) apply a 2-3× multiplier to initial estimates — precisely because they know this pattern.",
+              "wisdom": "{{em:Your plan is the best-case scenario. Your client needs the realistic one.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The planning fallacy intensifies with high motivation: the more we want to succeed, the more optimistic the plan. This makes it especially dangerous when starting a business, launching a product, or making personal commitments."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In software", "example": "\"This will take two weeks\" — the legendary developer phrase. The rule of doubling timelines exists for a reason." },
+              { "label": "In infrastructure", "example": "Megaprojects (airports, roads, stadiums) exceed budget by an average of 45% and are delivered 17 months late. Bent Flyvbjerg studied thousands of such projects." },
+              { "label": "In personal life", "example": "\"I'll get this done over the weekend\" — the personal version of the planning fallacy. The inside view always sees an empty calendar and perfect concentration." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take a current task with a deadline. Find three similar tasks from your past. How long did they actually take? Adjust your estimate based on the statistics, not the plan."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/planning_fallacy" }]
+}

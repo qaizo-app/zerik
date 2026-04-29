@@ -1,0 +1,186 @@
+{
+  "id": "asch_conformity",
+  "category": "psychology_experiments",
+  "release_number": 74,
+  "release_date": "2026-06-24",
+  "tags": ["asch", "conformity", "social_pressure", "groupthink", "obedience"],
+  "difficulty": 2,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/asch_conformity.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вам показывают линию и три варианта — A, B, C. Правильный ответ очевиден: это линия B. Семь других участников эксперимента один за другим говорят «A». Ваша очередь. Что вы скажете? В реальном эксперименте 75% людей хотя бы раз давали неверный ответ вслед за группой." }
+        },
+        { "type": "title", "props": { "text": "Эксперимент Аша о {{accent:конформ}}ности" } },
+        { "type": "subtitle", "props": { "text": "Asch Conformity Experiments · Соломон Аш · Суортмор · 1951" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/asch_conformity.svg", "alt": "Ряд сидящих фигур, все указывают на вариант A; одна фигура в конце смотрит на очевидно правильный вариант B" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Соломон Аш набрал группы из 8 человек для «теста зрения». В действительности 7 из 8 были подставными — они намеренно давали очевидно неверные ответы. Единственный реальный участник оказывался в положении, когда большинство явно ошибается. Результат: 37% всех ответов реальных участников соответствовали ошибочному мнению группы. 75% ошиблись хотя бы раз.",
+              "Позже Аш спрашивал участников: почему вы согласились? Большинство знало правильный ответ, но поддалось давлению. Одни боялись выглядеть странно. Другие начинали сомневаться в себе: «Может, я что-то не вижу?» {{em:Когда все вокруг видят по-другому, мы начинаем сомневаться в собственном восприятии — даже если оно верно.}} Это не слабость — это встроенная социальная функция.",
+              "Важный эффект: достаточно одного союзника. Если хотя бы один подставной давал правильный ответ, уровень конформности падал с 37% до 5%. Одиночество в несогласии делает нас уязвимыми. Один человек, разделяющий вашу точку зрения, радикально меняет ситуацию."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Единогласное мнение группы создаёт мощное давление на индивидуальное суждение — даже когда правильный ответ очевиден. Одиночный голос несогласия кратно снижает это давление."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "На совещании все поддерживают решение, которое вам кажется ошибочным. Что делает человек, знающий об эффекте Аша?",
+            "setup": null,
+            "options": [
+              { "id": "silent", "text": "Молчит — раз все согласны, наверное, он что-то упускает", "is_wiser": false },
+              { "id": "speaks", "text": "Высказывается — понимает, что его молчание усилит конформность всей группы", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "предпочитают промолчать",
+              "explanation": "Данные Аша показывают: один голос несогласия снижает конформность в 7 раз. Ваша реплика «я вижу это иначе» не просто выражает мнение — она даёт другим несогласным разрешение тоже заговорить. Молчание несогласных создаёт иллюзию единогласия, которой нет.",
+              "wisdom": "{{em:Молчание несогласных создаёт иллюзию единогласия, которого нет.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2005",
+            "text": "Эксперименты Аша хорошо воспроизводятся, хотя уровень конформности варьируется в зависимости от культуры. Исследования в более коллективистских культурах (Япония, Китай) показывают более высокую конформность; в индивидуалистических — более низкую, но она всё равно есть. Нейровизуализация (Bond & Smith, 1996; Berns et al, 2005) показала: конформность частично изменяет зрительное восприятие — мозг буквально видит по-другому под социальным давлением.",
+            "sources": [
+              {
+                "title": "A meta-analytic review of conformity research",
+                "authors": "Rod Bond & Peter Smith",
+                "year": "1996",
+                "doi": "10.1037/0033-2909.119.1.111"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В бизнесе", "example": "Групповое мышление в советах директоров и командах. Когда «все согласны», это часто означает: никто не высказал несогласие. Структурированное несогласие (devil's advocate) — прямой ответ на эффект Аша." },
+              { "label": "В инвестициях", "example": "Рыночные пузыри питаются конформностью: «все покупают, значит это правильно». Аш объясняет, почему умные люди следуют за толпой в очевидно неразумных решениях." },
+              { "label": "В медицине", "example": "Диагностические ошибки нередко возникают из-за конформности: врач принимает мнение консилиума вместо того, чтобы настаивать на своей интерпретации." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните ситуацию, когда вы промолчали, хотя видели иначе. Была ли там реальная причина для несогласия? Что было бы, если бы вы высказались? Сегодня: назначьте себе одну ситуацию, где вы выскажете несогласие — уважительно, но чётко."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №7" } },
+        {
+          "type": "hook",
+          "props": { "text": "You're shown a line and three options — A, B, C. The right answer is obvious: it's line B. Seven other participants go one by one and each says \"A.\" Now it's your turn. What do you say? In the real experiment, 75% of participants gave the wrong answer at least once to follow the group." }
+        },
+        { "type": "title", "props": { "text": "Asch {{accent:Conformity}} Experiments" } },
+        { "type": "subtitle", "props": { "text": "Asch Conformity Experiments · Solomon Asch · Swarthmore · 1951" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/asch_conformity.svg", "alt": "A row of seated figures all pointing to option A; one figure at the end looks toward the obviously correct option B" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Solomon Asch recruited groups of 8 people for what he called a \"vision test.\" In reality, 7 of 8 were confederates — deliberately giving obviously wrong answers. The one real participant found themselves in a situation where the majority was clearly mistaken. Result: 37% of all answers from real participants matched the group's wrong answer. 75% erred at least once.",
+              "Afterward, Asch asked participants why they agreed. Most knew the right answer but yielded to pressure. Some feared looking strange. Others began to doubt themselves: \"Maybe I'm missing something?\" {{em:When everyone around you sees differently, we start to doubt our own perception — even when it's correct.}} This isn't weakness — it's a built-in social function.",
+              "A crucial finding: one ally is enough. When even one confederate gave the correct answer, conformity dropped from 37% to 5%. Being alone in disagreement makes us vulnerable. One person who shares your view radically changes the situation."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A unanimous group opinion creates powerful pressure on individual judgment — even when the right answer is obvious. A single dissenting voice dramatically reduces that pressure."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "In a meeting, everyone supports a decision that seems wrong to you. What does someone who knows about Asch's findings do?",
+            "setup": null,
+            "options": [
+              { "id": "silent", "text": "Stays silent — if everyone agrees, maybe they're missing something", "is_wiser": false },
+              { "id": "speaks", "text": "Speaks up — knowing their silence will increase the group's conformity", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "prefer to stay quiet",
+              "explanation": "Asch's data shows: one dissenting voice reduces conformity sevenfold. Saying \"I see this differently\" doesn't just express an opinion — it gives other silent dissenters permission to speak. The silence of those who disagree creates an illusion of unanimity that doesn't actually exist.",
+              "wisdom": "{{em:The silence of dissenters creates an illusion of unanimity that isn't there.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2005",
+            "text": "Asch's experiments replicate well, though conformity levels vary by culture. Studies in more collectivist cultures (Japan, China) show higher conformity; in individualistic ones — lower, but still present. Neuroimaging (Bond & Smith 1996; Berns et al 2005) showed: conformity partly changes visual perception — the brain literally sees differently under social pressure.",
+            "sources": [
+              {
+                "title": "A meta-analytic review of conformity research",
+                "authors": "Rod Bond & Peter Smith",
+                "year": "1996",
+                "doi": "10.1037/0033-2909.119.1.111"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In business", "example": "Groupthink in boards and teams. When \"everyone agrees,\" it often means no one voiced disagreement. Structured dissent (devil's advocate role) is a direct response to the Asch effect." },
+              { "label": "In investing", "example": "Market bubbles are fed by conformity: \"everyone is buying, so it must be right.\" Asch explains why smart people follow the crowd into obviously poor decisions." },
+              { "label": "In medicine", "example": "Diagnostic errors often arise from conformity: a physician accepts the committee's view rather than insisting on their own reading of the evidence." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall a situation where you stayed silent but saw things differently. Was there a real reason for disagreement? What might have happened if you'd spoken up? Today: commit to one situation where you'll voice disagreement — respectfully, but clearly."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/asch_conformity" }]
+}

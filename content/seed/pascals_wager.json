@@ -1,0 +1,168 @@
+{
+  "id": "pascals_wager",
+  "category": "thought_experiments",
+  "release_number": 75,
+  "release_date": "2026-06-25",
+  "tags": ["pascal", "wager", "decision_theory", "expected_value", "religion"],
+  "difficulty": 3,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/pascals_wager.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "Паскаль предлагает расчёт: если Бог существует и вы верите — вы получаете вечное блаженство. Если не верите — вечные муки. Если Бога нет и вы верили — вы потеряли немного. Если не верили — ничего не выиграли. Даже при малой вероятности существования Бога математика велит верить. Это первое применение теории ожидаемой ценности к выбору убеждений." }
+        },
+        { "type": "title", "props": { "text": "Пари {{accent:Паскаля}}" } },
+        { "type": "subtitle", "props": { "text": "Pascal's Wager · Блез Паскаль · «Мысли» · 1670" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/pascals_wager.svg", "alt": "Матрица 2×2: Бог есть / нет — верю / не верю — четыре исхода с разными знаками" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Паскаль рассуждал так: разум не может доказать или опровергнуть существование Бога. Но жить без решения невозможно — само бездействие уже выбор. Тогда применим логику азартной игры. Если Бог есть, и вы верите — бесконечное вознаграждение. Если Бог есть, а вы нет — бесконечное наказание. Если Бога нет, вы верили — небольшие издержки (жизнь в соответствии с религиозными нормами). Бесконечное вознаграждение, умноженное на любую вероятность, перевешивает любые конечные потери.",
+              "Аргумент был революционным: впервые решение о вере рассматривалось через призму математики риска, а не теологии. Паскаль, сам выдающийся математик, применил к религии инструментарий, который помогал разрабатывать теорию вероятностей. {{em:Пари Паскаля — первый в истории аргумент об ожидаемой ценности.}} Сегодня эта логика лежит в основе страхования, инвестиций и любого решения в условиях неопределённости.",
+              "Возражения не заставили себя ждать. «Проблема многих богов» (Диас): какому богу верить? Если богов много — ставка на одного оскорбляет остальных. «Аргумент о подлинности»: Бог, если он есть, видит, что вы верите не из убеждения, а из расчёта — и может это не зачесть. «Проблема доминирования»: тот же аргумент применим к любой экстравагантной гипотезе с бесконечным вознаграждением."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда ставки асимметричны — даже малая вероятность огромного исхода может перевесить любую конечную альтернативу. Пари Паскаля применимо везде, где один исход несоразмерно больше другого."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы рассматриваете малый шанс на катастрофу. Вероятность — 0,1%. Последствия — полная потеря всего. Стоит ли платить за страховку?",
+            "setup": null,
+            "options": [
+              { "id": "no", "text": "Нет — 0,1% слишком мало, чтобы беспокоиться", "is_wiser": false },
+              { "id": "yes", "text": "Зависит от ставок: если «всё» несоразмерно велико, Паскаль велит платить", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "игнорируют малые вероятности",
+              "explanation": "0,1% × (потеря всего) = ожидаемая потеря огромна. Пари Паскаля лежит в основе любой страховки: вы платите конечную сумму, чтобы защититься от несоразмерно большого риска. Сам Паскаль занимался теорией вероятностей — его пари — логичное применение собственного математического инструментария.",
+              "wisdom": "{{em:Малая вероятность × огромная ставка = аргумент действовать.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Логика пари Паскаля опасна без ограничений: любое утверждение вида «если это правда, последствия бесконечны» формально выигрывает пари. Паранойя и суеверие используют ту же структуру. Ключевой вопрос: какова реальная (а не теоретическая) вероятность исхода? Паскаль работает только тогда, когда вероятность не нулевая."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В управлении рисками", "example": "Резервы на чёрный день, страхование от редких катастроф, ядерная безопасность — логика Паскаля в чистом виде: конечные издержки ради защиты от несоразмерного риска." },
+              { "label": "В климатической политике", "example": "«Паскалевский» аргумент за климатическое действие: даже если вероятность катастрофы невелика, масштаб возможных последствий оправдывает значительные затраты сейчас." },
+              { "label": "В технологической безопасности", "example": "Аргументы об экзистенциальных рисках ИИ следуют той же структуре: малая вероятность × несоразмерные последствия = стоит принять меры." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей жизни риск с малой вероятностью, но огромными последствиями, который вы игнорируете? Применив логику Паскаля: ожидаемая ценность может оправдывать страховку, которую вы не купили."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "Pascal offers a calculation: if God exists and you believe — infinite bliss. If you don't believe — infinite torment. If God doesn't exist and you believed — you lost a little. If you didn't believe — gained nothing. Even at a small probability that God exists, the math says: believe. This is the first application of expected value theory to the choice of beliefs." }
+        },
+        { "type": "title", "props": { "text": "Pascal's {{accent:Wager}}" } },
+        { "type": "subtitle", "props": { "text": "Pascal's Wager · Blaise Pascal · Pensées · 1670" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/pascals_wager.svg", "alt": "A 2×2 matrix: God exists / doesn't — I believe / don't — four outcomes with different signs" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Pascal's reasoning: reason cannot prove or disprove God's existence. But you cannot live without a decision — inaction is already a choice. So apply the logic of a gamble. If God exists and you believe — infinite reward. If God exists and you don't — infinite punishment. If God doesn't exist and you believed — modest costs (living by religious norms). Infinite reward, multiplied by any probability, outweighs any finite loss.",
+              "The argument was revolutionary: for the first time, the decision about belief was treated through the lens of mathematical risk — not theology. Pascal, himself an outstanding mathematician, applied to religion the very tools he had helped develop for probability theory. {{em:Pascal's Wager is the first expected value argument in history.}} Today the same logic underlies insurance, investment, and any decision under uncertainty.",
+              "Objections followed quickly. The \"many gods\" problem (Diderot): which god? If there are many — betting on one offends the others. The authenticity argument: God, if he exists, can see you believe not from conviction but from calculation — and may not count it. The domination problem: the same argument applies to any extravagant hypothesis with an infinite payoff."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When stakes are asymmetric — even a small probability of a huge outcome can outweigh any finite alternative. Pascal's Wager applies wherever one outcome is disproportionately larger than the other."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're considering a small chance of catastrophe. Probability: 0.1%. Consequence: total loss of everything. Should you pay for insurance?",
+            "setup": null,
+            "options": [
+              { "id": "no", "text": "No — 0.1% is too small to worry about", "is_wiser": false },
+              { "id": "yes", "text": "Depends on the stakes: if \"everything\" is disproportionately large, Pascal says pay", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "ignore low-probability risks",
+              "explanation": "0.1% × (loss of everything) = enormous expected loss. Pascal's Wager underlies all insurance: you pay a finite sum to protect against a disproportionately large risk. Pascal himself worked on probability theory — his wager is the natural application of his own mathematical tools.",
+              "wisdom": "{{em:Small probability × enormous stakes = an argument to act.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Pascal's wager logic is dangerous without limits: any claim of the form \"if this is true, the consequences are infinite\" formally wins the wager. Paranoia and superstition use the same structure. The key question: what is the real (not theoretical) probability of the outcome? Pascal's logic only works when the probability is genuinely nonzero."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In risk management", "example": "Emergency reserves, rare-catastrophe insurance, nuclear safety — Pascal's logic in pure form: finite costs to protect against disproportionate risk." },
+              { "label": "In climate policy", "example": "The \"Pascalian\" argument for climate action: even if the probability of catastrophe is small, the scale of possible consequences justifies significant costs now." },
+              { "label": "In AI safety", "example": "Arguments about existential AI risks follow the same structure: small probability × disproportionate consequences = worth taking action." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there a low-probability but high-consequence risk in your life that you're ignoring? Applying Pascal's logic: the expected value may justify insurance you haven't bought."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/pascals_wager" }]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "curse_of_knowledge",
+  "category": "cognitive_biases",
+  "release_number": 52,
+  "release_date": "2026-06-02",
+  "tags": ["curse_of_knowledge", "communication", "empathy", "teaching", "cognitive_biases"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/curse_of_knowledge.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "В 1990 году студентка Стэнфорда провела эксперимент: одни участники отстукивали мелодии известных песен, другие должны были их угадать. «Отстукиватели» предсказали угадываемость в 50%. Реальный результат — 2,5%. Все слышали полную мелодию у себя в голове — и не могли вспомнить, каково это — её не слышать." }
+        },
+        { "type": "title", "props": { "text": "Проклятие {{accent:знания}}" } },
+        { "type": "subtitle", "props": { "text": "Curse of Knowledge · Колин Камерер, Джордж Лёвенштейн · 1989" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/curse_of_knowledge.svg", "alt": "Эксперт с головой, полной символов, говорит с пустой головой напротив" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Проклятие знания — это неспособность вспомнить, каково это — не знать того, что знаешь. Как только информация усвоена, она кажется очевидной. Попытка передать её другим наталкивается на невидимый барьер: говорящий не может встать на позицию незнания. Он пропускает шаги, которые кажутся само собой разумеющимися — но только ему.",
+              "Это объясняет, почему эксперты часто плохие учителя. Почему технические документы непонятны пользователям. Почему стартапы не могут объяснить свой продукт инвесторам. Почему менеджеры дают задания, которые кажутся им очевидными — и получают совсем не то. {{em:Чем глубже знание, тем сложнее вспомнить его отсутствие — и тем острее проклятие.}}",
+              "Парадоксально: чем умнее человек и чем дольше он в теме — тем сильнее проклятие. Новичок лучше объясняет новичку, потому что ещё помнит, как это — не знать. Опытный специалист потерял эту память. Стив Джобс был знаменит тем, что мог объяснить технологию так, чтобы было понятно его маме. Это был навык, который он специально развивал — потому что по умолчанию проклятие действует на всех."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Получив знание, невозможно вернуться к состоянию незнания. Это искажает коммуникацию: говорящий всегда знает больше, чем может передать, — и не осознаёт этого разрыва."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы — опытный разработчик. Новый коллега не понимает вашего объяснения. В чём, скорее всего, причина?",
+            "setup": null,
+            "options": [
+              { "id": "colleague", "text": "Коллега недостаточно старается или медленно соображает", "is_wiser": false },
+              { "id": "me", "text": "Я пропускаю шаги, которые кажутся мне очевидными, но не ему", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "винят коллегу",
+              "explanation": "Исследования показывают: в большинстве случаев проблема на стороне говорящего, а не слушающего. Проклятие знания заставляет пропускать ключевые шаги и предполагать общий контекст, которого нет. Лучший тест: попробуйте объяснить это незнакомому человеку без профессионального фона — и посмотрите, где они потеряются.",
+              "wisdom": "{{em:Если тебя не понимают — это не их проблема. Это твоя задача.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Проклятие знания не лечится умом или опытом — оно от них усиливается. Лечится только намеренными усилиями: конкретными примерами, тестированием на новичках, возвратом к базовым вопросам. Полезный ритуал: «Объясни это своей бабушке» — или как минимум воспроизведи полный путь от нуля до понимания."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В продуктах", "example": "Создатели приложений не видят UX-проблем, потому что знают, как продукт работает. Пользователи не знают — и теряются там, где разработчику «всё очевидно»." },
+              { "label": "В управлении", "example": "«Я же сказал сделать до пятницы» — менеджер не объяснил приоритет и контекст, потому что ему казалось, что это само собой разумеется." },
+              { "label": "В науке и образовании", "example": "Академические тексты часто непонятны даже умным читателям за пределами узкой специальности — авторы не могут вспомнить, каково это — не знать их области." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите что-то, что вы хорошо понимаете и регулярно объясняете другим. Попробуйте написать объяснение с нуля — для человека, который никогда об этом не слышал. Сколько шагов вы обычно пропускаете?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "In 1990, a Stanford student ran an experiment: some participants tapped out well-known songs, others had to guess them. The tappers predicted a 50% success rate. The actual rate: 2.5%. The tappers heard the full melody in their heads — and couldn't remember what it was like not to hear it." }
+        },
+        { "type": "title", "props": { "text": "The Curse of {{accent:Knowledge}}" } },
+        { "type": "subtitle", "props": { "text": "Curse of Knowledge · Colin Camerer & George Loewenstein · 1989" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/curse_of_knowledge.svg", "alt": "An expert with a head full of symbols speaking to an empty head across from them" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The curse of knowledge is the inability to remember what it was like not to know what you know. Once information is absorbed, it feels obvious. Transmitting it to others hits an invisible wall: the speaker can't step back into ignorance. They skip steps that seem self-evident — but only to them.",
+              "This explains why experts are often poor teachers. Why technical documentation confuses users. Why startups can't explain their product to investors. Why managers assign tasks that seem obvious to them — and get something completely different back. {{em:The deeper the knowledge, the harder it is to remember its absence — and the sharper the curse.}}",
+              "Paradoxically: the smarter the person and the longer they've been in a field, the stronger the curse. A novice explains better to another novice, because they still remember what it's like not to know. The experienced specialist has lost that memory. Steve Jobs was famous for explaining technology in terms his mother could understand. It was a skill he deliberately cultivated — because by default, the curse operates on everyone."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Once you have knowledge, you can't return to the state of not having it. This distorts communication: the speaker always knows more than they can convey — and doesn't realize the gap."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're an experienced developer. A new colleague doesn't understand your explanation. What's most likely the cause?",
+            "setup": null,
+            "options": [
+              { "id": "colleague", "text": "My colleague isn't trying hard enough or is slow to grasp things", "is_wiser": false },
+              { "id": "me", "text": "I'm skipping steps that feel obvious to me but not to them", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "blame the colleague",
+              "explanation": "Research consistently shows the problem is usually on the speaker's side, not the listener's. The curse of knowledge causes us to skip key steps and assume shared context that doesn't exist. The best test: try explaining it to someone outside the field — and see where they get lost.",
+              "wisdom": "{{em:If you're not being understood — that's not their problem. It's your task.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The curse of knowledge isn't cured by intelligence or experience — it's worsened by them. It's treated only by deliberate effort: concrete examples, testing on novices, returning to first principles. A useful ritual: \"Explain it to your grandmother\" — or at minimum, reconstruct the full path from zero to understanding."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In products", "example": "App creators don't see UX problems because they know how the product works. Users don't — and get lost exactly where the developer thinks \"it's obvious.\"" },
+              { "label": "In management", "example": "\"I told them to get it done by Friday\" — the manager didn't explain the priority and context because it seemed self-evident." },
+              { "label": "In academia", "example": "Academic papers are often impenetrable even for smart readers outside the specialty — authors can't remember what it was like not to know their field." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take something you understand well and regularly explain to others. Try writing the explanation from scratch — for someone who has never heard of it. How many steps do you normally skip?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/curse_of_knowledge" }]
+}

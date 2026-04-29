@@ -1,0 +1,154 @@
+{
+  "id": "marys_room",
+  "category": "thought_experiments",
+  "release_number": 54,
+  "release_date": "2026-06-04",
+  "tags": ["qualia", "consciousness", "physicalism", "frank_jackson", "philosophy_of_mind"],
+  "difficulty": 4,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/marys_room.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "Мария — блестящий нейробиолог. Она знает всё о цвете: длины волн, как сетчатка их обрабатывает, как мозг декодирует сигнал. Но есть одно: всю жизнь Мария провела в чёрно-белой комнате. Когда она впервые выходит на улицу и видит красный цвет — узнаёт ли она что-то новое?" }
+        },
+        { "type": "title", "props": { "text": "Комната {{accent:Марии}}" } },
+        { "type": "subtitle", "props": { "text": "Mary's Room · Фрэнк Джексон · 1982" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/marys_room.svg", "alt": "Чёрно-белая комната с учёным и яркое красное снаружи окна" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Фрэнк Джексон предложил этот эксперимент в 1982 году, чтобы атаковать физикализм — философскую позицию, согласно которой всё, включая сознание, является физическим. Если физикализм верен, то Мария, зная все физические факты о цвете, знает о нём всё. Значит, выйдя из комнаты, она не узнаёт ничего нового.",
+              "Но интуиция почти каждого говорит: Мария узнает что-то новое — каково это, видеть красный. Это «каково это» — квалиа — субъективный опыт, который, кажется, не сводится к физическим описаниям. {{em:Если Мария узнаёт что-то новое, значит, физические факты не исчерпывают реальность. Есть что-то ещё — опыт.}}",
+              "Физикалисты отвечают по-разному. «Способностная» гипотеза: Мария не узнаёт новый факт — она приобретает новую способность (узнавать красный, воображать его). «Антиципация» (Деннет): Мария и так уже знает всё, включая то, каково это — видеть красный. Дискуссия не закрыта. Комната Марии — один из главных инструментов философии сознания XXI века."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Между знанием о чём-то и знанием того, каково это — может быть непреодолимая пропасть. Субъективный опыт может не сводиться к физическому описанию — или наоборот."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Когда Мария выходит из комнаты и видит красный — она узнаёт что-то новое?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — субъективный опыт не сводится к физическим фактам", "is_wiser": false },
+              { "id": "no", "text": "Нет — она уже знала всё, включая то, каково это видеть красный", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что узнаёт новое",
+              "explanation": "Большинство людей интуитивно отвечают «да» — и Джексон задумывал именно такую реакцию, чтобы подтвердить существование квалиа. Но физикалисты оспаривают и саму интуицию, и вывод из неё. Деннет утверждает: наша интуиция о «новом знании» Марии — сама по себе заблуждение. Это один из немногих философских вопросов, где умные люди не сходятся не только в ответе, но и в том, что вообще считать ответом.",
+              "wisdom": "{{em:Самый глубокий вопрос науки — не «как работает мозг», а «почему его работа что-то значит».}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В искусственном интеллекте", "example": "Может ли ИИ «понимать» — или только обрабатывать символы? Комната Марии родственна китайской комнате Сёрла: знание всех правил ≠ понимание." },
+              { "label": "В медицине", "example": "Врач может знать всё о боли — анатомию, нейрохимию, пути — и при этом не знать, каково это. Именно поэтому пациентский опыт незаменим." },
+              { "label": "В эмпатии", "example": "«Я понимаю, как тебе тяжело» — возможно, неверно. Знание о чужом горе и знание того, каково это — разные вещи." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните что-то, что вы знаете теоретически, но никогда не переживали. Что изменилось бы в вашем понимании, если бы вы это пережили? Это и есть разница между знанием о чём-то и знанием, каково это."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "Mary is a brilliant neuroscientist. She knows everything about color: wavelengths, how the retina processes them, how the brain decodes the signal. There's just one thing: Mary has spent her whole life in a black-and-white room. When she finally steps outside and sees red — does she learn something new?" }
+        },
+        { "type": "title", "props": { "text": "{{accent:Mary's}} Room" } },
+        { "type": "subtitle", "props": { "text": "Mary's Room · Frank Jackson · 1982" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/marys_room.svg", "alt": "A black-and-white room with a scientist and vivid red outside the window" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Frank Jackson proposed this experiment in 1982 to attack physicalism — the philosophical position that everything, including consciousness, is physical. If physicalism is right, then Mary, knowing all the physical facts about color, knows everything about it. Which means she learns nothing new when she leaves the room.",
+              "But almost everyone's intuition says: Mary does learn something new — what it's like to see red. This \"what it's like\" — qualia — is subjective experience that seems not to reduce to physical descriptions. {{em:If Mary learns something new, then physical facts don't exhaust reality. There is something else — experience.}}",
+              "Physicalists respond in different ways. The \"ability\" hypothesis: Mary doesn't learn a new fact — she gains a new ability (to recognize red, to imagine it). Dennett's position: Mary already knows everything, including what it's like to see red. The debate isn't closed. Mary's Room is one of the central tools of 21st-century philosophy of mind."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Between knowing about something and knowing what it's like — there may be an unbridgeable gap. Subjective experience may not reduce to physical description — or it may."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "When Mary leaves the room and sees red — does she learn something new?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — subjective experience doesn't reduce to physical facts", "is_wiser": false },
+              { "id": "no", "text": "No — she already knew everything, including what it's like to see red", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think she learns something new",
+              "explanation": "Most people intuitively answer \"yes\" — and Jackson designed the experiment to provoke exactly that reaction, as evidence for qualia. But physicalists contest both the intuition and the conclusion from it. Dennett argues: our intuition that Mary learns something new is itself a mistake. This is one of the few philosophical questions where smart people disagree not just on the answer, but on what would count as an answer.",
+              "wisdom": "{{em:The deepest question in science isn't \"how does the brain work\" — it's \"why does its working feel like anything at all.\"}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In artificial intelligence", "example": "Can AI \"understand\" — or does it only process symbols? Mary's Room is related to Searle's Chinese Room: knowing all the rules ≠ understanding." },
+              { "label": "In medicine", "example": "A doctor can know everything about pain — anatomy, neurochemistry, pathways — without knowing what it's like. That's why patient experience is irreplaceable." },
+              { "label": "In empathy", "example": "\"I understand how hard this is for you\" may be wrong. Knowing about someone's grief and knowing what it's like are different things." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of something you understand theoretically but have never experienced. What would change in your understanding if you did? That gap is the difference between knowing about something and knowing what it's like."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/marys_room" }]
+}

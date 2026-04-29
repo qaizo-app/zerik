@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Central figure with "transparent" inner thoughts vs opaque exterior -->
+  <!-- Outer head - opaque to observer -->
+  <circle cx="200" cy="145" r="68" fill="#1a2035" stroke="#334455" stroke-width="2.5"/>
+  <!-- Inner emotional glow -->
+  <circle cx="200" cy="145" r="52" fill="#11183a" opacity="0.8"/>
+  <!-- Emotions inside head (visible only to self) -->
+  <text x="178" y="130" font-size="22" fill="#ff6644" font-family="sans-serif" opacity="0.9">😰</text>
+  <text x="168" y="158" font-size="10" fill="#ff9944" font-family="sans-serif">NERVOUS</text>
+  <text x="168" y="170" font-size="9" fill="#cc7733" font-family="sans-serif">ANXIOUS</text>
+  <text x="168" y="182" font-size="9" fill="#aa5522" font-family="sans-serif">AFRAID</text>
+  <!-- Face expression - neutral/blank -->
+  <!-- Eyes -->
+  <ellipse cx="182" cy="136" rx="6" ry="6" fill="#ddeeff"/>
+  <circle cx="182" cy="136" r="3.5" fill="#223355"/>
+  <ellipse cx="218" cy="136" rx="6" ry="6" fill="#ddeeff"/>
+  <circle cx="218" cy="136" r="3.5" fill="#223355"/>
+  <!-- Neutral mouth -->
+  <path d="M186,158 Q200,163 214,158" fill="none" stroke="#aabbcc" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- "Self sees" label with arrow into head -->
+  <text x="70" y="90" text-anchor="middle" font-size="10" fill="#ff9944" font-family="sans-serif">I feel this</text>
+  <path d="M90,95 Q130,110 148,135" fill="none" stroke="#ff9944" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrOrange)"/>
+  <defs>
+    <marker id="arrOrange" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#ff9944"/>
+    </marker>
+  </defs>
+  <!-- "Others see" label with arrow to face surface -->
+  <text x="325" y="90" text-anchor="middle" font-size="10" fill="#4499cc" font-family="sans-serif">they see</text>
+  <path d="M315,95 Q290,110 262,132" fill="none" stroke="#4499cc" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrBlue)"/>
+  <defs>
+    <marker id="arrBlue" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#4499cc"/>
+    </marker>
+  </defs>
+  <!-- Observer sees neutral face -->
+  <circle cx="325" cy="110" r="14" fill="#334455" stroke="#4499cc" stroke-width="1.5" opacity="0.8"/>
+  <!-- Observer eye -->
+  <ellipse cx="330" cy="108" rx="4" ry="4" fill="#aaccff"/>
+  <circle cx="330" cy="108" r="2" fill="#112233"/>
+  <!-- Gap labels -->
+  <text x="200" y="250" text-anchor="middle" font-size="11" fill="#557799" font-family="sans-serif">my inner state feels obvious to me</text>
+  <text x="200" y="265" text-anchor="middle" font-size="11" fill="#335566" font-family="sans-serif">but others see only a neutral face</text>
+  <!-- Title -->
+  <text x="200" y="32" text-anchor="middle" font-size="12" fill="#5588aa" font-family="sans-serif" letter-spacing="1">ILLUSION OF TRANSPARENCY</text>
+  <text x="200" y="50" text-anchor="middle" font-size="10" fill="#334455" font-family="sans-serif">Gilovich · Savitsky · Medvec · 1998</text>
+</svg>

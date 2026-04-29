@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Expert (left) - sees simple -->
+  <circle cx="100" cy="130" r="22" fill="#4499aa"/>
+  <line x1="100" y1="152" x2="100" y2="196" stroke="#4499aa" stroke-width="4"/>
+  <line x1="82" y1="168" x2="118" y2="168" stroke="#4499aa" stroke-width="3"/>
+  <line x1="100" y1="196" x2="88" y2="218" stroke="#4499aa" stroke-width="3"/>
+  <line x1="100" y1="196" x2="112" y2="218" stroke="#4499aa" stroke-width="3"/>
+  <!-- Expert's thought bubble -->
+  <ellipse cx="155" cy="96" rx="40" ry="26" fill="#223344"/>
+  <circle cx="127" cy="114" r="4" fill="#223344"/>
+  <circle cx="120" cy="123" r="2.5" fill="#223344"/>
+  <text x="155" y="92" text-anchor="middle" font-size="10" fill="#66bbcc" font-family="sans-serif">A → B → C</text>
+  <text x="155" y="106" text-anchor="middle" font-size="9" fill="#448899" font-family="sans-serif">OBVIOUS</text>
+  <!-- Label expert -->
+  <text x="100" y="236" text-anchor="middle" font-size="10" fill="#4499aa" font-family="sans-serif">EXPERT</text>
+  <!-- Arrow from expert to novice -->
+  <line x1="142" y1="165" x2="232" y2="165" stroke="#887755" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrGold)"/>
+  <defs>
+    <marker id="arrGold" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#887755"/>
+    </marker>
+  </defs>
+  <!-- "explains" label -->
+  <text x="188" y="155" text-anchor="middle" font-size="9" fill="#887755" font-family="sans-serif">explains</text>
+  <!-- Novice (right) - sees complexity -->
+  <circle cx="300" cy="130" r="22" fill="#aa6644"/>
+  <line x1="300" y1="152" x2="300" y2="196" stroke="#aa6644" stroke-width="4"/>
+  <line x1="282" y1="168" x2="318" y2="168" stroke="#aa6644" stroke-width="3"/>
+  <line x1="300" y1="196" x2="288" y2="218" stroke="#aa6644" stroke-width="3"/>
+  <line x1="300" y1="196" x2="312" y2="218" stroke="#aa6644" stroke-width="3"/>
+  <!-- Novice thought bubble - confusion -->
+  <ellipse cx="245" cy="96" rx="40" ry="26" fill="#221111"/>
+  <circle cx="273" cy="114" r="4" fill="#221111"/>
+  <circle cx="280" cy="123" r="2.5" fill="#221111"/>
+  <text x="245" y="89" text-anchor="middle" font-size="11" fill="#cc6644" font-family="sans-serif">???</text>
+  <text x="245" y="104" text-anchor="middle" font-size="9" fill="#884422" font-family="sans-serif">confusing</text>
+  <!-- Label novice -->
+  <text x="300" y="236" text-anchor="middle" font-size="10" fill="#aa6644" font-family="sans-serif">BEGINNER</text>
+  <!-- Curse label center -->
+  <text x="200" y="265" text-anchor="middle" font-size="11" fill="#887755" font-family="sans-serif">expert forgets what it's like not to know</text>
+  <!-- Title -->
+  <text x="200" y="38" text-anchor="middle" font-size="13" fill="#4499aa" font-family="sans-serif" letter-spacing="1">CURSE OF KNOWLEDGE</text>
+  <text x="200" y="57" text-anchor="middle" font-size="10" fill="#334455" font-family="sans-serif">Camerer · 1989</text>
+</svg>

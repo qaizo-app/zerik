@@ -1,0 +1,186 @@
+{
+  "id": "stanford_prison",
+  "category": "psychology_experiments",
+  "release_number": 53,
+  "release_date": "2026-06-03",
+  "tags": ["zimbardo", "stanford", "power", "roles", "authority"],
+  "difficulty": 3,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/stanford_prison.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №4" } },
+        {
+          "type": "hook",
+          "props": { "text": "В 1971 году психолог Филип Зимбардо превратил подвал Стэнфорда в тюрьму. Обычные студенты были случайным образом разделены на «охранников» и «заключённых». Эксперимент должен был длиться две недели. Его остановили через шесть дней." }
+        },
+        { "type": "title", "props": { "text": "Стэнфордский {{accent:тюремный}} эксперимент" } },
+        { "type": "subtitle", "props": { "text": "Stanford Prison Experiment · Филип Зимбардо · 1971" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/stanford_prison.svg", "alt": "Силуэт с жетоном охранника и силуэт за решёткой — одни и те же люди в разных ролях" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "К концу второго дня «охранники» начали унижать «заключённых»: заставляли делать бессмысленные упражнения, лишали сна, проводили проверки среди ночи. «Заключённые» начали демонстрировать признаки психологического срыва. Никто не отыгрывал роль — они стали этими ролями. Зимбардо сам настолько погрузился в роль «директора тюрьмы», что коллега извне остановила эксперимент, поставив ему простой вопрос: «Что вы делаете с этими людьми?»",
+              "Интерпретация Зимбардо: ситуация важнее личности. Нормальные люди в ролях, наделённых властью, совершают жестокие поступки — не потому что они жестоки, а потому что роль, система и ситуация этого ожидают. {{em:«Банальность зла» Ханны Арендт — это не метафора. Это механизм.}}",
+              "Эксперимент немедленно стал классикой. Он объяснял, почему обычные солдаты могут участвовать в зверствах, почему тюремный надзиратель может стать мучителем, почему корпоративная культура порождает скандалы. Один вопрос оставался: насколько эксперимент был научно строгим?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Роль, ситуация и социальные ожидания могут изменить поведение человека сильнее, чем его характер. Добрые люди в плохих системах делают плохие вещи."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Новый сотрудник замечает, что в компании принято скрывать ошибки от руководства. Он начинает делать то же самое. Почему?",
+            "setup": null,
+            "options": [
+              { "id": "character", "text": "Он изначально был нечестным — характер проявился", "is_wiser": false },
+              { "id": "situation", "text": "Ситуация и культура компании сильнее его личных установок", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "объясняют характером",
+              "explanation": "Это классическая «фундаментальная ошибка атрибуции»: мы объясняем чужое поведение характером, а не ситуацией. Стэнфордский эксперимент показывает: ситуационные факторы — нормы, роли, ожидания — часто сильнее, чем личные качества. Меняйте систему, а не только людей.",
+              "wisdom": "{{em:Хотите понять поведение человека — смотрите на систему, в которой он находится.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2018",
+            "text": "В 2018 году журналист Бен Блум опубликовал расследование, которое обнажило серьёзные проблемы с экспериментом. Записи показали: Зимбардо инструктировал «охранников» вести себя жёстко — это было не спонтанное превращение, а частично поставленное шоу. Некоторые «заключённые» признались, что симулировали срывы. Эксперимент не прошёл бы современную этическую проверку. Тем не менее сам феномен — влияние ситуации и ролей на поведение — подтверждён в более строгих исследованиях.",
+            "sources": [
+              {
+                "title": "The Lifespan of a Lie",
+                "authors": "Ben Blum",
+                "year": "2018",
+                "doi": null
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В корпоративной культуре", "example": "«У нас так принято» — три слова, которые объясняют больше поступков, чем характеры всех сотрудников вместе взятых." },
+              { "label": "В истории", "example": "Эксперимент часто цитируют в связи с Холокостом, Абу-Грейб, Руандой. Обычные люди — плохая система — чудовищные результаты." },
+              { "label": "В лидерстве", "example": "Лидер формирует ожидания роли для всей команды. Зимбардо: лечить нужно не людей, а ситуацию." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните поступок, который вам не нравится в себе или в коллеге. Какая ситуация, роль или ожидание его породили? Что нужно изменить в системе — не в человеке?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №4" } },
+        {
+          "type": "hook",
+          "props": { "text": "In 1971, psychologist Philip Zimbardo turned a Stanford basement into a mock prison. Ordinary college students were randomly assigned as \"guards\" or \"prisoners.\" The experiment was supposed to last two weeks. It was stopped after six days." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Stanford}} Prison Experiment" } },
+        { "type": "subtitle", "props": { "text": "Stanford Prison Experiment · Philip Zimbardo · 1971" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/stanford_prison.svg", "alt": "A silhouette with a guard badge and one behind bars — the same people in different roles" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "By the end of the second day, the \"guards\" had begun humiliating the \"prisoners\": forcing pointless exercises, depriving them of sleep, conducting checks in the middle of the night. The \"prisoners\" showed signs of psychological breakdown. No one was playing a role anymore — they had become the roles. Zimbardo himself was so absorbed in the role of \"prison superintendent\" that a colleague from outside stopped the experiment by asking a simple question: \"What are you doing to these people?\"",
+              "Zimbardo's interpretation: situation matters more than character. Normal people in roles endowed with power commit cruel acts — not because they are cruel, but because the role, the system, and the situation expect it. {{em:Hannah Arendt's \"banality of evil\" is not a metaphor. It's a mechanism.}}",
+              "The experiment immediately became a classic. It explained why ordinary soldiers can participate in atrocities, why a prison guard can become a torturer, why corporate culture breeds scandal. One question remained: how scientifically rigorous was it?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Role, situation, and social expectations can shape behavior more powerfully than character. Good people in bad systems do bad things."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A new employee notices that concealing mistakes from management is the norm at the company. He starts doing the same. Why?",
+            "setup": null,
+            "options": [
+              { "id": "character", "text": "He was dishonest to begin with — his character revealed itself", "is_wiser": false },
+              { "id": "situation", "text": "The company's situation and culture were stronger than his personal values", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "explain it through character",
+              "explanation": "This is a classic fundamental attribution error: we explain others' behavior through character rather than situation. The Stanford experiment shows: situational factors — norms, roles, expectations — are often stronger than personal qualities. Change the system, not just the people.",
+              "wisdom": "{{em:If you want to understand a person's behavior — look at the system they're in.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2018",
+            "text": "In 2018, journalist Ben Blum published an investigation exposing serious problems with the experiment. Records showed Zimbardo had instructed the \"guards\" to behave harshly — the transformation wasn't spontaneous, it was partly staged. Some \"prisoners\" admitted they had faked breakdowns. The experiment would not pass modern ethical review. That said, the core phenomenon — the power of situation and roles to shape behavior — is confirmed by more rigorous subsequent research.",
+            "sources": [
+              {
+                "title": "The Lifespan of a Lie",
+                "authors": "Ben Blum",
+                "year": "2018",
+                "doi": null
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In corporate culture", "example": "\"That's just how we do it here\" — six words that explain more behavior than all the employees' characters combined." },
+              { "label": "In history", "example": "The experiment is often cited in connection with the Holocaust, Abu Ghraib, Rwanda. Ordinary people — bad system — monstrous outcomes." },
+              { "label": "In leadership", "example": "A leader shapes role expectations for the entire team. Zimbardo: treat the situation, not the people." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a behavior you dislike in yourself or a colleague. What situation, role, or expectation produced it? What needs to change in the system — not the person?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/stanford_prison" }]
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Imagined spotlight from above -->
+  <defs>
+    <radialGradient id="spotlightGrad" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#ffee88" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffee88" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="200" cy="180" rx="80" ry="50" fill="url(#spotlightGrad)"/>
+  <!-- Spotlight beam lines (imagined) -->
+  <line x1="200" y1="40" x2="150" y2="155" stroke="#ffee88" stroke-width="1" opacity="0.25" stroke-dasharray="6,4"/>
+  <line x1="200" y1="40" x2="250" y2="155" stroke="#ffee88" stroke-width="1" opacity="0.25" stroke-dasharray="6,4"/>
+  <!-- Spotlight source (imagined, dashed) -->
+  <circle cx="200" cy="38" r="12" fill="none" stroke="#ffee88" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="200" y="43" text-anchor="middle" font-size="11" fill="#ffee88" font-family="sans-serif" opacity="0.7">?</text>
+  <text x="200" y="22" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">imagined</text>
+  <!-- Central figure (the self) -->
+  <circle cx="200" cy="160" r="22" fill="#8899bb"/>
+  <line x1="200" y1="182" x2="200" y2="218" stroke="#8899bb" stroke-width="4"/>
+  <line x1="182" y1="196" x2="218" y2="196" stroke="#8899bb" stroke-width="3"/>
+  <line x1="200" y1="218" x2="190" y2="238" stroke="#8899bb" stroke-width="3"/>
+  <line x1="200" y1="218" x2="210" y2="238" stroke="#8899bb" stroke-width="3"/>
+  <!-- Surrounding figures - looking AWAY -->
+  <!-- Left figure -->
+  <circle cx="78" cy="170" r="14" fill="#445566"/>
+  <line x1="78" y1="184" x2="78" y2="208" stroke="#445566" stroke-width="3"/>
+  <line x1="66" y1="194" x2="90" y2="194" stroke="#445566" stroke-width="2.5"/>
+  <!-- Left figure looking left (away) -->
+  <circle cx="72" cy="166" r="3" fill="#223344"/>
+  <circle cx="80" cy="165" r="3" fill="#223344"/>
+  <!-- Right figure -->
+  <circle cx="322" cy="170" r="14" fill="#445566"/>
+  <line x1="322" y1="184" x2="322" y2="208" stroke="#445566" stroke-width="3"/>
+  <line x1="310" y1="194" x2="334" y2="194" stroke="#445566" stroke-width="2.5"/>
+  <!-- Right figure looking right (away) -->
+  <circle cx="316" cy="166" r="3" fill="#223344"/>
+  <circle cx="328" cy="166" r="3" fill="#223344"/>
+  <!-- Far left figure looking down at phone -->
+  <circle cx="40" cy="175" r="12" fill="#334455"/>
+  <line x1="40" y1="187" x2="40" y2="208" stroke="#334455" stroke-width="3"/>
+  <!-- Phone in hand -->
+  <rect x="34" y="200" width="14" height="10" rx="2" fill="#557799"/>
+  <!-- Far right figure looking away -->
+  <circle cx="360" cy="175" r="12" fill="#334455"/>
+  <line x1="360" y1="187" x2="360" y2="208" stroke="#334455" stroke-width="3"/>
+  <!-- Self-conscious look on center figure -->
+  <circle cx="192" cy="156" r="5" fill="#ddeeff"/>
+  <circle cx="192" cy="156" r="2.5" fill="#223355"/>
+  <circle cx="208" cy="156" r="5" fill="#ddeeff"/>
+  <circle cx="208" cy="156" r="2.5" fill="#223355"/>
+  <!-- Sweat drop -->
+  <ellipse cx="218" cy="148" rx="3" ry="5" fill="#4477aa" opacity="0.7" transform="rotate(15,218,148)"/>
+  <!-- Labels -->
+  <text x="200" y="258" text-anchor="middle" font-size="11" fill="#8899bb" font-family="sans-serif">feels noticed</text>
+  <text x="200" y="272" text-anchor="middle" font-size="11" fill="#334455" font-family="sans-serif">is not</text>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-size="12" fill="#6677aa" font-family="sans-serif" letter-spacing="1">THE SPOTLIGHT EFFECT</text>
+</svg>

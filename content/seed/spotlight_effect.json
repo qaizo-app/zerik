@@ -1,0 +1,168 @@
+{
+  "id": "spotlight_effect",
+  "category": "cognitive_biases",
+  "release_number": 72,
+  "release_date": "2026-06-22",
+  "tags": ["spotlight_effect", "gilovich", "self_consciousness", "bias", "social_anxiety"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/spotlight_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы опрокинули кофе на рубашку перед важной встречей. Весь день вам кажется, что все это замечают. На самом деле — большинство людей в комнате не обратили внимания. Мы переоцениваем, насколько другие замечают наши ошибки, внешность и неловкости. Это эффект прожектора." }
+        },
+        { "type": "title", "props": { "text": "Эффект {{accent:прожектора}}" } },
+        { "type": "subtitle", "props": { "text": "Spotlight Effect · Гилович, Медвек, Савицки · Корнелл · 2000" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/spotlight_effect.svg", "alt": "Фигура человека в центре, воображаемый прожектор сверху — окружающие фигуры смотрят в стороны, не на него" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В классическом эксперименте Гиловича студентам давали надеть футболку с портретом Барри Манилоу — певца, которого они считали «неловким» выбором. Их просили оценить, сколько других студентов заметят рисунок. Участники думали: около 50%. Реальная цифра: 25%. Мы стоим в центре собственного внимания — и проецируем это ощущение на окружающих.",
+              "Почему так происходит? Мы воспринимаем свои действия изнутри: нам виден каждый промах, каждое неловкое слово. Для окружающих мы — один из десятков стимулов в поле зрения. {{em:Вы главный герой своей истории; для других вы — эпизодический персонаж.}} Их внимание поглощено собственными мыслями, своими «прожекторами».",
+              "Эффект прожектора усиливается при стрессе, социальной тревоге и в незнакомых ситуациях. Он заставляет нас избегать действий из страха оценки — хотя эта оценка в основном существует только в нашей голове. Знание о нём не устраняет его полностью, но позволяет сделать паузу и проверить реальность."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мы переоцениваем, насколько другие замечают наши ошибки, внешность и поведение. Внимание окружающих к нам — значительно меньше того, что нам кажется."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы оговорились во время публичного выступления. Аудитория 50 человек. Сколько из них запомнит эту ошибку через час?",
+            "setup": null,
+            "options": [
+              { "id": "many", "text": "Большинство — публичная речь, все внимательно слушают", "is_wiser": false },
+              { "id": "few", "text": "Единицы или никто — каждый занят своими мыслями", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "переоценивают внимание аудитории",
+              "explanation": "Исследования памяти аудитории показывают: слушатели помнят общее впечатление, а не отдельные ошибки. Сам оратор помнит оговорку весь день. Аудитория — нет. Эффект прожектора создаёт страх, непропорциональный реальной угрозе.",
+              "wisdom": "{{em:Никто не думает о тебе столько, сколько ты думаешь о том, что о тебе думают.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эффект прожектора особенно силён в ситуациях, которые мы считаем «значимыми» — важные встречи, незнакомые компании, публичные выступления. Именно тогда, когда мы больше всего хотим произвести впечатление, мы наиболее чувствительны к воображаемой оценке. Парадокс: тревога от прожектора мешает нам выступать так, как мы хотим."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В социальных ситуациях", "example": "Страх «выглядеть глупо» при знакомстве, в незнакомой компании или при первых попытках чего-то нового. Прожектор делает эти ситуации субъективно опаснее, чем они есть." },
+              { "label": "В соцсетях", "example": "Люди часами редактируют посты, боясь реакции. Большинство подписчиков пролистают пост за секунды, не задержавшись мыслью о вас." },
+              { "label": "В спорте и работе", "example": "Спортсмены и публичные ораторы сообщают, что эффект прожектора — главный источник предсоревновательной тревоги. Осознание его — первый шаг к работе с ней." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последнюю ситуацию, когда вы чувствовали, что все на вас смотрят или осуждают. Оцените реально: сколько людей действительно заметили? Сколько всё ещё думают об этом сейчас? Скорее всего — ноль."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "You spilled coffee on your shirt before an important meeting. All day it feels like everyone is noticing. In reality — most people in the room didn't register it. We overestimate how much others notice our mistakes, appearance, and awkward moments. This is the spotlight effect." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Spotlight}} Effect" } },
+        { "type": "subtitle", "props": { "text": "Spotlight Effect · Gilovich, Medvec, Savitsky · Cornell · 2000" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/spotlight_effect.svg", "alt": "A figure in the center under an imagined spotlight — surrounding figures look away, not at them" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In Gilovich's classic experiment, students were asked to wear a t-shirt bearing Barry Manilow's portrait — a musician they considered an embarrassing choice. They estimated how many other students would notice the image: about 50%. The actual figure: 25%. We stand at the center of our own attention — and project that feeling onto the people around us.",
+              "Why does this happen? We experience our own actions from the inside: every slip, every awkward word is visible to us. For others, we are one of dozens of stimuli in their field of attention. {{em:You are the protagonist of your own story; to others, you are a supporting character.}} Their attention is consumed by their own thoughts, their own spotlights.",
+              "The spotlight effect intensifies under stress, social anxiety, and in unfamiliar situations. It causes us to avoid action out of fear of judgment — even though that judgment mostly exists only in our heads. Knowing about it doesn't eliminate it, but it allows us to pause and reality-check."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "We overestimate how much others notice our mistakes, appearance, and behavior. The attention others pay to us is far less than it feels."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You mispronounce a word during a public talk. Audience of 50. How many will remember the mistake an hour later?",
+            "setup": null,
+            "options": [
+              { "id": "many", "text": "Most — it's a public talk, everyone is paying close attention", "is_wiser": false },
+              { "id": "few", "text": "Almost no one — each person is absorbed in their own thoughts", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "overestimate audience attention",
+              "explanation": "Research on audience memory shows: listeners remember the overall impression, not individual errors. The speaker recalls the slip all day. The audience doesn't. The spotlight effect generates fear disproportionate to the actual threat.",
+              "wisdom": "{{em:Nobody thinks about you as much as you think about what they think about you.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The spotlight effect is strongest in situations we consider \"high-stakes\" — important meetings, unfamiliar groups, public speaking. Precisely when we most want to make an impression, we are most sensitive to imagined judgment. The paradox: anxiety from the spotlight prevents us from performing the way we want to."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In social situations", "example": "Fear of \"looking foolish\" when meeting people, in unfamiliar company, or in first attempts at something new. The spotlight makes these situations feel subjectively more dangerous than they are." },
+              { "label": "On social media", "example": "People spend hours editing posts, afraid of the reaction. Most followers will scroll past in seconds, without a second thought about you." },
+              { "label": "In sports and work", "example": "Athletes and public speakers report the spotlight effect as the main source of pre-performance anxiety. Recognizing it is the first step to working with it." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall the last situation where you felt everyone was watching or judging you. Estimate honestly: how many people actually noticed? How many are still thinking about it now? Probably zero."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/spotlight_effect" }]
+}

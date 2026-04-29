@@ -1,0 +1,176 @@
+{
+  "id": "thinking_fast_slow",
+  "category": "book_idea",
+  "release_number": 50,
+  "release_date": "2026-05-31",
+  "tags": ["kahneman", "system1", "system2", "heuristics", "decision_making"],
+  "difficulty": 2,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/thinking_fast_slow.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №3" } },
+        {
+          "type": "hook",
+          "props": { "text": "Сколько будет 2 × 2? Ответ пришёл мгновенно. Сколько будет 17 × 24? Вы остановились, напряглись, начали считать. Это не просто разные задачи — это два разных режима работы вашего мозга. Даниэль Канеман посвятил изучению этого различия несколько десятилетий и получил Нобелевскую премию." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Думай}} медленно, решай быстро" } },
+        { "type": "subtitle", "props": { "text": "Thinking, Fast and Slow · Даниэль Канеман · 2011" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/thinking_fast_slow.svg", "alt": "Молния (быстрое мышление) и черепаха (медленное) внутри силуэта головы" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Система 1 работает автоматически и быстро, без усилий и без ощущения произвольного контроля. Система 2 выделяет внимание для сложных умственных операций. Субъективный опыт Системы 2 — усилие, выбор и концентрация.",
+            "book_title": "Думай медленно, решай быстро",
+            "author": "Даниэль Канеман",
+            "year": "2011",
+            "chapter": "Часть I, глава 1",
+            "application": "Большинство наших ошибок — не из лени или глупости. Это Система 1 отвечает там, где нужна Система 2."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Система 1 — быстрая, автоматическая, интуитивная. Она распознаёт лица, читает эмоции, достраивает привычные паттерны. Она работает постоянно и не устаёт. Система 2 — медленная, аналитическая, сознательная. Она решает математические задачи, сравнивает варианты, сдерживает импульсы. Она требует усилий и быстро истощается.",
+              "Проблема в том, что Система 1 говорит первой — и очень убедительно. Когда вы видите «Батон хлеба и масло стоят 1,10 руб. Батон на рубль дороже масла. Сколько стоит масло?» — Система 1 мгновенно говорит: «10 копеек». Это неверно (правильный ответ — 5 копеек). Система 2 могла бы проверить — но требует специального усилия, чтобы включиться. {{em:Мы думаем значительно реже, чем нам кажется.}}",
+              "Канеман показал, что большинство когнитивных искажений — это Система 1, работающая там, где нужна Система 2. Эвристики, которые Система 1 использует, полезны в 90% случаев — но систематически ошибаются в конкретных, предсказуемых ситуациях. Знание этого не устраняет ошибки, но позволяет замечать их."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мозг работает в двух режимах: быстром (интуиция, автоматизм) и медленном (анализ, усилие). Большинство решений принимает быстрый режим — даже когда нужен медленный."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "В озере есть кувшинки. Каждый день их площадь удваивается. За 48 дней они покрыли всё озеро. За сколько дней они покрыли половину?",
+            "setup": null,
+            "options": [
+              { "id": "24", "text": "24 дня", "is_wiser": false },
+              { "id": "47", "text": "47 дней", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "отвечают «24 дня»",
+              "explanation": "Система 1 делит 48 на 2 — и мгновенно выдаёт «24». Но раз кувшинки удваиваются каждый день, то за день до полного покрытия было покрыто ровно половина — то есть на 47-й день. Это классическая ловушка Системы 1: интуитивный ответ убедителен, но неверен. Именно это Канеман называет «когнитивным минным полем».",
+              "wisdom": "{{em:Самая опасная мысль — та, которая кажется очевидной.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В инвестициях", "example": "Рынок растёт — Система 1 говорит «покупай, все покупают». Это именно тот момент, когда нужна Система 2. Баффет называл это «быть жадным, когда другие боятся»." },
+              { "label": "В медицине", "example": "Врачи, принимающие много решений подряд, всё чаще используют Систему 1 — со всеми её эвристическими ошибками. Это одна из причин, по которым чеклисты в медицине спасают жизни." },
+              { "label": "В найме", "example": "Первое впечатление о кандидате — чистая Система 1. Исследования показывают, что оно формируется за секунды и устойчиво к последующей информации." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Когда в следующий раз примете быстрое решение — остановитесь на пять секунд и спросите: Система 1 или Система 2 сейчас говорит? Этого вопроса часто достаточно, чтобы включить нужный режим."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №3" } },
+        {
+          "type": "hook",
+          "props": { "text": "What is 2 × 2? The answer came instantly. What is 17 × 24? You paused, tensed up, started calculating. These aren't just different tasks — they engage two different operating modes of your brain. Daniel Kahneman spent decades studying this distinction and won a Nobel Prize for it." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Thinking,}} Fast and Slow" } },
+        { "type": "subtitle", "props": { "text": "Thinking, Fast and Slow · Daniel Kahneman · 2011" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/thinking_fast_slow.svg", "alt": "A lightning bolt (fast thinking) and a turtle (slow) inside a head silhouette" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "System 1 operates automatically and quickly, with little or no effort and no sense of voluntary control. System 2 allocates attention to the effortful mental activities that demand it. The subjective experience of System 2 is one of agency, choice, and concentration.",
+            "book_title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "year": "2011",
+            "chapter": "Part I, Chapter 1",
+            "application": "Most of our errors aren't laziness or stupidity. It's System 1 answering where System 2 is needed."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "System 1 is fast, automatic, intuitive. It recognizes faces, reads emotions, completes familiar patterns. It runs constantly and never tires. System 2 is slow, analytical, deliberate. It solves math problems, compares options, holds impulses in check. It requires effort and depletes quickly.",
+              "The problem is that System 1 speaks first — and very convincingly. When you see: \"A bat and ball cost $1.10. The bat costs $1 more than the ball. How much does the ball cost?\" — System 1 instantly says \"10 cents.\" That's wrong (the answer is 5 cents). System 2 could check — but it takes a deliberate effort to engage. {{em:We think far less often than we believe we do.}}",
+              "Kahneman showed that most cognitive biases are System 1 operating where System 2 is needed. The heuristics System 1 uses are right 90% of the time — but they fail systematically in specific, predictable situations. Knowing this doesn't eliminate errors, but it lets you catch them."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The brain runs in two modes: fast (intuition, automation) and slow (analysis, effort). Most decisions are made in fast mode — even when slow mode is what's needed."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A pond has lily pads. Each day the covered area doubles. After 48 days the whole pond is covered. After how many days was half the pond covered?",
+            "setup": null,
+            "options": [
+              { "id": "24", "text": "24 days", "is_wiser": false },
+              { "id": "47", "text": "47 days", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "answer \"24 days\"",
+              "explanation": "System 1 divides 48 by 2 and instantly says \"24.\" But since the lily pads double every day, the day before the pond was fully covered, it was exactly half covered — day 47. This is a classic System 1 trap: the intuitive answer feels right, but isn't. Kahneman called this kind of terrain a \"cognitive minefield.\"",
+              "wisdom": "{{em:The most dangerous thought is the one that feels obvious.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In investing", "example": "The market is rising — System 1 says \"buy, everyone is buying.\" That's exactly when System 2 is needed. Buffett called it \"being greedy when others are fearful.\"" },
+              { "label": "In medicine", "example": "Doctors making many consecutive decisions increasingly rely on System 1 — with all its heuristic errors. This is one reason checklists in medicine save lives." },
+              { "label": "In hiring", "example": "The first impression of a candidate is pure System 1. Research shows it forms within seconds and resists later information." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Next time you make a fast decision — pause five seconds and ask: is System 1 or System 2 speaking right now? That question alone is often enough to engage the right mode."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/thinking_fast_slow" }]
+}

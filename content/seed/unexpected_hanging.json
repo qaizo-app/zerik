@@ -1,0 +1,138 @@
+{
+  "id": "unexpected_hanging",
+  "category": "paradoxes",
+  "release_number": 73,
+  "release_date": "2026-06-23",
+  "tags": ["unexpected_hanging", "surprise_paradox", "logic", "knowledge", "self_reference"],
+  "difficulty": 4,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/unexpected_hanging.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "Судья говорит заключённому: «Вас повесят на следующей неделе — в один из пяти дней. День будет для вас сюрпризом: в вечер накануне казни вы не сможете его предугадать». Заключённый рассуждает и приходит к выводу, что казни не будет. В среду его вешают. И это действительно сюрприз." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:неожидан}}ной казни" } },
+        { "type": "subtitle", "props": { "text": "Unexpected Hanging Paradox · Куайн · 1953" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/unexpected_hanging.svg", "alt": "Пять клеток-дней недели, каждая перечёркивается рассуждением — но остаётся вопрос" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Вот рассуждение заключённого. Казнь не может быть в пятницу: если дойдём до четверга вечером без казни, он знает, что завтра пятница — значит, не сюрприз. Раз пятница исключена, казнь не может быть в четверг: в среду вечером, зная, что пятница исключена, он поймёт, что завтра четверг — тоже не сюрприз. Применяя ту же логику, исключаем среду, вторник, понедельник. Казни быть не может. Заключённый успокаивается.",
+              "В среду утром приходит палач. Это сюрприз. Рассуждение было логически корректным — и привело к ложному выводу. Парадокс показывает: самореферентные утверждения о знании («вы не сможете знать») могут разрушать логические цепочки. {{em:Знание о будущем знании влияет на само будущее знание.}} Это делает парадокс неразрешимым в рамках обычной логики.",
+              "Философы до сих пор спорят о причине. Одни говорят: судья произнёс логически противоречивое обещание — его просто нельзя выполнить. Другие: рассуждение заключённого неправомерно применяет обратную индукцию к ситуации с самореференцией. Парадокс связан с проблемой самоприменимости в логике — тем же корнем, что и парадокс Рассела."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Утверждения о будущем знании — «вы не будете знать заранее» — могут быть самоподрывающими: само знание об условии меняет то, что возможно знать."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Рассуждение заключённого логически корректно. Но казнь происходит и оказывается сюрпризом. Где ошибка?",
+            "hint": "Что происходит с обещанием судьи, когда заключённый принимает его как факт?",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Ошибка в том, что заключённый предполагает: обещание судьи истинно и он может на него опираться для рассуждения. Но как только он приходит к выводу «казни не будет» — условие сюрприза выполнено: он не знает дня. Само рассуждение, опровергающее казнь, восстанавливает условие её возможности. Парадокс — самоотменяющийся: попытка опровергнуть казнь создаёт условие для неё.",
+            "intuition_trap": "Интуиция говорит: судья нарушил обещание. Но вот в чём дело — технически нарушения нет. Казнь была сюрпризом. Парадокс в том, что формально корректное рассуждение привело к ложному выводу о невозможности события, которое произошло."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В стратегии", "example": "«Мы атакуем, когда враг этого не ожидает» — самореферентное условие. Как только враг знает это условие, он начинает ожидать атаки. Условие сюрприза разрушается знанием о нём." },
+              { "label": "В экономике", "example": "Парадокс банковской паники: банк устойчив, пока все верят в его устойчивость. Само знание об условии («паники не будет, если все верят») может запустить панику." },
+              { "label": "В педагогике", "example": "«Контрольная будет неожиданной» — классический вариант парадокса. Если студенты знают об этом условии, они рассуждают так же, как заключённый." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей жизни или работе условия, которые разрушаются при осознании? («Это сработает, только если они не знают, что мы знаем».) Самореференция — уязвимость многих планов."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "A judge tells a prisoner: \"You will be hanged next week — on one of five days. The day will be a surprise: you won't be able to predict it the evening before.\" The prisoner reasons through it and concludes the hanging can't happen. On Wednesday, he is hanged. And it is genuinely a surprise." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Unexpected}} Hanging Paradox" } },
+        { "type": "subtitle", "props": { "text": "Unexpected Hanging Paradox · Quine · 1953" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/unexpected_hanging.svg", "alt": "Five day-cells of the week, each crossed out by reasoning — but a question mark remains" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Here is the prisoner's reasoning. The hanging can't be on Friday: if we reach Thursday evening without a hanging, he knows tomorrow is Friday — no surprise. Since Friday is excluded, it can't be Thursday: on Wednesday evening, knowing Friday is out, he'd know tomorrow is Thursday — also not a surprise. Applying the same logic, Wednesday, Tuesday, and Monday are eliminated. There can be no hanging. The prisoner relaxes.",
+              "On Wednesday morning, the executioner arrives. It is a surprise. The reasoning was logically sound — and produced a false conclusion. The paradox shows: self-referential statements about knowledge (\"you won't be able to know\") can break logical chains. {{em:Knowledge about future knowledge affects that very future knowledge.}} This makes the paradox irresolvable within ordinary logic.",
+              "Philosophers still debate the cause. Some say the judge made a logically contradictory promise — it simply can't be fulfilled. Others argue the prisoner wrongly applies backward induction to a self-referential situation. The paradox connects to self-application problems in logic — the same root as Russell's Paradox."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Statements about future knowledge — \"you won't know in advance\" — can be self-undermining: knowing the condition changes what it's possible to know."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "The prisoner's reasoning is logically sound. But the hanging happens and is a genuine surprise. Where is the error?",
+            "hint": "What happens to the judge's promise once the prisoner accepts it as a fact for reasoning?",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "The error is that the prisoner assumes the judge's promise is true and he can reason from it. But once he concludes \"there can be no hanging\" — the surprise condition is fulfilled: he doesn't know the day. The very reasoning that disproves the hanging restores the conditions for it. The paradox is self-canceling: attempting to refute the hanging creates the conditions that allow it.",
+            "intuition_trap": "Intuition says: the judge broke his promise. But here's the thing — technically, there was no breach. The hanging was a surprise. The paradox is that a formally correct chain of reasoning led to a false conclusion about an event that actually occurred."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In strategy", "example": "\"We'll attack when the enemy least expects it\" — a self-referential condition. Once the enemy knows this condition, they start expecting attack. Knowledge of the condition destroys the condition." },
+              { "label": "In economics", "example": "The bank run paradox: a bank is stable as long as everyone believes it is. Knowledge of the condition (\"there'll be no panic if everyone believes\") can itself trigger the panic." },
+              { "label": "In education", "example": "\"There will be a surprise quiz\" is the classic variant of the paradox. Once students know this condition, they reason exactly like the prisoner." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Are there conditions in your life or work that fall apart once they're consciously known? (\"This will work only if they don't know that we know.\") Self-reference is a vulnerability in many plans."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/unexpected_hanging" }]
+}

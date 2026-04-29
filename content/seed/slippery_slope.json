@@ -1,0 +1,150 @@
+{
+  "id": "slippery_slope",
+  "category": "rhetorical_fallacies",
+  "release_number": 56,
+  "release_date": "2026-06-06",
+  "tags": ["slippery_slope", "fallacy", "rhetoric", "argumentation", "logic"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/slippery_slope.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №4" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Если мы разрешим сотрудникам работать дома по пятницам, скоро они захотят работать дома каждый день, потом вообще перестанут приходить в офис, и компания развалится». Каждый шаг в этой цепочке звучит правдоподобно — и именно поэтому она убедительна. И именно поэтому это ошибка." }
+        },
+        { "type": "title", "props": { "text": "Скользкая {{accent:горка}}" } },
+        { "type": "subtitle", "props": { "text": "Slippery Slope · классическая логика" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/slippery_slope.svg", "alt": "Маленький шар наверху горки, на дне — катастрофа" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Скользкая горка — утверждение, что одно небольшое действие неизбежно приведёт к цепочке всё более негативных последствий, вплоть до катастрофы. Ошибка не в том, что цепочка невозможна — иногда она реальна. Ошибка в слове «неизбежно»: цепочка представляется как автоматическая, хотя каждое звено требует отдельного обоснования.",
+              "«Если мы легализуем лёгкие наркотики, скоро все перейдут на тяжёлые». «Если ты разрешишь ребёнку один раз нарушить правило, он перестанет соблюдать любые правила». «Если дать слабину на переговорах — противник потребует всё больше». {{em:В каждом случае цепочка выглядит логичной. Но логичность не равна неизбежности.}} Можно остановиться на любом шаге.",
+              "Скользкая горка особенно действенна в политике и при управлении рисками, потому что эксплуатирует нашу склонность экстраполировать тренды. Если первый шаг уже сделан — мозг «видит» дальнейшее движение как предрешённое. Но история показывает: большинство «неизбежных» цепочек остановилось задолго до катастрофы."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Цепочка причинно-следственных событий возможна — но не неизбежна. Скользкая горка становится ошибкой, когда первый шаг представляется как автоматически влекущий за собой все последующие."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "На совещании об условиях труда:",
+            "example_quote": "— Если мы начнём платить за сверхурочные, сотрудники начнут специально затягивать работу, потом потребуют доплату за всё подряд, и расходы на персонал выйдут из-под контроля.",
+            "recognition_signal": "Сигнал: «если А, то неизбежно Б, потом В, потом катастрофа». Длинные цепочки следствий без объяснения механизма каждого перехода.",
+            "nuance_warning": "Иногда скользкая горка реальна — есть явления с доказанным «каскадным» эффектом (например, в экологии или финансовых кризисах). Разница в том, подкреплена ли цепочка доказательствами или только логической связностью."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Скользкая горка работает особенно хорошо, когда конечный пункт цепочки вызывает сильный страх. Чем страшнее «катастрофа» в конце — тем меньше люди проверяют промежуточные звенья. Стандартный антидот: для каждого перехода в цепочке спросите «почему именно это следует из предыдущего?»"
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "«Любое ограничение оружия — первый шаг к полному разоружению граждан». Этот аргумент игнорирует, что между ограничением и конфискацией — множество правовых и политических барьеров." },
+              { "label": "В воспитании", "example": "«Если разрешить ему не убираться сегодня, он никогда не будет убираться». Сильное утверждение с нулевыми доказательствами." },
+              { "label": "В бизнесе", "example": "«Если мы снизим цену однажды, клиенты всегда будут требовать скидку». Иногда правда. Но вывод зависит от того, как и почему сделана скидка — а не от самого факта скидки." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последний раз, когда вы или кто-то другой говорил «если мы сделаем X, то в итоге получим катастрофу». Проверьте каждое звено: почему именно оно следует из предыдущего? Где цепочка рвётся?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №4" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"If we let employees work from home on Fridays, they'll soon want to work from home every day, then stop coming in at all, and the company will collapse.\" Each step sounds plausible — and that's exactly why it's convincing. And why it's a fallacy." }
+        },
+        { "type": "title", "props": { "text": "The Slippery {{accent:Slope}}" } },
+        { "type": "subtitle", "props": { "text": "Slippery Slope · classical logic" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/slippery_slope.svg", "alt": "A small ball at the top of a slope, catastrophe at the bottom" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The slippery slope is the claim that one small action will inevitably lead to a chain of increasingly negative consequences, up to catastrophe. The error isn't that the chain is impossible — sometimes it's real. The error is in the word \"inevitably\": the chain is presented as automatic, when every link requires independent justification.",
+              "\"If we legalize soft drugs, everyone will soon move to hard ones.\" \"If you let a child break one rule, they'll stop following any rules.\" \"If you give ground in negotiations, the other side will keep demanding more.\" {{em:In each case, the chain seems logical. But logical doesn't mean inevitable.}} You can stop at any step.",
+              "The slippery slope is especially powerful in politics and risk management, because it exploits our tendency to extrapolate trends. If the first step has already been taken, the brain \"sees\" further movement as predetermined. But history shows: most \"inevitable\" chains stopped far short of catastrophe."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A chain of cause-and-effect events is possible — but not inevitable. The slippery slope becomes a fallacy when the first step is presented as automatically pulling all the others along with it."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a meeting about working conditions:",
+            "example_quote": "— If we start paying for overtime, employees will deliberately drag out their work, then demand extra pay for everything, and personnel costs will spiral out of control.",
+            "recognition_signal": "Signal: \"if A, then inevitably B, then C, then catastrophe.\" Long consequence chains without explaining the mechanism of each transition.",
+            "nuance_warning": "Sometimes the slippery slope is real — some phenomena have documented cascade effects (in ecology or financial crises, for example). The difference is whether the chain is backed by evidence or just logical-sounding connective tissue."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The slippery slope works especially well when the endpoint triggers strong fear. The scarier the \"catastrophe\" at the end, the less people scrutinize the intermediate steps. Standard antidote: for each link in the chain, ask \"why specifically does this follow from the previous one?\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In politics", "example": "\"Any gun restriction is the first step toward complete civilian disarmament.\" This ignores the many legal and political barriers between restriction and confiscation." },
+              { "label": "In parenting", "example": "\"If I let him skip cleaning today, he'll never clean again.\" A strong claim with zero evidence." },
+              { "label": "In business", "example": "\"If we discount once, customers will always expect a discount.\" Sometimes true. But the outcome depends on how and why the discount was made — not the mere fact of it." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of the last time you or someone else said \"if we do X, we'll end up with catastrophe.\" Check each link: why specifically does it follow from the previous? Where does the chain break?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/slippery_slope" }]
+}

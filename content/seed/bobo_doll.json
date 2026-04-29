@@ -1,0 +1,186 @@
+{
+  "id": "bobo_doll",
+  "category": "psychology_experiments",
+  "release_number": 67,
+  "release_date": "2026-06-17",
+  "tags": ["bandura", "observational_learning", "aggression", "modeling", "social_learning"],
+  "difficulty": 2,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/bobo_doll.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "В 1961 году психолог Альберт Бандура посадил детей наблюдать, как взрослый бьёт, пинает надувного клоуна и кричит на него. Потом взрослый ушёл, детей пустили в комнату с клоуном. Дети воспроизвели каждое движение взрослого — один в один. Так родилась теория социального обучения." }
+        },
+        { "type": "title", "props": { "text": "Эксперимент с {{accent:куклой}} Бобо" } },
+        { "type": "subtitle", "props": { "text": "Bobo Doll Experiment · Альберт Бандура · Стэнфорд · 1961" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bobo_doll.svg", "alt": "Взрослый с кулаком над клоуном, маленький ребёнок справа повторяет жест" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "До Бандуры доминирующей теорией обучения был бихевиоризм: поведение формируется через прямое подкрепление — награду и наказание. Бандура показал, что этого недостаточно. Люди учатся, наблюдая за другими, — без прямого подкрепления. Он назвал это «наблюдательным обучением» (observational learning). Достаточно увидеть, как кто-то делает что-то — и модель поведения усваивается.",
+              "Важный нюанс: дети не просто копировали. Они воспроизводили агрессию выборочно — чаще, когда видели, что взрослый не был наказан за своё поведение. {{em:Мы учимся не только тому, что делают другие — но и тому, что остаётся безнаказанным.}} Это объясняет, почему корпоративная культура так устойчива: поведение лидера, за которое не наказывают, становится нормой.",
+              "Бандура расширил теорию до концепции «самоэффективности»: убеждённости в собственной способности справиться с задачей. Наблюдение за тем, как похожий на тебя человек успешно выполняет задачу, повышает твою самоэффективность — и вероятность, что ты попробуешь сам. Это объясняет ценность ролевых моделей."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Люди учатся поведению, наблюдая за другими — особенно за теми, кому это поведение «сошло с рук». Ролевые модели формируют норму сильнее, чем правила."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "В компании официально запрещено опаздывать. Но директор систематически приходит на час позже. Сотрудники начинают опаздывать. Почему?",
+            "setup": null,
+            "options": [
+              { "id": "rules", "text": "Правило недостаточно строгое — нужно усилить санкции", "is_wiser": false },
+              { "id": "model", "text": "Директор — ролевая модель: его поведение задаёт реальную норму", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "предлагают ужесточить правила",
+              "explanation": "Бандура показал: ненаказанное поведение авторитетной фигуры воспроизводится эффективнее, чем письменное правило. Санкции для рядовых сотрудников не помогут, пока директор не изменит своё поведение — потому что реальная норма определяется тем, что делает лидер, а не что написано в регламенте.",
+              "wisdom": "{{em:Культура — это то, что разрешается делать тем, кто у власти.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2014",
+            "text": "Теория социального обучения Бандуры стала одной из наиболее воспроизведённых в психологии. Последующие исследования подтвердили ключевые выводы: наблюдательное обучение реально, самоэффективность влияет на результат. Критика касается деталей: оригинальные эксперименты не контролировали полностью всех переменных, а «агрессия» в лабораторных условиях может отличаться от реальной. Тем не менее базовый механизм — мы учимся у тех, за кем наблюдаем — хорошо подтверждён.",
+            "sources": [
+              {
+                "title": "Social learning theory",
+                "authors": "Albert Bandura",
+                "year": "1977",
+                "doi": null
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В воспитании", "example": "«Делай как я говорю, а не как я делаю» не работает. Дети копируют поведение — особенно то, за которое взрослые не несут последствий." },
+              { "label": "В медиа", "example": "Дискуссии о влиянии насилия в видеоиграх и кино — прямое следствие теории Бандуры. Данные смешанные, но механизм наблюдательного обучения реален." },
+              { "label": "В лидерстве", "example": "«Примерное поведение» лидера важнее любого корпоративного кодекса. Бандура объясняет, почему слова и действия руководителя должны совпадать." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните поведение, которое вы хотите видеть в своей команде или детях. Вы сами демонстрируете его? Или ждёте от других то, что не делаете сами?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №6" } },
+        {
+          "type": "hook",
+          "props": { "text": "In 1961, psychologist Albert Bandura had children watch an adult punch, kick, and shout at an inflatable clown. Then the adult left, and the children were let into the room with the clown. They reproduced every move the adult had made — exactly. This is how social learning theory was born." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Bobo}} Doll Experiment" } },
+        { "type": "subtitle", "props": { "text": "Bobo Doll Experiment · Albert Bandura · Stanford · 1961" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bobo_doll.svg", "alt": "An adult with a fist raised over the clown, a small child on the right mirroring the gesture" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Before Bandura, the dominant theory of learning was behaviorism: behavior is shaped by direct reinforcement — reward and punishment. Bandura showed this was insufficient. People learn by observing others — without direct reinforcement. He called this observational learning. Seeing someone do something is enough for the behavioral pattern to be absorbed.",
+              "An important nuance: the children didn't just copy. They reproduced aggression selectively — more often when they had seen the adult go unpunished for the behavior. {{em:We learn not only what others do — but what goes unpunished.}} This explains why corporate culture is so resilient: behavior by a leader that goes unpunished becomes the norm.",
+              "Bandura extended the theory into the concept of \"self-efficacy\": belief in one's own ability to accomplish a task. Watching someone similar to you successfully complete a task raises your self-efficacy — and the probability that you'll try yourself. This explains the value of role models."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "People learn behavior by observing others — especially those for whom the behavior \"got away with.\" Role models shape norms more powerfully than rules."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A company officially prohibits tardiness. But the director is consistently an hour late. Employees start arriving late. Why?",
+            "setup": null,
+            "options": [
+              { "id": "rules", "text": "The rule isn't strict enough — sanctions need to be strengthened", "is_wiser": false },
+              { "id": "model", "text": "The director is a role model: their behavior sets the actual norm", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "suggest strengthening the rules",
+              "explanation": "Bandura showed: unpunished behavior by an authority figure is reproduced more effectively than a written rule. Sanctions for regular employees won't help until the director changes their own behavior — because the actual norm is defined by what the leader does, not what's written in the policy.",
+              "wisdom": "{{em:Culture is what those in power are allowed to do.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2014",
+            "text": "Bandura's social learning theory became one of the most replicated in psychology. Subsequent research confirmed the key findings: observational learning is real, self-efficacy influences outcomes. Criticism concerns details: the original experiments didn't fully control all variables, and lab \"aggression\" may differ from real-world aggression. The core mechanism — we learn from those we observe — is well confirmed.",
+            "sources": [
+              {
+                "title": "Social learning theory",
+                "authors": "Albert Bandura",
+                "year": "1977",
+                "doi": null
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In parenting", "example": "\"Do as I say, not as I do\" doesn't work. Children copy behavior — especially what adults face no consequences for." },
+              { "label": "In media", "example": "Debates about the influence of violence in video games and film are a direct consequence of Bandura's theory. Data is mixed, but the observational learning mechanism is real." },
+              { "label": "In leadership", "example": "A leader's \"exemplary behavior\" matters more than any corporate code. Bandura explains why what a leader says and does must match." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think about the behavior you want to see in your team or children. Are you demonstrating it yourself? Or expecting from others what you don't do yourself?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/bobo_doll" }]
+}

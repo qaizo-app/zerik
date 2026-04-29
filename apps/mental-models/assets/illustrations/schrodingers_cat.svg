@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Box -->
+  <rect x="100" y="120" width="200" height="130" rx="4" fill="none" stroke="#7c6cd9" stroke-width="2.5"/>
+  <!-- Box lid, half open -->
+  <rect x="100" y="110" width="200" height="16" rx="3" fill="#7c6cd9" opacity="0.3"/>
+  <line x1="100" y1="118" x2="300" y2="118" stroke="#7c6cd9" stroke-width="2"/>
+  <!-- Cat silhouette - left half solid, right half ghosted -->
+  <clipPath id="leftHalf">
+    <rect x="0" y="0" width="200" height="300"/>
+  </clipPath>
+  <clipPath id="rightHalf">
+    <rect x="200" y="0" width="200" height="300"/>
+  </clipPath>
+  <!-- Cat body -->
+  <ellipse cx="200" cy="190" rx="44" ry="36" fill="#a89fd4" clip-path="url(#leftHalf)"/>
+  <ellipse cx="200" cy="190" rx="44" ry="36" fill="#a89fd4" opacity="0.22" clip-path="url(#rightHalf)"/>
+  <!-- Cat head -->
+  <circle cx="200" cy="152" r="24" fill="#a89fd4" clip-path="url(#leftHalf)"/>
+  <circle cx="200" cy="152" r="24" fill="#a89fd4" opacity="0.22" clip-path="url(#rightHalf)"/>
+  <!-- Ears -->
+  <polygon points="184,133 178,116 193,128" fill="#a89fd4" clip-path="url(#leftHalf)"/>
+  <polygon points="216,133 222,116 207,128" fill="#a89fd4" clip-path="url(#rightHalf)" opacity="0.22"/>
+  <polygon points="216,133 222,116 207,128" fill="#a89fd4" clip-path="url(#leftHalf)"/>
+  <!-- Question mark -->
+  <text x="200" y="220" text-anchor="middle" font-size="28" fill="#f0e060" font-family="serif" font-weight="bold">?</text>
+  <!-- Labels -->
+  <text x="144" y="270" text-anchor="middle" font-size="11" fill="#a89fd4" font-family="sans-serif">ALIVE</text>
+  <text x="258" y="270" text-anchor="middle" font-size="11" fill="#a89fd4" font-family="sans-serif" opacity="0.5">DEAD</text>
+  <line x1="200" y1="130" x2="200" y2="240" stroke="#f0e060" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-size="13" fill="#7c6cd9" font-family="sans-serif" letter-spacing="2">SCHRÖDINGER'S CAT</text>
+  <text x="200" y="74" text-anchor="middle" font-size="11" fill="#555580" font-family="sans-serif">superposition collapses on observation</text>
+</svg>

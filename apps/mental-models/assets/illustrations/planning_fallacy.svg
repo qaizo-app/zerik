@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Timeline axis -->
+  <line x1="40" y1="150" x2="370" y2="150" stroke="#334455" stroke-width="1.5" marker-end="url(#arrGrey)"/>
+  <defs>
+    <marker id="arrGrey" markerWidth="7" markerHeight="7" refX="3" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#334455"/>
+    </marker>
+  </defs>
+  <text x="205" y="280" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif">time</text>
+  <!-- Start point -->
+  <circle cx="60" cy="150" r="6" fill="#4caf8a"/>
+  <text x="60" y="172" text-anchor="middle" font-size="10" fill="#4caf8a" font-family="sans-serif">START</text>
+  <!-- PLANNED finish (early, optimistic) -->
+  <circle cx="170" cy="150" r="6" fill="#ffcc44" opacity="0.9"/>
+  <line x1="170" y1="118" x2="170" y2="150" stroke="#ffcc44" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+  <text x="170" y="112" text-anchor="middle" font-size="9" fill="#ffcc44" font-family="sans-serif">planned</text>
+  <text x="170" y="100" text-anchor="middle" font-size="9" fill="#aa9933" font-family="sans-serif">finish</text>
+  <!-- Optimistic plan bar -->
+  <rect x="60" y="128" width="110" height="16" rx="4" fill="#ffcc44" opacity="0.4"/>
+  <text x="115" y="140" text-anchor="middle" font-size="9" fill="#ffcc44" font-family="sans-serif">plan</text>
+  <!-- ACTUAL finish (much later) - bar extends far right -->
+  <circle cx="330" cy="150" r="6" fill="#cc4444" opacity="0.9"/>
+  <line x1="330" y1="182" x2="330" y2="150" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+  <text x="330" y="192" text-anchor="middle" font-size="9" fill="#cc4444" font-family="sans-serif">actual</text>
+  <text x="330" y="204" text-anchor="middle" font-size="9" fill="#aa2222" font-family="sans-serif">finish</text>
+  <!-- Actual duration bar -->
+  <rect x="60" y="156" width="270" height="16" rx="4" fill="#cc4444" opacity="0.3"/>
+  <text x="195" y="168" text-anchor="middle" font-size="9" fill="#cc4444" font-family="sans-serif">actual duration</text>
+  <!-- Budget overrun indicators -->
+  <text x="205" y="75" text-anchor="middle" font-size="11" fill="#cc4444" font-family="sans-serif">× 3.5 over budget</text>
+  <text x="205" y="92" text-anchor="middle" font-size="10" fill="#883322" font-family="sans-serif">× 2.8 over schedule</text>
+  <!-- Sydney Opera House example -->
+  <rect x="55" y="220" width="290" height="38" rx="5" fill="#1a1a2a"/>
+  <text x="200" y="236" text-anchor="middle" font-size="9" fill="#cc6633" font-family="sans-serif">Sydney Opera House: planned 4 yrs / $7M</text>
+  <text x="200" y="250" text-anchor="middle" font-size="9" fill="#884422" font-family="sans-serif">actual: 14 yrs / $102M — 15× over budget</text>
+  <!-- Gap arrow -->
+  <path d="M170,120 Q250,105 328,120" fill="none" stroke="#886644" stroke-width="1.5" marker-end="url(#arrBrown4)"/>
+  <text x="249" y="100" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">optimism gap</text>
+  <defs>
+    <marker id="arrBrown4" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#886644"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-size="13" fill="#cc8844" font-family="sans-serif" letter-spacing="1">PLANNING FALLACY</text>
+  <text x="200" y="48" text-anchor="middle" font-size="10" fill="#554433" font-family="sans-serif">Kahneman &amp; Tversky · 1979</text>
+</svg>

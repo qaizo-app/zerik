@@ -1,0 +1,150 @@
+{
+  "id": "appeal_to_authority",
+  "category": "rhetorical_fallacies",
+  "release_number": 63,
+  "release_date": "2026-06-13",
+  "tags": ["authority", "fallacy", "rhetoric", "expertise", "argumentation"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/appeal_to_authority.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №5" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Нобелевский лауреат X считает, что вакцины вредны». «Профессор Y поддерживает эту диету». «80% врачей рекомендуют». Авторитет — самый убедительный аргумент. Настолько убедительный, что за ним часто прячется отсутствие аргумента." }
+        },
+        { "type": "title", "props": { "text": "Апелляция к {{accent:авторитету}}" } },
+        { "type": "subtitle", "props": { "text": "Appeal to Authority (Ad Verecundiam) · классическая логика" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/appeal_to_authority.svg", "alt": "Фигура в мантии и медалях — толпа принимает слова без вопросов" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Апелляция к авторитету — использование статуса, репутации или позиции источника как замены содержательного аргумента. Это ошибка тогда, когда: авторитет говорит вне своей области («Нобелевский лауреат по физике о питании»); авторитет не является реальным («9 из 10 стоматологов» без указания выборки); авторитеты расходятся, а говорящий цитирует только нужных; или сама область знания спорна, и «авторитет» — просто популярный голос.",
+              "Важное уточнение: апелляция к авторитету не всегда ошибка. В повседневной жизни мы не можем проверить всё лично — мы разумно полагаемся на экспертов. Инженер-мост строит конструкцию, опираясь на физику, которую не проверял сам. Пациент следует рекомендации врача, не изучив всю медицину. {{em:Проблема не в доверии к авторитету — а в том, что авторитет заменяет, а не дополняет аргумент.}}",
+              "Ключевой вопрос при встрече с апелляцией к авторитету: является ли данный авторитет компетентным именно в этом вопросе? Нет ли конфликта интересов? Существует ли научный консенсус — или это позиция одного человека, выбранная из многих несогласных?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Авторитет — это свидетельство, а не доказательство. Он увеличивает вероятность истинности утверждения — но не гарантирует её и не освобождает от анализа."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "На совещании о новом продукте:",
+            "example_quote": "— Илон Маск считает, что эта технология будет доминировать через 10 лет. Нам нужно инвестировать в неё прямо сейчас.",
+            "recognition_signal": "Сигнал: аргументация строится на авторитете источника, а не на содержании его утверждения. «Х так считает» без объяснения, почему Х прав в данном вопросе.",
+            "nuance_warning": "Когда 97% климатологов сходятся в том, что климат меняется из-за человека — это не ошибочная апелляция к авторитету. Это научный консенсус. Разница — в методологии формирования консенсуса, а не просто в «количестве авторитетов»."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Мы эволюционно склонны доверять иерархии и статусу — это была полезная эвристика в малых группах. В современном мире, где авторитет легко симулируется (титулы, медиаприсутствие, уверенный тон), эта склонность используется против нас."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В рекламе", "example": "«Разработано учёными», «рекомендуют эксперты» — без указания, какие учёные и в чём именно их экспертиза." },
+              { "label": "В политике", "example": "Политики регулярно цитируют «экспертов», которые подтверждают их позицию — и игнорируют экспертов, которые опровергают." },
+              { "label": "В медицине", "example": "Нобелевский лауреат Лайнус Полинг продвигал мегадозы витамина С — вне своей области компетенции. Авторитет в химии не гарантирует компетенции в медицине." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите утверждение, которому вы верите на основании авторитета источника. Задайте три вопроса: компетентен ли он именно в этом? Нет ли у него конфликта интересов? Что говорят другие компетентные источники?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №5" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"Nobel laureate X believes vaccines are harmful.\" \"Professor Y endorses this diet.\" \"80% of doctors recommend.\" Authority is the most convincing argument — so convincing that it often conceals the absence of an argument." }
+        },
+        { "type": "title", "props": { "text": "Appeal to {{accent:Authority}}" } },
+        { "type": "subtitle", "props": { "text": "Appeal to Authority (Ad Verecundiam) · classical logic" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/appeal_to_authority.svg", "alt": "A figure in robes and medals — the crowd accepts the words without questions" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The appeal to authority is using the status, reputation, or position of a source as a substitute for a substantive argument. It's a fallacy when: the authority speaks outside their field (\"Nobel laureate in physics on nutrition\"); the authority isn't genuine (\"9 out of 10 dentists\" with no sample specified); authorities disagree and the speaker cites only the convenient ones; or the field is genuinely contested and the \"authority\" is just a popular voice.",
+              "An important clarification: appeals to authority aren't always fallacious. In everyday life, we can't verify everything ourselves — we reasonably rely on experts. An engineer builds a bridge based on physics they haven't personally verified. A patient follows a doctor's advice without studying all of medicine. {{em:The problem isn't trusting authority — it's when authority replaces rather than supplements the argument.}}",
+              "The key question when encountering an appeal to authority: is this authority actually competent on this specific question? Is there a conflict of interest? Is there scientific consensus — or is this one person's position selected from many who disagree?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Authority is evidence, not proof. It raises the probability that a claim is true — but doesn't guarantee it, and doesn't exempt us from analysis."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a product meeting:",
+            "example_quote": "— Elon Musk thinks this technology will dominate in 10 years. We need to invest in it right now.",
+            "recognition_signal": "Signal: the argument rests on the source's authority, not the content of their claim. \"X thinks this\" without explaining why X is right on this particular question.",
+            "nuance_warning": "When 97% of climate scientists agree that the climate is changing due to human activity — that's not a fallacious appeal to authority. That's scientific consensus. The difference lies in the methodology of how the consensus was formed, not simply the number of authorities cited."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "We're evolutionarily inclined to trust hierarchy and status — it was a useful heuristic in small groups. In the modern world, where authority is easily simulated (titles, media presence, confident tone), this tendency is used against us."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In advertising", "example": "\"Developed by scientists,\" \"recommended by experts\" — without specifying which scientists or in what area their expertise lies." },
+              { "label": "In politics", "example": "Politicians regularly cite the \"experts\" who confirm their position — and ignore the experts who contradict it." },
+              { "label": "In medicine", "example": "Nobel laureate Linus Pauling promoted megadoses of vitamin C — outside his area of competence. Authority in chemistry doesn't guarantee competence in medicine." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find a claim you believe based on the authority of the source. Ask three questions: is this person actually competent on this specific issue? Is there a conflict of interest? What do other competent sources say?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/appeal_to_authority" }]
+}

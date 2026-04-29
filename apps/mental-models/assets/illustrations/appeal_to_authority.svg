@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Authority figure (left) -->
+  <!-- White coat -->
+  <circle cx="110" cy="110" r="22" fill="#ddddee"/>
+  <rect x="90" y="132" width="40" height="55" rx="4" fill="#eeeeff"/>
+  <!-- White coat lapels -->
+  <line x1="110" y1="132" x2="100" y2="155" stroke="#ccccdd" stroke-width="3"/>
+  <line x1="110" y1="132" x2="120" y2="155" stroke="#ccccdd" stroke-width="3"/>
+  <!-- Stethoscope -->
+  <path d="M100,140 Q96,150 100,158" fill="none" stroke="#888899" stroke-width="2"/>
+  <circle cx="100" cy="160" r="4" fill="#888899"/>
+  <!-- Authority badge -->
+  <rect x="115" y="138" width="18" height="12" rx="2" fill="#cc8822"/>
+  <text x="124" y="147" text-anchor="middle" font-size="6" fill="#fff" font-family="sans-serif">EXPERT</text>
+  <!-- Authority says... -->
+  <rect x="140" y="76" width="100" height="40" rx="8" fill="#221111"/>
+  <polygon points="140,100 128,108 142,100" fill="#221111"/>
+  <text x="190" y="91" text-anchor="middle" font-size="9" fill="#cc5533" font-family="sans-serif">"X is true"</text>
+  <text x="190" y="105" text-anchor="middle" font-size="8" fill="#883322" font-family="sans-serif">says Dr. Smith</text>
+  <!-- Arrow to claim without evidence -->
+  <path d="M250,100 Q310,90 330,130" fill="none" stroke="#886644" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrGold2)"/>
+  <defs>
+    <marker id="arrGold2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#886644"/>
+    </marker>
+  </defs>
+  <!-- Claim box -->
+  <rect x="290" y="125" width="90" height="40" rx="6" fill="#222233"/>
+  <text x="335" y="142" text-anchor="middle" font-size="9" fill="#aabbcc" font-family="sans-serif">CLAIM: X</text>
+  <text x="335" y="156" text-anchor="middle" font-size="8" fill="#445566" font-family="sans-serif">accepted</text>
+  <!-- Missing evidence box (crossed out) -->
+  <rect x="140" y="175" width="120" height="50" rx="6" fill="#111122" stroke="#334455" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="200" y="195" text-anchor="middle" font-size="9" fill="#446688" font-family="sans-serif">evidence?</text>
+  <text x="200" y="210" text-anchor="middle" font-size="9" fill="#446688" font-family="sans-serif">data? studies?</text>
+  <line x1="144" y1="179" x2="256" y2="221" stroke="#cc2200" stroke-width="2" opacity="0.6"/>
+  <line x1="256" y1="179" x2="144" y2="221" stroke="#cc2200" stroke-width="2" opacity="0.6"/>
+  <!-- Fallacy label -->
+  <text x="200" y="252" text-anchor="middle" font-size="10" fill="#886644" font-family="sans-serif">authority ≠ evidence</text>
+  <text x="200" y="267" text-anchor="middle" font-size="9" fill="#554433" font-family="sans-serif">experts can be wrong · verify the claim</text>
+  <!-- Title -->
+  <text x="200" y="32" text-anchor="middle" font-size="13" fill="#cc8822" font-family="sans-serif" letter-spacing="1">APPEAL TO AUTHORITY</text>
+  <text x="200" y="50" text-anchor="middle" font-size="10" fill="#554433" font-family="sans-serif">argumentum ad verecundiam</text>
+</svg>

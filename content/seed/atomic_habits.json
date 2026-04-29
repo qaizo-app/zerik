@@ -1,0 +1,176 @@
+{
+  "id": "atomic_habits",
+  "category": "book_idea",
+  "release_number": 64,
+  "release_date": "2026-06-14",
+  "tags": ["habits", "james_clear", "compound_growth", "identity", "behavior_change"],
+  "difficulty": 1,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/atomic_habits.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №5" } },
+        {
+          "type": "hook",
+          "props": { "text": "Если вы становитесь на 1% лучше каждый день в течение года, в конце вы будете в 37 раз лучше, чем в начале. Если вы становитесь на 1% хуже каждый день — вы деградируете почти до нуля. Джеймс Клир написал книгу о том, что мелкое решение, повторённое тысячу раз, важнее одного грандиозного." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Атомные}} привычки" } },
+        { "type": "subtitle", "props": { "text": "Atomic Habits · Джеймс Клир · 2018" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/atomic_habits.svg", "alt": "Кривая незаметного накопления — долго ничего, потом резкий рост" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Вы не поднимаетесь до уровня своих целей. Вы падаете до уровня своих систем.",
+            "book_title": "Атомные привычки",
+            "author": "Джеймс Клир",
+            "year": "2018",
+            "chapter": "Введение",
+            "application": "Проблема не в отсутствии мотивации. Проблема в отсутствии системы, которая делает правильное поведение автоматическим."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Клир предлагает четыре закона изменения поведения: сделай его очевидным (заметность сигнала), привлекательным (желание), лёгким (трение) и приятным (вознаграждение). Это не мотивационная риторика — это инженерия среды. Книгу часто путают с книгой о силе воли. Она о противоположном: как построить систему, в которой воля почти не нужна.",
+              "Ключевой инсайт, который отличает Клира: {{em:каждая привычка — это голос за определённый тип личности.}} Когда вы отказываетесь от сигареты и говорите «я не курю», а не «я бросаю» — вы меняете идентичность, а не только поведение. Цели ориентированы на результат. Привычки, основанные на идентичности, — на процессе. Разница фундаментальна: результат временен, идентичность устойчива.",
+              "«Долина разочарования» — важная концепция книги: первые месяцы любой привычки часто невидимы снаружи. Не происходит ничего заметного. Многие бросают именно здесь. Но накопление работает нелинейно: потенциал копится ниже поверхности, пока не переходит «порог» — и тогда всё становится очевидным резко."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Маленькие изменения, повторённые регулярно, производят непропорционально большой эффект со временем. Ключ — не в мотивации, а в системе, делающей правильное поведение лёгким и автоматическим."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы хотите начать бегать. Что эффективнее?",
+            "setup": null,
+            "options": [
+              { "id": "motivation", "text": "Поставить большую цель (марафон) и найти мотивацию к ней", "is_wiser": false },
+              { "id": "system", "text": "Положить кроссовки у кровати и начать с двух минут в день", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают большую цель",
+              "explanation": "Клир показывает: большие цели производят большое давление и маленькое действие. Маленькие системы снижают трение до минимума и делают действие вероятным. Кроссовки у кровати — это не «слишком просто». Это снятие основного барьера. Через месяц два минуты легко становятся двадцатью.",
+              "wisdom": "{{em:Ты не становишься тем, кем хочешь быть. Ты становишься тем, что делаешь каждый день.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В продуктивности", "example": "«Привязка привычек»: новая привычка после устоявшейся. «После кофе — 10 минут чтения». Существующий триггер запускает новое поведение без дополнительных усилий." },
+              { "label": "В спорте", "example": "Британская велосборная в 2003-2012 годах применяла «агрегацию маргинальных улучшений»: улучшить всё на 1%. Результат — пять золотых медалей Олимпиады 2012 года." },
+              { "label": "В командах", "example": "«Плохой день» правило Клира: не пропускать дважды подряд. Одна пропущенная тренировка не проблема — начало новой привычки не ходить." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Выберите одну привычку, которую хотите сформировать. Уменьшите её до смешного: не «30 минут чтения», а «одна страница». Теперь снизьте трение: что должно лежать рядом или быть уже открытым, чтобы этот минимум произошёл автоматически?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №5" } },
+        {
+          "type": "hook",
+          "props": { "text": "If you get 1% better every day for a year, you'll end up 37 times better than when you started. If you get 1% worse every day — you'll decay to nearly nothing. James Clear wrote a book about how a small decision, repeated a thousand times, matters more than one grand resolution." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Atomic}} Habits" } },
+        { "type": "subtitle", "props": { "text": "Atomic Habits · James Clear · 2018" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/atomic_habits.svg", "alt": "A curve of invisible accumulation — flat for a long time, then sudden sharp growth" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "You do not rise to the level of your goals. You fall to the level of your systems.",
+            "book_title": "Atomic Habits",
+            "author": "James Clear",
+            "year": "2018",
+            "chapter": "Introduction",
+            "application": "The problem isn't lack of motivation. The problem is the absence of a system that makes the right behavior automatic."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Clear proposes four laws of behavior change: make it obvious (cue visibility), attractive (craving), easy (friction), and satisfying (reward). This isn't motivational rhetoric — it's environment engineering. The book is often mistaken for a book about willpower. It's about the opposite: how to build a system where willpower is barely needed.",
+              "The key insight that sets Clear apart: {{em:every habit is a vote for a particular type of person.}} When you turn down a cigarette and say \"I don't smoke\" rather than \"I'm trying to quit\" — you're changing your identity, not just your behavior. Goals are outcome-oriented. Identity-based habits are process-oriented. The difference is fundamental: outcomes are temporary, identity is durable.",
+              "The \"Valley of Disappointment\" is an important concept in the book: the first months of any habit are often invisible from the outside. Nothing noticeable happens. Many people quit right here. But accumulation is nonlinear: potential builds below the surface until it crosses a threshold — and then everything becomes suddenly obvious."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Small changes, repeated consistently, produce disproportionately large effects over time. The key isn't motivation — it's a system that makes the right behavior easy and automatic."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You want to start running. What's more effective?",
+            "setup": null,
+            "options": [
+              { "id": "motivation", "text": "Set a big goal (a marathon) and find the motivation to pursue it", "is_wiser": false },
+              { "id": "system", "text": "Put your running shoes by the bed and start with two minutes a day", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose the big goal",
+              "explanation": "Clear shows: big goals create big pressure and small action. Small systems reduce friction to a minimum and make the action likely. Shoes by the bed aren't \"too simple\" — they remove the main barrier. Within a month, two minutes easily becomes twenty.",
+              "wisdom": "{{em:You don't become who you want to be. You become what you do every day.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In productivity", "example": "\"Habit stacking\": a new habit after an established one. \"After coffee — 10 minutes of reading.\" An existing trigger launches new behavior with no extra effort." },
+              { "label": "In sports", "example": "The British cycling team in 2003-2012 practiced \"aggregation of marginal gains\": improve everything by 1%. Result — five gold medals at the 2012 Olympics." },
+              { "label": "In teams", "example": "Clear's \"bad day\" rule: never miss twice in a row. One missed workout isn't a problem — it's the start of a new habit of not going." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Pick one habit you want to build. Shrink it to something ridiculous: not \"30 minutes of reading\" but \"one page.\" Now reduce friction: what needs to be nearby or already open for this minimum to happen automatically?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/atomic_habits" }]
+}

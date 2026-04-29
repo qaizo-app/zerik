@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Time loop circular arrow -->
+  <circle cx="200" cy="150" r="90" fill="none" stroke="#334466" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.5"/>
+  <!-- Main loop arrow, large -->
+  <path d="M200,60 Q308,60 308,150 Q308,240 200,240 Q92,240 92,150 Q92,80 160,64" fill="none" stroke="#6655cc" stroke-width="3" opacity="0.8"/>
+  <polygon points="158,55 148,72 168,69" fill="#6655cc" opacity="0.8"/>
+  <!-- Grandfather figure (past, left) -->
+  <circle cx="108" cy="150" r="16" fill="#4499aa" opacity="0.8"/>
+  <line x1="108" y1="166" x2="108" y2="200" stroke="#4499aa" stroke-width="3.5" opacity="0.8"/>
+  <line x1="94" y1="180" x2="122" y2="180" stroke="#4499aa" stroke-width="2.5" opacity="0.8"/>
+  <line x1="108" y1="200" x2="98" y2="218" stroke="#4499aa" stroke-width="2.5" opacity="0.8"/>
+  <line x1="108" y1="200" x2="118" y2="218" stroke="#4499aa" stroke-width="2.5" opacity="0.8"/>
+  <text x="108" y="234" text-anchor="middle" font-size="9" fill="#4499aa" font-family="sans-serif">GRANDFATHER</text>
+  <text x="108" y="245" text-anchor="middle" font-size="9" fill="#336688" font-family="sans-serif">(past)</text>
+  <!-- Time traveler (right) -->
+  <circle cx="292" cy="150" r="16" fill="#cc8844" opacity="0.85"/>
+  <line x1="292" y1="166" x2="292" y2="200" stroke="#cc8844" stroke-width="3.5" opacity="0.85"/>
+  <line x1="278" y1="180" x2="306" y2="180" stroke="#cc8844" stroke-width="2.5" opacity="0.85"/>
+  <line x1="292" y1="200" x2="282" y2="218" stroke="#cc8844" stroke-width="2.5" opacity="0.85"/>
+  <line x1="292" y1="200" x2="302" y2="218" stroke="#cc8844" stroke-width="2.5" opacity="0.85"/>
+  <text x="292" y="234" text-anchor="middle" font-size="9" fill="#cc8844" font-family="sans-serif">TIME TRAVELER</text>
+  <text x="292" y="245" text-anchor="middle" font-size="9" fill="#885533" font-family="sans-serif">(future)</text>
+  <!-- Contradiction in center -->
+  <circle cx="200" cy="150" r="30" fill="#1a0a0a" stroke="#cc2200" stroke-width="1.5"/>
+  <text x="200" y="144" text-anchor="middle" font-size="18" fill="#cc2200" font-family="sans-serif">⊗</text>
+  <text x="200" y="162" text-anchor="middle" font-size="9" fill="#883322" font-family="sans-serif">paradox</text>
+  <!-- Dashed arrow from traveler to grandfather (the killing) -->
+  <line x1="278" y1="170" x2="128" y2="170" stroke="#cc2200" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrRed)"/>
+  <defs>
+    <marker id="arrRed" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#cc2200"/>
+    </marker>
+  </defs>
+  <text x="200" y="183" text-anchor="middle" font-size="9" fill="#882211" font-family="sans-serif">kills → traveler never born → can't kill</text>
+  <!-- Title -->
+  <text x="200" y="32" text-anchor="middle" font-size="13" fill="#6655cc" font-family="sans-serif" letter-spacing="1">GRANDFATHER PARADOX</text>
+  <text x="200" y="50" text-anchor="middle" font-size="10" fill="#334466" font-family="sans-serif">causality loop that self-cancels</text>
+</svg>

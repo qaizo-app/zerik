@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- 2x2 Matrix -->
+  <!-- Column headers -->
+  <text x="200" y="38" text-anchor="middle" font-size="10" fill="#446688" font-family="sans-serif" font-weight="bold">God EXISTS</text>
+  <text x="320" y="38" text-anchor="middle" font-size="10" fill="#334455" font-family="sans-serif" font-weight="bold">God does NOT</text>
+  <!-- Row headers -->
+  <text x="72" y="105" text-anchor="middle" font-size="10" fill="#4caf8a" font-family="sans-serif" font-weight="bold">I</text>
+  <text x="72" y="117" text-anchor="middle" font-size="10" fill="#4caf8a" font-family="sans-serif" font-weight="bold">BELIEVE</text>
+  <text x="72" y="200" text-anchor="middle" font-size="10" fill="#cc5533" font-family="sans-serif" font-weight="bold">I DON'T</text>
+  <text x="72" y="212" text-anchor="middle" font-size="10" fill="#cc5533" font-family="sans-serif" font-weight="bold">BELIEVE</text>
+  <!-- Grid lines -->
+  <line x1="110" y1="55" x2="370" y2="55" stroke="#334455" stroke-width="1.5"/>
+  <line x1="110" y1="155" x2="370" y2="155" stroke="#334455" stroke-width="1.5"/>
+  <line x1="110" y1="255" x2="370" y2="255" stroke="#334455" stroke-width="1.5"/>
+  <line x1="110" y1="55" x2="110" y2="255" stroke="#334455" stroke-width="1.5"/>
+  <line x1="258" y1="55" x2="258" y2="255" stroke="#334455" stroke-width="1.5"/>
+  <line x1="370" y1="55" x2="370" y2="255" stroke="#334455" stroke-width="1.5"/>
+  <!-- Cell 1: Believe + God exists = INFINITE BLISS -->
+  <rect x="112" y="57" width="144" height="96" rx="3" fill="#112233"/>
+  <text x="184" y="85" text-anchor="middle" font-size="11" fill="#ffcc44" font-family="sans-serif">∞</text>
+  <text x="184" y="102" text-anchor="middle" font-size="10" fill="#aa9933" font-family="sans-serif">INFINITE</text>
+  <text x="184" y="116" text-anchor="middle" font-size="10" fill="#aa9933" font-family="sans-serif">BLISS</text>
+  <text x="184" y="130" text-anchor="middle" font-size="9" fill="#665522" font-family="sans-serif">WIN EVERYTHING</text>
+  <text x="184" y="143" text-anchor="middle" font-size="11" fill="#ffcc44" font-family="sans-serif">✓✓</text>
+  <!-- Cell 2: Believe + God doesn't = small cost -->
+  <rect x="260" y="57" width="108" height="96" rx="3" fill="#111a11"/>
+  <text x="314" y="88" text-anchor="middle" font-size="11" fill="#4caf8a" font-family="sans-serif">small</text>
+  <text x="314" y="103" text-anchor="middle" font-size="10" fill="#2a7a4a" font-family="sans-serif">cost</text>
+  <text x="314" y="118" text-anchor="middle" font-size="9" fill="#1a5a3a" font-family="sans-serif">some constraints</text>
+  <text x="314" y="133" text-anchor="middle" font-size="10" fill="#336633" font-family="sans-serif">finite loss</text>
+  <text x="314" y="147" text-anchor="middle" font-size="11" fill="#4caf8a" font-family="sans-serif">≈</text>
+  <!-- Cell 3: Don't believe + God exists = INFINITE TORMENT -->
+  <rect x="112" y="157" width="144" height="96" rx="3" fill="#220808"/>
+  <text x="184" y="185" text-anchor="middle" font-size="11" fill="#cc4422" font-family="sans-serif">−∞</text>
+  <text x="184" y="202" text-anchor="middle" font-size="10" fill="#993322" font-family="sans-serif">INFINITE</text>
+  <text x="184" y="217" text-anchor="middle" font-size="10" fill="#993322" font-family="sans-serif">TORMENT</text>
+  <text x="184" y="232" text-anchor="middle" font-size="9" fill="#663322" font-family="sans-serif">LOSE EVERYTHING</text>
+  <text x="184" y="246" text-anchor="middle" font-size="11" fill="#cc4422" font-family="sans-serif">✗✗</text>
+  <!-- Cell 4: Don't believe + God doesn't = nothing -->
+  <rect x="260" y="157" width="108" height="96" rx="3" fill="#111118"/>
+  <text x="314" y="195" text-anchor="middle" font-size="13" fill="#334455" font-family="sans-serif">0</text>
+  <text x="314" y="213" text-anchor="middle" font-size="9" fill="#334455" font-family="sans-serif">nothing</text>
+  <text x="314" y="227" text-anchor="middle" font-size="9" fill="#223344" font-family="sans-serif">gained or lost</text>
+  <text x="314" y="245" text-anchor="middle" font-size="10" fill="#334455" font-family="sans-serif">—</text>
+  <!-- Pascal's conclusion -->
+  <text x="200" y="272" text-anchor="middle" font-size="10" fill="#886644" font-family="sans-serif">any p(God) &gt; 0 → expected value of belief = ∞</text>
+  <text x="200" y="286" text-anchor="middle" font-size="10" fill="#664422" font-family="sans-serif">Pascal · Pensées · 1670</text>
+</svg>

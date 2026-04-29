@@ -1,0 +1,138 @@
+{
+  "id": "fermi_paradox",
+  "category": "paradoxes",
+  "release_number": 51,
+  "release_date": "2026-06-01",
+  "tags": ["fermi", "extraterrestrial", "space", "probability", "drake_equation"],
+  "difficulty": 3,
+  "reading_time_sec": 185,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/fermi_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вселенной 13,8 миллиарда лет. В ней сотни миллиардов галактик, в каждой — сотни миллиардов звёзд. Многие из них окружены планетами. Математика говорит: разумная жизнь должна быть повсюду. За обедом в 1950 году Энрико Ферми спросил коллег: «Ну и где они все?»" }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Ферми}}" } },
+        { "type": "subtitle", "props": { "text": "Fermi Paradox · Энрико Ферми · 1950" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/fermi_paradox.svg", "alt": "Бесконечное звёздное поле и одинокая планета Земля — никого вокруг" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Уравнение Дрейка (1961) пытается оценить, сколько разумных цивилизаций существует в нашей галактике. Перемножьте: темп звездообразования, долю звёзд с планетами, долю планет с условиями для жизни, вероятность возникновения жизни, разума, технологий... Даже при очень осторожных оценках число получается большим. Может быть, тысячи цивилизаций. Может, миллионы. Где они?",
+              "Отсутствие сигналов за 70 лет поиска (SETI) — это не просто тишина. Галактика достаточно старая, чтобы любая цивилизация, возникшая несколько миллиардов лет назад, уже успела колонизировать её всю. Даже на субсветовых скоростях. {{em:Если они существуют — они уже должны быть здесь.}} Их нет. Это и есть парадокс.",
+              "Объяснений много — и ни одно не является общепринятым. «Великий фильтр»: где-то в цепочке от простой жизни до межзвёздных цивилизаций есть чрезвычайно маловероятный шаг. Вопрос: он позади нас или впереди? Если впереди — у нас мало шансов. Другие объяснения: цивилизации самоуничтожаются, прячутся, общаются способами, которые мы не можем обнаружить."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Разрыв между математическим ожиданием и наблюдаемой реальностью — это сигнал. Либо одна из наших предпосылок неверна, либо существует скрытый фактор, который мы не учитываем."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Если разумная жизнь во Вселенной должна быть широко распространена — почему мы не обнаружили никаких следов?",
+            "hint": "Вопрос не «существует ли жизнь» — а «почему мы не видим её следов, если она должна быть».",
+            "user_prompt": "Думаю, знаю объяснение — открыть разбор",
+            "reveal_text": "Ни одно из объяснений не является доказанным. «Великий фильтр» — наиболее пугающий вариант: если фильтр впереди нас, большинство цивилизаций погибает до межзвёздной экспансии, и мы на этом же пути. «Гипотеза тёмного леса» (Лю Цысинь): цивилизации намеренно молчат, потому что обнаружить себя смертельно опасно. «Зоопарк»: они нас видят, но не вступают в контакт. Ни одна гипотеза не проверяема прямо сейчас.",
+            "intuition_trap": "Интуиция ищет один правильный ответ. Парадокс Ферми показывает: вопрос либо обнажает ошибку в наших предпосылках о возникновении жизни, либо говорит что-то очень важное о судьбе разумных цивилизаций — включая нашу."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В стратегии", "example": "«Ферми-оценка» — способ быстро прикинуть порядок величины без точных данных. Если математика даёт большое число, а реальность — ноль, ищите скрытый фактор." },
+              { "label": "В бизнесе", "example": "«Если эта ниша такая прибыльная, почему её никто не занял?» — ферми-вопрос для любой бизнес-идеи. Либо все слепы, либо есть причина, которую вы пока не видите." },
+              { "label": "В науке", "example": "Парадокс Ферми — редкий пример вопроса, который точно сформулирован, но не имеет принятого ответа. Он заставляет пересматривать базовые предположения о природе жизни и разума." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите область в своей работе, где математика говорит «должно быть много», а реальность — «почти ничего». Это ваш личный парадокс Ферми. Что вы упускаете?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №8" } },
+        {
+          "type": "hook",
+          "props": { "text": "The universe is 13.8 billion years old. It contains hundreds of billions of galaxies, each holding hundreds of billions of stars. Many orbit planets. The math says intelligent life should be everywhere. Over lunch in 1950, Enrico Fermi asked his colleagues: \"But where is everybody?\"" }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Fermi}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Fermi Paradox · Enrico Fermi · 1950" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/fermi_paradox.svg", "alt": "An infinite starfield and a lone planet Earth — no one around" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The Drake Equation (1961) tries to estimate how many intelligent civilizations exist in our galaxy. Multiply: the rate of star formation, the fraction with planets, the fraction with habitable conditions, the probability of life arising, then intelligence, then technology... Even with very conservative estimates, the number comes out large. Thousands of civilizations, maybe millions. Where are they?",
+              "The absence of signals after 70 years of searching (SETI) isn't just silence. The galaxy is old enough that any civilization that emerged a few billion years ago would already have colonized it entirely — even at sub-light speeds. {{em:If they exist, they should already be here.}} They aren't. That's the paradox.",
+              "Explanations are plentiful — and none is accepted. The Great Filter: somewhere in the chain from simple life to interstellar civilizations, there's an extraordinarily improbable step. The question: is it behind us or ahead? If ahead, our prospects are grim. Other explanations: civilizations self-destruct, hide, or communicate in ways we can't detect."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A gap between mathematical expectation and observed reality is a signal. Either one of our premises is wrong, or there's a hidden factor we haven't accounted for."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "If intelligent life in the universe should be widespread — why have we found no trace of it?",
+            "hint": "The question isn't \"does life exist\" — it's \"why don't we see its traces, given that it should be there?\"",
+            "user_prompt": "I have a theory — reveal the analysis",
+            "reveal_text": "No explanation is proven. The Great Filter is the most unsettling: if the filter is ahead of us, most civilizations die before interstellar expansion — and we're on that same path. The Dark Forest hypothesis (Liu Cixin): civilizations deliberately stay silent, because being detected is lethal. The Zoo hypothesis: they see us but don't make contact. None of these is directly testable right now.",
+            "intuition_trap": "Intuition seeks one correct answer. The Fermi Paradox shows: the question either reveals an error in our assumptions about the origin of life, or says something very important about the fate of intelligent civilizations — including ours."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In strategy", "example": "A \"Fermi estimate\" is a way to quickly gauge the order of magnitude without precise data. If math gives a large number and reality gives zero — look for the hidden factor." },
+              { "label": "In business", "example": "\"If this niche is so profitable, why hasn't anyone occupied it?\" — a Fermi question for any business idea. Either everyone is blind, or there's a reason you haven't seen yet." },
+              { "label": "In science", "example": "The Fermi Paradox is a rare example of a precisely formulated question with no accepted answer. It forces a rethink of basic assumptions about the nature of life and intelligence." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find an area of your work where the math says \"should be a lot\" and reality says \"almost nothing.\" That's your personal Fermi Paradox. What are you missing?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/fermi_paradox" }]
+}

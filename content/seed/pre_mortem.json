@@ -1,0 +1,168 @@
+{
+  "id": "pre_mortem",
+  "category": "mental_models",
+  "release_number": 76,
+  "release_date": "2026-06-26",
+  "tags": ["pre_mortem", "klein", "kahneman", "risk", "planning", "prospective_hindsight"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/pre_mortem.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте: сейчас 2027 год. Проект провалился. Полностью. Что пошло не так? Когда вы задаёте этот вопрос до начала работы — а не после — вы обнаруживаете риски, которые оптимизм заставил вас проигнорировать. Это не пессимизм. Это «предварительное вскрытие»." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Пред}}варительное вскрытие" } },
+        { "type": "subtitle", "props": { "text": "Pre-Mortem · Гэри Кляйн · 1998 · популяризовал Канеман" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/pre_mortem.svg", "alt": "Временная шкала: сейчас → будущее (крест) → мысленное возвращение назад с вопросами «почему?»" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Психолог Гэри Кляйн разработал технику в 1998 году. Суть: перед запуском проекта попросить команду представить, что проект завершился через год — и потерпел полный крах. Затем попросить каждого написать историю о том, почему это произошло. Техника использует «проспективное ретроспективное мышление»: мозг значительно лучше генерирует причины уже произошедших событий, чем предсказывает будущие риски.",
+              "Канеман, популяризовавший технику в «Думай медленно... решай быстро», объясняет её силу: она легализует скептицизм. На стадии планирования критиковать план трудно — это воспринимается как нелояльность или пораженчество. Пре-мортем превращает поиск рисков в обязательное задание. {{em:Каждый участник получает разрешение сказать, что его беспокоит — и обязан это сделать.}} Это снижает эффект группового мышления.",
+              "Исследования Кляйна показали: пре-мортем увеличивает выявление потенциальных проблем на 30%. Это не магия — это просто правильная постановка вопроса. Вместо «что может пойти не так?» (неопределённость будущего блокирует мышление) — «почему уже пошло не так?» (определённость прошлого освобождает его)."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мысленно переместитесь в будущее, где проект провалился, и спросите «почему». Мозг лучше объясняет прошлое, чем предсказывает будущее — используйте это для выявления реальных рисков."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Команда готова запустить новый продукт. Все воодушевлены. Что делает руководитель, знающий о пре-мортем?",
+            "setup": null,
+            "options": [
+              { "id": "launch", "text": "Запускает — высокий командный дух важен, не стоит его подавлять", "is_wiser": false },
+              { "id": "premortem", "text": "Проводит пре-мортем — именно сейчас это наиболее ценно", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "предпочитают сохранить оптимизм команды",
+              "explanation": "Пре-мортем наиболее ценен именно тогда, когда команда полна оптимизма — потому что оптимизм создаёт слепые пятна. Канеман: «Это превентивная мера против самоуверенности». Час перед запуском, потраченный на пре-мортем, может предотвратить месяцы проблем после.",
+              "wisdom": "{{em:Лучшее время для поиска рисков — когда вам кажется, что их нет.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Пре-мортем может превратиться в формальность, если участники боятся критиковать план. Для работы техники нужна психологическая безопасность — гарантия, что «катастрофические» сценарии не будут восприняты как личная атака или нелояльность. Без неё участники напишут поверхностные риски, а настоящие останутся невысказанными."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В стратегическом планировании", "example": "Amazon требует от команд писать «будущую пресс-релизную статью» перед запуском продукта. Пре-мортем — обратная версия: пресс-статья о провале, которая помогает его предотвратить." },
+              { "label": "В военном планировании", "example": "«Red team» в армии и разведке — институционализированный пре-мортем: выделенная группа, задача которой атаковать собственный план." },
+              { "label": "В медицине", "example": "Предоперационный разбор рисков («что может пойти не так с этим пациентом?») — медицинский аналог пре-мортема, снижающий хирургические осложнения." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите текущий проект или план. Напишите историю о том, почему через год он провалился. Не «что может пойти не так» — а «что пошло не так». Затем прочитайте и спросите: какие из этих причин уже заложены в текущий план?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine: it's 2027. The project failed. Completely. What went wrong? When you ask this question before the work begins — not after — you discover risks that optimism made you overlook. This isn't pessimism. It's the pre-mortem." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Pre}}-Mortem" } },
+        { "type": "subtitle", "props": { "text": "Pre-Mortem · Gary Klein · 1998 · popularized by Kahneman" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/pre_mortem.svg", "alt": "A timeline: now → future (marked with an X) → mental return with \"why?\" questions" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Psychologist Gary Klein developed the technique in 1998. The core: before launching a project, ask the team to imagine it has ended a year from now — in complete failure. Then ask each person to write a story explaining why. The technique exploits \"prospective hindsight\": the brain is far better at generating causes for events that have already happened than at predicting future risks.",
+              "Kahneman, who popularized the technique in Thinking, Fast and Slow, explains its power: it legitimizes skepticism. During planning, criticizing the plan is hard — it reads as disloyalty or defeatism. The pre-mortem turns risk-finding into a mandatory task. {{em:Every participant is given permission to say what worries them — and required to do so.}} This reduces groupthink.",
+              "Klein's research showed the pre-mortem increases identification of potential problems by 30%. No magic — just the right framing of the question. Instead of \"what could go wrong?\" (future uncertainty blocks thinking) — \"why did things go wrong?\" (certainty of the past frees it)."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Mentally travel to a future where the project has failed, and ask why. The brain explains the past better than it predicts the future — use this to surface real risks."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A team is ready to launch a new product. Everyone is excited. What does a leader who knows about the pre-mortem do?",
+            "setup": null,
+            "options": [
+              { "id": "launch", "text": "Launches — high team spirit matters, no reason to dampen it", "is_wiser": false },
+              { "id": "premortem", "text": "Runs a pre-mortem — this is exactly when it's most valuable", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "prefer to preserve team optimism",
+              "explanation": "The pre-mortem is most valuable precisely when the team is optimistic — because optimism creates blind spots. Kahneman: \"It's a safeguard against overconfidence.\" An hour spent on a pre-mortem before launch can prevent months of problems afterward.",
+              "wisdom": "{{em:The best time to look for risks is when you think there aren't any.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "A pre-mortem can become a formality if participants are afraid to criticize the plan. For the technique to work, psychological safety is essential — a guarantee that \"catastrophic\" scenarios won't be read as personal attacks or disloyalty. Without it, participants write superficial risks and the real ones go unspoken."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In strategic planning", "example": "Amazon requires teams to write a \"future press release\" before launch. The pre-mortem is the inverse: a press release about the failure that helps prevent it." },
+              { "label": "In military planning", "example": "\"Red teams\" in the military and intelligence — institutionalized pre-mortem: a dedicated group whose task is to attack their own plan." },
+              { "label": "In medicine", "example": "Pre-operative risk review (\"what could go wrong with this patient?\") is the medical analog of the pre-mortem, shown to reduce surgical complications." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take a current project or plan. Write the story of why it failed a year from now. Not \"what could go wrong\" — but \"what went wrong.\" Then read it and ask: which of these causes are already built into the current plan?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/pre_mortem" }]
+}

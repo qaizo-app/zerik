@@ -1,0 +1,154 @@
+{
+  "id": "experience_machine",
+  "category": "thought_experiments",
+  "release_number": 61,
+  "release_date": "2026-06-11",
+  "tags": ["nozick", "hedonism", "reality", "meaning", "philosophy"],
+  "difficulty": 3,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/experience_machine.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте машину, которая даёт вам любой опыт. Вы можете чувствовать, что пишете великий роман, дружите с лучшими людьми, достигаете любых целей. Изнутри это неотличимо от реальности. Вы подключитесь? Роберт Нозик задал этот вопрос в 1974 году. Большинство отвечают «нет» — и не могут толком объяснить почему." }
+        },
+        { "type": "title", "props": { "text": "Машина {{accent:опыта}}" } },
+        { "type": "subtitle", "props": { "text": "Experience Machine · Роберт Нозик · «Анархия, государство и утопия» · 1974" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/experience_machine.svg", "alt": "Человек в капсуле с идиллической картиной внутри и реальным пустым миром снаружи" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Нозик предложил этот эксперимент, чтобы атаковать гедонизм — философскую позицию, согласно которой единственное, что имеет ценность, — это удовольствие (или субъективное благополучие). Если гедонизм верен, то машина опыта, дающая максимальное удовольствие, — лучший возможный выбор. Но большинство людей не стали бы подключаться.",
+              "Почему? Нозик предложил три причины. Первая: нам важно реально делать вещи, а не только чувствовать, что мы их делаем. Вторая: нам важно быть определённым человеком — а не «неопределённой массой в баке». Третья: мы ограничены тем, что люди создали в симуляции — мы не можем встретить ничего более глубокого, чем то, что уже знают её создатели. {{em:Мы хотим контакта с более глубокой реальностью, а не с тщательно сконструированной иллюзией.}}",
+              "Эксперимент стал ключевым аргументом в философии против гедонизма — и поставил вопрос о том, что именно делает жизнь хорошей. Смысл? Реальные достижения? Настоящие отношения? Подключение к реальности как таковой? Эти вопросы не решены."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Субъективное ощущение счастья может быть не единственным, что ценно в жизни. Реальность происходящего, подлинность достижений и контакт с миром могут иметь ценность сами по себе."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вам предлагают подключиться к машине опыта навсегда. Весь ваш субъективный опыт будет идеальным — не отличимым от реальности. Вы соглашаетесь?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — если опыт счастливый и неотличимый от реального, разница не имеет значения", "is_wiser": false },
+              { "id": "no", "text": "Нет — мне важно, чтобы то, что происходит, было настоящим", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "отказываются от машины",
+              "explanation": "Большинство людей отказываются — и это само по себе философский факт. Это показывает, что мы ценим нечто помимо субъективного ощущения: реальность достижений, подлинность отношений, контакт с тем, что «действительно существует». Те, кто соглашается, последовательны в гедонизме. Те, кто отказывается, — интуитивно не гедонисты. Нозик именно это и хотел показать.",
+              "wisdom": "{{em:Если бы счастья было достаточно, машина опыта решила бы всё. Но она не решает.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В технологиях", "example": "Метавселенные, VR, цифровые аватары — практические версии машины опыта. Насколько «настоящим» должен быть опыт? Этот вопрос становится всё менее абстрактным." },
+              { "label": "В психологии", "example": "«Позитивная иллюзия» (думать о себе лучше, чем есть) коррелирует с некоторыми показателями благополучия. Нозик спрашивает: стоит ли покупать счастье ценой иллюзии?" },
+              { "label": "В этике ИИ", "example": "Если ИИ создаёт виртуальную среду, в которой человек счастлив, — это благо? Машина опыта — это вопрос не только философии, но и дизайна будущего." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Что в вашей жизни важно именно потому, что оно настоящее — а не потому что приятно? Ответ на этот вопрос — ваш личный список того, что вы не отдали бы машине опыта."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №9" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine a machine that gives you any experience you want. You can feel yourself writing a great novel, befriending the best people, achieving any goal. From the inside, it's indistinguishable from reality. Would you plug in? Robert Nozick posed this question in 1974. Most people say no — and can't fully explain why." }
+        },
+        { "type": "title", "props": { "text": "The Experience {{accent:Machine}}" } },
+        { "type": "subtitle", "props": { "text": "Experience Machine · Robert Nozick · Anarchy, State, and Utopia · 1974" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/experience_machine.svg", "alt": "A person in a capsule with an idyllic scene inside, and the real empty world outside" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Nozick proposed this experiment to attack hedonism — the philosophical position that the only thing of value is pleasure (or subjective wellbeing). If hedonism is right, then a machine that gives maximum pleasure is the best possible choice. But most people would not plug in.",
+              "Why? Nozick offered three reasons. First: we want to actually do things, not just feel that we're doing them. Second: we want to be a particular kind of person — not an \"indeterminate blob\" in a tank. Third: we're limited by what people have already constructed in the simulation — we can encounter nothing deeper than what its creators already knew. {{em:We want contact with a deeper reality, not a carefully engineered illusion.}}",
+              "The experiment became a key philosophical argument against hedonism — and raised the question of what exactly makes a life good. Meaning? Real achievement? Genuine relationships? Connection to reality as such? These questions remain open."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The subjective feeling of happiness may not be the only thing of value in life. The reality of what happens, the authenticity of achievements, and contact with the world may have value in themselves."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're offered permanent connection to an experience machine. All your subjective experience will be perfect — indistinguishable from reality. Do you accept?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — if the experience is happy and indistinguishable from real, the difference doesn't matter", "is_wiser": false },
+              { "id": "no", "text": "No — it matters to me that what happens is real", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "refuse the machine",
+              "explanation": "Most people refuse — and this is itself a philosophical fact. It shows we value something beyond subjective feeling: the reality of achievements, the authenticity of relationships, contact with what \"actually exists.\" Those who accept are consistent hedonists. Those who refuse are intuitively not. That's exactly what Nozick wanted to show.",
+              "wisdom": "{{em:If happiness were enough, the experience machine would solve everything. But it doesn't.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In technology", "example": "Metaverses, VR, digital avatars — practical versions of the experience machine. How \"real\" does experience need to be? This question is becoming less abstract." },
+              { "label": "In psychology", "example": "\"Positive illusions\" (thinking better of yourself than warranted) correlate with some wellbeing indicators. Nozick asks: is it worth buying happiness at the price of illusion?" },
+              { "label": "In AI ethics", "example": "If an AI creates a virtual environment in which a person is happy — is that good? The experience machine is not just a philosophical question — it's a question about the design of the future." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "What in your life matters precisely because it's real — not because it's pleasant? Your answer is your personal list of what you wouldn't give to the experience machine."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/experience_machine" }]
+}

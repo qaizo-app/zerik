@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Line comparison display at top -->
+  <!-- Reference line -->
+  <rect x="40" y="50" width="2" height="80" rx="1" fill="#aabbcc"/>
+  <text x="41" y="45" font-size="9" fill="#6688aa" font-family="sans-serif">REF</text>
+  <!-- Lines A B C -->
+  <rect x="130" y="70" width="2" height="60" rx="1" fill="#aabbcc"/>
+  <text x="127" y="65" font-size="9" fill="#6688aa" font-family="sans-serif">A</text>
+  <rect x="200" y="50" width="2" height="80" rx="1" fill="#4caf8a"/>
+  <text x="197" y="45" font-size="9" fill="#4caf8a" font-family="sans-serif">B</text>
+  <rect x="270" y="62" width="2" height="55" rx="1" fill="#aabbcc"/>
+  <text x="267" y="57" font-size="9" fill="#6688aa" font-family="sans-serif">C</text>
+  <!-- Correct answer marker -->
+  <text x="201" y="140" text-anchor="middle" font-size="9" fill="#4caf8a" font-family="sans-serif">✓ correct</text>
+  <!-- Arrows from confederates 1-6 all pointing to A -->
+  <!-- Confederates (seated figures in a row) -->
+  <!-- Confederate 1 -->
+  <circle cx="60" cy="200" r="12" fill="#446688"/>
+  <line x1="60" y1="212" x2="60" y2="235" stroke="#446688" stroke-width="3"/>
+  <line x1="50" y1="220" x2="70" y2="220" stroke="#446688" stroke-width="2"/>
+  <!-- Arm pointing to A -->
+  <line x1="70" y1="216" x2="130" y2="165" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed5)"/>
+  <defs>
+    <marker id="arrRed5" markerWidth="5" markerHeight="5" refX="3" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#cc4444"/>
+    </marker>
+  </defs>
+  <!-- Confederate 2 -->
+  <circle cx="110" cy="200" r="12" fill="#446688"/>
+  <line x1="110" y1="212" x2="110" y2="235" stroke="#446688" stroke-width="3"/>
+  <line x1="100" y1="220" x2="120" y2="220" stroke="#446688" stroke-width="2"/>
+  <line x1="120" y1="216" x2="133" y2="162" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed5)"/>
+  <!-- Confederate 3 -->
+  <circle cx="160" cy="200" r="12" fill="#446688"/>
+  <line x1="160" y1="212" x2="160" y2="235" stroke="#446688" stroke-width="3"/>
+  <line x1="150" y1="220" x2="170" y2="220" stroke="#446688" stroke-width="2"/>
+  <line x1="155" y1="216" x2="133" y2="162" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed5)"/>
+  <!-- Confederate 4 -->
+  <circle cx="210" cy="200" r="12" fill="#446688"/>
+  <line x1="210" y1="212" x2="210" y2="235" stroke="#446688" stroke-width="3"/>
+  <line x1="200" y1="220" x2="220" y2="220" stroke="#446688" stroke-width="2"/>
+  <line x1="205" y1="216" x2="133" y2="162" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed5)"/>
+  <!-- Confederate 5 -->
+  <circle cx="260" cy="200" r="12" fill="#446688"/>
+  <line x1="260" y1="212" x2="260" y2="235" stroke="#446688" stroke-width="3"/>
+  <line x1="250" y1="220" x2="270" y2="220" stroke="#446688" stroke-width="2"/>
+  <line x1="255" y1="216" x2="133" y2="162" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed5)"/>
+  <!-- Confederate 6 -->
+  <circle cx="310" cy="200" r="12" fill="#446688"/>
+  <line x1="310" y1="212" x2="310" y2="235" stroke="#446688" stroke-width="3"/>
+  <line x1="300" y1="220" x2="320" y2="220" stroke="#446688" stroke-width="2"/>
+  <line x1="305" y1="216" x2="133" y2="162" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed5)"/>
+  <!-- Real participant (rightmost) - looks at B -->
+  <circle cx="360" cy="200" r="14" fill="#cc8844"/>
+  <line x1="360" y1="214" x2="360" y2="237" stroke="#cc8844" stroke-width="3.5"/>
+  <line x1="348" y1="223" x2="372" y2="223" stroke="#cc8844" stroke-width="2.5"/>
+  <!-- Eyes - looking left (toward group pressure AND correct answer) -->
+  <circle cx="354" cy="197" r="3" fill="#553322"/>
+  <circle cx="362" cy="197" r="3" fill="#553322"/>
+  <!-- Confusion marks above head -->
+  <text x="368" y="185" font-size="12" fill="#cc8844" font-family="sans-serif">?</text>
+  <!-- Labels -->
+  <text x="185" y="255" text-anchor="middle" font-size="9" fill="#cc4444" font-family="sans-serif">confederates → all say "A"</text>
+  <text x="360" y="255" text-anchor="middle" font-size="9" fill="#cc8844" font-family="sans-serif">real</text>
+  <text x="360" y="267" text-anchor="middle" font-size="9" fill="#cc8844" font-family="sans-serif">subject</text>
+  <!-- Stats -->
+  <text x="200" y="280" text-anchor="middle" font-size="10" fill="#447799" font-family="sans-serif">75% conformed at least once · Asch · 1951</text>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-size="12" fill="#5588bb" font-family="sans-serif" letter-spacing="1">ASCH CONFORMITY EXPERIMENT</text>
+</svg>

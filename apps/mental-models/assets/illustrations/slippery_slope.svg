@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Sloped surface -->
+  <polygon points="40,80 360,240 40,240" fill="#1a1a2a" stroke="#334455" stroke-width="1.5"/>
+  <!-- Steps A through Z -->
+  <!-- Step labels descending the slope -->
+  <circle cx="80" cy="96" r="14" fill="#cc5533" opacity="0.9"/>
+  <text x="80" y="101" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="bold">A</text>
+  <circle cx="130" cy="130" r="13" fill="#cc6633" opacity="0.85"/>
+  <text x="130" y="135" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="bold">B</text>
+  <circle cx="178" cy="160" r="12" fill="#aa6633" opacity="0.8"/>
+  <text x="178" y="164" text-anchor="middle" font-size="10" fill="#fff" font-family="sans-serif" font-weight="bold">C</text>
+  <circle cx="224" cy="186" r="11" fill="#884422" opacity="0.75"/>
+  <text x="224" y="190" text-anchor="middle" font-size="10" fill="#ddd" font-family="sans-serif" font-weight="bold">D</text>
+  <!-- Dots implying more steps -->
+  <circle cx="258" cy="200" r="4" fill="#664422" opacity="0.7"/>
+  <circle cx="276" cy="207" r="4" fill="#664422" opacity="0.6"/>
+  <circle cx="294" cy="214" r="4" fill="#664422" opacity="0.5"/>
+  <!-- Final step Z -->
+  <circle cx="334" cy="228" r="15" fill="#440000" opacity="0.9"/>
+  <text x="334" y="233" text-anchor="middle" font-size="12" fill="#ff8866" font-family="sans-serif" font-weight="bold">Z</text>
+  <!-- Sliding figure -->
+  <circle cx="80" cy="76" r="9" fill="#ffcc88"/>
+  <line x1="80" y1="85" x2="80" y2="96" stroke="#ffcc88" stroke-width="2.5"/>
+  <!-- Sliding motion lines -->
+  <line x1="76" y1="82" x2="68" y2="76" stroke="#ffcc88" stroke-width="1.5" opacity="0.5"/>
+  <line x1="72" y1="84" x2="62" y2="80" stroke="#ffcc88" stroke-width="1.5" opacity="0.3"/>
+  <!-- Top label -->
+  <text x="80" y="57" text-anchor="middle" font-size="10" fill="#cc5533" font-family="sans-serif">start</text>
+  <!-- Bottom label -->
+  <text x="334" y="256" text-anchor="middle" font-size="10" fill="#ff4422" font-family="sans-serif">CATASTROPHE</text>
+  <!-- "No evidence of causal chain" warning -->
+  <rect x="108" y="50" width="168" height="30" rx="5" fill="#221111"/>
+  <text x="192" y="63" text-anchor="middle" font-size="9" fill="#cc4444" font-family="sans-serif">no evidence A leads to Z</text>
+  <text x="192" y="75" text-anchor="middle" font-size="9" fill="#993333" font-family="sans-serif">each step assumed, not proven</text>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-size="13" fill="#cc5533" font-family="sans-serif" letter-spacing="1">SLIPPERY SLOPE</text>
+  <text x="200" y="43" text-anchor="middle" font-size="10" fill="#554433" font-family="sans-serif">rhetorical fallacy</text>
+</svg>

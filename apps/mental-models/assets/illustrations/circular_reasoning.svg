@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Large circular arrow -->
+  <circle cx="200" cy="155" r="88" fill="none" stroke="#cc9922" stroke-width="3" stroke-dasharray="10,6" opacity="0.3"/>
+  <!-- Solid arc with arrowhead -->
+  <path d="M200,67 A88,88 0 1,1 199.9,67.01" fill="none" stroke="#cc9922" stroke-width="3.5" opacity="0.85"/>
+  <!-- Arrowhead pointing back to start -->
+  <polygon points="200,62 188,79 212,79" fill="#cc9922" opacity="0.9"/>
+  <!-- Starting premise box -->
+  <rect x="126" y="50" width="148" height="34" rx="8" fill="#221a08" stroke="#cc9922" stroke-width="2"/>
+  <text x="200" y="64" text-anchor="middle" font-size="10" fill="#ffcc44" font-family="sans-serif">PREMISE:</text>
+  <text x="200" y="78" text-anchor="middle" font-size="10" fill="#cc9922" font-family="sans-serif">"X is true because..."</text>
+  <!-- Right side - argument step -->
+  <rect x="288" y="120" width="90" height="50" rx="8" fill="#1a1510" stroke="#886633" stroke-width="1.5"/>
+  <text x="333" y="138" text-anchor="middle" font-size="9" fill="#aa8833" font-family="sans-serif">...because Y</text>
+  <text x="333" y="152" text-anchor="middle" font-size="9" fill="#886622" font-family="sans-serif">is true...</text>
+  <text x="333" y="165" text-anchor="middle" font-size="9" fill="#664422" font-family="sans-serif">...which proves X</text>
+  <!-- Bottom - conclusion -->
+  <rect x="126" y="210" width="148" height="34" rx="8" fill="#221a08" stroke="#cc9922" stroke-width="2"/>
+  <text x="200" y="224" text-anchor="middle" font-size="10" fill="#ffcc44" font-family="sans-serif">CONCLUSION:</text>
+  <text x="200" y="238" text-anchor="middle" font-size="10" fill="#cc9922" font-family="sans-serif">"...therefore X."</text>
+  <!-- Left side note -->
+  <rect x="22" y="120" width="90" height="50" rx="8" fill="#1a1510" stroke="#554422" stroke-width="1.5"/>
+  <text x="67" y="140" text-anchor="middle" font-size="9" fill="#cc5522" font-family="sans-serif">A because B</text>
+  <text x="67" y="153" text-anchor="middle" font-size="9" fill="#884422" font-family="sans-serif">B because A</text>
+  <line x1="112" y1="145" x2="132" y2="155" stroke="#554422" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <!-- Center label -->
+  <text x="200" y="149" text-anchor="middle" font-size="12" fill="#cc9922" font-family="sans-serif" opacity="0.8">proves</text>
+  <text x="200" y="165" text-anchor="middle" font-size="12" fill="#cc9922" font-family="sans-serif" opacity="0.8">nothing</text>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-size="13" fill="#cc9922" font-family="sans-serif" letter-spacing="1">CIRCULAR REASONING</text>
+  <text x="200" y="44" text-anchor="middle" font-size="10" fill="#554422" font-family="sans-serif">petitio principii · argument that eats itself</text>
+</svg>

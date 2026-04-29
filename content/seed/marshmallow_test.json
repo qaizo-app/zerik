@@ -1,0 +1,186 @@
+{
+  "id": "marshmallow_test",
+  "category": "psychology_experiments",
+  "release_number": 60,
+  "release_date": "2026-06-10",
+  "tags": ["delayed_gratification", "mischel", "self_control", "willpower", "development"],
+  "difficulty": 2,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/marshmallow_test.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №5" } },
+        {
+          "type": "hook",
+          "props": { "text": "Ребёнок сидит один за столом. Перед ним — зефир. Экспериментатор говорит: «Если не съешь его, пока меня нет, — получишь два». И уходит. Уолтер Мишел провёл этот эксперимент в конце 1960-х. Дети, которые смогли подождать, через двадцать лет показывали более высокие результаты в учёбе, лучшее здоровье и более крепкие отношения. Потом данные пересмотрели." }
+        },
+        { "type": "title", "props": { "text": "Зефирный {{accent:тест}}" } },
+        { "type": "subtitle", "props": { "text": "Marshmallow Test · Уолтер Мишел · Стэнфорд · 1968–1972" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/marshmallow_test.svg", "alt": "Стол с одним зефиром и стрелка к двум зефирам — выбор между сейчас и потом" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Мишел обнаружил, что способность ждать в четыре года предсказывала множество положительных исходов во взрослой жизни. Он объяснял это «силой воли» как устойчивой личностной чертой. Идея стала невероятно популярной: бизнес-книги, родительские советы, программы самодисциплины — все ссылались на зефирный тест. «Умей ждать — и всё получится».",
+              "Но в 2018 году Тайлер Уотт и Ричард Эйслин провели масштабную репликацию на более представительной выборке — включая детей из малообеспеченных семей. Эффект значительно ослаб. Ключевой вывод: способность ждать зефир во многом предсказывалась социально-экономическим положением семьи. {{em:Дети из бедных семей чаще съедали зефир сразу — не потому что у них слабая воля, а потому что в их опыте обещания часто не выполняются.}} Это рациональное поведение, а не дефицит самоконтроля.",
+              "Феномен откладывания удовольствия реален — люди различаются по способности ждать, и это влияет на исходы. Но причина не только в «воле»: она в доверии к среде, в опыте надёжных обязательств, в ощущении безопасности. Контекст важнее характера."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Способность откладывать вознаграждение зависит не только от силы воли, но и от доверия к среде. Человек, которому обещания редко выполнялись, рационально берёт сейчас — а не ждёт."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Ребёнок из бедной семьи съедает зефир сразу. Что это говорит о нём?",
+            "setup": null,
+            "options": [
+              { "id": "weak_will", "text": "У него слабый самоконтроль — его нужно развивать", "is_wiser": false },
+              { "id": "rational", "text": "Он рационально действует в среде с низким доверием к обещаниям", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "объясняют это слабым самоконтролем",
+              "explanation": "Репликация 2018 года показала: когда контролируешь социально-экономический фон семьи, эффект зефирного теста значительно уменьшается. Дети, в чьём опыте взрослые редко выполняли обещания, принимают рациональное решение: взять наверняка сейчас лучше, чем ждать неопределённого «потом». Самоконтроль — не черта характера, оторванная от контекста.",
+              "wisdom": "{{em:Прежде чем судить о чьей-то силе воли — посмотрите на среду, в которой она формировалась.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "Что говорит наука сегодня",
+            "year": "2018",
+            "text": "Репликация Уотта и Эйслина (2018) на выборке 900 детей показала: эффект зефирного теста на долгосрочные исходы значительно слабее после контроля за социально-экономическим статусом семьи. Авторы не отрицают, что самоконтроль важен, — но ставят под сомнение вывод о нём как о стабильной «врождённой» черте, определяющей жизнь. Важнее оказывается среда доверия, в которой растёт ребёнок.",
+            "sources": [
+              {
+                "title": "Revisiting the marshmallow test: A conceptual replication investigating links between early delay of gratification and later outcomes",
+                "authors": "Tyler W. Watts, Greg J. Duncan, Haonan Quan",
+                "year": "2018",
+                "doi": "10.1177/0956797618761661"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В воспитании", "example": "Развить способность ребёнка ждать — значит прежде всего быть родителем, который выполняет обещания. Доверие к среде первично." },
+              { "label": "В экономике", "example": "Высокая инфляция делает людей «нетерпеливыми» экономически — они предпочитают тратить сейчас. Не потому что безответственны, а потому что завтра деньги стоят меньше." },
+              { "label": "В личных финансах", "example": "Инвестирование — это зефирный тест для взрослых. Но готовность ждать зависит от уверенности: в рынке, в стране, в своей работе." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей жизни что-то, что вы «берёте сейчас», хотя рационально лучше подождать? Спросите: это слабость воли — или недоверие к среде? Второе лечится не дисциплиной, а опытом выполненных обещаний."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №5" } },
+        {
+          "type": "hook",
+          "props": { "text": "A child sits alone at a table. In front of them: a marshmallow. The researcher says: \"If you don't eat it while I'm gone, you'll get two.\" Then leaves. Walter Mischel ran this experiment in the late 1960s. Children who waited showed higher academic achievement, better health, and stronger relationships twenty years later. Then the data was revisited." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Marshmallow}} Test" } },
+        { "type": "subtitle", "props": { "text": "Marshmallow Test · Walter Mischel · Stanford · 1968–1972" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/marshmallow_test.svg", "alt": "A table with one marshmallow and an arrow to two marshmallows — the choice between now and later" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Mischel found that the ability to wait at age four predicted many positive adult outcomes. He interpreted this as \"willpower\" — a stable personality trait. The idea became enormously popular: business books, parenting advice, self-discipline programs all cited the marshmallow test. \"Learn to wait, and everything will work out.\"",
+              "But in 2018, Tyler Watts and Richard Eislin ran a large-scale replication on a more representative sample — including children from lower-income families. The effect significantly weakened. The key finding: the ability to wait for a marshmallow was largely predicted by the family's socioeconomic status. {{em:Children from poorer families ate the marshmallow sooner — not because of weak willpower, but because in their experience, promises often aren't kept.}} This is rational behavior, not a self-control deficit.",
+              "The phenomenon of delayed gratification is real — people differ in their ability to wait, and this affects outcomes. But the cause isn't only \"willpower\": it's trust in the environment, experience of reliable commitments, a sense of security. Context matters more than character."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The ability to delay reward depends not only on willpower, but on trust in the environment. A person for whom promises were rarely kept rationally takes now — rather than waiting."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A child from a low-income family eats the marshmallow immediately. What does this say about them?",
+            "setup": null,
+            "options": [
+              { "id": "weak_will", "text": "They have poor self-control — it needs to be developed", "is_wiser": false },
+              { "id": "rational", "text": "They're acting rationally in a low-trust environment", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "explain it as poor self-control",
+              "explanation": "The 2018 replication showed: when controlling for family socioeconomic background, the marshmallow test effect shrinks significantly. Children whose experience taught them that adults rarely keep promises make a rational choice: taking something certain now beats waiting for an uncertain later. Self-control isn't a character trait disconnected from context.",
+              "wisdom": "{{em:Before judging someone's willpower — look at the environment in which it was shaped.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "modern_critique",
+          "props": {
+            "label": "What the science says today",
+            "year": "2018",
+            "text": "Watts and Duncan's replication (2018) on 900 children showed: the marshmallow test's effect on long-term outcomes is much weaker after controlling for family socioeconomic status. The authors don't deny that self-control matters — but they challenge the conclusion that it's a stable \"innate\" trait that determines life outcomes. What matters more is the trust environment in which the child grows up.",
+            "sources": [
+              {
+                "title": "Revisiting the marshmallow test: A conceptual replication investigating links between early delay of gratification and later outcomes",
+                "authors": "Tyler W. Watts, Greg J. Duncan, Haonan Quan",
+                "year": "2018",
+                "doi": "10.1177/0956797618761661"
+              }
+            ]
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In parenting", "example": "Building a child's ability to wait means first being a parent who keeps promises. Trust in the environment comes first." },
+              { "label": "In economics", "example": "High inflation makes people economically \"impatient\" — they prefer spending now. Not because they're irresponsible, but because tomorrow money is worth less." },
+              { "label": "In personal finance", "example": "Investing is the adult marshmallow test. But willingness to wait depends on confidence: in the market, in the country, in your job." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there something in your life you're \"taking now\" even though waiting would rationally be better? Ask: is this weak willpower — or distrust of the environment? The second is solved not by discipline, but by the experience of kept promises."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/marshmallow_test" }]
+}

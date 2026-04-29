@@ -1,0 +1,168 @@
+{
+  "id": "regression_to_mean",
+  "category": "mental_models",
+  "release_number": 55,
+  "release_date": "2026-06-05",
+  "tags": ["regression", "statistics", "galton", "probability", "decision_making"],
+  "difficulty": 3,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/regression_to_mean.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Инструктор по пилотированию заметил странную закономерность: когда он хвалит пилота за отличную посадку, следующая обычно хуже. Когда критикует за плохую — следующая лучше. Он сделал вывод: похвала вредит, критика помогает. Он ошибся. Он обнаружил регрессию к среднему." }
+        },
+        { "type": "title", "props": { "text": "Регрессия к {{accent:среднему}}" } },
+        { "type": "subtitle", "props": { "text": "Regression to the Mean · Фрэнсис Гальтон · 1886" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/regression_to_mean.svg", "alt": "Зигзагообразный график, отклоняющийся от средней линии и возвращающийся к ней" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Фрэнсис Гальтон открыл явление в 1886 году, изучая рост: дети очень высоких родителей, как правило, ниже своих родителей; дети очень низких родителей — выше. Результат любого измерения содержит случайный компонент. Экстремальные результаты, по определению, включают большую случайную удачу (или неудачу). При повторном измерении случайный компонент «возвращается к среднему».",
+              "{{em:Это означает, что за любым выдающимся результатом следует более обычный — не потому что что-то изменилось, а потому что случайность не воспроизводится так же.}} Спортсмен, поразивший обложку журнала, в следующем сезоне играет хуже. Компания, показавшая рекордную прибыль, в следующем квартале — скромнее. Пациент, обратившийся к врачу в худший день болезни, назавтра чувствует себя лучше — хотел бы он ни назначал.",
+              "Регрессия к среднему порождает ложные причинно-следственные связи повсюду. Правило введено после серии катастроф? Число катастроф снизилось — не потому что правило работает, а потому что серия была экстремальной. Менеджер начал пить красное вино, и его давление нормализовалось? Возможно, оно нормализовалось бы само."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Экстремальные результаты содержат большую долю случайности. При повторном измерении случайность не воспроизводится — и результат тяготеет к среднему. Это не следствие вмешательства, а математика."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Новый CEO пришёл в убыточную компанию. За три года компания вернулась к прибыльности. Это заслуга CEO?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Скорее всего да — компания улучшилась при нём", "is_wiser": false },
+              { "id": "maybe", "text": "Неясно — компании, достигшие дна, часто восстанавливаются сами", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "приписывают заслугу CEO",
+              "explanation": "Компании нанимают новых CEO именно тогда, когда всё плохо — в экстремальной точке. Регрессия к среднему предсказывает, что после экстремально плохого периода часто следует улучшение — независимо от вмешательства. Это не значит, что CEO ничего не сделал. Это значит: до назначения причинно-следственную связь установить очень сложно.",
+              "wisdom": "{{em:После экстремального события часто наступает нормализация — не потому что что-то изменилось, а потому что экстремальность не сохраняется.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Регрессия к среднему — один из главных источников ложных выводов в медицине, бизнесе и политике. Когда что-то очень плохо — любое вмешательство выглядит эффективным. Без контрольной группы отличить регрессию от реального эффекта невозможно."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В спорте", "example": "«Проклятие обложки Sports Illustrated»: спортсмен, попавший на обложку на пике, почти всегда играет хуже в следующем сезоне. Не суеверие — математика." },
+              { "label": "В медицине", "example": "Большинство людей обращаются к врачу в худший момент болезни. Любое лечение назначается в пике — и кажется эффективным, потому что пик не длится вечно." },
+              { "label": "В управлении", "example": "Менеджер, который кричит после плохих результатов и хвалит после хороших, думает, что его метод работает. Регрессия к среднему работает вместо него." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последнее решение, которое вы приняли в ответ на экстремально плохой или хороший результат. Возможно ли, что результат нормализовался бы сам — а вы приписали это своему вмешательству?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "A flight instructor noticed a strange pattern: when he praised a trainee for an excellent landing, the next one was usually worse. When he criticized a bad landing, the next was usually better. He concluded that praise hurts performance and criticism helps. He was wrong. He had discovered regression to the mean." }
+        },
+        { "type": "title", "props": { "text": "Regression to the {{accent:Mean}}" } },
+        { "type": "subtitle", "props": { "text": "Regression to the Mean · Francis Galton · 1886" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/regression_to_mean.svg", "alt": "A zigzagging graph deviating from the mean line and returning to it" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Francis Galton discovered the phenomenon in 1886 while studying height: children of very tall parents tend to be shorter than their parents; children of very short parents tend to be taller. Any measurement contains a random component. Extreme results, by definition, include a large dose of random luck — or bad luck. On remeasurement, that random component reverts toward average.",
+              "{{em:This means that any outstanding result is typically followed by a more ordinary one — not because something changed, but because luck doesn't reproduce itself the same way.}} The athlete who made the magazine cover plays worse next season. The company that posted record profit does more modestly next quarter. The patient who sees a doctor on their worst day feels better tomorrow — whatever the doctor prescribes.",
+              "Regression to the mean generates false causal stories everywhere. A rule was introduced after a string of disasters, and disasters declined — not because the rule works, but because the string was extreme. A manager started drinking red wine and his blood pressure normalized — it might have normalized on its own."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Extreme results contain a large share of randomness. On remeasurement, the randomness doesn't reproduce — and the result gravitates toward average. This isn't a consequence of intervention. It's math."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A new CEO joins a loss-making company. Over three years the company returns to profitability. Is this the CEO's achievement?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Probably yes — the company improved under him", "is_wiser": false },
+              { "id": "maybe", "text": "Unclear — companies that hit bottom often recover on their own", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "credit the CEO",
+              "explanation": "Companies hire new CEOs precisely when things are bad — at an extreme point. Regression to the mean predicts that after an extremely bad period, improvement often follows regardless of intervention. That doesn't mean the CEO did nothing. It means: establishing causation before the fact is very hard.",
+              "wisdom": "{{em:After an extreme event, normalization often follows — not because something changed, but because extremes don't persist.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Regression to the mean is one of the main sources of false conclusions in medicine, business, and politics. When something is very bad, any intervention looks effective. Without a control group, it's impossible to distinguish regression from a real effect."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In sports", "example": "The \"Sports Illustrated cover curse\": athletes who make the cover at their peak almost always perform worse the next season. Not superstition — mathematics." },
+              { "label": "In medicine", "example": "Most people see a doctor at their worst. Any treatment is prescribed at the peak — and appears effective, because the peak doesn't last." },
+              { "label": "In management", "example": "A manager who shouts after bad results and praises after good ones thinks their method works. Regression to the mean is doing the work instead." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a decision you made in response to an extreme result — very bad or very good. Could the result have normalized on its own — and you attributed it to your intervention?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/regression_to_mean" }]
+}

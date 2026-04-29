@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Five day boxes in a row -->
+  <!-- MON -->
+  <rect x="18" y="100" width="60" height="55" rx="6" fill="#1a1a2a" stroke="#334455" stroke-width="1.5"/>
+  <text x="48" y="122" text-anchor="middle" font-size="10" fill="#6688aa" font-family="sans-serif">MON</text>
+  <text x="48" y="138" text-anchor="middle" font-size="9" fill="#334455" font-family="sans-serif">could</text>
+  <text x="48" y="150" text-anchor="middle" font-size="9" fill="#334455" font-family="sans-serif">be</text>
+  <!-- X over MON from reasoning -->
+  <line x1="24" y1="106" x2="72" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <line x1="72" y1="106" x2="24" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <!-- TUE -->
+  <rect x="88" y="100" width="60" height="55" rx="6" fill="#1a1a2a" stroke="#334455" stroke-width="1.5"/>
+  <text x="118" y="122" text-anchor="middle" font-size="10" fill="#6688aa" font-family="sans-serif">TUE</text>
+  <text x="118" y="138" text-anchor="middle" font-size="9" fill="#334455" font-family="sans-serif">could</text>
+  <text x="118" y="150" text-anchor="middle" font-size="9" fill="#334455" stroke-width="0" font-family="sans-serif">be</text>
+  <!-- X over TUE -->
+  <line x1="94" y1="106" x2="142" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <line x1="142" y1="106" x2="94" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <!-- WED - highlighted, this is when it happens -->
+  <rect x="158" y="90" width="68" height="65" rx="6" fill="#221510" stroke="#cc7733" stroke-width="2.5"/>
+  <text x="192" y="114" text-anchor="middle" font-size="11" fill="#cc7733" font-family="sans-serif" font-weight="bold">WED</text>
+  <text x="192" y="130" text-anchor="middle" font-size="10" fill="#cc4422" font-family="sans-serif">SURPRISE!</text>
+  <text x="192" y="146" text-anchor="middle" font-size="20" font-family="sans-serif">⚡</text>
+  <!-- THU -->
+  <rect x="238" y="100" width="60" height="55" rx="6" fill="#1a1a2a" stroke="#334455" stroke-width="1.5"/>
+  <text x="268" y="122" text-anchor="middle" font-size="10" fill="#6688aa" font-family="sans-serif">THU</text>
+  <line x1="244" y1="106" x2="292" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <line x1="292" y1="106" x2="244" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <!-- FRI -->
+  <rect x="308" y="100" width="60" height="55" rx="6" fill="#1a1a2a" stroke="#334455" stroke-width="1.5"/>
+  <text x="338" y="122" text-anchor="middle" font-size="10" fill="#6688aa" font-family="sans-serif">FRI</text>
+  <line x1="314" y1="106" x2="362" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <line x1="362" y1="106" x2="314" y2="149" stroke="#cc4444" stroke-width="2" opacity="0.8"/>
+  <!-- Prisoner reasoning arrows - crossing off from right to left -->
+  <path d="M368,80 Q338,68 308,80" fill="none" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed4)"/>
+  <path d="M308,82 Q268,70 238,82" fill="none" stroke="#cc4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrRed4)"/>
+  <defs>
+    <marker id="arrRed4" markerWidth="5" markerHeight="5" refX="3" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#cc4444"/>
+    </marker>
+  </defs>
+  <text x="338" y="67" text-anchor="middle" font-size="8" fill="#884422" font-family="sans-serif">eliminates</text>
+  <text x="268" y="67" text-anchor="middle" font-size="8" fill="#884422" font-family="sans-serif">eliminates</text>
+  <!-- Prisoner conclusion bubble -->
+  <rect x="70" y="190" width="180" height="35" rx="7" fill="#110808" stroke="#884422" stroke-width="1.5"/>
+  <text x="160" y="205" text-anchor="middle" font-size="10" fill="#cc5533" font-family="sans-serif">Prisoner: "No hanging</text>
+  <text x="160" y="219" text-anchor="middle" font-size="10" fill="#cc5533" font-family="sans-serif">can occur!"</text>
+  <!-- Result text -->
+  <text x="200" y="255" text-anchor="middle" font-size="11" fill="#cc7733" font-family="sans-serif">Wednesday: hanged. Genuinely surprised.</text>
+  <text x="200" y="272" text-anchor="middle" font-size="9" fill="#664422" font-family="sans-serif">valid logic → false conclusion</text>
+  <!-- Title -->
+  <text x="200" y="32" text-anchor="middle" font-size="12" fill="#6655aa" font-family="sans-serif" letter-spacing="1">UNEXPECTED HANGING PARADOX</text>
+  <text x="200" y="50" text-anchor="middle" font-size="10" fill="#334455" font-family="sans-serif">Quine · 1953 · self-referential knowledge</text>
+</svg>

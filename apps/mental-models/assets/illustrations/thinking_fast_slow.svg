@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Brain outline split in two -->
+  <!-- Left hemisphere (System 1) -->
+  <path d="M200,80 Q155,60 130,85 Q100,100 98,135 Q95,165 115,185 Q135,205 160,210 L200,215 Z" fill="#cc6622" opacity="0.85"/>
+  <!-- Right hemisphere (System 2) -->
+  <path d="M200,80 Q245,60 270,85 Q300,100 302,135 Q305,165 285,185 Q265,205 240,210 L200,215 Z" fill="#2266aa" opacity="0.85"/>
+  <!-- Divider line -->
+  <line x1="200" y1="75" x2="200" y2="220" stroke="#0f0f1a" stroke-width="4"/>
+  <!-- System 1: lightning bolt -->
+  <polygon points="185,120 178,155 195,148 182,185 210,140 193,147 205,110" fill="#fff5cc" opacity="0.9"/>
+  <!-- System 2: gear -->
+  <circle cx="240" cy="150" r="22" fill="none" stroke="#99ccff" stroke-width="3"/>
+  <circle cx="240" cy="150" r="10" fill="#2266aa"/>
+  <line x1="240" y1="123" x2="240" y2="130" stroke="#99ccff" stroke-width="4"/>
+  <line x1="240" y1="170" x2="240" y2="177" stroke="#99ccff" stroke-width="4"/>
+  <line x1="213" y1="150" x2="220" y2="150" stroke="#99ccff" stroke-width="4"/>
+  <line x1="260" y1="150" x2="267" y2="150" stroke="#99ccff" stroke-width="4"/>
+  <line x1="220" y1="130" x2="225" y2="135" stroke="#99ccff" stroke-width="3"/>
+  <line x1="255" y1="165" x2="260" y2="170" stroke="#99ccff" stroke-width="3"/>
+  <line x1="220" y1="170" x2="225" y2="165" stroke="#99ccff" stroke-width="3"/>
+  <line x1="255" y1="135" x2="260" y2="130" stroke="#99ccff" stroke-width="3"/>
+  <!-- Labels -->
+  <text x="152" y="232" text-anchor="middle" font-size="13" fill="#ff9944" font-family="sans-serif" font-weight="bold">SYSTEM 1</text>
+  <text x="248" y="232" text-anchor="middle" font-size="13" fill="#5599ee" font-family="sans-serif" font-weight="bold">SYSTEM 2</text>
+  <text x="152" y="248" text-anchor="middle" font-size="10" fill="#cc6622" font-family="sans-serif">Fast · Automatic</text>
+  <text x="248" y="248" text-anchor="middle" font-size="10" fill="#2266aa" font-family="sans-serif">Slow · Deliberate</text>
+  <text x="152" y="264" text-anchor="middle" font-size="9" fill="#886644" font-family="sans-serif">Intuitive</text>
+  <text x="248" y="264" text-anchor="middle" font-size="9" fill="#446688" font-family="sans-serif">Analytical</text>
+  <!-- Title -->
+  <text x="200" y="38" text-anchor="middle" font-size="13" fill="#8899aa" font-family="sans-serif" letter-spacing="1">THINKING, FAST AND SLOW</text>
+  <text x="200" y="56" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif">Kahneman · 2011</text>
+</svg>

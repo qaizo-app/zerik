@@ -1,0 +1,150 @@
+{
+  "id": "ad_hominem",
+  "category": "rhetorical_fallacies",
+  "release_number": 49,
+  "release_date": "2026-05-30",
+  "tags": ["ad_hominem", "rhetoric", "fallacy", "argumentation", "logic"],
+  "difficulty": 1,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/ad_hominem.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №3" } },
+        {
+          "type": "hook",
+          "props": { "text": "Учёный представляет данные о климате. Кто-то отвечает: «Конечно, он так говорит — его финансируют экологические фонды». Данные не разобраны. Личность атакована. Это один из старейших риторических приёмов — и один из самых эффективных." }
+        },
+        { "type": "title", "props": { "text": "Ad {{accent:Hominem}}" } },
+        { "type": "subtitle", "props": { "text": "Ad Hominem · классическая логика · описан Аристотелем" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/ad_hominem.svg", "alt": "Стрела, летящая мимо аргумента прямо в фигуру человека" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ad hominem (лат. «против человека») — атака на источник аргумента вместо самого аргумента. Это не просто грубость: это логическая ошибка. Источник аргумента и его истинность — независимые вещи. Даже если человек лицемерен, заинтересован или плохо мотивирован — его аргумент может быть верным.",
+              "Существуют разные формы. «Прямой» ad hominem: «ты говоришь это, потому что тебе выгодно». «Tu quoque» («сам такой»): «ты критикуешь курение, а сам куришь». «Апелляция к обстоятельствам»: «конечно, богатый защищает снижение налогов». {{em:Во всех случаях аргумент не опровергнут — он просто отброшен без рассмотрения.}}",
+              "Почему это работает? Потому что мы эволюционно настроены доверять или не доверять источнику — а не оценивать аргументы независимо. Репутация говорящего действительно важна. Но она не является доказательством ложности или истинности того, что он говорит."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Атака на человека — не опровержение его аргумента. Мотивы, характер и история говорящего не определяют истинность того, что он говорит."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "Как это звучит",
+            "setup": "На встрече команды по поводу нового продукта:",
+            "example_quote": "— Маша предлагает упростить интерфейс, но она дизайнер — она всегда жертвует функциями ради красоты. Не стоит её слушать.",
+            "recognition_signal": "Сигнал: аргумент отвергается через характеристику человека, а не через разбор самого аргумента. «Конечно, он/она говорит это, потому что...»",
+            "nuance_warning": "Иногда источник действительно важен — например, когда эксперт говорит о своей области. Но даже тогда нужно разбирать аргумент. «У него конфликт интересов» — это повод для дополнительной проверки, а не повод отбросить аргумент."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Ad hominem срабатывает особенно часто в политике и социальных сетях, где аудитория уже разделена на «своих» и «чужих». Любой аргумент от «чужого» автоматически становится подозрительным — не потому что плохой, а потому что источник не тот."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "«Не верьте оппозиции — они просто хотят власти». Даже если это правда, она не опровергает конкретный аргумент оппозиции." },
+              { "label": "В бизнесе", "example": "«Консультанты всегда рекомендуют больше консалтинга». Возможно. Но разобрать их конкретную рекомендацию всё равно необходимо." },
+              { "label": "В личных отношениях", "example": "«Ты говоришь это только потому, что обиделся». Может быть. Но сказанное при этом может быть справедливым." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните аргумент, который вы недавно отвергли. Вы разобрали сам аргумент — или отвергли говорящего? Попробуйте разобрать аргумент отдельно от его источника."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №3" } },
+        {
+          "type": "hook",
+          "props": { "text": "A scientist presents climate data. Someone responds: \"Of course he says that — he's funded by environmental groups.\" The data was never addressed. The person was attacked. This is one of the oldest rhetorical tricks in the book — and one of the most effective." }
+        },
+        { "type": "title", "props": { "text": "Ad {{accent:Hominem}}" } },
+        { "type": "subtitle", "props": { "text": "Ad Hominem · classical logic · described by Aristotle" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/ad_hominem.svg", "alt": "An arrow flying past the argument and hitting the person directly" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ad hominem (Latin: \"against the person\") is an attack on the source of an argument rather than the argument itself. This isn't just rudeness — it's a logical error. The source of an argument and its truth are independent things. Even if a person is hypocritical, self-interested, or poorly motivated, their argument can still be correct.",
+              "There are several forms. Direct ad hominem: \"you say that because it benefits you.\" Tu quoque (\"you too\"): \"you criticize smoking but you smoke yourself.\" Circumstantial: \"of course the wealthy man supports tax cuts.\" {{em:In every case, the argument isn't refuted — it's dismissed without examination.}}",
+              "Why does it work? Because we're evolutionarily tuned to trust or distrust sources — not to evaluate arguments independently. A speaker's reputation genuinely matters in life. But it isn't evidence for or against the truth of what they say."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Attacking the person is not a refutation of their argument. A speaker's motives, character, and history don't determine whether what they say is true."
+          }
+        },
+        {
+          "type": "fallacy_example",
+          "props": {
+            "label": "What it sounds like",
+            "setup": "In a product meeting:",
+            "example_quote": "— Anna wants to simplify the interface, but she's a designer — she always sacrifices features for aesthetics. We shouldn't listen to her.",
+            "recognition_signal": "Signal: the argument is dismissed through characterizing the person, not by engaging with the argument itself. \"Of course he/she says that because...\"",
+            "nuance_warning": "Sometimes the source genuinely matters — for example, when an expert speaks outside their field. But even then, the argument needs to be engaged with. \"They have a conflict of interest\" is a reason for extra scrutiny, not a reason to dismiss the argument outright."
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Ad hominem is especially powerful in politics and on social media, where audiences are already divided into in-groups and out-groups. Any argument from an outsider becomes automatically suspect — not because it's weak, but because of who said it."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In politics", "example": "\"Don't trust the opposition — they just want power.\" Even if true, this doesn't refute any specific argument they're making." },
+              { "label": "In business", "example": "\"Consultants always recommend more consulting.\" Maybe. But their specific recommendation still needs to be evaluated on its merits." },
+              { "label": "In personal life", "example": "\"You're only saying that because you're upset.\" Perhaps. But what was said might still be fair." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall an argument you recently dismissed. Did you engage with the argument itself — or reject the speaker? Try evaluating the argument separately from its source."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/ad_hominem" }]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "feedback_loops",
+  "category": "mental_models",
+  "release_number": 62,
+  "release_date": "2026-06-12",
+  "tags": ["feedback_loops", "systems_thinking", "complexity", "reinforcing", "balancing"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/feedback_loops.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Больше денег — больше инвестиций — больше денег. Больше страха — больше ошибок — больше страха. Рост числа пользователей — лучший продукт — ещё больше пользователей. Большинство интересных явлений в мире — не прямые линии, а петли." }
+        },
+        { "type": "title", "props": { "text": "Петли {{accent:обратной}} связи" } },
+        { "type": "subtitle", "props": { "text": "Feedback Loops · Системное мышление · Норберт Винер · 1948" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/feedback_loops.svg", "alt": "Усиливающая петля (спираль вверх) и балансирующая петля (круговая стрелка)" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Обратная связь — это когда результат системы влияет на её вход. Существуют два основных типа. Усиливающая петля (положительная обратная связь): отклонение усиливает само себя. Маленький снежный ком катится с горы и становится большим. Инфляционная спираль. Вирусный рост. Это не значит «хорошо» — это значит «самоусиливается».",
+              "Балансирующая петля (отрицательная обратная связь): система стремится к равновесию. Термостат. Голод и насыщение. Цены и спрос. {{em:Большинство устойчивых систем содержат балансирующие петли — без них любое отклонение приводило бы к катастрофе.}} Природа, тело, рынки — везде балансирующие петли удерживают систему от разрушения.",
+              "Понимание петель обратной связи меняет то, как вы видите проблемы. Вместо «что вызвало это?» вы спрашиваете «в какой петле находится это явление?». Победить бедность прямыми выплатами — это взаимодействие с симптомом. Изменить петлю — доступ к образованию, кредитам, сетям — это взаимодействие со структурой."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Большинство сложных явлений управляется петлями обратной связи, а не линейными причинами. Понять систему — значит найти петли, которые её держат или разгоняют."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Продукт набирает популярность: больше пользователей → лучше данные → лучше рекомендации → ещё больше пользователей. Это хорошо?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Да — усиливающая петля создаёт конкурентное преимущество", "is_wiser": false },
+              { "id": "both", "text": "Зависит — усиливающая петля без балансира может привести к монополии или краху", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "видят только выгоду",
+              "explanation": "Усиливающие петли — это то, что создаёт сетевые эффекты и монополии (Google, Facebook, Uber). Они работают в обе стороны: при росте — рост, при падении — обвал. Без балансирующих петель (регуляторы, конкуренты, пределы рынка) усиливающая петля либо уничтожает конкурентов, либо лопается. Системное мышление всегда ищет оба типа петель.",
+              "wisdom": "{{em:Любой тренд содержит в себе семена своего разворота — нужно только найти балансирующую петлю.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Линейное мышление видит причину и следствие. Системное мышление видит петлю. Когда вы пытаетесь «исправить» симптом, не трогая петлю, — симптом возвращается. Это называется «устойчивостью дисфункциональной системы»: она воспроизводит проблему, потому что петля не изменилась."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В здоровье", "example": "Стресс → плохой сон → хуже справляешься со стрессом → больше стресса. Это усиливающая петля. Разрыв в любом звене — физическая нагрузка, режим, медитация — ломает петлю." },
+              { "label": "В экономике", "example": "Банковский кризис 2008 года — классический пример усиливающей петли без балансира: падение цен → маржин-коллы → ещё больше продаж → ещё ниже цены." },
+              { "label": "В командах", "example": "Высокое доверие → лучшая коммуникация → меньше ошибок → ещё выше доверие. Руководитель, понимающий петли, инвестирует в доверие как в структурный фактор." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одну проблему, которая у вас «никак не решается». Нарисуйте петлю: как результат влияет на причину? Что поддерживает проблему в устойчивом состоянии?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "More money → more investments → more money. More fear → more mistakes → more fear. More users → better product → even more users. Most interesting phenomena in the world aren't straight lines. They're loops." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Feedback}} Loops" } },
+        { "type": "subtitle", "props": { "text": "Feedback Loops · Systems Thinking · Norbert Wiener · 1948" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/feedback_loops.svg", "alt": "A reinforcing loop (upward spiral) and a balancing loop (circular arrow)" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Feedback is when a system's output influences its input. There are two main types. Reinforcing loop (positive feedback): a deviation amplifies itself. A small snowball rolls downhill and grows. An inflationary spiral. Viral growth. \"Positive\" doesn't mean \"good\" — it means self-amplifying.",
+              "Balancing loop (negative feedback): the system seeks equilibrium. A thermostat. Hunger and satiation. Prices and demand. {{em:Most stable systems contain balancing loops — without them, any deviation would lead to catastrophe.}} Nature, the body, markets — everywhere, balancing loops prevent systems from destroying themselves.",
+              "Understanding feedback loops changes how you see problems. Instead of \"what caused this?\" you ask \"what loop is this phenomenon part of?\" Fighting poverty through direct payments interacts with the symptom. Changing the loop — access to education, credit, networks — interacts with the structure."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Most complex phenomena are driven by feedback loops, not linear causes. Understanding a system means finding the loops that hold it steady or accelerate it."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A product gains popularity: more users → better data → better recommendations → even more users. Is this good?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Yes — a reinforcing loop creates competitive advantage", "is_wiser": false },
+              { "id": "both", "text": "Depends — a reinforcing loop without a balancer can lead to monopoly or collapse", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see only the benefit",
+              "explanation": "Reinforcing loops are what creates network effects and monopolies (Google, Facebook, Uber). They work in both directions: growth feeds growth, and collapse feeds collapse. Without balancing loops (regulators, competitors, market limits), a reinforcing loop either eliminates competition or blows up. Systems thinking always looks for both types.",
+              "wisdom": "{{em:Every trend contains the seeds of its own reversal — you just need to find the balancing loop.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Linear thinking sees cause and effect. Systems thinking sees the loop. When you try to \"fix\" a symptom without touching the loop — the symptom returns. This is called the resilience of a dysfunctional system: it reproduces the problem because the loop hasn't changed."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In health", "example": "Stress → poor sleep → worse at handling stress → more stress. A reinforcing loop. Breaking any link — exercise, routine, meditation — breaks the loop." },
+              { "label": "In economics", "example": "The 2008 banking crisis was a classic reinforcing loop without a balancer: falling prices → margin calls → more selling → even lower prices." },
+              { "label": "In teams", "example": "High trust → better communication → fewer mistakes → even higher trust. A leader who understands loops invests in trust as a structural factor." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one problem that \"just won't resolve\" in your life. Draw the loop: how does the outcome feed back into the cause? What keeps the problem in a stable state?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/feedback_loops" }]
+}

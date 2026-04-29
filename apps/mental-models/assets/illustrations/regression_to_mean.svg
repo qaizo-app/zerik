@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f0f1a"/>
+  <!-- Axes -->
+  <line x1="50" y1="240" x2="370" y2="240" stroke="#334455" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="50" y2="240" stroke="#334455" stroke-width="1.5"/>
+  <!-- Axis labels -->
+  <text x="200" y="270" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif">trials</text>
+  <text x="22" y="145" text-anchor="middle" font-size="10" fill="#445566" font-family="sans-serif" transform="rotate(-90,22,145)">performance</text>
+  <!-- Mean line -->
+  <line x1="50" y1="145" x2="370" y2="145" stroke="#4488aa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+  <text x="375" y="149" font-size="10" fill="#4488aa" font-family="sans-serif">μ</text>
+  <!-- Data points scattered around mean, extremes returning -->
+  <!-- High extreme -->
+  <circle cx="90" cy="72" r="5" fill="#ff6644" opacity="0.9"/>
+  <circle cx="130" cy="95" r="5" fill="#ff8866" opacity="0.8"/>
+  <circle cx="170" cy="120" r="5" fill="#ffaa88" opacity="0.8"/>
+  <circle cx="210" cy="138" r="5" fill="#aabbcc" opacity="0.8"/>
+  <!-- Arrow showing regression -->
+  <path d="M90,72 Q150,90 210,138" fill="none" stroke="#ff6644" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#redArr2)"/>
+  <defs>
+    <marker id="redArr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#ff6644"/>
+    </marker>
+  </defs>
+  <text x="82" y="62" font-size="10" fill="#ff6644" font-family="sans-serif">HIGH</text>
+  <!-- Low extreme -->
+  <circle cx="90" cy="216" r="5" fill="#44aaff" opacity="0.9"/>
+  <circle cx="130" cy="200" r="5" fill="#66bbff" opacity="0.8"/>
+  <circle cx="170" cy="178" r="5" fill="#88ccff" opacity="0.8"/>
+  <circle cx="210" cy="156" r="5" fill="#aabbcc" opacity="0.8"/>
+  <path d="M90,216 Q150,195 210,156" fill="none" stroke="#44aaff" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#blueArr)"/>
+  <defs>
+    <marker id="blueArr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#44aaff"/>
+    </marker>
+  </defs>
+  <text x="82" y="232" font-size="10" fill="#44aaff" font-family="sans-serif">LOW</text>
+  <!-- Normal scatter around mean -->
+  <circle cx="250" cy="140" r="4" fill="#8899aa" opacity="0.7"/>
+  <circle cx="280" cy="152" r="4" fill="#8899aa" opacity="0.7"/>
+  <circle cx="310" cy="135" r="4" fill="#8899aa" opacity="0.7"/>
+  <circle cx="340" cy="148" r="4" fill="#8899aa" opacity="0.7"/>
+  <!-- Regression to mean label -->
+  <text x="160" y="108" text-anchor="middle" font-size="9" fill="#ff6644" font-family="sans-serif">regression</text>
+  <text x="160" y="176" text-anchor="middle" font-size="9" fill="#44aaff" font-family="sans-serif">regression</text>
+  <text x="310" y="124" font-size="9" fill="#8899aa" font-family="sans-serif">toward mean</text>
+  <!-- Flight instructor note -->
+  <rect x="230" y="50" width="130" height="55" rx="5" fill="#1a2233"/>
+  <text x="295" y="68" text-anchor="middle" font-size="9" fill="#cc8844" font-family="sans-serif">Flight instructor:</text>
+  <text x="295" y="80" text-anchor="middle" font-size="8" fill="#aa6633" font-family="sans-serif">"Praise → worse next"</text>
+  <text x="295" y="92" text-anchor="middle" font-size="8" fill="#aa6633" font-family="sans-serif">"Punish → better next"</text>
+  <text x="295" y="102" text-anchor="middle" font-size="8" fill="#665533" font-family="sans-serif">— it's just regression</text>
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-size="13" fill="#4488aa" font-family="sans-serif" letter-spacing="1">REGRESSION TO THE MEAN</text>
+</svg>

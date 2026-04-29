@@ -1,0 +1,138 @@
+{
+  "id": "sleeping_beauty",
+  "category": "thought_experiments",
+  "release_number": 68,
+  "release_date": "2026-06-18",
+  "tags": ["probability", "self_location", "philosophy", "sleeping_beauty", "bayesian"],
+  "difficulty": 4,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/sleeping_beauty.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "Спящую красавицу усыпляют и бросают монету. Орёл: она проснётся один раз в воскресенье. Решка: проснётся дважды — в понедельник и вторник (между пробуждениями память стирают). Проснувшись, она не знает, какой день. Какова вероятность, что выпал орёл? Кажется, это просто задача про монету. Это не так." }
+        },
+        { "type": "title", "props": { "text": "Проблема {{accent:спящей}} красавицы" } },
+        { "type": "subtitle", "props": { "text": "Sleeping Beauty Problem · Адам Элга · 2000" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/sleeping_beauty.svg", "alt": "Монета в воздухе — две дорожки пробуждений расходятся в разные стороны" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Задача предлагает два ответа, и каждый имеет защитников среди философов и математиков. «Полузнающие» (Halfers): вероятность орла — 1/2. Монета честная, никакая новая информация не появилась. «Трезвые» (Thirders): вероятность орла — 1/3. Из трёх возможных пробуждений (Пн-орёл, Пн-решка, Вт-решка) два приходятся на решку. Если она проснулась, вероятнее всего — решка.",
+              "Конфликт глубже, чем кажется. Он касается природы вероятности: это свойство мира или мера убеждённости наблюдателя? И кто такой «наблюдатель»? {{em:Спящая красавица не просто не знает результата броска — она не знает, сколько раз она просыпалась.}} Это «вероятность самолоцирования»: какова вероятность, что именно это пробуждение является первым?",
+              "Парадокс показывает, что классическая теория вероятности не даёт однозначного ответа на вопросы о «наблюдателях, зависящих от исхода». Это имеет прямое отношение к антропному принципу в космологии: почему мы наблюдаем вселенную именно такой, как она есть — и что это говорит о её вероятности?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда ваше существование как наблюдателя зависит от исхода события — стандартный расчёт вероятности перестаёт работать. Возникает вопрос о вероятности самолоцирования."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Парадокс",
+            "question": "Спящая красавица просыпается. Какую вероятность ей следует приписать тому, что выпал орёл?",
+            "hint": "Попробуйте посчитать частоту каждого пробуждения по всем возможным сценариям.",
+            "user_prompt": "Думаю, знаю — открыть разбор",
+            "reveal_text": "Halfers: 1/2 — монета честная, орёл и решка равновероятны. Новая информация («я проснулась») не меняет вероятности исхода монеты. Thirders: 1/3 — если провести эксперимент 1000 раз, будет ~500 пробуждений при орле и ~1000 при решке (500 в Пн + 500 во Вт). Из ~1500 пробуждений 1000 — при решке. Оба аргумента корректны в своих системах координат. Вопрос в том, о чём именно спрашивает задача.",
+            "intuition_trap": "Интуиция говорит «монета честная, значит 1/2». Парадокс показывает: когда наблюдатель зависит от исхода, честность монеты не определяет вероятность пробуждения при данном исходе."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В космологии", "example": "Антропный принцип: мы наблюдаем вселенную с константами, позволяющими жизни — потому что иначе нас не было бы, чтобы наблюдать. Это та же логика самолоцирования." },
+              { "label": "В статистике", "example": "Выборочное выживание в данных: мы анализируем то, что «проснулось» (выжило, дошло до нас). Это систематически искажает выводы." },
+              { "label": "В игровой теории", "example": "Агенты, которые существуют только при определённых исходах, не могут рассуждать о вероятностях так же, как внешние наблюдатели. Это реальная проблема для ИИ-агентов." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Есть ли в вашей жизни область, где вы — один из «выживших» наблюдателей? (Ваш бизнес, ваш рынок, ваша карьера.) Как это влияет на то, что вы считаете «нормой» или «вероятным»?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №10" } },
+        {
+          "type": "hook",
+          "props": { "text": "Sleeping Beauty is put to sleep and a coin is flipped. Heads: she wakes once, on Sunday. Tails: she wakes twice — Monday and Tuesday (memory is erased between awakenings). When she wakes up, she doesn't know what day it is. What probability should she assign to heads? It seems like a simple coin question. It isn't." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Sleeping}} Beauty Problem" } },
+        { "type": "subtitle", "props": { "text": "Sleeping Beauty Problem · Adam Elga · 2000" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/sleeping_beauty.svg", "alt": "A coin in the air — two awakening paths diverge in different directions" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The problem offers two answers, each with defenders among philosophers and mathematicians. Halfers: the probability of heads is 1/2. The coin is fair, no new information has appeared. Thirders: the probability of heads is 1/3. Of the three possible awakenings (Mon-heads, Mon-tails, Tue-tails), two occur on tails. If she woke up, tails is more likely.",
+              "The conflict runs deeper than it appears. It concerns the nature of probability: is it a property of the world or a measure of an observer's credence? And who counts as an observer? {{em:Sleeping Beauty doesn't just not know the coin result — she doesn't know how many times she's woken up.}} This is a \"self-location probability\": what is the probability that this particular awakening is the first?",
+              "The paradox shows that classical probability theory doesn't give an unambiguous answer to questions about \"outcome-dependent observers.\" This bears directly on the anthropic principle in cosmology: why do we observe a universe exactly as it is — and what does this say about its probability?"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When your existence as an observer depends on the outcome of an event — standard probability calculation breaks down. The question of self-locating probability arises."
+          }
+        },
+        {
+          "type": "riddle_reveal",
+          "props": {
+            "tag": "Paradox",
+            "question": "Sleeping Beauty wakes up. What probability should she assign to heads?",
+            "hint": "Try counting the frequency of each awakening across all possible scenarios.",
+            "user_prompt": "I have a thought — reveal the analysis",
+            "reveal_text": "Halfers: 1/2 — the coin is fair, heads and tails are equally likely. New information (\"I woke up\") doesn't change the probability of the coin's outcome. Thirders: 1/3 — if you run the experiment 1,000 times, there are ~500 awakenings on heads and ~1,000 on tails (500 Mon + 500 Tue). Of ~1,500 awakenings, 1,000 are tails. Both arguments are correct within their own frameworks. The question is what exactly the problem is asking.",
+            "intuition_trap": "Intuition says \"the coin is fair, so 1/2.\" The paradox shows: when the observer depends on the outcome, the fairness of the coin doesn't determine the probability of waking under a given outcome."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In cosmology", "example": "The anthropic principle: we observe a universe with constants permitting life — because otherwise we wouldn't exist to observe it. Same self-location logic." },
+              { "label": "In statistics", "example": "Survivorship bias in data: we analyze what \"woke up\" (survived, reached us). This systematically distorts conclusions." },
+              { "label": "In game theory", "example": "Agents that only exist under certain outcomes can't reason about probabilities the same way external observers can. A real problem for AI agents." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Is there an area of your life where you're one of the \"surviving\" observers? (Your business, your market, your career.) How does this affect what you consider \"normal\" or \"probable\"?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/sleeping_beauty" }]
+}

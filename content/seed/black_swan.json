@@ -1,0 +1,176 @@
+{
+  "id": "black_swan",
+  "category": "book_idea",
+  "release_number": 57,
+  "release_date": "2026-06-07",
+  "tags": ["taleb", "black_swan", "uncertainty", "risk", "rare_events"],
+  "difficulty": 3,
+  "reading_time_sec": 180,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/black_swan.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №4" } },
+        {
+          "type": "hook",
+          "props": { "text": "До 1697 года европейцы были уверены: все лебеди белые. Это казалось законом природы — миллионы наблюдений, ни одного исключения. Потом голландские исследователи приплыли в Австралию. Первый же увиденный ими лебедь был чёрным." }
+        },
+        { "type": "title", "props": { "text": "Чёрный {{accent:лебедь}}" } },
+        { "type": "subtitle", "props": { "text": "The Black Swan · Нассим Николас Талеб · 2007" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/black_swan.svg", "alt": "Белые лебеди в ряд и один чёрный в конце — непредвиденное исключение" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Прежде чем открытие Австралии, люди в Старом Свете были убеждены, что все лебеди белые — неопровержимое убеждение, подкреплённое тысячелетиями эмпирических свидетельств. Один-единственный наблюдательный факт опроверг накопленное тысячелетиями знание.",
+            "book_title": "Чёрный лебедь",
+            "author": "Нассим Николас Талеб",
+            "year": "2007",
+            "chapter": "Предисловие",
+            "application": "Сколько бы подтверждений у вас ни было — одно опровержение может обнулить их все. Это касается любой универсальной теории о мире."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Талеб определяет «чёрного лебедя» через три свойства: событие чрезвычайно редкое и находится за пределами обычных ожиданий; оно оказывает огромное воздействие; после того как оно случилось, люди объясняют его ретроспективно как предсказуемое. Кризис 2008 года, 11 сентября, интернет, Первая мировая война — всё это чёрные лебеди.",
+              "Главная идея книги: мы систематически недооцениваем роль редких, непредсказуемых событий и переоцениваем ценность предсказаний. Наши модели строятся на прошлом — и предполагают, что будущее будет похоже на прошлое. {{em:Но именно там, где будущее оказывается непохожим, происходит самое важное.}} Индюк кормится у фермера 1000 дней и убеждён, что так будет всегда. На 1001-й день — День благодарения.",
+              "Практический вывод Талеба: не пытайтесь предсказать чёрных лебедей — это невозможно по определению. Стройте системы, которые выживают при любом исходе и выигрывают от потрясений. Он называет это «антихрупкостью» — и посвятил этой идее отдельную книгу."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Наиболее значимые события в истории — редкие и непредсказуемые. Любая модель, построенная на прошлом, слепа к ним. Задача — не предсказать чёрного лебедя, а не быть уничтоженным им."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Ваш бизнес работает 10 лет без серьёзных кризисов. Насколько это хороший показатель устойчивости?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Очень хороший — 10 лет без кризисов говорят о прочной модели", "is_wiser": false },
+              { "id": "unclear", "text": "Неясно — 10 лет без чёрного лебедя могут означать, что он просто ещё не прилетел", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают это хорошим знаком",
+              "explanation": "Талеб называет это «индюшачьей проблемой»: чем дольше нет кризиса, тем сильнее кажется, что его не будет — но тем ближе может быть момент. Устойчивость — это не отсутствие кризисов в прошлом. Это способность пережить кризис, которого ещё не было.",
+              "wisdom": "{{em:Отсутствие свидетельств — не свидетельство отсутствия.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В финансах", "example": "Финансовые модели рассчитывают риски на основе исторической волатильности. Чёрные лебеди — кризисы 1929, 1987, 2008 — не вписывались в эти модели. Именно поэтому они так дорого стоили." },
+              { "label": "В стратегии", "example": "«Сценарное планирование» — попытка системно думать о маловероятных, но возможных исходах. Это не предсказание чёрных лебедей — это подготовка к широкому диапазону событий." },
+              { "label": "В технологиях", "example": "Ни один аналитик 1990-х не предсказал смартфон и его последствия. Ни один аналитик 2010-х не предсказал точного характера того, как ChatGPT изменит работу." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Спросите себя: что в вашей жизни или бизнесе могло бы полностью разрушиться, если бы произошло что-то, чего вы не ожидаете? Это не паранойя — это талебовская «проверка на хрупкость»."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №4" } },
+        {
+          "type": "hook",
+          "props": { "text": "Before 1697, Europeans were certain: all swans are white. It seemed like a law of nature — millions of observations, not a single exception. Then Dutch explorers reached Australia. The first swan they saw was black." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Black}} Swan" } },
+        { "type": "subtitle", "props": { "text": "The Black Swan · Nassim Nicholas Taleb · 2007" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/black_swan.svg", "alt": "A row of white swans with one black swan at the end — the unforeseen exception" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Before the discovery of Australia, people in the Old World were convinced that all swans were white — an unassailable belief, as it seemed completely confirmed by empirical evidence. The sighting of the first black swan might have been an interesting surprise for a few ornithologists, but that is not where the significance of the story lies. It illustrates a severe limitation to our learning from observations.",
+            "book_title": "The Black Swan",
+            "author": "Nassim Nicholas Taleb",
+            "year": "2007",
+            "chapter": "Preface",
+            "application": "No matter how many confirmations you have — one refutation can undo them all. This applies to any universal theory about the world."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Taleb defines a \"black swan\" through three properties: the event is extremely rare and lies outside normal expectations; it has massive impact; and after it happens, people explain it retrospectively as predictable. The 2008 financial crisis, 9/11, the internet, World War I — all black swans.",
+              "The book's central idea: we systematically underestimate the role of rare, unpredictable events and overestimate the value of predictions. Our models are built on the past — and assume the future will resemble it. {{em:But it's precisely where the future doesn't resemble the past that the most important things happen.}} A turkey is fed by a farmer for 1,000 days and becomes certain this will continue forever. Day 1,001 is Thanksgiving.",
+              "Taleb's practical conclusion: don't try to predict black swans — that's impossible by definition. Build systems that survive any outcome and benefit from shocks. He calls this \"antifragility\" — and devoted a separate book to the idea."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The most significant events in history are rare and unpredictable. Any model built on the past is blind to them. The goal isn't to predict the black swan — it's to not be destroyed by it."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your business has run for 10 years without a serious crisis. How good an indicator of resilience is this?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Very good — 10 crisis-free years speak to a solid model", "is_wiser": false },
+              { "id": "unclear", "text": "Unclear — 10 years without a black swan may just mean one hasn't arrived yet", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see this as a good sign",
+              "explanation": "Taleb calls this the \"turkey problem\": the longer there's no crisis, the more certain it feels there won't be one — but the closer the moment may actually be. Resilience isn't the absence of past crises. It's the ability to survive a crisis that hasn't happened yet.",
+              "wisdom": "{{em:Absence of evidence is not evidence of absence.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In finance", "example": "Financial models calculate risk based on historical volatility. Black swans — the crises of 1929, 1987, 2008 — didn't fit those models. That's exactly why they cost so much." },
+              { "label": "In strategy", "example": "Scenario planning is an attempt to think systematically about low-probability but possible outcomes. Not predicting black swans — preparing for a wide range of events." },
+              { "label": "In technology", "example": "No analyst in the 1990s predicted the smartphone and its consequences. No analyst in the 2010s predicted exactly how ChatGPT would transform work." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Ask yourself: what in your life or business could completely collapse if something unexpected happened? This isn't paranoia — it's Taleb's \"fragility test.\""
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/black_swan" }]
+}
