@@ -1,0 +1,168 @@
+{
+  "id": "newcombs_problem",
+  "category": "thought_experiments",
+  "release_number": 113,
+  "release_date": "2026-08-02",
+  "tags": ["decision_theory", "free_will", "prediction", "rationality", "causality", "newcomb"],
+  "difficulty": 3,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/newcombs_problem.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Сверхразумное существо смотрело на тысячи людей до вас и предсказывало их выбор с почти стопроцентной точностью. Оно приготовило две коробки. Коробка А — всегда $1000. Коробка Б — $1 000 000, но только если вы возьмёте одну Б. Если возьмёте обе — Б пуста. Что делать?" }
+        },
+        { "type": "title", "props": { "text": "Проблема {{accent:Ньюкома}}" } },
+        { "type": "subtitle", "props": { "text": "Мысленный эксперимент · Уильям Ньюком · 1960" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/newcombs_problem.svg", "alt": "Две коробки: прозрачная А с монетами, непрозрачная Б; над ними — силуэт предиктора с лучом сканирования; два пути выбора" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Проблему сформулировал физик Уильям Ньюком в 1960 году; широко известной её сделал философ Роберт Нозик в 1969-м. Она обнажает конфликт между двумя принципами рациональной теории решений. Принцип доминирования: независимо от того, что в коробке Б, взять обе всегда выгоднее — вы получите либо $1001, либо $1000000+$1000. Принцип максимизации ожидаемой ценности: если предиктор почти никогда не ошибается, те кто берёт одну Б уходят с $1M, а те кто берёт обе — с $1000. Следуйте за исходами.",
+              "{{em:Обе позиции рациональны — и противоречат друг другу.}} Философы делятся на две школы: «однобоксеры» (evidentialism — смотри на корреляцию с результатом) и «двубоксеры» (causalism — выбор не может причинно влиять на уже заполненную коробку). Нозик написал: «Я знаю, что многие умные люди с каждой стороны — и никто не убедил другую сторону».",
+              "Проблема Ньюкома — тест на понимание природы рациональности и свободной воли. Если выбор полностью предсказуем — детерминирован ли он? Если да — можно ли вообще говорить о «свободном» решении? Ответ, который вы дадите, раскрывает вашу интуицию о природе причинности, времени и агентности."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Два принципа рациональности дают противоположные ответы: доминирование (бери обе — это логически лучше) против максимизации ожидаемой ценности (бери одну — исходы показывают, что это работает). Этот конфликт обнажает фундаментальные вопросы о причинности, предсказуемости и свободе воли."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Все, кто брал только коробку Б, выходили с $1 000 000. Все, кто брал обе, — с $1000. Каков ваш выбор?",
+            "setup": null,
+            "options": [
+              { "id": "one", "text": "Только Б — статистика говорит сама за себя", "is_wiser": true },
+              { "id": "both", "text": "Обе — логически взять обе всегда лучше, что бы ни было в Б", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают обе коробки",
+              "explanation": "Философы-«однобоксеры» говорят: рациональность, которая систематически ведёт к худшему исходу, — плохая рациональность. Если брать обе — это значит уйти с $1000 вместо $1M. Философы-«двубоксеры» отвечают: выбор не влияет на то, что уже в коробке — следовать за корреляцией, а не причинностью, не рационально. Единственно «правильного» ответа нет — это и делает задачу классикой теории решений.",
+              "wisdom": "{{em:Если правила логики приводят к худшему исходу — может быть, проблема в правилах. — Дэниел Деннетт}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Проблема Ньюкома — не просто забавная головоломка. Её структуру встречают в реальных задачах: эволюционные стратегии сотрудничества, проблемы доверия в экономике, AI alignment. Агент, способный «предсказывать» ваш выбор — уже существует в виде алгоритмов."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В теории игр", "example": "«Дилемма заключённого» имеет похожую структуру: доминирующая стратегия (предать) приводит к худшему для обоих исходу. Кооперация «иррациональна» с точки зрения доминирования, но рациональна с точки зрения результата." },
+              { "label": "В алгоритмах и AI", "example": "Алгоритм рекомендаций предсказывает, на что вы кликнете, и предлагает именно это. Если следовать «доминирующей» стратегии (кликай на то, что приятно прямо сейчас), предиктор «победит» — и вы увязнете в фильтр-пузыре." },
+              { "label": "В философии свободы воли", "example": "Если ваш выбор полностью предсказуем — это детерминизм в действии. Компатибилисты скажут: предсказуемость не отменяет ответственность. Это те же дебаты, что и в задаче Ньюкома." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Какой принцип вы выбрали и почему? Обсудите это с кем-нибудь, чей подход к принятию решений отличается от вашего. Задача Ньюкома редко меняет решение — но всегда меняет понимание того, что значит «рациональный выбор»."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "A superintelligent being has watched thousands of people before you and predicted their choices with near-perfect accuracy. It has prepared two boxes. Box A always contains $1,000. Box B contains $1,000,000 — but only if you take just Box B. If you take both, Box B is empty. What do you do?" }
+        },
+        { "type": "title", "props": { "text": "Newcomb's {{accent:Problem}}" } },
+        { "type": "subtitle", "props": { "text": "Thought Experiment · William Newcomb · 1960" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/newcombs_problem.svg", "alt": "Two boxes: transparent Box A with coins, opaque Box B; above them — a predictor silhouette with a scanning beam; two choice paths below" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The problem was formulated by physicist William Newcomb in 1960 and made widely known by philosopher Robert Nozick in 1969. It exposes a conflict between two principles of rational decision theory. The dominance principle: regardless of what's in Box B, taking both is always better — you get either $1,001 or $1,000,000 + $1,000. The expected value principle: if the predictor is almost never wrong, those who take one box leave with $1M, and those who take both leave with $1,000. Follow the outcomes.",
+              "{{em:Both positions are rational — and they contradict each other.}} Philosophers divide into two camps: \"one-boxers\" (evidentialism — look at the correlation with outcomes) and \"two-boxers\" (causalism — your choice can't causally affect a box already filled). Nozick wrote: \"I know of many intelligent people on each side — and neither has convinced the other.\"",
+              "Newcomb's Problem is a test of your intuitions about rationality and free will. If a choice is fully predictable — is it determined? If so, can we speak of a \"free\" decision at all? The answer you give reveals your intuitions about causality, time, and agency."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Two principles of rationality give opposite answers: dominance (take both — it's logically better regardless) versus expected value maximization (take one — outcomes show it works). This conflict exposes fundamental questions about causality, predictability, and free will."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Everyone who took only Box B left with $1,000,000. Everyone who took both left with $1,000. What is your choice?",
+            "setup": null,
+            "options": [
+              { "id": "one", "text": "Only Box B — the statistics speak for themselves", "is_wiser": true },
+              { "id": "both", "text": "Both — logically, taking both is always better regardless of what's in Box B", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "choose both boxes",
+              "explanation": "Philosopher one-boxers argue: rationality that systematically leads to worse outcomes is bad rationality. Taking both means leaving with $1,000 instead of $1M. Two-boxer philosophers respond: your choice can't affect what's already in the box — following correlation rather than causation isn't rational. There's no single \"correct\" answer — that's what makes this a classic of decision theory.",
+              "wisdom": "{{em:If the rules of logic lead to a worse outcome — maybe the problem is with the rules. — Daniel Dennett}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Newcomb's Problem isn't just a fun puzzle. Its structure appears in real problems: evolutionary cooperation strategies, trust problems in economics, AI alignment. An agent capable of \"predicting\" your choice already exists — in the form of algorithms."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In game theory", "example": "The Prisoner's Dilemma has a similar structure: the dominant strategy (defect) leads to the worst outcome for both parties. Cooperation is \"irrational\" by the dominance criterion — but rational in terms of outcomes." },
+              { "label": "In algorithms and AI", "example": "A recommendation algorithm predicts what you'll click on and offers exactly that. If you follow the \"dominant\" strategy (click whatever feels good now), the predictor \"wins\" — and you sink deeper into a filter bubble." },
+              { "label": "In philosophy of free will", "example": "If your choice is fully predictable — that's determinism in action. Compatibilists say: predictability doesn't eliminate responsibility. These are the same debates as in Newcomb's problem." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Which principle did you choose — and why? Discuss it with someone whose approach to decisions differs from yours. Newcomb's Problem rarely changes your answer — but it always changes your understanding of what \"rational choice\" means."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/newcombs_problem" }]
+}

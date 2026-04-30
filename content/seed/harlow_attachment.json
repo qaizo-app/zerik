@@ -1,0 +1,186 @@
+{
+  "id": "harlow_attachment",
+  "category": "psychology_experiments",
+  "release_number": 107,
+  "release_date": "2026-07-27",
+  "tags": ["harlow", "attachment", "monkeys", "love", "development", "comfort"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/harlow_attachment.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Эксперимент · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "Детёныш обезьяны разлучён с матерью. Перед ним две «суррогатные» матери: проволочная — даёт молоко, матерчатая — нет. По бихевиористской логике, детёныш должен привязаться к той, что кормит. Вместо этого он целый день прижимался к тёплой матерчатой — и бежал к ней при малейшем испуге." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Привязанность}} важнее еды" } },
+        { "type": "subtitle", "props": { "text": "Эксперимент Харлоу с обезьянами · 1958" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/harlow_attachment.svg", "alt": "Детёныш обезьяны, прижавшийся к матерчатой фигуре, — проволочная с бутылкой молока стоит рядом, но отвергнута" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "Гарри Харлоу, Висконсинский университет",
+            "when": "1958",
+            "what": "Детёнышей макак-резусов разлучали с матерями и помещали к двум суррогатным: проволочной (с молоком) и матерчатой (без молока). Фиксировалось, с какой мать детёныш проводит время и к какой обращается при испуге.",
+            "result": "Детёныши проводили до 17–18 часов в сутки с матерчатой матерью и лишь несколько минут с проволочной — только чтобы поесть. При пугающем стимуле бежали к матерчатой."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "До Харлоу господствовал бихевиористский взгляд: любовь матери — это условный рефлекс. Мать кормит → ребёнок её любит. Харлоу показал обратное: комфорт и контакт первичны. Детёныши, выросшие только с проволочной матерью-кормилицей, демонстрировали тяжёлые психологические нарушения — апатию, агрессию, неспособность строить социальные связи.",
+              "Эксперимент дал прямой толчок теории привязанности Джона Боулби. {{em:Привязанность — не побочный продукт кормления, а самостоятельная биологическая система.}} Её нарушение в раннем детстве предсказывает нарушения социального и эмоционального развития на годы вперёд.",
+              "Критика эксперимента: с точки зрения современной этики исследования с социальной депривацией у приматов недопустимы. Сам Харлоу в поздних работах признавал, что наблюдал нечто похожее на страдание. Эксперимент остаётся в истории — но как пример того, что важность результата не оправдывает любые методы."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Базовая потребность в близости и тактильном комфорте фундаментальнее, чем потребность в пище. Привязанность формируется через тепло и контакт, а не через удовлетворение физических потребностей."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Младенец плачет. Что важнее сделать сначала?",
+            "setup": null,
+            "options": [
+              { "id": "feed", "text": "Накормить — это первичная потребность, которую нужно закрыть", "is_wiser": false },
+              { "id": "comfort", "text": "Взять на руки и успокоить — контакт не менее важен, чем еда", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают кормление первичным",
+              "explanation": "Харлоу показал: контакт и комфорт — не роскошь после еды, а отдельная биологическая потребность. Младенец, которого берут на руки до кормления, не «получает плохую привычку» — он получает базовый опыт безопасности, который формирует паттерны привязанности на всю жизнь.",
+              "wisdom": "{{em:«Физическая любовь — первичная потребность, а не производное удовлетворения голода». — Гарри Харлоу}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эксперимент не говорит, что кормление неважно — он говорит, что оно не является источником привязанности. Ребёнок, которого хорошо кормят, но мало держат на руках и редко успокаивают, рискует развить тревожный или избегающий тип привязанности."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В воспитании детей", "example": "Современные рекомендации педиатров включают контакт «кожа к коже» (метод кенгуру) для недоношенных — это прямое применение принципов Харлоу: тактильный контакт снижает стресс и ускоряет развитие." },
+              { "label": "В психотерапии", "example": "Теория привязанности Боулби — основа многих терапевтических подходов. Нарушенная ранняя привязанность объясняет паттерны тревоги, избегания и дезорганизации в отношениях взрослых." },
+              { "label": "В организациях", "example": "Исследования показывают: сотрудники, которые чувствуют «психологическую безопасность» (аналог надёжной привязанности), работают продуктивнее. Безопасность, а не система вознаграждений, — первичный мотиватор." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните отношения, в которых вы чувствовали или чувствуете себя «в безопасности». Что создаёт это ощущение? Это редко бывает материальное обеспечение — чаще предсказуемость, контакт и принятие."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Experiment · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "A baby monkey is separated from its mother. Two surrogate mothers are placed before it: a wire one that gives milk, and a cloth one that gives nothing. By behaviorist logic, the infant should bond with the one that feeds it. Instead, it spent its day clinging to the warm cloth surrogate — and ran to it at the first sign of fear." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Attachment}} over Food" } },
+        { "type": "subtitle", "props": { "text": "Harlow's Monkey Experiments · 1958" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/harlow_attachment.svg", "alt": "Baby monkey clinging to a cloth surrogate mother — the wire one with a milk bottle stands nearby, rejected" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "Harry Harlow, University of Wisconsin",
+            "when": "1958",
+            "what": "Infant rhesus macaques were separated from their mothers and placed with two surrogates: a wire one (with milk) and a cloth one (without milk). Time spent with each surrogate and behavior during frightening stimuli were measured.",
+            "result": "Infants spent up to 17–18 hours per day with the cloth mother and only a few minutes with the wire one — only to eat. When frightened, they ran to the cloth mother."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Before Harlow, the dominant behaviorist view held that a mother's love is a conditioned reflex — the mother feeds the infant, so the infant bonds to the mother. Harlow showed the opposite: comfort and contact are primary. Infants raised with only the wire mother displayed severe psychological disorders — apathy, aggression, inability to form social bonds.",
+              "The experiment directly catalyzed John Bowlby's attachment theory. {{em:Attachment is not a byproduct of feeding — it's an independent biological system.}} Disrupting it in early childhood predicts social and emotional developmental problems for years ahead.",
+              "A note on ethics: by today's standards, experiments involving social deprivation in primates are unacceptable. Harlow himself, in later work, acknowledged witnessing something resembling suffering. The experiment remains in the historical record — but also as evidence that the importance of a result does not justify any means."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The fundamental need for closeness and tactile comfort is more basic than the need for food. Attachment is formed through warmth and contact — not through the satisfaction of physical needs."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "An infant is crying. What's more important to do first?",
+            "setup": null,
+            "options": [
+              { "id": "feed", "text": "Feed the baby — that's the primary need to address", "is_wiser": false },
+              { "id": "comfort", "text": "Hold and soothe the baby — contact is no less important than food", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see feeding as the primary need",
+              "explanation": "Harlow showed that contact and comfort are not a luxury after feeding — they're a separate biological need. An infant held before being fed doesn't develop a \"bad habit\" — they receive the fundamental experience of safety that shapes attachment patterns for life.",
+              "wisdom": "{{em:\"Physical love is a primary need, not a derivative of hunger satisfaction.\" — Harry Harlow}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The experiment doesn't say feeding is unimportant — it says feeding is not the source of attachment. A child who is well-fed but rarely held and seldom soothed risks developing an anxious or avoidant attachment style."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In parenting", "example": "Modern pediatric recommendations include skin-to-skin contact (the kangaroo method) for premature infants — a direct application of Harlow's principles: tactile contact reduces stress and accelerates development." },
+              { "label": "In psychotherapy", "example": "Bowlby's attachment theory underpins many therapeutic approaches. Disrupted early attachment explains patterns of anxiety, avoidance, and disorganization in adult relationships." },
+              { "label": "In organizations", "example": "Research shows: employees who feel \"psychological safety\" (the analog of secure attachment) perform better. Safety — not the reward system — is the primary motivator." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a relationship in which you feel — or felt — genuinely safe. What creates that feeling? It's rarely material provision — more often it's predictability, presence, and acceptance."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/harlow_attachment" }]
+}

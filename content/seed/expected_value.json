@@ -1,0 +1,168 @@
+{
+  "id": "expected_value",
+  "category": "mental_models",
+  "release_number": 116,
+  "release_date": "2026-08-05",
+  "tags": ["probability", "decision_making", "risk", "statistics", "rationality", "expected_value"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/expected_value.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Модель · №23" } },
+        {
+          "type": "hook",
+          "props": { "text": "Монету подбросят. Орёл — вы получаете $200, решка — теряете $100. Большинство людей отказываются играть. Математика говорит иначе: каждый бросок в среднем приносит $50. Разница между интуицией и ожидаемой ценностью — это разница между случайными решениями и системными." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Ожидаемая}} ценность" } },
+        { "type": "subtitle", "props": { "text": "Expected Value — основа рационального выбора" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/expected_value.svg", "alt": "Дерево решений с вероятностями и исходами; формула EV = Σ(p × x) внизу" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ожидаемая ценность (Expected Value, EV) — сумма всех возможных исходов, взвешенных по вероятности: EV = Σ(вероятность × исход). Это базовый инструмент теории вероятностей, применимый везде, где есть неопределённость и нужен системный подход. Одно верное решение по ожидаемой ценности может привести к плохому исходу — но серия таких решений статистически обыгрывает случайность.",
+              "{{em:Ключевое понимание: EV — это не прогноз отдельного события, а инструмент для принятия серии решений.}} Казино зарабатывает не потому что выигрывает каждую игру — оно проигрывает многие. Оно зарабатывает потому что EV каждой игры положителен для казино. Ровно по той же логике работают страховые компании, венчурные фонды и профессиональные покерные игроки.",
+              "Ограничения модели важны. Кривая полезности нелинейна: $10 000 значат разное для человека с $1000 и с $1 000 000 на счету. Это объясняет рациональность страхования при отрицательном EV: потеря, которая вас разорит, несравнимо хуже, чем математически большая, но не критичная. EV работает как эталон — но применять его нужно с учётом контекста."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Ожидаемая ценность = Σ(вероятность × исход). Это стандарт рационального выбора под неопределённостью. Отдельные решения с положительным EV могут давать плохой исход — но системное следование EV обыгрывает случайность на дистанции."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Лотерея: билет стоит 10 руб., приз 100 руб., вероятность выиграть 1 к 15. Стоит брать билет?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — приз в 10 раз больше цены, шанс есть", "is_wiser": false },
+              { "id": "no", "text": "Нет — EV = (1/15 × 100) − 10 ≈ −3.3 руб., это убыточная игра", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "интуитивно выбирают «да»",
+              "explanation": "EV = (1/15) × 100 − (14/15) × 10 = 6.67 − 9.33 = −2.67 руб. Каждый купленный билет в среднем стоит вам ~2.67 руб. Это не мешает выиграть — но означает, что систематическое участие в такой лотерее убыточно. Большинство лотерей работают именно так: EV резко отрицателен для игрока.",
+              "wisdom": "{{em:Одиночная ставка — это случайность. Серия ставок с положительным EV — это стратегия.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Не все решения следует принимать только на основе EV. Если $1000 — ваши последние деньги, рациональнее не брать сделку с EV = +$100 и вероятностью потери 50% — потеря разрушит вас, а приобретение — нет. EV предполагает, что все исходы сопоставимы. В реальности нелинейность полезности меняет расчёт."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В венчурных инвестициях", "example": "Венчурный фонд знает, что 9 из 10 стартапов провалятся. Но если один даст 100x — EV всего портфеля положителен. Именно поэтому венчурные инвесторы стремятся к большим ставкам, а не к «разумному риску»." },
+              { "label": "В медицинских решениях", "example": "Лечение с 30% шансом полного выздоровления и 70% без эффекта может иметь лучший EV, чем более безопасное лечение с 80% частичного улучшения — зависит от тяжести заболевания и ценности полного выздоровления." },
+              { "label": "В переговорах", "example": "Принимая предложение об урегулировании спора вне суда, профессиональные переговорщики считают EV: вероятность выигрыша × размер выигрыша против вероятности проигрыша × потери + судебные расходы. Интуиция систематически переоценивает вероятность выигрыша." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одно решение, которое вы откладываете. Оцените грубо: каков исход в случае успеха, каков в случае неудачи, какова вероятность каждого? Посчитайте EV. Если он положителен — что именно мешает принять решение?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Model · №23" } },
+        {
+          "type": "hook",
+          "props": { "text": "A coin is flipped. Heads — you win $200. Tails — you lose $100. Most people refuse to play. The math says otherwise: each flip earns an average of $50. The gap between intuition and expected value is the gap between random decisions and systematic ones." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Expected}} Value" } },
+        { "type": "subtitle", "props": { "text": "Expected Value — the foundation of rational choice" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/expected_value.svg", "alt": "A decision tree with probabilities and outcomes; the formula EV = Σ(p × x) at the bottom" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Expected Value (EV) is the sum of all possible outcomes weighted by their probability: EV = Σ(probability × outcome). It's the foundational tool of probability theory, applicable anywhere there's uncertainty and a need for a systematic approach. A single correct EV-based decision can still lead to a bad outcome — but a series of such decisions statistically beats randomness.",
+              "{{em:The key insight: EV is not a forecast for a single event — it's a tool for making a series of decisions.}} Casinos don't profit because they win every game — they lose many. They profit because the EV of every game is positive for the house. Insurance companies, venture funds, and professional poker players operate by exactly the same logic.",
+              "The model's limitations matter. The utility curve is nonlinear: $10,000 means different things to someone with $1,000 versus $1,000,000 in the bank. This explains why buying insurance at negative EV can be rational: a loss that would bankrupt you is incomparably worse than a mathematically larger but non-critical one. EV is a benchmark — but apply it with contextual judgment."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Expected Value = Σ(probability × outcome). This is the standard for rational choice under uncertainty. Individual decisions with positive EV can produce bad outcomes — but systematically following EV beats randomness over time."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A lottery: a ticket costs $10, the prize is $100, the odds of winning are 1 in 15. Should you buy a ticket?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — the prize is 10× the cost, there's a chance", "is_wiser": false },
+              { "id": "no", "text": "No — EV = (1/15 × 100) − 10 ≈ −$3.33 — this is a losing game", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "intuitively choose yes",
+              "explanation": "EV = (1/15) × 100 − (14/15) × 10 = 6.67 − 9.33 = −$2.67. Each ticket costs you ~$2.67 on average. This doesn't prevent you from winning — but it means systematic participation in such a lottery is a losing strategy. Most lotteries work exactly this way: deeply negative EV for the player.",
+              "wisdom": "{{em:A single bet is chance. A series of bets with positive EV is strategy.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Not all decisions should be made on EV alone. If $1,000 is your last dollar, it's rational to decline a deal with EV = +$100 and a 50% chance of total loss — the loss would ruin you, the gain wouldn't transform you. EV assumes all outcomes are comparable in utility. In reality, the nonlinearity of utility changes the calculation."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In venture investing", "example": "A venture fund knows that 9 out of 10 startups will fail. But if one returns 100x — the EV of the whole portfolio is positive. That's exactly why venture investors seek large bets rather than \"reasonable risks.\"" },
+              { "label": "In medical decisions", "example": "A treatment with 30% chance of full recovery and 70% chance of no effect may have better EV than a safer treatment with 80% chance of partial improvement — depending on the severity of the condition and the value of full recovery." },
+              { "label": "In negotiations", "example": "When considering an out-of-court settlement, professional negotiators calculate EV: probability of winning × win amount minus probability of losing × loss amount + legal costs. Intuition systematically overestimates the probability of winning." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one decision you've been deferring. Estimate roughly: what's the outcome if it works, what's the outcome if it doesn't, and what's the probability of each? Calculate the EV. If it's positive — what exactly is stopping you?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/expected_value" }]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "abilene_paradox",
+  "category": "paradoxes",
+  "release_number": 115,
+  "release_date": "2026-08-04",
+  "tags": ["group_dynamics", "conformity", "pluralistic_ignorance", "decision_making", "consensus"],
+  "difficulty": 2,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/abilene_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Техас. Жаркий день. Семья играет в домино. Тесть предлагает съездить в Абилин — 85 км по пыли и зною. Все соглашаются. Поездка ужасна. На обратном пути выясняется: никто не хотел ехать. Каждый думал, что остальные хотят." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Абилина}}" } },
+        { "type": "subtitle", "props": { "text": "Парадокс Абилина · Джерри Харви · 1974" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/abilene_paradox.svg", "alt": "Четыре фигуры едут в машине по пустынной дороге — над каждой мысль-облачко с восклицательным знаком «Нет!», но все молчат" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Управленческий теоретик Джерри Харви в 1974 году описал этот феномен на основе собственного семейного случая и назвал его «парадоксом Абилина». Группа принимает коллективное решение, которого не хочет ни один из её членов — потому что каждый принимает молчание и согласие остальных за искреннее желание. Это не конформизм в обычном смысле (подчинение реальному давлению) — это плюралистическое невежество: ложное представление о том, что другие хотят того, чего не хочешь ты.",
+              "{{em:Парадокс Абилина возникает не из-за конфликта между членами группы — а из-за его отсутствия.}} Никто не возражает, потому что все хотят избежать конфликта. Каждый думает: «Если бы другие не хотели, они бы сказали». Именно эта логика всех ведёт в Абилин. Группы с высокой сплочённостью и нормой «позитивности» особенно уязвимы.",
+              "Харви разграничивает парадокс Абилина и групповое мышление (groupthink). Groupthink — когда группа подавляет несогласие, чтобы сохранить консенсус. Абилин — когда группа принимает решение, которого не хочет никто, из ложной предпосылки о желаниях остальных. Природа разная — оба разрушительны."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Группы систематически принимают решения, которых не хочет ни один участник, из-за плюралистического невежества: каждый молчит, полагая, что остальные согласны. Молчание принимается за согласие — и группа едет в Абилин."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "На совещании руководитель предлагает план. Никто не возражает, все кивают. Что это с наибольшей вероятностью означает?",
+            "setup": null,
+            "options": [
+              { "id": "consensus", "text": "Группа действительно согласна — молчание это выражение консенсуса", "is_wiser": false },
+              { "id": "abilene", "text": "Часть группы не согласна, но молчит — каждый думает, что остальные согласны", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "принимают молчание за согласие",
+              "explanation": "Исследования группового принятия решений показывают: люди в иерархических группах систематически скрывают несогласие с вышестоящими — особенно если остальные молчат. Хорошие фасилитаторы специально создают структуры, разрывающие этот паттерн: анонимное голосование, «адвокат дьявола», прямой вопрос «кто не согласен?»",
+              "wisdom": "{{em:Молчание — это не согласие. Это иногда боязнь быть единственным несогласным.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Знание о парадоксе Абилина не избавляет от него автоматически. Если все в группе знают о парадоксе, но никто не хочет первым поднять вопрос «а мы точно все хотим в Абилин?» — группа всё равно туда едет. Нужна явная культура несогласия, а не просто осведомлённость о феномене."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В корпоративных решениях", "example": "Неудачные продуктовые запуски, токсичные стратегии, сохранение заведомо провальных проектов — во многих случаях никто в команде не верил в успех, но никто не сказал вслух. Постмортемы часто выявляют именно этот паттерн." },
+              { "label": "В политике", "example": "Исследования показывают: в однопартийных системах или группах с сильным давлением консенсуса политики принимают решения, которые никто из участников в частных беседах не поддерживал. Публичный консенсус маскирует частные сомнения." },
+              { "label": "В личных отношениях", "example": "Пары, проводящие отпуск «там, где хочет партнёр», когда оба на самом деле уступают — классический Абилин. Выход: явно спрашивать о предпочтениях, а не ждать, пока кто-то первым скажет «нет»." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последнее групповое решение, в котором вы участвовали. Вы действительно хотели этого — или молчали, думая, что остальные хотят? Если вы лидер группы: создайте явную возможность для несогласия перед следующим ключевым решением."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Texas. A hot day. A family playing dominoes. A father-in-law suggests driving to Abilene — 85 km through dust and heat. Everyone agrees. The trip is miserable. On the way back, it comes out: no one wanted to go. Everyone thought the others wanted to." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Abilene}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "The Abilene Paradox · Jerry Harvey · 1974" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/abilene_paradox.svg", "alt": "Four figures riding in a car down a desert road — each has a thought bubble with '\"No!\"', but all are silent" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Management theorist Jerry Harvey described this phenomenon in 1974, based on his own family experience, and named it the \"Abilene Paradox.\" A group makes a collective decision that none of its members want — because each interprets the silence and agreement of others as a genuine desire. This isn't conformity in the usual sense (submission to real pressure) — it's pluralistic ignorance: a false belief that others want what you don't.",
+              "{{em:The Abilene Paradox arises not from conflict among group members — but from its absence.}} No one objects because everyone wants to avoid conflict. Each person thinks: \"If the others didn't want to, they'd say so.\" That logic is precisely what drives everyone to Abilene. Groups with high cohesion and a norm of \"positivity\" are especially vulnerable.",
+              "Harvey distinguishes the Abilene Paradox from groupthink. Groupthink is when a group suppresses dissent to preserve consensus. Abilene is when a group makes a decision no one wants, based on a false premise about others' desires. Different mechanisms — both destructive."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Groups systematically make decisions that no member wants — due to pluralistic ignorance: each person stays silent, assuming the others agree. Silence is taken as consent — and the group drives to Abilene."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "In a meeting, a manager proposes a plan. No one objects, everyone nods. What does this most likely mean?",
+            "setup": null,
+            "options": [
+              { "id": "consensus", "text": "The group genuinely agrees — silence is an expression of consensus", "is_wiser": false },
+              { "id": "abilene", "text": "Part of the group disagrees but stays silent — each assumes the others agree", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "take silence as agreement",
+              "explanation": "Research on group decision-making shows: people in hierarchical groups systematically conceal disagreement with those above them — especially when others are silent. Good facilitators deliberately create structures that break this pattern: anonymous voting, a designated \"devil's advocate,\" or a direct question: \"Who disagrees?\"",
+              "wisdom": "{{em:Silence is not consent. Sometimes it's the fear of being the only one who disagrees.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Knowing about the Abilene Paradox doesn't automatically eliminate it. If everyone in the group knows about the paradox but no one wants to be the first to ask \"do we actually all want to go to Abilene?\" — the group still goes. You need an explicit culture of dissent, not just awareness of the phenomenon."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In corporate decisions", "example": "Failed product launches, toxic strategies, continued investment in clearly failing projects — in many cases, no one on the team believed it would succeed, but no one said so aloud. Post-mortems often reveal exactly this pattern." },
+              { "label": "In politics", "example": "Research shows: in one-party systems or groups with strong consensus pressure, politicians make decisions that none of them privately supported. Public consensus masks private doubts." },
+              { "label": "In personal relationships", "example": "Couples spending vacations \"where the partner wants\" when both are actually deferring — a classic Abilene. The fix: explicitly asking for preferences, rather than waiting for someone to say no first." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think about the last group decision you were part of. Did you genuinely want it — or did you stay silent, assuming others wanted it? If you're a group leader: build in an explicit opportunity for disagreement before your next key decision."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/abilene_paradox" }]
+}

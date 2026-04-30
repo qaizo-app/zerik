@@ -1,0 +1,168 @@
+{
+  "id": "appeal_to_nature",
+  "category": "rhetorical_fallacies",
+  "release_number": 117,
+  "release_date": "2026-08-06",
+  "tags": ["naturalistic_fallacy", "nature", "artificial", "health", "logic", "marketing"],
+  "difficulty": 1,
+  "reading_time_sec": 145,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/appeal_to_nature.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ошибка · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Только натуральные ингредиенты». «100% природный состав». «Без химии». На тысячах упаковок — один и тот же аргумент: природное значит хорошее. Змеиный яд — природный. Цианид — тоже. Это не делает их полезными." }
+        },
+        { "type": "title", "props": { "text": "«{{accent:Природно}}» — значит хорошо?" } },
+        { "type": "subtitle", "props": { "text": "Апелляция к природе — натуралистическая ошибка" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/appeal_to_nature.svg", "alt": "Слева: листья и ягоды с зелёной галочкой «натуральное»; справа: таблетки с красным крестом «искусственное»; внизу — знак равенства перечёркнут" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Апелляция к природе — вывод о том, что нечто хорошо (безопасно, правильно, лучше) только потому что оно «естественное», или плохо (опасно, неправильно) — потому что «искусственное». Это натуралистическая ошибка в её риторической форме: смешение дескриптивного («это природный объект») с нормативным («это хорошо»). Между фактом происхождения и этической или практической оценкой нет логической связи.",
+              "{{em:Природа не заботится о нашем здоровье.}} Естественный отбор оптимизирует выживание и размножение — не долголетие, не счастье, не здоровье в нашем понимании. Многие «натуральные» вещества токсичны (бледная поганка, аконит, мышьяк). Многие «синтетические» — спасают жизни: пенициллин, инсулин, вакцины.",
+              "Ошибка работает и в обратную сторону. «Генетически модифицированное» или «синтетическое» — не синонимы «плохого». ГМО-культуры в ряде случаев безопаснее обычных (меньше пестицидов), синтетические витамины химически неотличимы от «натуральных». Качество определяется исходами и доказательной базой — не происхождением."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Апелляция к природе — вывод о том, что нечто хорошо потому что натуральное, или плохо потому что синтетическое. Это логическая ошибка: происхождение не определяет безопасность, ценность или этичность."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Производитель утверждает: «Наш продукт безопасен — в нём только натуральные компоненты». Это хороший аргумент в пользу безопасности?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Да — натуральный состав снижает риск побочных эффектов", "is_wiser": false },
+              { "id": "no", "text": "Нет — это апелляция к природе: безопасность требует доказательств, а не ссылки на происхождение", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают «натуральный» аргументом безопасности",
+              "explanation": "«Натуральный» не значит безопасный. Многие природные вещества токсичны в любой дозе; многие синтетические — абсолютно безопасны при правильном применении. Единственный способ оценить безопасность — клинические испытания, данные о составе и механизме действия. Слово «натуральный» — маркетинговый ярлык, не научный аргумент.",
+              "wisdom": "{{em:Доза делает яд. — Парацельс}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Апелляция к природе — не аргумент того, что природное всегда вредно. Многие натуральные вещества действительно полезны. Ошибка — в самом выводе «полезно, потому что натуральное», а не в факте пользы. Правильный аргумент: «полезно, потому что вот доказательства»."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В маркетинге", "example": "«Натуральный», «органический», «без химии» — одни из самых эффективных маркетинговых слов. Они активируют апелляцию к природе у покупателя и повышают готовность платить — без какой-либо корреляции с реальной пользой или безопасностью." },
+              { "label": "В медицинских дискуссиях", "example": "Антивакцинные аргументы часто апеллируют к природе: «естественный иммунитет лучше». Но переболеть — значит подвергнуть себя риску осложнений и смерти. Вакцина даёт иммунитет без этого риска. «Естественность» — не преимущество." },
+              { "label": "В этических дебатах', \"example\": \"'Это противоестественно' — один из старейших аргументов против любых изменений: гомосексуальности, левшества, женского образования. Апелляция к природе исторически служила оправданием дискриминации — именно потому, что логически несостоятельна." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Проверьте ярлыки на продуктах, которые вы покупаете «за натуральность». Задайте вопрос: есть ли доказательства пользы — независимые от слова «натуральный»? Это займёт 5 минут и может изменить несколько покупательских решений."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Fallacy · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"All-natural ingredients.\" \"100% from nature.\" \"No chemicals.\" Thousands of labels carry the same argument: natural means good. Snake venom is natural. Cyanide too. That doesn't make them beneficial." }
+        },
+        { "type": "title", "props": { "text": "\"{{accent:Natural}}\" Means Good?" } },
+        { "type": "subtitle", "props": { "text": "Appeal to Nature — the naturalistic fallacy" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/appeal_to_nature.svg", "alt": "Left: leaves and berries with a green checkmark 'natural'; right: pills with a red X 'artificial'; below — an equals sign crossed out" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The appeal to nature is the conclusion that something is good (safe, correct, better) simply because it's \"natural,\" or bad (dangerous, wrong) because it's \"artificial.\" This is the naturalistic fallacy in its rhetorical form: conflating the descriptive (\"this is a natural object\") with the normative (\"this is good\"). There is no logical connection between the fact of origin and ethical or practical evaluation.",
+              "{{em:Nature doesn't care about our health.}} Natural selection optimizes for survival and reproduction — not for longevity, happiness, or health as we understand it. Many \"natural\" substances are toxic (death cap mushrooms, monkshood, arsenic). Many \"synthetic\" ones save lives: penicillin, insulin, vaccines.",
+              "The fallacy also runs in reverse. \"Genetically modified\" or \"synthetic\" are not synonyms for \"bad.\" GMO crops are in some cases safer than conventional ones (fewer pesticides); synthetic vitamins are chemically indistinguishable from \"natural\" ones. Quality is determined by outcomes and evidence — not origin."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The appeal to nature is the conclusion that something is good because it's natural, or bad because it's synthetic. This is a logical fallacy: origin does not determine safety, value, or ethics."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A manufacturer claims: \"Our product is safe — it contains only natural ingredients.\" Is this a good argument for safety?",
+            "setup": null,
+            "options": [
+              { "id": "yes", "text": "Yes — a natural composition reduces the risk of side effects", "is_wiser": false },
+              { "id": "no", "text": "No — this is an appeal to nature: safety requires evidence, not a reference to origin", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "treat 'natural' as an argument for safety",
+              "explanation": "\"Natural\" doesn't mean safe. Many natural substances are toxic at any dose; many synthetic ones are completely safe when properly used. The only way to assess safety is through clinical trials and data on composition and mechanism of action. The word \"natural\" is a marketing label — not a scientific argument.",
+              "wisdom": "{{em:The dose makes the poison. — Paracelsus}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The appeal to nature is not an argument that everything natural is harmful. Many natural substances are genuinely beneficial. The error is in the conclusion \"beneficial because natural\" — not in the fact of benefit. The correct argument is: \"beneficial because here is the evidence.\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In marketing", "example": "\"Natural,\" \"organic,\" \"chemical-free\" — among the most effective marketing words. They activate the appeal to nature in consumers and increase willingness to pay — with no correlation to actual benefit or safety." },
+              { "label": "In medical debates", "example": "Anti-vaccine arguments frequently appeal to nature: \"natural immunity is better.\" But contracting a disease means exposure to the risk of complications and death. A vaccine provides immunity without that risk. \"Naturalness\" is not an advantage." },
+              { "label": "In ethical debates", "example": "\"It's unnatural\" is one of the oldest arguments against any change: homosexuality, left-handedness, women's education. The appeal to nature has historically served to justify discrimination — precisely because it is logically incoherent." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Check the labels on products you buy \"for being natural.\" Ask: is there evidence of benefit — independent of the word \"natural\"? This takes 5 minutes and may change a few purchasing decisions."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/appeal_to_nature" }]
+}

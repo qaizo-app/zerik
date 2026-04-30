@@ -1,0 +1,188 @@
+{
+  "id": "deep_work",
+  "category": "book_idea",
+  "release_number": 118,
+  "release_date": "2026-08-07",
+  "tags": ["newport", "focus", "concentration", "productivity", "distraction", "knowledge_work"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/deep_work.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "Средний офисный сотрудник проверяет почту 74 раза в день. Каждое переключение внимания стоит до 23 минут на восстановление. Это значит, что большинство людей никогда не работают по-настоящему — они просто очень заняты. Кэл Ньюпорт называет то, что остаётся без этого, — Deep Work." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Глубокая}} работа" } },
+        { "type": "subtitle", "props": { "text": "Deep Work · Кэл Ньюпорт · 2016" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/deep_work.svg", "alt": "Фигура за столом в зоне глубокого погружения — отделена барьером от потока уведомлений, чатов и переключений" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Способность выполнять глубокую работу становится всё более редкой именно тогда, когда становится всё более ценной в экономике.",
+            "book_title": "Глубокая работа",
+            "author": "Кэл Ньюпорт",
+            "year": "2016",
+            "application": "Ньюпорт — профессор информатики и исследователь продуктивности — разграничивает «глубокую работу» (сфокусированный, требовательный к когнитивным ресурсам труд без отвлечений) и «поверхностную» (логистика, имейлы, встречи). Его тезис: экономика знаний всё больше вознаграждает первое — а большинство работает во втором режиме."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ньюпорт определяет Deep Work как «профессиональную деятельность, выполняемую в состоянии безотвлечённой концентрации, которая доводит когнитивные способности до предела». Это противоположность Shallow Work — поверхностным задачам, которые можно делать в состоянии рассеянного внимания. Проблема: open space, Slack, постоянная доступность — вся современная рабочая среда спроектирована против Deep Work.",
+              "{{em:Парадокс: организации оптимизируют коммуникацию — и разрушают производительность.}} Совещание, которое можно было заменить письмом, стоит не часа одного — а нескольких часов концентрации каждого участника. Ньюпорт документирует: самые продуктивные интеллектуальные работники — исторически и сейчас — систематически защищали блоки глубокой работы от фрагментации.",
+              "Ньюпорт предлагает конкретные стратегии: монастырская философия (полная изоляция на периоды), бимодальная (чередование глубоких и доступных дней), ритмическая (ежедневные блоки) и журналистская (по возможности). Выбор зависит от типа работы — но общий принцип: Deep Work требует планирования, а не «свободного времени»."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Способность к глубокой сосредоточенной работе становится редкой в мире отвлечений — и одновременно всё более ценной в экономике знаний. Разрыв между этими двумя тенденциями — возможность для тех, кто научится защищать своё внимание."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Два сотрудника работают над сложной аналитической задачей. Один отвечает на сообщения по мере поступления. Другой закрывает все мессенджеры на 3 часа. Кто сделает лучше?",
+            "setup": null,
+            "options": [
+              { "id": "responsive", "text": "Первый — он остаётся на связи и не тормозит команду", "is_wiser": false },
+              { "id": "deep", "text": "Второй — глубокая работа без прерываний на порядок продуктивнее", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что доступность = продуктивность",
+              "explanation": "Исследования когнитивных переключений (Gloria Mark, UCI) показывают: после прерывания мозгу требуется до 23 минут для полного возврата к задаче. 3-часовой блок с 5 прерываниями — это не 3 часа работы, а ~1.5 часа эффективного времени. Ньюпорт документирует: большинство важных интеллектуальных результатов создаётся в состоянии глубокого погружения.",
+              "wisdom": "{{em:Занятость — это форма лени. Лени в мышлении и безразличного действия. — Тим Феррис}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Deep Work — не синоним «избегать всего». Ньюпорт не призывает игнорировать коммуникацию. Его аргумент: поверхностная работа должна занимать отведённое место — а не захватывать всё доступное время. Структура, а не аскеза."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В индивидуальной продуктивности", "example": "Системы управления временем (Getting Things Done, time-blocking) всё чаще включают принцип защиты блоков глубокой работы. Это отражение того, что проблема фрагментации внимания стала системной." },
+              { "label": "В корпоративной культуре", "example": "Некоторые компании (Basecamp, Buffer) экспериментируют с «no-meeting днями» и ограничениями уведомлений. Это институциональный ответ на проблему, которую описывает Ньюпорт." },
+              { "label": "В образовании', \"example\": \"Исследования показывают: студенты, изучающие материал в состоянии концентрации (без телефона), усваивают в несколько раз больше, чем при многозадачности. Deep Work — не только профессиональный навык, но и учебный." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Запланируйте один блок глубокой работы на следующие 24 часа: 60-90 минут без телефона, мессенджеров и почты — только одна задача. Это не эксперимент с продуктивностью. Это наблюдение за тем, как работает ваш мозг без фрагментации."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №12" } },
+        {
+          "type": "hook",
+          "props": { "text": "The average office worker checks email 74 times a day. Every attention switch costs up to 23 minutes of recovery. This means most people never truly work — they're just very busy. Cal Newport calls what remains without this — Deep Work." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Deep}} Work" } },
+        { "type": "subtitle", "props": { "text": "Deep Work · Cal Newport · 2016" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/deep_work.svg", "alt": "A figure at a desk in a zone of deep immersion — separated by a barrier from a stream of notifications, chats, and tab switches" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "The ability to perform deep work is becoming increasingly rare at exactly the time it is becoming increasingly valuable in our economy.",
+            "book_title": "Deep Work",
+            "author": "Cal Newport",
+            "year": "2016",
+            "application": "Newport — a computer science professor and productivity researcher — distinguishes \"deep work\" (focused, cognitively demanding labor without distractions) from \"shallow work\" (logistics, emails, meetings). His thesis: the knowledge economy increasingly rewards the former — while most people operate in the latter mode."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Newport defines Deep Work as \"professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit.\" This is the opposite of Shallow Work — surface-level tasks that can be performed in a state of scattered attention. The problem: open offices, Slack, constant availability — the entire modern work environment is designed against Deep Work.",
+              "{{em:The paradox: organizations optimize communication — and destroy productivity.}} A meeting that could have been an email costs not just one hour — it costs several hours of concentrated attention from every participant. Newport documents: the most productive intellectual workers — historically and today — systematically protected blocks of deep work from fragmentation.",
+              "Newport offers concrete strategies: the monastic philosophy (complete isolation for periods), bimodal (alternating deep and available days), rhythmic (daily blocks), and journalistic (opportunistic). The choice depends on job type — but the shared principle: Deep Work requires scheduling, not \"free time.\""
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The capacity for deep, focused work is becoming rare in a world of distractions — while simultaneously becoming more valuable in the knowledge economy. The gap between these two trends is an opportunity for those who learn to protect their attention."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Two employees work on a complex analytical task. One responds to messages as they arrive. The other closes all messaging apps for 3 hours. Who does better?",
+            "setup": null,
+            "options": [
+              { "id": "responsive", "text": "The first — they stay available and don't slow the team down", "is_wiser": false },
+              { "id": "deep", "text": "The second — deep, uninterrupted work is orders of magnitude more productive", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see availability as equal to productivity",
+              "explanation": "Research on cognitive switching (Gloria Mark, UCI) shows: after an interruption, the brain needs up to 23 minutes to fully return to a task. A 3-hour block with 5 interruptions is not 3 hours of work — it's ~1.5 hours of effective time. Newport documents: most important intellectual results are produced in a state of deep immersion.",
+              "wisdom": "{{em:Busyness is a form of laziness — lazy thinking and indiscriminate action. — Tim Ferriss}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Deep Work is not a synonym for \"avoid everything.\" Newport doesn't advocate ignoring communication. His argument: shallow work should occupy its designated slot — not capture all available time. Structure, not asceticism."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In personal productivity", "example": "Time management systems (Getting Things Done, time-blocking) increasingly include principles for protecting deep work blocks. This reflects that attention fragmentation has become a systemic problem." },
+              { "label": "In corporate culture", "example": "Some companies (Basecamp, Buffer) experiment with \"no-meeting days\" and notification restrictions. This is an institutional response to the problem Newport describes." },
+              { "label": "In education", "example": "Research shows: students who study material in a concentrated state (without phones) retain several times more than in multitasking mode. Deep Work isn't just a professional skill — it's a learning skill." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Schedule one deep work block in the next 24 hours: 60–90 minutes without phone, messaging, or email — just one task. This isn't a productivity experiment. It's an observation of how your brain works without fragmentation."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/deep_work" }]
+}

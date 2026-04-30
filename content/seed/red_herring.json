@@ -1,0 +1,168 @@
+{
+  "id": "red_herring",
+  "category": "rhetorical_fallacies",
+  "release_number": 110,
+  "release_date": "2026-07-30",
+  "tags": ["distraction", "rhetoric", "debate", "argument", "logic", "politics"],
+  "difficulty": 1,
+  "reading_time_sec": 145,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/red_herring.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ошибка · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Вы критикуете нашу экологическую политику? А вы задумывались о безработице в регионах?» Тема сменилась, разговор продолжается — но исходный вопрос больше не существует. Именно для этого и нужна красная селёдка." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Красная}} селёдка" } },
+        { "type": "subtitle", "props": { "text": "Red Herring — нерелевантное отвлечение" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/red_herring.svg", "alt": "Стрелка аргумента резко поворачивает от исходной темы к нерелевантной; над поворотом — красная рыба" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Красная селёдка — введение нерелевантной темы, чтобы отвлечь внимание от исходного вопроса. Название происходит от охотничьей практики: копчёную рыбу с резким запахом тащили поперёк следа, чтобы сбить собак с правильного пути. В риторике эффект тот же — внимание уводят в сторону раньше, чем собеседник замечает.",
+              "От других уловок красная селёдка отличается тем, что {{em:новая тема может быть полностью законной и важной — просто нерелевантной}}: «Вы критикуете уровень преступности — но ведь экономика улучшилась!» Оба факта могут быть верными. Проблема не в ложности, а в смене предмета обсуждения без признания этого.",
+              "Красная селёдка особенно эффективна в политическом дискурсе и переговорах, потому что использует естественный когнитивный рефлекс: мы склонны отвечать на последний сказанный тезис, а не возвращаться к исходному вопросу. Хорошие модераторы и переговорщики специально тренируют этот навык."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Красная селёдка — введение нерелевантного аргумента или темы, чтобы увести внимание от исходного вопроса. Её сила в том, что новая тема может быть важной и правдивой — её нерелевантность к исходному тезису остаётся незамеченной."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Журналист спрашивает политика: «Почему строительство дороги отстаёт от графика?» Политик отвечает: «Наша администрация добилась рекордного числа рабочих мест в регионе». Это...?",
+            "setup": null,
+            "options": [
+              { "id": "defense", "text": "Законная защита — контекст важен для полной картины", "is_wiser": false },
+              { "id": "herring", "text": "Красная селёдка — вопрос о дороге остался без ответа", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают это законной защитой",
+              "explanation": "Данные о рабочих местах могут быть точными и важными — но они не отвечают на вопрос о задержке строительства. Это классическая красная селёдка: смена предмета на что-то позитивное без признания исходной темы. Признак: ни одно слово в ответе не адресует исходный вопрос.",
+              "wisdom": "{{em:Если ответ не адресует вопрос — это не ответ. Это другой разговор.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Красная селёдка — не всегда намеренная манипуляция. Люди часто уходят от темы неосознанно, потому что связанная тема кажется им более важной. Важно уметь распознавать её — и мягко возвращать к исходному вопросу: «Это важно, но мой вопрос был о...»"
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "Политические дебаты полны красных селёдок: вопрос об инфляции уводят к безопасности, вопрос о здравоохранении — к иммиграции. Профессиональные журналисты учатся распознавать это и возвращать к теме." },
+              { "label": "В переговорах", "example": "Когда переговорная позиция ослабевает, опытные переговорщики вводят нерелевантные пункты — создавая видимость прогресса и уводя от болезненного вопроса. Это один из приёмов тактики «salami slicing»." },
+              { "label": "В личных конфликтах", "example": "«Ты снова забыл вынести мусор» → «Ну и что, зато ты три недели назад...» — типичная красная селёдка в бытовом конфликте. Старая тема не имеет отношения к текущей проблеме." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующем споре или разговоре отслеживайте: ответ на вопрос адресует исходный вопрос или меняет тему? Если меняет — попробуйте вернуться: «Это интересно, но мой вопрос был конкретно о...»"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Fallacy · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"You're criticizing our environmental policy? What about unemployment in rural regions?\" The topic has shifted, the conversation continues — but the original question no longer exists. That's exactly what the red herring is for." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Red}} Herring" } },
+        { "type": "subtitle", "props": { "text": "Red Herring — irrelevant distraction" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/red_herring.svg", "alt": "An argument arrow turns sharply from the original topic to an irrelevant one; a red fish sits above the turn" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "A red herring is the introduction of an irrelevant topic to divert attention from the original question. The name comes from a hunting practice: a smoked, pungent fish was dragged across a trail to throw hounds off the scent. In rhetoric, the effect is the same — attention is redirected before the listener notices.",
+              "What distinguishes a red herring from other fallacies is that {{em:the new topic may be entirely legitimate and important — it's simply irrelevant}}: \"You're criticizing crime rates — but the economy has improved!\" Both facts might be true. The problem isn't falsity — it's the unacknowledged change of subject.",
+              "Red herrings are especially effective in political discourse and negotiation because they exploit a natural cognitive reflex: we tend to respond to the last thing said rather than returning to the original question. Good moderators and negotiators specifically train this skill."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "A red herring introduces an irrelevant argument or topic to redirect attention away from the original question. Its power lies in the fact that the new topic may be important and true — its irrelevance to the original claim goes unnoticed."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A journalist asks a politician: \"Why is road construction behind schedule?\" The politician responds: \"Our administration has achieved record job creation in the region.\" This is...?",
+            "setup": null,
+            "options": [
+              { "id": "defense", "text": "A legitimate defense — context matters for the full picture", "is_wiser": false },
+              { "id": "herring", "text": "A red herring — the question about the road went unanswered", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "consider this a legitimate defense",
+              "explanation": "The job creation data may be accurate and important — but it doesn't address the question about construction delays. This is a classic red herring: switching to something positive without acknowledging the original topic. The tell: not a single word in the response addresses the original question.",
+              "wisdom": "{{em:If the answer doesn't address the question — it's not an answer. It's a different conversation.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "A red herring isn't always intentional manipulation. People often go off topic unconsciously, because a related issue feels more important to them. The key skill is recognizing it — and gently returning: \"That's important, but my question was about...\""
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In politics", "example": "Political debates are full of red herrings: a question about inflation is redirected to security; a question about healthcare to immigration. Professional journalists train to recognize this and redirect." },
+              { "label": "In negotiations", "example": "When a negotiating position weakens, experienced negotiators introduce irrelevant items — creating the appearance of progress while avoiding the painful question. It's a key tactic in \"salami slicing\" strategy." },
+              { "label": "In personal conflicts", "example": "\"You forgot to take out the trash again\" → \"Well, three weeks ago you...\" — a classic red herring in everyday conflict. The old topic has nothing to do with the current problem." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "In your next argument or conversation, track this: does the response address the original question, or does it change the subject? If it changes the subject — try redirecting: \"That's interesting, but my question was specifically about...\""
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/red_herring" }]
+}

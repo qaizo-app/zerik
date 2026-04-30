@@ -1,0 +1,188 @@
+{
+  "id": "thinking_in_systems",
+  "category": "book_idea",
+  "release_number": 111,
+  "release_date": "2026-07-31",
+  "tags": ["meadows", "systems", "feedback", "complexity", "emergence", "second_order"],
+  "difficulty": 3,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/thinking_in_systems.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы устраняете бедность в стране — и через двадцать лет обнаруживаете, что нечаянно разрушили традиционные общины. Вы назначаете менеджеров по показателю X — и X растёт, но бизнес деградирует. Проблема не в людях и не в намерениях. Проблема в том, что вы не видите систему." }
+        },
+        { "type": "title", "props": { "text": "Мышление {{accent:системами}}" } },
+        { "type": "subtitle", "props": { "text": "Thinking in Systems · Донелла Медоуз · 2008" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/thinking_in_systems.svg", "alt": "Диаграмма с запасами (резервуары), потоками (стрелки) и петлями обратной связи — балансирующей и усиливающей" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "Вы не можете управлять системой, которую не понимаете. Вы можете только реагировать на неё.",
+            "book_title": "Мышление системами",
+            "author": "Донелла Медоуз",
+            "year": "2008",
+            "application": "Медоуз — один из авторов доклада «Пределы роста» (1972) — написала эту книгу как введение в системное мышление для широкой аудитории. Она показывает: большинство сложных проблем — экологических, социальных, экономических — имеют одну природу. Их структура определяет поведение сильнее, чем намерения участников."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Медоуз описывает системы через три элемента: запасы (накопленные ресурсы — деньги, население, репутация), потоки (скорость изменения запасов — доходы, рождаемость, публикации) и петли обратной связи (как изменение одного элемента влияет на другие). Петли бывают усиливающими (положительная обратная связь — снежный ком) и балансирующими (отрицательная — термостат).",
+              "Ключевое открытие: {{em:поведение системы порождается её структурой, а не намерениями её участников.}} Хорошие люди в плохо устроенной системе будут производить плохие результаты. Замена людей без изменения структуры не изменит поведения. Это объясняет, почему многие реформы не работают — они меняют людей, не трогая систему.",
+              "Медоуз также описывает «рычаги» — точки вмешательства с разной силой воздействия. Самые интуитивные рычаги (числа, субсидии) — самые слабые. Самые мощные — изменение целей системы и её ментальных моделей. Парадокс: менять то, что кажется «мягким» (убеждения, цели), труднее всего — и эффективнее всего."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Поведение системы определяется её структурой — запасами, потоками и петлями обратной связи — а не намерениями участников. Чтобы изменить поведение, нужно изменить структуру, а не людей."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Компания снова и снова принимает плохие решения при разных менеджерах. Что скорее всего является причиной?",
+            "setup": null,
+            "options": [
+              { "id": "people", "text": "Компания систематически нанимает не тех людей", "is_wiser": false },
+              { "id": "structure", "text": "Структура системы вознаграждений или информации провоцирует плохие решения", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "объясняют это качеством людей",
+              "explanation": "Медоуз приводит примеры: компании со структурой, вознаграждающей краткосрочные показатели, будут принимать близорукие решения при любом менеджменте. Рыба гниёт с головы — но голова — это не CEO, а архитектура стимулов, информационных потоков и целей. Менять людей без изменения структуры — дорогостоящее заблуждение.",
+              "wisdom": "{{em:Поставьте хорошего человека в плохую систему — и плохая система победит почти всегда. — Уильям Эдвардс Деминг}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Системное мышление не означает фатализм — «всё определено структурой, люди не важны». Медоуз специально подчёркивает: изменение ментальных моделей (как люди думают о системе) — один из самых мощных рычагов. Люди важны — но через изменение структуры, а не вместо него."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политике", "example": "Провалы реформ здравоохранения, образования, экономики — классические системные ловушки: «трагедия общин», задержки обратной связи, незапланированные последствия. Системная диагностика предсказывает их заранее." },
+              { "label": "В бизнесе", "example": "KPI, которые становятся самоцелью (закон Гудхарта), плановые показатели, подрывающие качество, — всё это петли обратной связи, превратившиеся в патологии. Медоуз описывает эти архетипы по имени: «дрейф к низкому», «эскалация», «переключение нагрузки»." },
+              { "label": "В экологии", "example": "Сверхрыболовство — идеальный пример усиливающей петли, ведущей к коллапсу: больше рыбы добыто → меньше рыбы → нужно больше усилий → ещё меньше рыбы. Видеть это заранее — и значит мыслить системами." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите одну повторяющуюся проблему в вашей жизни или работе. Спросите: это проблема людей или структуры? Какие стимулы, информация или цели порождают это поведение снова и снова? Это первый шаг к системному диагнозу."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №11" } },
+        {
+          "type": "hook",
+          "props": { "text": "You eliminate poverty in a country — and twenty years later you discover you inadvertently destroyed traditional communities. You incentivize managers on metric X — and X rises, but the business deteriorates. The problem isn't the people or their intentions. The problem is that you didn't see the system." }
+        },
+        { "type": "title", "props": { "text": "Thinking in {{accent:Systems}}" } },
+        { "type": "subtitle", "props": { "text": "Thinking in Systems · Donella Meadows · 2008" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/thinking_in_systems.svg", "alt": "A diagram with stocks (reservoirs), flows (arrows), and feedback loops — both balancing and reinforcing" }
+        },
+        {
+          "type": "book_quote",
+          "props": {
+            "quote": "You can't manage a system you don't understand. You can only react to it.",
+            "book_title": "Thinking in Systems",
+            "author": "Donella Meadows",
+            "year": "2008",
+            "application": "Meadows — one of the authors of \"The Limits to Growth\" (1972) — wrote this book as an introduction to systems thinking for a general audience. She shows that most complex problems — ecological, social, economic — share a common nature. Their structure determines behavior more powerfully than the intentions of their participants."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Meadows describes systems through three elements: stocks (accumulated resources — money, population, reputation), flows (rates of change in stocks — income, birth rate, publications), and feedback loops (how change in one element affects others). Loops are either reinforcing (positive feedback — a snowball) or balancing (negative feedback — a thermostat).",
+              "The core insight: {{em:system behavior is generated by the system's structure — not by the intentions of its participants.}} Good people in a badly structured system will produce bad outcomes. Replacing people without changing the structure won't change behavior. This explains why so many reforms fail — they change people without touching the system.",
+              "Meadows also describes \"leverage points\" — places to intervene with varying power. The most intuitive levers (numbers, subsidies) are the weakest. The most powerful — changing the system's goals and its mental models. The paradox: changing what seems \"soft\" (beliefs, goals) is hardest — and most effective."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "System behavior is determined by its structure — stocks, flows, and feedback loops — not by the intentions of its participants. To change behavior, change the structure — not the people."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A company repeatedly makes bad decisions under different managers. What is most likely the cause?",
+            "setup": null,
+            "options": [
+              { "id": "people", "text": "The company systematically hires the wrong people", "is_wiser": false },
+              { "id": "structure", "text": "The reward or information structure incentivizes bad decisions", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "attribute it to the quality of people",
+              "explanation": "Meadows gives examples: companies structured to reward short-term metrics will make myopic decisions under any management. Fish rots from the head — but the head isn't the CEO, it's the architecture of incentives, information flows, and goals. Changing people without changing the structure is an expensive mistake.",
+              "wisdom": "{{em:Put a good person in a bad system — and the bad system wins almost every time. — W. Edwards Deming}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Systems thinking doesn't mean fatalism — \"structure determines everything, people don't matter.\" Meadows specifically emphasizes: changing mental models (how people think about the system) is one of the most powerful levers. People matter — but through structural change, not instead of it."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In policy", "example": "Failed healthcare, education, and economic reforms are classic systems traps: the tragedy of the commons, feedback delays, unintended consequences. Systemic diagnosis can predict them in advance." },
+              { "label": "In business", "example": "KPIs that become ends in themselves (Goodhart's Law), production targets that undermine quality — these are feedback loops turned pathological. Meadows names these archetypes: \"drift to low performance,\" \"escalation,\" \"shifting the burden.\"" },
+              { "label": "In ecology", "example": "Overfishing is a perfect example of a reinforcing loop leading to collapse: more fish caught → fewer fish → more effort needed → even fewer fish. Seeing this in advance is what it means to think in systems." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take one recurring problem in your life or work. Ask: is this a people problem or a structure problem? What incentives, information flows, or goals generate this behavior again and again? That's the first step toward a systemic diagnosis."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/thinking_in_systems" }]
+}

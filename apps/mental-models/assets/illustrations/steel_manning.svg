@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Left: straw man (weak) -->
+  <text x="100" y="35" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c4a35a" font-weight="bold">Соломенное чучело</text>
+  <!-- Straw figure -->
+  <circle cx="100" cy="75" r="15" fill="#c4a35a" opacity="0.5"/>
+  <!-- Body made of sticks/hay -->
+  <g stroke="#c4a35a" stroke-width="3" opacity="0.5" stroke-linecap="round">
+    <line x1="100" y1="90" x2="100" y2="145"/>
+    <line x1="100" y1="105" x2="70" y2="125"/>
+    <line x1="100" y1="105" x2="130" y2="125"/>
+    <line x1="100" y1="145" x2="80" y2="175"/>
+    <line x1="100" y1="145" x2="120" y2="175"/>
+  </g>
+  <!-- Hay/straw texture on figure -->
+  <g stroke="#c4a35a" stroke-width="1.5" opacity="0.4">
+    <line x1="87" y1="100" x2="93" y2="115"/>
+    <line x1="107" y1="98" x2="113" y2="113"/>
+    <line x1="74" y1="118" x2="80" y2="130"/>
+    <line x1="118" y1="118" x2="124" y2="130"/>
+  </g>
+  <!-- Flame burning straw man -->
+  <g opacity="0.7">
+    <ellipse cx="100" cy="180" rx="20" ry="8" fill="#ff6b35" opacity="0.5"/>
+    <path d="M88 178 Q92 162 96 170 Q98 158 100 166 Q102 154 106 164 Q110 158 112 172" stroke="none" fill="#ff6b35"/>
+    <path d="M90 178 Q93 168 96 173 Q100 160 104 168 Q108 162 110 175" stroke="none" fill="#ffad1f"/>
+  </g>
+  <text x="100" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Искажённый аргумент</text>
+  <text x="100" y="217" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">легко опровергнуть</text>
+  <!-- Arrow -->
+  <text x="200" y="125" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#555">→</text>
+  <text x="200" y="148" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">или</text>
+  <!-- Right: steel man (strong) -->
+  <text x="300" y="35" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#4a9fd9" font-weight="bold">Стальной аргумент</text>
+  <!-- Steel figure -->
+  <circle cx="300" cy="75" r="16" fill="#4a9fd9" opacity="0.8"/>
+  <!-- Armored/steel body -->
+  <g fill="#4a9fd9" opacity="0.8">
+    <rect x="284" y="90" width="32" height="50" rx="4"/>
+    <rect x="280" y="95" width="12" height="35" rx="3"/>
+    <rect x="308" y="95" width="12" height="35" rx="3"/>
+    <rect x="287" y="140" width="10" height="35" rx="3"/>
+    <rect x="303" y="140" width="10" height="35" rx="3"/>
+  </g>
+  <!-- Steel reflection/shine -->
+  <g stroke="#87ceeb" stroke-width="1" opacity="0.5" fill="none">
+    <line x1="289" y1="95" x2="289" y2="135"/>
+    <line x1="311" y1="95" x2="311" y2="135"/>
+  </g>
+  <text x="300" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4a9fd9">Сильнейшая версия</text>
+  <text x="300" y="217" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4a9fd9">аргумента оппонента</text>
+  <!-- Bottom rule -->
+  <rect x="20" y="238" width="360" height="40" fill="#0d1530" rx="8"/>
+  <text x="200" y="255" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e8e8e8" font-weight="bold">Steel-manning</text>
+  <text x="200" y="270" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#aaa">«Опровергай сильнейшую версию, а не соломенную»</text>
+</svg>

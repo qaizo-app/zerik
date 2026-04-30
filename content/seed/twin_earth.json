@@ -1,0 +1,168 @@
+{
+  "id": "twin_earth",
+  "category": "thought_experiments",
+  "release_number": 120,
+  "release_date": "2026-08-09",
+  "tags": ["putnam", "meaning", "reference", "language", "philosophy_of_mind", "semantics"],
+  "difficulty": 3,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/twin_earth.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "В 1973 году философ Хилари Патнэм спросил: представьте точную копию Земли, где жидкость, которую называют «водой», выглядит и ведёт себя как вода — но её химическая формула XYZ, а не H2O. Означает ли слово «вода» у жителей Земли-близнеца то же самое, что у нас?" }
+        },
+        { "type": "title", "props": { "text": "Земля-{{accent:близнец}}" } },
+        { "type": "subtitle", "props": { "text": "Хилари Патнэм · «Значение слова «значение»» · 1973" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/twin_earth.svg", "alt": "Две планеты рядом: на левой — молекула H2O над водой, на правой — молекула XYZ; люди на обеих произносят одно слово «вода»" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Патнэм сформулировал эксперимент, чтобы атаковать «интернализм» — идею о том, что смысл слов полностью определяется ментальными состояниями говорящего. До 1750 года — когда химия ещё не знала H2O — житель Земли и житель Земли-близнеца имели абсолютно одинаковые ментальные состояния, когда произносили «вода». Но они говорили о разных вещах. Значит, смысл не в голове.",
+              "{{em:«Значения не находятся в голове» — центральный тезис Патнэма.}} Слово «вода» означает H2O — независимо от того, знаем ли мы эту формулу. Значение «воды» частично определяется реальной структурой мира (его «природным видом», natural kind) и историей использования слова в сообществе, а не только ментальными состояниями отдельного говорящего. Это экстернализм о значении.",
+              "Эксперимент породил десятилетия дискуссий в философии языка и философии разума. Он ставит вопросы о природе понятий, о том, как возможно понимание между людьми с разным опытом, и о границах между тем, что находится «в уме» и что — «в мире». Крипке развил похожие идеи в теории жёстких десигнаторов: имена и названия природных видов обозначают одно и то же во всех возможных мирах."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Смысл слов не находится только в голове говорящего — он частично определяется реальной структурой мира и историей использования слова в сообществе. «Вода» означает H2O, даже если мы не знаем этой формулы."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Два человека 1700 года — с Земли и Земли-близнеца — произносят слово «вода». Они говорят об одном и том же?",
+            "setup": null,
+            "options": [
+              { "id": "same", "text": "Да — у них одинаковые ментальные состояния и одинаковый опыт", "is_wiser": false },
+              { "id": "different", "text": "Нет — они говорят о разных веществах, несмотря на идентичные ментальные состояния", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что одинаковый опыт = одинаковое значение",
+              "explanation": "Именно здесь Патнэм делает ход: если смысл определяется только ментальными состояниями — оба должны говорить об одном. Но очевидно, что жители Земли говорят о H2O, а жители Земли-близнеца — о XYZ. Значит, ментальных состояний недостаточно для фиксации значения. Мир участвует в значении — это суть экстернализма.",
+              "wisdom": "{{em:«Разрежьте мозг — и вы не найдёте там значения. Значение — в отношении между мозгом и миром». — Хилари Патнэм}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Экстернализм Патнэма не означает, что ментальные состояния не важны для значения. Они важны — но недостаточны. Значение определяется комбинацией ментальных состояний, структуры мира и социального разделения «лингвистического труда»: не каждый должен знать химию воды — достаточно, что эксперты знают."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В философии разума и ИИ', \"example\": \"Могут ли системы ИИ «понимать» слова, если их значение частично определяется реальным миром — а не статистикой текстов? Это напрямую связано с аргументом китайской комнаты и вопросом о природе понимания." },
+              { "label": "В лингвистике и переводе", "example": "Если значение частично внешнее — перевод между языками не просто замена слов, а соотнесение с реальностью. «Вода» на русском и «water» на английском значат одно и то же, потому что оба слова обозначают H2O — а не потому что совпадают ментальные состояния носителей." },
+              { "label": "В медицине и диагностике', \"example\": \"До открытия H2O врачи использовали слово «вода» — и говорили о том же веществе, что и современные химики. Это поддерживает тезис Патнэма: референция фиксируется реальностью, а не теорией." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Выберите слово, которое вы используете часто — «успех», «справедливость», «свобода». Спросите: что именно в мире делает это слово истинным или ложным? Это не риторический вопрос — это попытка найти «внешнюю» точку опоры для значения, о которой говорил Патнэм."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "In 1973, philosopher Hilary Putnam asked: imagine an exact copy of Earth where the liquid called \"water\" looks and behaves like water — but its chemical formula is XYZ, not H2O. Does the word \"water\" mean the same thing for Twin Earth inhabitants as it does for us?" }
+        },
+        { "type": "title", "props": { "text": "{{accent:Twin}} Earth" } },
+        { "type": "subtitle", "props": { "text": "Hilary Putnam · \"The Meaning of 'Meaning'\" · 1973" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/twin_earth.svg", "alt": "Two planets side by side: the left shows an H2O molecule above water, the right shows XYZ; people on both say the word 'water'" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Putnam formulated the experiment to attack \"internalism\" — the idea that the meaning of words is entirely determined by the mental states of the speaker. Before 1750 — when chemistry didn't yet know about H2O — an Earth resident and a Twin Earth resident had completely identical mental states when saying \"water.\" But they were talking about different things. Therefore, meaning is not in the head.",
+              "{{em:\"Meanings ain't in the head\" — Putnam's central thesis.}} The word \"water\" means H2O — regardless of whether we know that formula. The meaning of \"water\" is partly determined by the real structure of the world (its \"natural kind\") and the history of the word's use in a community — not just by the mental states of individual speakers. This is semantic externalism.",
+              "The experiment spawned decades of debate in philosophy of language and philosophy of mind. It raises questions about the nature of concepts, how understanding between people with different experiences is possible, and where the boundary lies between what's \"in the mind\" and what's \"in the world.\" Kripke developed similar ideas in his theory of rigid designators: names and natural kind terms refer to the same thing across all possible worlds."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The meaning of words is not entirely in the speaker's head — it is partly determined by the real structure of the world and the history of the word's use in a community. \"Water\" means H2O, even if we don't know that formula."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Two people in 1700 — one from Earth, one from Twin Earth — say the word \"water.\" Are they talking about the same thing?",
+            "setup": null,
+            "options": [
+              { "id": "same", "text": "Yes — they have identical mental states and identical experiences", "is_wiser": false },
+              { "id": "different", "text": "No — they're talking about different substances, despite having identical mental states", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "believe identical experience = identical meaning",
+              "explanation": "This is where Putnam makes his move: if meaning is determined only by mental states — both must be talking about the same thing. But it's obvious that Earth residents are talking about H2O, and Twin Earth residents about XYZ. So mental states alone are insufficient to fix meaning. The world participates in meaning — that's the essence of externalism.",
+              "wisdom": "{{em:\"Cut open the brain and you won't find meaning there. Meaning is in the relation between the brain and the world.\" — Hilary Putnam}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Putnam's externalism doesn't mean mental states don't matter for meaning. They matter — but they're insufficient. Meaning is determined by a combination of mental states, world structure, and the social division of \"linguistic labor\": not everyone needs to know the chemistry of water — it's enough that experts do."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In philosophy of mind and AI", "example": "Can AI systems \"understand\" words if meaning is partly determined by the real world — not by text statistics? This directly connects to the Chinese Room argument and the question of what understanding actually is." },
+              { "label": "In linguistics and translation", "example": "If meaning is partly external — translation isn't just substituting words, it's correlating with reality. \"Вода\" in Russian and \"water\" in English mean the same thing because both refer to H2O — not because the mental states of speakers coincide." },
+              { "label": "In medicine and diagnosis", "example": "Before the discovery of H2O, doctors used the word \"water\" — and were talking about the same substance as modern chemists. This supports Putnam's thesis: reference is fixed by reality, not by theory." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Choose a word you use often — \"success,\" \"justice,\" \"freedom.\" Ask: what exactly in the world makes this word true or false? This isn't a rhetorical question — it's an attempt to find the \"external\" anchor for meaning that Putnam described."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/twin_earth" }]
+}

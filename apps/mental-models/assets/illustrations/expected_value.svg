@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Title formula -->
+  <text x="200" y="35" text-anchor="middle" font-family="monospace" font-size="15" fill="#e8c44a" font-weight="bold">EV = Σ ( p × x )</text>
+  <!-- Decision tree -->
+  <!-- Root node -->
+  <circle cx="70" cy="120" r="18" fill="#1e3a5f" stroke="#4a90d9" stroke-width="2"/>
+  <text x="70" y="116" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#87ceeb">Решение</text>
+  <text x="70" y="128" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#87ceeb">?</text>
+  <!-- Branch 1: coin flip -->
+  <line x1="88" y1="110" x2="160" y2="80" stroke="#4a90d9" stroke-width="1.5"/>
+  <line x1="88" y1="130" x2="160" y2="160" stroke="#4a90d9" stroke-width="1.5"/>
+  <!-- Probability labels on branches -->
+  <text x="120" y="88" font-family="sans-serif" font-size="10" fill="#4a90d9">p = 0.5</text>
+  <text x="120" y="155" font-family="sans-serif" font-size="10" fill="#4a90d9">p = 0.5</text>
+  <!-- Outcome nodes -->
+  <circle cx="185" cy="75" r="22" fill="#1e3a1e" stroke="#4adf8a" stroke-width="2"/>
+  <text x="185" y="71" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4adf8a" font-weight="bold">+$200</text>
+  <text x="185" y="84" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a">орёл</text>
+  <circle cx="185" cy="165" r="22" fill="#3a1e1e" stroke="#e85d5d" stroke-width="2"/>
+  <text x="185" y="161" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d" font-weight="bold">−$100</text>
+  <text x="185" y="174" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">решка</text>
+  <!-- EV calculation -->
+  <rect x="240" y="60" width="145" height="110" fill="#0d1530" rx="8" stroke="#4a90d9" stroke-width="1"/>
+  <text x="312" y="82" text-anchor="middle" font-family="monospace" font-size="10" fill="#e8c44a" font-weight="bold">Расчёт EV</text>
+  <line x1="252" y1="88" x2="372" y2="88" stroke="#333" stroke-width="1"/>
+  <text x="312" y="104" text-anchor="middle" font-family="monospace" font-size="10" fill="#4adf8a">0.5 × 200 = +100</text>
+  <text x="312" y="120" text-anchor="middle" font-family="monospace" font-size="10" fill="#e85d5d">0.5 × (−100) = −50</text>
+  <line x1="252" y1="128" x2="372" y2="128" stroke="#555" stroke-width="1"/>
+  <text x="312" y="146" text-anchor="middle" font-family="monospace" font-size="13" fill="#e8c44a" font-weight="bold">EV = +$50</text>
+  <text x="312" y="162" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a">▲ Выгодно играть!</text>
+  <!-- Human intuition vs math -->
+  <rect x="20" y="218" width="360" height="65" fill="#1a1a2e" rx="0"/>
+  <rect x="20" y="218" width="175" height="62" fill="#2a1a1a" rx="6" stroke="#e85d5d" stroke-width="1"/>
+  <text x="107" y="236" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d" font-weight="bold">Интуиция</text>
+  <text x="107" y="252" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d">«Можно потерять $100»</text>
+  <text x="107" y="268" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">→ Отказывается</text>
+  <rect x="205" y="218" width="175" height="62" fill="#1a2a1a" rx="6" stroke="#4adf8a" stroke-width="1"/>
+  <text x="292" y="236" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a" font-weight="bold">EV-мышление</text>
+  <text x="292" y="252" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4adf8a">«В среднем +$50 за игру»</text>
+  <text x="292" y="268" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">→ Играет</text>
+</svg>

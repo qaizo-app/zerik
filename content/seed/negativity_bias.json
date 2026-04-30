@@ -1,0 +1,168 @@
+{
+  "id": "negativity_bias",
+  "category": "cognitive_biases",
+  "release_number": 112,
+  "release_date": "2026-08-01",
+  "tags": ["negativity", "bad_is_stronger", "evolution", "emotions", "risk", "loss_aversion"],
+  "difficulty": 1,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/negativity_bias.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №22" } },
+        {
+          "type": "hook",
+          "props": { "text": "Один плохой отзыв перевешивает пять хороших. Одно грубое слово запоминается на неделю — десять похвал забываются к вечеру. Плохие новости расходятся быстрее хороших. Это не слабость характера — это миллионы лет эволюции, встроенные в ваш мозг." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Негативность}} по умолчанию" } },
+        { "type": "subtitle", "props": { "text": "Негативность-бэйас — асимметрия плохого и хорошего" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/negativity_bias.svg", "alt": "Весы: одна гиря со знаком минус перевешивает пять гирь со знаками плюс; стрелка наклонена в сторону негативной гири" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Психологи Рой Баумайстер и Кэтлин Вос в метаанализе 2001 года задокументировали фундаментальную асимметрию: плохие события оказывают более сильное психологическое воздействие, чем события равной интенсивности, но положительные. Это работает в памяти, эмоциях, обучении, принятии решений и межличностных отношениях.",
+              "Эволюционная логика проста: {{em:для выживания цена ошибки реагирования была асимметричной.}} Не заметить хищника — смерть. Не заметить ягоду — всего лишь упущенная еда. Мозг, настроенный на немедленную реакцию на негативные стимулы, выживал лучше — даже если цена — постоянная тревожность в безопасном мире.",
+              "Негативность-бэйас проявляется повсюду: первые впечатления формируются быстрее от негативных черт, одно предательство разрушает годами строившееся доверие, у детей плохие события влияют на поведение сильнее, чем хорошие. Исследования брака (Готтман) показывают: для устойчивых отношений нужно минимум 5 позитивных взаимодействий на каждое негативное."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Плохие события, опыт и информация оказывают на нас более сильное и продолжительное психологическое воздействие, чем события равной интенсивности, но положительные. Эта асимметрия — эволюционный механизм, который в современном мире часто становится источником систематических ошибок."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Менеджер даёт сотруднику обратную связь: 8 позитивных комментариев и 1 резкий критический. На чём сотрудник скорее всего сосредоточится?",
+            "setup": null,
+            "options": [
+              { "id": "balanced", "text": "На балансе — 8 хороших против 1 плохого, итог положительный", "is_wiser": false },
+              { "id": "negative", "text": "На критическом — он будет помниться дольше и сильнее всех остальных", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "ожидают, что сотрудник воспримет обратную связь сбалансированно",
+              "explanation": "Это классическое проявление негативности-бэйас в рабочей среде. Исследования показывают: критические комментарии обрабатываются глубже, запоминаются лучше и влияют на самооценку сильнее. Именно поэтому Готтман обнаружил соотношение 5:1 для стабильных браков — и именно поэтому эффективная обратная связь требует понимания этой асимметрии.",
+              "wisdom": "{{em:«Плохое сильнее хорошего». — Рой Баумайстер}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Знание о негативности-бэйас не делает вас иммунным к нему — это не ошибка мышления, которую можно «исправить» усилием воли. Полезная стратегия — не «игнорировать плохое», а осознанно учитывать асимметрию: при анализе ситуации намеренно искать позитивные данные, которые мозг недооценивает."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В СМИ", "example": "Плохие новости продаются лучше — это не цинизм редакторов, а адаптация к аудитории с негативностью-бэйас. Постоянное потребление новостей при этом создаёт искажённую картину мира: люди переоценивают вероятность катастроф." },
+              { "label": "В продуктовом дизайне", "example": "Один баг или неудобство в UX наносит больше ущерба, чем пять удачных функций приносят выгоды. Команды, работающие с пользовательским опытом, используют это как правило: сначала устранить боль, потом добавить удовольствие." },
+              { "label": "В управлении репутацией", "example": "Исследования показывают: потребителю нужно прочитать ~12 позитивных отзывов, чтобы нейтрализовать один негативный. Именно поэтому один вирусный скандал может уничтожить репутацию, строившуюся годами." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В конце дня вспомните три хороших события — любого масштаба. Это не токсичный позитивизм: это намеренная коррекция системы, которая по умолчанию записывает плохое вдвойне. Несколько недель такой практики изменяет базовый эмоциональный тон."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №22" } },
+        {
+          "type": "hook",
+          "props": { "text": "One bad review outweighs five good ones. One rude word is remembered for a week — ten compliments are forgotten by evening. Bad news spreads faster than good news. This isn't weakness of character — it's millions of years of evolution, built into your brain." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Negativity}} by Default" } },
+        { "type": "subtitle", "props": { "text": "Negativity Bias — the asymmetry of bad and good" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/negativity_bias.svg", "alt": "Scales: one weight with a minus sign outweighs five weights with plus signs; the arrow tilts toward the negative weight" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Psychologists Roy Baumeister and Kathleen Vohs documented in a 2001 meta-analysis a fundamental asymmetry: bad events have a stronger psychological impact than events of equal intensity that are positive. This applies to memory, emotion, learning, decision-making, and interpersonal relationships.",
+              "The evolutionary logic is simple: {{em:the cost of a missed threat was asymmetric.}} Failing to notice a predator meant death. Failing to notice a berry meant only a missed meal. A brain tuned for rapid response to negative stimuli survived better — even if the cost is chronic anxiety in a safe world.",
+              "Negativity bias shows up everywhere: first impressions form faster from negative traits; a single betrayal destroys years of built trust; in children, bad events influence behavior more strongly than good ones. Gottman's marriage research shows: stable relationships require at least 5 positive interactions for every negative one."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Bad events, experiences, and information have a stronger and more lasting psychological impact than events of equal intensity that are positive. This asymmetry is an evolutionary mechanism that in the modern world often becomes a source of systematic errors."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A manager gives an employee feedback: 8 positive comments and 1 sharp criticism. What will the employee most likely focus on?",
+            "setup": null,
+            "options": [
+              { "id": "balanced", "text": "The balance — 8 good against 1 bad, the net result is positive", "is_wiser": false },
+              { "id": "negative", "text": "The criticism — it will be remembered longer and more intensely than everything else", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "expect the employee to take the feedback in stride",
+              "explanation": "This is a classic manifestation of negativity bias in the workplace. Research shows: critical comments are processed more deeply, remembered better, and affect self-esteem more powerfully. That's exactly why Gottman found the 5:1 ratio for stable marriages — and why effective feedback requires understanding this asymmetry.",
+              "wisdom": "{{em:\"Bad is stronger than good.\" — Roy Baumeister}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Knowing about negativity bias doesn't immunize you to it — it's not a thinking error you can \"fix\" through willpower. A useful strategy isn't \"ignore the bad\" — it's consciously accounting for the asymmetry: when analyzing a situation, deliberately seek out positive data that your brain is underweighting."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In media", "example": "Bad news sells better — this isn't editorial cynicism, it's adaptation to an audience with negativity bias. Constant news consumption then creates a distorted worldview: people overestimate the probability of disasters." },
+              { "label": "In product design", "example": "One bug or UX friction causes more damage than five well-designed features provide benefit. Teams working on user experience use this as a rule: eliminate pain first, then add delight." },
+              { "label": "In reputation management", "example": "Research shows: a consumer needs to read ~12 positive reviews to neutralize one negative one. That's why a single viral scandal can destroy a reputation built over years." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "At the end of the day, recall three good things that happened — at any scale. This isn't toxic positivity: it's a deliberate correction of a system that by default records the bad twice over. A few weeks of this practice shifts the baseline emotional tone."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/negativity_bias" }]
+}

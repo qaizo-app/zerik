@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Wire mother (left) -->
+  <rect x="60" y="100" width="8" height="120" fill="#8b6914" rx="2"/>
+  <rect x="40" y="100" width="48" height="8" fill="#8b6914" rx="2"/>
+  <circle cx="64" cy="88" r="18" fill="none" stroke="#8b6914" stroke-width="3"/>
+  <!-- Wire grid body -->
+  <g stroke="#c4a35a" stroke-width="1.5" opacity="0.8">
+    <rect x="42" y="120" width="44" height="60" fill="none" stroke="#c4a35a" stroke-width="1.5" rx="3"/>
+    <line x1="53" y1="120" x2="53" y2="180"/>
+    <line x1="64" y1="120" x2="64" y2="180"/>
+    <line x1="75" y1="120" x2="75" y2="180"/>
+    <line x1="42" y1="135" x2="86" y2="135"/>
+    <line x1="42" y1="150" x2="86" y2="150"/>
+    <line x1="42" y1="165" x2="86" y2="165"/>
+  </g>
+  <!-- Milk bottle on wire mother -->
+  <rect x="72" y="126" width="12" height="18" fill="#e8d5b7" rx="3"/>
+  <rect x="74" y="122" width="8" height="6" fill="#d4c0a0" rx="1"/>
+  <text x="64" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#c4a35a">Проволочная мать</text>
+  <text x="64" y="252" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#c4a35a">(с молоком)</text>
+  <!-- Cloth mother (right) - soft and warm -->
+  <rect x="240" y="100" width="8" height="120" fill="#8b6914" rx="2"/>
+  <rect x="220" y="100" width="48" height="8" fill="#8b6914" rx="2"/>
+  <circle cx="244" cy="88" r="20" fill="#c17b3f" rx="2"/>
+  <!-- Cloth body -->
+  <rect x="222" y="118" width="44" height="64" fill="#c17b3f" rx="6"/>
+  <!-- Soft texture lines -->
+  <g stroke="#d4905a" stroke-width="1" opacity="0.5">
+    <line x1="228" y1="128" x2="260" y2="128"/>
+    <line x1="226" y1="140" x2="262" y2="140"/>
+    <line x1="228" y1="152" x2="260" y2="152"/>
+    <line x1="226" y1="164" x2="262" y2="164"/>
+  </g>
+  <!-- Baby monkey clinging to cloth mother -->
+  <ellipse cx="244" cy="152" rx="14" ry="18" fill="#a0724a" opacity="0.9"/>
+  <circle cx="244" cy="136" r="10" fill="#a0724a"/>
+  <!-- Arms wrapping -->
+  <path d="M230 148 Q224 152 226 160" stroke="#a0724a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M258 148 Q264 152 262 160" stroke="#a0724a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="244" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#c17b3f">Матерчатая мать</text>
+  <text x="244" y="252" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#c17b3f">(без молока)</text>
+  <!-- Arrow showing preference -->
+  <path d="M155 155 L195 155" stroke="#e8c44a" stroke-width="2.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e8c44a"/>
+    </marker>
+  </defs>
+  <!-- Bar chart: time preference -->
+  <rect x="310" y="190" width="14" height="12" fill="#c4a35a" opacity="0.6"/>
+  <rect x="330" y="140" width="14" height="62" fill="#c17b3f"/>
+  <text x="317" y="210" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#c4a35a">Wire</text>
+  <text x="337" y="210" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#c17b3f">Cloth</text>
+  <text x="323" y="220" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">Время / день</text>
+  <!-- Title -->
+  <text x="200" y="278" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e8e8e8" font-weight="bold">Привязанность — не еда</text>
+</svg>

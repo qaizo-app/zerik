@@ -1,0 +1,168 @@
+{
+  "id": "friendship_paradox",
+  "category": "paradoxes",
+  "release_number": 108,
+  "release_date": "2026-07-28",
+  "tags": ["friendship", "social_networks", "statistics", "graph_theory", "networks"],
+  "difficulty": 2,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/friendship_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "У ваших друзей, в среднем, больше друзей, чем у вас. Это не субъективное ощущение и не результат вашей нелюдимости. Это математически неизбежное свойство любой социальной сети." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:дружбы}}" } },
+        { "type": "subtitle", "props": { "text": "Парадокс дружбы · Скотт Фелд · 1991" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/friendship_paradox.svg", "alt": "Граф социальных связей: центральный узел с 10 связями окружён узлами с 1-2 связями — его включают все, поднимая 'среднее' для каждого участника" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Социолог Скотт Фелд в 1991 году доказал математически: в любой реальной социальной сети среднее количество друзей у ваших друзей больше, чем у вас самих. Механизм прост: люди с большим числом связей появляются в большем числе списков друзей. Человек с 500 друзьями входит в 500 списков; человек с двумя друзьями — только в два. Поэтому «среднестатистический друг» выборочно перекошен в сторону социально активных людей.",
+              "{{em:Парадокс не говорит, что вы непопулярны — он говорит, что выборка ваших друзей нерепрезентативна для всей сети.}} Тот же эффект работает в соцсетях: ваша лента состоит из людей с высокой активностью, что создаёт иллюзию, что «все» публикуют больше, путешествуют больше и живут насыщеннее. Это математический артефакт, а не реальность.",
+              "Практические последствия выходят за рамки психологии. Эпидемиологи используют парадокс дружбы для раннего обнаружения эпидемий: «друзья» среднестатистического человека с высокой вероятностью находятся ближе к эпидемическому центру и заболеют раньше. Мониторинг их состояния даёт опережающий сигнал."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Люди с большим числом связей с большей вероятностью попадают в выборку «друзей». Это систематически завышает воспринимаемую популярность окружающих и создаёт иллюзию собственной социальной неполноценности — когда реальная причина чисто математическая."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы смотрите соцсети и замечаете: кажется, все ваши знакомые активнее, популярнее и интереснее вас. Что это?",
+            "setup": null,
+            "options": [
+              { "id": "reality", "text": "Отражение реальности — у большинства людей действительно более насыщенная жизнь", "is_wiser": false },
+              { "id": "math", "text": "Математический артефакт — активные люди чаще попадают в вашу ленту", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "принимают это за отражение реальности",
+              "explanation": "Ваша лента — не репрезентативная выборка человечества. Алгоритмы соцсетей дополнительно усиливают парадокс Фелда: они продвигают контент активных пользователей, делая их ещё более заметными. Сравнение себя с этой выборкой — заведомо проигрышное и математически некорректное.",
+              "wisdom": "{{em:Не сравнивайте свою внутреннюю жизнь с чужой внешней витриной — и особенно не с витриной, отобранной алгоритмом.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Парадокс дружбы — это не утешение и не повод игнорировать реальные социальные различия. Неравенство в связях существует. Суть парадокса — в том, что ваша точка наблюдения систематически искажает вашу оценку этого неравенства в сторону преувеличения."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В психологии соцсетей", "example": "Исследования подтверждают: пользователи Facebook систематически считают, что у их друзей больше друзей и они счастливее. Прямой источник FOMO и снижения самооценки — математический эффект, а не объективная реальность." },
+              { "label": "В эпидемиологии", "example": "Метод «дружеской выборки»: вместо случайного мониторинга населения следят за «друзьями» случайных людей. Это даёт более ранний сигнал о начале эпидемии — потому что «друзья» статистически ближе к источнику." },
+              { "label": "В карьере", "example": "На конференции кажется, что все вокруг успешнее. Это парадокс Фелда в действии: на конференцию едут активные люди с большим числом связей. Ваши коллеги, которые остались дома, — не менее типичные представители индустрии." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Следующий раз, когда вы почувствуете, что «все» что-то имеют, делают или знают больше вас — спросите: это реальность или парадокс дружбы? Кто попал в эту «выборку» и почему именно они."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "Your friends, on average, have more friends than you. This isn't a subjective feeling or a sign of your introversion. It's a mathematically inevitable property of any social network." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Friendship}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Friendship Paradox · Scott Feld · 1991" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/friendship_paradox.svg", "alt": "A social graph: a central node with 10 connections is surrounded by nodes with 1–2 connections — it appears in everyone's list, raising the 'average' for every participant" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Sociologist Scott Feld proved mathematically in 1991: in any real social network, your friends' average friend count is higher than yours. The mechanism is simple: people with more connections appear in more friend lists. Someone with 500 friends appears in 500 lists; someone with two friends appears in only two. So the \"average friend\" is selectively skewed toward the socially active.",
+              "{{em:The paradox doesn't say you're unpopular — it says your sample of friends is unrepresentative of the whole network.}} The same effect operates on social media: your feed consists of highly active users, creating the illusion that \"everyone\" posts more, travels more, and lives more richly. It's a mathematical artifact — not reality.",
+              "The practical implications go beyond psychology. Epidemiologists use the friendship paradox for early outbreak detection: the \"friends\" of an average person are statistically more likely to be closer to an epidemic center and to become ill earlier. Monitoring their health gives an advance warning signal."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "People with more connections are more likely to end up in someone's sample of \"friends.\" This systematically inflates our perception of others' popularity and creates the illusion of social inadequacy — when the real cause is purely mathematical."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You scroll through social media and notice: everyone you know seems more active, popular, and interesting than you. What is this?",
+            "setup": null,
+            "options": [
+              { "id": "reality", "text": "A reflection of reality — most people genuinely have more going on", "is_wiser": false },
+              { "id": "math", "text": "A mathematical artifact — active people appear in your feed more often", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "take this as a reflection of reality",
+              "explanation": "Your feed is not a representative sample of humanity. Social media algorithms amplify Feld's paradox further: they promote content from active users, making them even more visible. Comparing yourself to this sample is both guaranteed to make you feel worse and statistically incorrect.",
+              "wisdom": "{{em:Don't compare your inner life to someone else's curated highlight reel — especially one selected by an algorithm.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The friendship paradox isn't consolation or a reason to ignore real social inequalities. Connection inequality exists. The point of the paradox is that your vantage point systematically distorts your assessment of that inequality — making it appear larger than it is."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In social media psychology", "example": "Studies confirm: Facebook users consistently believe their friends have more friends and are happier. The direct source of FOMO and lowered self-esteem is a mathematical effect — not objective reality." },
+              { "label": "In epidemiology", "example": "The \"friend sampling\" method: instead of monitoring a random population, track the \"friends\" of random people. This gives an earlier epidemic signal — because friends are statistically closer to the source." },
+              { "label": "In careers", "example": "At a conference, everyone seems more successful. That's Feld's paradox in action: conferences attract active people with many connections. Your colleagues who stayed home are just as representative of the industry." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "The next time you feel like \"everyone\" has more than you — ask: is this reality or the friendship paradox? Who ended up in this \"sample\" and why exactly them?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/friendship_paradox" }]
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Left: Natural with green check -->
+  <rect x="20" y="50" width="155" height="160" fill="#1a2a1a" stroke="#4adf8a" stroke-width="2" rx="8"/>
+  <text x="97" y="74" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#4adf8a" font-weight="bold">«НАТУРАЛЬНОЕ»</text>
+  <!-- Leaf -->
+  <path d="M75 110 Q97 85 120 110 Q97 135 75 110 Z" fill="#2d5a2d"/>
+  <line x1="97" y1="110" x2="97" y2="130" stroke="#4adf8a" stroke-width="1.5"/>
+  <!-- Mushroom (death cap - natural but deadly) -->
+  <ellipse cx="97" cy="155" rx="20" ry="10" fill="#8B6914"/>
+  <rect x="93" y="155" width="8" height="18" fill="#c8b87a" rx="2"/>
+  <text x="97" y="190" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e85d5d">⚠ Бледная поганка</text>
+  <text x="97" y="202" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">тоже натуральная</text>
+  <!-- Green checkmark (wrong application) -->
+  <text x="155" y="75" font-family="sans-serif" font-size="22" fill="#4adf8a" opacity="0.8">✓</text>
+  <!-- Right: Artificial with red X -->
+  <rect x="225" y="50" width="155" height="160" fill="#1a1a2a" stroke="#e85d5d" stroke-width="2" rx="8"/>
+  <text x="302" y="74" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e85d5d" font-weight="bold">«СИНТЕТИЧЕСКОЕ»</text>
+  <!-- Pill/medicine -->
+  <ellipse cx="285" cy="115" rx="18" ry="10" fill="#4a90d9"/>
+  <ellipse cx="319" cy="115" rx="18" ry="10" fill="#e85d5d"/>
+  <text x="302" y="140" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4adf8a">✓ Пенициллин</text>
+  <text x="302" y="152" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4adf8a">✓ Вакцины</text>
+  <text x="302" y="164" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4adf8a">✓ Инсулин</text>
+  <text x="302" y="178" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4adf8a">спасают жизни</text>
+  <!-- Red X (wrong application) -->
+  <text x="355" y="78" font-family="sans-serif" font-size="22" fill="#e85d5d" opacity="0.8">✗</text>
+  <!-- Center: NOT EQUAL sign -->
+  <rect x="183" y="110" width="34" height="50" fill="#0d1530" rx="4"/>
+  <text x="200" y="131" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#888">=</text>
+  <line x1="183" y1="140" x2="217" y2="140" stroke="#e85d5d" stroke-width="3"/>
+  <text x="200" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d">НЕТ</text>
+  <!-- Bottom rule -->
+  <rect x="20" y="230" width="360" height="55" fill="#0d1530" rx="8"/>
+  <text x="200" y="250" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e8c44a" font-weight="bold">Апелляция к природе</text>
+  <text x="200" y="266" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#aaa">«Натуральное» ≠ безопасное / хорошее</text>
+  <text x="200" y="280" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888">Доза делает яд. — Парацельс</text>
+</svg>

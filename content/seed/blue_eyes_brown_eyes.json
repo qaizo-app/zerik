@@ -1,0 +1,186 @@
+{
+  "id": "blue_eyes_brown_eyes",
+  "category": "psychology_experiments",
+  "release_number": 114,
+  "release_date": "2026-08-03",
+  "tags": ["jane_elliott", "prejudice", "discrimination", "race", "classroom", "privilege"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/blue_eyes_brown_eyes.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Эксперимент · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "На следующий день после убийства Мартина Лютера Кинга учительница третьего класса Джейн Эллиотт разделила детей на две группы: голубоглазые и кареглазые. Объяснила: голубоглазые умнее и лучше. К обеду это стало правдой — в оценках, поведении и унижениях, которые дети причиняли друг другу." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Карие}} и голубые" } },
+        { "type": "subtitle", "props": { "text": "Эксперимент Эллиотт · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/blue_eyes_brown_eyes.svg", "alt": "Класс, разделённый на две группы по цвету глаз; одна группа с бейджами 'привилегированных', другая без; учительница у доски" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "Джейн Эллиотт, учитель начальной школы, Айова",
+            "when": "5 апреля 1968",
+            "what": "На следующий день после убийства Мартина Лютера Кинга Эллиотт разделила 28 учеников третьего класса по цвету глаз. День первый: голубоглазым — привилегии, похвала, добавка в обед; кареглазым — ошейники, критика, запрет пить из общего фонтанчика. День второй — роли поменялись.",
+            "result": "В первый день голубоглазые улучшили результаты тестов, начали издеваться над кареглазыми. Кареглазые ухудшили результаты, стали робкими. При смене ролей на второй день — всё изменилось ровно в обратную сторону."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Эксперимент показал: предрассудок — не продукт длительного воспитания. За несколько часов дети усвоили дискриминацию и начали её воспроизводить. «Привилегированная» группа немедленно начала угнетать другую — и находить этому оправдания. «Непривилегированная» — интернализировала ярлык неполноценности и продемонстрировала ухудшение когнитивных результатов.",
+              "{{em:Эффект Пигмалиона в обратную сторону: скажи ребёнку, что он хуже — и он станет хуже.}} Эллиотт показала, что разрыв в образовательных результатах между разными группами не объясняется биологией — он создаётся ожиданиями, статусом и структурой среды. Это прямое опровержение тезиса о «врождённой» неравноценности.",
+              "Эксперимент повторяли с взрослыми — корпоративными сотрудниками, государственными служащими. Результаты воспроизводились: «низшая» группа демонстрировала более медленную реакцию, худшую командную работу и большее число ошибок — даже зная, что это эксперимент. Осознание не защищало от воздействия."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Предрассудок и дискриминация усваиваются быстро — за часы, а не годы — и немедленно влияют на когнитивные результаты обеих групп. Привилегия делает, а не отражает: статус, навязанный средой, становится самоисполняющимся."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Группа студентов знает, что их разделили произвольно. Повлияет ли присвоенный статус на их результаты?",
+            "setup": null,
+            "options": [
+              { "id": "no", "text": "Нет — взрослые и образованные люди понимают, что это искусственно", "is_wiser": false },
+              { "id": "yes", "text": "Да — статус влияет на результаты, даже когда его искусственность известна", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что осознание защищает от эффекта",
+              "explanation": "Эллиотт проводила эксперимент с взрослыми специалистами — включая тех, кто знал о нём. Статус воздействовал на поведение и результаты в обоих случаях. Это одно из самых тревожных открытий: понимание механизма не отменяет его действие. Стереотипная угроза (stereotype threat) — задокументированный феномен.",
+              "wisdom": "{{em:Расизм — не генетика. Это учебный план. — Джейн Эллиотт}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эксперимент часто интерпретируют как доказательство «всеобщей склонности к предрассудкам». Это упрощение. Эллиотт показала другое: среда, создающая иерархию, почти неизбежно генерирует предрассудок. Изменение среды — а не природы людей — изменяет поведение."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В образовании", "example": "Эффект Пигмалиона (ожидания учителя влияют на успеваемость) и стереотипная угроза (знание стереотипа о своей группе снижает результаты) — оба феномена документально подтверждены и воспроизводят логику эксперимента Эллиотт." },
+              { "label": "В организациях", "example": "Исследования показывают: если сотрудникам дать понять, что «группа X» менее способна — члены этой группы начнут хуже работать. Предположения менеджеров о потенциале создают самоисполняющиеся пророчества." },
+              { "label": "В социальной политике", "example": "Дебаты об афроамериканском разрыве в образовании, гендерном разрыве в STEM — эксперимент Эллиотт остаётся одним из сильнейших аргументов против биологического детерминизма и в пользу структурных объяснений." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Подумайте о группе, к которой вы принадлежите — и о группе, к которой не принадлежите. Какой статус среда присваивает каждой из них? Как это влияет на ожидания — ваши и окружающих? Это не абстрактный вопрос — это вопрос о вашей текущей реальности."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Experiment · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "The day after Martin Luther King's assassination, third-grade teacher Jane Elliott divided her students into two groups: blue-eyed and brown-eyed. She explained: blue-eyed children are smarter and better. By lunchtime, this had become true — in test scores, in behavior, and in the humiliations children inflicted on each other." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Blue}} Eyes and Brown Eyes" } },
+        { "type": "subtitle", "props": { "text": "Elliott's Experiment · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/blue_eyes_brown_eyes.svg", "alt": "A classroom divided into two groups by eye color; one group wears 'privileged' badges, the other doesn't; teacher at the board" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "Jane Elliott, elementary school teacher, Iowa",
+            "when": "April 5, 1968",
+            "what": "The day after MLK's assassination, Elliott divided 28 third graders by eye color. Day one: blue-eyed children received privileges, praise, and extra helpings at lunch; brown-eyed children wore collars, received criticism, and were forbidden from the common water fountain. Day two — roles reversed.",
+            "result": "On day one, blue-eyed children improved their test scores and began bullying brown-eyed peers. Brown-eyed children's scores dropped and they became timid. When roles reversed on day two, everything flipped in the opposite direction."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The experiment showed: prejudice is not the product of years of upbringing. Within hours, children had absorbed discrimination and begun reproducing it. The \"privileged\" group immediately began oppressing the other — and finding justifications for it. The \"unprivileged\" group internalized the inferiority label and showed measurable declines in cognitive performance.",
+              "{{em:The Pygmalion effect in reverse: tell a child they're inferior — and they become inferior.}} Elliott showed that gaps in educational outcomes between groups are not explained by biology — they are created by expectations, status, and the structure of the environment. This is a direct refutation of the claim of \"innate\" inequality.",
+              "The experiment was replicated with adults — corporate employees, civil servants. Results reproduced: the \"lower\" group showed slower reactions, worse teamwork, and more errors — even knowing it was an experiment. Awareness did not protect against the effect."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Prejudice and discrimination are learned quickly — in hours, not years — and immediately affect cognitive outcomes in both groups. Privilege creates, rather than reflects: a status imposed by the environment becomes self-fulfilling."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A group of students knows they were divided arbitrarily. Will the assigned status affect their performance?",
+            "setup": null,
+            "options": [
+              { "id": "no", "text": "No — adults and educated people understand it's artificial", "is_wiser": false },
+              { "id": "yes", "text": "Yes — status affects outcomes even when its artificiality is known", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "believe that awareness protects against the effect",
+              "explanation": "Elliott ran the experiment with adult professionals — including those who knew about it. Status affected behavior and outcomes in both cases. This is one of the most disturbing findings: understanding the mechanism doesn't cancel its operation. Stereotype threat is a well-documented phenomenon.",
+              "wisdom": "{{em:Racism is not genetics. It's a curriculum. — Jane Elliott}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The experiment is often interpreted as proof of a \"universal tendency toward prejudice.\" This is an oversimplification. What Elliott showed is different: an environment that creates hierarchy almost inevitably generates prejudice. Changing the environment — not human nature — changes behavior."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In education", "example": "The Pygmalion effect (teacher expectations affect student performance) and stereotype threat (knowledge of a group stereotype reduces performance) — both are well-documented and reproduce the logic of Elliott's experiment." },
+              { "label": "In organizations", "example": "Research shows: if employees receive signals that \"group X\" is less capable, members of that group begin to perform worse. Managers' assumptions about potential create self-fulfilling prophecies." },
+              { "label": "In social policy", "example": "Debates about the racial achievement gap in education and gender gaps in STEM — Elliott's experiment remains one of the strongest arguments against biological determinism and for structural explanations." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think about a group you belong to — and one you don't. What status does the environment assign to each? How does this affect expectations — yours and others'? This isn't an abstract question — it's a question about your current reality."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/blue_eyes_brown_eyes" }]
+}

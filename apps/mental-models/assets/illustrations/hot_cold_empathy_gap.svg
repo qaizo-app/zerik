@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Cold state (left) -->
+  <circle cx="90" cy="120" r="45" fill="#1a2a3a" stroke="#4a90d9" stroke-width="2" opacity="0.9"/>
+  <text x="90" y="108" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#87ceeb" font-weight="bold">ХОЛОДНЫЙ</text>
+  <text x="90" y="122" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#87ceeb">РЕЖИМ</text>
+  <text x="90" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">спокойный, сытый</text>
+  <!-- Thought bubble from cold: "I will not..." -->
+  <ellipse cx="90" cy="60" rx="48" ry="18" fill="#1e3a5f" stroke="#4a90d9" stroke-width="1.5"/>
+  <text x="90" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#87ceeb">«Я не сделаю X»</text>
+  <!-- Snowflake icon -->
+  <g stroke="#87ceeb" stroke-width="1.5" opacity="0.5">
+    <line x1="90" y1="185" x2="90" y2="205"/>
+    <line x1="80" y1="195" x2="100" y2="195"/>
+    <line x1="83" y1="188" x2="97" y2="202"/>
+    <line x1="97" y1="188" x2="83" y2="202"/>
+  </g>
+  <!-- Gap / chasm -->
+  <rect x="148" y="80" width="24" height="130" fill="#0d0d1a"/>
+  <text x="160" y="148" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">пропасть</text>
+  <!-- Hot state (right) -->
+  <circle cx="310" cy="120" r="45" fill="#3a1a1a" stroke="#e85d5d" stroke-width="2" opacity="0.9"/>
+  <text x="310" y="108" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#f08080" font-weight="bold">ГОРЯЧИЙ</text>
+  <text x="310" y="122" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#f08080">РЕЖИМ</text>
+  <text x="310" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">голодный, злой</text>
+  <!-- Thought bubble from hot: action taken -->
+  <ellipse cx="310" cy="60" rx="48" ry="18" fill="#3a1e1e" stroke="#e85d5d" stroke-width="1.5"/>
+  <text x="310" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d">Делает X!</text>
+  <!-- Flame icon -->
+  <g opacity="0.6">
+    <path d="M303 185 Q307 175 310 180 Q312 170 316 178 Q318 185 310 195 Q302 185 303 185" fill="#e85d5d"/>
+    <path d="M306 185 Q309 178 310 182 Q312 175 315 182 Q316 187 310 193" fill="#ffad1f"/>
+  </g>
+  <!-- Arrow showing gap -->
+  <path d="M137 120 L155 120" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+  <path d="M172 120 L190 120" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Labels -->
+  <text x="200" y="170" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">Не можем предсказать «горячие» решения</text>
+  <text x="200" y="182" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">из «холодного» состояния</text>
+  <!-- Examples box -->
+  <rect x="20" y="218" width="360" height="65" fill="#0d1530" rx="8"/>
+  <text x="200" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e8c44a" font-weight="bold">Разрыв горячего-холодного</text>
+  <g font-family="sans-serif" font-size="9" fill="#aaa">
+    <text x="40" y="252">• Голодный → риск срыва диеты</text>
+    <text x="40" y="266">• Злой → другие решения в переговорах</text>
+    <text x="40" y="280">• В боли → другие финансовые ставки</text>
+  </g>
+</svg>

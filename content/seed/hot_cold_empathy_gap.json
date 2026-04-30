@@ -1,0 +1,168 @@
+{
+  "id": "hot_cold_empathy_gap",
+  "category": "cognitive_biases",
+  "release_number": 119,
+  "release_date": "2026-08-08",
+  "tags": ["empathy_gap", "hot_state", "cold_state", "decision_making", "addiction", "visceral"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/hot_cold_empathy_gap.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №23" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Я никогда бы не сорвался с диеты» — говорит человек, который только что поел. «Я не стану агрессировать в этом разговоре» — говорит человек, который ещё не слышал провокацию. Голодный, злой, влюблённый, испуганный — мы принимаем решения, которые трезвый мы никогда бы не предсказали." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Холодный}} разум, горячие решения" } },
+        { "type": "subtitle", "props": { "text": "Разрыв горячего-холодного — эмпатический пробел" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/hot_cold_empathy_gap.svg", "alt": "Два силуэта человека: левый синий (спокойный) думает «Я не буду...», правый красный (возбуждённый) делает противоположное; между ними — пропасть" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Поведенческий экономист Джордж Левенштейн описал разрыв горячего-холодного (hot-cold empathy gap): в «холодном» состоянии — сытые, спокойные, трезвые — мы систематически не можем предсказать, как будем принимать решения в «горячем» состоянии: голодные, злые, испуганные, влюблённые, физически возбуждённые. Ошибка работает в обоих направлениях: и недооценка силы «горячих» состояний (ex ante), и неспособность вспомнить их интенсивность после (ex post).",
+              "{{em:Разрыв — это не слабость воли, а структурная особенность мозга.}} «Горячие» состояния активируют другие нейронные пути, чем «холодные». Когда пути неактивны, мозг плохо моделирует, как они будут работать. Это объясняет, почему люди с зависимостью недооценивают силу тяги до следующего эпизода, почему переговорщики в спокойной обстановке завышают свою устойчивость к давлению, почему «я никогда так не сделаю» — не гарантия.",
+              "Практическое следствие: важные решения, особенно связанные с самоконтролем, договорённостями и обязательствами, лучше принимать в состоянии, близком к тому, в котором они будут исполняться. Диетолог, советующий сделать покупки в магазине после сытного обеда, — применяет этот принцип. Юрист, подписывающий контракт в момент конфликта, — нет."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "В «холодном» состоянии (спокойном, трезвом) мы систематически недооцениваем, как сильно «горячие» состояния (голод, боль, злость, возбуждение) меняют наши решения и поведение. Осознание разрыва не устраняет его — но позволяет планировать вокруг него."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы спокойны и сыты. Вы решаете: «Завтра на переговорах я не пойду на уступки по цене». Насколько можно доверять этому решению?",
+            "setup": null,
+            "options": [
+              { "id": "trust", "text": "Полностью — я обдумал всё в спокойном состоянии, это рациональное решение", "is_wiser": false },
+              { "id": "doubt", "text": "Частично — в момент давления на переговорах «горячее» состояние может изменить поведение", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "полностью доверяют «холодным» намерениям",
+              "explanation": "Исследования переговоров показывают: давление, дедлайны и эмоциональные триггеры в момент переговоров регулярно приводят к уступкам, которых участники не планировали заранее. Левенштейн задокументировал этот паттерн в сексуальных решениях, пищевых выборах, финансовых ставках — «горячее» состояние меняет поведение предсказуемо и систематически.",
+              "wisdom": "{{em:Не принимайте постоянных решений в моменты временных эмоций.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Разрыв горячего-холодного — не оправдание безответственности. «Я был в горячем состоянии» не снимает ответственности за решения. Это инструмент предвидения: если вы знаете, что в определённых ситуациях ваше поведение изменится, вы можете создать заранее структуры (обязательства, правила, среду), которые защитят вас от себя."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В зависимостях и самоконтроле", "example": "Программы лечения зависимостей обязательно включают работу с триггерами «горячего» состояния: голодный, злой, одинокий, уставший (HALT) — состояния, в которых срыв наиболее вероятен. Планирование поведения в этих состояниях заранее снижает риск." },
+              { "label": "В переговорах', \"example\": \"Опытные переговорщики предварительно устанавливают «якорные точки» — минимальные условия, от которых не отступят — именно в спокойном состоянии. Это protect-me-from-myself стратегия против разрыва горячего-холодного." },
+              { "label": "В финансовых решениях", "example": "Автоматические инвестиции (debit order investing) защищают от «горячих» решений продать при падении рынка. Инвесторы, устанавливающие их в спокойном состоянии, используют именно принцип разрыва горячего-холодного." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните решение, которое вы приняли в «горячем» состоянии и о котором потом пожалели. Спросите: как выглядела та ситуация из «холодного» состояния? Что можно было поставить заранее — как ограничитель или напоминание — чтобы защитить будущее себя?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №23" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"I would never break my diet\" — says a person who just ate. \"I won't get aggressive in this conversation\" — says a person who hasn't heard the provocation yet. Hungry, angry, in love, frightened — we make decisions that our calm selves would never have predicted." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Cold}} Mind, Hot Decisions" } },
+        { "type": "subtitle", "props": { "text": "Hot-Cold Empathy Gap — the visceral state divide" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/hot_cold_empathy_gap.svg", "alt": "Two human silhouettes: left blue (calm) thinking 'I won't...', right red (aroused) doing the opposite; a gap between them" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Behavioral economist George Loewenstein described the hot-cold empathy gap: in a \"cold\" state — full, calm, sober — we systematically fail to predict how we will make decisions in a \"hot\" state: hungry, angry, frightened, in love, physically aroused. The error runs in both directions: underestimating the force of \"hot\" states before they happen (ex ante) and failing to recall their intensity afterward (ex post).",
+              "{{em:The gap isn't a weakness of will — it's a structural feature of the brain.}} \"Hot\" states activate different neural pathways than \"cold\" ones. When those pathways are inactive, the brain poorly models how they will function. This explains why people with addictions underestimate craving intensity before the next episode, why negotiators overestimate their resilience to pressure when calm, and why \"I would never do that\" is not a guarantee.",
+              "The practical implication: important decisions, especially those involving self-control, agreements, and commitments, are better made in a state similar to the one in which they'll be executed. A nutritionist who recommends grocery shopping after a meal is applying this principle. A lawyer signing a contract in the middle of a conflict is not."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "In a \"cold\" state (calm, sober), we systematically underestimate how powerfully \"hot\" states (hunger, pain, anger, arousal) change our decisions and behavior. Awareness of the gap doesn't eliminate it — but it allows planning around it."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're calm and well-fed. You decide: \"Tomorrow in negotiations I won't concede on price.\" How much can you trust this decision?",
+            "setup": null,
+            "options": [
+              { "id": "trust", "text": "Completely — I thought it through in a calm state, it's a rational decision", "is_wiser": false },
+              { "id": "doubt", "text": "Partially — under pressure during negotiations, the 'hot' state may change behavior", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "fully trust their 'cold' intentions",
+              "explanation": "Negotiation research shows: pressure, deadlines, and emotional triggers during negotiations regularly produce concessions that participants didn't plan in advance. Loewenstein documented this pattern in sexual decisions, food choices, and financial bets — the \"hot\" state changes behavior predictably and systematically.",
+              "wisdom": "{{em:Never make permanent decisions in moments of temporary emotion.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The hot-cold empathy gap is not an excuse for irresponsibility. \"I was in a hot state\" doesn't remove accountability for decisions. It's a tool for anticipation: if you know that in certain situations your behavior will change, you can create structures in advance — commitments, rules, environmental changes — that protect you from yourself."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In addiction and self-control", "example": "Addiction treatment programs always address hot-state triggers: Hungry, Angry, Lonely, Tired (HALT) — states in which relapse is most likely. Planning behavior for these states in advance reduces risk." },
+              { "label": "In negotiations", "example": "Experienced negotiators set \"anchor points\" in advance — minimum conditions they won't abandon — precisely while calm. This is a protect-me-from-myself strategy against the hot-cold gap." },
+              { "label": "In financial decisions", "example": "Automatic investments (debit-order investing) protect against \"hot\" decisions to sell during market drops. Investors who set them up while calm are applying exactly the hot-cold gap principle." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of a decision you made in a \"hot\" state and later regretted. Ask: how did that situation look from a \"cold\" state? What could you have set up in advance — a constraint or a reminder — to protect your future self?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/hot_cold_empathy_gap" }]
+}

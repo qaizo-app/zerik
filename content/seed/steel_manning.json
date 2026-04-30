@@ -1,0 +1,168 @@
+{
+  "id": "steel_manning",
+  "category": "mental_models",
+  "release_number": 109,
+  "release_date": "2026-07-29",
+  "tags": ["argumentation", "dialogue", "epistemics", "debate", "understanding", "empathy"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/steel_manning.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Модель · №22" } },
+        {
+          "type": "hook",
+          "props": { "text": "Соломенное чучело легко поджечь. Трудно разобраться с аргументом настолько, чтобы изложить его сильнее, чем это сделал оппонент, — а потом ответить на эту усиленную версию. Именно это делают лучшие мыслители перед тем, как спорить." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Стальной}} аргумент" } },
+        { "type": "subtitle", "props": { "text": "Steel-manning — метод сильного оппонента" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/steel_manning.svg", "alt": "Два силуэта: один строит слабого соломенного человека из веток, другой — крепкую стальную фигуру; под ними метки «соломенное чучело» и «стальной аргумент»" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Steel-manning — противоположность соломенному чучелу. Вместо того чтобы искажать позицию оппонента до легко опровергаемой карикатуры, вы формулируете самую сильную, наиболее последовательную версию его аргумента — и только потом отвечаете. Это требует реального понимания позиции, которую вы собираетесь опровергнуть.",
+              "{{em:Практическая ценность: если вы не можете изложить позицию оппонента так, чтобы он сказал «да, именно это я и имею в виду» — вы ещё не готовы спорить.}} Steel-manning — это не вежливость и не уступка. Это эпистемическая дисциплина: вы защищаете себя от победы над фантомом вместо реального аргумента.",
+              "Метод полезен и в ситуациях без оппонента: перед принятием важного решения steel-man самую сильную версию контраргумента против него. Это эффективнее, чем преморtem, потому что требует не просто перечисления рисков, а конструирования настоящего интеллектуального вызова."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Steel-manning — формулировка наиболее сильной, последовательной и честной версии позиции оппонента перед ответом. Это инструмент понимания, а не риторики: он снижает количество ошибочных опровержений и делает ваши собственные аргументы устойчивее."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Оппонент говорит слабо сформулированный аргумент против вашей идеи. Ваша реакция?",
+            "setup": null,
+            "options": [
+              { "id": "weak", "text": "Отвечаете на его слабую формулировку — это легко опровергнуть", "is_wiser": false },
+              { "id": "strong", "text": "Сначала усиливаете его аргумент до самой сильной версии, потом отвечаете", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "отвечают на слабую формулировку",
+              "explanation": "Опровергнуть слабый аргумент — это не победа. Если у позиции оппонента есть сильная версия, которую вы не рассмотрели, вы просто потратили время на бой с тенью. Хуже: ваш оппонент и аудитория это заметят. Steel-manning сигнализирует о честности и создаёт настоящее интеллектуальное доверие.",
+              "wisdom": "{{em:Вы не понимаете идею, пока не можете объяснить её лучше, чем тот, кто в неё верит.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Steel-manning — не то же самое, что согласие или капитуляция. Вы можете усилить аргумент оппонента до предела — и затем всё равно убедительно его опровергнуть. Наоборот: чем сильнее версия, которую вы опровергаете, тем убедительнее ваша позиция."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В дискуссиях и дебатах", "example": "Лучшие дебатёры начинают ответ с «Самый сильный аргумент оппонента состоит в том, что...» — это одновременно демонстрирует понимание и создаёт доверие аудитории. Опровержение этого аргумента убеждает значительно сильнее." },
+              { "label": "В принятии решений", "example": "Перед важным стратегическим решением команды ставят задачу: сформулировать лучший аргумент против этого решения. Это «стальной» вариант преморtem — и он находит слабые места, которые стандартный анализ рисков пропускает." },
+              { "label": "В обучении", "example": "Студентам, изучающим противоречивые исторические периоды или политические идеологии, задают написать защиту позиции, с которой они не согласны. Это развивает понимание — и снижает идеологическую поляризацию." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Возьмите позицию, с которой вы принципиально не согласны. Напишите её steel-man версию — 3-4 предложения, которые её сторонник счёл бы честными и убедительными. Если не получается — вы ещё не понимаете эту позицию."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Model · №22" } },
+        {
+          "type": "hook",
+          "props": { "text": "A straw man is easy to burn. It's harder to understand an argument so well that you can state it more powerfully than your opponent did — and then respond to that stronger version. That's exactly what the best thinkers do before they argue." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Steel}} Man" } },
+        { "type": "subtitle", "props": { "text": "Steel-Manning — the method of the strong opponent" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/steel_manning.svg", "alt": "Two silhouettes: one building a weak straw figure from branches, the other assembling a solid steel figure — labeled 'straw man' and 'steel man' below" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Steel-manning is the opposite of a straw man. Instead of distorting your opponent's position into an easily refuted caricature, you articulate the strongest, most coherent version of their argument — and only then respond. This requires genuinely understanding the position you're about to refute.",
+              "{{em:Practical value: if you can't state your opponent's position so they'd say \"yes, that's exactly what I mean\" — you're not ready to argue.}} Steel-manning isn't politeness or a concession. It's epistemic discipline: you protect yourself from winning against a phantom instead of a real argument.",
+              "The method is useful even without an opponent: before making an important decision, steel-man the strongest counterargument against it. This is more effective than a pre-mortem, because it requires constructing a genuine intellectual challenge — not just listing risks."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Steel-manning means articulating the strongest, most coherent, and most honest version of your opponent's position before responding. It's a tool for understanding, not rhetoric — it reduces false refutations and makes your own arguments more defensible."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Your opponent makes a weakly stated argument against your idea. What do you do?",
+            "setup": null,
+            "options": [
+              { "id": "weak", "text": "Respond to the weak formulation — it's easy to refute", "is_wiser": false },
+              { "id": "strong", "text": "First strengthen the argument to its best version, then respond", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "respond to the weak formulation",
+              "explanation": "Refuting a weak argument isn't a win. If the opponent's position has a stronger version you haven't addressed, you've just fought a shadow. Worse: your opponent and the audience will notice. Steel-manning signals intellectual honesty and builds genuine credibility.",
+              "wisdom": "{{em:You don't understand an idea until you can explain it better than the person who believes it.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Steel-manning is not the same as agreement or capitulation. You can strengthen your opponent's argument to its limit — and still refute it convincingly. In fact: the stronger the version you refute, the more persuasive your position becomes."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In discussions and debates", "example": "The best debaters open their response with: \"The strongest version of my opponent's argument is...\" — this demonstrates understanding and builds audience trust. Refuting that version is far more persuasive than refuting a straw man." },
+              { "label": "In decision-making", "example": "Before major strategic decisions, teams are tasked with articulating the best argument against the decision. This is the steel-man version of the pre-mortem — and it finds weaknesses that standard risk analysis misses." },
+              { "label": "In education", "example": "Students studying contentious historical periods or political ideologies are assigned to write a defense of the position they disagree with. This builds genuine understanding — and reduces ideological polarization." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Take a position you fundamentally disagree with. Write its steel-man version — 3–4 sentences that a supporter would consider fair and compelling. If you can't — you don't yet understand that position."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/steel_manning" }]
+}
