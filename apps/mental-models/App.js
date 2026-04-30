@@ -2,12 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import * as Font from 'expo-font';
 import * as Localization from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useCallback, useEffect, useState } from 'react';
-import { Dimensions, FlatList, Pressable, Text, View } from 'react-native';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Dimensions, FlatList, Pressable, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import * as Updates from 'expo-updates';
+import * as Notifications from 'expo-notifications';
 
 import {
   ThemeProvider, useTheme,
@@ -57,6 +58,8 @@ export default function App() {
   const [initialRoute, setInitialRoute] = useState('Onboarding');
   const [user, setUser] = useState(null);
   const [hasSubscription, setHasSubscription] = useState(false);
+  const navigationRef = useRef(null);
+  const notifPending = useRef(false);
 
   // Fonts
   useEffect(() => {
@@ -70,6 +73,21 @@ export default function App() {
       'JetBrainsMono-Medium':  require('./assets/fonts/JetBrainsMono-Medium.ttf'),
       'JetBrainsMono-Bold':    require('./assets/fonts/JetBrainsMono-Bold.ttf'),
     }).then(() => setFontsReady(true)).catch(() => setFontsReady(true));
+  }, []);
+
+  // Notification tap handler (foreground/background + cold start)
+  useEffect(() => {
+    // Cold start: app was killed, user tapped notification
+    Notifications.getLastNotificationResponseAsync().then(response => {
+      if (response?.notification?.request?.content?.data?.type === 'daily_card') {
+        notifPending.current = true;
+      }
+    });
+    // Foreground/background tap
+    const sub = Notifications.addNotificationResponseReceivedListener(() => {
+      navigationRef.current?.navigate('Main');
+    });
+    return () => sub.remove();
   }, []);
 
   // OTA update check — только в production-сборках, dev-client подключается к Metro.
@@ -128,7 +146,15 @@ export default function App() {
       <GestureHandlerRootView style={{ flex: 1, backgroundColor: '#0E1014' }}>
         <ThemeProvider categoryPalettes={categoryPalettes} brand={brand}>
           <StatusBar style="light" />
-          <NavigationContainer theme={{
+          <NavigationContainer
+            ref={navigationRef}
+            onReady={() => {
+              if (notifPending.current) {
+                notifPending.current = false;
+                navigationRef.current?.navigate('Main');
+              }
+            }}
+            theme={{
             ...DarkTheme,
             dark: true,
             colors: {
@@ -326,7 +352,11 @@ function TodayTabScreen({ navigation, hasSubscription }) {
     }).catch(() => {});
   }
 
-  if (!cards) return <View style={{ flex: 1, backgroundColor: '#0E1014' }} />;
+  if (!cards) return (
+    <View style={{ flex: 1, backgroundColor: '#0E1014', alignItems: 'center', justifyContent: 'center' }}>
+      <ActivityIndicator color="#5EEAD4" size="large" />
+    </View>
+  );
 
   const today = cards[0];
   const earlier = cards.slice(1);

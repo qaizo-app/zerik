@@ -4,7 +4,7 @@
 // или History на конкретную карточку.
 
 import { useEffect, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeContext';
 import { t } from '../i18n';
@@ -34,7 +34,11 @@ export default function CardViewerScreen({ route, navigation, contentService, lo
   }, [cardId, contentService]);
 
   if (loading) {
-    return <View style={{ flex: 1, backgroundColor: palette.bg }} />;
+    return (
+      <View style={{ flex: 1, backgroundColor: palette.bg, alignItems: 'center', justifyContent: 'center' }}>
+        <ActivityIndicator color={palette.accent} size="large" />
+      </View>
+    );
   }
 
   if (!card) {
