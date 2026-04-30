@@ -1,0 +1,168 @@
+{
+  "id": "omelas",
+  "category": "thought_experiments",
+  "release_number": 127,
+  "release_date": "2026-08-16",
+  "tags": ["le_guin", "omelas", "utopia", "ethics", "sacrifice", "collective", "happiness"],
+  "difficulty": 3,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/omelas.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "Представьте идеальный город: праздник, музыка, счастье, изобилие. Все знают один секрет. В подвале одного из домов заперт ребёнок в темноте, в грязи. Счастье города зависит от его страдания. Убрать ребёнка — и всё рухнет. Что вы делаете?" }
+        },
+        { "type": "title", "props": { "text": "Уходящие из {{accent:Омеласа}}" } },
+        { "type": "subtitle", "props": { "text": "Урсула Ле Гуин · «The Ones Who Walk Away from Omelas», 1973" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/omelas.svg", "alt": "Прекрасный праздничный город сверху и тёмный подвал с одиноким ребёнком снизу" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Урсула Ле Гуин написала этот рассказ в 1973 году, вдохновившись эссе Уильяма Джеймса о том, что миллионы людей могли бы жить счастливо при условии, что один человек будет страдать в одиночестве. «Могли бы вы позволить это?» — спрашивал Джеймс. Ле Гуин превратила вопрос в живой город.",
+              "{{em:Большинство жителей Омеласа остаются.}} Они приходят к ребёнку, видят страдание, чувствуют ужас и отвращение — и принимают это. Они говорят себе: одно страдание ради счастья тысяч — это рационально. Оправдать страдание во имя большего блага — это утилитаризм в его крайней форме.",
+              "Некоторые уходят. Ле Гуин не объясняет — куда. Просто прочь из Омеласа. Они не возмущаются, не протестуют, не пытаются освободить ребёнка. Они просто не могут жить в городе, который знает — и принимает. Рассказ не даёт ответа: кто прав."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Вопрос",
+            "text": "Можно ли оправдать чьё-то страдание ради счастья большинства? Где граница между разумным компромиссом и соучастием? И что вы делаете, когда видите несправедливость, изменить которую не в ваших силах — принимаете, протестуете или уходите?"
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Что вы делаете?",
+            "question": "Вы узнали, что ваш любимый продукт производится с нарушением прав работников в другой стране. Вы не можете это изменить. Что вы делаете?",
+            "setup": null,
+            "options": [
+              { "id": "stay", "text": "Продолжаю пользоваться — это системная проблема, мои действия ничего не изменят", "is_wiser": false },
+              { "id": "leave", "text": "Отказываюсь — я не хочу быть частью системы, даже если мой отказ символичен", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "остаются в системе",
+              "explanation": "Ле Гуин не осуждает ни тех, кто остаётся, ни тех, кто уходит. Она ставит вопрос о том, что мы готовы знать — и продолжать. Уходящие не делают мир лучше немедленно. Но они отказываются быть молчаливыми участниками.",
+              "wisdom": "{{em:«Место, куда они идут, мне ещё труднее описать, чем Омелас». — Урсула Ле Гуин}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эксперимент соблазняет к утилитарному ответу: «страдание одного ради счастья тысяч — математически оправдано». Но Ле Гуин намеренно делает ребёнка конкретным, живым, видимым — потому что утилитаризм работает на абстракциях. Абстрактное страдание легко оправдывать. Конкретное — нет."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В этике технологий", "example": "Крупные платформы знают, что их продукт причиняет вред части пользователей (депрессия, зависимость), — и продолжают работать, опираясь на выгоду большинства. Кто ребёнок в подвале?" },
+              { "label": "В политике", "example": "Санкции против страны вредят простым гражданам ради давления на режим. Прокси-войны жертвуют одними ради интересов других. Омелас везде, где есть «ради большего блага»." },
+              { "label": "В личной жизни", "example": "Когда вы промолчали о несправедливости на работе, потому что «это не мой бой» — вы остались в Омеласе. Когда уволились, потому что не могли мириться — вы ушли." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите в своей жизни один «Омелас» — систему, в которой вы участвуете и знаете о её тёмной стороне. Не нужно ничего делать прямо сейчас. Просто посмотрите на это честно."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "Imagine a perfect city: celebration, music, happiness, abundance. Everyone knows one secret. In the basement of one house, a child is locked in the dark and filth. The city's happiness depends on its suffering. Remove the child — and everything collapses. What do you do?" }
+        },
+        { "type": "title", "props": { "text": "Those who walk away from {{accent:Omelas}}" } },
+        { "type": "subtitle", "props": { "text": "Ursula K. Le Guin · 'The Ones Who Walk Away from Omelas', 1973" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/omelas.svg", "alt": "Beautiful festive city above and a dark basement with a lone child below" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ursula Le Guin wrote this story in 1973, inspired by a William James essay asking whether millions could live happily if just one person suffered alone in darkness. 'Could you allow that?' James asked. Le Guin turned the question into a living city.",
+              "{{em:Most citizens of Omelas stay.}} They visit the child, see the suffering, feel horror and revulsion — and accept it. They tell themselves: one suffering for the happiness of thousands is rational. Justifying suffering for the greater good is utilitarianism in its extreme form.",
+              "Some walk away. Le Guin doesn't say where. Just away from Omelas. They don't revolt, protest, or try to free the child. They simply cannot live in a city that knows — and accepts. The story offers no answer: who is right."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "The Question",
+            "text": "Can someone's suffering be justified for the happiness of the majority? Where is the line between a reasonable compromise and complicity? And what do you do when you see an injustice you can't change — accept it, protest, or walk away?"
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "What do you do?",
+            "question": "You learn that your favorite product is made through labor rights violations in another country. You can't change it. What do you do?",
+            "setup": null,
+            "options": [
+              { "id": "stay", "text": "Keep using it — it's a systemic problem, my actions won't change anything", "is_wiser": false },
+              { "id": "leave", "text": "Stop using it — I don't want to be part of the system, even if my refusal is symbolic", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "stay in the system",
+              "explanation": "Le Guin judges neither those who stay nor those who walk away. She raises the question of what we're willing to know — and continue. Those who walk away don't improve the world immediately. But they refuse to be silent participants.",
+              "wisdom": "{{em:\"The place they go towards is a place even less imaginable to most of us than the city of happiness.\" — Ursula K. Le Guin}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The experiment invites a utilitarian answer: 'one's suffering for the happiness of thousands is mathematically justified.' But Le Guin deliberately makes the child concrete, living, visible — because utilitarianism works on abstractions. Abstract suffering is easy to justify. Concrete suffering is not."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In tech ethics", "example": "Large platforms know their product harms some users (depression, addiction) — and continue operating, relying on the benefit to the majority. Who is the child in the basement?" },
+              { "label": "In politics", "example": "Sanctions against a country harm ordinary citizens to pressure a regime. Proxy wars sacrifice some for others' interests. Omelas is everywhere 'for the greater good' is invoked." },
+              { "label": "In personal life", "example": "When you stayed silent about an injustice at work because 'it's not my fight' — you stayed in Omelas. When you quit because you couldn't live with it — you walked away." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one 'Omelas' in your life — a system you participate in while knowing its dark side. You don't need to do anything right now. Just look at it honestly."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/omelas" }]
+}

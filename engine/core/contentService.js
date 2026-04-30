@@ -16,6 +16,7 @@ import { getItem, setItem } from './storage';
 const CACHE_VERSION = 2;
 const CACHE_PREFIX = `zerik:content:v${CACHE_VERSION}:`;
 const RECENT_CACHE_KEY = (collection) => `${CACHE_PREFIX}${collection}:recent`;
+const RECENT_META_KEY  = (collection) => `${CACHE_PREFIX}${collection}:recent_meta`;
 const CARD_CACHE_KEY = (collection, id) => `${CACHE_PREFIX}${collection}:card:${id}`;
 const RECENT_LIMIT = 30;
 
@@ -120,8 +121,14 @@ export class ContentService {
   /**
    * Цепочка карточек, новейшие первыми. Поддерживает пагинацию через `before`
    * (release_date курсор).
+   *
+   * TTL-кэш «до конца суток»: если без `before` и кэш получен сегодня — возвращаем
+   * его без Firestore-чтения. Семантика идеально подходит daily-контенту: первая
+   * открытая сессия нового дня всегда ловит свежую карточку, остальные за день
+   * читают локально (≈1 Firestore read per user per day для feed-а).
+   * `forceRefresh: true` — обходит TTL (для pull-to-refresh).
    */
-  async getCardChain({ limit = 20, before = null } = {}) {
+  async getCardChain({ limit = 20, before = null, forceRefresh = false } = {}) {
     const col = this._col();
     const today = this._todayIso();
 
@@ -129,19 +136,41 @@ export class ContentService {
     // только через onContinueDeeper кнопку из родительской level 1 карточки.
     const isRoot = (c) => c && c.id && !c.id.endsWith('_deep') && !c.parent_id;
 
+    // TTL fast-path: только для запросов без курсора (топ ленты).
+    // Используем кэш только если в нём ХВАТАЕТ данных под запрошенный limit —
+    // иначе разные callers (Today=6, History=50) могут «отравить» кэш меньшим
+    // набором, и более крупный запрос получит обрезанные данные.
+    if (!before && !forceRefresh) {
+      const meta = await getItem(RECENT_META_KEY(this.collectionName), null);
+      if (meta?.fetched_date === today) {
+        const cached = await getItem(RECENT_CACHE_KEY(this.collectionName), null);
+        if (Array.isArray(cached)) {
+          const filtered = cached.filter(isRoot);
+          if (filtered.length >= limit || cached.length >= RECENT_LIMIT) {
+            return filtered.slice(0, limit);
+          }
+        }
+      }
+    }
+
     if (col) {
       try {
-        // Берём с запасом, фильтруем deep-карточки клиентом (Firestore where !endsWith
-        // не поддерживает; запрашиваем limit*2 чтобы после фильтра набрать limit).
+        // Всегда запрашиваем минимум RECENT_LIMIT * 2 чтобы кэш был полным
+        // и обслуживал разных потребителей (Today / History / Library).
+        // *2 — запас под client-side filter deep-карточек.
+        const fetchSize = Math.max(limit * 2, RECENT_LIMIT * 2);
         let query = col
           .where('release_date', '<=', before || today)
           .orderBy('release_date', 'desc')
-          .limit(limit * 2);
+          .limit(fetchSize);
         const snap = await query.get();
-        const cards = snap.docs.map(d => d.data()).filter(isRoot).slice(0, limit);
+        const allRoot = snap.docs.map(d => d.data()).filter(isRoot);
+        const cards = allRoot.slice(0, limit);
 
         if (!before) {
-          await setItem(RECENT_CACHE_KEY(this.collectionName), cards.slice(0, RECENT_LIMIT));
+          // Кэшируем больше чем потребитель попросил — до RECENT_LIMIT root-карточек.
+          await setItem(RECENT_CACHE_KEY(this.collectionName), allRoot.slice(0, RECENT_LIMIT));
+          await setItem(RECENT_META_KEY(this.collectionName), { fetched_date: today });
         }
         return cards;
       } catch (e) {
@@ -203,10 +232,10 @@ export class ContentService {
 
   /**
    * Тёплая загрузка ленты в кэш. Вызывать после успешного логина или при
-   * pull-to-refresh.
+   * pull-to-refresh — обходит TTL-кэш и форсит fetch из Firestore.
    */
   async warmCache(limit = RECENT_LIMIT) {
-    const cards = await this.getCardChain({ limit });
+    const cards = await this.getCardChain({ limit, forceRefresh: true });
     return cards.length;
   }
 }

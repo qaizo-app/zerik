@@ -1,0 +1,168 @@
+{
+  "id": "thinking_in_bets",
+  "category": "book_idea",
+  "release_number": 125,
+  "release_date": "2026-08-14",
+  "tags": ["duke", "poker", "decisions", "uncertainty", "resulting", "probability", "bets"],
+  "difficulty": 2,
+  "reading_time_sec": 145,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/thinking_in_bets.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея книги · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы приняли плохое решение — и вам повезло. Или приняли хорошее — и не повезло. Большинство людей судят о качестве решений по результату. Это ошибка, которая стоит вам карьеры, денег и самооценки." }
+        },
+        { "type": "title", "props": { "text": "Решения — это {{accent:ставки}}, а не правила" } },
+        { "type": "subtitle", "props": { "text": "Энни Дьюк «Thinking in Bets» · 2018" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/thinking_in_bets.svg", "alt": "Матрица: хорошее/плохое решение × удача/неудача — четыре квадранта результата" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Энни Дьюк — бывший чемпион мира по покеру и поведенческий экономист. Её главный тезис: почти каждое решение — это ставка в условиях неопределённости. Мы редко знаем исход заранее. Всё, что мы контролируем, — качество самого решения на момент его принятия.",
+              "{{em:«Resulting» — главная ловушка.}} Мы оцениваем решение по результату, а не по процессу. Хороший результат → «я поступил правильно». Плохой результат → «я ошибся». Но это слепой метод: профессиональный покерист может проиграть раздачу при всех правильных вычислениях — и выиграть при неверных. Оба раза мы сделали вывод наоборот.",
+              "Дьюк предлагает фреймворк: перед решением спросите себя — «если бы я поставил деньги на этот исход, на сколько бы поставил?». Это не про деньги. Это про честную оценку вероятностей. Принудительная количественная оценка убивает самообман и показывает, насколько вы реально уверены."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Отделяйте качество решения от качества результата. Хорошее решение может дать плохой результат — это не ошибка, это вероятность. Оценивайте решения по процессу мышления в момент выбора, а не по тому, как всё вышло."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы инвестировали в компанию с хорошим анализом. Она обанкротилась из-за непредвиденного кризиса. Что это говорит о вашем решении?",
+            "setup": null,
+            "options": [
+              { "id": "wrong", "text": "Решение было плохим — результат это доказывает", "is_wiser": false },
+              { "id": "separate", "text": "Качество решения нужно оценивать по анализу на тот момент, не по кризису, который невозможно было предсказать", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают плохой результат = плохое решение",
+              "explanation": "Дьюк называет это «resulting». Непредвиденный чёрный лебедь — не свидетельство плохого анализа. Если вы правильно оценили вероятности на основе доступной информации — решение было хорошим. Учите не на результате, а на процессе.",
+              "wisdom": "{{em:«Решения — это ставки на будущее, и лучший игрок не всегда выигрывает каждую раздачу». — Энни Дьюк}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Принцип «не судить по результату» не означает игнорировать обратную связь. Системные плохие результаты при хорошем «процессе» — сигнал, что ваш процесс не так хорош, как вы думаете. Разделяйте случайность и систему."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В инвестициях", "example": "Покупка акции, которая затем упала из-за непредвиденного геополитического события, не обязательно была плохим решением. Оцените: была ли логика покупки обоснованной на момент сделки?" },
+              { "label": "В управлении командой", "example": "Менеджеры часто наказывают за плохие результаты и хвалят за хорошие, игнорируя качество процесса. Это учит команду избегать рисков, а не принимать взвешенные решения." },
+              { "label": "В личных отношениях", "example": "«Я не должен был доверять этому человеку» — если решение доверять было обоснованным на тот момент, а человек обманул непредсказуемо, вы не ошиблись. Вам не повезло." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните последнее решение, которым вы недовольны. Оцените его не по результату, а по информации и логике, которая у вас была в момент выбора. Было ли решение разумным тогда — или вы просто не повезло?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "You made a bad decision and got lucky. Or made a good one and didn't. Most people judge the quality of decisions by their outcomes. This is a mistake that costs you careers, money, and self-esteem." }
+        },
+        { "type": "title", "props": { "text": "Decisions are {{accent:bets}}, not rules" } },
+        { "type": "subtitle", "props": { "text": "Annie Duke 'Thinking in Bets' · 2018" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/thinking_in_bets.svg", "alt": "Matrix: good/bad decision × luck/bad luck — four quadrants of outcome" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Annie Duke is a former World Series of Poker champion and behavioral economist. Her central thesis: almost every decision is a bet under uncertainty. We rarely know the outcome in advance. All we control is the quality of the decision itself at the moment it's made.",
+              "{{em:'Resulting' is the key trap.}} We judge a decision by its outcome rather than its process. Good result → 'I did the right thing.' Bad result → 'I made a mistake.' But this is a blind method: a professional poker player can lose a hand after all the right calculations — and win after wrong ones. Both times, we draw the wrong conclusion.",
+              "Duke's framework: before a decision, ask yourself — 'If I were betting money on this outcome, how much would I bet?' This isn't about money. It's about honest probability assessment. Forcing a quantitative estimate kills self-deception and reveals how confident you really are."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Separate the quality of a decision from the quality of its outcome. A good decision can produce a bad outcome — that's not an error, that's probability. Evaluate decisions by the thinking process at the moment of choice, not by how things turned out."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You invested in a company after solid analysis. It went bankrupt due to an unforeseen crisis. What does this say about your decision?",
+            "setup": null,
+            "options": [
+              { "id": "wrong", "text": "The decision was bad — the outcome proves it", "is_wiser": false },
+              { "id": "separate", "text": "The decision quality should be judged by the analysis at the time, not by a crisis that couldn't have been predicted", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "equate bad outcomes with bad decisions",
+              "explanation": "Duke calls this 'resulting.' An unforeseen black swan is not evidence of poor analysis. If you correctly assessed probabilities based on available information — the decision was good. Learn from the process, not the outcome.",
+              "wisdom": "{{em:\"Decisions are bets on the future, and the best player doesn't always win every hand.\" — Annie Duke}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The principle of 'don't judge by outcomes' does not mean ignoring feedback. Systematic bad outcomes with a supposedly good 'process' signal that your process isn't as good as you think. Distinguish between randomness and a systematic problem."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In investing", "example": "Buying a stock that then dropped due to an unforeseen geopolitical event was not necessarily a bad decision. Assess it: was the logic for buying sound at the time of the trade?" },
+              { "label": "In team management", "example": "Managers often punish for bad results and praise for good ones, ignoring process quality. This teaches the team to avoid risk rather than make sound decisions." },
+              { "label": "In personal relationships", "example": "'I shouldn't have trusted that person' — if the decision to trust was well-founded at the time and the person deceived you unpredictably, you didn't err. You had bad luck." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall a recent decision you're unhappy with. Evaluate it not by outcome but by the information and logic you had at the moment of choice. Was the decision reasonable then — or did you simply have bad luck?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/thinking_in_bets" }]
+}

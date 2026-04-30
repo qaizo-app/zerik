@@ -68,7 +68,7 @@ export default function AuthScreen({
         fontSize: 32,
         color: palette.text,
         marginBottom: 8
-      }}>{brand?.app?.name || 'Mental Models'}</Text>
+      }}>{brand?.app?.name || 'Senik'}</Text>
 
       <Text style={{
         fontFamily: tokens.fonts.serif_italic,

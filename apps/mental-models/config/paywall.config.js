@@ -1,4 +1,4 @@
-// RevenueCat config для Mental Models. API keys получишь после создания
+// RevenueCat config для Senik. API keys получишь после создания
 // проекта в app.revenuecat.com и привязки к App Store Connect / Play Console.
 //
 // Ключи RevenueCat — публичные (по дизайну SDK), безопасно коммитить.

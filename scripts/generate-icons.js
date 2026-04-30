@@ -66,9 +66,9 @@ function renderFeatureGraphic() {
   <g transform="translate(80, ${(H - ICON) / 2}) scale(${ICON / 1024})">
     ${svg.replace(/<svg[^>]*>/, '').replace('</svg>', '')}
   </g>
-  <text x="460" y="240" font-family="Georgia, serif" font-size="68" fill="#E4E7EC" font-weight="bold">Mental Models</text>
-  <text x="460" y="300" font-family="Georgia, serif" font-size="28" fill="#8B93A1" font-style="italic">Одна модель в день</text>
-  <text x="460" y="340" font-family="Georgia, serif" font-size="28" fill="#8B93A1" font-style="italic">для ясного мышления</text>
+  <text x="460" y="240" font-family="Georgia, serif" font-size="68" fill="#E4E7EC" font-weight="bold">Senik</text>
+  <text x="460" y="300" font-family="Georgia, serif" font-size="28" fill="#8B93A1" font-style="italic">Одна ментальная модель.</text>
+  <text x="460" y="340" font-family="Georgia, serif" font-size="28" fill="#8B93A1" font-style="italic">Каждый день.</text>
 </svg>`;
   const r = new Resvg(bg, { fitTo: { mode: 'width', value: W } });
   return r.render().asPng();

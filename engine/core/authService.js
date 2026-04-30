@@ -1,6 +1,6 @@
 // AuthService — обёртка над Firebase Auth (native SDK через @react-native-firebase).
 // Порт из Qaizo с двумя расширениями:
-//   1. Apple Sign-In (Qaizo не делал — для Mental Models обязателен по правилам Apple)
+//   1. Apple Sign-In (Qaizo не делал — для Senik обязателен по правилам Apple)
 //   2. webClientId конфигурируется приложением (не хардкод как в Qaizo)
 //
 // Email/Password + Google + Apple. Соц-провайдеры graceful fallback если нативные

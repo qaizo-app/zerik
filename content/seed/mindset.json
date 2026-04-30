@@ -1,0 +1,168 @@
+{
+  "id": "mindset",
+  "category": "book_idea",
+  "release_number": 132,
+  "release_date": "2026-08-21",
+  "tags": ["dweck", "growth_mindset", "fixed_mindset", "learning", "potential", "praise", "brain"],
+  "difficulty": 1,
+  "reading_time_sec": 140,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/mindset.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея книги · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Двум группам детей дали сложные задачи. Первой сказали: «Ты умный». Второй: «Ты хорошо постарался». Потом — более трудные задачи. «Умные» избегали их. «Старательные» — брались с удовольствием. Одна фраза изменила всё." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Фиксированный}} против {{accent:гибкого}} мышления" } },
+        { "type": "subtitle", "props": { "text": "Кэрол Дуэк «Mindset: The New Psychology of Success» · 2006" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/mindset.svg", "alt": "Мозг разделён на две половины: слева фиксированный — закрытый, справа гибкий — открытый к росту" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Кэрол Дуэк — психолог Стэнфорда, которая провела десятилетия, изучая, почему одни люди расцветают перед лицом трудностей, а другие сдаются. Её открытие: всё дело в базовом убеждении о природе способностей.",
+              "{{em:Фиксированное мышление}} (fixed mindset): способности врождённые и неизменные. Ошибка — угроза идентичности. «Если я ошибаюсь, значит, я недостаточно умён». Люди с таким убеждением избегают сложных задач, бросают при первом препятствии и воспринимают успех других как угрозу себе.",
+              "{{em:Гибкое мышление}} (growth mindset): способности развиваются через усилие и обучение. Ошибка — информация. «Я ошибся — значит, ещё учусь». Люди с таким убеждением ищут трудности, упорствуют при препятствиях и вдохновляются успехом других. Дуэк показала: это убеждение — самосбывающееся пророчество."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Хвалите за процесс, а не за результат. «Ты умный» формирует fixed mindset. «Ты хорошо постарался / нашёл правильный подход» — growth mindset. Это применимо к детям, сотрудникам и себе."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы провалили важный экзамен. Ваша первая реакция?",
+            "setup": null,
+            "options": [
+              { "id": "fixed", "text": "«Я просто не создан для этого» или «Это не моё»", "is_wiser": false },
+              { "id": "growth", "text": "«Что именно пошло не так, и что изменить в подготовке?»", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "реагируют из fixed mindset",
+              "explanation": "Первая реакция часто фиксированная — это нормально. Ключевой момент: что вы делаете с ней дальше. Дуэк не говорит «всегда будь позитивным». Она говорит: замечайте голос фиксированного мышления и сознательно выбирайте другую интерпретацию.",
+              "wisdom": "{{em:«В гибком мышлении неудача — это не признак того, кто вы есть. Это проблема, с которой нужно работать, учиться, расти». — Кэрол Дуэк}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Ложный growth mindset: «Ты можешь всё, если постараешься» — это не то, чему учит Дуэк. Она говорит, что усилие важно, но не достаточно — нужны ещё стратегии, помощь и правильные методы. «Старайся больше» без обратной связи — пустой совет."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В корпоративной культуре", "example": "Компании с культурой наказания за ошибки воспитывают fixed mindset у сотрудников — люди перестают рисковать и экспериментировать. Google и Amazon сознательно строят культуру, в которой ошибка = ценная информация." },
+              { "label": "В спорте", "example": "Тренеры, которые хвалят за «талант», получают спортсменов, избегающих трудных тренировок. Тренеры, которые фокусируются на прогрессе и процессе, получают спортсменов, которые развиваются дольше." },
+              { "label": "В самооценке", "example": "Фраза «я не музыкальный / не математический / не творческий» — типичное fixed mindset убеждение. Большинство таких убеждений сформированы одним-двумя событиями в детстве и с тех пор не пересматривались." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите одну область, где вы говорите себе «у меня нет способностей к этому». Спросите: когда именно я решил, что неспособен? Было ли это реальной проверкой — или просто одной неудачей, которую я возвёл в закон?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Two groups of children were given challenging problems. The first were told: 'You're smart.' The second: 'You worked hard.' Then harder problems. The 'smart' kids avoided them. The 'hardworking' kids engaged eagerly. One sentence changed everything." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Fixed}} vs {{accent:Growth}} Mindset" } },
+        { "type": "subtitle", "props": { "text": "Carol Dweck 'Mindset: The New Psychology of Success' · 2006" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/mindset.svg", "alt": "Brain split in two: left side fixed — closed; right side growth — open to development" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Carol Dweck is a Stanford psychologist who spent decades studying why some people thrive in the face of challenges while others give up. Her discovery: it all comes down to a basic belief about the nature of abilities.",
+              "{{em:Fixed mindset}}: abilities are innate and unchangeable. A mistake is a threat to identity. 'If I made an error, I must not be smart enough.' People with this belief avoid challenging tasks, quit at the first obstacle, and see others' success as a threat to themselves.",
+              "{{em:Growth mindset}}: abilities develop through effort and learning. A mistake is information. 'I made an error — I'm still learning.' People with this belief seek difficulty, persist through obstacles, and are inspired by others' success. Dweck showed: this belief is a self-fulfilling prophecy."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Praise process, not outcomes. 'You're smart' builds a fixed mindset. 'You worked hard / found a good approach' builds a growth mindset. This applies to children, employees, and yourself."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You failed an important exam. What's your first reaction?",
+            "setup": null,
+            "options": [
+              { "id": "fixed", "text": "'I'm just not made for this' or 'This isn't my thing'", "is_wiser": false },
+              { "id": "growth", "text": "'What specifically went wrong, and what should I change about my preparation?'", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "react from a fixed mindset",
+              "explanation": "The first reaction is often fixed — that's normal. The key moment is what you do with it next. Dweck doesn't say 'always be positive.' She says: notice the fixed mindset voice and consciously choose a different interpretation.",
+              "wisdom": "{{em:\"In the growth mindset, failure is not a statement about who you are. It's a problem to be faced, dealt with, and learned from.\" — Carol Dweck}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "False growth mindset: 'You can do anything if you try' — that's not what Dweck teaches. She says effort matters but isn't sufficient — you also need strategies, help, and the right methods. 'Try harder' without feedback is empty advice."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In corporate culture", "example": "Companies with a culture of punishing mistakes breed fixed mindsets in employees — people stop taking risks and experimenting. Google and Amazon deliberately build cultures where mistakes are valuable information." },
+              { "label": "In sports", "example": "Coaches who praise 'talent' get athletes who avoid hard training. Coaches who focus on progress and process get athletes who develop longer." },
+              { "label": "In self-image", "example": "'I'm not musical / not mathematical / not creative' — classic fixed mindset beliefs. Most were formed by one or two childhood events and haven't been re-examined since." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find one area where you tell yourself 'I have no ability for this.' Ask: exactly when did I decide I was incapable? Was it a real test — or just one failure that I turned into a law?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/mindset" }]
+}

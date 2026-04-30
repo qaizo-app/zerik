@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- 2x2 matrix -->
+  <rect x="30" y="50" width="160" height="160" fill="#0d1530" rx="4" stroke="#333" stroke-width="1"/>
+  <!-- Quadrants -->
+  <rect x="31" y="51" width="79" height="79" rx="2" fill="#1a2a1a"/>
+  <rect x="110" y="51" width="79" height="79" rx="2" fill="#2a1a1a"/>
+  <rect x="31" y="130" width="79" height="79" rx="2" fill="#2a1a1a"/>
+  <rect x="110" y="130" width="79" height="79" rx="2" fill="#1a2a1a"/>
+  <!-- Axis labels -->
+  <text x="110" y="42" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">РЕЗУЛЬТАТ</text>
+  <text x="20" y="130" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888" transform="rotate(-90,20,130)">РЕШЕНИЕ</text>
+  <text x="71" y="44" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a">Хороший</text>
+  <text x="149" y="44" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">Плохой</text>
+  <text x="22" y="94" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a" transform="rotate(-90,22,94)">Хорошее</text>
+  <text x="22" y="173" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d" transform="rotate(-90,22,173)">Плохое</text>
+  <!-- Q1: Good decision + Good result -->
+  <text x="71" y="84" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a" font-weight="bold">✓ Заслуженно</text>
+  <text x="71" y="98" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">Умный выбор</text>
+  <!-- Q2: Good decision + Bad result -->
+  <text x="149" y="84" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e8c44a" font-weight="bold">Невезение</text>
+  <text x="149" y="98" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">Решение верно!</text>
+  <!-- Q3: Bad decision + Good result -->
+  <text x="71" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e8c44a" font-weight="bold">Везение</text>
+  <text x="71" y="177" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">Решение плохо</text>
+  <!-- Q4: Bad decision + Bad result -->
+  <text x="149" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d" font-weight="bold">✗ Ошибка</text>
+  <text x="149" y="177" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">Плохо всё</text>
+  <!-- Gridlines -->
+  <line x1="110" y1="51" x2="110" y2="209" stroke="#333" stroke-width="1"/>
+  <line x1="31" y1="130" x2="189" y2="130" stroke="#333" stroke-width="1"/>
+  <!-- Right side: resulting trap -->
+  <rect x="220" y="50" width="160" height="80" fill="#2a1a1a" stroke="#e85d5d" stroke-width="1.5" rx="6"/>
+  <text x="300" y="70" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d" font-weight="bold">«Resulting»</text>
+  <text x="300" y="86" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">Судить решение</text>
+  <text x="300" y="100" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">по результату =</text>
+  <text x="300" y="114" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">ошибка мышления</text>
+  <!-- Right side: correct approach -->
+  <rect x="220" y="148" width="160" height="80" fill="#1a2a1a" stroke="#4adf8a" stroke-width="1.5" rx="6"/>
+  <text x="300" y="168" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4adf8a" font-weight="bold">Правильно</text>
+  <text x="300" y="184" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">Оценивать процесс</text>
+  <text x="300" y="200" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">мышления в момент</text>
+  <text x="300" y="214" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a">выбора</text>
+  <!-- Bottom -->
+  <rect x="20" y="245" width="360" height="36" fill="#0d1530" rx="6"/>
+  <text x="200" y="261" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e8c44a" font-weight="bold">Энни Дьюк · Thinking in Bets · 2018</text>
+  <text x="200" y="275" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Хорошее решение + плохой результат ≠ ошибка</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="210" fill="#0D1B2A"/>
+
+  <!-- Eye outline — biased perception -->
+  <path
+    d="M 148 512 Q 512 210 876 512 Q 512 814 148 512 Z"
+    fill="none"
+    stroke="#F0F4F8"
+    stroke-width="38"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+
+  <!-- Iris — off-center to represent bias -->
+  <circle cx="558" cy="512" r="158" fill="#E89647"/>
+
+  <!-- Pupil -->
+  <circle cx="558" cy="512" r="80" fill="#0D1B2A"/>
+
+  <!-- Highlight -->
+  <circle cx="602" cy="468" r="28" fill="#F0F4F8" opacity="0.55"/>
+
+  <!-- Amber accent bar at bottom -->
+  <rect x="392" y="762" width="240" height="14" rx="7" fill="#E89647" opacity="0.7"/>
+</svg>

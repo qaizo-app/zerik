@@ -1,0 +1,186 @@
+{
+  "id": "good_samaritan_experiment",
+  "category": "psychology_experiments",
+  "release_number": 128,
+  "release_date": "2026-08-17",
+  "tags": ["darley", "batson", "helping", "hurry", "situation", "seminary", "samaritan"],
+  "difficulty": 2,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/good_samaritan_experiment.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Эксперимент · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Студенты семинарии идут читать лекцию о притче о добром самаритянине — про человека, который помог незнакомцу в беде. По дороге — лежит человек, которому явно плохо. Угадайте, что определило, помогут ли ему?" }
+        },
+        { "type": "title", "props": { "text": "Хороший человек {{accent:торопится}}" } },
+        { "type": "subtitle", "props": { "text": "Эксперимент доброго самаритянина · Дарли и Батсон, 1973" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/good_samaritan_experiment.svg", "alt": "Человек, спешащий мимо лежащего на земле — и тот, кто останавливается" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "Джон Дарли и Дэниел Батсон, Принстонский университет",
+            "when": "1973",
+            "what": "Студентов семинарии просили перейти из одного здания в другое, чтобы прочитать речь. Часть отправляли с запасом времени, часть — в спешке. По дороге актёр изображал человека, которому плохо (кашлял, стонал, полулежал в подъезде). Фиксировалось, остановится ли студент.",
+            "result": "63% тех, кто шёл не торопясь, помогли. Среди спешивших — только 10%. Тема речи (притча о добром самаритянине vs нейтральная тема) не оказала статистически значимого эффекта."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Дарли и Батсон хотели проверить, что важнее для альтруистичного поведения: личные качества (религиозность, моральные ценности) или ситуация (спешка, контекст). Результат оказался однозначным: ситуация побеждает.",
+              "{{em:Некоторые спешащие студенты буквально переступали через лежащего актёра}} — и продолжали идти. Не потому что были плохими людьми. Их внимание было узко сфокусировано на цели: дойти, выступить, не опоздать. Когнитивная нагрузка и временно́е давление сужают поле восприятия.",
+              "Самый поразительный вывод: изучение моральной притчи не увеличило вероятность морального поступка. Знание и намерение — это одно. Поведение в конкретной ситуации — совсем другое."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Поведение в критический момент определяется ситуацией — особенно временны́м давлением и фокусом внимания — гораздо сильнее, чем ценностями и намерениями. Хотите быть добрым? Замедлитесь."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы опаздываете на важную встречу. В метро пожилой человек выронил вещи. Что вы делаете?",
+            "setup": null,
+            "options": [
+              { "id": "rush", "text": "Иду дальше — у меня нет времени, кто-нибудь поможет", "is_wiser": false },
+              { "id": "stop", "text": "Останавливаюсь на 30 секунд — это минимальная задержка, но реальная помощь", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "проходят мимо в спешке",
+              "explanation": "Эксперимент Дарли и Батсона предсказывает именно это. Но знание о нём даёт шанс выйти из ситуации на секунду и заметить то, что мозг в режиме спешки вытесняет. 30 секунд редко решают исход встречи.",
+              "wisdom": "{{em:«Ситуационные факторы — гораздо более мощные детерминанты поведения, чем личностные». — Дарли и Батсон (1973)}}",
+              "hardcoded_stats": { "percentage": 10, "label": "помогли среди торопящихся" }
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эксперимент не доказывает, что ценности и характер не важны вовсе. В менее срочных ситуациях личностные факторы играют бо́льшую роль. Но он показывает, что мы переоцениваем стабильность своего характера под давлением."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В дизайне организаций", "example": "Если вы хотите, чтобы сотрудники помогали друг другу — не читайте лекции о командной работе. Создайте условия, в которых у них есть время замечать и помогать: разумная нагрузка, не перегруженное расписание." },
+              { "label": "В личной этике", "example": "Большинство нарушений этики на работе совершается не потому что люди плохие, а потому что они торопятся, перегружены и сфокусированы на своей цели. Давление сужает моральное поле." },
+              { "label": "В воспитании", "example": "Учить детей ценностям важно. Но исследование показывает: если ребёнок всегда торопится между кружками и уроками, ценности не конвертируются в поведение. Нужно время и пространство для заметности другого." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Посмотрите на своё расписание на завтра. Есть ли в нём хотя бы 15-минутный буфер между важными делами — время, в которое вы не будете в режиме «бегу»? Это не пустая трата времени. Это условие для того, чтобы замечать."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Experiment · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Seminary students are walking to give a talk about the parable of the Good Samaritan — the story of a man who helped a stranger in need. On the way, a man is slumped in a doorway, clearly in distress. Guess what determined whether they helped him." }
+        },
+        { "type": "title", "props": { "text": "A good person {{accent:in a hurry}}" } },
+        { "type": "subtitle", "props": { "text": "The Good Samaritan Experiment · Darley & Batson, 1973" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/good_samaritan_experiment.svg", "alt": "A person rushing past someone lying on the ground — and one who stops" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "John Darley and Daniel Batson, Princeton University",
+            "when": "1973",
+            "what": "Seminary students were asked to walk from one building to another to give a short talk. Some were given plenty of time; others were told they were already late. Along the route, an actor played a person in obvious distress (coughing, groaning, slumped in a doorway). Whether the student stopped was recorded.",
+            "result": "63% of those who were not in a hurry helped. Among those who were rushed — only 10%. The topic of the talk (the Good Samaritan parable vs a neutral topic) had no statistically significant effect."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Darley and Batson wanted to test what matters more for altruistic behavior: personal traits (religiosity, moral values) or situation (time pressure, context). The result was unambiguous: situation wins.",
+              "{{em:Some of the hurrying students literally stepped over the actor}} — and kept walking. Not because they were bad people. Their attention was narrowly focused on the goal: get there, speak, don't be late. Cognitive load and time pressure narrow the field of perception.",
+              "The most striking finding: studying a moral parable did not increase the likelihood of a moral act. Knowledge and intention are one thing. Behavior in a specific situation is another."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Behavior in critical moments is determined far more by situation — especially time pressure and attentional focus — than by values and intentions. Want to be kind? Slow down."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're running late for an important meeting. In the subway, an elderly person drops their things. What do you do?",
+            "setup": null,
+            "options": [
+              { "id": "rush", "text": "Keep walking — I have no time, someone else will help", "is_wiser": false },
+              { "id": "stop", "text": "Stop for 30 seconds — minimal delay, real help", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "walk past when in a hurry",
+              "explanation": "Darley and Batson's experiment predicts exactly this. But knowing about it creates a chance to step outside the situation for a moment and notice what the hurrying brain filters out. 30 seconds rarely determines the outcome of a meeting.",
+              "wisdom": "{{em:\"Situational factors are far more powerful determinants of behavior than personal ones.\" — Darley & Batson (1973)}}",
+              "hardcoded_stats": { "percentage": 10, "label": "helped among those who were rushing" }
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The experiment does not prove that values and character don't matter at all. In less urgent situations, personal factors play a larger role. But it shows that we overestimate the stability of our character under pressure."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In organizational design", "example": "If you want employees to help each other — don't give lectures about teamwork. Create conditions where they have time to notice and help: reasonable workload, uncrowded schedules." },
+              { "label": "In personal ethics", "example": "Most ethical violations at work are committed not because people are bad, but because they're in a hurry, overloaded, and focused on their goal. Pressure narrows the moral field." },
+              { "label": "In parenting", "example": "Teaching children values is important. But research shows: if a child is always rushing between activities and lessons, values don't convert to behavior. They need time and space to notice others." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Look at your schedule for tomorrow. Is there at least a 15-minute buffer between important tasks — time when you won't be in 'rushing' mode? This is not wasted time. It's the condition for noticing."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/good_samaritan_experiment" }]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "overton_window",
+  "category": "mental_models",
+  "release_number": 123,
+  "release_date": "2026-08-12",
+  "tags": ["overton", "politics", "public_opinion", "window", "acceptable", "discourse"],
+  "difficulty": 2,
+  "reading_time_sec": 145,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/overton_window.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Модель мышления · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "Почему идея, которая казалась безумной 20 лет назад, сегодня — закон? И почему политики не могут поддержать то, что считают правильным, — пока «время не пришло»? Существует невидимое окно. Оно определяет, что вообще возможно обсуждать." }
+        },
+        { "type": "title", "props": { "text": "Окно {{accent:Овертона}}: что разрешено думать" } },
+        { "type": "subtitle", "props": { "text": "Джозеф Овертон · Mackinac Center, 1990-е" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/overton_window.svg", "alt": "Вертикальный спектр идей от немыслимых до ставших законом — с окном допустимого, которое сдвигается" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Джозеф Овертон, аналитик американского think-tank Mackinac Center, заметил: по каждому вопросу публичной политики существует спектр позиций — от немыслимых до ставших законом. Политики могут выбирать только из позиций внутри «окна допустимого». Выйти за рамки окна — значит проиграть выборы.",
+              "{{em:Окно двигают не политики — его двигают культура, медиа, активисты и события.}} Задача политика — чувствовать, где окно сейчас. Задача тех, кто хочет изменить мир, — сначала сдвинуть окно, а потом уже продвигать конкретную политику. Идея, которая кажется радикальной сегодня, — это завтрашний мейнстрим.",
+              "Спектр Овертона: немыслимое → радикальное → приемлемое → разумное → популярное → ставшее законом. Движение идёт медленно и нелинейно. Иногда окно сдвигается в обратную сторону. Одно скандальное событие или кризис может передвинуть его за месяцы."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "В каждый момент времени существует диапазон идей, которые публика готова воспринять всерьёз. Задача политика — работать внутри этого диапазона. Задача реформатора — сначала изменить диапазон."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы хотите продвинуть в компании радикально новый процесс. Что эффективнее?",
+            "setup": null,
+            "options": [
+              { "id": "direct", "text": "Сразу предложить новый процесс на совете директоров", "is_wiser": false },
+              { "id": "window", "text": "Сначала нормализовать обсуждение смежных идей, потом предложить новый процесс", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "идут напрямую с радикальной идеей",
+              "explanation": "Окно Овертона работает в организациях так же, как в политике. Сначала нужно сделать идею «приемлемой для обсуждения» — через кейсы, аналогии, эксперименты. Только когда идея перестала казаться странной, можно предлагать её как политику.",
+              "wisdom": "{{em:«Роль политика — чувствовать пульс публики и работать внутри окна. Роль интеллектуала — сдвигать окно». — интерпретация модели Овертона}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Модель описывает, как идеи становятся приемлемыми — но не говорит, какие идеи должны становиться приемлемыми. Окно может двигаться в любую сторону. Понимание механизма — инструмент, не компас."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В переговорах", "example": "Anchoring — это движение окна допустимого в переговорах. Первая названная цифра сдвигает диапазон «разумного» в свою сторону. Экстремальное первое предложение расширяет ваше окно." },
+              { "label": "В стартапах", "example": "Многие великие компании сначала делали то, что казалось немыслимым: Airbnb (пускать чужих в свою квартиру), Uber (садиться в машину к незнакомцу). Они не ждали, пока общество будет готово — они сами готовили почву." },
+              { "label": "В личных решениях", "example": "То, что кажется вам «невозможным» в жизни (сменить карьеру, переехать), часто является лишь точкой вне вашего личного окна допустимого — не объективным ограничением." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Назовите одну вещь в своей жизни или работе, которую вы считаете «невозможной». Спросите: это объективное ограничение — или просто за пределами вашего личного окна допустимого? Что нужно сделать, чтобы это стало «приемлемым»?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "Why does an idea that seemed crazy 20 years ago become law today? And why can't politicians support what they believe is right — until 'the time comes'? There is an invisible window. It determines what can even be discussed." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Overton Window}}: what you're allowed to think" } },
+        { "type": "subtitle", "props": { "text": "Joseph Overton · Mackinac Center, 1990s" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/overton_window.svg", "alt": "Vertical spectrum of ideas from unthinkable to law — with an acceptable window that shifts" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Joseph Overton, an analyst at the Mackinac Center think tank, observed that on any public policy question there is a spectrum of positions — from unthinkable to enacted law. Politicians can only choose from positions inside the 'window of the acceptable.' Step outside the window and you lose elections.",
+              "{{em:Politicians don't move the window — culture, media, activists, and events do.}} A politician's job is to sense where the window is right now. A reformer's job is to move the window first, then push specific policy. The idea that seems radical today is tomorrow's mainstream.",
+              "The Overton spectrum: unthinkable → radical → acceptable → sensible → popular → policy. Movement is slow and non-linear. Sometimes the window shifts in reverse. A single scandal or crisis can move it in months."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "At any given moment there is a range of ideas the public is willing to take seriously. A politician's job is to operate within that range. A reformer's job is to change the range first."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You want to push a radically new process in your company. What's more effective?",
+            "setup": null,
+            "options": [
+              { "id": "direct", "text": "Propose the new process directly to the board", "is_wiser": false },
+              { "id": "window", "text": "First normalize discussion of adjacent ideas, then propose the new process", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "go straight to the board with radical ideas",
+              "explanation": "The Overton Window works in organizations just as it does in politics. First you need to make the idea 'acceptable for discussion' — through case studies, analogies, pilots. Only once the idea no longer seems strange can you propose it as policy.",
+              "wisdom": "{{em:\"The politician's role is to feel the public's pulse and work within the window. The intellectual's role is to move the window.\" — interpretation of Overton's model}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The model describes how ideas become acceptable — not which ideas should become acceptable. The window can move in any direction. Understanding the mechanism is a tool, not a compass."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In negotiations", "example": "Anchoring is moving the Overton Window in negotiations. The first number named shifts the range of 'reasonable' toward your side. An extreme opening offer expands your window." },
+              { "label": "In startups", "example": "Many great companies started by doing what seemed unthinkable: Airbnb (letting strangers into your home), Uber (getting into a stranger's car). They didn't wait for society to be ready — they prepared the ground themselves." },
+              { "label": "In personal decisions", "example": "What seems 'impossible' in your life (career change, relocation) is often simply outside your personal window of the acceptable — not an objective constraint." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Name one thing in your life or work that you consider 'impossible.' Ask yourself: is this an objective constraint — or just outside your personal window of the acceptable? What would need to happen to make it 'reasonable'?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/overton_window" }]
+}

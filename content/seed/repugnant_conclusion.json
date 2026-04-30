@@ -1,0 +1,168 @@
+{
+  "id": "repugnant_conclusion",
+  "category": "thought_experiments",
+  "release_number": 134,
+  "release_date": "2026-08-23",
+  "tags": ["parfit", "population_ethics", "utilitarianism", "repugnant", "happiness", "logic"],
+  "difficulty": 4,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/repugnant_conclusion.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "Мир A: 10 миллиардов очень счастливых людей. Мир Z: триллион людей, жизнь которых едва стоит того, чтобы её жить. Если вы принимаете логику утилитаризма — вы обязаны признать: мир Z лучше. Деррик Парфит сам находил этот вывод отвратительным. И всё равно не мог его опровергнуть." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Отвратительный}} вывод" } },
+        { "type": "subtitle", "props": { "text": "Дерек Парфит «Reasons and Persons» · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/repugnant_conclusion.svg", "alt": "Мир A: немного высоких столбиков счастья; Мир Z: огромное количество крошечных столбиков — суммарная площадь Z больше" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Дерек Парфит — один из крупнейших моральных философов XX века. В книге «Reasons and Persons» он построил следующую цепочку: если мир с 10 млрд счастливых людей лучше мира с 1 млрд, то можно добавлять людей, чуть снижая средний уровень счастья, до тех пор, пока суммарное счастье не вырастет. Повторяйте шаги достаточно долго — и вы придёте к триллиону людей с жизнью, едва стоящей проживания.",
+              "{{em:Логика безупречна. Вывод — отвратителен.}} Если правильность действия определяется суммой счастья (тотальный утилитаризм), то мир Z с триллионом едва счастливых людей лучше мира A с миллиардом очень счастливых — потому что 0,01 × триллион > 10 × миллиард. Парфит не мог принять этот вывод — и не мог его опровергнуть. Он посвятил годы поискам выхода.",
+              "Парадокс обнажает фундаментальную проблему: наши нравственные интуиции несовместимы между собой. Мы считаем, что добавление счастливых людей — хорошо. Мы считаем, что среднее качество жизни важно. Мы считаем, что мир Z ужасен. Нельзя одновременно держать все три убеждения последовательно."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда логически безупречное рассуждение ведёт к явно неприемлемому выводу — это сигнал, что одна из исходных посылок неверна. Отвратительный вывод Парфита — не опровержение этики, а указание на то, что тотальный утилитаризм неполон как теория."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Что этически предпочтительнее?",
+            "setup": "Оба варианта гипотетические, никаких других условий нет.",
+            "options": [
+              { "id": "world_a", "text": "Мир A: 1 миллиард людей с жизнью, полной смысла и радости", "is_wiser": true },
+              { "id": "world_z", "text": "Мир Z: 1 триллион людей, каждый из которых едва рад, что живёт", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "выбирают мир A",
+              "explanation": "Почти все выбирают A — интуитивно. Но если вы принимаете принцип «больше суммарного счастья = лучше», вы логически обязаны выбрать Z. Именно это противоречие между интуицией и логикой Парфит и назвал проблемой. Нет очевидного выхода — только выбор, какой принцип пожертвовать.",
+              "wisdom": "{{em:«Мне кажется, что мы стоим перед вопросом, на который пока нет убедительного ответа». — Дерек Парфит}}",
+              "hardcoded_stats": { "percentage": 94, "label": "интуитивно выбирают мир A" }
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Отвратительный вывод не доказывает, что «утилитаризм — это плохо». Он доказывает, что тотальный утилитаризм в чистом виде нуждается в доработке. Альтернативы (средний утилитаризм, критический уровень, персон-аффектная теория) тоже имеют неудобные следствия. Это открытая проблема философии."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В демографической политике", "example": "Должны ли государства поощрять рождаемость ради роста «суммарного счастья» нации? Парфит показывает: вопрос о том, кого стоит рождать — не просто политический, а глубоко философский." },
+              { "label": "В AI-безопасности", "example": "Исследователи ИИ обсуждают: если ИИ будет оптимизировать суммарное человеческое благосостояние, он может прийти к выводам, похожим на мир Z. Проблема Парфита — одна из причин, почему «максимизируй счастье» — опасная цель для сверхинтеллекта." },
+              { "label": "В личных решениях', \"example\": \"Когда вы думаете о том, иметь ли детей и сколько — вы неявно принимаете позицию по вопросам, которые Парфит формализовал. «Мир станет лучше, если в нём будет больше счастливых людей» — или нет?" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Проверьте свою нравственную теорию: если суммарное счастье важно — как далеко вы готовы следовать этой логике? Если интуиция останавливает вас раньше логики — это сигнал, что ваша теория неполна. Это нормально. У Парфита было то же самое."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №17" } },
+        {
+          "type": "hook",
+          "props": { "text": "World A: 10 billion very happy people. World Z: a trillion people whose lives are barely worth living. If you accept the logic of utilitarianism — you are obligated to conclude that World Z is better. Derek Parfit himself found this conclusion repugnant. And still couldn't refute it." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Repugnant}} Conclusion" } },
+        { "type": "subtitle", "props": { "text": "Derek Parfit 'Reasons and Persons' · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/repugnant_conclusion.svg", "alt": "World A: few tall bars of happiness; World Z: vast number of tiny bars — total area of Z is greater" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Derek Parfit was one of the greatest moral philosophers of the 20th century. In 'Reasons and Persons,' he constructed the following chain: if a world with 10 billion happy people is better than one with 1 billion, you can keep adding people while slightly lowering average happiness, as long as total happiness grows. Repeat enough steps — and you arrive at a trillion people with lives barely worth living.",
+              "{{em:The logic is impeccable. The conclusion is repugnant.}} If the rightness of an action is determined by the sum of happiness (total utilitarianism), then World Z with a trillion barely-happy people is better than World A with a billion very happy people — because 0.01 × trillion > 10 × billion. Parfit could not accept this conclusion — and could not refute it. He spent years searching for a way out.",
+              "The paradox exposes a fundamental problem: our moral intuitions are mutually incompatible. We believe that adding happy people is good. We believe that average quality of life matters. We believe that World Z is terrible. You cannot consistently hold all three beliefs simultaneously."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When a logically sound argument leads to a clearly unacceptable conclusion, that's a signal that one of the premises is wrong. Parfit's Repugnant Conclusion isn't a refutation of ethics — it's a signal that total utilitarianism is incomplete as a theory."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Which is ethically preferable?",
+            "setup": "Both options are hypothetical, no other conditions apply.",
+            "options": [
+              { "id": "world_a", "text": "World A: 1 billion people with lives full of meaning and joy", "is_wiser": true },
+              { "id": "world_z", "text": "World Z: 1 trillion people, each barely glad to be alive", "is_wiser": false }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "intuitively choose World A",
+              "explanation": "Almost everyone chooses A — intuitively. But if you accept the principle 'more total happiness = better,' you are logically obligated to choose Z. It's exactly this contradiction between intuition and logic that Parfit called the problem. There is no obvious exit — only a choice of which principle to sacrifice.",
+              "wisdom": "{{em:\"I believe that, if we are to have a credible theory, we must be able to avoid the Repugnant Conclusion.\" — Derek Parfit}}",
+              "hardcoded_stats": { "percentage": 94, "label": "intuitively choose World A" }
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The Repugnant Conclusion does not prove 'utilitarianism is bad.' It proves that total utilitarianism in its pure form needs refinement. Alternatives (average utilitarianism, critical-level utilitarianism, person-affecting views) also have uncomfortable implications. This is an open problem in philosophy."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In demographic policy", "example": "Should states encourage higher birth rates for the sake of the nation's 'total happiness'? Parfit shows: the question of who should be born is not just political — it's deeply philosophical." },
+              { "label": "In AI safety", "example": "AI researchers discuss: if an AI optimizes for total human well-being, it may arrive at conclusions resembling World Z. Parfit's problem is one reason why 'maximize happiness' is a dangerous goal for a superintelligence." },
+              { "label": "In personal decisions", "example": "When thinking about whether to have children and how many, you are implicitly taking a position on questions Parfit formalized. 'The world becomes better if it has more happy people' — or does it?" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Test your moral theory: if total happiness matters — how far are you willing to follow that logic? If intuition stops you before logic does — that's a signal your theory is incomplete. That's fine. Parfit had the same experience."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/repugnant_conclusion" }]
+}

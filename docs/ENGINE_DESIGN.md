@@ -1,11 +1,11 @@
-# Zerik Engine — Архитектура универсального движка
+# Qaizo Engine — Архитектура универсального движка
 
 **Версия:** 0.2 (после интеграции linup roadmap)
 **Дата:** 2026-04-25
-**Контекст:** Zerik Engine — фундамент **линейки из 5-7 продуктов студии** в нише ежедневного образовательного/когнитивного контента. Mental Models — первый и флагманский продукт. См. `studio_lineup_roadmap.md`.
+**Контекст:** Qaizo Engine — фундамент **линейки из 5-7 продуктов студии** в нише ежедневного образовательного/когнитивного контента. Senik — первый и флагманский продукт. См. `studio_lineup_roadmap.md`.
 
 **Список приложений на движке:**
-1. Mental Models (флагман, бирюза)
+1. Senik (флагман, бирюза)
 2. Cognitive Biases Daily (янтарь)
 3. Thought Experiments (фиолетовый)
 4. Psychology Experiments (коралл)
@@ -47,7 +47,7 @@
 
 ## 3. Структура папок
 
-### Текущая (single package, Mental Models в одиночку)
+### Текущая (single package, Senik в одиночку)
 
 ```
 Desktop/Zerik/
@@ -65,7 +65,7 @@ Desktop/Zerik/
 │   ├── i18n/
 │   └── hooks/
 ├── apps/
-│   └── mental-models/                  ← КОНФИГ + СПЕЦИФИКА Mental Models
+│   └── senik/                  ← КОНФИГ + СПЕЦИФИКА Senik
 │       ├── App.js                      ← точка входа
 │       ├── app.json
 │       ├── package.json
@@ -81,7 +81,7 @@ Desktop/Zerik/
 │       │   ├── paywall.config.js
 │       │   └── push.config.js
 │       ├── blocks/                     ← кастомные блоки (если нужны)
-│       ├── i18n/                       ← RU/EN строки Mental Models
+│       ├── i18n/                       ← RU/EN строки Senik
 │       └── assets/
 └── scripts/
     ├── seed-firestore.js
@@ -94,15 +94,15 @@ Desktop/Zerik/
 Desktop/Zerik/
 ├── package.json                        ← workspace root
 ├── packages/
-│   └── engine/                         ← npm-package "@zerik/engine"
+│   └── engine/                         ← npm-package "@qaizo/engine"
 ├── apps/
-│   ├── mental-models/                  ← @zerik/mental-models
-│   ├── cognitive-biases/               ← @zerik/cognitive-biases
-│   ├── thought-experiments/            ← @zerik/thought-experiments
-│   ├── psychology-experiments/         ← @zerik/psychology-experiments
-│   ├── paradoxes/                      ← @zerik/paradoxes
-│   ├── rhetorical-fallacies/           ← @zerik/rhetorical-fallacies
-│   └── book-idea/                      ← @zerik/book-idea
+│   ├── senik/                  ← @qaizo/senik
+│   ├── cognitive-biases/               ← @qaizo/cognitive-biases
+│   ├── thought-experiments/            ← @qaizo/thought-experiments
+│   ├── psychology-experiments/         ← @qaizo/psychology-experiments
+│   ├── paradoxes/                      ← @qaizo/paradoxes
+│   ├── rhetorical-fallacies/           ← @qaizo/rhetorical-fallacies
+│   └── book-idea/                      ← @qaizo/book-idea
 ├── shared/
 │   ├── content-schemas/                ← общие JSON Schemas карточек
 │   └── design-tokens/                  ← shared дизайн-токены
@@ -156,11 +156,11 @@ plugins: [
 | `subtitle` | Все 7 | "Sunk Cost Fallacy · D. Kahneman · 1979" |
 | `illustration` | Все 7 | SVG-иллюстрация |
 | `body_paragraphs` | Все 7 | 2-4 абзаца, drop_cap опц. |
-| `principle` | Mental Models, Cognitive Biases, Fallacies | Цитата сути |
-| `scenario` | Mental Models, Cognitive Biases, Thought Experiments, Psych Experiments | Голосование с reveal |
-| `domains` | Mental Models, Cognitive Biases, Fallacies | "Где встретите сегодня" |
+| `principle` | Senik, Cognitive Biases, Fallacies | Цитата сути |
+| `scenario` | Senik, Cognitive Biases, Thought Experiments, Psych Experiments | Голосование с reveal |
+| `domains` | Senik, Cognitive Biases, Fallacies | "Где встретите сегодня" |
 | `action_today` | Все кроме Paradoxes | Выполнимое за день |
-| `trap` | Mental Models, Paradoxes | Где правило не работает |
+| `trap` | Senik, Paradoxes | Где правило не работает |
 
 **Продуктовые блоки (специфика, регистрируются приложением):**
 
@@ -227,7 +227,7 @@ registerBlock('historical_data', HistoricalDataBlock);
 
 | Slug | Цвет акцента | Продукт |
 |---|---|---|
-| `mental_models` | `#5EEAD4` (teal) | Mental Models |
+| `mental_models` | `#5EEAD4` (teal) | Senik |
 | `cognitive_biases` | `#E89647` (amber) | Cognitive Biases Daily |
 | `thought_experiments` | `#A78BFA` (violet) | Thought Experiments |
 | `psychology_experiments` | `#F87171` (coral) | Psychology Experiments |
@@ -257,7 +257,7 @@ class ContentService {
   async searchCards({ query, tags, category, locale }) { /* */ }
 }
 
-// apps/mental-models/App.js
+// apps/senik/App.js
 import { ContentService } from '@engine/core/contentService';
 const contentService = new ContentService({
   collectionName: 'models',
@@ -362,9 +362,9 @@ async function getRelatedCardInOtherApp(currentCard) { /* контекстный
 
 **UI-точки cross-promotion:**
 1. **SettingsScreen** — раздел "Другие приложения студии" с превью карточек
-2. **CardStackScreen** — после закрытия карточки иногда показывается "Связанная модель в Mental Models" (если текущий продукт — Cognitive Biases или Thought Experiments)
+2. **CardStackScreen** — после закрытия карточки иногда показывается "Связанная модель в Senik" (если текущий продукт — Cognitive Biases или Thought Experiments)
 3. **Onboarding** — на последнем слайде "Студия делает 5 приложений в этой нише — попробуй ещё"
-4. **PaywallScreen** — для бесплатных приложений: "Хочешь больше? — Mental Models с Pro-подпиской открывает всё"
+4. **PaywallScreen** — для бесплатных приложений: "Хочешь больше? — Senik с Pro-подпиской открывает всё"
 
 **Конфиг линейки (shared/cross-promo.config.json):**
 
@@ -376,8 +376,8 @@ async function getRelatedCardInOtherApp(currentCard) { /* контекстный
       "store_id_ios": "...",
       "store_id_android": "...",
       "i18n": {
-        "ru": { "name": "Mental Models", "tagline": "Одна модель в день — для ясного мышления" },
-        "en": { "name": "Mental Models", "tagline": "One model a day — for sharper thinking" }
+        "ru": { "name": "Senik", "tagline": "Одна модель в день — для ясного мышления" },
+        "en": { "name": "Senik", "tagline": "One model a day — for sharper thinking" }
       },
       "category_slug": "mental_models",
       "is_flagship": true
@@ -427,10 +427,10 @@ async function getRelatedCardInOtherApp(currentCard) { /* контекстный
 
 ---
 
-## 13. Roadmap MVP (3 недели для Mental Models)
+## 13. Roadmap MVP (3 недели для Senik)
 
 ### Неделя 1 — фундамент движка + Firebase
-- Реорганизация папок → Expo-проект в `apps/mental-models/`
+- Реорганизация папок → Expo-проект в `apps/senik/`
 - Создать `engine/core/` сервисы: copy-paste-adapt из Qaizo
 - Theme architecture + tokens + 7 категорийных палитр (используется только бирюза, остальные — для cross-promo)
 - Firebase project setup (новый, europe-west1)

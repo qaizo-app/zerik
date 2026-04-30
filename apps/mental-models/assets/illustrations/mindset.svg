@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Split brain -->
+  <!-- Left half: Fixed mindset -->
+  <path d="M200 40 Q155 40 130 65 Q100 90 100 130 Q100 170 130 195 Q155 215 200 215 Z" fill="#2a1a1a" stroke="#e85d5d" stroke-width="2"/>
+  <!-- Right half: Growth mindset -->
+  <path d="M200 40 Q245 40 270 65 Q300 90 300 130 Q300 170 270 195 Q245 215 200 215 Z" fill="#1a2a1a" stroke="#4adf8a" stroke-width="2"/>
+  <!-- Dividing line -->
+  <line x1="200" y1="40" x2="200" y2="215" stroke="#e8c44a" stroke-width="2"/>
+  <!-- Left: Fixed mindset content -->
+  <text x="152" y="75" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d" font-weight="bold">FIXED</text>
+  <!-- Lock icon -->
+  <rect x="132" y="90" width="22" height="18" rx="3" fill="#e85d5d" opacity="0.7"/>
+  <path d="M136 90 Q136 80 143 80 Q150 80 150 90" fill="none" stroke="#e85d5d" stroke-width="2"/>
+  <!-- Fixed mindset traits -->
+  <g font-family="sans-serif" font-size="8" fill="#f08080" text-anchor="middle">
+    <text x="152" y="125">Способности</text>
+    <text x="152" y="138">врождённые</text>
+    <text x="152" y="155">Ошибка =</text>
+    <text x="152" y="168">угроза «я»</text>
+    <text x="152" y="183">Избегает</text>
+    <text x="152" y="196">трудного</text>
+  </g>
+
+  <!-- Right: Growth mindset content -->
+  <text x="248" y="75" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4adf8a" font-weight="bold">GROWTH</text>
+  <!-- Sprout icon -->
+  <path d="M248 95 Q248 85 253 82 Q260 78 265 85 Q262 90 258 91 Q255 88 248 95" fill="#4adf8a" opacity="0.7"/>
+  <line x1="248" y1="95" x2="248" y2="108" stroke="#4adf8a" stroke-width="2"/>
+  <!-- Growth mindset traits -->
+  <g font-family="sans-serif" font-size="8" fill="#87ceeb" text-anchor="middle">
+    <text x="248" y="125">Способности</text>
+    <text x="248" y="138">развиваются</text>
+    <text x="248" y="155">Ошибка =</text>
+    <text x="248" y="168">информация</text>
+    <text x="248" y="183">Ищет</text>
+    <text x="248" y="196">трудное</text>
+  </g>
+
+  <!-- Praise examples -->
+  <rect x="20" y="228" width="170" height="50" fill="#2a1a1a" stroke="#e85d5d" stroke-width="1" rx="6"/>
+  <text x="105" y="244" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">«Ты умный»</text>
+  <text x="105" y="258" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">→ fixed mindset</text>
+  <text x="105" y="271" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#555">хвалим результат</text>
+
+  <rect x="210" y="228" width="170" height="50" fill="#1a2a1a" stroke="#4adf8a" stroke-width="1" rx="6"/>
+  <text x="295" y="244" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a">«Ты постарался»</text>
+  <text x="295" y="258" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">→ growth mindset</text>
+  <text x="295" y="271" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#555">хвалим процесс</text>
+
+  <text x="200" y="38" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e8c44a" font-weight="bold">Кэрол Дуэк · Mindset · 2006</text>
+</svg>

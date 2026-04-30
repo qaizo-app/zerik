@@ -7,6 +7,58 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:116778984611:android:6f4d107399869b7c40cb16",
+        "android_client_info": {
+          "package_name": "com.qaizo.senik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116778984611-ibchrf5hdaqcq9579rbbdo2caahc720p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qaizo.senik",
+            "certificate_hash": "53d6f11c1d549d8a30dbebb626405922da0bf8be"
+          }
+        },
+        {
+          "client_id": "116778984611-uajnpusoeipl2f5ac82dict572usfqv0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qaizo.senik",
+            "certificate_hash": "c9d04885dfa287968cbb9959485997d7f151983e"
+          }
+        },
+        {
+          "client_id": "116778984611-4essoktqdriqfshup3m2bf8o7ire3qrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHl7Bh0roCys_pi7dllc56BZCs-EfNnZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116778984611-4essoktqdriqfshup3m2bf8o7ire3qrr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "116778984611-dp88i988i5jcr1gpvbhisp9rb7bjabp7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zerik.mentalmodels"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:116778984611:android:84b315a8046fe05240cb16",
         "android_client_info": {
           "package_name": "com.zerik.mentalmodels"

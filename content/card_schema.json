@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://zerik.app/schemas/card.json",
-  "title": "Zerik Engine Card",
-  "description": "Универсальная схема карточки для движка Zerik. Карточка = метаданные + i18n блоки + уровни глубины. Block-based renderer.",
+  "$id": "https://qaizo.app/schemas/card.json",
+  "title": "Qaizo Engine Card",
+  "description": "Универсальная схема карточки для движка Qaizo. Карточка = метаданные + i18n блоки + уровни глубины. Block-based renderer.",
   "type": "object",
   "required": ["id", "category", "release_number", "release_date", "i18n"],
   "additionalProperties": false,

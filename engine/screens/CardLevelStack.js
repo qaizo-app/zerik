@@ -18,7 +18,13 @@ export default function CardLevelStack({
   dynamic,
   isSaved,
   onSave,
-  onShare
+  onShare,
+  // Pro-gating: если false — кнопка «Go deeper» блокируется (🔒) и зовёт onLockedDeeper.
+  hasSubscription = true,
+  onLockedDeeper  = null,
+  // extraBottomSection — секция под CardBottomBar только на level 1
+  // (на deep-уровнях не нужна — это другой контекст).
+  extraBottomSection = null
 }) {
   const { palette } = useTheme();
   const [activeIdx, setActiveIdx] = useState(0);
@@ -32,6 +38,7 @@ export default function CardLevelStack({
   const hasParent = activeIdx > 0;
   const nextDeep  = hasDeeper ? levels[activeIdx + 1] : null;
   const deeperType = nextDeep?.card?.deep?.type || null;
+  const isLocked = hasDeeper && !hasSubscription;
 
   return (
     <View style={{ width, height: '100%' }}>
@@ -43,10 +50,13 @@ export default function CardLevelStack({
           isSaved={isSaved}
           onSave={onSave}
           onShare={onShare}
-          onContinueDeeper={hasDeeper ? () => setActiveIdx(activeIdx + 1) : null}
+          onContinueDeeper={hasDeeper && !isLocked ? () => setActiveIdx(activeIdx + 1) : null}
+          lockedDeeper={isLocked}
+          onLockedDeeper={isLocked ? onLockedDeeper : null}
           onBackToParent={hasParent ? () => setActiveIdx(activeIdx - 1) : null}
           levelLabel={hasParent ? `${t('level_label')} ${current.level}` : null}
           deeperType={deeperType}
+          extraBottomSection={activeIdx === 0 ? extraBottomSection : null}
         />
       </ErrorBoundary>
     </View>

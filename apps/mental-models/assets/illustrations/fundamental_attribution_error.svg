@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e8c44a" font-weight="bold">Фундаментальная ошибка атрибуции</text>
+  <!-- Left panel: Other person -->
+  <rect x="20" y="45" width="170" height="180" fill="#2a1a1a" stroke="#e85d5d" stroke-width="1.5" rx="8"/>
+  <text x="105" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d" font-weight="bold">ДРУГОЙ</text>
+  <!-- Other person figure -->
+  <circle cx="105" cy="100" r="18" fill="#c8a87c"/>
+  <rect x="96" y="118" width="18" height="25" rx="3" fill="#e85d5d"/>
+  <!-- Clock showing late -->
+  <circle cx="145" cy="88" r="14" fill="#1a1a2e" stroke="#e85d5d" stroke-width="1.5"/>
+  <line x1="145" y1="88" x2="145" y2="78" stroke="#e85d5d" stroke-width="2"/>
+  <line x1="145" y1="88" x2="151" y2="93" stroke="#e85d5d" stroke-width="2"/>
+  <!-- Thought bubble: character judgment -->
+  <ellipse cx="65" cy="78" rx="32" ry="18" fill="#2a0d0d" stroke="#e85d5d" stroke-width="1.5"/>
+  <text x="65" y="74" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e85d5d">«Он —</text>
+  <text x="65" y="86" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e85d5d">безответств.»</text>
+  <!-- Attribute label -->
+  <rect x="35" y="155" width="130" height="52" fill="#0d0a0a" rx="4"/>
+  <text x="100" y="172" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">Объяснение:</text>
+  <text x="100" y="186" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d" font-weight="bold">ХАРАКТЕР</text>
+  <text x="100" y="200" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">«он такой человек»</text>
+
+  <!-- Right panel: Self -->
+  <rect x="210" y="45" width="170" height="180" fill="#1a2a1a" stroke="#4adf8a" stroke-width="1.5" rx="8"/>
+  <text x="295" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4adf8a" font-weight="bold">Я</text>
+  <!-- Self figure -->
+  <circle cx="295" cy="100" r="18" fill="#c8a87c"/>
+  <rect x="286" y="118" width="18" height="25" rx="3" fill="#4a90d9"/>
+  <!-- Same clock -->
+  <circle cx="335" cy="88" r="14" fill="#1a1a2e" stroke="#4adf8a" stroke-width="1.5"/>
+  <line x1="335" y1="88" x2="335" y2="78" stroke="#4adf8a" stroke-width="2"/>
+  <line x1="335" y1="88" x2="341" y2="93" stroke="#4adf8a" stroke-width="2"/>
+  <!-- Traffic jam clouds -->
+  <ellipse cx="255" cy="88" rx="22" ry="12" fill="#1a2a1a" stroke="#4adf8a" stroke-width="1"/>
+  <text x="255" y="92" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#87ceeb">пробки!</text>
+  <!-- Attribute label -->
+  <rect x="225" y="155" width="130" height="52" fill="#0a0d0a" rx="4"/>
+  <text x="290" y="172" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a">Объяснение:</text>
+  <text x="290" y="186" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4adf8a" font-weight="bold">СИТУАЦИЯ</text>
+  <text x="290" y="200" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">«просто обстоятельства»</text>
+
+  <!-- Same action label -->
+  <text x="200" y="145" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e8c44a">← одно и то же действие →</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="240" width="360" height="42" fill="#0d1530" rx="8"/>
+  <text x="200" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#aaa">Мы судим других по характеру,</text>
+  <text x="200" y="274" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#aaa">себя — по обстоятельствам. Систематически.</text>
+</svg>

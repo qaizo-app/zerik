@@ -1,7 +1,7 @@
 {
-  "name": "@zerik/engine",
+  "name": "@qaizo/engine",
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
-  "description": "Zerik Engine — block-based renderer, theming, services for daily editorial card apps. Used by all studio apps except Qaizo. Internal workspace package — peer deps satisfied by host app (apps/<name>)."
+  "description": "Qaizo Engine — block-based renderer, theming, services for daily editorial card apps. Used by all Qaizo studio apps. Internal workspace package — peer deps satisfied by host app (apps/<name>)."
 }

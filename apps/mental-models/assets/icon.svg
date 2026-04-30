@@ -1,25 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
   <defs>
-    <linearGradient id="appicon_bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0E1014"/>
       <stop offset="100%" stop-color="#1D2129"/>
     </linearGradient>
-    <linearGradient id="appicon_accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5EEAD4"/>
-      <stop offset="100%" stop-color="#2A9D8F"/>
-    </linearGradient>
+    <path id="brain6" d="
+      M 240 540
+      Q 232 360 432 296
+      Q 612 256 776 360
+      Q 856 420 824 528
+      Q 856 612 784 656
+      Q 760 736 656 752
+      Q 568 768 504 728
+      Q 416 776 332 728
+      Q 240 700 232 600
+      Z
+    "/>
+    <clipPath id="clip6">
+      <use href="#brain6"/>
+    </clipPath>
   </defs>
 
-  <rect x="0" y="0" width="1024" height="1024" fill="url(#appicon_bg)" rx="200" ry="200"/>
+  <rect width="1024" height="1024" fill="url(#bg6)" rx="200" ry="200"/>
 
-  <circle cx="512" cy="512" r="280" fill="none" stroke="#5EEAD4" stroke-width="6" stroke-opacity="0.25"/>
-  <circle cx="512" cy="512" r="200" fill="none" stroke="#5EEAD4" stroke-width="3" stroke-opacity="0.15"/>
+  <!-- Single continuous serpentine path inside brain — Ariadne's thread -->
+  <g clip-path="url(#clip6)">
+    <path d="
+      M 280 380
+      L 720 380
+      L 720 460
+      L 360 460
+      L 360 540
+      L 720 540
+      L 720 620
+      L 360 620
+      L 360 700
+      L 720 700
+    " fill="none" stroke="#5EEAD4" stroke-width="20"
+       stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 
-  <line x1="392" y1="640" x2="392" y2="380" stroke="url(#appicon_accent)" stroke-width="22" stroke-linecap="round"/>
-  <line x1="512" y1="700" x2="512" y2="320" stroke="url(#appicon_accent)" stroke-width="22" stroke-linecap="round"/>
-  <line x1="632" y1="640" x2="632" y2="380" stroke="url(#appicon_accent)" stroke-width="22" stroke-linecap="round"/>
+  <!-- Brain outline -->
+  <use href="#brain6" fill="none" stroke="#5EEAD4" stroke-width="24"
+       stroke-linejoin="round" stroke-linecap="round"/>
 
-  <circle cx="392" cy="380" r="14" fill="#5EEAD4"/>
-  <circle cx="512" cy="320" r="16" fill="#5EEAD4"/>
-  <circle cx="632" cy="380" r="14" fill="#5EEAD4"/>
+  <!-- Spinal stem -->
+  <path d="M 504 752 L 504 856" fill="none" stroke="#5EEAD4"
+        stroke-width="22" stroke-linecap="round" stroke-opacity="0.9"/>
+
+  <!-- Endpoint dot — exit of the labyrinth -->
+  <circle cx="720" cy="700" r="16" fill="#5EEAD4"/>
 </svg>

@@ -55,7 +55,47 @@ function HistoryItem({ card, locale, onPress }) {
   );
 }
 
-export default function HistoryScreen({ getHistory, onCardPress, locale = 'ru' }) {
+function LockedRow({ hiddenCount, onPress }) {
+  const { palette, tokens } = useTheme();
+  // Если есть реально скрытые карточки — конкретное число.
+  // Если архив пока меньше или равен лимиту — общая фраза о растущем архиве.
+  const hintKey = hiddenCount > 0 ? 'unlock_archive_hint' : 'unlock_archive_hint_growing';
+  return (
+    <Pressable onPress={onPress} style={{
+      paddingVertical: 22,
+      paddingHorizontal: 24,
+      borderTopWidth: 1,
+      borderTopColor: palette.border_bright,
+      alignItems: 'center',
+      backgroundColor: palette.bg_card
+    }}>
+      <Text style={{
+        fontFamily: tokens.fonts.mono_medium,
+        fontSize: 11,
+        letterSpacing: 2,
+        color: palette.accent,
+        textTransform: 'uppercase',
+        marginBottom: 6
+      }}>🔒 {t('unlock_archive')}</Text>
+      <Text style={{
+        fontFamily: tokens.fonts.serif_italic,
+        fontStyle: 'italic',
+        fontSize: 13,
+        color: palette.text_dim,
+        textAlign: 'center'
+      }}>{t(hintKey, { count: hiddenCount })}</Text>
+    </Pressable>
+  );
+}
+
+export default function HistoryScreen({
+  getHistory, onCardPress, locale = 'ru',
+  // Pro-gating: если true, FlatList обрезается до lockedTailLimit и снизу
+  // показывается lock-row. Тап → onUnlock (обычно: navigate to Paywall).
+  lockedTail = false,
+  lockedTailLimit = 7,
+  onUnlock = null
+}) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
   const [cards, setCards] = useState([]);
@@ -74,6 +114,12 @@ export default function HistoryScreen({ getHistory, onCardPress, locale = 'ru' }
     return () => { cancelled = true; };
   }, [getHistory]);
 
+  const visibleCards = lockedTail ? cards.slice(0, lockedTailLimit) : cards;
+  const hiddenCount  = lockedTail ? Math.max(cards.length - lockedTailLimit, 0) : 0;
+  // lock-row показываем всегда когда gating включён — даже если архив пока
+  // меньше лимита. Free-юзер должен видеть value prop постоянно.
+  const showLockedRow = lockedTail;
+
   return (
     <View style={{ flex: 1, backgroundColor: palette.bg, paddingTop: insets.top }}>
       <View style={{ paddingHorizontal: 24, paddingVertical: 24, flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' }}>
@@ -86,7 +132,7 @@ export default function HistoryScreen({ getHistory, onCardPress, locale = 'ru' }
           <Text style={{
             fontFamily: tokens.fonts.mono, fontSize: 11, letterSpacing: 1.4,
             color: palette.text_mute, textTransform: 'uppercase'
-          }}>{cards.length}</Text>
+          }}>{lockedTail && hiddenCount > 0 ? `${visibleCards.length}/${cards.length}` : cards.length}</Text>
         ) : null}
       </View>
 
@@ -101,11 +147,14 @@ export default function HistoryScreen({ getHistory, onCardPress, locale = 'ru' }
         </View>
       ) : (
         <FlatList
-          data={cards}
+          data={visibleCards}
           keyExtractor={(c) => c.id}
           renderItem={({ item }) => (
             <HistoryItem card={item} locale={locale} onPress={() => onCardPress?.(item)} />
           )}
+          ListFooterComponent={showLockedRow ? (
+            <LockedRow hiddenCount={hiddenCount} onPress={onUnlock} />
+          ) : null}
         />
       )}
     </View>

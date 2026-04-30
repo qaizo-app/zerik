@@ -1,6 +1,6 @@
 rules_version = '2';
 
-// Mental Models — production Firestore Rules
+// Senik — production Firestore Rules
 //
 // Принцип:
 // - Контент карточек (`models`) — public read, write только через admin SDK

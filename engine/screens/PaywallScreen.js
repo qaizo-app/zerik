@@ -62,8 +62,23 @@ export default function PaywallScreen({ paywallService, onPurchased, onClose }) 
 
       <Text style={{
         fontFamily: tokens.fonts.serif_display, fontSize: 32,
-        color: palette.text, marginBottom: 16
+        color: palette.text, marginBottom: 8
       }}>{t('upgrade_to_pro')}</Text>
+
+      <Text style={{
+        fontFamily: tokens.fonts.serif_italic, fontStyle: 'italic',
+        fontSize: 15, color: palette.text_dim, marginBottom: 24
+      }}>{t('paywall_subtitle')}</Text>
+
+      <PaywallFeature palette={palette} tokens={tokens}
+        title={t('paywall_feature_archive_title')}
+        body={t('paywall_feature_archive_body')} />
+      <PaywallFeature palette={palette} tokens={tokens}
+        title={t('paywall_feature_depth_title')}
+        body={t('paywall_feature_depth_body')} />
+      <PaywallFeature palette={palette} tokens={tokens}
+        title={t('paywall_feature_support_title')}
+        body={t('paywall_feature_support_body')} />
 
       <View style={{ flex: 1 }} />
 
@@ -131,6 +146,27 @@ export default function PaywallScreen({ paywallService, onPurchased, onClose }) 
           color: palette.text_mute, textTransform: 'uppercase', textAlign: 'center'
         }}>{t('restore_purchases')}</Text>
       </Pressable>
+    </View>
+  );
+}
+
+function PaywallFeature({ palette, tokens, title, body }) {
+  return (
+    <View style={{ flexDirection: 'row', marginBottom: 14, paddingRight: 8 }}>
+      <Text style={{
+        fontFamily: tokens.fonts.mono_bold, fontSize: 14,
+        color: palette.accent, marginRight: 12, marginTop: 2
+      }}>✓</Text>
+      <View style={{ flex: 1 }}>
+        <Text style={{
+          fontFamily: tokens.fonts.serif_medium || tokens.fonts.serif_body,
+          fontSize: 15, color: palette.text, marginBottom: 2
+        }}>{title}</Text>
+        <Text style={{
+          fontFamily: tokens.fonts.serif_body, fontSize: 13,
+          color: palette.text_dim, lineHeight: 18
+        }}>{body}</Text>
+      </View>
     </View>
   );
 }

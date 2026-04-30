@@ -1,0 +1,168 @@
+{
+  "id": "ikea_effect",
+  "category": "cognitive_biases",
+  "release_number": 133,
+  "release_date": "2026-08-22",
+  "tags": ["ikea", "effort", "value", "norton", "creation", "labor", "ownership"],
+  "difficulty": 1,
+  "reading_time_sec": 130,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/ikea_effect.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Когнитивное искажение · №22" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы три часа собирали шкаф из IKEA. Он немного кривоватый. Но вы любите его больше, чем идеальный шкаф из магазина, который просто принесли и поставили. Это не здравый смысл. Это эффект IKEA." }
+        },
+        { "type": "title", "props": { "text": "Я сделал — значит, {{accent:ценно}}" } },
+        { "type": "subtitle", "props": { "text": "Эффект IKEA · Нортон, Моттен, Ариэли, 2012" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/ikea_effect.svg", "alt": "Два шкафа: идеальный купленный и немного кривой собранный — стрелка ценности указывает на второй" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Майкл Нортон и его коллеги провели эксперименты: людей просили собрать IKEA-коробки, оригами или простые конструкции LEGO. Потом — оценить стоимость результата. Участники, которые сами собирали, называли цену значительно выше, чем сторонние наблюдатели за тот же продукт.",
+              "{{em:Причина — вложенные усилия создают ощущение собственности и ценности, независимо от качества.}} Мы любим то, что создали — потому что в это вложено время, внимание и идентичность. Труд, как и деньги, — форма инвестиции. А инвестиции мы не обесцениваем легко.",
+              "Эффект работает даже когда результат объективно хуже. Это отличает его от простого удовлетворения от мастерства. Дело не в качестве — дело в самом факте участия в создании. IKEA использует это намеренно: процесс сборки создаёт привязанность к предмету ещё до того, как он занял место в комнате."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мы склонны переоценивать то, что создали сами, пропорционально вложенным усилиям — независимо от реального качества результата. Это относится к продуктам, идеям, планам и отношениям."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы разработали бизнес-план, потратив на него месяц. Коллега указывает на серьёзные слабости. Ваша первая реакция?",
+            "setup": null,
+            "options": [
+              { "id": "defend", "text": "Защищаю план — я знаю его лучше всех, коллега не понимает контекста", "is_wiser": false },
+              { "id": "check", "text": "Замечаю желание защититься и намеренно ищу — а вдруг коллега прав?", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "защищают свой план",
+              "explanation": "Это эффект IKEA в действии. Чем больше вы вложили в идею, тем сложнее её объективно оценить. Хорошая практика: специально искать людей, которые не знают, сколько вы работали над планом — они увидят его свежим взглядом.",
+              "wisdom": "{{em:«Люди не просто предпочитают то, что создали сами — они готовы платить за это больше». — Нортон, Моттен, Ариэли (2012)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Эффект IKEA — не всегда плохо. Вовлечение людей в создание чего-то (продукта, решения, правила) повышает их приверженность результату. Менеджеры, которые понимают этот эффект, привлекают команду к разработке — а не только к исполнению."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В продуктовом дизайне", "example": "Personalization и кастомизация повышают ценность продукта в глазах пользователя — он «приложил руку». Nike By You, настройка аватара, выбор цвета — это не только эстетика, это создание привязанности." },
+              { "label": "В управлении проектами", "example": "Команда, которая сама разработала процесс, соблюдает его охотнее, чем команда, которой процесс спустили сверху. Инвестиция усилий → ощущение собственности → приверженность." },
+              { "label": "В инвестициях', \"example\": \"Основатели компаний часто переоценивают её стоимость — они вложили годы жизни. Это классический эффект IKEA. Опытные инвесторы знают об этом и закладывают поправку в переговоры." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните что-то, в что вы вложили много сил и очень цените. Спросите: если бы это сделал кто-то другой — вы всё равно считали бы это таким же ценным? Если нет — эффект IKEA в работе."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Cognitive Bias · №22" } },
+        {
+          "type": "hook",
+          "props": { "text": "You spent three hours assembling an IKEA wardrobe. It's slightly crooked. But you love it more than a perfect wardrobe from the store that was simply delivered and placed. This isn't common sense. It's the IKEA effect." }
+        },
+        { "type": "title", "props": { "text": "I made it — therefore it's {{accent:valuable}}" } },
+        { "type": "subtitle", "props": { "text": "The IKEA Effect · Norton, Mochon, Ariely, 2012" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/ikea_effect.svg", "alt": "Two wardrobes: a perfect bought one and a slightly crooked assembled one — value arrow points to the second" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Michael Norton and colleagues ran experiments: participants were asked to assemble IKEA boxes, origami figures, or simple LEGO constructions. Then — estimate the product's value. Participants who assembled themselves named significantly higher prices than outside observers for the same product.",
+              "{{em:The reason: invested effort creates a sense of ownership and value, independent of quality.}} We love what we've created — because it contains our time, attention, and identity. Labor, like money, is a form of investment. And we don't easily devalue investments.",
+              "The effect works even when the result is objectively worse. This distinguishes it from simple satisfaction with craftsmanship. It's not about quality — it's about the fact of participation in creating. IKEA uses this deliberately: the assembly process creates attachment to the item before it even takes its place in the room."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "We tend to overvalue what we've created ourselves, proportional to the effort invested — regardless of the actual quality of the result. This applies to products, ideas, plans, and relationships."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You developed a business plan over a month. A colleague points out serious weaknesses. Your first reaction?",
+            "setup": null,
+            "options": [
+              { "id": "defend", "text": "Defend the plan — I know it better than anyone, the colleague doesn't understand the context", "is_wiser": false },
+              { "id": "check", "text": "Notice the urge to defend and deliberately ask — maybe the colleague is right?", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "defend their plan",
+              "explanation": "This is the IKEA effect in action. The more you've invested in an idea, the harder it is to evaluate it objectively. Good practice: deliberately seek people who don't know how much work you put in — they'll see it with fresh eyes.",
+              "wisdom": "{{em:\"People don't just prefer the things they've made — they're willing to pay more for them.\" — Norton, Mochon, Ariely (2012)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The IKEA effect isn't always bad. Involving people in creating something (a product, a decision, a rule) increases their commitment to the result. Managers who understand this effect bring the team into design — not just execution."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In product design", "example": "Personalization and customization raise a product's perceived value for the user — they 'had a hand in it.' Nike By You, avatar customization, color selection — this isn't just aesthetics, it's building attachment." },
+              { "label": "In project management", "example": "A team that developed a process itself follows it more willingly than one where the process was handed down from above. Investment of effort → sense of ownership → commitment." },
+              { "label": "In investing", "example": "Founders often overvalue their company — they've invested years of their lives. Classic IKEA effect. Experienced investors know this and factor a correction into negotiations." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall something you've invested heavily in and value greatly. Ask: if someone else had made it — would you still consider it equally valuable? If not — the IKEA effect is at work."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/ikea_effect" }]
+}

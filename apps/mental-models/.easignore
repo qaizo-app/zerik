@@ -1,0 +1,17 @@
+node_modules/
+.expo/
+.expo-shared/
+dist/
+web-build/
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+GoogleService-Info.plist
+.env
+.env.local
+ios/Pods/
+android/build/
+android/app/build/
+android/.gradle/

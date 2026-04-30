@@ -49,7 +49,7 @@ export default function OnboardingScreen({ slides, onDone, onConsentReminders })
             <Text style={{
               fontFamily: tokens.fonts.mono, fontSize: 10, letterSpacing: 2.5,
               color: palette.accent, textTransform: 'uppercase', marginBottom: 24
-            }}>{item.eyebrow || (brand?.app?.name || 'Mental Models')}</Text>
+            }}>{item.eyebrow || (brand?.app?.name || 'Senik')}</Text>
             <Text style={{
               fontFamily: tokens.fonts.serif_display, fontSize: 32,
               color: palette.text, marginBottom: 16, lineHeight: 32 * 1.1

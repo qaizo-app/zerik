@@ -1,0 +1,168 @@
+{
+  "id": "regret_minimization",
+  "category": "mental_models",
+  "release_number": 130,
+  "release_date": "2026-08-19",
+  "tags": ["bezos", "regret", "decisions", "long_term", "amazon", "framework", "80_years"],
+  "difficulty": 1,
+  "reading_time_sec": 130,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/regret_minimization.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Модель мышления · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "1994 год. Джефф Безос — успешный менеджер на Уолл-стрит. Идея: бросить всё и открыть интернет-магазин книг. Рискованно, неразумно. Как он принял решение? Он представил себя в 80 лет." }
+        },
+        { "type": "title", "props": { "text": "Тест {{accent:80 лет}}" } },
+        { "type": "subtitle", "props": { "text": "Модель минимизации сожалений · Джефф Безос, 1994" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/regret_minimization.svg", "alt": "Человек в 30 лет смотрит вперёд к себе в 80 — две развилки пути, одна с сожалением, другая без" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Безос описывал свой метод так: «Я представил себя в 80 лет, оглядывающегося назад. Я знал, что если попробую — и провалюсь — не буду об этом жалеть. Но если не попробую — буду жалеть всегда». Он уволился. Так появился Amazon.",
+              "{{em:Рамка сожаления работает, потому что меняет временно́й горизонт.}} В 30 лет главная боль — страх немедленной неудачи, потери статуса, мнения окружающих. В 80 лет эти факторы исчезают. Остаётся только: сделал ли я то, что хотел? Рискнул ли? Попробовал ли?",
+              "Модель не говорит «делай всё, что хочешь». Она говорит: прежде чем отказаться из-за страха, проверь — ты пожалеешь об этом отказе в 80? Если да — страх не валидный советчик. Если нет — возможно, это не твоя история."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Для важных, необратимых решений используй тест 80 лет: «Буду ли я жалеть об этом в 80?». Если да — это сигнал действовать, несмотря на краткосрочный страх. Минимизируй не риск — минимизируй сожаление."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вам 35 лет. Есть идея сменить карьеру — интересно, но страшно. Какой вопрос важнее?",
+            "setup": null,
+            "options": [
+              { "id": "now", "text": "«Что скажут коллеги и что будет с доходом в следующем году?»", "is_wiser": false },
+              { "id": "80", "text": "«Буду ли я в 80 жалеть, что не попробовал?»", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "думают о краткосрочных последствиях",
+              "explanation": "Краткосрочные опасения реальны, но они оптимизированы для выживания, а не для того, что вы назовёте хорошей жизнью в 80. Тест Безоса принуждает сменить единицу измерения: не «безопасно ли сейчас», а «буду ли я рад, что жил так».",
+              "wisdom": "{{em:«Я знал, что если не попробую — буду жалеть об этом, когда мне будет 80». — Джефф Безос}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Модель работает для значимых, необратимых решений — менять карьеру, запускать проект, переезжать. Она не подходит для ежедневных мелких выборов: приложить её к «купить ли мне второй кофе» — значит злоупотребить инструментом."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В карьере", "example": "Когда вы колеблетесь между безопасной и рискованной карьерной развилкой — спросите не «что выгоднее сейчас», а «что я буду думать об этом в 80 лет, если останусь на безопасном пути»." },
+              { "label": "В отношениях", "example": "Многие люди не говорят важного — из страха реакции. Тест 80 лет: буду ли я жалеть, что не сказал это? Часто ответ — да." },
+              { "label": "В предпринимательстве", "example": "Большинство провалившихся стартапов не жалеют, что попробовали. Большинство людей, не запустивших стартап, — жалеют. Асимметрия сожаления реальна." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните одно откладываемое решение. Представьте себя в 80 лет. Буду ли вы жалеть, что не попробовали — или жалеть, что потратили время на это? Ответ покажет, чего на самом деле требует ситуация."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "1994. Jeff Bezos is a successful manager on Wall Street. An idea: quit everything and open an internet bookstore. Risky, unreasonable. How did he decide? He imagined himself at 80." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:80-year}} test" } },
+        { "type": "subtitle", "props": { "text": "Regret Minimization Framework · Jeff Bezos, 1994" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/regret_minimization.svg", "alt": "A person at 30 looking forward to themselves at 80 — two forks in the road, one with regret, one without" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Bezos described his method: 'I imagined myself at 80, looking back. I knew that if I tried and failed, I wouldn't regret it. But if I didn't try, I would regret it forever.' He quit. Amazon followed.",
+              "{{em:The regret frame works because it shifts the time horizon.}} At 30, the primary pain is fear of immediate failure, loss of status, others' opinions. At 80, those factors disappear. What remains is only: did I do what I wanted? Did I take the risk? Did I try?",
+              "The model doesn't say 'do everything you want.' It says: before declining out of fear, check — will you regret this refusal at 80? If yes — fear isn't a valid advisor here. If no — perhaps this isn't your story."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "For important, irreversible decisions, use the 80-year test: 'Will I regret this at 80?' If yes — it's a signal to act despite short-term fear. Don't minimize risk — minimize regret."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're 35. You have an idea to change careers — interesting, but scary. Which question matters more?",
+            "setup": null,
+            "options": [
+              { "id": "now", "text": "'What will colleagues say, and what happens to my income next year?'", "is_wiser": false },
+              { "id": "80", "text": "'Will I regret at 80 that I didn't try?'", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think about short-term consequences",
+              "explanation": "Short-term fears are real, but they're optimized for survival — not for what you'll call a good life at 80. Bezos's test forces a change in unit of measurement: not 'is it safe now?' but 'will I be glad I lived this way?'",
+              "wisdom": "{{em:\"I knew that if I didn't try this, I'd regret it when I was 80 years old.\" — Jeff Bezos}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The model works for significant, irreversible decisions — career change, launching a project, relocating. It's not meant for daily small choices: applying it to 'should I get a second coffee?' is an abuse of the tool."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In careers", "example": "When hesitating between a safe and a risky career fork — ask not 'what's more profitable now?' but 'what will I think of this at 80 if I stay on the safe path?'" },
+              { "label": "In relationships", "example": "Many people don't say what matters — out of fear of the reaction. The 80-year test: will I regret not saying it? Often the answer is yes." },
+              { "label": "In entrepreneurship", "example": "Most failed startups don't regret trying. Most people who didn't launch — do regret it. The asymmetry of regret is real." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall one postponed decision. Imagine yourself at 80. Will you regret not trying — or regret having spent time on this? The answer will show what the situation actually demands."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/regret_minimization" }]
+}

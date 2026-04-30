@@ -1,4 +1,4 @@
-// Публичные Firebase-параметры для Mental Models. Не секреты — встроены в
+// Публичные Firebase-параметры для Senik. Не секреты — встроены в
 // google-services.json и GoogleService-Info.plist, безопасно коммитить.
 //
 // Секреты (Service Account JSON для seed-скриптов, RevenueCat secret keys)

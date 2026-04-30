@@ -1,0 +1,168 @@
+{
+  "id": "moravecs_paradox",
+  "category": "paradoxes",
+  "release_number": 129,
+  "release_date": "2026-08-18",
+  "tags": ["moravec", "AI", "robots", "cognition", "easy_hard", "intelligence", "evolution"],
+  "difficulty": 3,
+  "reading_time_sec": 145,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/moravecs_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "Компьютер разбивает чемпиона мира по шахматам. Тот же компьютер не может поднять со стола стакан, не уронив его. Решение дифференциальных уравнений — легко. Ходьба по неровной поверхности — предел возможностей. Почему то, что сложно для нас, — просто для ИИ. И наоборот." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Моравека}}: ИИ наоборот" } },
+        { "type": "subtitle", "props": { "text": "Ханс Моравек, Родни Брукс · 1980-е" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/moravecs_paradox.svg", "alt": "Робот легко решает уравнения, но не может поймать мяч — ребёнок делает это без усилий" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Ханс Моравек сформулировал парадокс в 1980-х: задачи, требующие высокого интеллекта в человеческом понимании (шахматы, логика, математика), относительно легко реализовать на компьютере. Задачи, которые трёхлетний ребёнок решает автоматически (распознать лицо, удержать равновесие, понять контекст фразы), — технически чрезвычайно сложны.",
+              "{{em:Объяснение — в эволюции.}} Наш мозг оттачивал сенсомоторные навыки 500 миллионов лет. Они закодированы глубоко, работают быстро, без сознательных усилий. Абстрактное мышление — недавняя надстройка, несколько десятков тысяч лет. Эволюционно молодое — проще имитировать алгоритмом.",
+              "Практическое следствие для карьеры и автоматизации: профессии, которые казались «механическими» (бухгалтерия, юридические стандарты, диагностика по шаблонам), автоматизируются быстро. Профессии, требующие сенсомоторики, общения, контекстуального суждения, эмпатии, — медленнее. Парадокс Моравека объясняет, почему робот-хирург сложнее робота-бухгалтера."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Человеческие навыки, требующие многолетней осознанной учёбы, — слабое место для человека и сильное для ИИ. Навыки, которые кажутся «само собой разумеющимися», — опираются на 500 млн лет эволюции и пока недостижимы для машин."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Какая из профессий автоматизируется быстрее в ближайшие 10 лет?",
+            "setup": null,
+            "options": [
+              { "id": "plumber", "text": "Сантехник (требует физической работы в неожиданных условиях)", "is_wiser": false },
+              { "id": "analyst", "text": "Аналитик данных (работает с паттернами и числами)", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают, что сантехник автоматизируется быстрее",
+              "explanation": "Парадокс Моравека предсказывает обратное. Работа аналитика — паттерн-распознавание на данных, что хорошо ложится на алгоритмы. Сантехник работает в непредсказуемых физических условиях, использует тактильную обратную связь и контекстуальное суждение — пока это за пределами роботики.",
+              "wisdom": "{{em:«Кодировать здравый смысл оказалось труднее, чем казалось». — Ханс Моравек}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Парадокс описывал реальность 1980–2010-х. Современные нейросети (особенно мультимодальные) частично преодолевают его: GPT-4 понимает контекст, роботы Boston Dynamics ходят по любой поверхности. Но полного решения сенсомоторной задачи всё ещё нет."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В выборе карьеры", "example": "Навыки межличностного общения, работа с неопределённостью, физическое мастерство — медленнее автоматизируются. Чистая аналитика, юридическая стандартизация, рутинная диагностика — быстрее." },
+              { "label": "В оценке ИИ-возможностей", "example": "Когда ИИ демонстрирует поражающий результат в задаче (сочинить текст, решить задачу), не делайте вывод что он 'умнее человека'. Он специализирован там, где эволюция сделала нас неэффективными." },
+              { "label": "В образовании", "example": "Если ИИ лучше решает задачи ЕГЭ — это не значит, что нужно меньше учить математике. Это значит, что нужно больше учить тому, что ИИ пока не может: критическому суждению в контексте, командной работе, эмпатии." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Посмотрите на свою работу: какие задачи в ней опираются на паттерн-распознавание и алгоритмы — и какие требуют физического присутствия, контекста, живого суждения? Первое под угрозой. Второе — ваше преимущество."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №19" } },
+        {
+          "type": "hook",
+          "props": { "text": "A computer defeats the world chess champion. The same computer can't pick up a glass from a table without dropping it. Solving differential equations — easy. Walking on uneven ground — the frontier of capability. Why is what's hard for us easy for AI. And vice versa." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Moravec's Paradox}}: AI in reverse" } },
+        { "type": "subtitle", "props": { "text": "Hans Moravec, Rodney Brooks · 1980s" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/moravecs_paradox.svg", "alt": "A robot easily solves equations but can't catch a ball — a child does both effortlessly" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Hans Moravec articulated the paradox in the 1980s: tasks that require high intelligence in the human sense (chess, logic, mathematics) are relatively easy to implement on a computer. Tasks that a three-year-old solves automatically (recognizing a face, maintaining balance, understanding the context of a sentence) are technically extremely difficult.",
+              "{{em:The explanation lies in evolution.}} Our brain refined sensorimotor skills over 500 million years. They are deeply coded, fast, and require no conscious effort. Abstract thinking is a recent addition — just tens of thousands of years. What's evolutionarily young is easier to emulate with an algorithm.",
+              "The practical career implication: professions that seemed 'mechanical' (bookkeeping, legal templates, pattern-based diagnosis) are automating quickly. Professions requiring sensorimotor skill, interpersonal communication, contextual judgment, empathy — more slowly. Moravec's paradox explains why a robotic surgeon is harder to build than a robotic accountant."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Human skills requiring years of deliberate learning are weak spots for humans and strong suits for AI. Skills that feel 'obvious' rely on 500 million years of evolution and remain beyond the reach of machines."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Which profession automates faster in the next 10 years?",
+            "setup": null,
+            "options": [
+              { "id": "plumber", "text": "Plumber (requires physical work in unpredictable conditions)", "is_wiser": false },
+              { "id": "analyst", "text": "Data analyst (works with patterns and numbers)", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "think the plumber automates faster",
+              "explanation": "Moravec's paradox predicts the opposite. An analyst's work is pattern recognition on data — well-suited to algorithms. A plumber works in unpredictable physical environments using tactile feedback and contextual judgment — still beyond robotics.",
+              "wisdom": "{{em:\"Encoding common sense turned out to be harder than it seemed.\" — Hans Moravec}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The paradox described reality in the 1980s–2010s. Modern neural networks (especially multimodal ones) partially overcome it: GPT-4 understands context, Boston Dynamics robots walk on any surface. But a complete solution to the sensorimotor challenge still doesn't exist."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In career choices", "example": "Interpersonal skills, working with ambiguity, physical craftsmanship — these automate more slowly. Pure analysis, legal standardization, routine diagnosis — faster." },
+              { "label": "In assessing AI capabilities", "example": "When AI achieves a stunning result on a task (writing text, solving a problem), don't conclude it's 'smarter than humans.' It's specialized in areas where evolution made us inefficient." },
+              { "label": "In education", "example": "If AI outperforms humans on standardized tests — that's not a reason to teach less math. It's a reason to teach more of what AI can't yet do: contextual critical judgment, teamwork, empathy." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Look at your work: which tasks rely on pattern recognition and algorithms — and which require physical presence, context, and live judgment? The first is at risk. The second is your advantage."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/moravecs_paradox" }]
+}

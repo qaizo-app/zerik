@@ -1,0 +1,168 @@
+{
+  "id": "motte_and_bailey",
+  "category": "rhetorical_fallacies",
+  "release_number": 124,
+  "release_date": "2026-08-13",
+  "tags": ["motte", "bailey", "fallacy", "equivocation", "debate", "rhetoric", "shackel"],
+  "difficulty": 3,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/motte_and_bailey.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Собеседник делает смелое заявление. Вы возражаете. Он тут же говорит: «Я имел в виду совсем другое — очевидную вещь, с которой все согласны». Потом, когда напор спадает, снова возвращается к смелому заявлению. Это не путаница. Это тактика." }
+        },
+        { "type": "title", "props": { "text": "Замок и {{accent:двор}}: тактика двух позиций" } },
+        { "type": "subtitle", "props": { "text": "Motte and Bailey · Николас Шакел, 2005" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/motte_and_bailey.svg", "alt": "Средневековый замок: легко защищаемый холм (motte) и широкий незащищённый двор (bailey) — метафора двух позиций" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "В средневековой архитектуре motte — укреплённый холм с башней, куда отступают при атаке. Bailey — просторный двор у подножия, где живут и работают в мирное время. Философ Николас Шакел использовал эту метафору для описания риторической техники.",
+              "{{em:Bailey — смелая, интересная, спорная позиция, которую автор реально отстаивает.}} Motte — скучная, банальная, бесспорная позиция, к которой он отступает под давлением. Тактика: продвигать bailey, пока не атакуют; при атаке — отходить в motte («я просто говорю, что X важно»); когда критик уходит — снова в bailey.",
+              "Пример: «Наука — это просто одна из форм знания» (bailey) → при возражениях: «Я просто говорю, что учёные тоже могут ошибаться» (motte) → потом снова в bailey. Ловушка: вы опровергаете bailey, но собеседник защищает motte — и выглядит так, будто вы атакуете очевидное."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Когда человек делает смелое заявление, а при критике отступает к банальному — он использует две разные позиции как одну. Назовите это явно: «Вы только что описали две разные вещи. Какую именно из них вы защищаете?»"
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Коллега говорит: «Нам нужно полностью переосмыслить наш продукт». После вашего возражения: «Ну, я просто хочу, чтобы мы не боялись изменений». Что произошло?",
+            "setup": null,
+            "options": [
+              { "id": "clarified", "text": "Коллега уточнил свою мысль — это нормально", "is_wiser": false },
+              { "id": "motte", "text": "Коллега отступил из bailey (радикальное переосмысление) в motte (открытость к изменениям)", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "видят в этом просто уточнение",
+              "explanation": "Разница важна: если коллега реально имел в виду «открытость к изменениям», не нужно было говорить «полностью переосмыслить». Смена формулировки под давлением — признак motte-and-bailey. Попросите уточнить конкретно: что именно он предлагает изменить?",
+              "wisdom": "{{em:«Motte-and-bailey — это когда вы защищаете скучную позицию, чтобы сохранить право на интересную». — Николас Шакел (2005)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Не каждое уточнение позиции — motte-and-bailey. Люди действительно путаются в формулировках или меняют мнение в разговоре. Признак манипуляции — систематическое возвращение в bailey после отступления в motte, а не разовая оговорка."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В медиа и политике", "example": "«Мы должны пересмотреть основы государственности» (bailey) → при критике: «Я просто говорю, что любая система должна развиваться» (motte). После медийного цикла — снова в bailey." },
+              { "label": "В науке и псевдонауке", "example": "Гомеопатия: «Вода помнит информацию и лечит» (bailey) → при атаке: «Я просто говорю, что природные средства могут помочь» (motte). Потом снова «вода помнит»." },
+              { "label": "В личных разговорах", "example": "«Ты всегда так делаешь» (bailey) → при возражении: «Ну, бывает» (motte). Потом снова «всегда». Назовите это: «Подожди — ты говоришь "всегда" или "бывает"?»" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующем споре — заметьте момент, когда собеседник отступает к более слабой позиции после вашего возражения. Вместо того чтобы атаковать motte, спросите напрямую: «Так вы говорите A или B? Давайте зафиксируем»."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №13" } },
+        {
+          "type": "hook",
+          "props": { "text": "Someone makes a bold claim. You push back. They immediately say: 'I meant something much simpler — an obvious thing everyone agrees on.' Then, once the pressure's off, they return to the bold claim. This isn't confusion. It's a tactic." }
+        },
+        { "type": "title", "props": { "text": "The castle and the {{accent:bailey}}: the two-position tactic" } },
+        { "type": "subtitle", "props": { "text": "Motte and Bailey · Nicholas Shackel, 2005" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/motte_and_bailey.svg", "alt": "Medieval castle: defensible hilltop (motte) and spacious undefended courtyard (bailey) — metaphor for two positions" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "In medieval architecture, the motte was a fortified hilltop with a tower — where defenders retreated under attack. The bailey was the spacious courtyard at the base — where life and work happened in peacetime. Philosopher Nicholas Shackel used this metaphor to describe a rhetorical technique.",
+              "{{em:The bailey is the bold, interesting, controversial position the speaker actually wants to advance.}} The motte is the boring, obvious, unassailable position they retreat to under pressure. The tactic: push the bailey while unchallenged; retreat to the motte when attacked ('I'm just saying X matters'); return to the bailey once the critic moves on.",
+              "Example: 'Science is just one way of knowing' (bailey) → under criticism: 'I'm just saying scientists can be wrong too' (motte) → then back to the bailey. The trap: you rebut the bailey, but your opponent defends the motte — making it look like you're attacking the obvious."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "When someone makes a bold claim but retreats to a trivial one under pressure, they are using two different positions as one. Name it explicitly: 'You've just described two different things. Which one exactly are you defending?'"
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A colleague says: 'We need to completely rethink our product.' After your objection: 'Well, I just want us to not be afraid of change.' What happened?",
+            "setup": null,
+            "options": [
+              { "id": "clarified", "text": "The colleague clarified their point — that's normal", "is_wiser": false },
+              { "id": "motte", "text": "The colleague retreated from the bailey (radical rethink) to the motte (openness to change)", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "see this as a simple clarification",
+              "explanation": "The distinction matters: if the colleague really meant 'openness to change,' there was no need to say 'completely rethink.' Changing the claim under pressure is the hallmark of motte-and-bailey. Ask specifically: what exactly are they proposing to change?",
+              "wisdom": "{{em:\"Motte-and-bailey is when you defend the boring position in order to retain the right to the interesting one.\" — Nicholas Shackel (2005)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Not every position refinement is motte-and-bailey. People genuinely get confused about their wording or change their mind mid-conversation. The sign of manipulation is systematic return to the bailey after retreating to the motte — not a one-off slip."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In media and politics", "example": "'We must rethink the foundations of the state' (bailey) → under criticism: 'I'm just saying any system should evolve' (motte). After the news cycle — back to the bailey." },
+              { "label": "In science and pseudoscience", "example": "Homeopathy: 'Water retains memory and heals' (bailey) → under attack: 'I'm just saying natural remedies can help' (motte). Then back to 'water remembers.'" },
+              { "label": "In personal conversations", "example": "'You always do this' (bailey) → when challenged: 'Well, sometimes' (motte). Then 'always' again. Name it: 'Wait — are you saying always or sometimes?'" }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "In your next disagreement, notice the moment someone retreats to a weaker position after your pushback. Instead of attacking the motte, ask directly: 'So are you saying A or B? Let's nail that down.'"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/motte_and_bailey" }]
+}

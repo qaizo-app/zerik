@@ -1,0 +1,168 @@
+{
+  "id": "gish_gallop",
+  "category": "rhetorical_fallacies",
+  "release_number": 131,
+  "release_date": "2026-08-20",
+  "tags": ["gish", "gallop", "debate", "arguments", "flood", "asymmetry", "rhetoric"],
+  "difficulty": 2,
+  "reading_time_sec": 135,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/gish_gallop.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая ошибка · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Оппонент за 2 минуты выдаёт 15 аргументов. Вы успеваете опровергнуть 3. Публика видит: вы ответили на 20% — значит, проигрываете. Это не случайность. Это тактика." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Галоп Гиша}}: победа числом" } },
+        { "type": "subtitle", "props": { "text": "Названо в честь Дуэйна Гиша · термин — 1990-е" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/gish_gallop.svg", "alt": "Одна чёткая стрела аргумента против лавины коротких стрел — иллюстрация асимметрии опровержения" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Дуэйн Гиш — американский креационист, знаменитый тем, что за 20-минутное выступление успевал выдать 50–60 аргументов против эволюции. Его оппоненты — учёные — тратили минуты, чтобы разобрать каждый тщательно. Итог: зал видел, что Гиш «ответил» на всё, а учёный — нет.",
+              "{{em:В основе тактики — фундаментальная асимметрия.}} Сделать ложное утверждение можно за 5 секунд. Опровергнуть его — требует фактов, контекста, объяснений — 2–3 минуты. Умножьте на 15 аргументов — и любой дебатный формат проигран честным участником. Тактика эксплуатирует формат, а не логику.",
+              "Галоп Гиша — не только в дебатах. В переговорах: «У вашего предложения 12 проблем» (перечисляет быстро). В корпоративных спорах: e-mail на 2 страницы с 20 замечаниями. В соцсетях: тред с десятками «доказательств». Опровержение каждого требует времени, которого у собеседника нет."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Количество аргументов — не мера их качества. Когда кто-то выдаёт много слабых аргументов быстро, правильная реакция — не пытаться опровергнуть каждый, а назвать тактику и выбрать один сильный контраргумент."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Оппонент за минуту выдал 10 возражений на ваш проект. Что делать?",
+            "setup": null,
+            "options": [
+              { "id": "all", "text": "Отвечать на каждое — иначе выгляжу неподготовленным", "is_wiser": false },
+              { "id": "meta", "text": "Назвать тактику и выбрать 1-2 принципиальных возражения, которые отвечают на остальные", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "пытаются ответить на каждое возражение",
+              "explanation": "Попытка ответить на каждое — ловушка. Вы выглядите как человек, который «только и делает, что оправдывается». Лучше сказать прямо: «Я вижу здесь попытку задавить числом. Давайте выберем три самых важных» — и разберём их детально.",
+              "wisdom": "{{em:«Галоп Гиша побеждает в формате — и проигрывает в логике». — популярное наблюдение дебатёров}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Не каждый список аргументов — галоп Гиша. Человек может искренне иметь много обоснованных возражений. Признак галопа — скорость, поверхностность и разнородность аргументов, а не просто их количество."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В политических дебатах", "example": "Кандидаты, использующие галоп, знают: телевизионный формат с ограниченным временем ответа делает тактику смертоносной. Зритель запоминает напор, а не опровержения." },
+              { "label": "В переговорах", "example": "«Ваш договор нарушает пункты 3, 7, 11, 14, 18, 22...» — если каждый пункт требует проверки юриста, вы дезориентированы. Спросите: какие три из них критичны?" },
+              { "label": "В онлайн-дискуссиях", "example": "Threads с десятками «доказательств» — классический галоп. Алгоритмы социальных сетей наказывают длинные опровержения и поощряют краткие реакции. Тактика идеально адаптирована к соцсетям." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "В следующий раз, когда вас засыпают аргументами, остановитесь и скажите вслух: «Давайте сосредоточимся на самом важном». Это не уклонение — это восстановление контроля над диалогом."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Your opponent delivers 15 arguments in 2 minutes. You manage to rebut 3. The audience sees: you answered 20% — so you're losing. This isn't accidental. It's a tactic." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Gish Gallop}}: winning by quantity" } },
+        { "type": "subtitle", "props": { "text": "Named after Duane Gish · term coined 1990s" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/gish_gallop.svg", "alt": "One clear argument arrow against an avalanche of short arrows — illustrating the asymmetry of rebuttal" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Duane Gish was an American creationist famous for delivering 50–60 arguments against evolution in a 20-minute talk. His opponents — scientists — spent minutes carefully dismantling each one. The result: the audience saw that Gish had 'answered' everything and the scientist hadn't.",
+              "{{em:The tactic exploits a fundamental asymmetry.}} A false claim can be made in 5 seconds. Debunking it requires facts, context, and explanation — 2–3 minutes. Multiply by 15 arguments and any honest participant loses any debate format. The tactic exploits the format, not logic.",
+              "The Gish Gallop isn't only in debates. In negotiations: 'Your proposal has 12 problems' (listed rapidly). In corporate disputes: a 2-page email with 20 objections. On social media: a thread with dozens of 'proofs.' Rebutting each requires time no one has."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "The number of arguments is not a measure of their quality. When someone produces many weak arguments rapidly, the right response is not to rebut each one — it's to name the tactic and choose one strong counterargument."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "An opponent delivers 10 objections to your project in one minute. What do you do?",
+            "setup": null,
+            "options": [
+              { "id": "all", "text": "Answer each one — otherwise I'll look unprepared", "is_wiser": false },
+              { "id": "meta", "text": "Name the tactic and pick 1–2 core objections that address the others", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "try to answer every objection",
+              "explanation": "Trying to answer each one is the trap. You look like someone who's 'constantly defending themselves.' Better to say directly: 'I see an attempt to overwhelm with volume. Let's pick the three most important ones' — and address those in depth.",
+              "wisdom": "{{em:\"The Gish Gallop wins on format — and loses on logic.\" — common debater observation}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Not every list of arguments is a Gish Gallop. Someone may genuinely have many valid objections. The hallmark of a gallop is speed, superficiality, and heterogeneity of arguments — not just their quantity."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In political debates", "example": "Candidates who use the gallop know: TV format with limited response time makes the tactic lethal. Audiences remember the barrage, not the rebuttals." },
+              { "label": "In negotiations", "example": "'Your contract violates clauses 3, 7, 11, 14, 18, 22...' — if each clause requires a lawyer to check, you're disoriented. Ask: which three are actually critical?" },
+              { "label": "In online discussions", "example": "Threads with dozens of 'proofs' are classic gallops. Social media algorithms penalize long rebuttals and reward short reactions. The tactic is perfectly adapted to the format." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Next time you're buried in arguments, stop and say aloud: 'Let's focus on what's most important.' This isn't evasion — it's reclaiming control of the dialogue."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/gish_gallop" }]
+}

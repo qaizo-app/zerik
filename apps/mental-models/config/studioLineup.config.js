@@ -1,19 +1,19 @@
-// Реестр всех приложений студии — для cross-promotion в SettingsScreen
-// и (позже) для контекстных deep-link "связанная карточка в Mental Models".
-// Пока заполнено только для Mental Models — остальные slug-ы будут включаться
+// Реестр всех приложений студии Qaizo — для cross-promotion в SettingsScreen
+// и (позже) для контекстных deep-link "связанная карточка в Senik".
+// Пока заполнено только для Senik — остальные slug-ы будут включаться
 // по мере релиза каждого приложения линейки.
 
 export const studioApps = [
   {
-    slug: 'mental_models',
+    slug: 'senik',
     is_flagship: true,
     category_slug: 'mental_models',
-    store_id_android: 'com.zerik.mentalmodels',
+    store_id_android: 'com.qaizo.senik',
     store_id_ios: null,
     store_url: null,
     i18n: {
-      ru: { name: 'Mental Models', tagline: 'Одна модель в день — для ясного мышления' },
-      en: { name: 'Mental Models', tagline: 'One model a day — for sharper thinking' }
+      ru: { name: 'Senik', tagline: 'Одна ментальная модель. Каждый день.' },
+      en: { name: 'Senik', tagline: 'One mental model. Every day.' }
     }
   },
   {

@@ -1,9 +1,9 @@
-// Слайды onboarding для Mental Models. Текст редактируется без правки кода.
+// Слайды onboarding для Senik. Текст редактируется без правки кода.
 
 export const onboardingSlides = {
   ru: [
     {
-      eyebrow: 'Mental Models',
+      eyebrow: 'Senik',
       title:   'Одна модель в день',
       body:    'Каждое утро — одна ментальная модель, написанная как редакторская колонка. Не справочник — короткий разбор с примерами из жизни.'
     },
@@ -20,7 +20,7 @@ export const onboardingSlides = {
   ],
   en: [
     {
-      eyebrow: 'Mental Models',
+      eyebrow: 'Senik',
       title:   'One model a day',
       body:    'Every morning — one mental model, written like an editorial column. Not a reference book — a short take with concrete real-life examples.'
     },

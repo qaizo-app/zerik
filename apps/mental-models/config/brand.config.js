@@ -3,26 +3,25 @@
 
 export const brand = {
   studio: {
-    name:    'Zerik Studio',  // working name
+    name:    'Qaizo',
     tagline: {
       ru: 'Студия ежедневного редакторского контента',
       en: 'Daily editorial content studio'
     }
   },
   app: {
-    name:    'Mental Models', // working name
+    name:    'Senik',
+    by:      'by Qaizo',
     tagline: {
-      ru: 'Одна модель в день — для ясного мышления',
-      en: 'One model a day — for sharper thinking'
+      ru: 'Одна ментальная модель. Каждый день.',
+      en: 'One mental model. Every day.'
     }
   },
   primaryCategory: 'mental_models',
-  bundleId: 'com.zerikstudio.mentalmodels',
+  bundleId: 'com.qaizo.senik',
   legal: {
-    // Заполнить перед public-релизом (GitHub Pages / Notion / standalone сайт).
-    // null прячет ссылки из SettingsScreen.
-    privacyUrl: null,
-    termsUrl:   null,
-    supportEmail: null
+    privacyUrl: 'https://qaizo-app.github.io/zerik/legal/privacy.html',
+    termsUrl:   'https://qaizo-app.github.io/zerik/legal/terms.html',
+    supportEmail: 'qaizo.app@gmail.com'
   }
 };

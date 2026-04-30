@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e8c44a" font-weight="bold">Галоп Гиша</text>
+  <!-- Left: one strong argument -->
+  <rect x="20" y="45" width="160" height="200" fill="#1a2a1a" stroke="#4adf8a" stroke-width="1.5" rx="8"/>
+  <text x="100" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4adf8a" font-weight="bold">1 аргумент</text>
+  <text x="100" y="80" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">Обоснованный</text>
+  <!-- Big arrow (strong argument) -->
+  <rect x="55" y="100" width="90" height="28" rx="4" fill="#4adf8a" opacity="0.8"/>
+  <text x="100" y="119" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0d1a0d" font-weight="bold">→ Аргумент A</text>
+  <!-- Time needed to rebut -->
+  <rect x="35" y="148" width="130" height="80" fill="#0d1a0d" rx="4"/>
+  <text x="100" y="165" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#aaa">Опровержение:</text>
+  <text x="100" y="180" text-anchor="middle" font-family="monospace" font-size="10" fill="#4adf8a">~ 30 секунд</text>
+  <text x="100" y="200" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">Честный диалог</text>
+  <text x="100" y="214" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">возможен</text>
+
+  <!-- Right: Gish gallop - many weak arguments -->
+  <rect x="220" y="45" width="160" height="200" fill="#2a1a1a" stroke="#e85d5d" stroke-width="1.5" rx="8"/>
+  <text x="300" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e85d5d" font-weight="bold">15 аргументов</text>
+  <text x="300" y="80" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888">За 2 минуты</text>
+  <!-- Many small arrows -->
+  <g fill="#e85d5d" opacity="0.7" font-family="sans-serif" font-size="7">
+    <rect x="230" y="92" width="140" height="12" rx="2"/>
+    <rect x="230" y="107" width="140" height="12" rx="2"/>
+    <rect x="230" y="122" width="140" height="12" rx="2"/>
+    <rect x="230" y="137" width="140" height="12" rx="2"/>
+    <rect x="230" y="152" width="140" height="12" rx="2"/>
+    <rect x="230" y="167" width="140" height="12" rx="2"/>
+    <rect x="230" y="182" width="140" height="12" rx="2"/>
+  </g>
+  <g font-family="sans-serif" font-size="7" fill="#f08080" text-anchor="middle">
+    <text x="300" y="102">→ Аргумент 1</text>
+    <text x="300" y="117">→ Аргумент 2</text>
+    <text x="300" y="132">→ Аргумент 3</text>
+    <text x="300" y="147">→ Аргумент 4</text>
+    <text x="300" y="162">→ Аргумент 5</text>
+    <text x="300" y="177">→ Аргумент 6...</text>
+    <text x="300" y="192">→ ...×15</text>
+  </g>
+  <!-- Time needed to rebut all -->
+  <rect x="230" y="205" width="140" height="28" fill="#2a0d0d" rx="4"/>
+  <text x="300" y="219" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e85d5d">Опровержение: 45 мин</text>
+  <text x="300" y="229" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#888">Формат не позволяет</text>
+
+  <!-- Asymmetry label -->
+  <text x="200" y="140" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e8c44a">≠</text>
+  <!-- Bottom note -->
+  <rect x="20" y="257" width="360" height="32" fill="#0d1530" rx="6"/>
+  <text x="200" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#aaa">5 сек создать ложь · 3 мин опровергнуть</text>
+  <text x="200" y="283" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888">× 15 аргументов = победа без логики</text>
+</svg>

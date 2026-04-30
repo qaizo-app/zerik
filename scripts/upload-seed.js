@@ -1,15 +1,19 @@
 #!/usr/bin/env node
 // upload-seed.js — заливает все content/seed/*.json в Firestore коллекцию
-// `models`. Не пушит карточки с release_date в будущем (они появятся
-// автоматически когда дата наступит).
+// `models`. Пушит карточки независимо от release_date (включая будущие):
+// на клиенте ContentService.getCardChain сам фильтрует `release_date <= today`,
+// так что будущие карточки лежат в базе и появятся автоматически в нужный день.
+//
+// Запись идемпотентна: doc id = card.id, повторный запуск просто перезапишет
+// существующие документы (можно использовать для регулярных обновлений).
 //
 // Setup:
 //   1. Firebase Console → Project Settings → Service Accounts → Generate new private key
 //   2. Скачать .json → переименовать в serviceAccount.json
 //   3. Положить в КОРЕНЬ workspace (c:\Users\bestc_000\Desktop\Zerik\)
 //   4. Убедиться что serviceAccount.json есть в .gitignore (он там)
-//   5. Из корня: npm install firebase-admin
-//   6. node scripts/upload-seed.js
+//   5. Из корня: npm install firebase-admin (уже установлен)
+//   6. npm run seed:upload  (или: node scripts/upload-seed.js)
 
 const fs = require('fs');
 const path = require('path');

@@ -20,7 +20,14 @@ export default function CardScreen({
   onContinueDeeper = null,
   onBackToParent  = null,
   levelLabel      = null,
-  deeperType      = null
+  deeperType      = null,
+  // Pro-gating для «Go deeper». Если lockedDeeper=true — кнопка показывает 🔒
+  // и при тапе зовёт onLockedDeeper (обычно: navigate to Paywall).
+  lockedDeeper    = false,
+  onLockedDeeper  = null,
+  // Доп. секция, вставляется внутри ScrollView после CardBottomBar.
+  // Используется на Today для мини-списка «Earlier this week».
+  extraBottomSection = null
 }) {
   return (
     <CardThemeScope category={card?.category} cardId={card?.id}>
@@ -32,12 +39,15 @@ export default function CardScreen({
         onBackToParent={onBackToParent}
         levelLabel={levelLabel}
         deeperType={deeperType}
+        lockedDeeper={lockedDeeper}
+        onLockedDeeper={onLockedDeeper}
+        extraBottomSection={extraBottomSection}
       />
     </CardThemeScope>
   );
 }
 
-function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, noTopInset, onContinueDeeper, onBackToParent, levelLabel, deeperType }) {
+function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noScroll, noTopInset, onContinueDeeper, onBackToParent, levelLabel, deeperType, lockedDeeper, onLockedDeeper, extraBottomSection }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -122,12 +132,14 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
 
       <BlockRenderer blocks={blocks} card={card} locale={locale} dynamic={dynamic} />
 
-      {onContinueDeeper ? (() => {
-        const labelKey = deeperType ? `go_deeper_${deeperType}`        : 'go_deeper';
-        const hintKey  = deeperType ? `go_deeper_${deeperType}_hint`   : 'go_deeper_hint';
+      {(onContinueDeeper || (lockedDeeper && onLockedDeeper)) ? (() => {
+        const labelKey  = deeperType ? `go_deeper_${deeperType}`        : 'go_deeper';
+        const hintKey   = deeperType ? `go_deeper_${deeperType}_hint`   : 'go_deeper_hint';
+        const isLocked  = lockedDeeper;
+        const handlePress = isLocked ? onLockedDeeper : onContinueDeeper;
         return (
           <Pressable
-            onPress={onContinueDeeper}
+            onPress={handlePress}
             style={{
               marginHorizontal: 24,
               marginTop: 32,
@@ -136,26 +148,27 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
               paddingHorizontal: 20,
               borderRadius: tokens.radius.tight,
               borderWidth: 1,
-              borderColor: palette.accent,
+              borderColor: isLocked ? palette.border_bright : palette.accent,
               backgroundColor: palette.bg_card,
-              alignItems: 'center'
+              alignItems: 'center',
+              opacity: isLocked ? 0.95 : 1
             }}
           >
             <Text style={{
               fontFamily: tokens.fonts.mono_medium,
               fontSize: 11,
               letterSpacing: 2,
-              color: palette.accent,
+              color: isLocked ? palette.text_dim : palette.accent,
               textTransform: 'uppercase',
               marginBottom: 6
-            }}>↓ {t(labelKey)}</Text>
+            }}>{isLocked ? '🔒 ' : '↓ '}{t(labelKey)}</Text>
             <Text style={{
               fontFamily: tokens.fonts.serif_italic,
               fontStyle: 'italic',
               fontSize: 13,
               color: palette.text_dim,
               textAlign: 'center'
-            }}>{t(hintKey)}</Text>
+            }}>{isLocked ? t('locked_deeper_hint') : t(hintKey)}</Text>
           </Pressable>
         );
       })() : null}
@@ -167,6 +180,8 @@ function CardScreenInner({ card, locale, dynamic, isSaved, onSave, onShare, noSc
         onSharePress={onShare}
         showSwipeUpHint={false}
       />
+
+      {extraBottomSection}
     </Container>
   );
 }

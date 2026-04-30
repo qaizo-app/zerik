@@ -1,0 +1,186 @@
+{
+  "id": "little_albert",
+  "category": "psychology_experiments",
+  "release_number": 121,
+  "release_date": "2026-08-10",
+  "tags": ["watson", "rayner", "conditioning", "fear", "behaviorism", "classical_conditioning"],
+  "difficulty": 2,
+  "reading_time_sec": 155,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/little_albert.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Эксперимент · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "Девятимесячный ребёнок спокойно тянется к белой крысе. Учёный бьёт молотком по металлическому стержню за спиной малыша. Громкий удар — плач. Несколько повторений — и ребёнок начинает плакать, едва увидев крысу. Потом — кролика. Потом — белую шубу. Страх распространился сам по себе." }
+        },
+        { "type": "title", "props": { "text": "Как {{accent:страх}} создаётся с нуля" } },
+        { "type": "subtitle", "props": { "text": "Эксперимент «Маленький Альберт» · Уотсон и Рейнер, 1920" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/little_albert.svg", "alt": "Ребёнок, белая крыса и звуковой удар — схема классического обусловливания страха" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "Джон Уотсон и Розали Рейнер, Университет Джонса Хопкинса",
+            "when": "1920",
+            "what": "Девятимесячный Альберт Б. первоначально не боялся белых крыс. Каждый раз при появлении крысы экспериментаторы производили резкий удар по металлу за спиной ребёнка. После семи совмещений — крыса сама по себе вызывала страх и плач.",
+            "result": "Страх генерализовался: Альберт боялся кролика, собаки, ваты и даже маски Санта-Клауса с белой бородой. Ни одну из этих вещей ему не пытались специально сделать страшной."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Уотсон хотел доказать: личность — это продукт обусловливания, а не врождённых черт. «Дайте мне дюжину здоровых младенцев — и я сделаю из любого кого угодно: врача, юриста, вора» — говорил он. Эксперимент с Альбертом стал его главным доказательством.",
+              "{{em:Классическое обусловливание по Павлову оказалось применимо и к эмоциям человека.}} Страх — не исключение. Он возникает, закрепляется и генерализуется по тем же законам, что и рефлекс слюноотделения у собаки. Это объяснило природу многих фобий: они не «иррациональны» — они просто следуют логике условного рефлекса.",
+              "Этический след. Эксперимент сегодня невозможен по этическим нормам: ребёнка намеренно травмировали без согласия родителей. Альберт так и не получил «разобусловливания» — семья покинула университет раньше. По одной версии, мальчик умер от неврологического заболевания в 6 лет; по другой — прожил до 87, хотя современники описывали у него необъяснимые страхи."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Страх — приобретённый рефлекс. Нейтральный стимул, устойчиво совмещённый с пугающим, сам становится источником страха. Этот механизм лежит в основе большинства человеческих фобий — и в основе их лечения."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "У вас иррациональный страх перед определённым звуком, местом или запахом. Что скорее всего его вызвало?",
+            "setup": null,
+            "options": [
+              { "id": "born", "text": "Вы так устроены — некоторые страхи врождённые", "is_wiser": false },
+              { "id": "conditioned", "text": "Когда-то этот стимул совпал с чем-то пугающим — и рефлекс закрепился", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "считают страхи врождёнными",
+              "explanation": "Уотсон был неправ в радикальных выводах, но прав в одном: большинство специфических фобий имеют обусловленную природу. КПТ и экспозиционная терапия основаны именно на этом — повторная встреча со стимулом без пугающего подкрепления постепенно разрушает условный рефлекс.",
+              "wisdom": "{{em:«Дайте мне младенца и мой мир — и я сделаю из него кого угодно». — Джон Уотсон (1930)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Не все фобии — результат обусловливания. Существуют «подготовленные» страхи (змей, пауков, высоты), которые формируются гораздо быстрее прочих: эволюция создала у нас предрасположенность к ним. Уотсон игнорировал биологическую основу, что обесценивает его универсальные претензии."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В психотерапии", "example": "Экспозиционная терапия при фобиях — прямое применение принципа угасания условного рефлекса. Постепенное и безопасное столкновение с пугающим стимулом без подкрепления снижает страх." },
+              { "label": "В маркетинге", "example": "Бренды намеренно совмещают свои продукты с приятными стимулами (музыка, красивые люди, позитивные эмоции). Это классическое обусловливание — ваш мозг начинает ассоциировать нейтральный логотип с хорошим чувством." },
+              { "label": "В воспитании", "example": "Резкие наказания в детстве могут создавать устойчивые ассоциации страха с местами, людьми или ситуациями, которые сами по себе не опасны. Не «ребёнок трусливый» — у него обусловленный рефлекс." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните один свой «необъяснимый» страх или дискомфорт. Попробуйте восстановить: когда вы впервые столкнулись с этим стимулом, что происходило рядом? Иногда одного воспоминания достаточно, чтобы страх частично потерял власть."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Experiment · №14" } },
+        {
+          "type": "hook",
+          "props": { "text": "A nine-month-old baby reaches calmly for a white rat. The researcher strikes a steel bar with a hammer behind the baby's head. A loud clang — crying. A few repetitions — and the baby starts crying the moment it sees the rat. Then a rabbit. Then a white fur coat. The fear had spread on its own." }
+        },
+        { "type": "title", "props": { "text": "How {{accent:fear}} is built from scratch" } },
+        { "type": "subtitle", "props": { "text": "The 'Little Albert' Experiment · Watson & Rayner, 1920" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/little_albert.svg", "alt": "A baby, a white rat, and a loud noise — diagram of classical fear conditioning" }
+        },
+        {
+          "type": "experiment_card",
+          "props": {
+            "who": "John Watson and Rosalie Rayner, Johns Hopkins University",
+            "when": "1920",
+            "what": "Nine-month-old Albert B. initially showed no fear of white rats. Each time the rat appeared, experimenters struck a steel bar behind the baby's head. After seven pairings, the rat alone triggered fear and crying.",
+            "result": "Fear generalized: Albert became afraid of a rabbit, a dog, cotton wool, and even a Santa Claus mask with a white beard — none of which had ever been paired with the noise."
+          }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Watson wanted to prove that personality is a product of conditioning, not innate traits. 'Give me a dozen healthy infants and I'll make any of them into a doctor, lawyer, or thief,' he claimed. The Albert experiment was his main proof.",
+              "{{em:Pavlov's classical conditioning turned out to apply to human emotions.}} Fear is no exception. It arises, consolidates, and generalizes by the same laws as a dog's salivation reflex. This explained the nature of many phobias: they're not 'irrational' — they simply follow the logic of conditioned reflexes.",
+              "The ethical legacy: by today's standards this experiment could never be conducted. The baby was deliberately traumatized without parental consent. Albert never received 'deconditioning' — his family left the university before that could happen. By one account he died of neurological disease at age 6; by another he lived to 87, though acquaintances described unexplained fears throughout his life."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Fear is an acquired reflex. A neutral stimulus, consistently paired with a frightening one, itself becomes a source of fear. This mechanism underlies most human phobias — and the treatments for them."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You have an irrational fear of a specific sound, place, or smell. What most likely caused it?",
+            "setup": null,
+            "options": [
+              { "id": "born", "text": "You're just wired that way — some fears are innate", "is_wiser": false },
+              { "id": "conditioned", "text": "At some point that stimulus coincided with something frightening — and the reflex stuck", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "believe fears are innate",
+              "explanation": "Watson was wrong in his radical conclusions, but right about one thing: most specific phobias have a conditioned origin. CBT and exposure therapy are built on exactly this — repeated contact with the stimulus without reinforcement gradually extinguishes the conditioned reflex.",
+              "wisdom": "{{em:\"Give me a baby and my world, and I'll make it into anything.\" — John Watson (1930)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Not all phobias come from conditioning. There are 'prepared' fears — of snakes, spiders, heights — that form far more quickly than others: evolution has given us a predisposition to them. Watson ignored this biological foundation, which undermines his universalist claims."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In psychotherapy", "example": "Exposure therapy for phobias is the direct application of conditioned reflex extinction. Gradual, safe contact with a feared stimulus without reinforcement reduces fear." },
+              { "label": "In marketing", "example": "Brands deliberately pair their products with pleasant stimuli (music, attractive people, positive emotions). This is classical conditioning — your brain begins to associate a neutral logo with a good feeling." },
+              { "label": "In parenting", "example": "Harsh punishment in childhood can create lasting fear associations with places, people, or situations that are not inherently dangerous. Not 'the child is timid' — they have a conditioned reflex." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall one 'unexplained' fear or discomfort you have. Try to reconstruct it: when did you first encounter this stimulus, and what was happening nearby at the time? Sometimes a single recollection is enough to partially break the fear's hold."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/little_albert" }]
+}

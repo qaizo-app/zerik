@@ -1,4 +1,4 @@
-# Dev Build для Mental Models
+# Dev Build для Senik
 
 Гайд по запуску локального development-клиента после первого `eas build`.
 Используй `git log` для актуальной истории коммитов — этот файл описывает только текущее устойчивое состояние.
@@ -11,7 +11,7 @@
 
 Если ты вернулся в проект после паузы — этим уже не нужно заниматься, оно сделано:
 
-- ✅ Expo project: `@qaizo/mental-models`, projectId `fef49184-7cf2-45f8-a6d1-5ff878c08d3d`
+- ✅ Expo project: `@qaizo/senik`, projectId `fef49184-7cf2-45f8-a6d1-5ff878c08d3d`
 - ✅ EAS init выполнен, `eas.json` сконфигурирован (development / preview / production профили)
 - ✅ Firebase project `mental-models-mvp` (location `europe-west1`)
 - ✅ Native deps установлены: firebase/app + auth + firestore + analytics + messaging + app-check, google-signin, react-native-purchases
@@ -29,11 +29,11 @@
 ### 1. Запустить EAS build (когда нужен новый APK)
 
 ```powershell
-cd c:\Users\bestc_000\Desktop\Zerik\apps\mental-models
+cd c:\Users\bestc_000\Desktop\Zerik\apps\senik
 eas build --profile development --platform android
 ```
 
-Облачная сборка ~10-15 мин. На выходе URL вида `https://expo.dev/accounts/qaizo/projects/mental-models/builds/<id>`.
+Облачная сборка ~10-15 мин. На выходе URL вида `https://expo.dev/accounts/qaizo/projects/senik/builds/<id>`.
 
 Free план EAS — 30 builds/мес. Не пересобирай зря: чисто JS-изменения подхватываются Metro hot-reload без rebuild. Rebuild нужен только при:
 
@@ -54,11 +54,11 @@ adb install <путь>\application-<id>.apk
 ### 3. Запустить Metro
 
 ```powershell
-cd c:\Users\bestc_000\Desktop\Zerik\apps\mental-models
+cd c:\Users\bestc_000\Desktop\Zerik\apps\senik
 npx expo start --dev-client
 ```
 
-Открой установленный **Mental Models** на телефоне → автоматически найдёт Metro по локальной сети.
+Открой установленный **Senik** на телефоне → автоматически найдёт Metro по локальной сети.
 
 Если **«There was a problem loading the project» / SocketTimeoutException**:
 - Самый надёжный вариант — **USB ADB reverse**: подключи телефон USB-кабелем с включённым USB Debugging → выполни `adb reverse tcp:8081 tcp:8081` → перезапусти app
@@ -74,9 +74,9 @@ npx expo start --dev-client
 | `npm run syntax:check` | `node -c` проверка JS-файлов engine + apps |
 | `npm run seed:upload` | Загружает `content/seed/*.json` в Firestore коллекцию `models` (нужен `serviceAccount.json` в корне) |
 | `npm run rules:deploy` | Деплоит `firestore.rules` через Admin SDK (нужен `serviceAccount.json`) |
-| `npm run icons:generate` | Перегенерирует PNG-иконки из `apps/mental-models/assets/icon.svg` |
-| `npm run mental-models` | `expo start` |
-| `npm run mental-models:android` | `expo start --android` (запускает на эмулятор) |
+| `npm run icons:generate` | Перегенерирует PNG-иконки из `apps/senik/assets/icon.svg` |
+| `npm run senik` | `expo start` |
+| `npm run senik:android` | `expo start --android` (запускает на эмулятор) |
 
 ---
 

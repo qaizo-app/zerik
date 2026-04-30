@@ -2,9 +2,9 @@
   "$schema": "https://design-tokens.org/schema/v1",
   "_meta": {
     "version": "0.2",
-    "notes": "Категорийные палитры Zerik Engine — 7 палитр под линейку студии. Каждая категория = свой акцент + bg-температура. База одинакова. Семантические токены picked/wiser важны для ScenarioBlock. Палитра выбирается по category_slug карточки.",
+    "notes": "Категорийные палитры Qaizo Engine — 7 палитр под линейку студии. Каждая категория = свой акцент + bg-температура. База одинакова. Семантические токены picked/wiser важны для ScenarioBlock. Палитра выбирается по category_slug карточки.",
     "studio_lineup_mapping": {
-      "mental_models":          "Mental Models (флагман)",
+      "mental_models":          "Senik (флагман — ментальные модели)",
       "cognitive_biases":       "Cognitive Biases Daily",
       "thought_experiments":    "Thought Experiments",
       "psychology_experiments": "Psychology Experiments",
@@ -34,22 +34,22 @@
   },
 
   "cognitive_biases": {
-    "_label": "Когнитивные искажения · warm amber",
-    "bg":            "#14100C",
-    "bg_elev":       "#1E1812",
-    "bg_card":       "#251D15",
-    "text":          "#EBDFCC",
-    "text_dim":      "#9A8F7E",
-    "text_mute":     "#6B6258",
-    "border":        "#2A241E",
-    "border_bright": "#3D342A",
+    "_label": "Когнитивные искажения · cool navy + amber (Biased)",
+    "bg":            "#0D1B2A",
+    "bg_elev":       "#111D2B",
+    "bg_card":       "#132233",
+    "text":          "#F0F4F8",
+    "text_dim":      "#7A95B0",
+    "text_mute":     "#4A6480",
+    "border":        "#1C2F42",
+    "border_bright": "#253D52",
     "accent":        "#E89647",
     "accent_dim":    "#A86E35",
-    "picked":        "#C4614F",
-    "wiser":         "#8DA66E",
-    "ink_on_accent": "#14100C",
-    "_grain_color":  "#EBDFCC",
-    "_grain_opacity": 0.08
+    "picked":        "#E05252",
+    "wiser":         "#52C07A",
+    "ink_on_accent": "#0D1B2A",
+    "_grain_color":  "#8BA3BC",
+    "_grain_opacity": 0.05
   },
 
   "thought_experiments": {

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biased — Card Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0D1B2A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px 60px;
+    font-family: 'Inter', sans-serif;
+    color: #F0F4F8;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .app-name {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: #F0F4F8;
+  }
+  .streak {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #111D2B;
+    border: 1px solid #1C2F42;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #E89647;
+  }
+
+  .date-label {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #4A6480;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  /* ── CARD ── */
+  .card-scene {
+    width: 100%;
+    max-width: 380px;
+    height: 560px;
+    perspective: 1400px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .card-scene:active .card-inner {
+    transform: scale(0.972);
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .card-scene.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 1px solid #1C2F42;
+    padding: 28px;
+    padding-bottom: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── FRONT ── */
+  .card-front { background: #111D2B; }
+
+  .amber-mark {
+    width: 8px;
+    height: 8px;
+    background: #E89647;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .day-number {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: -6px;
+    color: #F0F4F8;
+    opacity: 0.035;
+    pointer-events: none;
+  }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 28px;
+  }
+
+  .bias-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: -0.8px;
+    color: #F0F4F8;
+    margin-bottom: 20px;
+  }
+
+  .hairline {
+    height: 1px;
+    background: #1C2F42;
+    margin-bottom: 20px;
+  }
+
+  .hook {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: -0.1px;
+    color: #7A95B0;
+  }
+
+  @keyframes barPulse {
+    0%   { opacity: 0.7; }
+    40%  { opacity: 0.12; }
+    60%  { opacity: 0.7; }
+    80%  { opacity: 0.12; }
+    100% { opacity: 0.7; }
+  }
+
+  .reveal-bar {
+    height: 3px;
+    background: #E89647;
+    margin: 0 -28px;
+    opacity: 0.7;
+    flex-shrink: 0;
+    animation: barPulse 2.2s ease 0.9s 1 forwards;
+  }
+
+  /* ── BACK ── */
+  .card-back {
+    background: #162030;
+    transform: rotateY(180deg);
+    padding-top: 28px;
+  }
+
+  .back-label {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2.4px;
+    color: #E89647;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+  }
+
+  .back-scroll {
+    flex: 1;
+    overflow-y: auto;
+  }
+  .back-scroll::-webkit-scrollbar { display: none; }
+
+  .back-body {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.73;
+    letter-spacing: -0.1px;
+    color: #F0F4F8;
+    margin-bottom: 24px;
+  }
+
+  .quote-block {
+    margin-bottom: 20px;
+    padding-left: 4px;
+  }
+  .quote-mark {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 0.85;
+    color: #E89647;
+    opacity: 0.55;
+    margin-bottom: 6px;
+  }
+  .quote-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: -0.1px;
+    color: #7A95B0;
+  }
+
+  .tip-text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.65;
+    letter-spacing: -0.1px;
+    color: #E89647;
+    opacity: 0.85;
+    margin-bottom: 28px;
+  }
+
+  .done-bar {
+    height: 3px;
+    width: 32px;
+    background: #E89647;
+    opacity: 0.45;
+    margin: 0 -28px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    margin-left: -0px;
+  }
+
+  /* ── SWITCHER ── */
+  .switcher {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 420px;
+  }
+  .switch-btn {
+    background: transparent;
+    border: 1px solid #1C2F42;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #4A6480;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.12s;
+    letter-spacing: 0.2px;
+  }
+  .switch-btn:hover { border-color: #E89647; color: #E89647; }
+  .switch-btn.active { border-color: #E89647; color: #E89647; background: rgba(232,150,71,0.06); }
+
+  .hint {
+    margin-top: 16px;
+    font-size: 11px;
+    color: #2A3F52;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span class="app-name">Biased</span>
+  <div class="streak">🔥 <span>3</span></div>
+</div>
+
+<div class="date-label">May 1, 2026</div>
+
+<div class="card-scene" id="card" onclick="toggleFlip()">
+  <div class="card-inner">
+
+    <div class="card-face card-front">
+      <div class="amber-mark"></div>
+      <div class="day-number" id="front-day">01</div>
+      <div class="card-body">
+        <div class="bias-title" id="front-title">Confirmation Bias</div>
+        <div class="hairline"></div>
+        <div class="hook" id="front-hook">You've already decided. Now you're just collecting evidence.</div>
+      </div>
+      <div class="reveal-bar"></div>
+    </div>
+
+    <div class="card-face card-back">
+      <div class="back-label" id="back-label">Confirmation Bias</div>
+      <div class="back-scroll">
+        <div class="back-body" id="back-body">
+          Your brain doesn't look for truth — it looks for validation. You notice information that confirms your beliefs and ignore everything that doesn't. It feels like research. It's actually a filter.
+        </div>
+        <div class="quote-block">
+          <div class="quote-mark">"</div>
+          <div class="quote-text" id="back-example">
+            You think a colleague is incompetent. Every mistake they make stands out. Every success goes unnoticed. You've built a case, not a picture.
+          </div>
+        </div>
+        <div class="tip-text" id="back-tip">
+          Before deciding, spend 5 minutes actively looking for evidence that you're wrong. The discomfort you feel is the bias resisting.
+        </div>
+      </div>
+      <div class="done-bar"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="switcher">
+  <button class="switch-btn active" onclick="loadCard(0)">Confirmation</button>
+  <button class="switch-btn" onclick="loadCard(1)">Anchoring</button>
+  <button class="switch-btn" onclick="loadCard(2)">Dunning-Kruger</button>
+  <button class="switch-btn" onclick="loadCard(3)">Survivorship</button>
+  <button class="switch-btn" onclick="loadCard(4)">Availability</button>
+  <button class="switch-btn" onclick="loadCard(5)">Sunk Cost</button>
+  <button class="switch-btn" onclick="loadCard(6)">Framing</button>
+  <button class="switch-btn" onclick="loadCard(7)">Bandwagon</button>
+  <button class="switch-btn" onclick="loadCard(8)">Hindsight</button>
+  <button class="switch-btn" onclick="loadCard(9)">Halo Effect</button>
+  <button class="switch-btn" onclick="loadCard(10)">Status Quo</button>
+  <button class="switch-btn" onclick="loadCard(11)">Attribution</button>
+  <button class="switch-btn" onclick="loadCard(12)">Planning</button>
+  <button class="switch-btn" onclick="loadCard(13)">Curse of Knowledge</button>
+  <button class="switch-btn" onclick="loadCard(14)">Gambler's</button>
+  <button class="switch-btn" onclick="loadCard(15)">Loss Aversion</button>
+  <button class="switch-btn" onclick="loadCard(16)">IKEA Effect</button>
+  <button class="switch-btn" onclick="loadCard(17)">Spotlight</button>
+  <button class="switch-btn" onclick="loadCard(18)">False Consensus</button>
+  <button class="switch-btn" onclick="loadCard(19)">Recency</button>
+  <button class="switch-btn" onclick="loadCard(20)">Optimism</button>
+  <button class="switch-btn" onclick="loadCard(21)">Self-Serving</button>
+  <button class="switch-btn" onclick="loadCard(22)">In-Group</button>
+  <button class="switch-btn" onclick="loadCard(23)">Normalcy</button>
+  <button class="switch-btn" onclick="loadCard(24)">Zero-Risk</button>
+  <button class="switch-btn" onclick="loadCard(25)">Hyperbolic</button>
+  <button class="switch-btn" onclick="loadCard(26)">Bystander</button>
+</div>
+
+<div class="hint">click card to flip · click name to switch</div>
+
+<script>
+const cards = [
+  { title: 'Confirmation Bias', hook: "You've already decided. Now you're just collecting evidence.", body: "Your brain doesn't look for truth — it looks for validation. You notice information that confirms your beliefs and ignore everything that doesn't. It feels like research. It's actually a filter.", example: "You think a colleague is incompetent. Every mistake they make stands out. Every success goes unnoticed. You've built a case, not a picture.", tip: "Before deciding, spend 5 minutes actively looking for evidence that you're wrong. The discomfort you feel is the bias resisting." },
+  { title: 'Anchoring Effect', hook: "That price feels reasonable. Only because they showed you a bigger one first.", body: "The first number you hear becomes an anchor. Every estimate, negotiation, and judgment you make gets pulled toward it — even if the anchor was chosen at random. You think you're reasoning. You're calibrating.", example: "A store marks a jacket 'was $400, now $180'. You feel like you're getting a deal. The original price may have been invented specifically to anchor you at $180.", tip: "Ask yourself: if I'd never heard the first number, would this still feel reasonable? If your answer changes — you were anchored." },
+  { title: 'Dunning-Kruger Effect', hook: "The less you know, the more confident you are.", body: "Beginners overestimate their competence because they don't know enough to know what they're missing. Experts underestimate theirs because they're constantly aware of complexity.", example: "After two weeks of investing, someone is certain they've found a strategy. After twenty years, they're far more cautious. Same domain. Inverted confidence.", tip: "When you feel absolutely certain about something complex, treat it as a warning sign — not a green light." },
+  { title: 'Survivorship Bias', hook: "You're learning from the winners. The losers aren't here to talk.", body: "We study what survived and ignore what didn't — because failures are invisible. This makes us draw wildly wrong conclusions about what works.", example: "Startup advice comes almost entirely from founders who succeeded. Thousands tried the same moves and failed. Their stories never became books.", tip: "For every success story, ask: what would the failure stories look like? Are they telling a different story?" },
+  { title: 'Availability Heuristic', hook: "You think it's more likely because it was on the news.", body: "Your brain estimates probability by how easily examples come to mind. Vivid, recent, emotional events feel more common than they are. Boring statistics feel impossible.", example: "After a shark attack makes headlines, beach attendance drops. Car accidents kill vastly more people per week. Nobody cancels road trips.", tip: "When estimating risk, look up actual statistics. Your gut is using drama as a proxy for data." },
+  { title: 'Sunk Cost Fallacy', hook: "You keep going because you've already put too much in to stop.", body: "Money spent, time invested, effort given — none of it should influence future decisions. It's gone either way. But your brain treats past investment as a reason to continue.", example: "You stay in a job you hate for three years because you've already been there three years. That logic costs you three more.", tip: "Ask: if I were starting fresh today, would I choose this? If not, you're not being loyal — you're being held hostage by sunk costs." },
+  { title: 'Framing Effect', hook: "How something is said changes what you decide. Every single time.", body: "Identical information, presented differently, produces different choices. '90% survival rate' and '10% death rate' are mathematically the same. They don't feel the same.", example: "Ground beef labeled '80% lean' sells better than '20% fat'. Same product. Different frame. Different behavior.", tip: "Restate every important choice in its opposite frame before deciding. If your answer changes, the frame was doing the deciding — not you." },
+  { title: 'Bandwagon Effect', hook: "You changed your mind because everyone else did.", body: "The more people believe something, the more you're inclined to believe it too — regardless of evidence. Popularity becomes proof. Consensus becomes truth.", example: "Crypto surges because everyone is buying. You buy because everyone is buying. The price crashes. Everyone was just watching everyone else.", tip: "Ask: would I believe this if only three people agreed? If not, you're not reasoning — you're following." },
+  { title: 'Hindsight Bias', hook: "After it happened, you were sure you knew it would.", body: "Once an event occurs, it feels inevitable in retrospect. You remember your prediction as more accurate than it was. This makes you overconfident about future predictions.", example: "After the financial crisis: 'Obviously the housing market was going to collapse.' Before: almost nobody said so publicly.", tip: "Keep a prediction log. Write down what you think will happen before it does. The gap between your forecast and your memory will surprise you." },
+  { title: 'Halo Effect', hook: "You think they're smart because they're attractive.", body: "One positive trait — looks, charisma, status — bleeds into your assessment of everything else. You assume competence from confidence, intelligence from appearance.", example: "Attractive defendants receive lighter sentences on average. Juries aren't corrupt — they're human. The halo does the judging.", tip: "Evaluate traits independently. Being good at one thing is not evidence of being good at anything else." },
+  { title: 'Status Quo Bias', hook: "You're not choosing to stay. You're avoiding the effort of leaving.", body: "The current state feels like the default. Any change requires justification; staying doesn't. So you stay — not because it's good, but because leaving takes effort.", example: "Most people never change their default settings. Apps, insurance plans, pension funds — defaults win not by merit but by inertia.", tip: "Periodically ask: if I were choosing this from scratch today, would I? If the honest answer is no — you're drifting." },
+  { title: 'Attribution Error', hook: "When they fail, it's their fault. When you fail, it's the circumstances.", body: "You judge others by their character and ignore their situation. You judge yourself by your situation and downplay your character. The same action means something different depending on who did it.", example: "Someone cuts you off in traffic: 'What an aggressive driver.' You cut someone off: 'I was running late and the lane was confusing.'", tip: "Before judging someone's behavior, ask what situational pressures they might be under. Apply the same generosity you give yourself." },
+  { title: 'Planning Fallacy', hook: "It'll take two weeks. It'll take three months.", body: "We consistently underestimate how long tasks will take and how much they'll cost — even with direct experience of similar projects going over time and budget.", example: "The Sydney Opera House was planned for 4 years and $7M. It took 14 years and $102M. Every major project has a version of this story.", tip: "Find similar past projects and use their actual completion times as your baseline — not your optimistic plan." },
+  { title: 'Curse of Knowledge', hook: "You can't remember what it was like not to know this.", body: "Once you know something, you can't imagine not knowing it. This makes you a bad teacher and communicator — you consistently overestimate how much your audience understands.", example: "People tapped famous songs with their fingers. They estimated 50% recognition. The actual rate was 2.5%. The tapper hears the melody. The listener hears random taps.", tip: "When explaining anything, assume your audience knows nothing. Then assume even less. You'll still probably overshoot." },
+  { title: "Gambler's Fallacy", hook: "It's been tails five times. Heads is due.", body: "Random events don't have memory. A coin doesn't know it's been tails five times. Each flip is independent. But your brain expects the universe to 'balance out.'", example: "Roulette lands on red seven times in a row. Bets on black surge. The wheel doesn't know. The casino does.", tip: "In any independent random process, past outcomes tell you nothing about the next one. 'Due' is not a real concept in probability." },
+  { title: 'Loss Aversion', hook: "Losing $100 hurts more than winning $100 feels good.", body: "Losses feel roughly twice as painful as equivalent gains feel pleasurable. This warps every decision involving risk — you hold losing investments and stay in bad situations to avoid locking in a loss.", example: "You hold a losing stock hoping it'll recover rather than selling and moving on. The rational move is clear. The emotional math doesn't add up that way.", tip: "Ask: am I making this choice based on what's best going forward, or to avoid the pain of admitting a loss?" },
+  { title: 'IKEA Effect', hook: "You love it because you built it. Not because it's good.", body: "When you put effort into creating something, you overvalue it — disproportionately to its actual quality. Labor creates love. Your attachment blinds you to real flaws.", example: "Founders can't kill features they built. Parents can't see their children's faults clearly. The work you did is now inseparable from the judgment you make about it.", tip: "Get an outsider's honest assessment before concluding your creation is exceptional. Effort invested is not evidence of quality produced." },
+  { title: 'Spotlight Effect', hook: "Nobody noticed. You were the only one watching.", body: "You overestimate how much other people notice and remember about you. In reality, everyone is too busy monitoring their own spotlight to pay sustained attention to yours.", example: "You spill coffee on your shirt before a meeting. You're convinced everyone noticed. Three hours later, nobody mentions it. They were thinking about their own problems.", tip: "Other people are not your audience. They're the main character in their own story, dealing with their own spotlight." },
+  { title: 'False Consensus', hook: "You think most people agree with you. They don't.", body: "You overestimate how common your opinions and values are. Because your social environment reflects similar beliefs, you mistake your bubble for the world.", example: "People who don't recycle believe most people don't. People who do believe most people do. Both are wrong. Both feel certain.", tip: "Before assuming your view is the majority view, find actual data. Your social circle is not a representative sample of humanity." },
+  { title: 'Recency Bias', hook: "What just happened feels like what will always happen.", body: "Recent events are weighted too heavily in your predictions. A good year makes the future feel bright. A bad week makes everything feel hopeless.", example: "After a market crash, investors predict more crashes. After a bull run, they predict more gains. Both shaped by recency, not evidence.", tip: "Deliberately look at longer time horizons before forming judgments. Recent history is just the loudest signal right now." },
+  { title: 'Optimism Bias', hook: "You think bad things are more likely to happen to other people.", body: "Most people believe they're less likely than average to get divorced, have an accident, or lose their job. Statistically, we can't all be below average.", example: "80% of drivers consider themselves above average. Half of them are wrong. The same math applies to your business and your relationships.", tip: "When making plans, actively force yourself to imagine failure scenarios. Not to be pessimistic — to be accurate." },
+  { title: 'Self-Serving Bias', hook: "Your successes are your talent. Your failures are bad luck.", body: "You attribute positive outcomes to your own skill, and negative outcomes to external factors. This protects your self-esteem but prevents you from learning from failure.", example: "Project succeeds: 'I worked hard and made smart decisions.' Project fails: 'The market timing was off and the team let me down.'", tip: "After a failure, write down three things you personally contributed to it before blaming anything external." },
+  { title: 'In-Group Bias', hook: "You're more forgiving of people who are like you.", body: "You favor members of your own group and judge them by different standards than outsiders. The same behavior looks reasonable from your group and suspicious from theirs.", example: "Politicians from your party 'made a difficult call.' From the other party: 'acted in bad faith.' The action was identical.", tip: "Before judging someone's behavior, swap the group label and ask if you'd feel the same way. If not, you're applying a double standard." },
+  { title: 'Normalcy Bias', hook: "Something is clearly wrong. You're waiting to see if it gets worse.", body: "When faced with a potential disaster, your brain defaults to assuming things will continue as normal. You underestimate both the probability of a crisis and the severity of its impact.", example: "People in burning buildings spend precious minutes gathering belongings instead of evacuating. Normalcy bias tells them it probably isn't that serious.", tip: "When warning signs appear, act on limited information. The cost of a false alarm is almost always lower than the cost of acting too late." },
+  { title: 'Zero-Risk Bias', hook: "You'd rather eliminate a small risk completely than reduce a bigger one significantly.", body: "Eliminating a risk entirely feels psychologically satisfying in a way that reducing a risk doesn't — even if the reduction prevents far more harm.", example: "People prefer a policy that eliminates 1 death from cause A over one that prevents 10 deaths from cause B. Zero feels like a win. Ten fewer feels abstract.", tip: "Focus on expected value — total risk reduced — not on which option sounds more complete." },
+  { title: 'Hyperbolic Discounting', hook: "$100 now beats $150 in a month. Every time.", body: "You overvalue immediate rewards relative to future ones. The closer the reward, the more distorted your judgment becomes. Future consequences become abstract.", example: "You'll start the diet on Monday. Every Sunday night for six months. The future self who benefits always seems capable of the sacrifice. The present self wants the cake.", tip: "When making decisions with future consequences, ask what your future self will think of this choice. Weight that answer more than your current preference." },
+  { title: 'Bystander Effect', hook: "You didn't help because you assumed someone else would.", body: "The more people present in an emergency, the less likely any individual is to help. Responsibility diffuses across the crowd. Everyone assumes someone else is more qualified. Nobody acts.", example: "Kitty Genovese was attacked in New York with 38 witnesses. Almost no one called the police. Each assumed others had already done so.", tip: "In emergencies, point at one specific person and say 'you — call an ambulance.' Diffused responsibility only dissolves when it becomes personal." },
+];
+
+let flipped = false;
+let currentDay = 1;
+
+function toggleFlip() {
+  const scene = document.getElementById('card');
+  flipped = !flipped;
+  scene.classList.toggle('flipped', flipped);
+}
+
+function loadCard(i) {
+  flipped = false;
+  document.getElementById('card').classList.remove('flipped');
+  const c = cards[i];
+  currentDay = i + 1;
+  document.getElementById('front-day').textContent  = String(i + 1).padStart(2, '0');
+  document.getElementById('front-title').textContent = c.title;
+  document.getElementById('front-hook').textContent  = c.hook;
+  document.getElementById('back-label').textContent  = c.title;
+  document.getElementById('back-body').textContent   = c.body;
+  document.getElementById('back-example').textContent = c.example;
+  document.getElementById('back-tip').textContent    = c.tip;
+  document.querySelectorAll('.switch-btn').forEach((b, j) => b.classList.toggle('active', j === i));
+}
+</script>
+</body>
+</html>

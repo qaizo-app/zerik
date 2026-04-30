@@ -1,0 +1,168 @@
+{
+  "id": "braess_paradox",
+  "category": "paradoxes",
+  "release_number": 122,
+  "release_date": "2026-08-11",
+  "tags": ["braess", "roads", "traffic", "network", "capacity", "counterintuitive"],
+  "difficulty": 3,
+  "reading_time_sec": 150,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/braess_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "Город строит новую дорогу, чтобы разгрузить пробки. После открытия пробки стали хуже. Это не ошибка проектировщиков. Это математика: добавление пропускной способности в сеть может ухудшить результат для всех участников." }
+        },
+        { "type": "title", "props": { "text": "Новая дорога {{accent:создаёт}} пробки" } },
+        { "type": "subtitle", "props": { "text": "Парадокс Браесса · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/braess_paradox.svg", "alt": "Сеть дорог до и после добавления новой дороги — время в пути ухудшается" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Немецкий математик Дитрих Браесс в 1968 году показал: в сети, где каждый участник выбирает маршрут эгоистично (наилучший для себя), добавление новой связи может привести к тому, что все будут ехать дольше. Причина — равновесие Нэша не совпадает с оптимумом системы.",
+              "{{em:Классический пример: в Нью-Йорке в 1990-х снесли участок 42-й улицы — и пробки уменьшились.}} В Сеуле в 2003 году убрали шестиполосную эстакаду, заменив её рекой и парком — скорость движения в центре выросла. Удаление инфраструктуры улучшило ситуацию.",
+              "Парадокс работает потому что индивидуально рациональные решения суммируются в коллективно иррациональный результат. Каждый водитель выбирает быстрый маршрут — и именно поэтому он становится медленным. Новая дорога создаёт новый «соблазн», которым воспользуются все, разрушив предыдущее хрупкое равновесие."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Добавление ресурса в систему с конкурирующими агентами может ухудшить результат для всех. Индивидуально рациональное поведение + новая опция = коллективная потеря."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Компания добавила новый канал связи для команды — Slack в дополнение к email. Коммуникация стала хуже. Почему?",
+            "setup": null,
+            "options": [
+              { "id": "people", "text": "Люди не умеют пользоваться новыми инструментами", "is_wiser": false },
+              { "id": "braess", "text": "Новый канал создал новые паттерны поведения, которые в сумме дали больше шума", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "объясняют проблему навыками людей",
+              "explanation": "Это браессовская ситуация: каждый рационально выбирает, где написать конкретное сообщение. Суммарно — все каналы перегружены, контекст размыт, внимание раздроблено. Иногда меньше каналов = лучше коммуникация.",
+              "wisdom": "{{em:«Больше дорог — не всегда быстрее». — Дитрих Браесс (1968)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Парадокс Браесса возникает не всегда — только при определённых условиях сети. Большинство дорог действительно улучшают трафик. Но в перегруженных системах с эгоистичными агентами — будьте осторожны: «улучшение» может ухудшить всё."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В управлении командой", "example": "Добавление нового сотрудника в перегруженный проект иногда замедляет его — закон Брукса. Новый человек требует координации, обучения, объяснений, что отнимает время у остальных." },
+              { "label": "В интернет-инфраструктуре", "example": "Парадокс Браесса применим к маршрутизации трафика в сети. Добавление сервера или канала иногда создаёт новые узкие места." },
+              { "label": "В спорте", "example": "Исследования показывают: добавление суперзвезды в баскетбольную команду иногда ухудшает результат — из-за перераспределения ролей и нарушения сработанности." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните что-то, что вы добавили, чтобы улучшить ситуацию — и стало хуже. Подумайте: не создало ли «улучшение» новую точку притяжения, которой все воспользовались одновременно?"
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №18" } },
+        {
+          "type": "hook",
+          "props": { "text": "A city builds a new road to reduce congestion. After it opens, traffic gets worse. This is not a planning failure. It's mathematics: adding capacity to a network can make outcomes worse for every participant." }
+        },
+        { "type": "title", "props": { "text": "A new road {{accent:creates}} traffic jams" } },
+        { "type": "subtitle", "props": { "text": "Braess's Paradox · 1968" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/braess_paradox.svg", "alt": "Road network before and after adding a new road — travel time gets worse" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "German mathematician Dietrich Braess showed in 1968 that in a network where each participant selfishly chooses the best route for themselves, adding a new link can make everyone's travel time longer. The reason: the Nash equilibrium doesn't coincide with the system optimum.",
+              "{{em:A classic real-world case: in the 1990s, New York closed a section of 42nd Street — and congestion decreased.}} In Seoul in 2003, a six-lane elevated highway was removed and replaced with a river and park — traffic speed in the center increased. Removing infrastructure improved things.",
+              "The paradox works because individually rational decisions sum to a collectively irrational outcome. Every driver chooses the fast route — which is exactly why it becomes slow. A new road creates a new 'temptation' that everyone exploits, destroying the previous fragile equilibrium."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Adding a resource to a system of competing agents can worsen outcomes for everyone. Individually rational behavior plus a new option equals collective loss."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A company added a new communication channel — Slack on top of email. Communication got worse. Why?",
+            "setup": null,
+            "options": [
+              { "id": "people", "text": "People don't know how to use new tools effectively", "is_wiser": false },
+              { "id": "braess", "text": "The new channel created new behavior patterns that collectively produced more noise", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "blame people's skills",
+              "explanation": "This is a Braess situation: each person rationally chooses where to write a given message. Collectively — all channels are overloaded, context is fragmented, attention is split. Sometimes fewer channels equals better communication.",
+              "wisdom": "{{em:\"More roads don't always mean faster travel.\" — Dietrich Braess (1968)}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Braess's paradox doesn't happen in every network — only under specific conditions. Most new roads do improve traffic. But in saturated systems with self-interested agents, be careful: the 'improvement' may make everything worse."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In team management", "example": "Adding a new person to an overloaded project sometimes slows it down — Brooks's Law. A new hire requires coordination, training, and explanation, all of which consume time from everyone else." },
+              { "label": "In internet infrastructure", "example": "Braess's paradox applies to network routing. Adding a server or bandwidth link sometimes creates new bottlenecks." },
+              { "label": "In sports", "example": "Research shows that adding a superstar to a basketball team sometimes hurts results — because of role redistribution and disrupted team chemistry." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Think of something you added to improve a situation — and things got worse. Consider: did the 'improvement' create a new point of attraction that everyone exploited simultaneously?"
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/braess_paradox" }]
+}
