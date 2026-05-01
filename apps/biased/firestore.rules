@@ -1,0 +1,32 @@
+rules_version = '2';
+
+// Biased — Firestore Security Rules
+//
+// Контент карточек (biases) хранится в bundledSeed, Firestore используется
+// как резервный источник — только чтение, запись только через admin SDK.
+// Прогресс пользователя (user_progress) доступен только владельцу.
+// studio_meta — публичное чтение для перекрёстных ссылок студии.
+// Всё остальное закрыто.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /biases/{cardId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /user_progress/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    match /studio_meta/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
