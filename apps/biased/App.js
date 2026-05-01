@@ -2,12 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import * as Font from 'expo-font';
 import * as Localization from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Dimensions, Text, View } from 'react-native';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Dimensions, Pressable, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationContainer, DarkTheme } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme, useFocusEffect } from '@react-navigation/native';
 import * as Updates from 'expo-updates';
 import * as Notifications from 'expo-notifications';
 
@@ -34,6 +34,20 @@ import appJson from './app.json';
 
 const ONBOARDING_KEY   = 'biased:onboarding_done';
 const AUTH_SKIPPED_KEY = 'biased:auth_skipped';
+
+function patchCardBlocks(c) {
+  const patched = { ...c, i18n: {} };
+  for (const [l, content] of Object.entries(c.i18n || {})) {
+    patched.i18n[l] = {
+      ...content,
+      blocks: [
+        { type: 'title', props: { text: content.title } },
+        ...(content.blocks || []),
+      ],
+    };
+  }
+  return patched;
+}
 
 const BG    = '#0D1B2A';
 const ACCENT = '#E89647';
@@ -198,6 +212,12 @@ export default function App() {
                     onClose={() => navigation.goBack()}
                   />
                 ),
+                CardViewer: ({ navigation, route }) => (
+                  <CardViewerScreen
+                    card={route.params?.card}
+                    onClose={() => navigation.goBack()}
+                  />
+                ),
                 Main: () => (
                   <AppNavigator
                     screens={{
@@ -206,19 +226,22 @@ export default function App() {
                       ),
                       Library: ({ navigation }) => {
                         const lang = useLanguage();
+                        const [refreshKey, setRefreshKey] = useState(0);
+                        useFocusEffect(useCallback(() => { setRefreshKey(k => k + 1); }, []));
+                        const getSavedCards = useCallback(async () => {
+                          const ids = await progressService.getSavedIds();
+                          const out = [];
+                          for (const id of ids) {
+                            const c = await contentService.getCardById(id);
+                            if (c) out.push(patchCardBlocks(c));
+                          }
+                          return out;
+                        }, [refreshKey]);
                         return (
                           <LibraryScreen
                             locale={lang}
-                            getSavedCards={async () => {
-                              const ids = await progressService.getSavedIds();
-                              const out = [];
-                              for (const id of ids) {
-                                const c = await contentService.getCardById(id);
-                                if (c) out.push(c);
-                              }
-                              return out;
-                            }}
-                            onCardPress={() => {}}
+                            getSavedCards={getSavedCards}
+                            onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { card })}
                           />
                         );
                       },
@@ -235,6 +258,7 @@ export default function App() {
                               );
                               return cards
                                 .filter(Boolean)
+                                .map(patchCardBlocks)
                                 .sort((a, b) =>
                                   (b.release_date || '').localeCompare(a.release_date || '')
                                 );
@@ -280,19 +304,29 @@ export default function App() {
 function TodayTabScreen({ hasSubscription }) {
   const lang   = useLanguage();
   const insets = useSafeAreaInsets();
-  const [card,   setCard]   = useState(null);
-  const [streak, setStreak] = useState({ current: 0 });
+  const [card,    setCard]   = useState(null);
+  const [streak,  setStreak] = useState({ current: 0 });
+  const [saved,   setSaved]  = useState(false);
+  const [savedIds, setSavedIds] = useState([]);
 
-  const cardWidth = Dimensions.get('window').width - 48;
+  const { width: SW, height: SH } = Dimensions.get('window');
+  const cardWidth  = SW - 48;
+  const headerH    = insets.top + 16 + 52 + 20; // top + header row + bottom padding
+  const tabBarH    = 70;
+  const cardHeight = SH - headerH - tabBarH - 16;
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const list      = await contentService.getCardChain({ limit: 1 });
-      const streakNow = await progressService.getStreak();
+      const [list, streakNow, ids] = await Promise.all([
+        contentService.getCardChain({ limit: 1 }),
+        progressService.getStreak(),
+        progressService.getSavedIds(),
+      ]);
       if (!cancelled) {
         setCard(list?.[0] || null);
         setStreak(streakNow);
+        setSavedIds(ids || []);
       }
     })();
     return () => { cancelled = true; };
@@ -331,18 +365,30 @@ function TodayTabScreen({ hasSubscription }) {
       <View style={{
         paddingTop: insets.top + 16,
         paddingHorizontal: 24,
-        paddingBottom: 20,
+        paddingBottom: 16,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <Text style={{
-          fontFamily: 'Inter-Bold',
-          fontSize: 12,
-          letterSpacing: 2.4,
-          color: '#F0F4F8',
-          textTransform: 'uppercase',
-        }}>Biased</Text>
+        <View>
+          <Text style={{
+            fontFamily: 'Inter-Bold',
+            fontSize: 12,
+            letterSpacing: 2.4,
+            color: '#F0F4F8',
+            textTransform: 'uppercase',
+          }}>Biased</Text>
+          {!!dateLabel && (
+            <Text style={{
+              fontFamily: 'Inter-Regular',
+              fontSize: 10,
+              letterSpacing: 1.4,
+              color: '#4A6480',
+              textTransform: 'uppercase',
+              marginTop: 2,
+            }}>{dateLabel}</Text>
+          )}
+        </View>
 
         <View style={{
           flexDirection: 'row',
@@ -362,22 +408,56 @@ function TodayTabScreen({ hasSubscription }) {
         </View>
       </View>
 
-      <Text style={{
-        fontFamily: 'Inter-Regular',
-        fontSize: 10,
-        letterSpacing: 1.8,
-        color: '#4A6480',
-        textTransform: 'uppercase',
-        paddingHorizontal: 24,
-        marginBottom: 24,
-      }}>{dateLabel}</Text>
-
       <View style={{ alignItems: 'center' }}>
         <BiasCard
           card={card}
           locale={lang}
           width={cardWidth}
+          height={cardHeight}
           dayNumber={dayNumber}
+          saved={savedIds.includes(card.id)}
+          onSave={async () => {
+            try {
+              await progressService.toggleSaved(card.id);
+              const ids = await progressService.getSavedIds();
+              setSavedIds(ids || []);
+            } catch (e) {}
+          }}
+        />
+      </View>
+    </View>
+  );
+}
+
+function CardViewerScreen({ card, onClose }) {
+  const lang   = useLanguage();
+  const insets = useSafeAreaInsets();
+  const { width: SW, height: SH } = Dimensions.get('window');
+  const cardWidth  = SW - 48;
+  const cardHeight = SH - insets.top - insets.bottom - 80;
+
+  if (!card) return null;
+
+  return (
+    <View style={{ flex: 1, backgroundColor: BG }}>
+      <View style={{
+        paddingTop: insets.top + 12,
+        paddingHorizontal: 24,
+        paddingBottom: 12,
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+      }}>
+        <Pressable onPress={onClose} style={{ padding: 8 }}>
+          <Text style={{ fontFamily: 'Inter-Bold', fontSize: 13, color: '#4A6480', letterSpacing: 1 }}>✕</Text>
+        </Pressable>
+      </View>
+      <View style={{ alignItems: 'center' }}>
+        <BiasCard
+          card={card}
+          locale={lang}
+          width={cardWidth}
+          height={cardHeight}
+          dayNumber={dayNumberFromDate(card.release_date)}
         />
       </View>
     </View>

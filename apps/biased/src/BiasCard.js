@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import Animated, {
   Easing,
   interpolate,
@@ -12,15 +13,14 @@ import Animated, {
 } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
 
-const SURFACE      = '#111D2B';
-const SURFACE_BACK = '#162030';
-const ACCENT       = '#E89647';
-const TEXT         = '#F0F4F8';
-const TEXT_SEC     = '#7A95B0';
-const BORDER       = '#1C2F42';
-const BG           = '#0D1B2A';
+const SURFACE      = '#0F1E30';
+const SURFACE_BACK = '#122030';
+const ACCENT       = '#F5A623';
+const TEXT         = '#F5F8FF';
+const TEXT_SEC     = '#B0C8DF';
+const BORDER       = '#1E3348';
 
-export function BiasCard({ card, locale = 'en', width = 340, dayNumber, onFlipped }) {
+export function BiasCard({ card, locale = 'en', width = 340, height, dayNumber, onFlipped, onSave, saved }) {
   const flip       = useSharedValue(0);
   const scale      = useSharedValue(1);
   const barOpacity = useSharedValue(0.7);
@@ -35,17 +35,15 @@ export function BiasCard({ card, locale = 'en', width = 340, dayNumber, onFlippe
     ));
   }, []);
 
-  const loc = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
-  const HEIGHT = width * 1.48;
+  const loc    = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
+  const HEIGHT = height || width * 1.62;
 
   function handlePressIn() {
     scale.value = withSpring(0.972, { damping: 18, stiffness: 300 });
   }
-
   function handlePressOut() {
     scale.value = withSpring(1, { damping: 18, stiffness: 300 });
   }
-
   function handlePress() {
     if (shown) return;
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -53,18 +51,17 @@ export function BiasCard({ card, locale = 'en', width = 340, dayNumber, onFlippe
     setShown(true);
     onFlipped?.();
   }
+  async function handleShare() {
+    const text = [loc.title, '', loc.body, '', loc.tip].filter(Boolean).join('\n');
+    try { await Share.share({ message: text }); } catch (e) {}
+  }
 
-  const containerStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
-  }));
-
-  const barStyle = useAnimatedStyle(() => ({ opacity: barOpacity.value }));
-
-  const frontStyle = useAnimatedStyle(() => ({
+  const containerStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
+  const barStyle       = useAnimatedStyle(() => ({ opacity: barOpacity.value }));
+  const frontStyle     = useAnimatedStyle(() => ({
     transform: [{ perspective: 1400 }, { rotateY: `${interpolate(flip.value, [0, 1], [0, 180])}deg` }],
     opacity: flip.value < 0.5 ? 1 : 0,
   }));
-
   const backStyle = useAnimatedStyle(() => ({
     transform: [{ perspective: 1400 }, { rotateY: `${interpolate(flip.value, [0, 1], [-180, 0])}deg` }],
     opacity: flip.value >= 0.5 ? 1 : 0,
@@ -76,26 +73,21 @@ export function BiasCard({ card, locale = 'en', width = 340, dayNumber, onFlippe
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
       style={{ width, height: HEIGHT }}
+      disabled={shown}
     >
       <Animated.View style={[{ width, height: HEIGHT }, containerStyle]}>
 
         {/* FRONT */}
         <Animated.View style={[styles.card, { width, height: HEIGHT, backgroundColor: SURFACE }, frontStyle]}>
-
-          {/* Day number — faded background element */}
           {!!dayNumber && (
             <Text style={styles.dayNumber}>{String(dayNumber).padStart(2, '0')}</Text>
           )}
-
-          {/* Amber mark */}
           <View style={styles.amberMark} />
-
-          <View style={{ flex: 1, justifyContent: 'flex-end', paddingBottom: 28 }}>
+          <View style={{ flex: 1, justifyContent: 'center', paddingBottom: 16 }}>
             <Text style={styles.title}>{loc.title}</Text>
             <View style={styles.hairline} />
             <Text style={styles.hook}>{loc.hook}</Text>
           </View>
-
           <Animated.View style={[styles.revealBar, barStyle]} />
         </Animated.View>
 
@@ -103,22 +95,30 @@ export function BiasCard({ card, locale = 'en', width = 340, dayNumber, onFlippe
         <Animated.View style={[styles.card, { width, height: HEIGHT, backgroundColor: SURFACE_BACK, position: 'absolute', top: 0, left: 0 }, backStyle]}>
           <Text style={styles.backLabel}>{loc.title}</Text>
 
-          <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
+          <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 8 }}>
             <Text style={styles.body}>{loc.body}</Text>
-
             {!!loc.example && (
               <View style={styles.quoteBlock}>
                 <Text style={styles.quoteMark}>"</Text>
                 <Text style={styles.quoteText}>{loc.example}</Text>
               </View>
             )}
-
             {!!loc.tip && (
               <Text style={styles.tip}>{loc.tip}</Text>
             )}
           </ScrollView>
 
-          <View style={styles.doneBar} />
+          {/* Action row */}
+          <View style={styles.actionRow}>
+            {!!onSave && (
+              <TouchableOpacity onPress={() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); onSave?.(); }} style={[styles.actionBtn, saved && styles.actionBtnActive]}>
+                <Feather name="bookmark" size={20} color={saved ? ACCENT : TEXT_SEC} />
+              </TouchableOpacity>
+            )}
+            <TouchableOpacity onPress={handleShare} style={styles.actionBtn}>
+              <Feather name="share" size={20} color={TEXT_SEC} />
+            </TouchableOpacity>
+          </View>
         </Animated.View>
 
       </Animated.View>
@@ -128,7 +128,7 @@ export function BiasCard({ card, locale = 'en', width = 340, dayNumber, onFlippe
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 12,
+    borderRadius: 14,
     borderWidth: 1,
     borderColor: BORDER,
     paddingHorizontal: 28,
@@ -140,11 +140,11 @@ const styles = StyleSheet.create({
   // FRONT
   dayNumber: {
     position: 'absolute',
-    right: 20,
-    top: 16,
+    right: 16,
+    top: 12,
     fontFamily: 'Inter-Bold',
-    fontSize: 80,
-    lineHeight: 80,
+    fontSize: 88,
+    lineHeight: 88,
     color: TEXT,
     opacity: 0.04,
     letterSpacing: -4,
@@ -157,10 +157,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Inter-Bold',
-    fontSize: 36,
-    lineHeight: 40,
+    fontSize: 34,
+    lineHeight: 38,
     letterSpacing: -0.8,
-    color: TEXT,
+    color: ACCENT,
     marginBottom: 20,
   },
   hairline: {
@@ -180,7 +180,6 @@ const styles = StyleSheet.create({
     height: 3,
     backgroundColor: ACCENT,
     marginHorizontal: -28,
-    opacity: 0.7,
     marginTop: 24,
   },
 
@@ -191,7 +190,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2.4,
     color: ACCENT,
     textTransform: 'uppercase',
-    marginBottom: 20,
+    marginBottom: 18,
   },
   body: {
     fontFamily: 'Inter-Regular',
@@ -199,10 +198,10 @@ const styles = StyleSheet.create({
     lineHeight: 26,
     letterSpacing: -0.1,
     color: TEXT,
-    marginBottom: 24,
+    marginBottom: 22,
   },
   quoteBlock: {
-    marginBottom: 20,
+    marginBottom: 18,
     paddingLeft: 4,
   },
   quoteMark: {
@@ -210,7 +209,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     lineHeight: 28,
     color: ACCENT,
-    opacity: 0.6,
+    opacity: 0.5,
     marginBottom: 4,
   },
   quoteText: {
@@ -222,19 +221,31 @@ const styles = StyleSheet.create({
   },
   tip: {
     fontFamily: 'Inter-Medium',
-    fontSize: 13,
-    lineHeight: 21,
+    fontSize: 14,
+    lineHeight: 22,
     color: ACCENT,
     letterSpacing: -0.1,
-    opacity: 0.85,
-    marginBottom: 24,
+    marginBottom: 4,
   },
-  doneBar: {
-    height: 3,
-    width: 32,
-    backgroundColor: ACCENT,
-    marginLeft: -28,
-    opacity: 0.5,
-    marginBottom: 20,
+  actionRow: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    gap: 4,
+    paddingVertical: 12,
+    borderTopWidth: 1,
+    borderTopColor: BORDER,
+    marginHorizontal: -28,
+    paddingHorizontal: 20,
+  },
+  actionBtn: {
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+  },
+  actionBtnActive: {
+    backgroundColor: 'rgba(245,166,35,0.12)',
   },
 });
