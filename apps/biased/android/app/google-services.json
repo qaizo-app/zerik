@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445149034446",
+    "project_id": "biased-94cc9",
+    "storage_bucket": "biased-94cc9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445149034446:android:44d15508333cd308399d9f",
+        "android_client_info": {
+          "package_name": "com.qaizo.biased"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdfS031e8L2Ul2YNGfhkh-MGjUfwZDH3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

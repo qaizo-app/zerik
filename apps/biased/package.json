@@ -6,8 +6,8 @@
   "scripts": {
     "start": "expo start",
     "dev": "expo start --dev-client",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "update:dev": "eas update --branch development --auto",
     "update:preview": "eas update --branch preview --auto",
     "update:prod": "eas update --branch production --auto",
