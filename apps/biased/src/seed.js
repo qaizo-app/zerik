@@ -1,7 +1,7 @@
 export const seedCards = [
   {
     id: 'confirmation-bias',
-    release_date: '2026-05-01',
+    order: 1,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -22,7 +22,7 @@ export const seedCards = [
   },
   {
     id: 'anchoring-effect',
-    release_date: '2026-05-02',
+    order: 2,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -43,7 +43,7 @@ export const seedCards = [
   },
   {
     id: 'dunning-kruger',
-    release_date: '2026-05-03',
+    order: 3,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -64,7 +64,7 @@ export const seedCards = [
   },
   {
     id: 'survivorship-bias',
-    release_date: '2026-05-04',
+    order: 4,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -85,7 +85,7 @@ export const seedCards = [
   },
   {
     id: 'availability-heuristic',
-    release_date: '2026-05-05',
+    order: 5,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -106,7 +106,7 @@ export const seedCards = [
   },
   {
     id: 'sunk-cost-fallacy',
-    release_date: '2026-05-06',
+    order: 6,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -127,7 +127,7 @@ export const seedCards = [
   },
   {
     id: 'framing-effect',
-    release_date: '2026-05-07',
+    order: 7,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -148,7 +148,7 @@ export const seedCards = [
   },
   {
     id: 'bandwagon-effect',
-    release_date: '2026-05-08',
+    order: 8,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -169,7 +169,7 @@ export const seedCards = [
   },
   {
     id: 'hindsight-bias',
-    release_date: '2026-05-09',
+    order: 9,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -190,7 +190,7 @@ export const seedCards = [
   },
   {
     id: 'halo-effect',
-    release_date: '2026-05-10',
+    order: 10,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -211,7 +211,7 @@ export const seedCards = [
   },
   {
     id: 'status-quo-bias',
-    release_date: '2026-05-11',
+    order: 11,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -232,7 +232,7 @@ export const seedCards = [
   },
   {
     id: 'fundamental-attribution-error',
-    release_date: '2026-05-12',
+    order: 12,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -253,7 +253,7 @@ export const seedCards = [
   },
   {
     id: 'planning-fallacy',
-    release_date: '2026-05-13',
+    order: 13,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -274,7 +274,7 @@ export const seedCards = [
   },
   {
     id: 'curse-of-knowledge',
-    release_date: '2026-05-14',
+    order: 14,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -295,7 +295,7 @@ export const seedCards = [
   },
   {
     id: 'gamblers-fallacy',
-    release_date: '2026-05-15',
+    order: 15,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -316,7 +316,7 @@ export const seedCards = [
   },
   {
     id: 'loss-aversion',
-    release_date: '2026-05-16',
+    order: 16,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -337,7 +337,7 @@ export const seedCards = [
   },
   {
     id: 'ikea-effect',
-    release_date: '2026-05-17',
+    order: 17,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -358,7 +358,7 @@ export const seedCards = [
   },
   {
     id: 'spotlight-effect',
-    release_date: '2026-05-18',
+    order: 18,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -379,7 +379,7 @@ export const seedCards = [
   },
   {
     id: 'false-consensus-effect',
-    release_date: '2026-05-19',
+    order: 19,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -400,7 +400,7 @@ export const seedCards = [
   },
   {
     id: 'recency-bias',
-    release_date: '2026-05-20',
+    order: 20,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -421,7 +421,7 @@ export const seedCards = [
   },
   {
     id: 'optimism-bias',
-    release_date: '2026-05-21',
+    order: 21,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -442,7 +442,7 @@ export const seedCards = [
   },
   {
     id: 'self-serving-bias',
-    release_date: '2026-05-22',
+    order: 22,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -463,7 +463,7 @@ export const seedCards = [
   },
   {
     id: 'in-group-bias',
-    release_date: '2026-05-23',
+    order: 23,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -484,7 +484,7 @@ export const seedCards = [
   },
   {
     id: 'normalcy-bias',
-    release_date: '2026-05-24',
+    order: 24,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -505,7 +505,7 @@ export const seedCards = [
   },
   {
     id: 'zero-risk-bias',
-    release_date: '2026-05-25',
+    order: 25,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -526,7 +526,7 @@ export const seedCards = [
   },
   {
     id: 'hyperbolic-discounting',
-    release_date: '2026-05-26',
+    order: 26,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -547,7 +547,7 @@ export const seedCards = [
   },
   {
     id: 'bystander-effect',
-    release_date: '2026-05-27',
+    order: 27,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -568,7 +568,7 @@ export const seedCards = [
   },
   {
     id: 'frequency-illusion',
-    release_date: '2026-05-28',
+    order: 28,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -589,7 +589,7 @@ export const seedCards = [
   },
   {
     id: 'negativity-bias',
-    release_date: '2026-05-29',
+    order: 29,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -610,7 +610,7 @@ export const seedCards = [
   },
   {
     id: 'choice-overload',
-    release_date: '2026-05-30',
+    order: 30,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -631,7 +631,7 @@ export const seedCards = [
   },
   {
     id: 'authority-bias',
-    release_date: '2026-05-31',
+    order: 31,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -652,7 +652,7 @@ export const seedCards = [
   },
   {
     id: 'scarcity-illusion',
-    release_date: '2026-06-01',
+    order: 32,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -673,7 +673,7 @@ export const seedCards = [
   },
   {
     id: 'hot-hand-fallacy',
-    release_date: '2026-06-02',
+    order: 33,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -694,7 +694,7 @@ export const seedCards = [
   },
   {
     id: 'peak-end-rule',
-    release_date: '2026-06-03',
+    order: 34,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -715,7 +715,7 @@ export const seedCards = [
   },
   {
     id: 'mental-accounting',
-    release_date: '2026-06-04',
+    order: 35,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -736,7 +736,7 @@ export const seedCards = [
   },
   {
     id: 'decoy-effect',
-    release_date: '2026-06-05',
+    order: 36,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -757,7 +757,7 @@ export const seedCards = [
   },
   {
     id: 'action-bias',
-    release_date: '2026-06-06',
+    order: 37,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -778,7 +778,7 @@ export const seedCards = [
   },
   {
     id: 'clustering-illusion',
-    release_date: '2026-06-07',
+    order: 38,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -799,7 +799,7 @@ export const seedCards = [
   },
   {
     id: 'belief-perseverance',
-    release_date: '2026-06-08',
+    order: 39,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -820,7 +820,7 @@ export const seedCards = [
   },
   {
     id: 'ostrich-effect',
-    release_date: '2026-06-09',
+    order: 40,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -841,7 +841,7 @@ export const seedCards = [
   },
   {
     id: 'texas-sharpshooter',
-    release_date: '2026-06-10',
+    order: 41,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -862,7 +862,7 @@ export const seedCards = [
   },
   {
     id: 'rosy-retrospection',
-    release_date: '2026-06-11',
+    order: 42,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -883,7 +883,7 @@ export const seedCards = [
   },
   {
     id: 'overconfidence-effect',
-    release_date: '2026-06-12',
+    order: 43,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -904,7 +904,7 @@ export const seedCards = [
   },
   {
     id: 'stereotyping-bias',
-    release_date: '2026-06-13',
+    order: 44,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -925,7 +925,7 @@ export const seedCards = [
   },
   {
     id: 'omission-bias',
-    release_date: '2026-06-14',
+    order: 45,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -946,7 +946,7 @@ export const seedCards = [
   },
   {
     id: 'narrative-fallacy',
-    release_date: '2026-06-15',
+    order: 46,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -967,7 +967,7 @@ export const seedCards = [
   },
   {
     id: 'social-comparison-bias',
-    release_date: '2026-06-16',
+    order: 47,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -988,7 +988,7 @@ export const seedCards = [
   },
   {
     id: 'unit-bias',
-    release_date: '2026-06-17',
+    order: 48,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1009,7 +1009,7 @@ export const seedCards = [
   },
   {
     id: 'ambiguity-effect',
-    release_date: '2026-06-18',
+    order: 49,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1030,7 +1030,7 @@ export const seedCards = [
   },
   {
     id: 'cheerleader-effect',
-    release_date: '2026-06-19',
+    order: 50,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1051,7 +1051,7 @@ export const seedCards = [
   },
   {
     id: 'denomination-effect',
-    release_date: '2026-06-20',
+    order: 51,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1072,7 +1072,7 @@ export const seedCards = [
   },
   {
     id: 'empathy-gap',
-    release_date: '2026-06-21',
+    order: 52,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1093,7 +1093,7 @@ export const seedCards = [
   },
   {
     id: 'just-world-hypothesis',
-    release_date: '2026-06-22',
+    order: 53,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1114,7 +1114,7 @@ export const seedCards = [
   },
   {
     id: 'functional-fixedness',
-    release_date: '2026-06-23',
+    order: 54,
     category: 'cognitive_biases',
     i18n: {
       en: {
@@ -1135,7 +1135,7 @@ export const seedCards = [
   },
   {
     id: 'reactive-devaluation',
-    release_date: '2026-06-24',
+    order: 55,
     category: 'cognitive_biases',
     i18n: {
       en: {

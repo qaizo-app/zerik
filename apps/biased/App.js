@@ -30,10 +30,12 @@ import {
   contentService, progressService,
   authService, paywallService
 } from './src/services';
+import { seedCards } from './src/seed';
 import appJson from './app.json';
 
 const ONBOARDING_KEY   = 'biased:onboarding_done';
 const AUTH_SKIPPED_KEY = 'biased:auth_skipped';
+const ENROLLMENT_KEY   = 'biased:enrollment_date';
 
 function patchCardBlocks(c) {
   const patched = { ...c, i18n: {} };
@@ -60,12 +62,23 @@ function detectLanguage() {
   return 'en';
 }
 
-function dayNumberFromDate(dateStr) {
-  if (!dateStr) return null;
-  const origin = new Date('2026-05-01');
-  const card   = new Date(dateStr);
-  const diff   = Math.round((card - origin) / 86400000);
-  return diff >= 0 ? diff + 1 : null;
+function todayIso() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+async function getEnrollmentDate() {
+  let date = await AsyncStorage.getItem(ENROLLMENT_KEY);
+  if (!date) {
+    date = todayIso();
+    await AsyncStorage.setItem(ENROLLMENT_KEY, date);
+  }
+  return date;
+}
+
+function dayIndexFromEnrollment(enrollmentDate) {
+  const diff = Math.floor((new Date() - new Date(enrollmentDate)) / 86400000);
+  return Math.max(0, Math.min(diff, seedCards.length - 1));
 }
 
 export default function App() {
@@ -259,9 +272,7 @@ export default function App() {
                               return cards
                                 .filter(Boolean)
                                 .map(patchCardBlocks)
-                                .sort((a, b) =>
-                                  (b.release_date || '').localeCompare(a.release_date || '')
-                                );
+                                .sort((a, b) => (b.order || 0) - (a.order || 0));
                             }}
                             onCardPress={() => {}}
                             lockedTail={!hasSubscription}
@@ -318,13 +329,15 @@ function TodayTabScreen({ hasSubscription }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const [list, streakNow, ids] = await Promise.all([
-        contentService.getCardChain({ limit: 1 }),
+      const enrollment = await getEnrollmentDate();
+      const idx = dayIndexFromEnrollment(enrollment);
+      const rawCard = seedCards[idx] || null;
+      const [streakNow, ids] = await Promise.all([
         progressService.getStreak(),
         progressService.getSavedIds(),
       ]);
       if (!cancelled) {
-        setCard(list?.[0] || null);
+        setCard(rawCard);
         setStreak(streakNow);
         setSavedIds(ids || []);
       }
@@ -351,14 +364,8 @@ function TodayTabScreen({ hasSubscription }) {
     );
   }
 
-  const dateLabel = card.release_date
-    ? new Date(card.release_date).toLocaleDateString(
-        lang === 'ru' ? 'ru-RU' : 'en-US',
-        { day: 'numeric', month: 'long' }
-      )
-    : '';
-
-  const dayNumber = dayNumberFromDate(card.release_date);
+  const dayNumber = card.order ?? null;
+  const dateLabel = dayNumber ? (lang === 'ru' ? `День ${dayNumber}` : `Day ${dayNumber}`) : '';
 
   return (
     <View style={{ flex: 1, backgroundColor: BG }}>
@@ -457,7 +464,7 @@ function CardViewerScreen({ card, onClose }) {
           locale={lang}
           width={cardWidth}
           height={cardHeight}
-          dayNumber={dayNumberFromDate(card.release_date)}
+          dayNumber={card.order ?? null}
         />
       </View>
     </View>
