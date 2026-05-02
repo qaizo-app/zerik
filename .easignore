@@ -26,7 +26,6 @@ android/.gradle/
 *.iml
 .claude/
 mockups/
-design/
 docs/
 apps/mental-models/android/build/
 apps/mental-models/.expo/
