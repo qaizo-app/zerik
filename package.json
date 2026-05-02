@@ -24,7 +24,8 @@
     "biased": "npm --workspace biased start",
     "biased:android": "npm --workspace biased run android",
     "fonts:download:biased": "node scripts/download-fonts-biased.js",
-    "icons:generate:biased": "node scripts/generate-icons-biased.js"
+    "icons:generate:biased": "node scripts/generate-icons-biased.js",
+    "seed:upload:biased": "node scripts/upload-seed-biased.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

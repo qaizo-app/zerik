@@ -78,7 +78,7 @@ async function getEnrollmentDate() {
 
 function dayIndexFromEnrollment(enrollmentDate) {
   const diff = Math.floor((new Date() - new Date(enrollmentDate)) / 86400000);
-  return Math.max(0, Math.min(diff, seedCards.length - 1));
+  return Math.max(0, diff);
 }
 
 export default function App() {
@@ -327,7 +327,7 @@ function TodayTabScreen({ hasSubscription }) {
     (async () => {
       const enrollment = await getEnrollmentDate();
       const idx = dayIndexFromEnrollment(enrollment);
-      const rawCard = seedCards[idx] || null;
+      const rawCard = await contentService.getCardByOrder(idx + 1);
       const [streakNow, ids] = await Promise.all([
         progressService.getStreak(),
         progressService.getSavedIds(),

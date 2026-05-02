@@ -220,18 +220,8 @@ export default function SettingsScreen({
 
       <SectionHeader>{t('notifications')}</SectionHeader>
       <Row label={t('daily_reminder')} right={<Switch value={remindersOk} onValueChange={toggleReminders} />} />
-      <Row label={t('test_push')} onPress={async () => {
-        const lang2 = getLanguage();
-        const texts = pushDefaults?.defaults?.[lang2] || pushDefaults?.defaults?.en || {};
-        await pushService.fireTestNotification({
-          title: texts.daily_title || 'Test',
-          body:  t('test_push_body')
-        });
-      }}
-        right={<Text style={{ fontFamily: tokens.fonts.mono, fontSize: 11, color: palette.accent, letterSpacing: 1.4 }}>→</Text>}
-      />
 
-      <SectionHeader>{`${t('consent_analytics')} & ${t('consent_crash_reports')}`}</SectionHeader>
+<SectionHeader>{`${t('consent_analytics')} & ${t('consent_crash_reports')}`}</SectionHeader>
       <Row label={t('consent_analytics')}     right={<Switch value={analyticsOk} onValueChange={toggleAnalytics} />} />
       <Row label={t('consent_crash_reports')} right={<Switch value={crashOk}     onValueChange={toggleCrash} />} />
 

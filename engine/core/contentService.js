@@ -95,6 +95,31 @@ export class ContentService {
     return null;
   }
 
+  async getCardByOrder(order) {
+    const cacheKey = CARD_CACHE_KEY(this.collectionName, `order:${order}`);
+    const cached = await getItem(cacheKey, null);
+    if (cached) return cached;
+
+    const col = this._col();
+    if (col) {
+      try {
+        const snap = await col.where('order', '==', order).limit(1).get();
+        if (!snap.empty) {
+          const card = snap.docs[0].data();
+          await setItem(cacheKey, card);
+          return card;
+        }
+      } catch (e) {
+        if (__DEV__) console.warn(`[ContentService.getCardByOrder] failed for order ${order}:`, e?.message);
+      }
+    }
+
+    return this.bundledSeed.find(c => c.order === order)
+      || this.bundledSeed[order - 1]
+      || this.bundledSeed[this.bundledSeed.length - 1]
+      || null;
+  }
+
   async getCardById(id) {
     if (!id) return null;
     const col = this._col();
