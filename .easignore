@@ -25,3 +25,10 @@ android/app/build/
 android/.gradle/
 *.iml
 .claude/
+mockups/
+design/
+docs/
+apps/mental-models/android/build/
+apps/mental-models/.expo/
+apps/mental-models/dist/
+scripts/
