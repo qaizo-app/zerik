@@ -30,7 +30,7 @@ import { studioApps } from './config/studioLineup.config';
 import { onboardingSlides } from './src/onboardingSlides';
 import { registerAppIllustrations } from './illustrations';
 import { registerAppBlocks } from './blocks';
-import { resolveLevels } from './src/seed';
+import { seedCards, resolveLevels } from './src/seed';
 import {
   contentService, votingService, progressService,
   authService, paywallService
@@ -40,8 +40,32 @@ registerEngineBlocks();
 registerAppBlocks();
 registerAppIllustrations();
 
-const ONBOARDING_KEY = 'mm:onboarding_done';
+const ONBOARDING_KEY   = 'mm:onboarding_done';
 const AUTH_SKIPPED_KEY = 'mm:auth_skipped';
+const ENROLLMENT_KEY   = 'mm:enrollment_date';
+
+// seed — по убыванию дат (новейшие первыми). Разворачиваем для user-relative порядка.
+// CARDS_ASC[0] = Day 1 (старейшая карточка), CARDS_ASC[N] = Day N+1.
+const CARDS_ASC = [...seedCards].reverse().map((c, i) => ({ ...c, order: i + 1 }));
+
+function todayIso() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+async function getEnrollmentDate() {
+  let date = await AsyncStorage.getItem(ENROLLMENT_KEY);
+  if (!date) {
+    date = todayIso();
+    await AsyncStorage.setItem(ENROLLMENT_KEY, date);
+  }
+  return date;
+}
+
+function dayIndexFromEnrollment(enrollmentDate) {
+  const diff = Math.floor((new Date() - new Date(enrollmentDate)) / 86400000);
+  return Math.max(0, Math.min(diff, CARDS_ASC.length - 1));
+}
 
 function detectLanguage() {
   try {
@@ -242,9 +266,10 @@ export default function App() {
                               const openedIds = await progressService.getOpenedIds();
                               if (!openedIds.length) return [];
                               const cards = await Promise.all(openedIds.map(id => contentService.getCardById(id)));
+                              const orderMap = Object.fromEntries(CARDS_ASC.map(c => [c.id, c.order]));
                               return cards
                                 .filter(Boolean)
-                                .sort((a, b) => (b.release_date || '').localeCompare(a.release_date || ''));
+                                .sort((a, b) => (orderMap[b.id] || 0) - (orderMap[a.id] || 0));
                             }}
                             onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { cardId: card.id })}
                             lockedTail={!hasSubscription}
@@ -308,9 +333,15 @@ function TodayTabScreen({ navigation, hasSubscription }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const list   = await contentService.getCardChain({ limit: 6 });
-      const ids    = await progressService.getSavedIds();
-      const streakNow = await progressService.getStreak();
+      const enrollment = await getEnrollmentDate();
+      const idx = dayIndexFromEnrollment(enrollment);
+      const todayCard = CARDS_ASC[idx];
+      const earlier = CARDS_ASC.slice(0, idx).reverse().slice(0, 5);
+      const list = [todayCard, ...earlier].filter(Boolean);
+      const [ids, streakNow] = await Promise.all([
+        progressService.getSavedIds(),
+        progressService.getStreak(),
+      ]);
       if (!cancelled) {
         setCards(list);
         setSavedIds(ids);
@@ -433,9 +464,7 @@ function EarlierCard({ card, locale, onPress }) {
   const localeContent = card.i18n?.[locale] || Object.values(card.i18n || {})[0];
   const titleBlock = (localeContent?.blocks || []).find(b => b.type === 'title');
   const titleText = titleBlock?.props?.text?.replace(/\{\{accent:([^}]+)\}\}/g, '$1') || card.id;
-  const dateLabel = card.release_date
-    ? new Date(card.release_date).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', { day: '2-digit', month: 'short' })
-    : '';
+  const dateLabel = card.order ? (locale === 'ru' ? `День ${card.order}` : `Day ${card.order}`) : '';
 
   return (
     <Pressable onPress={onPress} style={{
