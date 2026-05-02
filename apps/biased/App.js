@@ -243,12 +243,10 @@ export default function App() {
                         useFocusEffect(useCallback(() => { setRefreshKey(k => k + 1); }, []));
                         const getSavedCards = useCallback(async () => {
                           const ids = await progressService.getSavedIds();
-                          const out = [];
-                          for (const id of ids) {
-                            const c = await contentService.getCardById(id);
-                            if (c) out.push(patchCardBlocks(c));
-                          }
-                          return out;
+                          return ids
+                            .map(id => seedCards.find(c => c.id === id))
+                            .filter(Boolean)
+                            .map(patchCardBlocks);
                         }, [refreshKey]);
                         return (
                           <LibraryScreen
@@ -266,10 +264,8 @@ export default function App() {
                             getHistory={async () => {
                               const openedIds = await progressService.getOpenedIds();
                               if (!openedIds.length) return [];
-                              const cards = await Promise.all(
-                                openedIds.map(id => contentService.getCardById(id))
-                              );
-                              return cards
+                              return openedIds
+                                .map(id => seedCards.find(c => c.id === id))
                                 .filter(Boolean)
                                 .map(patchCardBlocks)
                                 .sort((a, b) => (b.order || 0) - (a.order || 0));
