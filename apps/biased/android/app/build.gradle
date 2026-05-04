@@ -88,6 +88,9 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace 'com.qaizo.biased'
+    androidResources {
+        noCompress += ["properties"]
+    }
     defaultConfig {
         applicationId 'com.qaizo.biased'
         minSdkVersion rootProject.ext.minSdkVersion
