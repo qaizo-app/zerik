@@ -4,7 +4,7 @@
 
 export const paywall = {
   iosApiKey:     null,
-  androidApiKey: null,
+  androidApiKey: 'goog_BFFNBPEpEhQrNjdxxzCwXLmgZrM',
   entitlementId: 'pro',
   offeringId:    'default',
   products: {

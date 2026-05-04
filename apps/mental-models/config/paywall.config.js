@@ -8,7 +8,7 @@ export const paywall = {
   // Пока RC не настроен — null. paywallService увидит null и не вызовет configure.
   // После создания products в RC заменить на полученные ключи (они публичные, ок коммитить).
   iosApiKey:     null,
-  androidApiKey: null,
+  androidApiKey: 'goog_RmSQQJbSmVtmpiZbAJtuExlOVTY',
   entitlementId: 'pro',
   offeringId:    'default',
   products: {
