@@ -1,8 +1,8 @@
-# Privacy Policy — Senik
+# Privacy Policy
 
-_Last updated: 2026-04-27_
+_Last updated: 2026-05-06_
 
-This Privacy Policy describes what data Senik ("the App", "we") collects, how we use it, and your choices.
+This Privacy Policy describes what data the Qaizo apps ("the App", "we") collect, how we use it, and your choices. It applies to all apps published by Qaizo Studio, including **Senik** and **Biased**.
 
 ## Data we collect
 
@@ -15,7 +15,7 @@ You can use the App without signing in ("Skip for now"). In that case, no accoun
 
 **Usage data (anonymous, opt-in):**
 - Card opens, swipes, scenario votes — used to compute aggregate statistics ("how many readers chose option A") and your daily streak
-- These events are stored locally in the App (AsyncStorage) and, only if you are signed in, in your private user document on Firebase Firestore
+- These events are stored locally on your device (AsyncStorage) and, only if you are signed in, in your private user document on Firebase Firestore
 - You can disable analytics at any time in Settings → Analytics
 
 **Crash reports (opt-in):**
@@ -41,14 +41,14 @@ You can use the App without signing in ("Skip for now"). In that case, no accoun
 - **Firebase Analytics** (Google, opt-in) — anonymous usage statistics
 - **Google Play Integrity API** — verifies the App was installed from Google Play (App Check)
 - **Apple App Attest** (iOS, future) — same purpose for iOS
-- **RevenueCat** (when subscriptions are added) — to manage subscription state
+- **RevenueCat** — to manage subscription state where subscriptions are offered
 
 We do not share data with advertisers or data brokers.
 
 ## Your rights
 
 - **Access** — request a copy of your data: contact us at the email below
-- **Delete** — Settings → Profile → Sign out, then Settings → Clear cache will erase local data; to delete server-side data, contact us
+- **Delete** — see [Account & Data Deletion](delete-account.html) for in-app and email deletion options
 - **Export** — currently manual (contact us); we plan to add an export button
 
 ## Children
@@ -61,4 +61,4 @@ We may update this Policy. The "Last updated" date will reflect the latest revis
 
 ## Contact
 
-Email: TODO@example.com (will be filled before public release)
+Email: qaizo.app@gmail.com

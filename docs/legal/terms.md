@@ -1,12 +1,12 @@
-# Terms of Service — Senik
+# Terms of Service
 
-_Last updated: 2026-04-27_
+_Last updated: 2026-05-06_
 
-By using Senik ("the App"), you agree to these Terms.
+By using a Qaizo app ("the App"), you agree to these Terms. They apply to all apps published by Qaizo Studio, including **Senik** and **Biased**.
 
 ## The service
 
-Senik is a mobile app that delivers daily editorial content about mental models, cognitive biases, paradoxes, and thought experiments. It is provided as-is for personal, non-commercial use.
+The Qaizo apps deliver daily editorial content — mental models, cognitive biases, paradoxes, and thought experiments. The content is provided as-is for personal, non-commercial use.
 
 ## Account
 
@@ -17,10 +17,10 @@ You may use the App without an account. If you sign in (email or Google), you ag
 
 ## Content ownership
 
-- All content (cards, illustrations, text) is © Senik / its authors. You may read it, share it via the in-app Share button, or quote short passages with attribution. You may not republish or reproduce content commercially.
+- All content (cards, illustrations, text) is © Qaizo Studio and its authors. You may read it, share it via the in-app Share button, or quote short passages with attribution. You may not republish or reproduce content commercially.
 - Your votes on scenarios become part of aggregated public statistics shown in the App. We do not associate them with your identity.
 
-## Subscriptions (when launched)
+## Subscriptions
 
 If you purchase a subscription:
 - Charges are handled by Apple App Store or Google Play, not directly by us
@@ -52,4 +52,4 @@ We may update these Terms. Continued use after changes means acceptance.
 
 ## Contact
 
-Email: TODO@example.com (will be filled before public release)
+Email: qaizo.app@gmail.com

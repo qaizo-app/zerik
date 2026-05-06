@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Privacy Policy — Qaizo</title>
+<meta name="description" content="Privacy Policy for Qaizo apps (Senik, Biased)." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #14171c;
+    --muted: #5a6068;
+    --rule: #e8e2d6;
+    --accent: #b8772a;
+    --accent-soft: #f4e8d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --surface: #161a21;
+      --ink: #e9ecf1;
+      --muted: #9aa3b1;
+      --rule: #232932;
+      --accent: #e0a458;
+      --accent-soft: #2a2218;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .wordmark {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .wordmark .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-left: 4px;
+    vertical-align: middle;
+    transform: translateY(-2px);
+  }
+  .nav {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+  }
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .nav a:hover { color: var(--ink); }
+  .nav a[aria-current="page"] { color: var(--ink); font-weight: 500; }
+  h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 48px;
+  }
+  .meta .pill {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  .lead {
+    font-size: 18px;
+    color: var(--ink);
+    margin: 0 0 48px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 48px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { padding-top: 0; border-top: none; }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 24px 0 8px;
+    color: var(--ink);
+  }
+  p { margin: 0 0 16px; color: var(--ink); }
+  ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+  ul li { margin-bottom: 8px; }
+  ul li::marker { color: var(--accent); }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin: 24px 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  footer.bottom {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer.bottom a { color: var(--muted); text-decoration: none; }
+  footer.bottom a:hover { color: var(--ink); }
+  @media (max-width: 560px) {
+    .wrap { padding: 32px 20px 64px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 20px; }
+    .lead { font-size: 17px; }
+    .nav { gap: 16px; }
+    header.brand { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="brand">
+  <span class="wordmark">Qaizo<span class="dot"></span></span>
+  <nav class="nav">
+    <a href="privacy.html" aria-current="page">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="delete-account.html">Account deletion</a>
+  </nav>
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="meta"><span class="pill">Effective</span>Last updated: 2026-05-06</p>
+
+<p class="lead">
+  This Privacy Policy describes what data the Qaizo apps ("the App", "we") collect,
+  how we use it, and your choices. It applies to all apps published by Qaizo Studio,
+  including <strong>Senik</strong> and <strong>Biased</strong>.
+</p>
+
+<h2>Data we collect</h2>
+
+<h3>Account data (only if you sign in)</h3>
+<ul>
+  <li>Email address (when you sign in via email or Google)</li>
+  <li>A unique user ID assigned by Firebase Authentication</li>
+  <li>Sign-in provider (email or Google)</li>
+</ul>
+<p>You can use the App without signing in ("Skip for now"). In that case, no account data is collected.</p>
+
+<h3>Usage data (anonymous, opt-in)</h3>
+<ul>
+  <li>Card opens, swipes, scenario votes — used to compute aggregate statistics ("how many readers chose option A") and your daily streak</li>
+  <li>These events are stored locally on your device (AsyncStorage) and, only if you are signed in, in your private user document on Firebase Firestore</li>
+  <li>You can disable analytics at any time in Settings → Analytics</li>
+</ul>
+
+<h3>Crash reports (opt-in)</h3>
+<ul>
+  <li>Stack traces and device model are sent if the App crashes</li>
+  <li>Used solely to fix bugs</li>
+  <li>You can disable crash reports in Settings → Crash reports</li>
+</ul>
+
+<h3>Notifications</h3>
+<ul>
+  <li>Daily reminder time and your preference are stored locally</li>
+  <li>We do not send push notifications from a server unless you opt in via Settings</li>
+</ul>
+
+<h2>What we do NOT collect</h2>
+<ul>
+  <li>Real name, age, gender, location (beyond device locale)</li>
+  <li>Contacts, photos, microphone, camera</li>
+  <li>Browsing history outside the App</li>
+  <li>Behavior data sold to third parties</li>
+</ul>
+
+<h2>Third-party services</h2>
+<ul>
+  <li><strong>Firebase Authentication</strong> (Google) — to sign you in</li>
+  <li><strong>Firebase Firestore</strong> (Google) — to store your saved cards and streak across devices</li>
+  <li><strong>Firebase Analytics</strong> (Google, opt-in) — anonymous usage statistics</li>
+  <li><strong>Google Play Integrity API</strong> — verifies the App was installed from Google Play (App Check)</li>
+  <li><strong>Apple App Attest</strong> (iOS, future) — same purpose for iOS</li>
+  <li><strong>RevenueCat</strong> — to manage subscription state where subscriptions are offered</li>
+</ul>
+<p>We do not share data with advertisers or data brokers.</p>
+
+<h2>Your rights</h2>
+<ul>
+  <li><strong>Access</strong> — request a copy of your data: contact us at the email below</li>
+  <li><strong>Delete</strong> — see the <a href="delete-account.html">Account &amp; Data Deletion</a> page for in-app and email deletion options</li>
+  <li><strong>Export</strong> — currently manual (contact us); we plan to add an export button</li>
+</ul>
+
+<h2>Children</h2>
+<p>The App is not directed at children under 13. If you are under 13, please do not sign in or send us any personal information.</p>
+
+<h2>Changes</h2>
+<p>We may update this Policy. The "Last updated" date will reflect the latest revision. Material changes will be communicated through the App.</p>
+
+<h2>Contact</h2>
+<div class="callout">
+  Questions about privacy or this policy? Email
+  <a href="mailto:qaizo.app@gmail.com">qaizo.app@gmail.com</a>.
+</div>
+
+<footer class="bottom">
+  <span>© 2026 Qaizo Studio</span>
+  <span>
+    <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+    <a href="delete-account.html">Delete account</a> &nbsp;·&nbsp;
+    <a href="mailto:qaizo.app@gmail.com">Contact</a>
+  </span>
+</footer>
+
+</div>
+</body>
+</html>

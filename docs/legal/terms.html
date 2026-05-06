@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Terms of Service — Qaizo</title>
+<meta name="description" content="Terms of Service for Qaizo apps (Senik, Biased)." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #14171c;
+    --muted: #5a6068;
+    --rule: #e8e2d6;
+    --accent: #b8772a;
+    --accent-soft: #f4e8d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --surface: #161a21;
+      --ink: #e9ecf1;
+      --muted: #9aa3b1;
+      --rule: #232932;
+      --accent: #e0a458;
+      --accent-soft: #2a2218;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .wordmark {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .wordmark .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-left: 4px;
+    vertical-align: middle;
+    transform: translateY(-2px);
+  }
+  .nav {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+  }
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .nav a:hover { color: var(--ink); }
+  .nav a[aria-current="page"] { color: var(--ink); font-weight: 500; }
+  h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 48px;
+  }
+  .meta .pill {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  .lead {
+    font-size: 18px;
+    color: var(--ink);
+    margin: 0 0 48px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 48px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { padding-top: 0; border-top: none; }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 24px 0 8px;
+    color: var(--ink);
+  }
+  p { margin: 0 0 16px; color: var(--ink); }
+  ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+  ul li { margin-bottom: 8px; }
+  ul li::marker { color: var(--accent); }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin: 24px 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  footer.bottom {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer.bottom a { color: var(--muted); text-decoration: none; }
+  footer.bottom a:hover { color: var(--ink); }
+  @media (max-width: 560px) {
+    .wrap { padding: 32px 20px 64px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 20px; }
+    .lead { font-size: 17px; }
+    .nav { gap: 16px; }
+    header.brand { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="brand">
+  <span class="wordmark">Qaizo<span class="dot"></span></span>
+  <nav class="nav">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html" aria-current="page">Terms</a>
+    <a href="delete-account.html">Account deletion</a>
+  </nav>
+</header>
+
+<h1>Terms of Service</h1>
+<p class="meta"><span class="pill">Effective</span>Last updated: 2026-05-06</p>
+
+<p class="lead">
+  By using a Qaizo app ("the App"), you agree to these Terms. They apply to all apps
+  published by Qaizo Studio, including <strong>Senik</strong> and <strong>Biased</strong>.
+</p>
+
+<h2>The service</h2>
+<p>
+  The Qaizo apps deliver daily editorial content — mental models, cognitive biases,
+  paradoxes, and thought experiments. The content is provided as-is for personal,
+  non-commercial use.
+</p>
+
+<h2>Account</h2>
+<p>You may use the App without an account. If you sign in (email or Google), you agree that:</p>
+<ul>
+  <li>The information you provide is accurate</li>
+  <li>You are at least 13 years old</li>
+  <li>You will not share your account or use someone else's account</li>
+</ul>
+
+<h2>Content ownership</h2>
+<ul>
+  <li>All content (cards, illustrations, text) is © Qaizo Studio and its authors. You may read it, share it via the in-app Share button, or quote short passages with attribution. You may not republish or reproduce content commercially.</li>
+  <li>Your votes on scenarios become part of aggregated public statistics shown in the App. We do not associate them with your identity.</li>
+</ul>
+
+<h2>Subscriptions</h2>
+<p>If you purchase a subscription:</p>
+<ul>
+  <li>Charges are handled by Apple App Store or Google Play, not directly by us</li>
+  <li>Auto-renewal can be canceled in your store settings</li>
+  <li>Refunds follow the store's policy</li>
+  <li>We may change prices with 30 days notice</li>
+</ul>
+
+<h2>Acceptable use</h2>
+<p>You may not:</p>
+<ul>
+  <li>Reverse-engineer the App for redistribution</li>
+  <li>Attempt to access other users' data</li>
+  <li>Spam Firestore with automated votes</li>
+  <li>Use the App in violation of applicable law</li>
+</ul>
+<p>App Check (Play Integrity / App Attest) is used to enforce these rules.</p>
+
+<h2>Disclaimer</h2>
+<p>
+  The App provides general educational content. It is not professional advice
+  (psychological, financial, medical). Decisions you make based on App content
+  are your own.
+</p>
+
+<h2>Liability</h2>
+<p>
+  To the extent permitted by law, we are not liable for indirect or consequential
+  damages arising from use of the App. Our liability is capped at the amount you
+  paid us in the 12 months prior.
+</p>
+
+<h2>Changes</h2>
+<p>We may update these Terms. Continued use after changes means acceptance.</p>
+
+<h2>Contact</h2>
+<div class="callout">
+  Questions about these Terms? Email
+  <a href="mailto:qaizo.app@gmail.com">qaizo.app@gmail.com</a>.
+</div>
+
+<footer class="bottom">
+  <span>© 2026 Qaizo Studio</span>
+  <span>
+    <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+    <a href="delete-account.html">Delete account</a> &nbsp;·&nbsp;
+    <a href="mailto:qaizo.app@gmail.com">Contact</a>
+  </span>
+</footer>
+
+</div>
+</body>
+</html>
