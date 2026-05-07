@@ -3,7 +3,7 @@ import * as Font from 'expo-font';
 import * as Localization from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Dimensions, Pressable, Text, View } from 'react-native';
+import { ActivityIndicator, Dimensions, Platform, Pressable, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -51,8 +51,12 @@ function patchCardBlocks(c) {
   return patched;
 }
 
-const BG    = '#15110A';
+const BG     = '#15110A';
 const ACCENT = '#FBBF24';
+const SERIF  = Platform.OS === 'ios' ? 'Georgia' : 'serif';
+const MONO   = Platform.OS === 'ios' ? 'Menlo'   : 'monospace';
+const TEXT_DIM  = '#A89A78';
+const TEXT_MUTE = '#5C5240';
 
 function detectLanguage() {
   try {
@@ -280,7 +284,7 @@ export default function App() {
                       Settings: ({ navigation }) => (
                         <SettingsScreen
                           studioApps={studioApps}
-                          currentAppSlug="biased"
+                          currentAppSlug="cavil"
                           pushDefaults={push}
                           user={user}
                           hasSubscription={hasSubscription}
@@ -308,32 +312,38 @@ export default function App() {
   );
 }
 
+const VOL_TOTAL = 100;
+
 function TodayTabScreen({ hasSubscription }) {
   const lang   = useLanguage();
   const insets = useSafeAreaInsets();
-  const [card,    setCard]   = useState(null);
-  const [streak,  setStreak] = useState({ current: 0 });
-  const [saved,   setSaved]  = useState(false);
-  const [savedIds, setSavedIds] = useState([]);
+  const [todayIndex, setTodayIndex] = useState(null);
+  const [viewIndex,  setViewIndex]  = useState(null);
+  const [viewCard,   setViewCard]   = useState(null);
+  const [streak,     setStreak]     = useState({ current: 0 });
+  const [savedIds,   setSavedIds]   = useState([]);
 
   const { width: SW, height: SH } = Dimensions.get('window');
-  const cardWidth  = SW - 48;
-  const headerH    = insets.top + 16 + 52 + 20; // top + header row + bottom padding
+  const cardWidth  = SW - 28;
+  const headerH    = insets.top + 14 + 24 + 14;   // safe area + padding + label + spacing
+  const footerH    = 60;                            // PREV / COLLECT / NEXT row
   const tabBarH    = 70;
-  const cardHeight = SH - headerH - tabBarH - 16;
+  const cardHeight = SH - headerH - footerH - tabBarH - 16;
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       const enrollment = await getEnrollmentDate();
-      const idx = dayIndexFromEnrollment(enrollment);
-      const rawCard = await contentService.getCardByOrder(idx + 1);
+      const idx = dayIndexFromEnrollment(enrollment) + 1; // 1-based
+      const card = await contentService.getCardByOrder(idx);
       const [streakNow, ids] = await Promise.all([
         progressService.getStreak(),
         progressService.getSavedIds(),
       ]);
       if (!cancelled) {
-        setCard(rawCard);
+        setTodayIndex(idx);
+        setViewIndex(idx);
+        setViewCard(card);
         setStreak(streakNow);
         setSavedIds(ids || []);
       }
@@ -341,18 +351,30 @@ function TodayTabScreen({ hasSubscription }) {
     return () => { cancelled = true; };
   }, []);
 
+  // Reload card when navigating prev/next
   useEffect(() => {
-    if (!card?.id) return;
+    if (!viewIndex) return;
+    let cancelled = false;
+    (async () => {
+      const card = await contentService.getCardByOrder(viewIndex);
+      if (!cancelled) setViewCard(card);
+    })();
+    return () => { cancelled = true; };
+  }, [viewIndex]);
+
+  // Record opened + refresh streak when viewing a card
+  useEffect(() => {
+    if (!viewCard?.id) return;
     (async () => {
       try {
-        await progressService.recordCardOpened(card.id);
+        await progressService.recordCardOpened(viewCard.id);
         const s = await progressService.getStreak();
         setStreak(s);
       } catch (e) {}
     })();
-  }, [card]);
+  }, [viewCard?.id]);
 
-  if (!card) {
+  if (!viewCard) {
     return (
       <View style={{ flex: 1, backgroundColor: BG, alignItems: 'center', justifyContent: 'center' }}>
         <ActivityIndicator color={ACCENT} size="large" />
@@ -360,73 +382,99 @@ function TodayTabScreen({ hasSubscription }) {
     );
   }
 
-  const dayNumber = card.order ?? null;
-  const dateLabel = dayNumber ? (lang === 'ru' ? `День ${dayNumber}` : `Day ${dayNumber}`) : '';
+  const labels = lang === 'ru'
+    ? { vol: 'CAVIL · ТОМ I', days: 'ДНЕЙ',  prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОБРАТЬ',  collected: 'СОБРАНО'  }
+    : { vol: 'CAVIL · VOL. I', days: 'DAYS', prev: 'PREV',  next: 'NEXT',  collect: 'COLLECT',  collected: 'COLLECTED' };
+
+  const canPrev = viewIndex > 1;
+  const canNext = viewIndex < todayIndex;
+  const isSaved = savedIds.includes(viewCard.id);
+
+  const onPrev    = () => { if (canPrev) setViewIndex(viewIndex - 1); };
+  const onNext    = () => { if (canNext) setViewIndex(viewIndex + 1); };
+  const onCollect = async () => {
+    try {
+      await progressService.toggleSaved(viewCard.id);
+      const ids = await progressService.getSavedIds();
+      setSavedIds(ids || []);
+    } catch (e) {}
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: BG }}>
+      {/* Top bar: CAVIL · VOL. I — N DAYS */}
       <View style={{
-        paddingTop: insets.top + 16,
+        paddingTop: insets.top + 14,
         paddingHorizontal: 24,
-        paddingBottom: 16,
+        paddingBottom: 14,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <View>
+        <Text style={{
+          fontFamily: MONO,
+          fontSize: 11,
+          letterSpacing: 2.0,
+          color: TEXT_DIM,
+        }}>{labels.vol}</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+          <Text style={{ color: ACCENT, fontSize: 10 }}>♦</Text>
           <Text style={{
-            fontFamily: 'Inter-Bold',
-            fontSize: 12,
-            letterSpacing: 2.4,
-            color: '#F0F4F8',
-            textTransform: 'uppercase',
-          }}>Biased</Text>
-          {!!dateLabel && (
-            <Text style={{
-              fontFamily: 'Inter-Regular',
-              fontSize: 10,
-              letterSpacing: 1.4,
-              color: '#4A6480',
-              textTransform: 'uppercase',
-              marginTop: 2,
-            }}>{dateLabel}</Text>
-          )}
-        </View>
-
-        <View style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          gap: 5,
-          backgroundColor: '#111D2B',
-          borderWidth: 1,
-          borderColor: '#1C2F42',
-          borderRadius: 20,
-          paddingHorizontal: 12,
-          paddingVertical: 5,
-        }}>
-          <Text style={{ fontSize: 13 }}>🔥</Text>
-          <Text style={{ fontFamily: 'Inter-Bold', fontSize: 13, color: ACCENT }}>
-            {streak.current}
-          </Text>
+            fontFamily: MONO,
+            fontSize: 11,
+            letterSpacing: 1.6,
+            color: ACCENT,
+          }}>{streak.current} {labels.days}</Text>
         </View>
       </View>
 
-      <View style={{ alignItems: 'center' }}>
+      {/* Card area */}
+      <View style={{ alignItems: 'center', flex: 1 }}>
         <CavilCard
-          card={card}
+          card={viewCard}
           locale={lang}
           width={cardWidth}
           height={cardHeight}
-          dayNumber={dayNumber}
-          saved={savedIds.includes(card.id)}
-          onSave={async () => {
-            try {
-              await progressService.toggleSaved(card.id);
-              const ids = await progressService.getSavedIds();
-              setSavedIds(ids || []);
-            } catch (e) {}
-          }}
+          dayNumber={viewIndex}
+          totalCards={VOL_TOTAL}
         />
+      </View>
+
+      {/* Footer: PREV / COLLECT / NEXT */}
+      <View style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 28,
+        paddingVertical: 16,
+      }}>
+        <Pressable onPress={onPrev} disabled={!canPrev} hitSlop={14}>
+          <Text style={{
+            fontFamily: MONO,
+            fontSize: 12,
+            letterSpacing: 1.8,
+            color: canPrev ? ACCENT : TEXT_MUTE,
+            opacity: canPrev ? 1 : 0.5,
+          }}>◂ {labels.prev}</Text>
+        </Pressable>
+        <Pressable onPress={onCollect} hitSlop={14}>
+          <Text style={{
+            fontFamily: MONO,
+            fontSize: 12,
+            letterSpacing: 1.8,
+            color: ACCENT,
+            fontWeight: '700',
+          }}>★ {isSaved ? labels.collected : labels.collect}</Text>
+        </Pressable>
+        <Pressable onPress={onNext} disabled={!canNext} hitSlop={14}>
+          <Text style={{
+            fontFamily: MONO,
+            fontSize: 12,
+            letterSpacing: 1.8,
+            color: canNext ? ACCENT : TEXT_MUTE,
+            opacity: canNext ? 1 : 0.5,
+          }}>{labels.next} ▸</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -436,8 +484,8 @@ function CardViewerScreen({ card, onClose }) {
   const lang   = useLanguage();
   const insets = useSafeAreaInsets();
   const { width: SW, height: SH } = Dimensions.get('window');
-  const cardWidth  = SW - 48;
-  const cardHeight = SH - insets.top - insets.bottom - 80;
+  const cardWidth  = SW - 28;
+  const cardHeight = SH - insets.top - insets.bottom - 70;
 
   if (!card) return null;
 
@@ -451,7 +499,7 @@ function CardViewerScreen({ card, onClose }) {
         justifyContent: 'flex-end',
       }}>
         <Pressable onPress={onClose} style={{ padding: 8 }}>
-          <Text style={{ fontFamily: 'Inter-Bold', fontSize: 13, color: '#4A6480', letterSpacing: 1 }}>✕</Text>
+          <Text style={{ fontFamily: MONO, fontSize: 14, color: TEXT_DIM, letterSpacing: 1 }}>✕</Text>
         </Pressable>
       </View>
       <View style={{ alignItems: 'center' }}>
@@ -461,6 +509,7 @@ function CardViewerScreen({ card, onClose }) {
           width={cardWidth}
           height={cardHeight}
           dayNumber={card.order ?? null}
+          totalCards={VOL_TOTAL}
         />
       </View>
     </View>

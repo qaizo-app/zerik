@@ -28,7 +28,9 @@
     "seed:upload:biased": "node scripts/upload-seed-biased.mjs",
     "cavil": "npm --workspace cavil start",
     "cavil:android": "npm --workspace cavil run android",
-    "seed:upload:cavil": "node scripts/upload-seed-cavil.mjs"
+    "seed:upload:cavil": "node scripts/upload-seed-cavil.mjs",
+    "rules:deploy:cavil": "node scripts/deploy-firestore-rules-cavil.mjs",
+    "icons:generate:cavil": "node scripts/generate-icons-cavil.js"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

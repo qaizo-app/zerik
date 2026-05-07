@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266121880436",
+    "project_id": "cavil-3ee9f",
+    "storage_bucket": "cavil-3ee9f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266121880436:android:c4db0665cd72ea92a84221",
+        "android_client_info": {
+          "package_name": "com.qaizo.cavil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASS1VJBDuirnUI4KgAZ2u9RGcgVhU7w2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

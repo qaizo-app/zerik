@@ -14,6 +14,7 @@ export const seedCards = [
     id: 'ad-hominem',
     order: 1,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad hominem',
     i18n: {
       en: {
         title: 'Ad Hominem',
@@ -41,6 +42,7 @@ export const seedCards = [
     id: 'strawman',
     order: 2,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad fictum',
     i18n: {
       en: {
         title: 'Strawman',
@@ -68,6 +70,7 @@ export const seedCards = [
     id: 'red-herring',
     order: 3,
     category: 'rhetorical_fallacies',
+    latin: 'ignoratio elenchi',
     i18n: {
       en: {
         title: 'Red Herring',
@@ -95,6 +98,7 @@ export const seedCards = [
     id: 'false-dichotomy',
     order: 4,
     category: 'rhetorical_fallacies',
+    latin: 'fallacia bifurcationis',
     i18n: {
       en: {
         title: 'False Dichotomy',
@@ -122,6 +126,7 @@ export const seedCards = [
     id: 'slippery-slope',
     order: 5,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad consequentiam',
     i18n: {
       en: {
         title: 'Slippery Slope',
@@ -149,6 +154,7 @@ export const seedCards = [
     id: 'appeal-to-authority',
     order: 6,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad verecundiam',
     i18n: {
       en: {
         title: 'Appeal to Authority',
@@ -176,6 +182,7 @@ export const seedCards = [
     id: 'ad-populum',
     order: 7,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad populum',
     i18n: {
       en: {
         title: 'Appeal to Popularity',
@@ -203,6 +210,7 @@ export const seedCards = [
     id: 'appeal-to-tradition',
     order: 8,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad antiquitatem',
     i18n: {
       en: {
         title: 'Appeal to Tradition',
@@ -230,6 +238,7 @@ export const seedCards = [
     id: 'appeal-to-nature',
     order: 9,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad naturam',
     i18n: {
       en: {
         title: 'Appeal to Nature',
@@ -257,6 +266,7 @@ export const seedCards = [
     id: 'appeal-to-ignorance',
     order: 10,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad ignorantiam',
     i18n: {
       en: {
         title: 'Appeal to Ignorance',
@@ -284,6 +294,7 @@ export const seedCards = [
     id: 'appeal-to-emotion',
     order: 11,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad passiones',
     i18n: {
       en: {
         title: 'Appeal to Emotion',
@@ -311,6 +322,7 @@ export const seedCards = [
     id: 'tu-quoque',
     order: 12,
     category: 'rhetorical_fallacies',
+    latin: 'tu quoque',
     i18n: {
       en: {
         title: 'Tu Quoque',
@@ -338,6 +350,7 @@ export const seedCards = [
     id: 'no-true-scotsman',
     order: 13,
     category: 'rhetorical_fallacies',
+    latin: 'fallacia veri scoti',
     i18n: {
       en: {
         title: 'No True Scotsman',
@@ -365,6 +378,7 @@ export const seedCards = [
     id: 'begging-the-question',
     order: 14,
     category: 'rhetorical_fallacies',
+    latin: 'petitio principii',
     i18n: {
       en: {
         title: 'Begging the Question',
@@ -392,6 +406,7 @@ export const seedCards = [
     id: 'post-hoc',
     order: 15,
     category: 'rhetorical_fallacies',
+    latin: 'post hoc ergo propter hoc',
     i18n: {
       en: {
         title: 'Post Hoc Ergo Propter Hoc',
@@ -419,6 +434,7 @@ export const seedCards = [
     id: 'cum-hoc',
     order: 16,
     category: 'rhetorical_fallacies',
+    latin: 'cum hoc ergo propter hoc',
     i18n: {
       en: {
         title: 'Correlation ≠ Causation',
@@ -446,6 +462,7 @@ export const seedCards = [
     id: 'hasty-generalization',
     order: 17,
     category: 'rhetorical_fallacies',
+    latin: 'fallacia per festinationem',
     i18n: {
       en: {
         title: 'Hasty Generalization',
@@ -473,6 +490,7 @@ export const seedCards = [
     id: 'loaded-question',
     order: 18,
     category: 'rhetorical_fallacies',
+    latin: 'plurium interrogationum',
     i18n: {
       en: {
         title: 'Loaded Question',
@@ -500,6 +518,7 @@ export const seedCards = [
     id: 'genetic-fallacy',
     order: 19,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum ad originem',
     i18n: {
       en: {
         title: 'Genetic Fallacy',
@@ -527,6 +546,7 @@ export const seedCards = [
     id: 'composition-fallacy',
     order: 20,
     category: 'rhetorical_fallacies',
+    latin: 'fallacia compositionis',
     i18n: {
       en: {
         title: 'Composition Fallacy',
@@ -554,6 +574,7 @@ export const seedCards = [
     id: 'division-fallacy',
     order: 21,
     category: 'rhetorical_fallacies',
+    latin: 'fallacia divisionis',
     i18n: {
       en: {
         title: 'Division Fallacy',
@@ -581,6 +602,7 @@ export const seedCards = [
     id: 'equivocation',
     order: 22,
     category: 'rhetorical_fallacies',
+    latin: 'aequivocatio',
     i18n: {
       en: {
         title: 'Equivocation',
@@ -608,6 +630,7 @@ export const seedCards = [
     id: 'moving-the-goalposts',
     order: 23,
     category: 'rhetorical_fallacies',
+    latin: 'fallacia metae mobilis',
     i18n: {
       en: {
         title: 'Moving the Goalposts',
@@ -635,6 +658,7 @@ export const seedCards = [
     id: 'false-equivalence',
     order: 24,
     category: 'rhetorical_fallacies',
+    latin: 'falsa aequivalentia',
     i18n: {
       en: {
         title: 'False Equivalence',
@@ -662,6 +686,7 @@ export const seedCards = [
     id: 'special-pleading',
     order: 25,
     category: 'rhetorical_fallacies',
+    latin: 'exceptio probandi',
     i18n: {
       en: {
         title: 'Special Pleading',
@@ -689,6 +714,7 @@ export const seedCards = [
     id: 'burden-of-proof-reversal',
     order: 26,
     category: 'rhetorical_fallacies',
+    latin: 'onus probandi inversum',
     i18n: {
       en: {
         title: 'Burden of Proof Reversal',
@@ -716,6 +742,7 @@ export const seedCards = [
     id: 'reductio-ad-hitlerum',
     order: 27,
     category: 'rhetorical_fallacies',
+    latin: 'reductio ad hitlerum',
     i18n: {
       en: {
         title: "Reductio ad Hitlerum",
@@ -743,6 +770,7 @@ export const seedCards = [
     id: 'gish-gallop',
     order: 28,
     category: 'rhetorical_fallacies',
+    latin: 'argumentum per multitudinem',
     i18n: {
       en: {
         title: 'Gish Gallop',
@@ -770,6 +798,7 @@ export const seedCards = [
     id: 'cherry-picking',
     order: 29,
     category: 'rhetorical_fallacies',
+    latin: 'selectio anecdotorum',
     i18n: {
       en: {
         title: 'Cherry Picking',
@@ -797,6 +826,7 @@ export const seedCards = [
     id: 'whataboutism',
     order: 30,
     category: 'rhetorical_fallacies',
+    latin: 'quid de illo',
     i18n: {
       en: {
         title: 'Whataboutism',

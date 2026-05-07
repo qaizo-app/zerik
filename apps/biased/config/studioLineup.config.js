@@ -24,13 +24,15 @@ export const studioApps = [
     }
   },
   {
-    slug: 'thought_experiments',
+    slug: 'cavil',
     is_flagship: false,
-    category_slug: 'thought_experiments',
-    coming_soon: true,
+    category_slug: 'rhetorical_fallacies',
+    store_id_android: 'com.qaizo.cavil',
+    store_id_ios: null,
+    store_url: null,
     i18n: {
-      ru: { name: 'Thought Experiments', tagline: 'Скоро · Дилемма вагонетки и не только' },
-      en: { name: 'Thought Experiments', tagline: 'Coming soon · The trolley problem and beyond' }
+      ru: { name: 'Cavil', tagline: 'Каждая уловка — с ответом.' },
+      en: { name: 'Cavil', tagline: 'Every bad argument, named.' }
     }
   }
 ];

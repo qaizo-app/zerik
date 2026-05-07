@@ -1,339 +1,203 @@
-import { useEffect, useState } from 'react';
-import { Pressable, ScrollView, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { useEffect } from 'react';
+import { Image, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Animated, {
   Easing,
-  interpolate,
   useAnimatedStyle,
   useSharedValue,
   withDelay,
-  withSequence,
-  withSpring,
   withTiming,
 } from 'react-native-reanimated';
-import * as Haptics from 'expo-haptics';
-import { getIllustrationFor } from '../illustrations';
 
-const SURFACE      = '#1F190E';
-const SURFACE_MID  = '#26200F';
-const SURFACE_BACK = '#2D2716';
-const ACCENT       = '#FBBF24';
-const ACCENT_DIM   = '#A87E1A';
-const TEXT         = '#EBE2C8';
-const TEXT_SEC     = '#A89A78';
-const BORDER       = '#3D381F';
+const SERIF = Platform.OS === 'ios' ? 'Georgia' : 'serif';
+const MONO  = Platform.OS === 'ios' ? 'Menlo'   : 'monospace';
 
-export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber, onRevealed, onSave, saved }) {
-  const flip1 = useSharedValue(0);
-  const flip2 = useSharedValue(0);
-  const scale = useSharedValue(1);
-  const barOpacity = useSharedValue(0.7);
-  const [face, setFace] = useState(0);
+const ACCENT     = '#FBBF24';
+const ACCENT_DIM = '#A87E1A';
+const TEXT       = '#EBE2C8';
+const TEXT_DIM   = '#A89A78';
+const TEXT_MUTE  = '#5C5240';
+const BORDER     = 'rgba(251, 191, 36, 0.35)';
 
+const ICON_SOURCE = require('../assets/icon.png');
+
+function pad3(n) { return String(n || 0).padStart(3, '0'); }
+
+const LABELS = {
+  en: { day: 'DAY', wild: 'IN THE WILD', of: '/' },
+  ru: { day: 'ДЕНЬ', wild: 'В ЖИЗНИ', of: '/' },
+};
+
+export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber, totalCards = 100 }) {
+  const loc = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
+  const HEIGHT = height || width * 1.85;
+  const labels = LABELS[locale] || LABELS.en;
+
+  const orderNum  = dayNumber || card?.order || 0;
+  const titleCaps = (loc.title || '').toUpperCase();
+
+  // Subtle entrance animation: title fades up, then body
+  const titleOp = useSharedValue(0);
+  const bodyOp  = useSharedValue(0);
   useEffect(() => {
-    barOpacity.value = withDelay(900, withSequence(
-      withTiming(0.12, { duration: 550 }),
-      withTiming(0.7,  { duration: 380 }),
-      withDelay(160, withTiming(0.12, { duration: 550 })),
-      withTiming(0.7,  { duration: 380 }),
-    ));
-  }, []);
+    titleOp.value = 0;
+    bodyOp.value  = 0;
+    titleOp.value = withDelay(120, withTiming(1, { duration: 480, easing: Easing.out(Easing.cubic) }));
+    bodyOp.value  = withDelay(380, withTiming(1, { duration: 520, easing: Easing.out(Easing.cubic) }));
+  }, [card?.id]);
 
-  const loc          = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
-  const HEIGHT       = height || width * 1.62;
-  const Illustration = getIllustrationFor(card?.id);
-
-  function handlePressIn() {
-    scale.value = withSpring(0.972, { damping: 18, stiffness: 300 });
-  }
-  function handlePressOut() {
-    scale.value = withSpring(1, { damping: 18, stiffness: 300 });
-  }
-  function handleFront() {
-    if (face !== 0) return;
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    flip1.value = withTiming(1, { duration: 420, easing: Easing.out(Easing.cubic) });
-    setFace(1);
-    onRevealed?.(1);
-  }
-  function handleCounter() {
-    if (face !== 1) return;
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    flip2.value = withTiming(1, { duration: 420, easing: Easing.out(Easing.cubic) });
-    setFace(2);
-    onRevealed?.(2);
-  }
-  async function handleShare() {
-    const text = [loc.title, '', loc.body, '', loc.counter_hook, '', loc.counter_example].filter(Boolean).join('\n');
-    try { await Share.share({ message: text }); } catch (e) {}
-  }
-
-  // Three faces, two flip values:
-  //   face 0 (front) → flip1 0 → 1 → face 1 (mid)
-  //   face 1 (mid)   → flip2 0 → 1 → face 2 (back)
-  const containerStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
-  const barStyle       = useAnimatedStyle(() => ({ opacity: barOpacity.value }));
-
-  const frontStyle = useAnimatedStyle(() => ({
-    transform: [{ perspective: 1400 }, { rotateY: `${interpolate(flip1.value, [0, 1], [0, 180])}deg` }],
-    opacity: flip1.value < 0.5 ? 1 : 0,
-  }));
-  const midStyle = useAnimatedStyle(() => ({
-    transform: [
-      { perspective: 1400 },
-      { rotateY: `${interpolate(flip1.value, [0, 1], [-180, 0]) + interpolate(flip2.value, [0, 1], [0, 180])}deg` },
-    ],
-    opacity: flip1.value >= 0.5 && flip2.value < 0.5 ? 1 : 0,
-  }));
-  const backStyle = useAnimatedStyle(() => ({
-    transform: [{ perspective: 1400 }, { rotateY: `${interpolate(flip2.value, [0, 1], [-180, 0])}deg` }],
-    opacity: flip2.value >= 0.5 ? 1 : 0,
-  }));
+  const titleStyle = useAnimatedStyle(() => ({ opacity: titleOp.value, transform: [{ translateY: (1 - titleOp.value) * 8 }] }));
+  const bodyStyle  = useAnimatedStyle(() => ({ opacity: bodyOp.value }));
 
   return (
-    <Pressable
-      onPress={face === 0 ? handleFront : undefined}
-      onPressIn={handlePressIn}
-      onPressOut={handlePressOut}
-      style={{ width, height: HEIGHT }}
-      disabled={face !== 0}
-    >
-      <Animated.View style={[{ width, height: HEIGHT }, containerStyle]}>
+    <View style={[styles.card, { width, height: HEIGHT }]}>
+      {/* Top meta row */}
+      <View style={styles.metaRow}>
+        <Text style={styles.metaLeft} numberOfLines={1}>
+          № {pad3(orderNum)} · {titleCaps}
+        </Text>
+        <Text style={styles.metaRight}>
+          {labels.day} {orderNum} {labels.of} {totalCards}
+        </Text>
+      </View>
+      <View style={styles.divider} />
 
-        {/* FRONT — hook */}
-        <Animated.View style={[styles.card, { width, height: HEIGHT, backgroundColor: SURFACE }, frontStyle]}>
-          {!!dayNumber && (
-            <Text style={styles.dayNumber}>{String(dayNumber).padStart(2, '0')}</Text>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 24 }} showsVerticalScrollIndicator={false}>
+        {/* Latin sub-label */}
+        {!!card?.latin && (
+          <Text style={styles.latin}>{card.latin}</Text>
+        )}
+
+        {/* Title */}
+        <Animated.View style={titleStyle}>
+          <Text style={styles.title}>{loc.title}</Text>
+        </Animated.View>
+
+        {/* Small brand mark */}
+        <Image source={ICON_SOURCE} style={styles.icon} resizeMode="contain" />
+
+        {/* Body */}
+        <Animated.View style={bodyStyle}>
+          <Text style={styles.body}>{loc.body}</Text>
+
+          {!!loc.example && (
+            <View style={styles.wildBlock}>
+              <Text style={styles.wildLabel}>▸ {labels.wild}</Text>
+              <View style={styles.wildQuoteWrap}>
+                <View style={styles.wildBar} />
+                <Text style={styles.wildQuote}>{`"${loc.example}"`}</Text>
+              </View>
+            </View>
           )}
-          <View style={styles.brassMark} />
-          <View style={{ flex: 1, justifyContent: 'center', paddingBottom: 16 }}>
-            <Text style={styles.title}>{loc.title}</Text>
-            <View style={styles.hairline} />
-            <Text style={styles.hook}>{loc.hook}</Text>
-          </View>
-          <Animated.View style={[styles.revealBar, barStyle]} />
         </Animated.View>
-
-        {/* MID — the fallacy explained */}
-        <Animated.View style={[styles.card, { width, height: HEIGHT, backgroundColor: SURFACE_MID, position: 'absolute', top: 0, left: 0 }, midStyle]}>
-          <Text style={styles.backLabel}>{loc.title}</Text>
-
-          <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 8 }}>
-            {Illustration ? (
-              <View style={styles.illustration}>
-                <Illustration width="100%" height={150} />
-              </View>
-            ) : null}
-            <Text style={styles.body}>{loc.body}</Text>
-            {!!loc.example && (
-              <View style={styles.quoteBlock}>
-                <Text style={styles.quoteMark}>"</Text>
-                <Text style={styles.quoteText}>{loc.example}</Text>
-              </View>
-            )}
-          </ScrollView>
-
-          <TouchableOpacity onPress={handleCounter} activeOpacity={0.7} style={styles.counterBtn}>
-            <Text style={styles.counterBtnLabel}>{locale === 'ru' ? 'Как ответить' : 'How to counter'}</Text>
-            <Feather name="arrow-right" size={16} color={ACCENT} />
-          </TouchableOpacity>
-        </Animated.View>
-
-        {/* BACK — the counter */}
-        <Animated.View style={[styles.card, { width, height: HEIGHT, backgroundColor: SURFACE_BACK, position: 'absolute', top: 0, left: 0 }, backStyle]}>
-          <Text style={styles.backLabel}>{loc.counter_label || (locale === 'ru' ? 'Как ответить' : 'How to counter')}</Text>
-
-          <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 8 }}>
-            {!!loc.counter_hook && (
-              <Text style={styles.counterHook}>{loc.counter_hook}</Text>
-            )}
-            {!!loc.counter_body && (
-              <Text style={styles.body}>{loc.counter_body}</Text>
-            )}
-            {!!loc.counter_example && (
-              <View style={styles.quoteBlock}>
-                <Text style={styles.quoteMark}>"</Text>
-                <Text style={styles.quoteText}>{loc.counter_example}</Text>
-              </View>
-            )}
-            {!!loc.tip && (
-              <Text style={styles.tip}>{loc.tip}</Text>
-            )}
-          </ScrollView>
-
-          <View style={styles.actionRow}>
-            {!!onSave && (
-              <TouchableOpacity onPress={() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); onSave?.(); }} style={[styles.actionBtn, saved && styles.actionBtnActive]}>
-                <Feather name="bookmark" size={20} color={saved ? ACCENT : TEXT_SEC} />
-              </TouchableOpacity>
-            )}
-            <TouchableOpacity onPress={handleShare} style={styles.actionBtn}>
-              <Feather name="share" size={20} color={TEXT_SEC} />
-            </TouchableOpacity>
-          </View>
-        </Animated.View>
-
-      </Animated.View>
-    </Pressable>
+      </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 14,
     borderWidth: 1,
     borderColor: BORDER,
+    borderRadius: 4,
     paddingHorizontal: 28,
-    paddingTop: 28,
-    paddingBottom: 0,
+    paddingTop: 26,
+    paddingBottom: 8,
     overflow: 'hidden',
   },
 
-  // FRONT
-  dayNumber: {
-    position: 'absolute',
-    right: 16,
-    top: 12,
-    fontFamily: 'Inter-Bold',
-    fontSize: 88,
-    lineHeight: 88,
-    color: TEXT,
-    opacity: 0.04,
-    letterSpacing: -4,
+  // META
+  metaRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 14,
   },
-  brassMark: {
-    width: 8,
-    height: 8,
-    backgroundColor: ACCENT,
-    borderRadius: 2,
+  metaLeft: {
+    fontFamily: MONO,
+    fontSize: 11,
+    letterSpacing: 1.6,
+    color: TEXT_DIM,
+    flex: 1,
+    marginRight: 12,
   },
-  title: {
-    fontFamily: 'Inter-Bold',
-    fontSize: 34,
-    lineHeight: 38,
-    letterSpacing: -0.8,
-    color: ACCENT,
-    marginBottom: 20,
+  metaRight: {
+    fontFamily: MONO,
+    fontSize: 11,
+    letterSpacing: 1.6,
+    color: TEXT_MUTE,
   },
-  hairline: {
+  divider: {
     height: 1,
     backgroundColor: BORDER,
-    marginBottom: 20,
-  },
-  hook: {
-    fontFamily: 'Inter-Medium',
-    fontSize: 17,
-    lineHeight: 28,
-    letterSpacing: -0.1,
-    color: TEXT_SEC,
-    fontStyle: 'italic',
-  },
-  revealBar: {
-    height: 3,
-    backgroundColor: ACCENT,
-    marginHorizontal: -28,
-    marginTop: 24,
+    marginBottom: 28,
   },
 
-  // MID + BACK shared
-  backLabel: {
-    fontFamily: 'Inter-Bold',
-    fontSize: 10,
-    letterSpacing: 2.4,
+  // LATIN
+  latin: {
+    fontFamily: SERIF,
+    fontStyle: 'italic',
+    fontSize: 16,
+    color: TEXT_DIM,
+    marginBottom: 16,
+    letterSpacing: 0.2,
+  },
+
+  // TITLE
+  title: {
+    fontFamily: SERIF,
+    fontWeight: 'bold',
+    fontSize: 50,
+    lineHeight: 56,
+    letterSpacing: -1.2,
     color: ACCENT,
-    textTransform: 'uppercase',
-    marginBottom: 18,
+    marginBottom: 24,
   },
-  illustration: {
-    marginHorizontal: -28,
-    marginBottom: 22,
-    height: 150,
-    borderRadius: 8,
-    overflow: 'hidden',
+
+  // ICON
+  icon: {
+    width: 110,
+    height: 110,
+    marginBottom: 30,
+    marginTop: 4,
   },
+
+  // BODY
   body: {
-    fontFamily: 'Inter-Regular',
-    fontSize: 15,
-    lineHeight: 26,
-    letterSpacing: -0.1,
+    fontFamily: SERIF,
+    fontSize: 19,
+    lineHeight: 30,
     color: TEXT,
-    marginBottom: 22,
+    marginBottom: 8,
   },
-  quoteBlock: {
-    marginBottom: 18,
+
+  // IN THE WILD
+  wildBlock: {
+    marginTop: 32,
+  },
+  wildLabel: {
+    fontFamily: MONO,
+    fontSize: 11,
+    letterSpacing: 1.8,
+    color: TEXT_MUTE,
+    marginBottom: 14,
+  },
+  wildQuoteWrap: {
+    flexDirection: 'row',
     paddingLeft: 4,
   },
-  quoteMark: {
-    fontFamily: 'Inter-Bold',
-    fontSize: 32,
-    lineHeight: 28,
-    color: ACCENT,
-    opacity: 0.5,
-    marginBottom: 4,
+  wildBar: {
+    width: 2,
+    backgroundColor: ACCENT,
+    opacity: 0.6,
+    marginRight: 14,
+    alignSelf: 'stretch',
   },
-  quoteText: {
-    fontFamily: 'Inter-Regular',
-    fontSize: 14,
-    lineHeight: 23,
-    color: TEXT_SEC,
-    letterSpacing: -0.1,
-  },
-  counterHook: {
-    fontFamily: 'Inter-Medium',
-    fontSize: 17,
-    lineHeight: 26,
-    letterSpacing: -0.1,
-    color: ACCENT,
+  wildQuote: {
+    flex: 1,
+    fontFamily: SERIF,
     fontStyle: 'italic',
-    marginBottom: 20,
-  },
-  tip: {
-    fontFamily: 'Inter-Medium',
-    fontSize: 14,
-    lineHeight: 22,
-    color: ACCENT,
-    letterSpacing: -0.1,
-    marginBottom: 4,
-  },
-
-  // MID counter button
-  counterBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    marginHorizontal: -28,
-    paddingVertical: 16,
-    borderTopWidth: 1,
-    borderTopColor: BORDER,
-  },
-  counterBtnLabel: {
-    fontFamily: 'Inter-Bold',
-    fontSize: 13,
-    letterSpacing: 1.5,
-    color: ACCENT,
-    textTransform: 'uppercase',
-  },
-
-  actionRow: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    gap: 4,
-    paddingVertical: 12,
-    borderTopWidth: 1,
-    borderTopColor: BORDER,
-    marginHorizontal: -28,
-    paddingHorizontal: 20,
-  },
-  actionBtn: {
-    width: 40,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 8,
-  },
-  actionBtnActive: {
-    backgroundColor: 'rgba(251,191,36,0.12)',
+    fontSize: 17,
+    lineHeight: 28,
+    color: TEXT_DIM,
   },
 });
