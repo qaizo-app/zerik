@@ -10,8 +10,8 @@ export const brand = {
     name:    'Cavil',
     by:      'by Qaizo',
     tagline: {
-      ru: 'Каждая уловка — с ответом.',
-      en: 'Every bad argument, named.'
+      ru: 'Уловка из чужого рта. Каждый день.',
+      en: 'The trick in their mouth. Daily.'
     }
   },
   primaryCategory: 'rhetorical_fallacies',

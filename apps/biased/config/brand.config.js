@@ -10,8 +10,8 @@ export const brand = {
     name:    'Biased',
     by:      'by Qaizo',
     tagline: {
-      ru: 'Один когнитивный баг. Каждый день.',
-      en: 'One cognitive bias. Every day.'
+      ru: 'Баг в голове. Каждый день.',
+      en: 'The bug in your head. Daily.'
     }
   },
   primaryCategory: 'cognitive_biases',

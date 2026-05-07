@@ -19,8 +19,8 @@ export const studioApps = [
     store_id_ios: null,
     store_url: null,
     i18n: {
-      ru: { name: 'Biased', tagline: 'Одно когнитивное искажение. Каждый день.' },
-      en: { name: 'Biased', tagline: 'One cognitive bias. Every day.' }
+      ru: { name: 'Biased', tagline: 'Баг в голове. Каждый день.' },
+      en: { name: 'Biased', tagline: 'The bug in your head. Daily.' }
     }
   },
   {
@@ -31,8 +31,8 @@ export const studioApps = [
     store_id_ios: null,
     store_url: null,
     i18n: {
-      ru: { name: 'Cavil', tagline: 'Каждая уловка — с ответом.' },
-      en: { name: 'Cavil', tagline: 'Every bad argument, named.' }
+      ru: { name: 'Cavil', tagline: 'Уловка из чужого рта. Каждый день.' },
+      en: { name: 'Cavil', tagline: 'The trick in their mouth. Daily.' }
     }
   }
 ];
