@@ -1,0 +1,31 @@
+rules_version = '2';
+
+// Cavil — Firestore Security Rules
+//
+// Контент карточек (fallacies) хранится в bundledSeed, Firestore — резервный
+// источник, только чтение. Запись через admin SDK.
+// Прогресс пользователя (user_progress) — только владельцу.
+// studio_meta — публичное чтение для cross-promotion.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /fallacies/{cardId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /user_progress/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    match /studio_meta/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

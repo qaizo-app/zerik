@@ -25,7 +25,10 @@
     "biased:android": "npm --workspace biased run android",
     "fonts:download:biased": "node scripts/download-fonts-biased.js",
     "icons:generate:biased": "node scripts/generate-icons-biased.js",
-    "seed:upload:biased": "node scripts/upload-seed-biased.mjs"
+    "seed:upload:biased": "node scripts/upload-seed-biased.mjs",
+    "cavil": "npm --workspace cavil start",
+    "cavil:android": "npm --workspace cavil run android",
+    "seed:upload:cavil": "node scripts/upload-seed-cavil.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
