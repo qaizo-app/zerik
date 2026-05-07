@@ -12,6 +12,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
+import { getIllustrationFor } from '../illustrations';
 
 const SURFACE      = '#0F1E30';
 const SURFACE_BACK = '#122030';
@@ -35,8 +36,9 @@ export function BiasCard({ card, locale = 'en', width = 340, height, dayNumber, 
     ));
   }, []);
 
-  const loc    = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
-  const HEIGHT = height || width * 1.62;
+  const loc          = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
+  const HEIGHT       = height || width * 1.62;
+  const Illustration = getIllustrationFor(card?.id);
 
   function handlePressIn() {
     scale.value = withSpring(0.972, { damping: 18, stiffness: 300 });
@@ -96,6 +98,11 @@ export function BiasCard({ card, locale = 'en', width = 340, height, dayNumber, 
           <Text style={styles.backLabel}>{loc.title}</Text>
 
           <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 8 }}>
+            {Illustration ? (
+              <View style={styles.illustration}>
+                <Illustration width="100%" height={150} />
+              </View>
+            ) : null}
             <Text style={styles.body}>{loc.body}</Text>
             {!!loc.example && (
               <View style={styles.quoteBlock}>
@@ -191,6 +198,13 @@ const styles = StyleSheet.create({
     color: ACCENT,
     textTransform: 'uppercase',
     marginBottom: 18,
+  },
+  illustration: {
+    marginHorizontal: -28,
+    marginBottom: 22,
+    height: 150,
+    borderRadius: 8,
+    overflow: 'hidden',
   },
   body: {
     fontFamily: 'Inter-Regular',

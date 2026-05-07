@@ -270,7 +270,7 @@ export default function App() {
                                 .map(patchCardBlocks)
                                 .sort((a, b) => (b.order || 0) - (a.order || 0));
                             }}
-                            onCardPress={() => {}}
+                            onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { card })}
                             lockedTail={!hasSubscription}
                             lockedTailLimit={7}
                             onUnlock={() => navigation.getParent()?.navigate('Paywall')}
