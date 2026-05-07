@@ -52,9 +52,8 @@ function patchCardBlocks(c) {
 }
 
 const BG     = '#15110A';
-const ACCENT = '#FBBF24';
-const SERIF  = Platform.OS === 'ios' ? 'Georgia' : 'serif';
-const MONO   = Platform.OS === 'ios' ? 'Menlo'   : 'monospace';
+const ACCENT = '#B8842A';
+const MONO   = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
 const TEXT_DIM  = '#A89A78';
 const TEXT_MUTE = '#5C5240';
 
@@ -96,9 +95,12 @@ export default function App() {
 
   useEffect(() => {
     Font.loadAsync({
-      'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf'),
-      'Inter-Bold':    require('./assets/fonts/Inter-Bold.ttf'),
-      'Inter-Medium':  require('./assets/fonts/Inter-Medium.ttf'),
+      'Inter-Regular':       require('./assets/fonts/Inter-Regular.ttf'),
+      'Inter-Bold':          require('./assets/fonts/Inter-Bold.ttf'),
+      'Inter-Medium':        require('./assets/fonts/Inter-Medium.ttf'),
+      'SourceSerif-Regular': require('./assets/fonts/SourceSerif4-Regular.ttf'),
+      'SourceSerif-Bold':    require('./assets/fonts/SourceSerif4-Bold.ttf'),
+      'SourceSerif-Italic':  require('./assets/fonts/SourceSerif4-It.ttf'),
     }).then(() => setFontsReady(true)).catch(() => setFontsReady(true));
   }, []);
 

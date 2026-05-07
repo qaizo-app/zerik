@@ -8,15 +8,17 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 
-const SERIF = Platform.OS === 'ios' ? 'Georgia' : 'serif';
-const MONO  = Platform.OS === 'ios' ? 'Menlo'   : 'monospace';
+const SERIF_REG = 'SourceSerif-Regular';
+const SERIF_BLD = 'SourceSerif-Bold';
+const SERIF_IT  = 'SourceSerif-Italic';
+const MONO      = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
 
-const ACCENT     = '#FBBF24';
-const ACCENT_DIM = '#A87E1A';
+const ACCENT     = '#B8842A';
+const ACCENT_DIM = '#7A5A1E';
 const TEXT       = '#EBE2C8';
 const TEXT_DIM   = '#A89A78';
 const TEXT_MUTE  = '#5C5240';
-const BORDER     = 'rgba(251, 191, 36, 0.35)';
+const BORDER     = 'rgba(184, 132, 42, 0.45)';
 
 const ICON_SOURCE = require('../assets/icon.png');
 
@@ -134,8 +136,7 @@ const styles = StyleSheet.create({
 
   // LATIN
   latin: {
-    fontFamily: SERIF,
-    fontStyle: 'italic',
+    fontFamily: SERIF_IT,
     fontSize: 16,
     color: TEXT_DIM,
     marginBottom: 16,
@@ -144,11 +145,10 @@ const styles = StyleSheet.create({
 
   // TITLE
   title: {
-    fontFamily: SERIF,
-    fontWeight: 'bold',
-    fontSize: 50,
-    lineHeight: 56,
-    letterSpacing: -1.2,
+    fontFamily: SERIF_BLD,
+    fontSize: 52,
+    lineHeight: 58,
+    letterSpacing: -1.5,
     color: ACCENT,
     marginBottom: 24,
   },
@@ -163,8 +163,8 @@ const styles = StyleSheet.create({
 
   // BODY
   body: {
-    fontFamily: SERIF,
-    fontSize: 19,
+    fontFamily: SERIF_REG,
+    fontSize: 18,
     lineHeight: 30,
     color: TEXT,
     marginBottom: 8,
@@ -194,8 +194,7 @@ const styles = StyleSheet.create({
   },
   wildQuote: {
     flex: 1,
-    fontFamily: SERIF,
-    fontStyle: 'italic',
+    fontFamily: SERIF_IT,
     fontSize: 17,
     lineHeight: 28,
     color: TEXT_DIM,
