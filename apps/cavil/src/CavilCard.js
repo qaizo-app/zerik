@@ -13,12 +13,12 @@ const SERIF_BLD = 'SourceSerif-Bold';
 const SERIF_IT  = 'SourceSerif-Italic';
 const MONO      = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
 
-const ACCENT     = '#B8842A';
-const ACCENT_DIM = '#7A5A1E';
+const ACCENT     = '#A8334E';
+const ACCENT_DIM = '#6E1F32';
 const TEXT       = '#EBE2C8';
-const TEXT_DIM   = '#A89A78';
-const TEXT_MUTE  = '#5C5240';
-const BORDER     = 'rgba(184, 132, 42, 0.45)';
+const TEXT_DIM   = '#B59A8A';
+const TEXT_MUTE  = '#7A5A56';
+const BORDER     = 'rgba(168, 51, 78, 0.45)';
 
 const ICON_SOURCE = require('../assets/icon.png');
 
