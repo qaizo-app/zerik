@@ -165,7 +165,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <GestureHandlerRootView style={{ flex: 1, backgroundColor: BG }}>
-        <ThemeProvider categoryPalettes={categoryPalettes} brand={brand} defaultCategory="cognitive_biases">
+        <ThemeProvider categoryPalettes={categoryPalettes} brand={brand} defaultCategory="rhetorical_fallacies">
           <StatusBar style="light" />
           <NavigationContainer
             ref={navigationRef}
