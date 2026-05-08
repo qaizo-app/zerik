@@ -54,7 +54,7 @@ function patchCardBlocks(c) {
 }
 
 const BG     = '#1A1410';
-const ACCENT = '#9C5A3D';
+const ACCENT = '#B8A66B';
 const MONO   = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
 const TEXT_DIM  = '#B59D88';
 const TEXT_MUTE = '#7A6A58';
