@@ -21,6 +21,8 @@ import {
 } from '@engine';
 
 import { CavilCard } from './src/CavilCard';
+import { CavilLibrary } from './src/CavilLibrary';
+import { CavilPractice } from './src/CavilPractice';
 import { categoryPalettes } from './config/theme.config';
 import { brand }       from './config/brand.config';
 import { push }        from './config/push.config';
@@ -245,41 +247,54 @@ export default function App() {
                       ),
                       Library: ({ navigation }) => {
                         const lang = useLanguage();
-                        const [refreshKey, setRefreshKey] = useState(0);
-                        useFocusEffect(useCallback(() => { setRefreshKey(k => k + 1); }, []));
-                        const getSavedCards = useCallback(async () => {
-                          const ids = await progressService.getSavedIds();
-                          return ids
-                            .map(id => seedCards.find(c => c.id === id))
-                            .filter(Boolean)
-                            .map(patchCardBlocks);
-                        }, [refreshKey]);
+                        const [savedIds, setSavedIds] = useState([]);
+                        const [todayIdx, setTodayIdx] = useState(0);
+                        useFocusEffect(useCallback(() => {
+                          (async () => {
+                            const enrollment = await getEnrollmentDate();
+                            const idx = dayIndexFromEnrollment(enrollment) + 1;
+                            setTodayIdx(idx);
+                            const ids = await progressService.getSavedIds();
+                            setSavedIds(ids || []);
+                          })();
+                        }, []));
                         return (
-                          <LibraryScreen
+                          <CavilLibrary
                             locale={lang}
-                            getSavedCards={getSavedCards}
+                            allCards={seedCards}
+                            todayIndex={todayIdx}
+                            savedIds={savedIds}
+                            totalVolume={VOL_TOTAL}
                             onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { card })}
                           />
                         );
                       },
                       History: ({ navigation }) => {
                         const lang = useLanguage();
+                        const [streak,      setStreak]      = useState({ current: 0, best: 0 });
+                        const [openedCount, setOpenedCount] = useState(0);
+                        const [savedCount,  setSavedCount]  = useState(0);
+                        useFocusEffect(useCallback(() => {
+                          (async () => {
+                            try {
+                              const [s, opened, saved] = await Promise.all([
+                                progressService.getStreak(),
+                                progressService.getOpenedIds(),
+                                progressService.getSavedIds(),
+                              ]);
+                              setStreak(s || { current: 0, best: 0 });
+                              setOpenedCount((opened || []).length);
+                              setSavedCount((saved || []).length);
+                            } catch (e) {}
+                          })();
+                        }, []));
                         return (
-                          <HistoryScreen
+                          <CavilPractice
                             locale={lang}
-                            getHistory={async () => {
-                              const openedIds = await progressService.getOpenedIds();
-                              if (!openedIds.length) return [];
-                              return openedIds
-                                .map(id => seedCards.find(c => c.id === id))
-                                .filter(Boolean)
-                                .map(patchCardBlocks)
-                                .sort((a, b) => (b.order || 0) - (a.order || 0));
-                            }}
-                            onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { card })}
-                            lockedTail={!hasSubscription}
-                            lockedTailLimit={7}
-                            onUnlock={() => navigation.getParent()?.navigate('Paywall')}
+                            streak={streak}
+                            openedCount={openedCount}
+                            savedCount={savedCount}
+                            totalVolume={VOL_TOTAL}
                           />
                         );
                       },
