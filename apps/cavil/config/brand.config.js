@@ -10,7 +10,7 @@ export const brand = {
     name:    'Cavil',
     by:      'by Qaizo',
     tagline: {
-      ru: 'Уловка из чужого рта. Каждый день.',
+      ru: 'Уловка в речи. Каждый день.',
       en: 'The trick in their mouth. Daily.'
     }
   },

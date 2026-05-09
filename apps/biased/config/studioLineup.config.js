@@ -31,7 +31,7 @@ export const studioApps = [
     store_id_ios: null,
     store_url: null,
     i18n: {
-      ru: { name: 'Cavil', tagline: 'Уловка из чужого рта. Каждый день.' },
+      ru: { name: 'Cavil', tagline: 'Уловка в речи. Каждый день.' },
       en: { name: 'Cavil', tagline: 'The trick in their mouth. Daily.' }
     }
   }
