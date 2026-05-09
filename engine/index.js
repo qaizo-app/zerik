@@ -34,3 +34,4 @@ export {
 
 // i18n
 export { default as i18n, t, setLanguage, getLanguage, extendStrings, onLanguageChange, useLanguage } from './i18n';
+export { pluralize, pluralizeDays, pluralizeDaysUpper } from './i18n/pluralize';

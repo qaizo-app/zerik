@@ -18,6 +18,7 @@ import {
   AppNavigator, RootStackNavigator,
   setLanguage, useLanguage,
   consentService, pushService, appCheckService,
+  pluralizeDaysUpper,
 } from '@engine';
 
 import { CavilCard } from './src/CavilCard';
@@ -406,8 +407,9 @@ function TodayTabScreen({ hasSubscription }) {
   }
 
   const labels = lang === 'ru'
-    ? { vol: 'CAVIL · ТОМ I', days: 'ДНЕЙ',  prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОХРАНИТЬ',  collected: 'СОХРАНЕНО'  }
-    : { vol: 'CAVIL · VOL. I', days: 'DAYS', prev: 'PREV',  next: 'NEXT',  collect: 'SAVE',  collected: 'SAVED' };
+    ? { vol: 'CAVIL · ТОМ I', prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОХРАНИТЬ',  collected: 'СОХРАНЕНО'  }
+    : { vol: 'CAVIL · VOL. I', prev: 'PREV',  next: 'NEXT',  collect: 'SAVE',  collected: 'SAVED' };
+  const daysWord = pluralizeDaysUpper(streak.current, lang);
 
   const canPrev = viewIndex > 1;
   const canNext = viewIndex < todayIndex;
@@ -447,7 +449,7 @@ function TodayTabScreen({ hasSubscription }) {
             fontSize: 11,
             letterSpacing: 1.6,
             color: ACCENT,
-          }}>{streak.current} {labels.days}</Text>
+          }}>{streak.current} {daysWord}</Text>
         </View>
       </View>
 

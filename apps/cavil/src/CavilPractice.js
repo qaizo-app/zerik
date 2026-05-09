@@ -5,6 +5,7 @@
 
 import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { pluralizeDays, pluralizeDaysUpper } from '@engine';
 
 const SERIF_REG = 'SourceSerif-Regular';
 const SERIF_BLD = 'SourceSerif-Bold';
@@ -24,24 +25,22 @@ const LABELS = {
   en: {
     eyebrow:    'YOUR PROGRESS',
     title:      'Practice',
-    daysUnbroken: 'days unbroken',
+    unbrokenSuffix: 'unbroken',          // "{N days} {unbroken}"
     personalBest: 'PERSONAL BEST',
     last28:     'LAST 28 DAYS',
-    days:       'DAYS',
     collected:  'SAVED',
-    daysTotal:  'DAYS TOTAL',
+    totalSuffix:'TOTAL',                 // "{N DAYS} {TOTAL}"
     toGo:       'TO GO',
     empty:      'No streak yet. Open today\'s card to begin.',
   },
   ru: {
     eyebrow:    'ТВОЙ ПРОГРЕСС',
     title:      'Практика',
-    daysUnbroken: 'дней без пропуска',
+    unbrokenSuffix: 'без пропуска',      // "{N дней} {без пропуска}"
     personalBest: 'ЛИЧНЫЙ РЕКОРД',
     last28:     'ПОСЛЕДНИЕ 28 ДНЕЙ',
-    days:       'ДНЕЙ',
     collected:  'СОХРАНЕНО',
-    daysTotal:  'ДНЕЙ ВСЕГО',
+    totalSuffix:'ВСЕГО',                 // "{N ДНЕЙ} {ВСЕГО}"
     toGo:       'ОСТАЛОСЬ',
     empty:      'Стрик не начат. Открой сегодняшнюю карточку, чтобы стартовать.',
   },
@@ -99,10 +98,12 @@ export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 },
       <View style={{ paddingHorizontal: 24 }}>
         <View style={styles.streakCard}>
           <Text style={styles.streakNumber}>{streak.current}</Text>
-          <Text style={styles.streakLabel}>{labels.daysUnbroken}</Text>
+          <Text style={styles.streakLabel}>
+            {pluralizeDays(streak.current, locale)} {labels.unbrokenSuffix}
+          </Text>
           <View style={styles.streakDivider} />
           <Text style={styles.bestLabel}>
-            {labels.personalBest} · {streak.best || streak.current} {labels.days}
+            {labels.personalBest} · {streak.best || streak.current} {pluralizeDaysUpper(streak.best || streak.current, locale)}
           </Text>
         </View>
       </View>
@@ -131,7 +132,7 @@ export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 },
         </View>
         <View style={styles.stat}>
           <Text style={styles.statNumber}>{openedCount}</Text>
-          <Text style={styles.statLabel}>{labels.daysTotal}</Text>
+          <Text style={styles.statLabel}>{pluralizeDaysUpper(openedCount, locale)} {labels.totalSuffix}</Text>
         </View>
         <View style={styles.stat}>
           <Text style={styles.statNumber}>{toGo}</Text>
