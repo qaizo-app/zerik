@@ -245,7 +245,13 @@ export default function SettingsScreen({
       <Row label={t('language')} value={t('language_name')} onPress={flipLang} />
 
       <SectionHeader>{t('notifications')}</SectionHeader>
-      <Row label={t('daily_reminder')} right={<Switch value={remindersOk} onValueChange={toggleReminders} />} />
+      <Row label={t('daily_reminder')} right={<Switch
+          value={remindersOk}
+          onValueChange={toggleReminders}
+          trackColor={{ false: palette.border, true: palette.accent_dim }}
+          thumbColor={remindersOk ? palette.accent : palette.text_mute}
+          ios_backgroundColor={palette.border}
+        />} />
       {remindersOk ? (
         <Row
           label={t('reminder_time')}
@@ -268,8 +274,24 @@ export default function SettingsScreen({
       />
 
 <SectionHeader>{`${t('consent_analytics')} & ${t('consent_crash_reports')}`}</SectionHeader>
-      <Row label={t('consent_analytics')}     right={<Switch value={analyticsOk} onValueChange={toggleAnalytics} />} />
-      <Row label={t('consent_crash_reports')} right={<Switch value={crashOk}     onValueChange={toggleCrash} />} />
+      <Row label={t('consent_analytics')} right={
+        <Switch
+          value={analyticsOk}
+          onValueChange={toggleAnalytics}
+          trackColor={{ false: palette.border, true: palette.accent_dim }}
+          thumbColor={analyticsOk ? palette.accent : palette.text_mute}
+          ios_backgroundColor={palette.border}
+        />
+      } />
+      <Row label={t('consent_crash_reports')} right={
+        <Switch
+          value={crashOk}
+          onValueChange={toggleCrash}
+          trackColor={{ false: palette.border, true: palette.accent_dim }}
+          thumbColor={crashOk ? palette.accent : palette.text_mute}
+          ios_backgroundColor={palette.border}
+        />
+      } />
 
       {otherApps.length > 0 ? (
         <>

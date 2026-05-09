@@ -53,7 +53,7 @@ function StatusDot({ state }) {
   );
 }
 
-function FallacyRow({ card, locale, state, onPress, label, isLocked }) {
+function FallacyRow({ card, locale, state, onPress, label, isLocked, lockedLabel }) {
   const loc = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
   const titleColor = isLocked ? TEXT_MUTE : (state === 'today' ? ACCENT : TEXT);
   const subColor   = isLocked ? TEXT_MUTE : TEXT_DIM;
@@ -61,8 +61,10 @@ function FallacyRow({ card, locale, state, onPress, label, isLocked }) {
   const labelColor =
     state === 'today'     ? ACCENT     :
     state === 'collected' ? ACCENT     :
-    state === 'tomorrow'  ? TEXT_MUTE  :
                             TEXT_MUTE;
+
+  // Hide future card titles to preserve daily-surprise ritual.
+  const hideContent = state === 'tomorrow' || state === 'locked';
 
   return (
     <Pressable
@@ -74,18 +76,20 @@ function FallacyRow({ card, locale, state, onPress, label, isLocked }) {
         <StatusDot state={state} />
       </View>
       <View style={{ flex: 1 }}>
-        <Text style={[styles.rowTitle, { color: titleColor }]} numberOfLines={1}>
-          {loc.title || card.id}
-        </Text>
-        {card.latin ? (
-          <Text style={[styles.rowLatin, { color: subColor }]} numberOfLines={1}>
-            {card.latin}
-          </Text>
-        ) : isLocked ? (
-          <Text style={[styles.rowLatin, { color: TEXT_MUTE, fontStyle: 'normal', fontFamily: MONO, fontSize: 10, letterSpacing: 1.4 }]}>
-            {label || ''}
-          </Text>
-        ) : null}
+        {hideContent ? (
+          <Text style={styles.rowLockedLabel}>{lockedLabel || '— locked —'}</Text>
+        ) : (
+          <>
+            <Text style={[styles.rowTitle, { color: titleColor }]} numberOfLines={1}>
+              {loc.title || card.id}
+            </Text>
+            {card.latin ? (
+              <Text style={[styles.rowLatin, { color: subColor }]} numberOfLines={1}>
+                {card.latin}
+              </Text>
+            ) : null}
+          </>
+        )}
       </View>
       {label ? (
         <Text style={[styles.rowLabel, { color: labelColor }]}>{label}</Text>
@@ -151,6 +155,7 @@ export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedId
                 state={s}
                 isLocked={isLocked}
                 label={labelFor(s)}
+                lockedLabel={labels.locked}
                 onPress={() => onCardPress?.(card)}
               />
               {i < cards.length - 1 && <View style={styles.divider} />}
@@ -186,6 +191,9 @@ const styles = StyleSheet.create({
   },
   rowLatin: {
     fontFamily: SERIF_IT, fontSize: 14, letterSpacing: 0.1,
+  },
+  rowLockedLabel: {
+    fontFamily: MONO, fontSize: 10, letterSpacing: 1.6, color: TEXT_MUTE, textTransform: 'uppercase',
   },
   rowLabel: {
     fontFamily: MONO, fontSize: 10, letterSpacing: 1.4, marginLeft: 12,

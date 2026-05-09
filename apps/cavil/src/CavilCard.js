@@ -63,7 +63,7 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
       </View>
       <View style={styles.divider} />
 
-      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 24 }} showsVerticalScrollIndicator={false}>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
         {/* Latin sub-label */}
         {!!card?.latin && (
           <Text style={styles.latin}>{card.latin}</Text>
@@ -73,9 +73,6 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
         <Animated.View style={titleStyle}>
           <Text style={styles.title}>{loc.title}</Text>
         </Animated.View>
-
-        {/* Small brand mark */}
-        <Image source={ICON_SOURCE} style={styles.icon} resizeMode="contain" />
 
         {/* Body */}
         <Animated.View style={bodyStyle}>
@@ -92,6 +89,9 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
           )}
         </Animated.View>
       </ScrollView>
+
+      {/* Small brand stamp — bottom-right corner, subtle */}
+      <Image source={ICON_SOURCE} style={styles.cornerStamp} resizeMode="contain" />
     </View>
   );
 }
@@ -153,12 +153,14 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
 
-  // ICON
-  icon: {
-    width: 110,
-    height: 110,
-    marginBottom: 30,
-    marginTop: 4,
+  // CORNER STAMP — small brand mark, bottom-right
+  cornerStamp: {
+    position: 'absolute',
+    bottom: 14,
+    right: 14,
+    width: 28,
+    height: 28,
+    opacity: 0.4,
   },
 
   // BODY
