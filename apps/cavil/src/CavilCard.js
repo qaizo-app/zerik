@@ -71,7 +71,14 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
 
         {/* Title */}
         <Animated.View style={titleStyle}>
-          <Text style={styles.title}>{loc.title}</Text>
+          <Text
+            style={styles.title}
+            adjustsFontSizeToFit
+            numberOfLines={2}
+            minimumFontScale={0.55}
+            textBreakStrategy="simple"
+            allowFontScaling={false}
+          >{loc.title}</Text>
         </Animated.View>
 
         {/* Body */}
@@ -146,9 +153,9 @@ const styles = StyleSheet.create({
   // TITLE
   title: {
     fontFamily: SERIF_BLD,
-    fontSize: 52,
-    lineHeight: 58,
-    letterSpacing: -1.5,
+    fontSize: 44,
+    lineHeight: 48,
+    letterSpacing: -1,
     color: ACCENT,
     marginBottom: 24,
   },
