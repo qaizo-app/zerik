@@ -27,7 +27,7 @@ const LABELS = {
 };
 
 function StatusDot({ state }) {
-  // state: 'collected' | 'today' | 'past' | 'locked'
+  // state: 'collected' | 'today' | 'opened' | 'past' | 'tomorrow' | 'locked'
   if (state === 'today') {
     return (
       <View style={[styles.dot, { backgroundColor: ACCENT, borderColor: ACCENT }]}>
@@ -42,12 +42,21 @@ function StatusDot({ state }) {
       </View>
     );
   }
+  if (state === 'opened') {
+    // visited but not saved — clear "seen" marker
+    return (
+      <View style={[styles.dot, { borderColor: ACCENT_DIM, borderWidth: 1.5 }]}>
+        <Text style={[styles.dotC, { color: ACCENT_DIM, fontSize: 13 }]}>✓</Text>
+      </View>
+    );
+  }
   if (state === 'past') {
+    // past day, never opened (rare — should only happen if user skipped a day before today)
     return (
       <View style={[styles.dot, { borderColor: TEXT_MUTE, borderWidth: 1 }]} />
     );
   }
-  // locked
+  // tomorrow / locked
   return (
     <View style={[styles.dot, { borderColor: TEXT_MUTE, borderStyle: 'dashed', borderWidth: 1 }]} />
   );
@@ -98,12 +107,13 @@ function FallacyRow({ card, locale, state, onPress, label, isLocked, lockedLabel
   );
 }
 
-export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedIds = [], totalVolume = 100, onCardPress }) {
+export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedIds = [], openedIds = [], totalVolume = 100, onCardPress }) {
   const insets = useSafeAreaInsets();
   const labels = LABELS[locale] || LABELS.en;
 
   const collectedCount = savedIds.length;
   const cards = [...allCards].sort((a, b) => (a.order || 0) - (b.order || 0));
+  const openedSet = new Set(openedIds);
 
   function stateFor(card) {
     const o = card.order;
@@ -111,6 +121,7 @@ export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedId
     if (o === todayIndex + 1) return 'tomorrow';
     if (o > todayIndex)   return 'locked';
     if (savedIds.includes(card.id)) return 'collected';
+    if (openedSet.has(card.id))     return 'opened';
     return 'past';
   }
 

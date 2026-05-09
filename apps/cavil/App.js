@@ -247,15 +247,20 @@ export default function App() {
                       ),
                       Library: ({ navigation }) => {
                         const lang = useLanguage();
-                        const [savedIds, setSavedIds] = useState([]);
-                        const [todayIdx, setTodayIdx] = useState(0);
+                        const [savedIds,  setSavedIds]  = useState([]);
+                        const [openedIds, setOpenedIds] = useState([]);
+                        const [todayIdx,  setTodayIdx]  = useState(0);
                         useFocusEffect(useCallback(() => {
                           (async () => {
                             const enrollment = await getEnrollmentDate();
                             const idx = dayIndexFromEnrollment(enrollment) + 1;
                             setTodayIdx(idx);
-                            const ids = await progressService.getSavedIds();
-                            setSavedIds(ids || []);
+                            const [saved, opened] = await Promise.all([
+                              progressService.getSavedIds(),
+                              progressService.getOpenedIds(),
+                            ]);
+                            setSavedIds(saved || []);
+                            setOpenedIds(opened || []);
                           })();
                         }, []));
                         return (
@@ -264,6 +269,7 @@ export default function App() {
                             allCards={seedCards}
                             todayIndex={todayIdx}
                             savedIds={savedIds}
+                            openedIds={openedIds}
                             totalVolume={VOL_TOTAL}
                             onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { card })}
                           />
