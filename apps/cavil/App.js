@@ -406,8 +406,8 @@ function TodayTabScreen({ hasSubscription }) {
   }
 
   const labels = lang === 'ru'
-    ? { vol: 'CAVIL · ТОМ I', days: 'ДНЕЙ',  prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОБРАТЬ',  collected: 'СОБРАНО'  }
-    : { vol: 'CAVIL · VOL. I', days: 'DAYS', prev: 'PREV',  next: 'NEXT',  collect: 'COLLECT',  collected: 'COLLECTED' };
+    ? { vol: 'CAVIL · ТОМ I', days: 'ДНЕЙ',  prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОХРАНИТЬ',  collected: 'СОХРАНЕНО'  }
+    : { vol: 'CAVIL · VOL. I', days: 'DAYS', prev: 'PREV',  next: 'NEXT',  collect: 'SAVE',  collected: 'SAVED' };
 
   const canPrev = viewIndex > 1;
   const canNext = viewIndex < todayIndex;

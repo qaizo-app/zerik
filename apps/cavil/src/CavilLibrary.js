@@ -22,8 +22,8 @@ const BORDER     = 'rgba(158, 155, 196, 0.18)';
 function pad3(n) { return String(n || 0).padStart(3, '0'); }
 
 const LABELS = {
-  en: { eyebrow: 'LIBRARY · INDEX', title: 'Fallacies', of: 'of', collected: 'collected', vol: 'vol. i', today: 'TODAY', tomorrow: 'TOMORROW', collectedTag: 'COLLECTED', locked: '— locked —' },
-  ru: { eyebrow: 'БИБЛИОТЕКА · УКАЗАТЕЛЬ', title: 'Уловки', of: 'из', collected: 'собрано', vol: 'том i', today: 'СЕГОДНЯ', tomorrow: 'ЗАВТРА', collectedTag: 'СОБРАНО', locked: '— заперто —' },
+  en: { eyebrow: 'LIBRARY · INDEX', title: 'Fallacies', of: 'of', collected: 'saved', vol: 'vol. i', today: 'TODAY', tomorrow: 'TOMORROW', collectedTag: 'SAVED', locked: '— locked —' },
+  ru: { eyebrow: 'БИБЛИОТЕКА · УКАЗАТЕЛЬ', title: 'Уловки', of: 'из', collected: 'сохранено', vol: 'том i', today: 'СЕГОДНЯ', tomorrow: 'ЗАВТРА', collectedTag: 'СОХРАНЕНО', locked: '— заперто —' },
 };
 
 function StatusDot({ state }) {
