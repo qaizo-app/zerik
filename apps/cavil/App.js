@@ -53,11 +53,11 @@ function patchCardBlocks(c) {
   return patched;
 }
 
-const BG     = '#1A1410';
-const ACCENT = '#B8A66B';
+const BG     = '#161420';
+const ACCENT = '#9E9BC4';
 const MONO   = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
-const TEXT_DIM  = '#B59D88';
-const TEXT_MUTE = '#7A6A58';
+const TEXT_DIM  = '#A8A4C0';
+const TEXT_MUTE = '#6E6A88';
 
 function detectLanguage() {
   try {

@@ -11,13 +11,13 @@ const SERIF_BLD = 'SourceSerif-Bold';
 const SERIF_IT  = 'SourceSerif-Italic';
 const MONO      = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
 
-const BG         = '#1A1410';
-const ACCENT     = '#B8A66B';
-const ACCENT_DIM = '#7E6E3F';
-const TEXT       = '#EBE2C8';
-const TEXT_DIM   = '#B59D88';
-const TEXT_MUTE  = '#7A6A58';
-const BORDER     = 'rgba(184, 166, 107, 0.18)';
+const BG         = '#161420';
+const ACCENT     = '#9E9BC4';
+const ACCENT_DIM = '#5E5B82';
+const TEXT       = '#E8E5F0';
+const TEXT_DIM   = '#A8A4C0';
+const TEXT_MUTE  = '#6E6A88';
+const BORDER     = 'rgba(158, 155, 196, 0.18)';
 
 function pad3(n) { return String(n || 0).padStart(3, '0'); }
 

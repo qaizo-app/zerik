@@ -110,22 +110,22 @@
   },
 
   "rhetorical_fallacies": {
-    "_label": "Риторические ошибки · cocoa + old gold (vintage editorial)",
-    "bg":            "#1A1410",
-    "bg_elev":       "#241B16",
-    "bg_card":       "#2E241D",
-    "text":          "#EBE2C8",
-    "text_dim":      "#B59D88",
-    "text_mute":     "#7A6A58",
-    "border":        "#3A332A",
-    "border_bright": "#52483A",
-    "accent":        "#B8A66B",
-    "accent_dim":    "#7E6E3F",
+    "_label": "Риторические ошибки · indigo + lavender (pre-dawn calm)",
+    "bg":            "#161420",
+    "bg_elev":       "#1F1B2E",
+    "bg_card":       "#2A263E",
+    "text":          "#E8E5F0",
+    "text_dim":      "#A8A4C0",
+    "text_mute":     "#6E6A88",
+    "border":        "#2A2640",
+    "border_bright": "#3A3650",
+    "accent":        "#9E9BC4",
+    "accent_dim":    "#5E5B82",
     "picked":        "#C49A6C",
     "wiser":         "#8DA66E",
-    "ink_on_accent": "#1A1410",
-    "_grain_color":  "#EBE2C8",
-    "_grain_opacity": 0.06
+    "ink_on_accent": "#161420",
+    "_grain_color":  "#E8E5F0",
+    "_grain_opacity": 0.05
   },
 
   "book_idea": {
