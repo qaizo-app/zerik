@@ -9,6 +9,7 @@ import { t, setLanguage, getLanguage } from '../i18n';
 import consentService from '../core/consentService';
 import pushService from '../core/pushService';
 import * as storage from '../core/storage';
+import TimePickerModal from '../components/TimePickerModal';
 
 function SectionHeader({ children }) {
   const { palette, tokens } = useTheme();
@@ -104,6 +105,9 @@ export default function SettingsScreen({
   const [crashOk, setCrashOk] = useState(true);
   const [remindersOk, setRemindersOk] = useState(false);
   const [lang, setLang] = useState(getLanguage());
+  const [dailyHour,   setDailyHour]   = useState(pushDefaults?.defaultDailyHour   ?? 9);
+  const [dailyMinute, setDailyMinute] = useState(pushDefaults?.defaultDailyMinute ?? 0);
+  const [timeModalOpen, setTimeModalOpen] = useState(false);
 
   useEffect(() => {
     consentService.load().then(() => {
@@ -111,7 +115,29 @@ export default function SettingsScreen({
       setCrashOk(consentService.getCrashReportsConsent());
       setRemindersOk(consentService.getReminderConsent());
     });
+    pushService.getPreferences().then(prefs => {
+      if (prefs?.daily_hour   !== undefined) setDailyHour(prefs.daily_hour);
+      if (prefs?.daily_minute !== undefined) setDailyMinute(prefs.daily_minute);
+    });
   }, []);
+
+  async function saveReminderTime({ hour, minute }) {
+    setDailyHour(hour);
+    setDailyMinute(minute);
+    setTimeModalOpen(false);
+    try {
+      await pushService.setPreferences({ daily_hour: hour, daily_minute: minute });
+      if (remindersOk && pushDefaults) {
+        await pushService.cancelDailyReminder();
+        await pushService.scheduleDailyReminder({
+          hour,
+          minute,
+          title: pushDefaults.defaults?.[lang]?.daily_title || '',
+          body:  pushDefaults.defaults?.[lang]?.daily_body  || ''
+        });
+      }
+    } catch (e) {}
+  }
 
   async function toggleReminders(v) {
     setRemindersOk(v);
@@ -121,8 +147,8 @@ export default function SettingsScreen({
       if (granted && pushDefaults) {
         await pushService.setupAndroidChannel();
         await pushService.scheduleDailyReminder({
-          hour: pushDefaults.defaultDailyHour,
-          minute: pushDefaults.defaultDailyMinute,
+          hour:   dailyHour,
+          minute: dailyMinute,
           title: pushDefaults.defaults?.[lang]?.daily_title || '',
           body:  pushDefaults.defaults?.[lang]?.daily_body  || ''
         });
@@ -220,6 +246,26 @@ export default function SettingsScreen({
 
       <SectionHeader>{t('notifications')}</SectionHeader>
       <Row label={t('daily_reminder')} right={<Switch value={remindersOk} onValueChange={toggleReminders} />} />
+      {remindersOk ? (
+        <Row
+          label={t('reminder_time')}
+          value={`${String(dailyHour).padStart(2, '0')}:${String(dailyMinute).padStart(2, '0')}`}
+          onPress={() => setTimeModalOpen(true)}
+        />
+      ) : null}
+
+      <TimePickerModal
+        visible={timeModalOpen}
+        initialHour={dailyHour}
+        initialMinute={dailyMinute}
+        title={t('reminder_time_picker_title')}
+        labelHour={t('reminder_time_hour')}
+        labelMinute={t('reminder_time_minute')}
+        labelSave={t('save') || 'Save'}
+        labelCancel={t('cancel') || 'Cancel'}
+        onSave={saveReminderTime}
+        onCancel={() => setTimeModalOpen(false)}
+      />
 
 <SectionHeader>{`${t('consent_analytics')} & ${t('consent_crash_reports')}`}</SectionHeader>
       <Row label={t('consent_analytics')}     right={<Switch value={analyticsOk} onValueChange={toggleAnalytics} />} />
