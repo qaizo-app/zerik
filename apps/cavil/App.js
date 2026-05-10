@@ -352,8 +352,8 @@ function TodayTabScreen({ hasSubscription }) {
   const cardWidth  = SW - 28;
   const headerH    = insets.top + 14 + 24 + 14;   // safe area + padding + label + spacing
   const tabBarH    = 70;
-  const hintH      = 28;                            // swipe hint at bottom
-  const cardHeight = SH - headerH - tabBarH - hintH - 24;
+  const hintH      = 38;                            // swipe hint at bottom (taller, lifts text up)
+  const cardHeight = SH - headerH - tabBarH - hintH - 16;
 
   // Card slide animation
   const cardX = useSharedValue(0);
@@ -511,16 +511,38 @@ function TodayTabScreen({ hasSubscription }) {
       </GestureDetector>
 
       {/* Swipe hint — subtle, persistent */}
-      <View style={{ alignItems: 'center', paddingVertical: 8, height: hintH }}>
+      <View style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 14,
+        paddingTop: 8,
+        paddingBottom: 14,
+        height: hintH,
+      }}>
+        <Text style={{
+          fontFamily: MONO,
+          fontSize: 16,
+          color: TEXT_MUTE,
+          opacity: canPrev ? 0.7 : 0,
+          width: 12,
+          textAlign: 'center',
+        }}>◂</Text>
         <Text style={{
           fontFamily: MONO,
           fontSize: 10,
           letterSpacing: 2.4,
           color: TEXT_MUTE,
           opacity: 0.7,
-        }}>
-          {canPrev ? '◂' : ' '}  {lang === 'ru' ? 'СВАЙП' : 'SWIPE'}  {canNext ? '▸' : ' '}
-        </Text>
+        }}>{lang === 'ru' ? 'СВАЙП' : 'SWIPE'}</Text>
+        <Text style={{
+          fontFamily: MONO,
+          fontSize: 16,
+          color: TEXT_MUTE,
+          opacity: canNext ? 0.7 : 0,
+          width: 12,
+          textAlign: 'center',
+        }}>▸</Text>
       </View>
     </View>
   );
