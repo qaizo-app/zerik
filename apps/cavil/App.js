@@ -534,6 +534,7 @@ function TodayTabScreen({ hasSubscription }) {
           letterSpacing: 2.4,
           color: TEXT_MUTE,
           opacity: 0.7,
+          marginTop: 4,
         }}>{lang === 'ru' ? 'СВАЙП' : 'SWIPE'}</Text>
         <Text style={{
           fontFamily: MONO,
