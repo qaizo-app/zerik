@@ -7,8 +7,8 @@ export const studioApps = [
     store_id_ios: null,
     store_url: null,
     i18n: {
-      ru: { name: 'Biased', tagline: 'Баг в голове. Каждый день.' },
-      en: { name: 'Biased', tagline: 'The bug in your head. Daily.' }
+      ru: { name: 'Biased', tagline: 'Слепое пятно. Каждый день.' },
+      en: { name: 'Biased', tagline: 'Your blind spot. Daily.' }
     }
   },
   {
