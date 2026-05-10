@@ -68,26 +68,48 @@ function ComingSoonRow({ app, locale, isFirst }) {
 
 function ComingSoonGroup({ apps, locale }) {
   const { palette, tokens } = useTheme();
+  const [expanded, setExpanded] = useState(false);
   if (!apps.length) return null;
   return (
     <View style={{
       marginHorizontal: 24,
       marginVertical: 8,
-      padding: 16,
       borderRadius: tokens.radius.tight,
       borderWidth: 1,
       borderColor: palette.border,
       borderStyle: 'dashed',
+      overflow: 'hidden',
     }}>
-      <Text style={{
-        fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 2,
-        color: palette.text_mute, textTransform: 'uppercase', marginBottom: 12
-      }}>
-        {t('coming_soon_badge')}
-      </Text>
-      {apps.map((app, i) => (
-        <ComingSoonRow key={app.slug} app={app} locale={locale} isFirst={i === 0} />
-      ))}
+      <Pressable
+        onPress={() => setExpanded(v => !v)}
+        style={{
+          paddingVertical: 12,
+          paddingHorizontal: 16,
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Text style={{
+          fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 2,
+          color: palette.text_mute, textTransform: 'uppercase'
+        }}>
+          {t('coming_soon_badge')} · {apps.length}
+        </Text>
+        <Text style={{
+          fontFamily: tokens.fonts.mono, fontSize: 13,
+          color: palette.text_mute,
+        }}>
+          {expanded ? '▾' : '▸'}
+        </Text>
+      </Pressable>
+      {expanded && (
+        <View style={{ paddingHorizontal: 16, paddingBottom: 16, paddingTop: 4 }}>
+          {apps.map((app, i) => (
+            <ComingSoonRow key={app.slug} app={app} locale={locale} isFirst={i === 0} />
+          ))}
+        </View>
+      )}
     </View>
   );
 }
