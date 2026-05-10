@@ -46,15 +46,12 @@ const LABELS = {
   },
 };
 
-function StreakGrid({ streak, totalDays }) {
-  // 28 squares, 2 rows × 14
-  // Fills first `streak` squares; today = last filled, faded
-  // Squares beyond streak are dim outlines
-  const cells = [];
-  const filled = Math.min(streak, 28);
+function StreakGrid({ streak }) {
+  // 28 squares, exactly 2 rows × 14 (no wrapping). Cells flex-fill the row.
+  const filled   = Math.min(streak, 28);
   const todayPos = filled > 0 ? filled - 1 : -1;
 
-  for (let i = 0; i < 28; i++) {
+  const cells = Array.from({ length: 28 }, (_, i) => {
     let style;
     if (i === todayPos) {
       style = { backgroundColor: ACCENT_DIM, borderColor: ACCENT, borderWidth: 1 };
@@ -63,13 +60,13 @@ function StreakGrid({ streak, totalDays }) {
     } else {
       style = { borderColor: TEXT_MUTE, borderWidth: 1, borderStyle: i === filled ? 'dashed' : 'solid', opacity: 0.3 };
     }
-    cells.push(
-      <View key={i} style={[styles.gridCell, style]} />
-    );
-  }
+    return <View key={i} style={[styles.gridCell, style]} />;
+  });
+
   return (
     <View style={styles.grid}>
-      {cells}
+      <View style={styles.gridRow}>{cells.slice(0, 14)}</View>
+      <View style={styles.gridRow}>{cells.slice(14)}</View>
     </View>
   );
 }
@@ -175,16 +172,18 @@ const styles = StyleSheet.create({
     fontFamily: MONO, fontSize: 11, letterSpacing: 1.6, color: TEXT_MUTE,
   },
 
-  // Grid
+  // Grid — 2 explicit rows × 14, cells flex-fill the row
   grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 6,
     marginTop: 16,
+    gap: 6,
+  },
+  gridRow: {
+    flexDirection: 'row',
+    gap: 5,
   },
   gridCell: {
-    width: 22,
-    height: 22,
+    flex: 1,
+    aspectRatio: 1,
     borderRadius: 2,
   },
 
