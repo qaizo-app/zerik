@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Dimensions, Platform, Pressable, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { GestureHandlerRootView, GestureDetector, Gesture } from 'react-native-gesture-handler';
-import { runOnJS } from 'react-native-reanimated';
+import Animated, { runOnJS, useSharedValue, useAnimatedStyle, withTiming, withSpring, Easing } from 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer, DarkTheme, useFocusEffect } from '@react-navigation/native';
 import * as Updates from 'expo-updates';
@@ -352,7 +352,16 @@ function TodayTabScreen({ hasSubscription }) {
   const cardWidth  = SW - 28;
   const headerH    = insets.top + 14 + 24 + 14;   // safe area + padding + label + spacing
   const tabBarH    = 70;
-  const cardHeight = SH - headerH - tabBarH - 24;
+  const hintH      = 28;                            // swipe hint at bottom
+  const cardHeight = SH - headerH - tabBarH - hintH - 24;
+
+  // Card slide animation
+  const cardX = useSharedValue(0);
+  const cardOpacity = useSharedValue(1);
+  const cardAnimStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: cardX.value }],
+    opacity: cardOpacity.value,
+  }));
 
   useEffect(() => {
     let cancelled = false;
@@ -413,8 +422,8 @@ function TodayTabScreen({ hasSubscription }) {
   const canNext = viewIndex < todayIndex;
   const isSaved = savedIds.includes(viewCard.id);
 
-  const onPrev    = () => { if (canPrev) setViewIndex(viewIndex - 1); };
-  const onNext    = () => { if (canNext) setViewIndex(viewIndex + 1); };
+  const goPrev = useCallback(() => setViewIndex(prev => prev - 1), []);
+  const goNext = useCallback(() => setViewIndex(prev => prev + 1), []);
   const onCollect = async () => {
     try {
       await progressService.toggleSaved(viewCard.id);
@@ -458,13 +467,36 @@ function TodayTabScreen({ hasSubscription }) {
       <GestureDetector gesture={
         Gesture.Pan()
           .activeOffsetX([-20, 20])
+          .onUpdate((e) => {
+            'worklet';
+            // Damped follow: move 60% of finger distance
+            cardX.value = e.translationX * 0.6;
+          })
           .onEnd((e) => {
             'worklet';
-            if (e.translationX < -80 && canNext) runOnJS(onNext)();
-            else if (e.translationX > 80 && canPrev) runOnJS(onPrev)();
+            const tx = e.translationX;
+            if (tx < -80 && canNext) {
+              cardX.value = withTiming(-SW, { duration: 200, easing: Easing.in(Easing.cubic) }, (done) => {
+                if (done) {
+                  runOnJS(goNext)();
+                  cardX.value = SW;
+                  cardX.value = withTiming(0, { duration: 260, easing: Easing.out(Easing.cubic) });
+                }
+              });
+            } else if (tx > 80 && canPrev) {
+              cardX.value = withTiming(SW, { duration: 200, easing: Easing.in(Easing.cubic) }, (done) => {
+                if (done) {
+                  runOnJS(goPrev)();
+                  cardX.value = -SW;
+                  cardX.value = withTiming(0, { duration: 260, easing: Easing.out(Easing.cubic) });
+                }
+              });
+            } else {
+              cardX.value = withSpring(0, { damping: 14, stiffness: 220 });
+            }
           })
       }>
-        <View style={{ alignItems: 'center', flex: 1 }}>
+        <Animated.View style={[{ alignItems: 'center', flex: 1 }, cardAnimStyle]}>
           <CavilCard
             card={viewCard}
             locale={lang}
@@ -475,8 +507,21 @@ function TodayTabScreen({ hasSubscription }) {
             saved={isSaved}
             onSave={onCollect}
           />
-        </View>
+        </Animated.View>
       </GestureDetector>
+
+      {/* Swipe hint — subtle, persistent */}
+      <View style={{ alignItems: 'center', paddingVertical: 8, height: hintH }}>
+        <Text style={{
+          fontFamily: MONO,
+          fontSize: 10,
+          letterSpacing: 2.4,
+          color: TEXT_MUTE,
+          opacity: 0.7,
+        }}>
+          {canPrev ? '◂' : ' '}  {lang === 'ru' ? 'СВАЙП' : 'SWIPE'}  {canNext ? '▸' : ' '}
+        </Text>
+      </View>
     </View>
   );
 }
