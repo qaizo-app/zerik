@@ -43,6 +43,55 @@ function Row({ label, value, onPress, right }) {
   );
 }
 
+function ComingSoonRow({ app, locale, isFirst }) {
+  const sub = usePalette(app.category_slug);
+  const { palette, tokens } = useTheme();
+  const i18n = app.i18n?.[locale] || app.i18n?.en || {};
+  return (
+    <View style={[
+      { flexDirection: 'row', alignItems: 'center', gap: 12 },
+      !isFirst && { paddingTop: 12, marginTop: 12, borderTopWidth: 1, borderTopColor: palette.border }
+    ]}>
+      <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: sub.accent }} />
+      <View style={{ flex: 1 }}>
+        <Text style={{
+          fontFamily: tokens.fonts.serif_display, fontSize: 14, color: palette.text_dim
+        }}>{i18n.name}</Text>
+        <Text style={{
+          fontFamily: tokens.fonts.serif_italic, fontStyle: 'italic',
+          fontSize: 12, color: palette.text_mute
+        }}>{i18n.tagline}</Text>
+      </View>
+    </View>
+  );
+}
+
+function ComingSoonGroup({ apps, locale }) {
+  const { palette, tokens } = useTheme();
+  if (!apps.length) return null;
+  return (
+    <View style={{
+      marginHorizontal: 24,
+      marginVertical: 8,
+      padding: 16,
+      borderRadius: tokens.radius.tight,
+      borderWidth: 1,
+      borderColor: palette.border,
+      borderStyle: 'dashed',
+    }}>
+      <Text style={{
+        fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 2,
+        color: palette.text_mute, textTransform: 'uppercase', marginBottom: 12
+      }}>
+        {t('coming_soon_badge')}
+      </Text>
+      {apps.map((app, i) => (
+        <ComingSoonRow key={app.slug} app={app} locale={locale} isFirst={i === 0} />
+      ))}
+    </View>
+  );
+}
+
 function StudioAppCard({ app, locale }) {
   const palette = usePalette(app.category_slug);
   const { tokens } = useTheme();
@@ -325,9 +374,10 @@ export default function SettingsScreen({
       {otherApps.length > 0 ? (
         <>
           <SectionHeader>{t('other_studio_apps')}</SectionHeader>
-          {otherApps.map(app => (
+          {otherApps.filter(a => !a.coming_soon).map(app => (
             <StudioAppCard key={app.slug} app={app} locale={lang} />
           ))}
+          <ComingSoonGroup apps={otherApps.filter(a => a.coming_soon)} locale={lang} />
         </>
       ) : null}
 
