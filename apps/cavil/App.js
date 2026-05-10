@@ -422,8 +422,8 @@ function TodayTabScreen({ hasSubscription }) {
   const canNext = viewIndex < todayIndex;
   const isSaved = savedIds.includes(viewCard.id);
 
-  const goPrev = useCallback(() => setViewIndex(prev => prev - 1), []);
-  const goNext = useCallback(() => setViewIndex(prev => prev + 1), []);
+  const goPrev = () => setViewIndex(prev => prev - 1);
+  const goNext = () => setViewIndex(prev => prev + 1);
   const onCollect = async () => {
     try {
       await progressService.toggleSaved(viewCard.id);
