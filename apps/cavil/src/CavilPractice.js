@@ -113,7 +113,8 @@ export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 },
         <StreakGrid streak={streak.current} totalDays={28} />
       </View>
 
-      {/* Stats row */}
+      {/* Stats row — saved + days total (no "to go" so the user isn't reminded
+          how many days remain; the framing is "what you've done") */}
       <View style={{
         paddingHorizontal: 24,
         marginTop: 48,
@@ -121,7 +122,7 @@ export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 },
         borderTopWidth: 1,
         borderTopColor: BORDER,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
       }}>
         <View style={styles.stat}>
           <Text style={styles.statNumber}>{savedCount}</Text>
@@ -130,10 +131,6 @@ export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 },
         <View style={styles.stat}>
           <Text style={styles.statNumber}>{openedCount}</Text>
           <Text style={styles.statLabel}>{pluralizeDaysUpper(openedCount, locale)} {labels.totalSuffix}</Text>
-        </View>
-        <View style={styles.stat}>
-          <Text style={styles.statNumber}>{toGo}</Text>
-          <Text style={styles.statLabel}>{labels.toGo}</Text>
         </View>
       </View>
     </ScrollView>

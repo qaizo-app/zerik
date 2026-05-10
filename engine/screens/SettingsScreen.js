@@ -43,33 +43,48 @@ function Row({ label, value, onPress, right }) {
   );
 }
 
-function ComingSoonRow({ app, locale, isFirst }) {
+function StudioAppRow({ app, locale, dim }) {
   const sub = usePalette(app.category_slug);
   const { palette, tokens } = useTheme();
   const i18n = app.i18n?.[locale] || app.i18n?.en || {};
+  const url = app.store_url || (app.store_id_android
+    ? `https://play.google.com/store/apps/details?id=${app.store_id_android}`
+    : '');
+  const tappable = !!url && !dim;
+
   return (
-    <View style={[
-      { flexDirection: 'row', alignItems: 'center', gap: 12 },
-      !isFirst && { paddingTop: 12, marginTop: 12, borderTopWidth: 1, borderTopColor: palette.border }
-    ]}>
-      <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: sub.accent }} />
+    <Pressable
+      onPress={tappable ? (() => Linking.openURL(url)) : null}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+        paddingVertical: 10,
+      }}
+    >
+      <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: sub.accent, opacity: dim ? 0.6 : 1 }} />
       <View style={{ flex: 1 }}>
         <Text style={{
-          fontFamily: tokens.fonts.serif_display, fontSize: 14, color: palette.text_dim
+          fontFamily: tokens.fonts.serif_display, fontSize: 14,
+          color: dim ? palette.text_dim : palette.text
         }}>{i18n.name}</Text>
         <Text style={{
           fontFamily: tokens.fonts.serif_italic, fontStyle: 'italic',
           fontSize: 12, color: palette.text_mute
         }}>{i18n.tagline}</Text>
       </View>
-    </View>
+    </Pressable>
   );
 }
 
-function ComingSoonGroup({ apps, locale }) {
+function OtherAppsDisclosure({ apps, locale, label }) {
   const { palette, tokens } = useTheme();
   const [expanded, setExpanded] = useState(false);
   if (!apps.length) return null;
+
+  const released = apps.filter(a => !a.coming_soon);
+  const upcoming = apps.filter(a => a.coming_soon);
+
   return (
     <View style={{
       marginHorizontal: 24,
@@ -77,13 +92,12 @@ function ComingSoonGroup({ apps, locale }) {
       borderRadius: tokens.radius.tight,
       borderWidth: 1,
       borderColor: palette.border,
-      borderStyle: 'dashed',
       overflow: 'hidden',
     }}>
       <Pressable
         onPress={() => setExpanded(v => !v)}
         style={{
-          paddingVertical: 12,
+          paddingVertical: 14,
           paddingHorizontal: 16,
           flexDirection: 'row',
           alignItems: 'center',
@@ -91,10 +105,10 @@ function ComingSoonGroup({ apps, locale }) {
         }}
       >
         <Text style={{
-          fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 2,
-          color: palette.text_mute, textTransform: 'uppercase'
+          fontFamily: tokens.fonts.mono, fontSize: 10, letterSpacing: 2,
+          color: palette.text_dim, textTransform: 'uppercase'
         }}>
-          {t('coming_soon_badge')} · {apps.length}
+          {label} · {apps.length}
         </Text>
         <Text style={{
           fontFamily: tokens.fonts.mono, fontSize: 13,
@@ -104,9 +118,21 @@ function ComingSoonGroup({ apps, locale }) {
         </Text>
       </Pressable>
       {expanded && (
-        <View style={{ paddingHorizontal: 16, paddingBottom: 16, paddingTop: 4 }}>
-          {apps.map((app, i) => (
-            <ComingSoonRow key={app.slug} app={app} locale={locale} isFirst={i === 0} />
+        <View style={{ paddingHorizontal: 16, paddingBottom: 14, paddingTop: 2 }}>
+          {released.map(app => (
+            <StudioAppRow key={app.slug} app={app} locale={locale} dim={false} />
+          ))}
+          {upcoming.length > 0 && (
+            <Text style={{
+              marginTop: 12, marginBottom: 4,
+              fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 1.6,
+              color: palette.text_mute, textTransform: 'uppercase',
+            }}>
+              {t('coming_soon_badge')}
+            </Text>
+          )}
+          {upcoming.map(app => (
+            <StudioAppRow key={app.slug} app={app} locale={locale} dim={true} />
           ))}
         </View>
       )}
@@ -396,10 +422,7 @@ export default function SettingsScreen({
       {otherApps.length > 0 ? (
         <>
           <SectionHeader>{t('other_studio_apps')}</SectionHeader>
-          {otherApps.filter(a => !a.coming_soon).map(app => (
-            <StudioAppCard key={app.slug} app={app} locale={lang} />
-          ))}
-          <ComingSoonGroup apps={otherApps.filter(a => a.coming_soon)} locale={lang} />
+          <OtherAppsDisclosure apps={otherApps} locale={lang} label={t('other_studio_apps')} />
         </>
       ) : null}
 
