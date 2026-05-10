@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Image, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { Feather, Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import Animated, {
   Easing,
@@ -101,11 +101,15 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
       <View style={styles.actionIcons}>
         {!!onSave && (
           <Pressable onPress={handleSave} hitSlop={10} style={styles.actionBtn}>
-            <Feather name={saved ? 'bookmark' : 'bookmark'} size={18} color={saved ? ACCENT : TEXT_DIM} fill={saved ? ACCENT : 'transparent'} />
+            <Ionicons
+              name={saved ? 'bookmark' : 'bookmark-outline'}
+              size={20}
+              color={saved ? ACCENT : TEXT_DIM}
+            />
           </Pressable>
         )}
         <Pressable onPress={handleShare} hitSlop={10} style={styles.actionBtn}>
-          <Feather name="share-2" size={18} color={TEXT_DIM} />
+          <Ionicons name="share-outline" size={20} color={TEXT_DIM} />
         </Pressable>
       </View>
 
