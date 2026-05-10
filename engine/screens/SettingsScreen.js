@@ -222,7 +222,8 @@ export default function SettingsScreen({
         fontFamily: tokens.fonts.serif_display, fontSize: 28, color: palette.text
       }}>{t('settings')}</Text>
 
-      <SectionHeader>{t('profile')}</SectionHeader>
+      {/* 1. ACCOUNT */}
+      <SectionHeader>{t('account') || t('profile')}</SectionHeader>
       <Row
         label={user?.email || user?.displayName || t('guest')}
         right={user
@@ -241,7 +242,8 @@ export default function SettingsScreen({
         />
       ) : null}
 
-      <SectionHeader>{t('language')}</SectionHeader>
+      {/* 2. PREFERENCES — language + reminders + time */}
+      <SectionHeader>{t('preferences') || t('notifications')}</SectionHeader>
       <Row label={t('language')} right={
         <View style={{ flexDirection: 'row', gap: 6 }}>
           {['ru', 'en'].map(code => {
@@ -271,8 +273,6 @@ export default function SettingsScreen({
           })}
         </View>
       } />
-
-      <SectionHeader>{t('notifications')}</SectionHeader>
       <Row label={t('daily_reminder')} right={<Switch
           value={remindersOk}
           onValueChange={toggleReminders}
@@ -301,7 +301,8 @@ export default function SettingsScreen({
         onCancel={() => setTimeModalOpen(false)}
       />
 
-<SectionHeader>{`${t('consent_analytics')} & ${t('consent_crash_reports')}`}</SectionHeader>
+      {/* 3. PRIVACY — analytics + crash reports */}
+      <SectionHeader>{t('privacy')}</SectionHeader>
       <Row label={t('consent_analytics')} right={
         <Switch
           value={analyticsOk}
