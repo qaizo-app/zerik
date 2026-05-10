@@ -352,13 +352,21 @@ export default function SettingsScreen({
         <Row label={t('update_id')} value={String(updateInfo.updateId).slice(0, 8) + '…'} />
       ) : null}
 
-      <Text style={{
-        marginTop: 24, paddingHorizontal: 24, paddingBottom: 16,
-        fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 1.4,
-        color: palette.text_mute, textTransform: 'uppercase', textAlign: 'center'
-      }}>
-        {brand?.app?.name || 'Senik'}
-      </Text>
+      <View style={{ marginTop: 28, paddingHorizontal: 24, paddingBottom: 20, alignItems: 'center' }}>
+        <Text style={{
+          fontFamily: tokens.fonts.mono, fontSize: 10, letterSpacing: 1.8,
+          color: palette.text_dim, textTransform: 'uppercase'
+        }}>
+          {brand?.app?.name || 'Senik'}
+        </Text>
+        <Text style={{
+          marginTop: 6,
+          fontFamily: tokens.fonts.mono, fontSize: 9, letterSpacing: 1.6,
+          color: palette.text_mute, textTransform: 'uppercase'
+        }}>
+          {t('by_studio_label')}
+        </Text>
+      </View>
     </ScrollView>
   );
 }
