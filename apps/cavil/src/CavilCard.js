@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import * as Haptics from 'expo-haptics';
 import Animated, {
   Easing,
   useAnimatedStyle,
@@ -29,13 +31,22 @@ const LABELS = {
   ru: { day: 'ДЕНЬ', wild: 'В ЖИЗНИ', of: '/' },
 };
 
-export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber, totalCards = 100 }) {
+export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber, totalCards = 100, saved = false, onSave }) {
   const loc = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
   const HEIGHT = height || width * 1.85;
   const labels = LABELS[locale] || LABELS.en;
 
   const orderNum  = dayNumber || card?.order || 0;
   const titleCaps = (loc.title || '').toUpperCase();
+
+  async function handleShare() {
+    const text = [loc.title, '', loc.body, '', loc.example ? `"${loc.example}"` : ''].filter(Boolean).join('\n');
+    try { await Share.share({ message: text }); } catch (e) {}
+  }
+  function handleSave() {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    onSave?.();
+  }
 
   // Subtle entrance animation: title fades up, then body
   const titleOp = useSharedValue(0);
@@ -85,6 +96,18 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
           )}
         </Animated.View>
       </ScrollView>
+
+      {/* Action icons — top-right corner: save + share */}
+      <View style={styles.actionIcons}>
+        {!!onSave && (
+          <Pressable onPress={handleSave} hitSlop={10} style={styles.actionBtn}>
+            <Feather name={saved ? 'bookmark' : 'bookmark'} size={18} color={saved ? ACCENT : TEXT_DIM} fill={saved ? ACCENT : 'transparent'} />
+          </Pressable>
+        )}
+        <Pressable onPress={handleShare} hitSlop={10} style={styles.actionBtn}>
+          <Feather name="share-2" size={18} color={TEXT_DIM} />
+        </Pressable>
+      </View>
 
       {/* Small brand stamp — bottom-right corner, subtle */}
       <Image source={ICON_SOURCE} style={styles.cornerStamp} resizeMode="contain" />
@@ -154,6 +177,18 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     opacity: 0.4,
+  },
+
+  // ACTION ICONS — top-right corner (save + share)
+  actionIcons: {
+    position: 'absolute',
+    top: 12,
+    right: 16,
+    flexDirection: 'row',
+    gap: 14,
+  },
+  actionBtn: {
+    padding: 4,
   },
 
   // BODY

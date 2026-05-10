@@ -5,7 +5,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Dimensions, Platform, Pressable, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { GestureHandlerRootView, GestureDetector, Gesture } from 'react-native-gesture-handler';
+import { runOnJS } from 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer, DarkTheme, useFocusEffect } from '@react-navigation/native';
 import * as Updates from 'expo-updates';
@@ -350,9 +351,8 @@ function TodayTabScreen({ hasSubscription }) {
   const { width: SW, height: SH } = Dimensions.get('window');
   const cardWidth  = SW - 28;
   const headerH    = insets.top + 14 + 24 + 14;   // safe area + padding + label + spacing
-  const footerH    = 60;                            // PREV / COLLECT / NEXT row
   const tabBarH    = 70;
-  const cardHeight = SH - headerH - footerH - tabBarH - 16;
+  const cardHeight = SH - headerH - tabBarH - 24;
 
   useEffect(() => {
     let cancelled = false;
@@ -406,9 +406,6 @@ function TodayTabScreen({ hasSubscription }) {
     );
   }
 
-  const labels = lang === 'ru'
-    ? { prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОХРАНИТЬ',  collected: 'СОХРАНЕНО'  }
-    : { prev: 'PREV',  next: 'NEXT',  collect: 'SAVE',  collected: 'SAVED' };
   const daysWord = pluralizeDaysUpper(streak.current, lang);
   const positionLabel = `CAVIL · № ${String(viewIndex || 0).padStart(3, '0')} / ${VOL_TOTAL}`;
 
@@ -457,54 +454,29 @@ function TodayTabScreen({ hasSubscription }) {
       {/* Thin divider — sits below the top bar, replaces the card border */}
       <View style={{ height: 1, backgroundColor: 'rgba(158, 155, 196, 0.20)', marginHorizontal: 24 }} />
 
-      {/* Card area */}
-      <View style={{ alignItems: 'center', flex: 1 }}>
-        <CavilCard
-          card={viewCard}
-          locale={lang}
-          width={cardWidth}
-          height={cardHeight}
-          dayNumber={viewIndex}
-          totalCards={VOL_TOTAL}
-        />
-      </View>
-
-      {/* Footer: PREV / COLLECT / NEXT */}
-      <View style={{
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 28,
-        paddingVertical: 16,
-      }}>
-        <Pressable onPress={onPrev} disabled={!canPrev} hitSlop={14}>
-          <Text style={{
-            fontFamily: MONO,
-            fontSize: 12,
-            letterSpacing: 1.8,
-            color: canPrev ? ACCENT : TEXT_MUTE,
-            opacity: canPrev ? 1 : 0.5,
-          }}>◂ {labels.prev}</Text>
-        </Pressable>
-        <Pressable onPress={onCollect} hitSlop={14}>
-          <Text style={{
-            fontFamily: MONO,
-            fontSize: 12,
-            letterSpacing: 1.8,
-            color: ACCENT,
-            fontWeight: '700',
-          }}>★ {isSaved ? labels.collected : labels.collect}</Text>
-        </Pressable>
-        <Pressable onPress={onNext} disabled={!canNext} hitSlop={14}>
-          <Text style={{
-            fontFamily: MONO,
-            fontSize: 12,
-            letterSpacing: 1.8,
-            color: canNext ? ACCENT : TEXT_MUTE,
-            opacity: canNext ? 1 : 0.5,
-          }}>{labels.next} ▸</Text>
-        </Pressable>
-      </View>
+      {/* Card area — swipe left/right to navigate days */}
+      <GestureDetector gesture={
+        Gesture.Pan()
+          .activeOffsetX([-20, 20])
+          .onEnd((e) => {
+            'worklet';
+            if (e.translationX < -80 && canNext) runOnJS(onNext)();
+            else if (e.translationX > 80 && canPrev) runOnJS(onPrev)();
+          })
+      }>
+        <View style={{ alignItems: 'center', flex: 1 }}>
+          <CavilCard
+            card={viewCard}
+            locale={lang}
+            width={cardWidth}
+            height={cardHeight}
+            dayNumber={viewIndex}
+            totalCards={VOL_TOTAL}
+            saved={isSaved}
+            onSave={onCollect}
+          />
+        </View>
+      </GestureDetector>
     </View>
   );
 }
