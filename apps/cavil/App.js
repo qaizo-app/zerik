@@ -416,7 +416,7 @@ function TodayTabScreen({ hasSubscription }) {
   }
 
   const daysWord = pluralizeDaysUpper(streak.current, lang);
-  const positionLabel = `CAVIL · № ${String(viewIndex || 0).padStart(3, '0')} / ${VOL_TOTAL}`;
+  const positionLabel = `CAVIL · № ${String(viewIndex || 0).padStart(3, '0')}`;
 
   const canPrev = viewIndex > 1;
   const canNext = viewIndex < todayIndex;
