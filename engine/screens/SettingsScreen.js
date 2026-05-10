@@ -170,8 +170,8 @@ export default function SettingsScreen({
   async function toggleAnalytics(v) { setAnalyticsOk(v); await consentService.setAnalyticsConsent(v); }
   async function toggleCrash(v)     { setCrashOk(v);     await consentService.setCrashReportsConsent(v); }
 
-  function flipLang() {
-    const next = lang === 'ru' ? 'en' : 'ru';
+  function setLangTo(next) {
+    if (next === lang) return;
     setLang(next); setLanguage(next);
   }
 
@@ -242,7 +242,35 @@ export default function SettingsScreen({
       ) : null}
 
       <SectionHeader>{t('language')}</SectionHeader>
-      <Row label={t('language')} value={t('language_name')} onPress={flipLang} />
+      <Row label={t('language')} right={
+        <View style={{ flexDirection: 'row', gap: 6 }}>
+          {['ru', 'en'].map(code => {
+            const active = lang === code;
+            return (
+              <Pressable
+                key={code}
+                onPress={() => setLangTo(code)}
+                hitSlop={8}
+                style={{
+                  paddingVertical: 5,
+                  paddingHorizontal: 12,
+                  borderRadius: 999,
+                  backgroundColor: active ? palette.accent : 'transparent',
+                  borderWidth: 1,
+                  borderColor: active ? palette.accent : palette.border_bright,
+                }}
+              >
+                <Text style={{
+                  fontFamily: tokens.fonts.mono,
+                  fontSize: 11,
+                  letterSpacing: 1.4,
+                  color: active ? palette.ink_on_accent || palette.bg : palette.text_dim,
+                }}>{code.toUpperCase()}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
+      } />
 
       <SectionHeader>{t('notifications')}</SectionHeader>
       <Row label={t('daily_reminder')} right={<Switch
