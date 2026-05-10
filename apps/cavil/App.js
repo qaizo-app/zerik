@@ -407,9 +407,10 @@ function TodayTabScreen({ hasSubscription }) {
   }
 
   const labels = lang === 'ru'
-    ? { vol: 'CAVIL · ТОМ I', prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОХРАНИТЬ',  collected: 'СОХРАНЕНО'  }
-    : { vol: 'CAVIL · VOL. I', prev: 'PREV',  next: 'NEXT',  collect: 'SAVE',  collected: 'SAVED' };
+    ? { prev: 'НАЗАД', next: 'ДАЛЕЕ', collect: 'СОХРАНИТЬ',  collected: 'СОХРАНЕНО'  }
+    : { prev: 'PREV',  next: 'NEXT',  collect: 'SAVE',  collected: 'SAVED' };
   const daysWord = pluralizeDaysUpper(streak.current, lang);
+  const positionLabel = `CAVIL · № ${String(viewIndex || 0).padStart(3, '0')} / ${VOL_TOTAL}`;
 
   const canPrev = viewIndex > 1;
   const canNext = viewIndex < todayIndex;
@@ -427,7 +428,7 @@ function TodayTabScreen({ hasSubscription }) {
 
   return (
     <View style={{ flex: 1, backgroundColor: BG }}>
-      {/* Top bar: CAVIL · VOL. I — N DAYS */}
+      {/* Top bar — combined: CAVIL · № NNN / 100  ·  ♦ N DAYS */}
       <View style={{
         paddingTop: insets.top + 14,
         paddingHorizontal: 24,
@@ -439,9 +440,9 @@ function TodayTabScreen({ hasSubscription }) {
         <Text style={{
           fontFamily: MONO,
           fontSize: 11,
-          letterSpacing: 2.0,
+          letterSpacing: 1.8,
           color: TEXT_DIM,
-        }}>{labels.vol}</Text>
+        }}>{positionLabel}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
           <Text style={{ color: ACCENT, fontSize: 10 }}>♦</Text>
           <Text style={{
@@ -452,6 +453,9 @@ function TodayTabScreen({ hasSubscription }) {
           }}>{streak.current} {daysWord}</Text>
         </View>
       </View>
+
+      {/* Thin divider — sits below the top bar, replaces the card border */}
+      <View style={{ height: 1, backgroundColor: 'rgba(158, 155, 196, 0.20)', marginHorizontal: 24 }} />
 
       {/* Card area */}
       <View style={{ alignItems: 'center', flex: 1 }}>

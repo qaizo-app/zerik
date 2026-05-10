@@ -52,17 +52,6 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
 
   return (
     <View style={[styles.card, { width, height: HEIGHT }]}>
-      {/* Top meta row */}
-      <View style={styles.metaRow}>
-        <Text style={styles.metaLeft} numberOfLines={1}>
-          № {pad3(orderNum)} · {titleCaps}
-        </Text>
-        <Text style={styles.metaRight}>
-          {labels.day} {orderNum} {labels.of} {totalCards}
-        </Text>
-      </View>
-      <View style={styles.divider} />
-
       <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
         {/* Latin sub-label */}
         {!!card?.latin && (
@@ -105,11 +94,8 @@ export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber,
 
 const styles = StyleSheet.create({
   card: {
-    borderWidth: 1,
-    borderColor: BORDER,
-    borderRadius: 4,
     paddingHorizontal: 28,
-    paddingTop: 26,
+    paddingTop: 14,
     paddingBottom: 8,
     overflow: 'hidden',
   },
