@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
+import InlineText from './utils/InlineText';
 
 export default function ActionTodayBlock({ label, text }) {
   const { palette, tokens } = useTheme();
@@ -22,13 +23,16 @@ export default function ActionTodayBlock({ label, text }) {
         textTransform: 'uppercase',
         marginBottom: 10
       }}>{label}</Text>
-      <Text style={{
-        fontFamily: tokens.fonts.serif_italic,
-        fontStyle: 'italic',
-        fontSize: 19,
-        lineHeight: 19 * 1.35,
-        color: palette.ink_on_accent
-      }}>{text}</Text>
+      <InlineText
+        text={text}
+        style={{
+          fontFamily: tokens.fonts.serif_italic,
+          fontStyle: 'italic',
+          fontSize: 19,
+          lineHeight: 19 * 1.35,
+          color: palette.ink_on_accent
+        }}
+      />
     </View>
   );
 }

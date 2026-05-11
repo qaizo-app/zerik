@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
+import InlineText from './utils/InlineText';
 
 const ROMAN = ['i', 'ii', 'iii', 'iv', 'v'];
 
@@ -44,19 +45,25 @@ export default function DomainsBlock({ heading, items }) {
             }}>{ROMAN[idx] || idx + 1}</Text>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{
-              fontFamily: tokens.fonts.serif_display,
-              fontSize: 16,
-              color: palette.text,
-              marginBottom: 4
-            }}>{it.label}</Text>
-            <Text style={{
-              fontFamily: tokens.fonts.serif_italic,
-              fontStyle: 'italic',
-              fontSize: 14.5,
-              lineHeight: 14.5 * 1.55,
-              color: palette.text_dim
-            }}>{it.example}</Text>
+            <InlineText
+              text={it.label}
+              style={{
+                fontFamily: tokens.fonts.serif_display,
+                fontSize: 16,
+                color: palette.text,
+                marginBottom: 4
+              }}
+            />
+            <InlineText
+              text={it.example}
+              style={{
+                fontFamily: tokens.fonts.serif_italic,
+                fontStyle: 'italic',
+                fontSize: 14.5,
+                lineHeight: 14.5 * 1.55,
+                color: palette.text_dim
+              }}
+            />
           </View>
         </View>
       ))}
