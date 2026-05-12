@@ -61,4 +61,22 @@ export function registerAppIllustrations() {
   registerIllustration('platos_cave',            Trolley);         // trolley_problem
   registerIllustration('veil_of_ignorance',      FirstPrinciples); // first_principles (этика с нуля)
   registerIllustration('placeholder',            Hanlon);
+
+  // Aliases для карточек с релизом после launch day — нарисовать свои SVG позже,
+  // пока — тематически близкие из уже существующего набора.
+  registerIllustration('chestertons_fence',      Hindsight);       // "посмотри назад, чтобы понять"
+  registerIllustration('circle_of_competence',   FirstPrinciples); // знание фундамента
+  registerIllustration('expected_value',         MontyHall);       // вероятностное мышление
+  registerIllustration('feedback_loops',         SecondOrder);     // цепи последствий
+  registerIllustration('lindy_effect',           Survivorship);    // что выжило — переживёт ещё
+  registerIllustration('map_and_territory',      Theseus);         // представление vs реальность
+  registerIllustration('margin_of_safety',       SunkCost);        // буфер на ошибку
+  registerIllustration('opportunity_cost',       LossAversion);    // отказ как потеря
+  registerIllustration('overton_window',         Anchoring);       // диапазон допустимого
+  registerIllustration('parkinsons_law',         OccamRazor);      // работа разрастается
+  registerIllustration('pre_mortem',             SecondOrder);     // последствия наперёд
+  registerIllustration('regression_to_mean',     Simpson);         // статистика возврата
+  registerIllustration('regret_minimization',    LossAversion);    // минимизация будущих сожалений
+  registerIllustration('skin_in_the_game',       SunkCost);        // ставка/обязательство
+  registerIllustration('steel_manning',          Inversion);       // обратный аргумент
 }
