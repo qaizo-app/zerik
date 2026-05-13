@@ -10,12 +10,15 @@ import { useTheme } from '../theme/ThemeContext';
 import { t } from '../i18n';
 import CardScreen from './CardScreen';
 import ErrorBoundary from '../components/ErrorBoundary';
+import progressService from '../core/progressService';
+import shareService from '../core/shareService';
 
 export default function CardViewerScreen({ route, navigation, contentService, locale = 'ru', resolveLevels }) {
   const { palette, tokens } = useTheme();
   const insets = useSafeAreaInsets();
   const [card, setCard] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [savedIds, setSavedIds] = useState([]);
 
   const cardId = route?.params?.cardId;
 
@@ -24,14 +27,32 @@ export default function CardViewerScreen({ route, navigation, contentService, lo
     (async () => {
       if (!cardId) { setLoading(false); return; }
       try {
-        const c = await contentService.getCardById(cardId);
-        if (!cancelled) { setCard(c); setLoading(false); }
+        const [c, ids] = await Promise.all([
+          contentService.getCardById(cardId),
+          progressService.getSavedIds()
+        ]);
+        if (!cancelled) { setCard(c); setSavedIds(ids || []); setLoading(false); }
       } catch (e) {
         if (!cancelled) setLoading(false);
       }
     })();
     return () => { cancelled = true; };
   }, [cardId, contentService]);
+
+  async function handleSave() {
+    if (!card) return;
+    const next = await progressService.toggleSaved(card.id);
+    setSavedIds(next?.saved_card_ids || []);
+  }
+
+  async function handleShare() {
+    if (!card) return;
+    await shareService.shareCard(null, {
+      card,
+      locale,
+      fallbackUrl: `https://zerik.app/cards/${card.id}`
+    }).catch(() => {});
+  }
 
   if (loading) {
     return (
@@ -56,10 +77,18 @@ export default function CardViewerScreen({ route, navigation, contentService, lo
     );
   }
 
+  const isSaved = savedIds.includes(card.id);
+
   return (
     <View style={{ flex: 1, backgroundColor: palette.bg }}>
       <ErrorBoundary>
-        <CardScreen card={card} locale={locale} />
+        <CardScreen
+          card={card}
+          locale={locale}
+          isSaved={isSaved}
+          onSave={handleSave}
+          onShare={handleShare}
+        />
       </ErrorBoundary>
       {/* Floating × — поверх контента, ниже topbar чтобы не перекрывать 🔥 streak */}
       <Pressable
