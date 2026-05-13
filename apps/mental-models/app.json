@@ -32,6 +32,7 @@
       "bundleIdentifier": "com.qaizo.senik",
       "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": false,
+      "usesAppleSignIn": true,
       "config": {
         "usesNonExemptEncryption": false
       }
@@ -54,6 +55,7 @@
         }
       ],
       "@react-native-firebase/app-check",
+      "expo-apple-authentication",
       "./plugins/with-adi-registration.js"
     ],
     "extra": {

@@ -1,12 +1,20 @@
-// AuthScreen — Email + Google + Apple. Кнопки соц-провайдеров скрываются,
-// если соответствующие нативные модули не доступны (Expo Go или платформа
-// без поддержки).
+// AuthScreen — Email + Apple + Google. Apple ВЫШЕ Google по требованию
+// Apple HIG (prominence ≥ other SSO buttons). Кнопки соц-провайдеров
+// скрываются, если соответствующие нативные модули недоступны (Expo Go
+// или платформа без поддержки).
 
 import { useState } from 'react';
 import { Platform, Pressable, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeContext';
 import { t, getLanguage } from '../i18n';
+
+// Lazy require: пакет нативный (iOS-only), на Android и без установки —
+// просто не подгружаем. Сам компонент рендерится только когда showApple=true.
+let _AppleAuth = null;
+try {
+  _AppleAuth = require('expo-apple-authentication');
+} catch (e) {}
 
 export default function AuthScreen({
   authService,
@@ -141,6 +149,21 @@ export default function AuthScreen({
 
       <View style={{ height: 1, backgroundColor: palette.border, marginBottom: 24 }} />
 
+      {/* Apple идёт ПЕРВОЙ среди SSO — требование Apple HIG (prominence ≥
+          other sign-in buttons). Стиль (WHITE/BLACK/WHITE_OUTLINE) — один
+          из трёх разрешённых Apple-ом, никаких брендовых цветов нельзя.
+          Используем встроенный компонент: он сам подставляет правильный
+          логотип, локализацию текста и pixel-perfect размеры. */}
+      {showApple && _AppleAuth?.AppleAuthenticationButton ? (
+        <_AppleAuth.AppleAuthenticationButton
+          buttonType={_AppleAuth.AppleAuthenticationButtonType.CONTINUE}
+          buttonStyle={_AppleAuth.AppleAuthenticationButtonStyle.WHITE}
+          cornerRadius={tokens.radius.tight}
+          style={{ height: 48, marginBottom: 12 }}
+          onPress={handleApple}
+        />
+      ) : null}
+
       <Pressable
         disabled={busy}
         onPress={handleGoogle}
@@ -154,22 +177,6 @@ export default function AuthScreen({
           fontFamily: tokens.fonts.serif_body, fontSize: 15, color: palette.text
         }}>{t('continue_with_google')}</Text>
       </Pressable>
-
-      {showApple ? (
-        <Pressable
-          disabled={busy}
-          onPress={handleApple}
-          style={{
-            borderWidth: 1, borderColor: palette.border_bright,
-            paddingVertical: 14, borderRadius: tokens.radius.tight,
-            alignItems: 'center', marginBottom: 12
-          }}
-        >
-          <Text style={{
-            fontFamily: tokens.fonts.serif_body, fontSize: 15, color: palette.text
-          }}>{t('continue_with_apple')}</Text>
-        </Pressable>
-      ) : null}
 
       <Pressable onPress={onSkip} style={{ alignItems: 'center', marginTop: 16 }}>
         <Text style={{

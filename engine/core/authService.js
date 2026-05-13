@@ -9,14 +9,14 @@
 import { tryAuth } from './firebase';
 
 let _GoogleSignin = null;
-let _appleAuth = null;
+let _AppleAuthentication = null;
 
 try {
   _GoogleSignin = require('@react-native-google-signin/google-signin').GoogleSignin;
 } catch (e) {}
 
 try {
-  _appleAuth = require('@invertase/react-native-apple-authentication').appleAuth;
+  _AppleAuthentication = require('expo-apple-authentication');
 } catch (e) {}
 
 export class AuthService {
@@ -129,27 +129,37 @@ export class AuthService {
   // ─── Apple ──────────────────────────────────────────────────────────────
 
   async loginWithApple() {
-    if (!_appleAuth) {
+    if (!_AppleAuthentication) {
       return { success: false, error: 'apple_unavailable', message: 'Apple Sign-In not available (Android or Expo Go)' };
     }
     const auth = tryAuth();
     if (!auth) return { success: false, error: 'auth_unavailable' };
 
     try {
-      const appleResponse = await _appleAuth.performRequest({
-        requestedOperation: _appleAuth.Operation.LOGIN,
-        requestedScopes: [_appleAuth.Scope.EMAIL, _appleAuth.Scope.FULL_NAME]
+      const isAvailable = await _AppleAuthentication.isAvailableAsync();
+      if (!isAvailable) {
+        return { success: false, error: 'apple_unavailable', message: 'Apple Sign-In not supported on this device' };
+      }
+
+      const credential = await _AppleAuthentication.signInAsync({
+        requestedScopes: [
+          _AppleAuthentication.AppleAuthenticationScope.EMAIL,
+          _AppleAuthentication.AppleAuthenticationScope.FULL_NAME
+        ]
       });
-      const { identityToken, nonce } = appleResponse;
+      const { identityToken } = credential;
       if (!identityToken) return { success: false, error: 'no_identity_token' };
 
-      const credential = auth.AppleAuthProvider.credential(identityToken, nonce);
-      const cred = await auth().signInWithCredential(credential);
+      const firebaseCred = auth.AppleAuthProvider.credential(identityToken);
+      const cred = await auth().signInWithCredential(firebaseCred);
       const isNew = !!cred.additionalUserInfo?.isNewUser;
       this.onAnalyticsEvent(isNew ? 'user_registered' : 'user_logged_in', { method: 'apple' });
       return { success: true, user: cred.user, isNew };
     } catch (e) {
-      if (e.code === '1001') return { success: false, error: 'cancelled' };
+      // expo-apple-authentication: ERR_REQUEST_CANCELED when user cancels
+      if (e.code === 'ERR_REQUEST_CANCELED' || e.code === 'ERR_CANCELED') {
+        return { success: false, error: 'cancelled' };
+      }
       return { success: false, error: e.code || 'unknown', message: e.message };
     }
   }
