@@ -440,10 +440,13 @@ export default function SettingsScreen({
       <Row label={t('clear_cache')} onPress={confirmClearCache}
         right={<Text style={{ fontFamily: tokens.fonts.mono, fontSize: 11, color: palette.picked, letterSpacing: 1.4 }}>→</Text>}
       />
-      {updateInfo?.channel ? (
+      {/* Technical rows — only in dev builds. Production users don't care
+          about which OTA channel/id is loaded, but during local dev it's
+          useful to verify which update applied. */}
+      {__DEV__ && updateInfo?.channel ? (
         <Row label={t('update_channel')} value={updateInfo.channel} />
       ) : null}
-      {updateInfo?.updateId ? (
+      {__DEV__ && updateInfo?.updateId ? (
         <Row label={t('update_id')} value={String(updateInfo.updateId).slice(0, 8) + '…'} />
       ) : null}
 
