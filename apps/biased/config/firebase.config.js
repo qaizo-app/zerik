@@ -5,7 +5,7 @@ export const firebase = {
   projectId: 'biased-94cc9',
   region:    'europe-west1',
 
-  googleWebClientId: null,        // заполнить после включения Google Sign-In в Firebase Console
+  googleWebClientId: '445149034446-sir8l9ncl037l2soc9kek96a09mnr1ue.apps.googleusercontent.com',
 
   collections: {
     cards:        'biases',
