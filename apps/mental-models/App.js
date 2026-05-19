@@ -40,6 +40,20 @@ registerEngineBlocks();
 registerAppBlocks();
 registerAppIllustrations();
 
+const NAV_THEME = {
+  ...DarkTheme,
+  dark: true,
+  colors: {
+    ...DarkTheme.colors,
+    background:   '#0E1014',
+    card:         '#0E1014',
+    border:       '#0E1014',
+    primary:      '#5EEAD4',
+    text:         '#E4E7EC',
+    notification: '#F87171',
+  },
+};
+
 const ONBOARDING_KEY   = 'mm:onboarding_done';
 const AUTH_SKIPPED_KEY = 'mm:auth_skipped';
 const ENROLLMENT_KEY   = 'mm:enrollment_date';
@@ -124,7 +138,7 @@ export default function App() {
           await Updates.fetchUpdateAsync();
           await Updates.reloadAsync();
         }
-      } catch (e) {}
+      } catch (e) { __DEV__ && console.error('[Senik]', e); }
     })();
   }, []);
 
@@ -132,7 +146,7 @@ export default function App() {
   useEffect(() => {
     (async () => {
       setLanguage(detectLanguage());
-      appCheckService.activate().catch(() => {});
+      appCheckService.activate().catch((e) => { __DEV__ && console.error('[Senik]', e); });
 
       const onboarded = await AsyncStorage.getItem(ONBOARDING_KEY);
       const skipped   = await AsyncStorage.getItem(AUTH_SKIPPED_KEY);
@@ -148,14 +162,14 @@ export default function App() {
         authService.onAuthChanged(async (u) => {
           setUser(u);
           if (u) {
-            try { await progressService.migrateGuestToCloud(); } catch (e) {}
-            try { await paywallService.configure(u.uid); } catch (e) {}
-            try { setHasSubscription(await paywallService.hasActiveSubscription()); } catch (e) {}
+            try { await progressService.migrateGuestToCloud(); } catch (e) { __DEV__ && console.error('[Senik]', e); }
+            try { await paywallService.configure(u.uid); } catch (e) { __DEV__ && console.error('[Senik]', e); }
+            try { setHasSubscription(await paywallService.hasActiveSubscription()); } catch (e) { __DEV__ && console.error('[Senik]', e); }
           } else {
-            try { await paywallService.configure(null); } catch (e) {}
+            try { await paywallService.configure(null); } catch (e) { __DEV__ && console.error('[Senik]', e); }
           }
         });
-      } catch (e) {}
+      } catch (e) { __DEV__ && console.error('[Senik]', e); }
 
       setBootReady(true);
     })();
@@ -178,19 +192,7 @@ export default function App() {
                 navigationRef.current?.navigate('Main');
               }
             }}
-            theme={{
-            ...DarkTheme,
-            dark: true,
-            colors: {
-              ...DarkTheme.colors,
-              background: '#0E1014',
-              card: '#0E1014',
-              border: '#0E1014',
-              primary: '#5EEAD4',
-              text: '#E4E7EC',
-              notification: '#F87171'
-            }
-          }}>
+            theme={NAV_THEME}>
             <RootStackNavigator
               initialRoute={initialRoute}
               screens={{
@@ -333,20 +335,23 @@ function TodayTabScreen({ navigation, hasSubscription }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const enrollment = await getEnrollmentDate();
-      const idx = dayIndexFromEnrollment(enrollment);
-      const todayCard = CARDS_ASC[idx];
-      const earlier = CARDS_ASC.slice(0, idx).reverse().slice(0, 5);
-      const list = [todayCard, ...earlier].filter(Boolean);
-      const [ids, streakNow] = await Promise.all([
-        progressService.getSavedIds(),
-        progressService.getStreak(),
-      ]);
-      if (!cancelled) {
-        setCards(list);
-        setSavedIds(ids);
-        setStreak(streakNow);
-      }
+      try {
+        const enrollment = await getEnrollmentDate();
+        const idx = dayIndexFromEnrollment(enrollment);
+        const todayCard = CARDS_ASC[idx];
+        const earlier = CARDS_ASC.slice(0, idx).reverse().slice(0, 5);
+        const list = [todayCard, ...earlier].filter(Boolean);
+        // Show cards immediately — no network wait
+        if (!cancelled) setCards(list);
+        const [ids, streakNow] = await Promise.all([
+          progressService.getSavedIds(),
+          progressService.getStreak(),
+        ]);
+        if (!cancelled) {
+          setSavedIds(ids);
+          setStreak(streakNow);
+        }
+      } catch (e) { __DEV__ && console.error('[Senik]', e); }
     })();
     return () => { cancelled = true; };
   }, []);
@@ -360,13 +365,15 @@ function TodayTabScreen({ navigation, hasSubscription }) {
     if (!top) return;
     if (top.category) setCategory(top.category);
     if (!top.id) return;
+    let cancelled = false;
     (async () => {
       try {
         await progressService.recordCardOpened(top.id);
         const s = await progressService.getStreak();
-        setStreak(s);
-      } catch (e) {}
+        if (!cancelled) setStreak(s);
+      } catch (e) { __DEV__ && console.error('[Senik]', e); }
     })();
+    return () => { cancelled = true; };
   }, [cards, setCategory]);
 
   async function handleSave(card) {
@@ -380,7 +387,7 @@ function TodayTabScreen({ navigation, hasSubscription }) {
       card,
       locale: lang,
       fallbackUrl: `https://zerik.app/cards/${card.id}`
-    }).catch(() => {});
+    }).catch((e) => { __DEV__ && console.error('[Senik]', e); });
   }
 
   if (!cards) return (

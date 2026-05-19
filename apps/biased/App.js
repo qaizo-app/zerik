@@ -33,6 +33,9 @@ import {
 import { seedCards } from './src/seed';
 import appJson from './app.json';
 
+const seedCardMap     = new Map(seedCards.map(c => [c.id, c]));
+const seedCardByOrder = new Map(seedCards.map(c => [c.order, c]));
+
 const ONBOARDING_KEY   = 'biased:onboarding_done';
 const AUTH_SKIPPED_KEY = 'biased:auth_skipped';
 const ENROLLMENT_KEY   = 'biased:enrollment_date';
@@ -53,6 +56,19 @@ function patchCardBlocks(c) {
 
 const BG    = '#0D1B2A';
 const ACCENT = '#E89647';
+
+const NAV_THEME = {
+  ...DarkTheme,
+  colors: {
+    ...DarkTheme.colors,
+    background:   BG,
+    card:         BG,
+    border:       BG,
+    primary:      ACCENT,
+    text:         '#F0F4F8',
+    notification: '#E05252',
+  },
+};
 
 function detectLanguage() {
   try {
@@ -119,14 +135,14 @@ export default function App() {
           await Updates.fetchUpdateAsync();
           await Updates.reloadAsync();
         }
-      } catch (e) {}
+      } catch (e) { __DEV__ && console.error('[Biased]', e); }
     })();
   }, []);
 
   useEffect(() => {
     (async () => {
       setLanguage(detectLanguage());
-      appCheckService.activate().catch(() => {});
+      appCheckService.activate().catch((e) => { __DEV__ && console.error('[Biased]', e); });
 
       const onboarded = await AsyncStorage.getItem(ONBOARDING_KEY);
       setInitialRoute(onboarded === 'true' ? 'Main' : 'Onboarding');
@@ -135,14 +151,14 @@ export default function App() {
         authService.onAuthChanged(async (u) => {
           setUser(u);
           if (u) {
-            try { await progressService.migrateGuestToCloud(); } catch (e) {}
-            try { await paywallService.configure(u.uid); } catch (e) {}
-            try { setHasSubscription(await paywallService.hasActiveSubscription()); } catch (e) {}
+            try { await progressService.migrateGuestToCloud(); } catch (e) { __DEV__ && console.error('[Biased]', e); }
+            try { await paywallService.configure(u.uid); } catch (e) { __DEV__ && console.error('[Biased]', e); }
+            try { setHasSubscription(await paywallService.hasActiveSubscription()); } catch (e) { __DEV__ && console.error('[Biased]', e); }
           } else {
-            try { await paywallService.configure(null); } catch (e) {}
+            try { await paywallService.configure(null); } catch (e) { __DEV__ && console.error('[Biased]', e); }
           }
         });
-      } catch (e) {}
+      } catch (e) { __DEV__ && console.error('[Biased]', e); }
 
       setBootReady(true);
     })();
@@ -169,18 +185,7 @@ export default function App() {
                 navigationRef.current?.navigate('Main');
               }
             }}
-            theme={{
-              ...DarkTheme,
-              colors: {
-                ...DarkTheme.colors,
-                background:   BG,
-                card:         BG,
-                border:       BG,
-                primary:      ACCENT,
-                text:         '#F0F4F8',
-                notification: '#E05252',
-              }
-            }}>
+            theme={NAV_THEME}>
             <RootStackNavigator
               initialRoute={initialRoute}
               screens={{
@@ -244,7 +249,7 @@ export default function App() {
                         const getSavedCards = useCallback(async () => {
                           const ids = await progressService.getSavedIds();
                           return ids
-                            .map(id => seedCards.find(c => c.id === id))
+                            .map(id => seedCardMap.get(id))
                             .filter(Boolean)
                             .map(patchCardBlocks);
                         }, [refreshKey]);
@@ -265,7 +270,7 @@ export default function App() {
                               const openedIds = await progressService.getOpenedIds();
                               if (!openedIds.length) return [];
                               return openedIds
-                                .map(id => seedCards.find(c => c.id === id))
+                                .map(id => seedCardMap.get(id))
                                 .filter(Boolean)
                                 .map(patchCardBlocks)
                                 .sort((a, b) => (b.order || 0) - (a.order || 0));
@@ -285,7 +290,7 @@ export default function App() {
                           user={user}
                           hasSubscription={hasSubscription}
                           appVersion={appJson.expo.version}
-                          onClearedCache={() => { try { Updates.reloadAsync(); } catch (e) {} }}
+                          onClearedCache={() => { try { Updates.reloadAsync(); } catch (e) { __DEV__ && console.error('[Biased]', e); } }}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
                           onDeleteAccount={() => authService.deleteAccount()}
@@ -307,10 +312,11 @@ export default function App() {
 function TodayTabScreen({ hasSubscription }) {
   const lang   = useLanguage();
   const insets = useSafeAreaInsets();
-  const [card,    setCard]   = useState(null);
-  const [streak,  setStreak] = useState({ current: 0 });
-  const [saved,   setSaved]  = useState(false);
-  const [savedIds, setSavedIds] = useState([]);
+  const [card,      setCard]      = useState(null);
+  const [cardError, setCardError] = useState(false);
+  const [streak,    setStreak]    = useState({ current: 0 });
+  const [saved,     setSaved]     = useState(false);
+  const [savedIds,  setSavedIds]  = useState([]);
 
   const { width: SW, height: SH } = Dimensions.get('window');
   const cardWidth  = SW - 48;
@@ -321,17 +327,31 @@ function TodayTabScreen({ hasSubscription }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const enrollment = await getEnrollmentDate();
-      const idx = dayIndexFromEnrollment(enrollment);
-      const rawCard = await contentService.getCardByOrder(idx + 1);
-      const [streakNow, ids] = await Promise.all([
-        progressService.getStreak(),
-        progressService.getSavedIds(),
-      ]);
-      if (!cancelled) {
-        setCard(rawCard);
-        setStreak(streakNow);
-        setSavedIds(ids || []);
+      try {
+        const enrollment = await getEnrollmentDate();
+        const idx = dayIndexFromEnrollment(enrollment);
+        const order = idx + 1;
+
+        // Show local card immediately — no network wait
+        const localCard = seedCardByOrder.get(order);
+        if (localCard && !cancelled) setCard(localCard);
+
+        // Load streak/saved and Firestore card in parallel
+        const [remoteCard, streakNow, ids] = await Promise.all([
+          contentService.getCardByOrder(order).catch(() => null),
+          progressService.getStreak(),
+          progressService.getSavedIds(),
+        ]);
+
+        if (!cancelled) {
+          if (remoteCard) setCard(remoteCard);
+          else if (!localCard) setCardError(true);
+          setStreak(streakNow);
+          setSavedIds(ids || []);
+        }
+      } catch (e) {
+        if (!cancelled) setCardError(true);
+        __DEV__ && console.error('[Biased]', e);
       }
     })();
     return () => { cancelled = true; };
@@ -339,19 +359,26 @@ function TodayTabScreen({ hasSubscription }) {
 
   useEffect(() => {
     if (!card?.id) return;
+    let cancelled = false;
     (async () => {
       try {
         await progressService.recordCardOpened(card.id);
         const s = await progressService.getStreak();
-        setStreak(s);
-      } catch (e) {}
+        if (!cancelled) setStreak(s);
+      } catch (e) { __DEV__ && console.error('[Biased]', e); }
     })();
+    return () => { cancelled = true; };
   }, [card]);
 
   if (!card) {
     return (
       <View style={{ flex: 1, backgroundColor: BG, alignItems: 'center', justifyContent: 'center' }}>
-        <ActivityIndicator color={ACCENT} size="large" />
+        {cardError
+          ? <Text style={{ color: '#4A6480', fontFamily: 'Inter-Regular', fontSize: 14 }}>
+              {lang === 'ru' ? 'Не удалось загрузить карточку' : "Could not load today's card"}
+            </Text>
+          : <ActivityIndicator color={ACCENT} size="large" />
+        }
       </View>
     );
   }
@@ -420,7 +447,7 @@ function TodayTabScreen({ hasSubscription }) {
               await progressService.toggleSaved(card.id);
               const ids = await progressService.getSavedIds();
               setSavedIds(ids || []);
-            } catch (e) {}
+            } catch (e) { __DEV__ && console.error('[Biased]', e); }
           }}
         />
       </View>

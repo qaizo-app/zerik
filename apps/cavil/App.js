@@ -37,6 +37,8 @@ import {
 import { seedCards } from './src/seed';
 import appJson from './app.json';
 
+const seedCardByOrder = new Map(seedCards.map(c => [c.order, c]));
+
 const ONBOARDING_KEY   = 'cavil:onboarding_done';
 const AUTH_SKIPPED_KEY = 'cavil:auth_skipped';
 const ENROLLMENT_KEY   = 'cavil:enrollment_date';
@@ -55,11 +57,24 @@ function patchCardBlocks(c) {
   return patched;
 }
 
-const BG     = '#161420';
-const ACCENT = '#9E9BC4';
-const MONO   = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
+const BG       = '#161420';
+const ACCENT   = '#9E9BC4';
+const MONO     = Platform.OS === 'ios' ? 'Menlo' : 'monospace';
 const TEXT_DIM  = '#A8A4C0';
 const TEXT_MUTE = '#6E6A88';
+
+const NAV_THEME = {
+  ...DarkTheme,
+  colors: {
+    ...DarkTheme.colors,
+    background:   BG,
+    card:         BG,
+    border:       BG,
+    primary:      ACCENT,
+    text:         '#F0F4F8',
+    notification: '#E05252',
+  },
+};
 
 function detectLanguage() {
   try {
@@ -129,14 +144,14 @@ export default function App() {
           await Updates.fetchUpdateAsync();
           await Updates.reloadAsync();
         }
-      } catch (e) {}
+      } catch (e) { __DEV__ && console.error('[Cavil]', e); }
     })();
   }, []);
 
   useEffect(() => {
     (async () => {
       setLanguage(detectLanguage());
-      appCheckService.activate().catch(() => {});
+      appCheckService.activate().catch((e) => { __DEV__ && console.error('[Cavil]', e); });
 
       const onboarded = await AsyncStorage.getItem(ONBOARDING_KEY);
       setInitialRoute(onboarded === 'true' ? 'Main' : 'Onboarding');
@@ -145,14 +160,14 @@ export default function App() {
         authService.onAuthChanged(async (u) => {
           setUser(u);
           if (u) {
-            try { await progressService.migrateGuestToCloud(); } catch (e) {}
-            try { await paywallService.configure(u.uid); } catch (e) {}
-            try { setHasSubscription(await paywallService.hasActiveSubscription()); } catch (e) {}
+            try { await progressService.migrateGuestToCloud(); } catch (e) { __DEV__ && console.error('[Cavil]', e); }
+            try { await paywallService.configure(u.uid); } catch (e) { __DEV__ && console.error('[Cavil]', e); }
+            try { setHasSubscription(await paywallService.hasActiveSubscription()); } catch (e) { __DEV__ && console.error('[Cavil]', e); }
           } else {
-            try { await paywallService.configure(null); } catch (e) {}
+            try { await paywallService.configure(null); } catch (e) { __DEV__ && console.error('[Cavil]', e); }
           }
         });
-      } catch (e) {}
+      } catch (e) { __DEV__ && console.error('[Cavil]', e); }
 
       setBootReady(true);
     })();
@@ -179,18 +194,7 @@ export default function App() {
                 navigationRef.current?.navigate('Main');
               }
             }}
-            theme={{
-              ...DarkTheme,
-              colors: {
-                ...DarkTheme.colors,
-                background:   BG,
-                card:         BG,
-                border:       BG,
-                primary:      ACCENT,
-                text:         '#F0F4F8',
-                notification: '#E05252',
-              }
-            }}>
+            theme={NAV_THEME}>
             <RootStackNavigator
               initialRoute={initialRoute}
               screens={{
@@ -318,7 +322,7 @@ export default function App() {
                             channel:  Updates.channel  || null,
                             updateId: Updates.updateId || null,
                           }}
-                          onClearedCache={() => { try { Updates.reloadAsync(); } catch (e) {} }}
+                          onClearedCache={() => { try { Updates.reloadAsync(); } catch (e) { __DEV__ && console.error('[Cavil]', e); } }}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
                           onDeleteAccount={() => authService.deleteAccount()}
@@ -366,20 +370,32 @@ function TodayTabScreen({ hasSubscription }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const enrollment = await getEnrollmentDate();
-      const idx = dayIndexFromEnrollment(enrollment) + 1; // 1-based
-      const card = await contentService.getCardByOrder(idx);
-      const [streakNow, ids] = await Promise.all([
-        progressService.getStreak(),
-        progressService.getSavedIds(),
-      ]);
-      if (!cancelled) {
-        setTodayIndex(idx);
-        setViewIndex(idx);
-        setViewCard(card);
-        setStreak(streakNow);
-        setSavedIds(ids || []);
-      }
+      try {
+        const enrollment = await getEnrollmentDate();
+        const idx = dayIndexFromEnrollment(enrollment) + 1;
+
+        // Show local card immediately — no network wait
+        const localCard = seedCardByOrder.get(idx);
+        if (localCard && !cancelled) {
+          setTodayIndex(idx);
+          setViewIndex(idx);
+          setViewCard(localCard);
+        }
+
+        const [remoteCard, streakNow, ids] = await Promise.all([
+          contentService.getCardByOrder(idx).catch(() => null),
+          progressService.getStreak(),
+          progressService.getSavedIds(),
+        ]);
+
+        if (!cancelled) {
+          if (remoteCard) setViewCard(remoteCard);
+          setTodayIndex(idx);
+          setViewIndex(idx);
+          setStreak(streakNow);
+          setSavedIds(ids || []);
+        }
+      } catch (e) { __DEV__ && console.error('[Cavil]', e); }
     })();
     return () => { cancelled = true; };
   }, []);
@@ -389,8 +405,14 @@ function TodayTabScreen({ hasSubscription }) {
     if (!viewIndex) return;
     let cancelled = false;
     (async () => {
-      const card = await contentService.getCardByOrder(viewIndex);
-      if (!cancelled) setViewCard(card);
+      try {
+        // Show local card immediately on swipe
+        const localCard = seedCardByOrder.get(viewIndex);
+        if (localCard && !cancelled) setViewCard(localCard);
+        // Update from Firestore in background
+        const remoteCard = await contentService.getCardByOrder(viewIndex).catch(() => null);
+        if (remoteCard && !cancelled) setViewCard(remoteCard);
+      } catch (e) { __DEV__ && console.error('[Cavil]', e); }
     })();
     return () => { cancelled = true; };
   }, [viewIndex]);
@@ -398,13 +420,15 @@ function TodayTabScreen({ hasSubscription }) {
   // Record opened + refresh streak when viewing a card
   useEffect(() => {
     if (!viewCard?.id) return;
+    let cancelled = false;
     (async () => {
       try {
         await progressService.recordCardOpened(viewCard.id);
         const s = await progressService.getStreak();
-        setStreak(s);
-      } catch (e) {}
+        if (!cancelled) setStreak(s);
+      } catch (e) { __DEV__ && console.error('[Cavil]', e); }
     })();
+    return () => { cancelled = true; };
   }, [viewCard?.id]);
 
   if (!viewCard) {
@@ -429,7 +453,7 @@ function TodayTabScreen({ hasSubscription }) {
       await progressService.toggleSaved(viewCard.id);
       const ids = await progressService.getSavedIds();
       setSavedIds(ids || []);
-    } catch (e) {}
+    } catch (e) { __DEV__ && console.error('[Cavil]', e); }
   };
 
   return (

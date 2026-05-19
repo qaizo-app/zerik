@@ -55,7 +55,7 @@ export function BiasCard({ card, locale = 'en', width = 340, height, dayNumber, 
   }
   async function handleShare() {
     const text = [loc.title, '', loc.body, '', loc.tip].filter(Boolean).join('\n');
-    try { await Share.share({ message: text }); } catch (e) {}
+    try { await Share.share({ message: text }); } catch (e) { __DEV__ && console.error('[Biased]', e); }
   }
 
   const containerStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
