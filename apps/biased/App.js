@@ -285,10 +285,6 @@ export default function App() {
                           user={user}
                           hasSubscription={hasSubscription}
                           appVersion={appJson.expo.version}
-                          updateInfo={{
-                            channel:  Updates.channel  || null,
-                            updateId: Updates.updateId || null,
-                          }}
                           onClearedCache={() => { try { Updates.reloadAsync(); } catch (e) {} }}
                           onSignIn={() => navigation.getParent()?.navigate('Auth')}
                           onSignOut={() => authService.logout()}
