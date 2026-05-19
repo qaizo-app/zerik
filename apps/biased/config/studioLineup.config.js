@@ -27,10 +27,9 @@ export const studioApps = [
     slug: 'cavil',
     is_flagship: false,
     category_slug: 'rhetorical_fallacies',
-    store_id_android: null,
+    store_id_android: 'com.qaizo.cavil',
     store_id_ios: null,
     store_url: null,
-    coming_soon: true,
     i18n: {
       ru: { name: 'Cavil', tagline: 'Уловка в речи. Каждый день.' },
       en: { name: 'Cavil', tagline: 'The trick in their mouth. Daily.' }
