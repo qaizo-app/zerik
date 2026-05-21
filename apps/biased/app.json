@@ -2,7 +2,7 @@
   "expo": {
     "name": "Biased",
     "slug": "biased",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "scheme": "biased",
@@ -27,7 +27,7 @@
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.SCHEDULE_EXACT_ALARM"
       ],
-      "versionCode": 5
+      "versionCode": 6
     },
     "plugins": [
       "expo-font",
