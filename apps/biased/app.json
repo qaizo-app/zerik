@@ -15,6 +15,15 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "ios": {
+      "bundleIdentifier": "com.qaizo.biased",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "supportsTablet": false,
+      "usesAppleSignIn": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
     "android": {
       "package": "com.qaizo.biased",
       "googleServicesFile": "./google-services.json",
@@ -27,7 +36,7 @@
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.SCHEDULE_EXACT_ALARM"
       ],
-      "versionCode": 6
+      "versionCode": 7
     },
     "plugins": [
       "expo-font",
@@ -48,7 +57,8 @@
           }
         }
       ],
-      "@react-native-firebase/app-check"
+      "@react-native-firebase/app-check",
+      "expo-apple-authentication"
     ],
     "extra": {
       "appSlug": "biased",
