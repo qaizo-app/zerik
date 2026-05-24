@@ -56,7 +56,8 @@
       ],
       "@react-native-firebase/app-check",
       "expo-apple-authentication",
-      "./plugins/with-adi-registration.js"
+      "./plugins/with-adi-registration.js",
+      "./plugins/with-firebase-modular-headers.js"
     ],
     "extra": {
       "appSlug": "mental-models",
