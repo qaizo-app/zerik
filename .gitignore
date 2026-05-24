@@ -16,7 +16,6 @@ yarn-error.*
 *.mobileprovision
 credentials/
 **/credentials/
-GoogleService-Info.plist
 .env
 .env.local
 serviceAccount.json
