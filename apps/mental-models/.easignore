@@ -8,7 +8,6 @@ npm-debug.*
 yarn-debug.*
 yarn-error.*
 .DS_Store
-GoogleService-Info.plist
 .env
 .env.local
 ios/Pods/
