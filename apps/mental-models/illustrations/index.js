@@ -79,4 +79,31 @@ export function registerAppIllustrations() {
   registerIllustration('regret_minimization',    LossAversion);    // минимизация будущих сожалений
   registerIllustration('skin_in_the_game',       SunkCost);        // ставка/обязательство
   registerIllustration('steel_manning',          Inversion);       // обратный аргумент
+
+  // Aliases для батча #107-134 (релизы 2026-07-27 … 08-23). Назначены так,
+  // чтобы соседние по дате карточки не показывали одну и ту же SVG.
+  registerIllustration('harlow_attachment',             BrainVat);
+  registerIllustration('friendship_paradox',            Pareto);
+  registerIllustration('red_herring',                   Hanlon);
+  registerIllustration('thinking_in_systems',           SecondOrder);
+  registerIllustration('negativity_bias',               LossAversion);
+  registerIllustration('newcombs_problem',              MontyHall);
+  registerIllustration('blue_eyes_brown_eyes',          Trolley);
+  registerIllustration('abilene_paradox',               Simpson);
+  registerIllustration('appeal_to_nature',              ConfirmationBias);
+  registerIllustration('deep_work',                     OccamRazor);
+  registerIllustration('hot_cold_empathy_gap',          Anchoring);
+  registerIllustration('twin_earth',                    BrainVat);
+  registerIllustration('little_albert',                 Hindsight);
+  registerIllustration('braess_paradox',                SecondOrder);
+  registerIllustration('motte_and_bailey',              Theseus);
+  registerIllustration('thinking_in_bets',              MontyHall);
+  registerIllustration('fundamental_attribution_error', ConfirmationBias);
+  registerIllustration('omelas',                        Trolley);
+  registerIllustration('good_samaritan_experiment',     Hanlon);
+  registerIllustration('moravecs_paradox',              Inversion);
+  registerIllustration('gish_gallop',                   Pareto);
+  registerIllustration('mindset',                       DunningKruger);
+  registerIllustration('ikea_effect',                   LossAversion);
+  registerIllustration('repugnant_conclusion',          Trolley);
 }

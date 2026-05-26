@@ -108,6 +108,34 @@ import tuQuoque         from '@content/seed/tu_quoque.json';
 import obstacleWay      from '@content/seed/obstacle_is_the_way.json';
 import zeroRiskBias     from '@content/seed/zero_risk_bias.json';
 import swampman         from '@content/seed/swampman.json';
+import repugnantConcl  from '@content/seed/repugnant_conclusion.json';
+import ikeaEffect      from '@content/seed/ikea_effect.json';
+import mindsetBook     from '@content/seed/mindset.json';
+import gishGallop      from '@content/seed/gish_gallop.json';
+import regretMin       from '@content/seed/regret_minimization.json';
+import moravecPar      from '@content/seed/moravecs_paradox.json';
+import goodSamaritan   from '@content/seed/good_samaritan_experiment.json';
+import omelas          from '@content/seed/omelas.json';
+import fundAttrError   from '@content/seed/fundamental_attribution_error.json';
+import thinkingBets    from '@content/seed/thinking_in_bets.json';
+import motteBailey     from '@content/seed/motte_and_bailey.json';
+import overtonWindow   from '@content/seed/overton_window.json';
+import braessPar       from '@content/seed/braess_paradox.json';
+import littleAlbert    from '@content/seed/little_albert.json';
+import twinEarth       from '@content/seed/twin_earth.json';
+import hotColdGap      from '@content/seed/hot_cold_empathy_gap.json';
+import deepWork        from '@content/seed/deep_work.json';
+import appealNature    from '@content/seed/appeal_to_nature.json';
+import expectedValue   from '@content/seed/expected_value.json';
+import abilenePar      from '@content/seed/abilene_paradox.json';
+import blueEyesBrown   from '@content/seed/blue_eyes_brown_eyes.json';
+import newcombProblem  from '@content/seed/newcombs_problem.json';
+import negativityBias  from '@content/seed/negativity_bias.json';
+import thinkingSystems from '@content/seed/thinking_in_systems.json';
+import redHerring      from '@content/seed/red_herring.json';
+import steelManning    from '@content/seed/steel_manning.json';
+import friendshipPar   from '@content/seed/friendship_paradox.json';
+import harlowAttach    from '@content/seed/harlow_attachment.json';
 
 // Все известные deep-карточки. Соглашение: id оканчивается на `_deep`,
 // привязка к parent — по prefix (вырезаем '_deep' из id).
@@ -134,6 +162,34 @@ export function resolveLevels(card) {
 // Сортировка по release_date — новейшие первыми. ContentService отдаёт
 // только release_date <= today, остальные показываются когда дата наступит.
 export const seedCards = [
+  repugnantConcl,    // 2026-08-23
+  ikeaEffect,        // 2026-08-22
+  mindsetBook,       // 2026-08-21
+  gishGallop,        // 2026-08-20
+  regretMin,         // 2026-08-19
+  moravecPar,        // 2026-08-18
+  goodSamaritan,     // 2026-08-17
+  omelas,            // 2026-08-16
+  fundAttrError,     // 2026-08-15
+  thinkingBets,      // 2026-08-14
+  motteBailey,       // 2026-08-13
+  overtonWindow,     // 2026-08-12
+  braessPar,         // 2026-08-11
+  littleAlbert,      // 2026-08-10
+  twinEarth,         // 2026-08-09
+  hotColdGap,        // 2026-08-08
+  deepWork,          // 2026-08-07
+  appealNature,      // 2026-08-06
+  expectedValue,     // 2026-08-05
+  abilenePar,        // 2026-08-04
+  blueEyesBrown,     // 2026-08-03
+  newcombProblem,    // 2026-08-02
+  negativityBias,    // 2026-08-01
+  thinkingSystems,   // 2026-07-31
+  redHerring,        // 2026-07-30
+  steelManning,      // 2026-07-29
+  friendshipPar,     // 2026-07-28
+  harlowAttach,      // 2026-07-27
   swampman,           // 2026-07-26
   zeroRiskBias,       // 2026-07-25
   obstacleWay,        // 2026-07-24
