@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // upload-seed-biased.mjs — заливает все карточки из apps/biased/src/seed.js
 // в Firestore (проект biased-94cc9, коллекция biases).
+// NODE_TLS_REJECT_UNAUTHORIZED=0 — обход SSL-проблем gRPC/HTTP на Windows.
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 //
 // Setup:
 //   1. Firebase Console → biased-94cc9 → Project Settings → Service Accounts → Generate key
@@ -25,6 +27,7 @@ if (!existsSync(SA_PATH)) {
 const admin = require('firebase-admin');
 admin.initializeApp({ credential: admin.credential.cert(require(SA_PATH)) });
 const db = admin.firestore();
+db.settings({ preferRest: true });
 
 // seed.js uses ESM syntax — parse as text to avoid module type issues
 const seedSrc = readFileSync(join(__dirname, '..', 'apps/biased/src/seed.js'), 'utf8');
