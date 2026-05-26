@@ -2,7 +2,7 @@
 
 _Last updated: 2026-05-06_
 
-This Privacy Policy describes what data the Qaizo apps ("the App", "we") collect, how we use it, and your choices. It applies to all apps published by Qaizo Studio, including **Senik** and **Biased**.
+This Privacy Policy describes what data the Qaizo apps ("the App", "we") collect, how we use it, and your choices. It applies to all apps published by Qaizo Studio, including **Senik**, **Biased**, and **Cavil**.
 
 ## Data we collect
 

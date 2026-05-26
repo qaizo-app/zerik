@@ -2,7 +2,7 @@
 
 _Last updated: 2026-05-06_
 
-This page explains how to delete your account and the data associated with it. It applies to all Qaizo Studio apps, including **Senik** and **Biased**.
+This page explains how to delete your account and the data associated with it. It applies to all Qaizo Studio apps, including **Senik**, **Biased**, and **Cavil**.
 
 ## How to delete your account from inside the App
 

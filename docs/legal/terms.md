@@ -2,7 +2,7 @@
 
 _Last updated: 2026-05-06_
 
-By using a Qaizo app ("the App"), you agree to these Terms. They apply to all apps published by Qaizo Studio, including **Senik** and **Biased**.
+By using a Qaizo app ("the App"), you agree to these Terms. They apply to all apps published by Qaizo Studio, including **Senik**, **Biased**, and **Cavil**.
 
 ## The service
 
