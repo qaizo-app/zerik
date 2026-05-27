@@ -31,7 +31,7 @@ const LABELS = {
   ru: { day: 'ДЕНЬ', wild: 'В ЖИЗНИ', of: '/' },
 };
 
-export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber, totalCards = 100, saved = false, onSave }) {
+export function CavilCard({ card, locale = 'en', width = 340, height, dayNumber, saved = false, onSave }) {
   const loc = card?.i18n?.[locale] || Object.values(card?.i18n || {})[0] || {};
   const HEIGHT = height || width * 1.85;
   const labels = LABELS[locale] || LABELS.en;

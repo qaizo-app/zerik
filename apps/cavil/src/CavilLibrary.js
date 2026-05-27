@@ -22,8 +22,8 @@ const BORDER     = 'rgba(158, 155, 196, 0.18)';
 function pad3(n) { return String(n || 0).padStart(3, '0'); }
 
 const LABELS = {
-  en: { eyebrow: 'LIBRARY · INDEX', title: 'Fallacies', of: 'of', collected: 'saved', vol: 'vol. i', today: 'TODAY', tomorrow: 'TOMORROW', collectedTag: 'SAVED', locked: '— locked —' },
-  ru: { eyebrow: 'БИБЛИОТЕКА · УКАЗАТЕЛЬ', title: 'Уловки', of: 'из', collected: 'сохранено', vol: 'том i', today: 'СЕГОДНЯ', tomorrow: 'ЗАВТРА', collectedTag: 'СОХРАНЕНО', locked: '— заперто —' },
+  en: { eyebrow: 'LIBRARY · INDEX', title: 'Fallacies', collected: 'saved', vol: 'vol. i', today: 'TODAY', tomorrow: 'TOMORROW', collectedTag: 'SAVED', locked: '— locked —' },
+  ru: { eyebrow: 'БИБЛИОТЕКА · УКАЗАТЕЛЬ', title: 'Уловки', collected: 'сохранено', vol: 'том i', today: 'СЕГОДНЯ', tomorrow: 'ЗАВТРА', collectedTag: 'СОХРАНЕНО', locked: '— заперто —' },
 };
 
 function StatusDot({ state }) {
@@ -107,7 +107,7 @@ function FallacyRow({ card, locale, state, onPress, label, isLocked, lockedLabel
   );
 }
 
-export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedIds = [], openedIds = [], totalVolume = 100, onCardPress }) {
+export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedIds = [], openedIds = [], onCardPress }) {
   const insets = useSafeAreaInsets();
   const labels = LABELS[locale] || LABELS.en;
 
@@ -149,7 +149,7 @@ export function CavilLibrary({ locale = 'en', allCards = [], todayIndex, savedId
         </View>
         <Text style={styles.title}>{labels.title}</Text>
         <Text style={styles.subtitle}>
-          {collectedCount} {labels.of} {totalVolume} {labels.collected} · {labels.vol}
+          {collectedCount} {labels.collected} · {labels.vol}
         </Text>
       </View>
 

@@ -30,7 +30,6 @@ const LABELS = {
     last28:     'LAST 28 DAYS',
     collected:  'SAVED',
     totalSuffix:'TOTAL',                 // "{N DAYS} {TOTAL}"
-    toGo:       'TO GO',
     empty:      'No streak yet. Open today\'s card to begin.',
   },
   ru: {
@@ -41,7 +40,6 @@ const LABELS = {
     last28:     'ПОСЛЕДНИЕ 28 ДНЕЙ',
     collected:  'СОХРАНЕНО',
     totalSuffix:'ВСЕГО',                 // "{N ДНЕЙ} {ВСЕГО}"
-    toGo:       'ОСТАЛОСЬ',
     empty:      'Стрик не начат. Открой сегодняшнюю карточку, чтобы стартовать.',
   },
 };
@@ -71,10 +69,9 @@ function StreakGrid({ streak }) {
   );
 }
 
-export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 }, openedCount = 0, savedCount = 0, totalVolume = 100 }) {
+export function CavilPractice({ locale = 'en', streak = { current: 0, best: 0 }, openedCount = 0, savedCount = 0 }) {
   const insets = useSafeAreaInsets();
   const labels = LABELS[locale] || LABELS.en;
-  const toGo = Math.max(0, totalVolume - openedCount);
 
   return (
     <ScrollView

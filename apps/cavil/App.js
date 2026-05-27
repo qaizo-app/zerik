@@ -276,7 +276,6 @@ export default function App() {
                             todayIndex={todayIdx}
                             savedIds={savedIds}
                             openedIds={openedIds}
-                            totalVolume={VOL_TOTAL}
                             onCardPress={(card) => navigation.getParent()?.navigate('CardViewer', { card })}
                           />
                         );
@@ -306,7 +305,6 @@ export default function App() {
                             streak={streak}
                             openedCount={openedCount}
                             savedCount={savedCount}
-                            totalVolume={VOL_TOTAL}
                           />
                         );
                       },
@@ -340,8 +338,6 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
-
-const VOL_TOTAL = 100;
 
 function TodayTabScreen({ hasSubscription }) {
   const lang   = useLanguage();
@@ -527,7 +523,6 @@ function TodayTabScreen({ hasSubscription }) {
             width={cardWidth}
             height={cardHeight}
             dayNumber={viewIndex}
-            totalCards={VOL_TOTAL}
             saved={isSaved}
             onSave={onCollect}
           />
@@ -602,7 +597,6 @@ function CardViewerScreen({ card, onClose }) {
           width={cardWidth}
           height={cardHeight}
           dayNumber={card.order ?? null}
-          totalCards={VOL_TOTAL}
         />
       </View>
     </View>
