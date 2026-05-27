@@ -26,6 +26,7 @@
     "fonts:download:biased": "node scripts/download-fonts-biased.js",
     "icons:generate:biased": "node scripts/generate-icons-biased.js",
     "seed:upload:biased": "node scripts/upload-seed-biased.mjs",
+    "rules:deploy:biased": "node scripts/deploy-firestore-rules-biased.mjs",
     "cavil": "npm --workspace cavil start",
     "cavil:android": "npm --workspace cavil run android",
     "seed:upload:cavil": "node scripts/upload-seed-cavil.mjs",
