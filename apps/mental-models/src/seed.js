@@ -136,6 +136,13 @@ import redHerring      from '@content/seed/red_herring.json';
 import steelManning    from '@content/seed/steel_manning.json';
 import friendshipPar   from '@content/seed/friendship_paradox.json';
 import harlowAttach    from '@content/seed/harlow_attachment.json';
+import gettierProblem    from '@content/seed/gettier_problem.json';
+import haloEffect        from '@content/seed/halo_effect.json';
+import influenceCial     from '@content/seed/influence_cialdini.json';
+import noTrueScotsman    from '@content/seed/no_true_scotsman.json';
+import bayesTheorem      from '@content/seed/bayes_theorem.json';
+import allaisParadox     from '@content/seed/allais_paradox.json';
+import invisibleGorilla  from '@content/seed/invisible_gorilla.json';
 
 // Все известные deep-карточки. Соглашение: id оканчивается на `_deep`,
 // привязка к parent — по prefix (вырезаем '_deep' из id).
@@ -162,6 +169,13 @@ export function resolveLevels(card) {
 // Сортировка по release_date — новейшие первыми. ContentService отдаёт
 // только release_date <= today, остальные показываются когда дата наступит.
 export const seedCards = [
+  gettierProblem,    // 2026-08-30
+  haloEffect,        // 2026-08-29
+  influenceCial,     // 2026-08-28
+  noTrueScotsman,    // 2026-08-27
+  bayesTheorem,      // 2026-08-26
+  allaisParadox,     // 2026-08-25
+  invisibleGorilla,  // 2026-08-24
   repugnantConcl,    // 2026-08-23
   ikeaEffect,        // 2026-08-22
   mindsetBook,       // 2026-08-21

@@ -1,0 +1,164 @@
+{
+  "id": "influence_cialdini",
+  "category": "book_idea",
+  "release_number": 139,
+  "release_date": "2026-08-28",
+  "tags": ["persuasion", "cialdini", "reciprocity", "social_proof", "scarcity", "influence"],
+  "difficulty": 2,
+  "reading_time_sec": 170,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/influence_cialdini.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Идея из книги · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "Официант приносит счёт без мятной конфетки — чаевые такие-то. С одной конфеткой — чаевые растут на 3%. С двумя — на 14%. А если он кладёт одну, отворачивается, потом возвращается «специально для вас, такие приятные гости» вторую — чаевые взлетают на 23%. Конфетка стоит копейки. {{em:Вы платите не за неё — за чувство, что вам что-то должны.}}" }
+        },
+        { "type": "title", "props": { "text": "{{accent:Влияние}}" } },
+        { "type": "subtitle", "props": { "text": "Influence: The Psychology of Persuasion · Роберт Чалдини · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/influence_cialdini.svg", "alt": "Шесть рычагов, нажимающих на фигуру человека, который думает, что решает сам" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Чалдини три года работал под прикрытием в отделах продаж, у сборщиков пожертвований и рекламщиков, чтобы понять, что заставляет нас говорить «да». Он выделил шесть рычагов: {{em:взаимность, обязательство и последовательность, социальное доказательство, авторитет, симпатия и дефицит}}. Каждый запускает почти автоматический ответ — Чалдини называл это «щёлк, зажужжало».",
+              "Взаимность: получив что-то — даже навязанное, — мы чувствуем долг отдать. Социальное доказательство: «другие так делают» снимает с нас необходимость думать. Дефицит: «осталось 2 штуки» превращает желание в панику. Эти реакции — не глупость. Это полезные эвристики, которые экономят силы. Проблема в том, что их легко включить искусственно.",
+              "Главная мысль книги не «как манипулировать», а «как заметить, что манипулируют вами». Когда чувствуете внезапное «надо соглашаться» — спросите, какой из шести рычагов сейчас нажали. {{em:Само распознавание рычага возвращает вам выбор, который автоматизм у вас отнял.}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Большинство «да» — не решения, а автоматические реакции на шесть рычагов влияния. Назвать рычаг в момент нажатия — значит вернуть себе выбор."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вам прислали бесплатный пробник и сразу — предложение купить. Вы чувствуете лёгкую неловкость отказать. Что происходит?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "Просто хороший продукт, грех не купить", "is_wiser": false },
+              { "id": "recip", "text": "Сработала взаимность — подарок создал ощущение долга, и оно давит сильнее, чем качество товара", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "не замечают рычаг",
+              "explanation": "Бесплатный образец — классический спусковой крючок взаимности. Долг ощущается, даже когда подарок не просили и он почти ничего не стоил дарителю. Защита по Чалдини: не отказываться от подарков (это не паранойя), но если за подарком следует продажа — мысленно переименовать его из «любезности» в «приём продаж». Долг исчезает, остаётся трезвая оценка товара.",
+              "wisdom": "{{em:Подарок, за которым сразу идёт просьба, — это не подарок, а первый ход.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Рычаги влияния — не зло. Взаимность держит общество, авторитет врача спасает жизни, дефицит времени помогает решаться. Ошибка — думать, что вы к ним невосприимчивы. Неуязвимых нет; есть те, кто замечает рычаг, и те, кто нет." }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В маркетинге", "example": "«Осталось 3 номера по этой цене», «1000 человек уже купили», «рекомендовано экспертами» — дефицит, социальное доказательство и авторитет в одном баннере." },
+              { "label": "В переговорах", "example": "Маленькая уступка вам почти всегда создаёт ожидание уступки в ответ — взаимность. Осознавайте, когда «жест доброй воли» на самом деле счётчик долга." },
+              { "label": "В соцсетях", "example": "Счётчики лайков и «все обсуждают» — это социальное доказательство в чистом виде, заставляющее принять мнение толпы без проверки по существу." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Сегодня, когда почувствуете импульс согласиться (на покупку, просьбу, мнение), назовите рычаг: взаимность? дефицит? авторитет? толпа? Просто произнесите его про себя. Решение из автоматического станет вашим." }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Book Idea · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "A waiter brings the bill with no mint — tips are baseline. With one mint — tips rise 3%. With two — 14%. But if he leaves one, turns to go, then comes back \"and for you, such pleasant guests, a second one\" — tips jump 23%. The mint costs pennies. {{em:You're not paying for it — you're paying for the feeling that you owe something.}}" }
+        },
+        { "type": "title", "props": { "text": "{{accent:Influence}}" } },
+        { "type": "subtitle", "props": { "text": "Influence: The Psychology of Persuasion · Robert Cialdini · 1984" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/influence_cialdini.svg", "alt": "Six levers pressing on a figure who thinks they're deciding for themselves" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Cialdini spent three years undercover in sales departments, fundraising operations, and advertising to learn what makes us say \"yes.\" He isolated six levers: {{em:reciprocity, commitment and consistency, social proof, authority, liking, and scarcity}}. Each triggers a near-automatic response — Cialdini called it \"click, whirr.\"",
+              "Reciprocity: having received something — even unsolicited — we feel a duty to give back. Social proof: \"others are doing it\" relieves us of the need to think. Scarcity: \"only 2 left\" turns desire into panic. These reactions aren't stupidity. They're useful heuristics that save energy. The problem is they're easy to trigger artificially.",
+              "The book's core point isn't \"how to manipulate\" but \"how to notice you're being manipulated.\" When you feel a sudden \"I should agree\" — ask which of the six levers was just pressed. {{em:Naming the lever returns the choice that the automatic response took from you.}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Most \"yes\" answers aren't decisions but automatic reactions to six levers of influence. Naming the lever as it's pressed is how you reclaim the choice."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're sent a free sample and immediately — an offer to buy. You feel a slight discomfort about declining. What's happening?",
+            "setup": null,
+            "options": [
+              { "id": "good", "text": "It's just a good product, would be a shame not to buy", "is_wiser": false },
+              { "id": "recip", "text": "Reciprocity fired — the gift created a sense of debt, and it presses harder than the product's quality", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "miss the lever",
+              "explanation": "A free sample is a classic reciprocity trigger. The debt is felt even when the gift was unrequested and cost the giver almost nothing. Cialdini's defense: don't refuse gifts (that's not paranoia), but if a gift is followed by a sale — mentally rename it from \"courtesy\" to \"sales tactic.\" The debt dissolves, leaving a sober view of the product.",
+              "wisdom": "{{em:A gift immediately followed by a request isn't a gift — it's an opening move.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The levers of influence aren't evil. Reciprocity holds society together, a doctor's authority saves lives, time scarcity helps us decide. The error is thinking you're immune to them. No one is immune; there are those who notice the lever and those who don't." }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In marketing", "example": "\"Only 3 rooms left at this price,\" \"1000 people already bought,\" \"expert recommended\" — scarcity, social proof, and authority in a single banner." },
+              { "label": "In negotiation", "example": "A small concession to you almost always creates an expectation of a concession back — reciprocity. Be aware when a \"goodwill gesture\" is actually a debt counter." },
+              { "label": "On social media", "example": "Like counts and \"everyone's discussing it\" are pure social proof, pushing you to adopt the crowd's view without checking it on the merits." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Today, when you feel an impulse to agree (to a purchase, a request, an opinion), name the lever: reciprocity? scarcity? authority? the crowd? Just say it to yourself. The decision turns from automatic into yours." }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/influence_cialdini" }]
+}

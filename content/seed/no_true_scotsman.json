@@ -1,0 +1,164 @@
+{
+  "id": "no_true_scotsman",
+  "category": "rhetorical_fallacies",
+  "release_number": 138,
+  "release_date": "2026-08-27",
+  "tags": ["fallacy", "ad_hoc", "unfalsifiable", "flew", "definition", "rhetoric"],
+  "difficulty": 2,
+  "reading_time_sec": 160,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/no_true_scotsman.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Риторическая уловка · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "«Ни один шотландец не кладёт сахар в овсянку». — «Но мой дядя Ангус кладёт». — «Ни один НАСТОЯЩИЙ шотландец не кладёт сахар в овсянку». Заметили приём? Столкнувшись с контрпримером, человек не отказался от утверждения — он {{em:переопределил слово}}, чтобы контрпример больше не считался. Теперь его нельзя опровергнуть. И нельзя проверить." }
+        },
+        { "type": "title", "props": { "text": "Ни один {{accent:настоящий}} шотландец" } },
+        { "type": "subtitle", "props": { "text": "No True Scotsman · термин Энтони Флю · «Мышление о мышлении» · 1975" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/no_true_scotsman.svg", "alt": "Граница круга, которую сдвигают, чтобы выдавить наружу неудобный контрпример" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Уловка «ни один настоящий шотландец» — это спасение обобщения задним числом. Вместо того чтобы признать «значит, моё правило неверно», человек добавляет слово «настоящий» и выкидывает контрпример за границу определения. Утверждение спасено — ценой смысла. {{em:Оно стало истинным по построению, а значит, перестало что-либо говорить о мире.}}",
+              "Опасность в том, что приём выглядит как уточнение. «Я же не про таких христиан / программистов / патриотов». Но если каждый контрпример объявляется «ненастоящим» представителем — критерий пуст. Любую группу можно очистить от любых грехов, просто исключая «неправильных» её членов из определения.",
+              "Сигнал уловки: определение меняется в реальном времени, чтобы устоять под давлением факта. Честное обобщение либо подтверждается, либо корректируется по сути («ну, многие, но не все»). Нечестное — переопределяет термин, оставляя слова теми же. {{em:Спрашивайте: это уточнение смысла — или защита от опровержения?}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Если в ответ на контрпример меняют определение, а не утверждение, — обобщение защищают от опровержения, а не уточняют. Непроверяемое утверждение ничего не сообщает."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "«Настоящие фанаты команды никогда не уходят с матча раньше». — «Но половина стадиона ушла». — «Это не настоящие фанаты». Что здесь не так?",
+            "setup": null,
+            "options": [
+              { "id": "fine", "text": "Всё логично — настоящие фанаты и правда не уходят", "is_wiser": false },
+              { "id": "circular", "text": "Определение «настоящего фаната» подогнали так, чтобы его нельзя было опровергнуть", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "принимают переопределение",
+              "explanation": "Утверждение стало круговым: «настоящие фанаты не уходят», а «настоящий фанат» = «тот, кто не уходит». Оно истинно всегда и поэтому пусто. Контрприём: зафиксировать определение ДО спора. «Кого мы считаем фанатом — по абонементу? по годам? Давай договоримся, потом проверим». Как только определение закреплено, уловка исчезает.",
+              "wisdom": "{{em:Определение, которое меняется под давлением факта, защищает не истину, а самолюбие.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Не всякое уточнение — уловка. Иногда «я имел в виду не всех» — честная поправка. Граница проста: законное уточнение опирается на критерий, заданный заранее или независимо. Уловка изобретает критерий прямо сейчас, только чтобы выкинуть неудобный пример." }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В спорах об идеологиях", "example": "«Настоящий социализм/капитализм такого бы не допустил» — провалы объявляют «ненастоящей» версией системы, защищая идею от любых эмпирических ударов." },
+              { "label": "В сообществах", "example": "«Настоящий программист/врач/родитель так бы не поступил» — стыдят, переопределяя профессию или роль под идеал, которому никто не соответствует." },
+              { "label": "В самооправдании", "example": "«Я по-настоящему не старался» — после провала переопределяешь «старание» так, чтобы провал не считался показателем твоих усилий." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Поймайте себя сегодня на слове «настоящий» («настоящий друг/профессионал/мужчина»). Спросите: я уточняю смысл — или выкидываю неудобный пример, чтобы не менять мнение? Зафиксируйте определение прежде, чем спорить о принадлежности." }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Rhetorical Fallacy · №15" } },
+        {
+          "type": "hook",
+          "props": { "text": "\"No Scotsman puts sugar on his porridge.\" — \"But my uncle Angus does.\" — \"No TRUE Scotsman puts sugar on his porridge.\" Catch the move? Faced with a counterexample, the person didn't drop the claim — they {{em:redefined the word}} so the counterexample no longer counts. Now it can't be refuted. And it can't be tested." }
+        },
+        { "type": "title", "props": { "text": "No {{accent:True}} Scotsman" } },
+        { "type": "subtitle", "props": { "text": "No True Scotsman · term by Antony Flew · Thinking About Thinking · 1975" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/no_true_scotsman.svg", "alt": "A circle's boundary being moved to push an inconvenient counterexample outside" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "The \"no true Scotsman\" move is rescuing a generalization after the fact. Instead of admitting \"then my rule is wrong,\" the person adds the word \"true\" and shoves the counterexample outside the definition. The claim is saved — at the cost of meaning. {{em:It became true by construction, and therefore stopped saying anything about the world.}}",
+              "The danger is that the move looks like clarification. \"I didn't mean those kinds of Christians / programmers / patriots.\" But if every counterexample is declared a \"non-true\" member, the criterion is empty. Any group can be cleansed of any sin simply by excluding its \"wrong\" members from the definition.",
+              "The tell: the definition shifts in real time to survive a fact. An honest generalization is either confirmed or substantively corrected (\"well, many, but not all\"). A dishonest one redefines the term while keeping the words the same. {{em:Ask: is this clarifying meaning — or defending against refutation?}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "If someone changes the definition rather than the claim in response to a counterexample, they're shielding the generalization from refutation, not refining it. An untestable claim says nothing."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "\"Real fans never leave a match early.\" — \"But half the stadium left.\" — \"Those aren't real fans.\" What's wrong here?",
+            "setup": null,
+            "options": [
+              { "id": "fine", "text": "It's logical — real fans really don't leave", "is_wiser": false },
+              { "id": "circular", "text": "The definition of \"real fan\" was rigged so it can't be refuted", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "accept the redefinition",
+              "explanation": "The claim became circular: \"real fans don't leave,\" and a \"real fan\" = \"one who doesn't leave.\" It's always true and therefore empty. Counter-move: fix the definition BEFORE the dispute. \"Who counts as a fan — by season ticket? by years? Let's agree, then check.\" Once the definition is locked, the trick vanishes.",
+              "wisdom": "{{em:A definition that shifts under the pressure of a fact defends ego, not truth.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Not every clarification is the fallacy. Sometimes \"I didn't mean all of them\" is an honest correction. The line is simple: a legitimate refinement rests on a criterion set in advance or independently. The fallacy invents a criterion on the spot, only to discard an inconvenient example." }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In ideology debates", "example": "\"Real socialism/capitalism would never allow that\" — failures get declared a \"non-true\" version of the system, shielding the idea from any empirical blow." },
+              { "label": "In communities", "example": "\"A real programmer/doctor/parent wouldn't do that\" — shaming by redefining a profession or role to fit an ideal no one meets." },
+              { "label": "In self-justification", "example": "\"I didn't really try\" — after a failure, you redefine \"trying\" so the failure doesn't count as a measure of your effort." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Catch yourself today on the word \"real\" or \"true\" (\"a real friend/professional/man\"). Ask: am I clarifying meaning — or tossing out an inconvenient example to avoid changing my mind? Fix the definition before arguing about who belongs." }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/no_true_scotsman" }]
+}

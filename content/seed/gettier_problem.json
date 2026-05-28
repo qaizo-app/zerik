@@ -1,0 +1,164 @@
+{
+  "id": "gettier_problem",
+  "category": "thought_experiments",
+  "release_number": 141,
+  "release_date": "2026-08-30",
+  "tags": ["epistemology", "knowledge", "justified_true_belief", "gettier", "luck", "philosophy"],
+  "difficulty": 4,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/gettier_problem.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Мысленный эксперимент · №21" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вы смотрите на настенные часы: 15:00. Так и есть — сейчас ровно три. Ваше убеждение истинно, и у вас была причина так думать (часы обычно точны). Но часы остановились ровно сутки назад. Вы правы — но {{em:случайно}}. Знали ли вы, который час? Интуиция говорит «нет». А ведь у вас было обоснованное, истинное убеждение. Чего же не хватило?" }
+        },
+        { "type": "title", "props": { "text": "Проблема {{accent:Геттиера}}" } },
+        { "type": "subtitle", "props": { "text": "Is Justified True Belief Knowledge? · Эдмунд Геттиер · 1963" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/gettier_problem.svg", "alt": "Остановившиеся часы, случайно показывающие верное время — истина без связи с причиной" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Две тысячи лет философия определяла знание как «обоснованное истинное убеждение» (justified true belief): вы что-то знаете, если (1) в это верите, (2) это правда, (3) у вас есть для этого основания. В 1963 году Эдмунд Геттиер опубликовал статью на три страницы, которая разрушила это определение примерами, где все три условия выполнены — {{em:но знания нет}}.",
+              "Суть всех «геттиеровских случаев»: убеждение истинно и обоснованно, но истинно оно по счастливой случайности, не связанной с вашим обоснованием. Часы дали вам верный ответ — но не потому, что они показывали реальное время, а потому что вы взглянули в единственный совпавший момент. Обоснование и истина встретились случайно. {{em:А знание требует, чтобы они были связаны не случайно.}}",
+              "Проблема Геттиера запустила полвека поисков «четвёртого условия». Может, знание требует, чтобы убеждение было получено надёжным процессом? Чтобы оно «отслеживало истину»? Единого ответа до сих пор нет. Но урок практичен: быть правым и иметь причины — ещё не значит знать. Между ними должна быть {{em:настоящая связь, а не совпадение}}."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Оказаться правым по хорошим, но не относящимся к делу причинам — не то же самое, что знать. Знание требует неслучайной связи между вашим обоснованием и истиной."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Аналитик предсказал рост акции «по графику», акция выросла — но из-за внезапной новости, которую он не предвидел. Он знал, что она вырастет?",
+            "setup": null,
+            "options": [
+              { "id": "knew", "text": "Знал — он же предсказал, и это сбылось", "is_wiser": false },
+              { "id": "lucky", "text": "Нет — он оказался прав случайно; его обоснование не было причиной роста", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "путают везение со знанием",
+              "explanation": "Это чистый геттиеровский случай: обоснованное (анализ графика) истинное (акция выросла) убеждение — но истинное по причине, не связанной с обоснованием. Аналитик не знал, ему повезло. Различать это критично: иначе мы награждаем за удачу как за компетентность и повторяем процессы, которые «сработали» случайно. Правильный исход не доказывает правильный метод.",
+              "wisdom": "{{em:Правильный ответ по неправильной причине — это удача, а не знание. И повторить её нельзя.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Геттиер — не повод для скепсиса «мы вообще ничего не знаем». Наоборот: большая часть знаний надёжна, потому что обоснование реально связано с истиной. Проблема точечная — она про разрыв между «оказался прав» и «знал». Не отбрасывайте знание; отделяйте его от везения." }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В инвестициях", "example": "Трейдер, угадавший на удаче, и трейдер, понявший рынок, выглядят одинаково — пока удача не кончится. Оценивайте процесс, а не только результат." },
+              { "label": "В науке", "example": "Верный вывод из ошибочных данных или кривого метода — геттиеровский случай. Поэтому важна воспроизводимость: она проверяет связь между методом и истиной, а не разовое совпадение." },
+              { "label": "В решениях", "example": "«Сработало же» — опасный аргумент. Хорошее решение с плохим исходом лучше плохого с хорошим: первое повторимо, второе держится на удаче." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Вспомните недавний успех — свой или чужой. Спросите: результат вышел ИЗ-ЗА метода или ПАРАЛЛЕЛЬНО ему, по удаче? Если по удаче — не закрепляйте метод как знание. Хвалите процесс, а не совпадение." }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Thought Experiment · №21" } },
+        {
+          "type": "hook",
+          "props": { "text": "You look at the wall clock: 3:00. And it's true — it's exactly three. Your belief is true, and you had a reason for it (the clock is usually accurate). But the clock stopped exactly 24 hours ago. You're right — but {{em:by accident}}. Did you know what time it was? Intuition says no. Yet you had a justified, true belief. So what was missing?" }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Gettier}} Problem" } },
+        { "type": "subtitle", "props": { "text": "Is Justified True Belief Knowledge? · Edmund Gettier · 1963" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/gettier_problem.svg", "alt": "A stopped clock accidentally showing the correct time — truth with no connection to its cause" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "For two thousand years philosophy defined knowledge as \"justified true belief\": you know something if (1) you believe it, (2) it's true, (3) you have grounds for it. In 1963 Edmund Gettier published a three-page paper that demolished this definition with examples where all three conditions hold — {{em:yet there's no knowledge}}.",
+              "The essence of all \"Gettier cases\": the belief is true and justified, but it's true by a lucky accident unconnected to your justification. The clock gave you the right answer — not because it showed the real time, but because you glanced at the one matching moment. Justification and truth met by chance. {{em:And knowledge requires them to be connected non-accidentally.}}",
+              "The Gettier problem launched half a century of searching for a \"fourth condition.\" Maybe knowledge requires the belief to come from a reliable process? To \"track the truth\"? There's still no single answer. But the lesson is practical: being right and having reasons isn't yet knowing. Between them must lie {{em:a real connection, not a coincidence}}."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Turning out right for good but irrelevant reasons isn't the same as knowing. Knowledge requires a non-accidental connection between your justification and the truth."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "An analyst predicted a stock would rise \"from the chart,\" and it rose — but because of sudden news he didn't foresee. Did he know it would rise?",
+            "setup": null,
+            "options": [
+              { "id": "knew", "text": "He knew — he predicted it, and it happened", "is_wiser": false },
+              { "id": "lucky", "text": "No — he was right by accident; his justification wasn't the cause of the rise", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "confuse luck with knowledge",
+              "explanation": "This is a pure Gettier case: a justified (chart analysis) true (the stock rose) belief — but true for a reason unrelated to the justification. The analyst didn't know; he got lucky. Distinguishing this is critical: otherwise we reward luck as competence and repeat processes that \"worked\" by chance. A correct outcome doesn't prove a correct method.",
+              "wisdom": "{{em:The right answer for the wrong reason is luck, not knowledge. And it can't be repeated.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Gettier isn't grounds for skepticism that \"we know nothing at all.\" The opposite: most knowledge is reliable because justification really is connected to truth. The problem is narrow — it's about the gap between \"turned out right\" and \"knew.\" Don't discard knowledge; separate it from luck." }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In investing", "example": "A trader who guessed on luck and one who understood the market look identical — until the luck runs out. Judge the process, not just the result." },
+              { "label": "In science", "example": "A correct conclusion from faulty data or a flawed method is a Gettier case. That's why replication matters: it tests the link between method and truth, not a one-off coincidence." },
+              { "label": "In decisions", "example": "\"It worked, didn't it\" is a dangerous argument. A good decision with a bad outcome beats a bad one with a good outcome: the first is repeatable, the second rests on luck." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Recall a recent success — yours or someone else's. Ask: did the result come FROM the method or ALONGSIDE it, by luck? If by luck, don't lock in the method as knowledge. Praise the process, not the coincidence." }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/gettier_problem" }]
+}

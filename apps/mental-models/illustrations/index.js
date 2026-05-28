@@ -106,4 +106,14 @@ export function registerAppIllustrations() {
   registerIllustration('mindset',                       DunningKruger);
   registerIllustration('ikea_effect',                   LossAversion);
   registerIllustration('repugnant_conclusion',          Trolley);
+
+  // Aliases для свежего цикла #135-141 (2026-08-24 … 08-30). #134 был
+  // Trolley — стартуем с другой SVG, дальше без повторов подряд.
+  registerIllustration('invisible_gorilla',             BrainVat);
+  registerIllustration('allais_paradox',                MontyHall);
+  registerIllustration('bayes_theorem',                 Simpson);
+  registerIllustration('no_true_scotsman',              Theseus);
+  registerIllustration('influence_cialdini',            Anchoring);
+  registerIllustration('halo_effect',                   Hanlon);
+  registerIllustration('gettier_problem',               SecondOrder);
 }

@@ -1,0 +1,166 @@
+{
+  "id": "bayes_theorem",
+  "category": "mental_models",
+  "release_number": 137,
+  "release_date": "2026-08-26",
+  "tags": ["probability", "bayesian_updating", "base_rate", "evidence", "bayes", "reasoning"],
+  "difficulty": 3,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/bayes_theorem.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Ментальная модель · №27" } },
+        {
+          "type": "hook",
+          "props": { "text": "Болезнь есть у 1 из 1000. Тест на неё точен на 99%. Ваш тест положительный. Какова вероятность, что вы больны? Интуиция кричит «99%». Правильный ответ — около {{em:9%}}. Почему? Потому что здоровых так много, что 1% ложных срабатываний даёт больше «больных по тесту», чем все реально больные вместе взятые." }
+        },
+        { "type": "title", "props": { "text": "Теорема {{accent:Байеса}}" } },
+        { "type": "subtitle", "props": { "text": "Bayes' Theorem · Томас Байес · опубликовано 1763" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bayes_theorem.svg", "alt": "Поле из множества точек, где новое свидетельство сдвигает узкую область вероятности" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Теорема Байеса — это правило обновления убеждений при новых данных. Начинаешь с «априорной» оценки (как часто это бывает вообще), затем корректируешь её на силу свидетельства. Формально: новая вероятность пропорциональна старой, умноженной на то, насколько хорошо свидетельство отличает правду от лжи. {{em:Свидетельство не заменяет исходную вероятность — оно её сдвигает.}}",
+              "Главная ошибка — игнорировать «базовую частоту» (сколько вообще таких случаев). В примере с болезнью: на 1000 человек 1 больной (тест почти всегда поймает) и ~10 здоровых с ложным плюсом. Из 11 положительных тестов реально болен 1. Тест важен, но редкость болезни важнее. Люди же видят «99% точность» и забывают про знаменатель.",
+              "Байесовское мышление — это привычка спрашивать: «насколько это было вероятно ДО того, как я узнал новость?» Сильное свидетельство для редкого события всё равно может оставлять его маловероятным. Слабое свидетельство для частого — почти ничего не меняет. {{em:Обновляйся, но от правильной точки старта.}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Новое свидетельство не отменяет исходную вероятность — оно её корректирует. Без учёта базовой частоты даже очень точный сигнал может вводить в заблуждение."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Очень точный детектор лжи показал, что человек врёт. Насколько вы уверены, что он действительно соврал?",
+            "setup": null,
+            "options": [
+              { "id": "high", "text": "Сильно — детектор же точный", "is_wiser": false },
+              { "id": "depends", "text": "Зависит от того, как часто люди вообще врут в этой ситуации", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "доверяют точному сигналу",
+              "explanation": "Если в данной ситуации почти никто не врёт (низкая база), то даже точный детектор даст больше ложных обвинений, чем настоящих пойманных лжецов — ровно как с редкой болезнью. Точность сигнала бессмысленна без базовой частоты. Именно поэтому детекторы лжи не принимают в суде: при редкости вины ложные срабатывания доминируют.",
+              "wisdom": "{{em:«Насколько это было вероятно до сигнала?» — вопрос, который спасает от большинства ошибок суждения.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Байес — не призыв вечно сомневаться. Наоборот: при сильном свидетельстве надо решительно менять мнение, а при слабом — почти не двигаться. Ошибка в обе стороны: цепляться за прежнее вопреки данным или метаться от каждого слабого сигнала."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В медицине", "example": "Положительный скрининг редкой болезни почти всегда требует второго, другого теста — именно из-за базовой частоты. Один тест сдвигает вероятность, но редко решает." },
+              { "label": "В новостях", "example": "«Исследование показало X» — спросите: насколько X было правдоподобно заранее? Громкий результат при низком априоре чаще всего не воспроизведётся." },
+              { "label": "В оценке людей", "example": "Один яркий поступок (хороший или плохой) — это свидетельство, а не приговор. Обновляйте мнение, но не обнуляйте всё, что знали о человеке до." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Когда сегодня услышите новость, меняющую ваше мнение, остановитесь на 10 секунд: «Насколько это было вероятно ДО новости?» Сильное свидетельство сдвинет вас прилично. Слабое — почти нет. Двигайтесь на ширину доказательства, не больше." }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Mental Model · №27" } },
+        {
+          "type": "hook",
+          "props": { "text": "A disease affects 1 in 1000. The test for it is 99% accurate. Your test is positive. What's the chance you're sick? Intuition screams \"99%.\" The right answer is about {{em:9%}}. Why? Because the healthy are so numerous that a 1% false-positive rate produces more \"sick-by-test\" people than all the truly sick combined." }
+        },
+        { "type": "title", "props": { "text": "{{accent:Bayes'}} Theorem" } },
+        { "type": "subtitle", "props": { "text": "Bayes' Theorem · Thomas Bayes · published 1763" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/bayes_theorem.svg", "alt": "A field of many dots where new evidence shifts a narrow region of probability" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Bayes' theorem is a rule for updating beliefs with new data. You start with a \"prior\" estimate (how common this is in general), then adjust it by the strength of the evidence. Formally: the new probability is proportional to the old one times how well the evidence distinguishes truth from falsehood. {{em:Evidence doesn't replace the prior probability — it shifts it.}}",
+              "The main error is ignoring the \"base rate\" (how common such cases are at all). In the disease example: per 1000 people there's 1 sick person (the test almost always catches them) and ~10 healthy with a false positive. Of 11 positive tests, just 1 is truly sick. The test matters, but the rarity matters more. People see \"99% accuracy\" and forget the denominator.",
+              "Bayesian thinking is the habit of asking: \"how likely was this BEFORE I learned the news?\" Strong evidence for a rare event can still leave it unlikely. Weak evidence for a common one barely changes anything. {{em:Update — but from the right starting point.}}"
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "New evidence doesn't cancel the prior probability — it corrects it. Without accounting for the base rate, even a very accurate signal can mislead."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "A very accurate lie detector says a person is lying. How sure are you that they actually lied?",
+            "setup": null,
+            "options": [
+              { "id": "high", "text": "Very — the detector is accurate, after all", "is_wiser": false },
+              { "id": "depends", "text": "Depends on how often people lie in this situation at all", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "trust the accurate signal",
+              "explanation": "If almost no one lies in this situation (low base rate), even an accurate detector produces more false accusations than real caught liars — exactly like the rare disease. A signal's accuracy is meaningless without the base rate. This is precisely why lie detectors aren't admissible in court: when guilt is rare, false positives dominate.",
+              "wisdom": "{{em:\"How likely was this before the signal?\" — the question that prevents most errors of judgment.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Bayes isn't a call to doubt forever. The opposite: with strong evidence you should change your mind decisively, and with weak evidence barely move. The error runs both ways: clinging to a prior against the data, or lurching at every weak signal."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In medicine", "example": "A positive screen for a rare disease almost always requires a second, different test — precisely because of the base rate. One test shifts the probability but rarely settles it." },
+              { "label": "In the news", "example": "\"A study showed X\" — ask: how plausible was X beforehand? A loud result with a low prior most often won't replicate." },
+              { "label": "In judging people", "example": "One vivid act (good or bad) is evidence, not a verdict. Update your view, but don't zero out everything you knew about the person before." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "When you hear news today that changes your mind, pause for 10 seconds: \"How likely was this BEFORE the news?\" Strong evidence should move you a lot. Weak evidence, barely. Move by the width of the proof, no more." }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/bayes_theorem" }]
+}

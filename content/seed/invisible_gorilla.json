@@ -1,0 +1,168 @@
+{
+  "id": "invisible_gorilla",
+  "category": "psychology_experiments",
+  "release_number": 135,
+  "release_date": "2026-08-24",
+  "tags": ["attention", "perception", "inattentional_blindness", "simons", "chabris", "cognition"],
+  "difficulty": 2,
+  "reading_time_sec": 165,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/invisible_gorilla.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Психологический эксперимент · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "Вам показывают видео: две команды перекидывают мяч. Задача — сосчитать передачи белой команды. Вы считаете, сосредоточенно. Через минуту вас спрашивают: «А гориллу видели?» Какую гориллу? Человек в костюме гориллы прошёл прямо через центр кадра, бил себя в грудь девять секунд. Половина зрителей его {{em:не замечает вообще}}." }
+        },
+        { "type": "title", "props": { "text": "Невидимая {{accent:горилла}}" } },
+        { "type": "subtitle", "props": { "text": "Selective Attention Test · Дэниел Саймонс и Кристофер Шабри · 1999" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/invisible_gorilla.svg", "alt": "Фигура гориллы в центре сцены, которую не замечают сосредоточенные на мяче наблюдатели" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Саймонс и Шабри попросили испытуемых считать передачи мяча между игроками в белом, игнорируя игроков в чёрном. На 9 секунд в кадр входил человек в костюме гориллы. Около {{em:50% зрителей его не видели}} — не «забыли», а буквально не зарегистрировали. Внимание было занято подсчётом, и всё неожиданное стало невидимым.",
+              "Это называется «слепота невнимания» (inattentional blindness). Мы не видим мир целиком — мы видим то, на что направлено внимание. Остальное мозг отбрасывает ещё до того, как оно достигнет сознания. Ощущение «я вижу всё перед собой» — иллюзия. {{em:Вы видите то, что ищете, и почти слепы к тому, чего не ждёте.}}",
+              "Самое тревожное — не то, что мы пропускаем гориллу. А то, что мы {{em:уверены}}, что заметили бы её. Этот разрыв между реальной и воображаемой внимательностью Саймонс назвал «иллюзией внимания». Именно он делает нас опасно самоуверенными за рулём, в работе, в спорах."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Внимание — это фильтр, а не окно. Сосредоточенность на одном делает вас слепым к остальному — включая очевидное. И вы почти никогда не замечаете, чего именно не заметили."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Вы за рулём, внимательно следите за машинами. Насколько вероятно, что вы пропустите выехавшего велосипедиста?",
+            "setup": null,
+            "options": [
+              { "id": "low", "text": "Маловероятно — я слежу за дорогой и всё вижу", "is_wiser": false },
+              { "id": "high", "text": "Вполне вероятно — я ищу машины, а не велосипеды, и могу его не зарегистрировать", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "уверены, что заметили бы",
+              "explanation": "«Смотрел, но не увидел» — самая частая формулировка в авариях с мотоциклами и велосипедами. Водитель ищет силуэт машины; узкий, неожиданный силуэт велосипеда не проходит фильтр внимания. Сосредоточенность не равна всевидению. Зная это, опытные водители активно «ищут» именно неожиданное — мотоциклы, детей, открывающиеся двери.",
+              "wisdom": "{{em:Чем сильнее вы сосредоточены, тем больше вы не видите. И тем меньше об этом подозреваете.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Слепота невнимания — не дефект и не «невнимательность» в бытовом смысле. Это цена фокуса: мозг физически не может обрабатывать всё. Ошибка — думать, будто «если бы это было важно, я бы заметил». Важное вы пропускаете именно потому, что заняты другим важным."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "За рулём", "example": "Телефон в руке не «отвлекает на секунду» — он перенаправляет внимание, и пешеход выпадает из восприятия целиком. Вы смотрите на дорогу и не видите его." },
+              { "label": "В медицине", "example": "Рентгенологам показали снимок лёгких с вставленной картинкой гориллы. 83% радиологов её не заметили — они искали узелки, а не горилл. Эксперты слепы по-своему." },
+              { "label": "В спорах и работе", "example": "Когда вы ищете подтверждение своей идеи, контраргументы буквально проходят мимо сознания. Не потому что вы их отвергли — вы их не зарегистрировали." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Сегодня в одной задаче, где вы «всё контролируете», спросите себя: что я сейчас НЕ ищу — и потому могу не увидеть? Назовите одну вероятную «гориллу». Само называние возвращает её в поле зрения."
+          }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Psychology Experiment · №16" } },
+        {
+          "type": "hook",
+          "props": { "text": "You're shown a video: two teams passing a ball. Your task — count the passes by the white team. You count, focused. A minute later you're asked: \"Did you see the gorilla?\" What gorilla? A person in a gorilla suit walked right through the center of the frame, beating their chest for nine seconds. Half of all viewers {{em:don't notice it at all}}." }
+        },
+        { "type": "title", "props": { "text": "The Invisible {{accent:Gorilla}}" } },
+        { "type": "subtitle", "props": { "text": "Selective Attention Test · Daniel Simons & Christopher Chabris · 1999" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/invisible_gorilla.svg", "alt": "A gorilla figure at center stage, unseen by observers focused on the ball" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Simons and Chabris asked subjects to count ball passes among players in white, ignoring players in black. For 9 seconds, a person in a gorilla suit entered the frame. About {{em:50% of viewers never saw it}} — not \"forgot,\" but literally never registered it. Attention was busy counting, and everything unexpected became invisible.",
+              "This is called inattentional blindness. We don't see the world whole — we see what attention is aimed at. The rest the brain discards before it reaches consciousness. The feeling \"I see everything in front of me\" is an illusion. {{em:You see what you're looking for, and you're nearly blind to what you don't expect.}}",
+              "The most unsettling part isn't that we miss the gorilla. It's that we're {{em:certain}} we would have caught it. Simons called this gap between actual and imagined attentiveness the \"illusion of attention.\" It's exactly what makes us dangerously overconfident behind the wheel, at work, in arguments."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "Attention is a filter, not a window. Focusing on one thing makes you blind to the rest — including the obvious. And you almost never notice what you failed to notice."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "You're driving, watching the cars carefully. How likely are you to miss a cyclist pulling out?",
+            "setup": null,
+            "options": [
+              { "id": "low", "text": "Unlikely — I watch the road and see everything", "is_wiser": false },
+              { "id": "high", "text": "Quite likely — I'm looking for cars, not bikes, and might not register them", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "are sure they'd notice",
+              "explanation": "\"Looked but failed to see\" is the most common phrase in motorcycle and cyclist crashes. The driver is scanning for the silhouette of a car; the narrow, unexpected silhouette of a bike doesn't pass the attention filter. Focus isn't omniscience. Knowing this, skilled drivers actively \"hunt\" for the unexpected — motorcycles, children, opening doors.",
+              "wisdom": "{{em:The harder you focus, the more you fail to see. And the less you suspect it.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "Inattentional blindness isn't a defect or \"carelessness\" in the everyday sense. It's the price of focus: the brain physically cannot process everything. The mistake is thinking \"if it mattered, I'd have noticed.\" You miss the important precisely because you're busy with something else important."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "Driving", "example": "A phone in your hand doesn't \"distract you for a second\" — it redirects attention, and the pedestrian drops out of perception entirely. You look at the road and don't see them." },
+              { "label": "In medicine", "example": "Radiologists were shown a lung scan with a gorilla image inserted. 83% of radiologists missed it — they were hunting for nodules, not gorillas. Experts are blind in their own way." },
+              { "label": "In arguments and work", "example": "When you're looking for confirmation of your idea, counterarguments literally pass by your consciousness. Not because you rejected them — you never registered them." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Today, in one task where you feel \"in full control,\" ask yourself: what am I NOT looking for right now — and might therefore miss? Name one likely \"gorilla.\" Naming it alone brings it back into view."
+          }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/invisible_gorilla" }]
+}

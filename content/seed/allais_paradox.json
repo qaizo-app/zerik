@@ -1,0 +1,166 @@
+{
+  "id": "allais_paradox",
+  "category": "paradoxes",
+  "release_number": 136,
+  "release_date": "2026-08-25",
+  "tags": ["decision_theory", "risk", "certainty_effect", "allais", "expected_utility", "economics"],
+  "difficulty": 4,
+  "reading_time_sec": 175,
+  "theme_override": null,
+  "illustration_ref": "bundle://illustrations/allais_paradox.svg",
+  "i18n": {
+    "ru": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Парадокс · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "Выбор 1: гарантированный миллион — или лотерея, где 89% тот же миллион, 10% пять миллионов, но 1% — ничего. Почти все берут гарантированный. Выбор 2: 11% шанс на миллион — или 10% шанс на пять миллионов. Почти все берут пять. Звучит разумно? На самом деле вы только что {{em:противоречили сами себе}} — математически." }
+        },
+        { "type": "title", "props": { "text": "Парадокс {{accent:Алле}}" } },
+        { "type": "subtitle", "props": { "text": "Allais Paradox · Морис Алле · 1953" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/allais_paradox.svg", "alt": "Две пары весов с лотереями — выбор человека наклоняет их в логически несовместимые стороны" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Теория ожидаемой полезности гласит: рациональный выбор зависит только от вероятностей и ценностей исходов. Если в обоих выборах вычесть общую часть (89% на миллион), они становятся {{em:идентичными}}. Значит, кто выбрал гарантию в первом, логически обязан выбрать «миллион» и во втором. Но люди массово выбирают иначе.",
+              "Морис Алле показал: дело в «эффекте определённости». Гарантированный исход мы ценим непропорционально выше просто вероятного. Разница между 100% и 99% ощущается огромной; между 11% и 10% — почти никакой. Хотя в обоих случаях это всего один процентный пункт. {{em:Определённость имеет для нас отдельную, иррациональную ценность.}}",
+              "Это не «ошибка глупых людей» — так выбирают экономисты и нобелевские лауреаты. Алле использовал парадокс как удар по фундаменту классической экономики: человек — не калькулятор ожидаемой полезности. Позже Канеман и Тверски построят на этом теорию перспектив."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Принцип",
+            "text": "Мы переоцениваем определённость. Переход от «почти наверняка» к «наверняка» ощущается ценнее, чем такой же скачок вероятности в середине шкалы — и это толкает на логически несовместимые решения."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Проверь себя",
+            "question": "Страховка покрывает 100% мелких рисков задорого, или 95% всех рисков включая крупные — за те же деньги. Что выберете?",
+            "setup": null,
+            "options": [
+              { "id": "full", "text": "100%-покрытие мелких — спокойнее, когда «полностью защищён»", "is_wiser": false },
+              { "id": "broad", "text": "95% всех — крупные риски важнее, чем полнота на мелких", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "По данным {{votes_count}} ответов",
+              "big_stat_text": "платят за «полное» покрытие",
+              "explanation": "Эффект определённости заставляет переплачивать за слово «100%». Страховые компании это знают: полисы с полным покрытием мелочи и франшизой на крупное продаются лучше, хотя защищают хуже. Рационально страховать редкое и катастрофическое, а мелкое оплачивать из кармана. Но «полностью защищён» звучит так успокаивающе, что мы платим за чувство, а не за защиту.",
+              "wisdom": "{{em:Слово «гарантированно» стоит дороже, чем оно того стоит. Считайте исходы, а не успокоение.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "Ловушка",
+            "text": "Парадокс не доказывает, что любить определённость «неправильно». Снижение тревоги — реальная ценность. Ловушка в том, чтобы не замечать, сколько вы за неё платите — и принимать несогласованные решения, думая, что они рациональны."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Где вы встретите это сегодня",
+            "items": [
+              { "label": "В финансах", "example": "Люди держат деньги на «гарантированном» вкладе под инфляцию вместо диверсифицированного портфеля с более высокой ожидаемой доходностью — платят за иллюзию определённости реальной покупательной способностью." },
+              { "label": "В переговорах", "example": "«Синица в руке» — готовое предложение часто принимают над лучшим, но вероятным. Оппоненты эксплуатируют это, предлагая «гарантию сейчас» вместо большего потом." },
+              { "label": "В продуктах", "example": "«Пожизненная лицензия» против подписки, «безлимит» против выгодного лимита — маркетинг продаёт определённость, даже когда по числам она невыгодна." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Действие на сегодня",
+            "text": "Найдите решение, где вы выбираете «гарантированный» вариант. Посчитайте: сколько вы доплачиваете за саму определённость? Иногда это оправдано спокойствием — но решите это осознанно, а не на автопилоте." }
+        }
+      ]
+    },
+    "en": {
+      "blocks": [
+        { "type": "category_label", "props": { "text": "Paradox · №20" } },
+        {
+          "type": "hook",
+          "props": { "text": "Choice 1: a guaranteed million — or a lottery with 89% the same million, 10% five million, but 1% nothing. Almost everyone takes the guaranteed one. Choice 2: an 11% shot at a million — or a 10% shot at five million. Almost everyone takes the five. Sounds reasonable? You just {{em:contradicted yourself}} — mathematically." }
+        },
+        { "type": "title", "props": { "text": "The {{accent:Allais}} Paradox" } },
+        { "type": "subtitle", "props": { "text": "Allais Paradox · Maurice Allais · 1953" } },
+        {
+          "type": "illustration",
+          "props": { "ref": "bundle://illustrations/allais_paradox.svg", "alt": "Two pairs of scales holding lotteries — a person's choice tips them in logically incompatible directions" }
+        },
+        {
+          "type": "body_paragraphs",
+          "props": {
+            "drop_cap": true,
+            "paragraphs": [
+              "Expected utility theory says: a rational choice depends only on the probabilities and values of outcomes. If you subtract the common part (89% on a million) from both choices, they become {{em:identical}}. So whoever picked the guarantee in the first is logically bound to pick \"the million\" in the second. Yet people overwhelmingly choose otherwise.",
+              "Maurice Allais showed the cause is the \"certainty effect.\" We value a guaranteed outcome disproportionately above a merely probable one. The gap between 100% and 99% feels enormous; between 11% and 10%, almost nothing. Though both are one percentage point. {{em:Certainty carries a separate, irrational value for us.}}",
+              "This isn't \"a mistake foolish people make\" — economists and Nobel laureates choose this way too. Allais used the paradox as a strike against the foundation of classical economics: humans are not expected-utility calculators. Later, Kahneman and Tversky would build prospect theory on this."
+            ]
+          }
+        },
+        {
+          "type": "principle",
+          "props": {
+            "label": "Principle",
+            "text": "We overvalue certainty. Moving from \"almost sure\" to \"sure\" feels worth more than the same probability jump in the middle of the scale — and that pushes us into logically incompatible decisions."
+          }
+        },
+        {
+          "type": "scenario",
+          "props": {
+            "tag": "Test yourself",
+            "question": "Insurance covers 100% of small risks for a high price, or 95% of all risks including catastrophic — for the same money. Which do you pick?",
+            "setup": null,
+            "options": [
+              { "id": "full", "text": "100% of small ones — it's calmer to be \"fully protected\"", "is_wiser": false },
+              { "id": "broad", "text": "95% of all — catastrophic risks matter more than completeness on small ones", "is_wiser": true }
+            ],
+            "reveal": {
+              "source_note": "Based on {{votes_count}} responses",
+              "big_stat_text": "pay for \"full\" coverage",
+              "explanation": "The certainty effect makes us overpay for the word \"100%.\" Insurers know this: policies with full coverage of trivial risks and a deductible on the catastrophic ones sell better, though they protect worse. Rationally, insure the rare and catastrophic and pay small things out of pocket. But \"fully protected\" sounds so soothing that we pay for the feeling, not the protection.",
+              "wisdom": "{{em:The word \"guaranteed\" costs more than it's worth. Count the outcomes, not the reassurance.}}",
+              "hardcoded_stats": null
+            }
+          }
+        },
+        {
+          "type": "trap",
+          "props": {
+            "label": "The trap",
+            "text": "The paradox doesn't prove that loving certainty is \"wrong.\" Reduced anxiety is a real value. The trap is failing to notice how much you pay for it — and making inconsistent decisions while believing they're rational."
+          }
+        },
+        {
+          "type": "domains",
+          "props": {
+            "heading": "Where you'll meet this today",
+            "items": [
+              { "label": "In finance", "example": "People keep money in a \"guaranteed\" deposit losing to inflation instead of a diversified portfolio with higher expected return — paying for the illusion of certainty with real purchasing power." },
+              { "label": "In negotiation", "example": "\"A bird in the hand\" — a firm offer is often accepted over a better but probable one. Opponents exploit this by offering \"a guarantee now\" instead of more later." },
+              { "label": "In products", "example": "\"Lifetime license\" vs subscription, \"unlimited\" vs a generous cap — marketing sells certainty even when the numbers say it's a worse deal." }
+            ]
+          }
+        },
+        {
+          "type": "action_today",
+          "props": {
+            "label": "Action for today",
+            "text": "Find a decision where you're choosing the \"guaranteed\" option. Calculate: how much extra are you paying for the certainty itself? Sometimes peace of mind justifies it — but decide that consciously, not on autopilot." }
+        }
+      ]
+    }
+  },
+  "levels": [{ "level": 1, "doc_ref": "models/allais_paradox" }]
+}
